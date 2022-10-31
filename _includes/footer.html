@@ -1,8 +1,17 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <!--data class="u-url" href="{{ "/" | relative_url }}"></data-->
 
   <div class="wrapper">
 
+    {%- if page.title -%}
+    <h2 class="footer-heading"><A HREF="https://perlen.DavOh.de/">Online-Perlensammlung</A> von <A HREF="https://David.von-Oheimb.de/">David von Oheimb</A>: {{ page.title | escape }}</h2>
+
+    <ADDRESS>
+    <img src="https://perlen.DavOh.de/pic/faceline.gif" WIDTH="650" HEIGHT="9" ALT="---------------------------------------------------------"><br>
+    <a href="https://validator.w3.org/check?uri=https://ddvo.github.io{{ page.url | relative_url }}"><img src="https://perlen.DavOh.de/pic/html5.png" alt="[Valid HTML5]" height="12" width="33"></a>
+  URL: https://David.von-Oheimb.de/perlen{{ page.url | relative_url }}
+    </ADDRESS>
+    {%- else -%}
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
     <div class="footer-col-wrapper">
@@ -29,6 +38,7 @@
         <p>{{- site.description | escape -}}</p>
       </div>
     </div>
+    {%- endif -%}
 
   </div>
 
