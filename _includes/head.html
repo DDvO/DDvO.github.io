@@ -8,9 +8,33 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  <LINK REL="shortcut icon" HREF="https://perlen.davoh.de/pic/favicon.ico">
   {% if page.keywords %}
   <meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}">
   {% endif %}
-  <LINK TYPE="text/css" REL="stylesheet" HREF="https://perlen.davoh.de/pearls.css">
-  <LINK REL="shortcut icon" HREF="https://perlen.davoh.de/pic/favicon.ico">
+<LINK TYPE="text/css" REL="stylesheet" HREF="https://perlen.davoh.de/pearls.css">
+<style>
+.wrapper {
+  max-width: -webkit-calc(800px - 2px - 0px);
+  max-width: calc(800px - 2px - 0px);
+  padding-left: 2px;
+  padding-right: 0px;
+}
+
+img { padding: 0 0 0 0 }
+
+img { margin: 5px 0px 8px 0px }
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img.left {
+  float: left;
+}
+img.right {
+  float: right;
+}
+h1,h2,h3,h4,h5,h6,hr{clear:both}
+</style>
 </head>

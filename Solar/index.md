@@ -32,8 +32,9 @@ nicht senkrecht zur Einstrahlung ausgerichtet, (teil-)verschattet,
 verschmutzt oder zu warm sind. Zu berücksichtigen ist zudem der
 Wirkungsgrad der übrigen PV-Anlage von etwa 80 bis 95%.
 
-![%Bild: Globalstrahlung in
-Deutschland%](Globalstrahlung_Deutschland.jpg) Die maximale Einstrahlung
+![Bild: Globalstrahlung in Deutschland](
+Globalstrahlung_Deutschland.jpg){:.right width="500"}
+Die maximale Einstrahlung
 auf die Erde mittags bei klarem Himmel in Bodennähe auf eine Fläche
 senkrecht zum Sonnenstand liegt bei 1361 W/m² und wird als
 [terrestrische
@@ -63,7 +64,8 @@ besonders chinesische Händler von flexiblen Solarmodulen dazu tendieren,
 bei den Leistungsangaben deutlich zu übertreiben. Daher lohnt sich als
 Plausibiltäts-Check, den Wirkungsgrad nachzurechnen.
 
-![%Bild: PV-Potential in Europa%](PVOUT_Europe.png) In unseren
+![Bild: PV-Potential in Europa](PVOUT_Europe.png){:.center}
+In unseren
 Breitengraden ist je nach Standort bei optimaler statischer Ausrichtung
 von Solarmodulen ein Ertrag je nach Quelle von [etwa 900 bis 1000
 kWh](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/planung/ertrag)
@@ -82,11 +84,12 @@ Weltbank](https://globalsolaratlas.info/map?c=50.10,11.05,7&s=48.1807,11.604e)
 EU](https://re.jrc.ec.europa.eu/pvg_tools/de/) bei der Standard-Eingabe
 von 1 kWp für die installierte max. PV-Leistung.
 
-![%Bild: PV-Potential nach Ausrichtung von
-Solarmodulen%](Solarmodule_Ausrichtung2.webp) ![%Bild: Leistungsanteil
-nach Ausrichtung von Solarmodulen%](Solarmodule_Ausrichtung.webp) Die
-[beste
-Ausbeute](https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
+![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
+Solarmodule_Ausrichtung2.webp){:width="49%" }
+![Bild: Ertragssanteil nach Ausrichtung von Solarmodulen](
+Solarmodule_Ausrichtung.webp){:width="49%" .right}
+Die [beste Ausbeute]
+(https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
 bekommt man in süddeutschen Breitengraden bei Ausrichtung genau nach
 Süden und mit ca. 38° Neigungswinkel (also relativ zur Waagerechten).
 Genaueres kann man z.B. über
@@ -109,8 +112,9 @@ die Sonne flacher steht, ansonsten eine eher flache Anordnung --- aber
 nicht zu flach (sondern z.B. 20°), um weiterhin eine Selbstreinigung der
 Moduloberflächen zu ermöglichen.
 
-![%Bild: Jahresertrag nach Ausrichtung von
-Solarmodulen%](Jahresertrag_nach_Ausrichtung.png) Diese Grafik zeigt
+![Bild: Jahresertrag nach Ausrichtung von Solarmodulen](
+Jahresertrag_nach_Ausrichtung.png){:.center}
+Diese Grafik zeigt
 sehr schön die relative Änderung des Jahresertrages einer PV-Anlage mit
 zunehmender Winkel-Abweichung von Süden (Azimut) abhängig vom
 Neigungswinkel, wenn der optimale Neigungswinkel 35° beträgt. Sie wurde
@@ -136,7 +140,8 @@ Aufheizen eines Warmwasserspeichers).
 
 ### Stecker-Solaranlage (\"Balkonkraftwerk\" mit direkter Netzeinspeisung) {#balkonkraftwerk}
 
-![%Bild: Aufbau Balkonkraftwerk%](Balkonkraftwerk.jpg) Typischerweise
+![Bild: Aufbau Balkonkraftwerk](Balkonkraftwerk.jpg){:.right width="400"}
+Typischerweise
 speisen Solaranlagen den erzeugten Strom nach Umwandlung durch einen
 netzgekoppelten Wechselrichter
 ([Solarwechselrichter](https://de.wikipedia.org/wiki/Solarwechselrichter),
@@ -155,8 +160,9 @@ dürfen und genehmigungsfrei sind, wenn sie weniger als 600 W in die
 Steckdose einspeisen. Dies gilt für Deutschland; anderswo sind meist 800
 W (oder mehr) erlaubt.
 
-![%Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
-Solarstrom-Einspeisung%377](Stromleitung_Überlastung_Solareinspeisung.jpg)
+![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
+Solarstrom-Einspeisung](
+Stromleitung_Überlastung_Solareinspeisung.jpg){:.right width="377"}
 Hintergrund dieser Beschränkung sind vornehmlich Sicherheitsbedenken:
 Falls über die Wohnungs-Stromleitung, an der die Einspeisung
 stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
@@ -230,8 +236,8 @@ pro Jahr. Wenn der damit erzeugte Strom komplett selbst verbraucht wird
 und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
 ergibt sich eine Amortisationszeit von nur 2,5 Jahren.
 
-![%Bild: Ertragsrechnung
-Balkonanlage%](PV-Rechner_v6+_Balkonanlage_600Wp.png) Beispielsweise mit
+![Bild: Ertragsrechnung Balkonanlage](PV-Rechner_v6+_Balkonanlage_600Wp.png)
+Beispielsweise mit
 dem [PV-Rechner](PV-Rechner_v6+.xls) (der eigentlich für \"große\"
 PV-Anlagen auf Hausdächern konzipiert ist) kann man die Rechnung
 deutlich genauer machen. Er berücksichtigt u.A. die Ausrichtung der
@@ -257,8 +263,9 @@ voraussichicht dort nicht mehr korrigiert wird.
 
 ### Stecker-Solaranlage mit Batteriepuffer {#batteriepuffer}
 
-![%Bild: Balkonkraftwerk mit
-Speicher%](Balkonkraftwerk_mit_Speicher.jpg) Es ist auch möglich, die
+![Bild: Balkonkraftwerk mit Speicher](
+Balkonkraftwerk_mit_Speicher.jpg){:.right width="480"}
+Es ist auch möglich, die
 Solarenergie nicht direkt ins Netz, sondern über einen Solar-Laderegler
 (s.u.) zunächst in einer aufladbaren Batterie (Akkumulator)
 zwischenzuspeichern und von dort nach Bedarf zeitlich versetzt über
@@ -314,7 +321,8 @@ gesammelte Solarenergie dann über sonnenarme Zeiten (solange die Ladung
 reicht, typischerweise bis zum nächsten Vormittag) gleichmäßig
 abgegeben, mehr oder weniger ohne Strom nach extern zu verschenken.
 
-![%Bild: Wasserspeicher als Analogie%](Wasserspeicher.jpg) Hier als
+![Bild: Wasserspeicher als Analogie](Wasserspeicher.jpg){:.right width="400"}
+Hier als
 Analogie eine Skizze eines automatischen Wasserspeichers, der z.B. über
 die Dachrinne eines Hauses gespeist wird. Wenn er voll genug ist, läuft
 das Wasser über die rechte innere Begrenzung und lässt die Kugel
@@ -329,7 +337,8 @@ abfließt.
 
 ### Inselanlage mit Batteriespeicherung {#inselanlage}
 
-![%Bild: Aufbau Inselanlage%](Inselanlage.jpg) Alternativ zur
+![Bild: Aufbau Inselanlage](Inselanlage.jpg){:.right width="400"}
+Alternativ zur
 Einspeisung ins Hausnetz kann man den von den Solarmodulen gelieferten
 Strom auch in einer Batterie speichern und bei Bedarf darüber Geräte
 unabhängig vom Hausnetz mit Strom versorgen. Diese Betriebsart wird als
@@ -370,9 +379,9 @@ Solarmodule (engl. solar panels) werden intern aus vielen in Reihe
 geschalteten Solarzellen zusammengesetzt, die Sonnenlicht in Gleichstrom
 umwandeln.
 
-![%Bild: Spannung und Strom abhängig von der
-Bestrahlungsstärke%](Kennlinie_Bestrahlungsstärke_Spannng-Strom.jpg) Bei
-den üblichen Silizium-Solarzellen steigt der entnehmbare Strom
+![Bild: Spannung und Strom abhängig von der Bestrahlungsstärke](
+Kennlinie_Bestrahlungsstärke_Spannng-Strom.jpg){:.right width="500"}
+Bei den üblichen Silizium-Solarzellen steigt der entnehmbare Strom
 (Kurzschlussstrom) linear mit der Bestrahlungsstärke. Ihre
 Leerlaufspannung hingegen steigt schon bei geringer Helligkeit stark an
 und nähert sich dann nur noch langsam steigend dem Wert 0,63 V. Generell
@@ -380,16 +389,17 @@ sind monokristalline Zellen zu bevorzugen, auch wenn sie ein wenig
 teurer sind als polykristalline oder amorphe, weil sie einen höheren
 Wirkungsgrad haben.
 
-![%Bild: Spannung und Strom abhängig von der
-Bestrahlungsstärke%](Bypass-Dioden-bei-der-Arbeit.jpg) Leider bricht die
+![Bild: Bypass-Dioden bei der Arbeit](
+Bypass-Dioden-bei-der-Arbeit.jpg){:.center} Leider bricht die
 Leistung von in Reihe geschalteten Zellen ein, sobald auch nur eine
 davon verschattet ist. Daher werden in den üblichen größeren Modulen
 sog. Bypass-Dioden eingesetzt, die bei Teilverschattung immerhin einen
 Teil der Leistung fließen lassen.
 
-![%Bild: Starre Solarpanels%](Starre_Solarpanels.jpg) ![%Bild: Flexible
-Solarpanels%](Flexible_Solarpanels.jpg) [Klassische
-Solarmodule](https://gruenes.haus/pv-modul-groesse-gewicht/) haben einen
+![Bild: Starre Solarpanels](Starre_Solarpanels.jpg){:width="49%"}
+![Bild: Flexible Solarpanels](Flexible_Solarpanels.jpg){:.right width="49%"}
+[Klassische Solarmodule](https://gruenes.haus/pv-modul-groesse-gewicht/)
+haben einen
 Aluminiumrahmen und eine Größe von typischerweise ca. 1,7 m × 1 m × 3
 cm, was eine Nennleistung von etwa 350 Wp ergibt, und eine Masse von ca.
 20 kg. (Semi-)Flexible Module sind teurer als starre und weniger
@@ -400,8 +410,10 @@ einer Nennleistung von 100 Wp und einer Masse von 1 bis 2 kg.
 ein Vergleich verschiedener Solarmodul-Typen in Hinblick auf die
 Verwendung für Wohnmobile.
 
-![%Bild: starres Schindel-Solarmodul%](Schindel-Solarmodul.jpg) ![%Bild:
-flexibles Schindel-Solarmodul%](Schindel-Solarmodul2.jpg) Technisch
+![Bild: starres Schindel-Solarmodul](Schindel-Solarmodul.jpg){:width="49%"}
+![Bild:
+flexibles Schindel-Solarmodul](Schindel-Solarmodul2.jpg){:.right width="49%"}
+Technisch
 besonders interessant finde ich die überlappenden Anordnung und direkte
 Verschaltung von Solarzellen ohne Stromschienen (engl. busbars) in
 [Schindel-Modulen](https://www.strom-forschung.de/aktuelles/news/2022/schindel-solarmodule-innovativ-verschaltet-und-industriell-herstellbar)
@@ -444,8 +456,8 @@ gleiche Ausrichtung und relativ gleich(zeitig) verschattet werden.
     Kabeln, generell mit etwas mehr elektrischem Verlust verbunden.
     Dafür hat man aber weniger Verluste durch Teilverschattung.
 
-![%Bild: Strom-Spannungs-Kennlinien abhängig von der
-Bestrahlungsstärke%](I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png)
+![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
+I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="500"}
 Zu beachten ist noch, dass die Regler-Eingangsspannung je nach Modell
 bis zu 5 V über der gewünschten Ausgangsspannung des Reglers (z.B. der
 Speicherbatterie) liegen muss, damit der Regler effektiv Strom liefern
@@ -454,7 +466,8 @@ Leerlaufspannung hat, wird es ohne Reihenschaltung bei einer
 Ladeschlussspannung von ca. 14,5 V einer LiFePO4-Batterie bei wolkigem
 Wetter (mit vielleicht nur 100 - 200 W/m²) ziemlich eng.
 
-![%Foto: Solaranlage am Balkon%](Balkonsolaranlage.jpg) Zur Montage bzw.
+![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.center}
+Zur Montage bzw.
 Aufständerung von Solarmodulen auf einem Dach oder an einem Balkon
 [hier](https://www.youtube.com/watch?v=TKeu6YGVuus) ein Überblick-Video.
 [Hier](https://machdeinenstrom.de/balkonkraftwerk-montageloesungen-fuer-die-balkonbruestung/)
@@ -463,7 +476,8 @@ Balkonbrüstung.
 
 ### Solar-Regler und Wechselrichter {#wechselrichter}
 
-![%Bild: Solar-Microinverter%](Solar-Microinverter.png) Für die
+![Bild: Solar-Microinverter](Solar-Microinverter.png){:.right width="400"}
+Für die
 Umwandlung des \'rohen\' Solarstroms sind Spannungsregler mit [MPPT
 (Maximal-Leistungspunkt-Suche, engl. maximum power point
 tracking)](https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking)
@@ -497,7 +511,8 @@ einem Netzwechselrichter integriert. Im Zusammenhang von
 Balkonkraftwerken wird dann meist nur vereinfacht von einem
 *Wechselrichter* (*WR*) gesprochen.
 
-![%Bild: Wechselrichter%](Wechselrichter.jpg) Inselwechselrichter, die
+![Bild: Wechselrichter](Wechselrichter.jpg){:.right width="400"}
+Inselwechselrichter, die
 auch *selbst geführte Wechselrichter* genannt werden, werden vom
 Stromnetz unabhängig betrieben. Mit ihnen kann man die üblichen
 Haushaltsgeräte auch im Falle eines Stromausfalls mit einer Batterie
@@ -505,7 +520,8 @@ versorgen, natürlich ausreichend Leistung vorausgesetzt.
 
 ### Solar-Laderegler {#laderegler}
 
-![%Bild: Solar-Laderegler%](Solar-Laderegler.jpg) Wenn man über
+![Bild: Solar-Laderegler](Solar-Laderegler.jpg){:.right width="400"}
+Wenn man über
 Solarmodule eine Batterie laden möchte, benötigt man einen
 Solar-Laderegler, der einen Spannungsregler mit einem Batterieladegerät
 verbindet. Mit billigen chinesischen (angeblich) MPPT-Reglern habe ich
@@ -514,8 +530,9 @@ Victron und Votronic.
 
 ### Hybridgeräte: Solar-Laderegler mit Wechselrichter {#hybridgeräte}
 
-![%Bild: Hybrides Solar-Ladegerät mit
-Wechselrichter%](Solar-off-grid-inverter.jpg) Es gibt auch
+![Bild: Hybrides Solar-Ladegerät mit Wechselrichter](
+Solar-off-grid-inverter.jpg){:.right width="400"}
+Es gibt auch
 [Kombigeräte](https://www.solarserver.de/2021/07/26/green-cell-bietet-neuen-solarwechselrichter-an/),welche
 die Funktionen Solar-Laderegler, Batterie-Netzladegerät und
 Inselwechselrichter in sich vereinen. Damit können Elektrogeräte
@@ -538,8 +555,9 @@ ermöglicht.
 
 ### Speicherbatterien {#speicherbatterien}
 
-![%Bild: LiFePO4-Batterie mit 4 prismatischen
-Zellen%](LiFePO4-Batterie.jpg) Für die Stromspeicherung bieten sich
+![Bild: LiFePO4-Batterie mit 4 prismatischen Zellen](
+LiFePO4-Batterie.jpg){:.right width="400"}
+Für die Stromspeicherung bieten sich
 heutzutage Lithium-Eisenphosphat-Batterien (LiFePO4) an. Diese sind zwar
 erheblich teurer als Blei-Säure-Batterien (inkl. der AGM-Variante), wie
 man sie vom Auto kennt, aber sind nicht so schwer, viel
@@ -580,7 +598,8 @@ sich über die Powerbank in der Praxis nur etwa 10 mal aufladen.
 Der Preis einer Batterie pro kWh sinkt mit steigender
 Größe/Gesamtkapazität.\
 
-![%Bild: Spannung](What-are-Ohm-Amps-and-Volts.jpg) Wenn man die Wahl
+![Bild: Spannung](What-are-Ohm-Amps-and-Volts.jpg){:.right width="400"}
+Wenn man die Wahl
 hat zwischen höherer Spannung (d.h. mehr Akkuzellen in Reihe) oder
 größere bzw. mehr Zellen parallel, dann besser die höhere Spannung
 nehmen. Also ist z.B. eine 24 V 100 Ah Batterie einer mit 12 V und 200
@@ -608,7 +627,8 @@ Ah vorzuziehen, aus folgenden Gründen:
     effizienter als solche mit 12 V, zumal Strom und Spannungsspreizung
     geringer sind.
 
-![%Bild: Tiefsetzsteller%](Tiefsetzsteller.jpg) Ein Problem bei einer
+![Bild: Tiefsetzsteller](Tiefsetzsteller.jpg){:.right width="400"}
+Ein Problem bei einer
 Batteriespannung von 24 V (oder 48 V) ist, dass Niederspannungs-Geräte
 typischerweise eher mit 12 V zu betreiben sind. Aber dafür gibt es für
 Geräte mit mäßigem Verbrauch (bis etwa 5 A, also 60 W) eine recht
