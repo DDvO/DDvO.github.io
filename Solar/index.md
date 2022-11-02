@@ -88,8 +88,8 @@ von 1 kWp für die installierte max. PV-Leistung.
 Solarmodule_Ausrichtung2.webp){:width="49%" }
 ![Bild: Ertragssanteil nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung.webp){:width="49%" .right}
-Die [beste Ausbeute]
-(https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
+Die [beste Ausbeute](
+https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
 bekommt man in süddeutschen Breitengraden bei Ausrichtung genau nach
 Süden und mit ca. 38° Neigungswinkel (also relativ zur Waagerechten).
 Genaueres kann man z.B. über
@@ -209,7 +209,7 @@ es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3) die
 Stecker-Solaranlage angeschlossen wird und auf welcher Phase die
 gleichzeitig verwendeten Verbraucher angeschlossen sind --- jedenfalls
 die neueren für die Abrechnung aktuell verwendeten Stromzähler arbeiten
-saldierend (d.h. bilden die Gesamtsumme von Verbrauch und Einspeisung,
+saldierend (d.h. bilden die Gesamtsumme von Verbrauch und Erzeugung,
 welche dabei negatives Vorzeichen hat).
 
 Diese Nutzungsart lohnt sich also nur insoweit, wie man während der
@@ -217,7 +217,7 @@ Sonnenscheindauer den erzeugten Strom direkt sinnvoll verbrauchen kann,
 z.B. durch diverse Haushaltsgeräte, Computer, Klimaanlagen oder zum
 Laden von (Fahrzeug-)Batterien, wobei die Akkus von E-Bikes oder
 E-Rollern von der Größenordnung und dem zeitlichen
-(Nicht-)Nutzungsprofil besonders geeignet sind. Am einfachsten und am
+Nutzungsprofil besonders geeignet sind. Am einfachsten und am
 besten planbar ist es, wenn man ohnehin eine gewisse relativ
 gleichmäßige Grundlast hat, z.B. durch Kühlschränke oder Wärmepumpen.
 Eine Nutzung von überflüssigem Strom, die ich ziemlich clever fände,
@@ -413,8 +413,7 @@ Verwendung für Wohnmobile.
 ![Bild: starres Schindel-Solarmodul](Schindel-Solarmodul.jpg){:width="49%"}
 ![Bild:
 flexibles Schindel-Solarmodul](Schindel-Solarmodul2.jpg){:.right width="49%"}
-Technisch
-besonders interessant finde ich die überlappenden Anordnung und direkte
+Technisch besonders interessant finde ich die überlappende Anordnung und direkte
 Verschaltung von Solarzellen ohne Stromschienen (engl. busbars) in
 [Schindel-Modulen](https://www.strom-forschung.de/aktuelles/news/2022/schindel-solarmodule-innovativ-verschaltet-und-industriell-herstellbar)
 (engl. SSP = shingle solar panel). Dadurch steigt der Wirkungsgrad, weil
@@ -646,8 +645,8 @@ Komponenten zu meiner vollen Zufriedenheit:
 -   2 × 100 Wp flexible Solarpanels [Dokio
     DFSP-100M](https://www.amazon.de/DOKIO-Batterie-wasserdicht-Wohnmobil-Oberfl%C3%A4che/dp/B07FYW3C6W),
     ca. 180€\
-    Diese habe ich einfach auf das Blechdach geklebt. Etwas lästig war
-    die Kabelführung ins Innere.
+    Diese habe ich einfach auf das Blechdach unseres Wohnmobils geklebt.
+    Etwas lästig war die Kabelführung ins Innere.
 
 -   15 A Solar-Laderegler [Victron BlueSolar MPPT
     75/15](https://www.ebay.de/itm/142083505206), ca. 90€\
@@ -655,10 +654,10 @@ Komponenten zu meiner vollen Zufriedenheit:
     bis 15 A (wobei für die o.g. Solarzellen bei Dachmontage in der
     Praxis auch 10 A genügt hätten).\
     Sehr praktisch finde ich bei den BlueSolar-Modellen die
-    Status-Abfrage auf dem Smartphone. Leider unterbinden die
-    Victron-Regler ohne Zusatzgerät nicht das Laden bei unter 0°C, was
-    bei LiFePO4-Akkus zu Schäden führen kann, wenn man sie beim
-    Abstellen im Winter nicht abklemmt.
+    Status-Abfrage auf dem Smartphone.\
+    Leider unterbinden die Victron-Regler ohne Zusatzgerät nicht das Laden
+    bei unter 0°C, was bei LiFePO4-Akkus zu Schäden führen kann,
+    wenn man sie im Winter nicht abklemmt.
 
 -   12,8 V 100 Ah 4S1P LiFePO4-Batterie inkl. 100 A BMS [Delong
     DL-12100](https://www.alibaba.com/product-detail/Delong-Factory-Rechargeable-12-8V-100Ah_62388029440.html),
@@ -678,13 +677,12 @@ Für eine sehr einfache, aber effiziente Anlage zur Netzeinspeisung finde
 ich folgende Komponenten besonders interessant:
 
 -   2 × 400 Wp starre SSP [EcoDelta -
-    ECO-400M-66SA](Datenblatt_ECO-380-400M-66SA.pdf) mit hoher
+    ECO-400M-66SA](Datenblatt_ECO-380-400M-66SA.pdf) mit besonders hoher
     Effizienz: 213 Wp/m², ca. 540€\
     oder 4 × 150 Wp flexible ETFE SSP Solarmodule [Solarfam
     SZ-150-36MFE](Solarfam_SSP_SZ-150-36MFE.pdf) mit 188 Wp/m², ca.
     [664€](https://stromvoll.com/shop/#!/150W-Flexible-Solar-panel-1170-x-680-x-2-mm/)\
-    Ective SSP 180 Flex\], ca. 980€ // 1150 x 840 x 2 mm, 186 Wp/m² oder
-    2 × 310 Wp flexible Solarmodule [Sunman eArc
+    oder 2 × 310 Wp sehr langlebige flexible Solarmodule [Sunman eArc
     SMF310M-6X10DW](Datenblatt_Sunman_flexible_310W.pdf) mit 187 Wp/m²,
     ca.
     [715€](https://shop-lieckipedia.de/Ab-2-Stueck-310-Watt-Solarmodul-monokristallin-flexibel-Sunman)
@@ -693,7 +691,10 @@ ich folgende Komponenten besonders interessant:
     HM-1200](https://www.hoymiles.com/product/microinverter/hm-1200-1500-as/),
     ca. 230€\
     oder 1000W Micro Grid Tie Inverter Inverter
-    [SG1000MQ](https://www.ebay.de/itm/124731502486), ca. 230€
+    [SG1000MQ](https://www.ebay.de/itm/124731502486), ca. 200€\
+    oder 4 × 400W Micro Solar Wechselrichter [Deye Sun1600g3-EU-230](
+    https://de.made-in-china.com/co_skycorpsolar/product_Deye-Micro-Inverter-1600W-Sun1600g3-EU-230-Micro-Solar-Inverter-on-Grid-Solar-Home-System-Inverter_ysyyygenig.html),
+    ca. 320€
 
 ### Kombi-Anlage für daheim und unterwegs {#kombi}
 
@@ -704,7 +705,6 @@ Aufenthalt mit dem Wohnmobil habe ich folgende Komponenten:
 -   4 × [150 Wp flexible ETFE SSP
     Solarmodule](https://www.solarfam.nl/150w-shingle-etfe-flexible-solar-panel-solarfam.html),
     für 600€\
-    für 475€\
     Zuvor hatte ich mir gekauft, aber nicht verwendet, weil mir ihre
     Montage an der Balkonbrüstung im 4. Stock zu riskant war:\
     4 × [120Wp starre Eco-Worthy
@@ -716,8 +716,8 @@ Aufenthalt mit dem Wohnmobil habe ich folgende Komponenten:
     selbstverständlich ist.
 
 -   700 W Mars Rock Dual MPPT Grid Tie Inverter mit WLAN
-    [EC700MD](https://de.aliexpress.com/item/1005002469159821.html) oder
-    [ähnlich mit LCD](https://www.ebay.de/itm/165694072328), ca. 135€
+    [EC700MD](https://de.aliexpress.com/item/1005002469159821.html) (oder
+    [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
     inkl. Versand
 
 -   [EASun 3kW peak Pure Sine Wave Solar Inverter 24V 220V PV Power
