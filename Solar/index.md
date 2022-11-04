@@ -7,7 +7,7 @@ keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Inselanlagen,
 Zusammenfassung {#Zusammenfassung}
 ---------------
 
-Mit sog. Balkonkraftwerken kann man relativ einfach und günstig
+Mit sog. *Balkonkraftwerken* kann man relativ einfach und günstig
 Solarstrom gewinnen und über eine Steckdose direkt ins Hausnetz
 einspeisen. Das spart Stromkosten und rechnet sich schon nach wenigen
 Jahren Betrieb, allerdings nur soweit man den Strom auch gleichzeitig
@@ -15,7 +15,7 @@ selbst verbraucht.
 
 Für eine gewisse Unabhängigkeit vom allgemeinen Stromnetz und von der
 nicht immer kräftig vorhandenen Sonneneinstrahlung braucht man sog.
-Inselanlagen. Diese benötigen zusätzlich aufladbare Batterien als
+*Inselanlagen*. Diese benötigen zusätzlich aufladbare Batterien als
 Stromspeicher sowie andere Wechselrichter und Solar-Laderegler als
 Stecker-Solaranlagen, was sie aufwendiger und deutlich teurer macht.
 
@@ -37,8 +37,8 @@ Globalstrahlung_Deutschland.jpg){:.right width="550"}
 Die maximale Einstrahlung
 auf die Erde mittags bei klarem Himmel in Bodennähe auf eine Fläche
 senkrecht zum Sonnenstand liegt bei 1361 W/m² und wird als
-[terrestrische
-Solarkonstante](http://www.energieinfo.de/eglossar/sonneneinstrahlung)
+[*terrestrische Solarkonstante*](
+http://www.energieinfo.de/eglossar/sonneneinstrahlung)
 bezeichnet. Natürlich ist die tatsächliche Sonneneinstrahlung im
 Durchschnitt viel geringer. Sie hängt stark vom Standort auf der Erde ab
 (siehe z.B. [Simulationswerte von
@@ -46,8 +46,8 @@ Solargis](https://globalsolaratlas.info/map)) und ist je nach Bewölkung,
 Tages- und Jahreszeit sehr variabel.
 
 {:style="clear:both"}
-Die **Nennleistung** von Solarmodulen wird in **Wp** ([Watt
-Peak](https://de.wikipedia.org/wiki/Watt_Peak)) angegeben. Zu ihrer
+Die **Nennleistung** von Solarmodulen wird in **Wp** ([*Watt Peak](
+https://de.wikipedia.org/wiki/Watt_Peak)) angegeben. Zu ihrer
 Bestimmung verwendet man eine Referenzbestrahlung mit einem normierten
 Sonnenlichtspektrum einer Stärke von 1000 W/m² bei Zelltemperatur 25°C.\
 Bei näherer Betrachtung bedeutet die Nennleistung in kWp (also 1000 Wp)
@@ -74,8 +74,8 @@ oder gar [1200 bis 1300
 kWh](https://gruenes.haus/photovoltaik-pv-ertrag/) pro kWp installierter
 PV-Nennleistung und Jahr möglich. Der Jahresertrag lässt sich leicht
 näherungsweise berechnen durch Multiplikation des standortspezifischen
-PV-Potentials (das bereits angenommene typische System-Verlustfaktoren
-beinhaltet und auch \"spezifischer Ertrag\" genannt wird) in kWh/kWp mit
+*PV-Potentials* (das bereits angenommene typische System-Verlustfaktoren
+beinhaltet und auch *spezifischer Ertrag* genannt wird) in kWh/kWp mit
 der PV-Nennleistung in kWp. Das PV-Potential (PVOUT) erhält man z.B. aus
 den groben [Karten von
 Solargis](https://solargis.com/maps-and-gis-data/download), aus dem
@@ -146,14 +146,14 @@ Typischerweise
 speisen Solaranlagen den erzeugten Strom nach Umwandlung durch einen
 netzgekoppelten Wechselrichter
 ([Solarwechselrichter](https://de.wikipedia.org/wiki/Solarwechselrichter),
-engl. grid-tie inverter) direkt ins (lokale oder öffentliche) Stromnetz
+engl. _grid-tie inverter_) direkt ins (lokale oder öffentliche) Stromnetz
 ein, wo er sofort in irgendeiner Form verbraucht wird (bzw. der Rest in
 Form von Wärme verlorengeht). Zu beachten ist, dass diese Nutzungsart
 abseits eines bestehenden Wechselstrom-Netzes und während eines
 Stromausfalls nicht funktioniert, weil sich hierfür
 verwendete Wechselrichter mit dem Stromnetz synchronisieren müssen.
 
-Die auch \'[Balkonkraftwerk](https://www.steckdosensolar.de/)\'
+Die auch [*Balkonkraftwerk*](https://www.steckdosensolar.de/)
 genannten Anlagen haben meist eine recht geringe Nennleistung von etwa
 600-700 Wp. Das hat neben der geringen Größe und sehr überschaubaren
 Kosten auch damit zu tun, dass solche Anlagen selbst installiert werden
@@ -200,10 +200,10 @@ Schnitt nur etwa 0,16 kWh pro \"gekappter\" Stunde ausmacht.
 Ruecklaufsperre.png){:.right width="450"}
 Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
 verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
-Moderne Stromzähler haben eine Rücklaufsperre, was man an dem entsprechenden
+Moderne Stromzähler haben eine *Rücklaufsperre*, was man an dem entsprechenden
 Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
 Strom praktisch ins externe Netz verschenkt wird.
-Die klassischen Ferrariszähler mit mechanischer Drehscheibe
+Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
 laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
 Damit kann man \'unter der Hand Strom verkaufen\', was aber nicht erlaubt ist.
 Eine offiziell angemeldete und vergütete Einspeisung ist mit einiger Bürokratie
@@ -220,7 +220,7 @@ extern bezogenen Strom, berücksichtigt und entsprechend langsamer läuft.
 Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
 die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
 die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
-die Stromzähler arbeiten saldierend, d.h. sie bilden die Gesamtsumme
+die Stromzähler arbeiten *saldierend*, d.h. sie bilden die Gesamtsumme
 von Verbrauch und Erzeugung, welche dabei negatives Vorzeichen hat.
 
 Diese Nutzungsart lohnt sich also nur insoweit, wie man während der
@@ -230,7 +230,7 @@ Laden von (Fahrzeug-)Batterien, wobei die Akkus von E-Bikes oder
 E-Rollern von der Größenordnung und dem zeitlichen
 Nutzungsprofil besonders geeignet sind. Am einfachsten und am
 besten planbar ist es, wenn man ohnehin eine gewisse relativ
-gleichmäßige Grundlast hat, z.B. durch Kühlschränke oder Wärmepumpen.
+gleichmäßige Grundlast hat, z.B. durch Kühlschränke und Geräte im Standby.
 Eine Nutzung von überflüssigem Strom, die ich ziemlich clever fände,
 aber von der Steuerung auch nicht ganz einfach wäre, ist das
 (zusätzliche) Aufheizen eines Warmwasserboilers im Haus, so dass man
@@ -285,7 +285,8 @@ Solarenergie nicht direkt ins Netz, sondern über einen Solar-Laderegler
 (s.u.) zunächst in einer aufladbaren Batterie (Akkumulator)
 zwischenzuspeichern und von dort nach Bedarf zeitlich versetzt über
 einen netzgekoppelten Wechselrichter (s.u.) ins Hausnetz einzuspeisen.
-Das maximiert den Nutzen der PV-Anlage für den eigenen Stromverbrauch,
+Diese Betriebsart wird auch *Nachteinspeisung* genannt.
+Sie maximiert den Nutzen der PV-Anlage für den eigenen Stromverbrauch,
 lohnt sich aber nur, wenn man die Batterie schon aus anderen Gründen
 hat, z.B. für eine Notstromversorgung oder als Fahrzeugbatterie.
 
@@ -357,14 +358,14 @@ Alternativ zur
 Einspeisung ins Hausnetz kann man den von den Solarmodulen gelieferten
 Strom auch in einer Batterie speichern und bei Bedarf darüber Geräte
 unabhängig vom Hausnetz mit Strom versorgen. Diese Betriebsart wird als
-\'[Inselanlage](http://www.inselanlage.info/)\' (engl. off-grid)
+[*Inselanlage*](http://www.inselanlage.info/) (engl. _off-grid_)
 bezeichnet und ist für die Nutzung ohne externes Stromnetz (also z.B.
 bei Stromausfall, beim Campen mit dem Wohnmobil oder Wohnwagen, auf
 Booten und für abseits gelegene Häuser oder Hütten) die einzig mögliche.
 Als Notstromversorgung bei Stromausfall sind Batterien allerdings nur bedingt
-geeignet, weil sie bei einem längeren Stromausfall (engl. blackout) zu wenig
+geeignet, weil sie bei einem längeren Stromausfall (engl. _blackout_) zu wenig
 Kapazität haben (es seid denn, es scheint dann genug Sonne zum Nachladen), aber
-bei kürzeren Stromausfällen (engl. brownout) können sie sehr hilfreich sein.
+bei kürzeren Stromausfällen (engl. _brownout_) können sie sehr hilfreich sein.
 
 Neben der Speicherbatterie wird hier zumindest ein Solar-Laderegler (s.u.)
 benötigt, und sofern die Verbraucher nicht direkt mit der
@@ -396,7 +397,7 @@ Generelle Hinweise für die Auswahl und Nutzung von Komponenten {#Komponenten}
 
 ### Solarmodule {#Solarmodule}
 
-Solarmodule (engl. solar panels) werden intern aus vielen in Reihe
+Solarmodule (engl. _solar panels_) werden intern aus vielen in Reihe
 geschalteten Solarzellen zusammengesetzt, die Sonnenlicht in Gleichstrom
 umwandeln.
 
@@ -406,8 +407,8 @@ Bei den üblichen Silizium-Solarzellen steigt der entnehmbare Strom
 (Kurzschlussstrom) linear mit der Bestrahlungsstärke. Ihre
 Leerlaufspannung hingegen steigt schon bei geringer Helligkeit stark an
 und nähert sich dann nur noch langsam steigend dem Wert 0,63 V. Generell
-sind monokristalline Zellen zu bevorzugen, auch wenn sie ein wenig
-teurer sind als polykristalline oder amorphe, weil sie einen höheren
+sind *monokristalline* Zellen zu bevorzugen, auch wenn sie ein wenig
+teurer sind als *polykristalline* oder *amorphe*, weil sie einen höheren
 Wirkungsgrad haben.
 
 ![Bild: Bypass-Dioden bei der Arbeit](
@@ -415,7 +416,7 @@ Bypass-Dioden-bei-der-Arbeit.jpg){:.center}
 Leider bricht die
 Leistung von in Reihe geschalteten Zellen ein, sobald auch nur eine
 davon verschattet ist. Daher werden in den üblichen größeren Modulen
-sog. Bypass-Dioden eingesetzt, die bei Teilverschattung immerhin einen
+sog. *Bypass-Dioden* eingesetzt, die bei Teilverschattung immerhin einen
 Teil der Leistung fließen lassen.
 
 ![Bild: Starre Solarpanels](Starre_Solarpanels.png){:width="392"}
@@ -436,9 +437,9 @@ Verwendung für Wohnmobile.
 ![Bild:
 flexibles Schindel-Solarmodul](Schindel-Solarmodul2.png){:.right width="392"}
 Technisch besonders interessant finde ich die überlappende Anordnung und direkte
-Verschaltung von Solarzellen ohne Stromschienen (engl. busbars) in
-[Schindel-Modulen](https://www.strom-forschung.de/aktuelles/news/2022/schindel-solarmodule-innovativ-verschaltet-und-industriell-herstellbar)
-(engl. SSP = shingle solar panel). Dadurch steigt der Wirkungsgrad, weil
+Verschaltung von Solarzellen ohne Stromschienen (engl. _busbars_) in
+[*Schindel-Modulen*](https://www.strom-forschung.de/aktuelles/news/2022/schindel-solarmodule-innovativ-verschaltet-und-industriell-herstellbar)
+(engl. _SSP_ = _shingle solar panel_). Dadurch steigt der Wirkungsgrad, weil
 die Fläche besser genutzt wird und bei Teilverschattung und Wärme die
 Verluste verringert werden. Allerdings ist diese Bauart selten zu finden
 und verhältnismäßig teuer, so dass sie nur dann sinnvoll ist, wenn man
@@ -458,8 +459,8 @@ mit MC4-Anschlüssen an. Man sollte Module nur insoweit zusammenschalten
 und an einem gemeinsamen Regler-Eingang betrieben, wie sie in die
 gleiche Ausrichtung und relativ gleich(zeitig) verschattet werden.
 
--   Bei [Reihenschaltung](https://de.wikipedia.org/wiki/Reihenschaltung)
-    (oft auch \'Serienschaltung\' genannt) addieren sich die Spannungen
+-   Bei [*Reihenschaltung*](https://de.wikipedia.org/wiki/Reihenschaltung)
+    (oft auch *Serienschaltung* genannt) addieren sich die Spannungen
     der einzelnen Module, wobei man unbedingt darauf achten muss, dass
     die maximale Eingangsspannung, die der Regler verkraftet, nicht
     überschritten wird. Ein Nachteil der Reihenschaltung ist, dass es
@@ -469,7 +470,7 @@ gleiche Ausrichtung und relativ gleich(zeitig) verschattet werden.
     verschattet wird.
 
 -   Bei
-    [Parallelschaltung](https://de.wikipedia.org/wiki/Parallelschaltung)
+    [*Parallelschaltung*](https://de.wikipedia.org/wiki/Parallelschaltung)
     addieren sich die Ströme der einzelnen Module, wobei der je nach
     Einstrahlung mögliche Maximalstrom unter dem Maximalstrom des
     Regler-Eingangs liegen sollte, weil sonst zumindest Leistung
@@ -505,24 +506,24 @@ Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
 
 ![Bild: Strom-/Leistungs-Spannungskennlinien einer Solarzelle](
 I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="500"}
-Für die Umwandlung des \'rohen\' Solarstroms benötigt man sog. Spannungsregler.
-Dabei ist die [MPPT (Maximal-Leistungspunkt-Suche, engl. maximum power point
-tracking)](https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking)
+Für die Umwandlung des \'rohen\' Solarstroms benötigt man sog. *Spannungsregler*.
+Dabei ist die [*MPPT* (Maximal-Leistungspunkt-Suche, engl. _maximum power point
+tracking_)](https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking)
 zu empfehlen, weil sie auch bei stark wechselnder Einstrahlung optimale
 Energieausbeute bringt. MPPT-Regler sind allerdings deutlich teurer als die
-wesentlich einfacheren PWM-Regler (mit Pulsweitenmodulation).
+wesentlich einfacheren PWM-Regler (mit *Pulsweitenmodulation*).
 
 ![Bild: Solar-Microinverter](Solar-Microinverter.png){:.right width="500"}
 Für die Umwandlung von Gleichstrom in Wechselstrom (bei uns meist mit
 230 V) benötigt man einen
-[Wechselrichter](https://de.wikipedia.org/wiki/Wechselrichter) (manchmal
-auch \'Spannungswandler\' genannt, engl. inverter). Bei einem
+[*Wechselrichter*](https://de.wikipedia.org/wiki/Wechselrichter) (manchmal
+auch *Spannungswandler* genannt, engl. _inverter_). Bei einem
 Wechselrichter sollte man darauf achten, dass er ordentlichen
-Wechselstrom liefert (sog. \'reine Sinuswelle\', engl. pure sine wave)
+Wechselstrom liefert (sog. *reine Sinuswelle*, engl. _pure sine wave_)
 sowie einen hohen
 [Wirkungsgrad](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/wechselrichter/wirkungsgrad)
-(engl. efficiency) und einen geringen Ruhe-/Leerlaufstromverbrauch
-(engl. standby power consumption) hat. Außerdem ist empfehlenswert, ihn
+(engl. _efficiency_) und einen geringen Ruhe-/Leerlaufstromverbrauch
+(engl. _standby power consumption_) hat. Außerdem ist empfehlenswert, ihn
 mit ausreichend Leistungsreserve zu dimensionieren, auch weil er sonst
 schnell unangenehm lautes Lüftergeräusch verbreiten und bei
 Dauerbelastung leichter Schaden nehmen kann.
@@ -543,28 +544,27 @@ Balkonkraftwerken wird dann meist nur vereinfacht von einem
 DC-DC-converter.png){:.right width="400"}
 Für die Nutzung zur [regelbaren Einspeisung](#Batteriepuffer) aus einem
 Strompuffer ins Hausnetz braucht man eine einstellbaren Strombegrenzer,
-wie er in manchen Gleichspannungswandler (engl. DC-to-DC-converter)
+wie er in manchen *Gleichspannungswandler* (engl. _DC-to-DC-converter_)
 enthalten ist. Er sollte möglichst wenig Verluste haben. Wenn er einen
 [Aufwärtswandler](https://de.wikipedia.org/wiki/Aufw%C3%A4rtswandler)
-(engl. boost converter oder step-up converter) enthält,
+(engl. _boost converter_ oder _step-up converter_) enthält,
 kann er zudem dazu benutzt werden,
 die Spannung der Pufferbatterie (z.B. 12 V) auf eine für den Eingang
 des Netzwechselrichters passende Spannung (z.B. mindestens 20 V) zu bringen.
 
 {:style="clear:both"}
 ![Bild: Wechselrichter](Wechselrichter.png){:.right width="500"}
-Inselwechselrichter, die
-auch *selbst geführte Wechselrichter* genannt werden, werden vom
-Stromnetz unabhängig betrieben. Mit ihnen kann man die üblichen
+*Inselwechselrichter*, auch *selbst geführte Wechselrichter* genannt,
+werden vom Stromnetz unabhängig betrieben. Mit ihnen kann man die üblichen
 Haushaltsgeräte auch im Falle eines Stromausfalls mit einer Batterie
-versorgen, natürlich ausreichend Leistung vorausgesetzt.
+versorgen, natürlich ausreichend Batterieleistung und -Kapazität vorausgesetzt.
 
 ### Solar-Laderegler {#Laderegler}
 
 ![Bild: Solar-Laderegler](Solar-Laderegler.png){:.right width="400"}
 Wenn man über
 Solarmodule eine Batterie laden möchte, benötigt man einen
-Solar-Laderegler, der einen Spannungsregler mit einem Batterieladegerät
+*Solar-Laderegler*, der einen Spannungsregler mit einem Batterieladegerät
 verbindet. Mit billigen chinesischen (angeblich) MPPT-Reglern habe ich
 keine guten Erfahrungen gemacht, wohl aber mit den europäischen Marken
 Victron und Votronic.
@@ -606,7 +606,7 @@ spannungsstabiler und vertragen ein Mehrfaches an Lade-/Entladezyklen.
 Im Vergleich zu Li-Ionen- und Li-Polymer-Akkus, welche eine noch höhere
 Energiedichte haben, sind sie recht robust und sicher. Lithium-basierten
 Batterien benötigen für die Reihenschaltung von Akkuzellen ein sog.
-Batteriemanagementsystem (BMS), das für eine gleichmäßige
+*Batteriemanagementsystem* (*BMS*), das für eine gleichmäßige
 Spannungsverteilung der Zellen sorgt.\
 Eine typische 100 Ah Autobatterie wiegt etwa 26 kg und kostet nur etwa
 100€. Aus ihrer Nennkapazität von 12 V × 100 Ah = 1200 Wh sollte man pro
@@ -673,14 +673,14 @@ Ein Problem bei einer
 Batteriespannung von 24 V (oder 48 V) ist, dass Niederspannungs-Geräte
 typischerweise eher mit 12 V zu betreiben sind. Aber dafür gibt es für
 Geräte mit mäßigem Verbrauch (bis etwa 5 A, also 60 W) eine recht
-effiziente und kostengünstige Lösung, nämlich sog. Tiefsetzsteller
-(Abwärtswandler, engl. DC-DC buck step-down converter).
+effiziente und kostengünstige Lösung, nämlich sog. *Tiefsetzsteller*
+(auch *Abwärtswandler*, engl. _DC-DC buck converter oder _step-down converter_).
 
 {:style="clear:both"}
 ![Bild: Programmierbarer Batteriespannungswächter](
 Battery_voltage_protector.png){:.right width="500" style="margin-}
-Für die Nutzung als [automatischen Strompuffer](#Batteriepuffer)
-zur zeitversetzten Einspeisung ins Hausnetz braucht man einen Spannungswächter,
+Für die Nutzung als [automatischen Strompuffer](#Batteriepuffer) zur
+zeitversetzten Einspeisung ins Hausnetz braucht man einen *Spannungswächter*,
 der die Einspeisung bei nahezu voller Batterie einschaltet und bei nahezu
 leerer Batterie wieder ausschaltet. Dazu gibt es einfache fertige Module,
 die man nur noch geeignet anschließen und einstellen muss.
@@ -690,7 +690,7 @@ Beispiel-Konfigurationen {#Konfigurationen}
 
 ### Mobile Inselanlage {#Mobilanlage}
 
-Für unser Wohnmobil verwende ich seit Mai 2019 folgende relativ günstige
+Für unser Wohnmobil verwende ich seit Sommer 2019 folgende relativ günstige
 Komponenten zu meiner vollen Zufriedenheit:
 
 -   2 × 100 Wp flexible Solarpanels [Dokio
@@ -751,7 +751,7 @@ ich folgende Komponenten besonders interessant:
 
 Als Balkonanlage mit wahlweise direkter oder gepufferter Netzeinspeisung,
 aber auch für eine Notstromversorgung daheim und für einen längeren autarken
-Aufenthalt mit dem Wohnmobil habe ich folgende Komponenten:
+Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 
 -   4 × [150 Wp flexible ETFE SSP
     Solarmodule](https://www.solarfam.nl/150w-shingle-etfe-flexible-solar-panel-solarfam.html),
