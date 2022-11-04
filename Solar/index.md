@@ -58,7 +58,7 @@ einfach nachrechnen, indem man seine Nennleistung in kWp durch seine
 Fläche in m² teilt.
 
 Die Wp-Angaben von Herstellern und Händlern für Solarmodule sind mit
-Vorsicht zu genießen --- hauptsächlich weil die tatsächliche Leistung
+Vorsicht zu genießen --- hauptsächlich weil die tatsächliche Leistung
 wie oben erwähnt stark von der Situation (Ausrichtung, Sonnenstand,
 Bewölkung usw.) abhängig und meist deutlich geringer ist. Außerdem weil
 besonders chinesische Händler von flexiblen Solarmodulen dazu tendieren,
@@ -102,14 +102,14 @@ Bei den PV-Ertrags-Simulationen ist allerdings zu beachten, dass
 üblicherweise der Jahres-Gesamtertrag optimiert wird, also unter der
 Annahme, dass man den zur jeweiligen Tageszeit (und Jahreszeit)
 erzeugten Strom auch voll nutzen kann (sei es durch Eigenverbrauch,
-vergütete Einspeisung oder Zwischenspeicherung). Wenn man --- wie mit
-den meisten Stecker-Solaranlagen --- den Strom nur direkt selbst im
+vergütete Einspeisung oder Zwischenspeicherung). Wenn man --- wie mit
+den meisten Stecker-Solaranlagen --- den Strom nur direkt selbst im
 Haushalt verbrauchen kann, ist es meist günstiger, die Ausrichtung der
 Module eher für die Vormittags- und/oder Nachmittagssonne zu optimieren.
 Also möglichst zwei Ausrichtungen, und zwar nach Südost und nach
 Südwest, wählen (die dann aber bzgl. Solarstrom-Regelung (s.u.) getrennt
 zu behandeln sind) und einen größerem Neigungswinkel, weil zu den Zeiten
-die Sonne flacher steht, ansonsten eine eher flache Anordnung --- aber
+die Sonne flacher steht, ansonsten eine eher flache Anordnung --- aber
 nicht zu flach (sondern z.B. 20°), um weiterhin eine Selbstreinigung der
 Moduloberflächen zu ermöglichen.
 
@@ -196,24 +196,32 @@ erklärt sich damit, dass die Kappung realistisch bei nur knapp 9% der
 (Gesamt-)Stunden stattfindet und der dadurch verursachte Verlust im
 Schnitt nur etwa 0,16 kWh pro \"gekappter\" Stunde ausmacht.
 
-Von der gerade erzeugten Leistung fließt der Anteil, der nicht aktuell
-lokal (also im Haushalt) durch Elektrogeräte verbraucht wird,
-automatisch ins externe Stromnetz und wird praktisch an den jeweiligen
-Stromlieferanten verschenkt. Die Zeiten, dass man durch einen rückwärts
-laufenden Stromzähler \'unter der Hand Strom verkaufen\' konnte, sind
-vorbei, und eine offiziell vergütete Einspeisung ist mit Extra-Aufwand
-verbunden und bringt wenig --- sie beträgt in Deutschland gemäß eEG [zum
-01.04.2022 nur noch 6,53
-ct/kWh](https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung).
-Hingegen spart man sich die Verbrauchskosten für den selbst erzeugten
-und gleichzeitig verbrauchten Anteil, weil der Zähler für den aus dem
-externen Netz bezogenen Strom entsprechend langsamer läuft. Übrigens ist
-es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3) die
-Stecker-Solaranlage angeschlossen wird und auf welcher Phase die
-gleichzeitig verwendeten Verbraucher angeschlossen sind --- jedenfalls
-die neueren für die Abrechnung aktuell verwendeten Stromzähler arbeiten
-saldierend (d.h. bilden die Gesamtsumme von Verbrauch und Erzeugung,
-welche dabei negatives Vorzeichen hat).
+![Bild: Symbol für Rücklaufsperre im Stromzähler](
+Rücklaufsperre.jpg){:.right width="450"}
+Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
+verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
+Moderne Stromzähler haben eine Rücklaufsperre, was man an dem entsprechenden
+Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
+Strom praktisch ins externe Netz verschenkt wird.
+Die klassischen Ferrariszähler mit mechanischer Drehscheibe
+laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
+Damit kann man \'unter der Hand Strom verkaufen\', was aber nicht erlaubt ist.
+Eine offiziell angemeldete und vergütete Einspeisung ist mit einiger Bürokratie
+verbunden und bringt wenig --- die Vergütung sank in Deutschland gemäß eEG
+[bis 2022 auf ca. 6 ct/kWh](
+https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
+und steigt [ab 2023 auf etwa 8 ct/kWh](
+https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
+--- immer noch sehr mager, besonders im Vergleich zum Verbrauchspreis.
+
+Hingegen spart man sich für den selbst erzeugten und gleichzeitig verbrauchten
+Anteil die Verbrauchskosten, weil der Zähler nur die Differenz, also den von
+extern bezogenen Strom, berücksichtigt und entsprechend langsamer läuft.
+Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
+die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
+die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
+die Stromzähler arbeiten saldierend, d.h. sie bilden die Gesamtsumme
+von Verbrauch und Erzeugung, welche dabei negatives Vorzeichen hat.
 
 Diese Nutzungsart lohnt sich also nur insoweit, wie man während der
 Sonnenscheindauer den erzeugten Strom direkt sinnvoll verbrauchen kann,
@@ -252,7 +260,7 @@ den Anteil des während der Sonnenscheindauer im Haushalt nutzbaren
 Ertrages, sowie optional Effekte durch das Laden eines E-Fahrzeugs (was
 normalerweise öfter zu Sonnenscheinzeiten erfolgen kann), den Betrieb
 einer Wärmepumpe und die Nutzung eines Stromspeichers. Dabei werden die
-Energieflüsse der Einfachheit halber auf Monatsbasis gerechnet --- pro
+Energieflüsse der Einfachheit halber auf Monatsbasis gerechnet --- pro
 Stunde wäre genauer. Für eine Balkonanlage mit 600 Wp, die 660€ kostet
 und bei optimaler Ausrichtung pro Jahr 660 kWh Ertrag liefert, kann man
 in einem Haushalt mit 3000 kWh Jahresverbrauch, von dem z.B.28% während der
@@ -289,7 +297,7 @@ Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8).
 Wenn man aber schon einen Solar-Wechselrichter hat und diesen verwenden
 möchte, könnte es im einfachsten Fall genügen, ihn direkt mit der
 Batterie zu verbinden und über einen Schalter manuell zu
-steuern --- allerdings nur, wenn die Batteriespannung (z.B. 24 V) höher
+steuern --- allerdings nur, wenn die Batteriespannung (z.B. 24 V) höher
 ist als die minimale Eingangsspannung des Wechselrichters und dieser mit
 seiner vollen Leistung betrieben werden kann (z.B. mit einem 300 W
 PV-Modul-Eingang). Um die Stromstärke regeln zu können, kann man ein
@@ -414,7 +422,7 @@ Aluminiumrahmen und eine Größe von typischerweise ca. 1,7 m × 1 m × 3
 cm, was eine Nennleistung von etwa 350 Wp ergibt, und eine Masse von ca.
 20 kg. (Semi-)Flexible Module sind teurer als starre und weniger
 langlebig, dafür aber viel leichter und nur wenige Millimeter dick. Sie
-sind meist auch deutlich kleiner --- typischerweise 1,2 m × 0,5 m bei
+sind meist auch deutlich kleiner --- typischerweise 1,2 m × 0,5 m bei
 einer Nennleistung von 100 Wp und einer Masse von 1 bis 2 kg.
 [Hier](https://solar-generatoren.de/die-richtigen-solarmodule-fuers-wohnmobil/)
 ein Vergleich verschiedener Solarmodul-Typen in Hinblick auf die
@@ -432,7 +440,7 @@ Verluste verringert werden. Allerdings ist diese Bauart selten zu finden
 und verhältnismäßig teuer, so dass sie nur dann sinnvoll ist, wenn man
 Platz sparen will/muss.
 
-Solarmodule --- aber bitte nur gleichartige --- kann man wie
+Solarmodule --- aber bitte nur gleichartige --- kann man wie
 Batteriezellen seriell und/oder parallel verbinden, um mehr Leistung zu
 erhalten, ohne für jedes Modul einen eigenen Regler (bzw.
 Regler-Eingang) verwenden zu müssen. Zum Thema Solar-Regler siehe unten.
@@ -513,7 +521,7 @@ Für die Einspeisung ins Stromnetz muss ein *netzgekoppelter
 Wechselrichter* verwendet werden. Dieser wird auch *Netzwechselrichter*
 oder *fremd geführter Wechselrichter* genannt, weil er sich automatisch
 an die Frequenz und Phase des anliegenden Wechselstroms anpasst und bei
-fehlendem Stromanschluss den Ausgang abschaltet --- auch aus
+fehlendem Stromanschluss den Ausgang abschaltet --- auch aus
 Sicherheitsgründen für den Fall, dass ein blanker Stecker berührt werden
 kann. Bei Stecker-Solaranlagen wird meist ein
 *Solar-Mikrowechselrichter* verwendet, der einen Spannungsregler mit
@@ -606,7 +614,7 @@ Stunde lang betreiben.
 Um den Wandlungsverlust von ca. 10% eines Wechselrichters zu vermeiden,
 sollte man bei einer Inselanlage die Verbraucher möglichst direkt an der
 Batterie anschließen, was z.B. bei LED-Lampen, Radios und
-USB-Ladebuchsen gut machbar ist --- aber auch bei Laptops, wenn man für
+USB-Ladebuchsen gut machbar ist --- aber auch bei Laptops, wenn man für
 sie ein Netzteil mit 12 V (statt 230 V) Eingang verwendet. Bei mittlerer
 Last von 25 W ergeben sich mit einer voll geladenen 12,8 V 100 Ah
 LiFePO4-Batterie gut 50 Stunden Betriebszeit. Ein durchschnittlicher 3,6
