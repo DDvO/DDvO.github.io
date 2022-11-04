@@ -7,17 +7,18 @@ keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Inselanlagen,
 Zusammenfassung {#Zusammenfassung}
 ---------------
 
-Mit sog. *Balkonkraftwerken* kann man relativ einfach und günstig
-Solarstrom gewinnen und über eine Steckdose direkt ins Hausnetz
-einspeisen. Das spart Stromkosten und rechnet sich schon nach wenigen
-Jahren Betrieb, allerdings nur soweit man den Strom auch gleichzeitig
-selbst verbraucht.
+Mit einem sog. *Balkonkraftwerk* kann man relativ einfach und günstig
+Solarstrom gewinnen und über eine Steckdose direkt ins Hausnetz einspeisen.
+Das spart Stromkosten und kann sich schon nach wenigen Jahren Betrieb rechnen,
+allerdings nur soweit man den Strom auch gleichzeitig selbst verbraucht.
 
-Für eine gewisse Unabhängigkeit vom allgemeinen Stromnetz und von der
-nicht immer kräftig vorhandenen Sonneneinstrahlung braucht man sog.
-*Inselanlagen*. Diese benötigen zusätzlich aufladbare Batterien als
-Stromspeicher sowie andere Wechselrichter und Solar-Laderegler als
-Stecker-Solaranlagen, was sie aufwendiger und deutlich teurer macht.
+Für eine gewisse Unabhängigkeit von der nicht ständig kräftig vorhandenen
+Sonneneinstrahlung und vom allgemeinen Stromnetz
+braucht man eine aufladbare Batterie als Stromspeicher und weitere Geräte,
+was das Ganze aufwendiger und deutlich teurer macht. Damit lässt sich die
+gewonnene Energie über den ganzen Tag und die Nacht verteilt einspeisen.
+Eine sog. *Inselanlage ist auch während Stromausfällen verwendbar,
+soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
 
 Photovoltaik (PV) und ihr möglicher Energie-Ertrag {#Photovoltaik}
 --------------------------------------------------
