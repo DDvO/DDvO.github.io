@@ -86,9 +86,9 @@ EU](https://re.jrc.ec.europa.eu/pvg_tools/de/) bei der Standard-Eingabe
 von 1 kWp für die installierte max. PV-Leistung.
 
 ![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
-Solarmodule_Ausrichtung_PV-Potential.png){:width="49%" }
+Solarmodule_Ausrichtung_PV-Potential.png){:width="392" }
 ![Bild: Ertragssanteil nach Ausrichtung von Solarmodulen](
-Solarmodule_Ausrichtung_Ertragsanteil.png){:width="49%" .right}
+Solarmodule_Ausrichtung_Ertragsanteil.png){:width="392" .right}
 Die [beste Ausbeute](
 https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
 bekommt man in süddeutschen Breitengraden bei Ausrichtung genau nach
@@ -150,7 +150,7 @@ engl. grid-tie inverter) direkt ins (lokale oder öffentliche) Stromnetz
 ein, wo er sofort in irgendeiner Form verbraucht wird (bzw. der Rest in
 Form von Wärme verlorengeht). Zu beachten ist, dass diese Nutzungsart
 abseits eines bestehenden Wechselstrom-Netzes und während eines
-Stromausfalls (engl. blackout) nicht funktioniert, weil sich hierfür
+Stromausfalls nicht funktioniert, weil sich hierfür
 verwendete Wechselrichter mit dem Stromnetz synchronisieren müssen.
 
 Die auch \'[Balkonkraftwerk](https://www.steckdosensolar.de/)\'
@@ -197,7 +197,7 @@ erklärt sich damit, dass die Kappung realistisch bei nur knapp 9% der
 Schnitt nur etwa 0,16 kWh pro \"gekappter\" Stunde ausmacht.
 
 ![Bild: Symbol für Rücklaufsperre im Stromzähler](
-Rücklaufsperre.jpg){:.right width="450"}
+Ruecklaufsperre.png){:.right width="450"}
 Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
 verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
 Moderne Stromzähler haben eine Rücklaufsperre, was man an dem entsprechenden
@@ -352,7 +352,7 @@ abfließt.
 
 ### Inselanlage (mit Batteriespeicherung) {#Inselanlage}
 
-![Bild: Aufbau Inselanlage](Inselanlage.jpg){:.right width="400"}
+![Bild: Aufbau Inselanlage](Inselanlage.png){:.right width="400"}
 Alternativ zur
 Einspeisung ins Hausnetz kann man den von den Solarmodulen gelieferten
 Strom auch in einer Batterie speichern und bei Bedarf darüber Geräte
@@ -361,6 +361,10 @@ unabhängig vom Hausnetz mit Strom versorgen. Diese Betriebsart wird als
 bezeichnet und ist für die Nutzung ohne externes Stromnetz (also z.B.
 bei Stromausfall, beim Campen mit dem Wohnmobil oder Wohnwagen, auf
 Booten und für abseits gelegene Häuser oder Hütten) die einzig mögliche.
+Als Notstromversorgung bei Stromausfall sind Batterien allerdings nur bedingt
+geeignet, weil sie bei einem längeren Stromausfall (engl. blackout) zu wenig
+Kapazität haben (es seid denn, es scheint dann genug Sonne zum Nachladen), aber
+bei kürzeren Stromausfällen (engl. brownout) können sie sehr hilfreich sein.
 
 Neben der Speicherbatterie wird hier zumindest ein Solar-Laderegler (s.u.)
 benötigt, und sofern die Verbraucher nicht direkt mit der
@@ -397,7 +401,7 @@ geschalteten Solarzellen zusammengesetzt, die Sonnenlicht in Gleichstrom
 umwandeln.
 
 ![Bild: Spannung und Strom abhängig von der Bestrahlungsstärke](
-Kennlinie_Bestrahlungsstärke_Spannung-Strom.jpg){:.right width="500"}
+Kennlinie_Bestrahlungsstaerke_Spannung-Strom.jpg){:.right width="500"}
 Bei den üblichen Silizium-Solarzellen steigt der entnehmbare Strom
 (Kurzschlussstrom) linear mit der Bestrahlungsstärke. Ihre
 Leerlaufspannung hingegen steigt schon bei geringer Helligkeit stark an
@@ -414,8 +418,8 @@ davon verschattet ist. Daher werden in den üblichen größeren Modulen
 sog. Bypass-Dioden eingesetzt, die bei Teilverschattung immerhin einen
 Teil der Leistung fließen lassen.
 
-![Bild: Starre Solarpanels](Starre_Solarpanels.png){:width="49%"}
-![Bild: Flexible Solarpanels](Flexible_Solarpanels.png){:.right width="49%"}
+![Bild: Starre Solarpanels](Starre_Solarpanels.png){:width="392"}
+![Bild: Flexible Solarpanels](Flexible_Solarpanels.png){:.right width="392"}
 [Klassische Solarmodule](https://gruenes.haus/pv-modul-groesse-gewicht/)
 haben einen
 Aluminiumrahmen und eine Größe von typischerweise ca. 1,7 m × 1 m × 3
@@ -428,9 +432,9 @@ einer Nennleistung von 100 Wp und einer Masse von 1 bis 2 kg.
 ein Vergleich verschiedener Solarmodul-Typen in Hinblick auf die
 Verwendung für Wohnmobile.
 
-![Bild: starres Schindel-Solarmodul](Schindel-Solarmodul.png){:width="49%"}
+![Bild: starres Schindel-Solarmodul](Schindel-Solarmodul.png){:width="392"}
 ![Bild:
-flexibles Schindel-Solarmodul](Schindel-Solarmodul2.png){:.right width="49%"}
+flexibles Schindel-Solarmodul](Schindel-Solarmodul2.png){:.right width="392"}
 Technisch besonders interessant finde ich die überlappende Anordnung und direkte
 Verschaltung von Solarzellen ohne Stromschienen (engl. busbars) in
 [Schindel-Modulen](https://www.strom-forschung.de/aktuelles/news/2022/schindel-solarmodule-innovativ-verschaltet-und-industriell-herstellbar)
@@ -483,13 +487,19 @@ Leerlaufspannung hat, wird es ohne Reihenschaltung bei einer
 Ladeschlussspannung von ca. 14,5 V einer LiFePO4-Batterie bei wolkigem
 Wetter (mit vielleicht nur 100 - 200 W/m²) ziemlich eng.
 
-![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.center}
+{:style="clear:both"}
+
+![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.left width="545"}
+![Bild: Solaranlage auf Pergola](Pergola-Anlage.jpg){:.right width="245"}
+
+{:style="clear:both"}
 Zur Montage bzw.
-Aufständerung von Solarmodulen auf einem Dach oder an einem Balkon
+Aufständerung von Solarmodulen auf einem Hausdach oder an einem Balkon
 [hier](https://www.youtube.com/watch?v=TKeu6YGVuus) ein Überblick-Video.
 [Hier](https://machdeinenstrom.de/balkonkraftwerk-montageloesungen-fuer-die-balkonbruestung/)
-ein Artikel mit speziellen Tipps zur Installation an einer
-Balkonbrüstung.
+ein Artikel mit speziellen Tipps zur Installation an einer Balkonbrüstung.
+Es gibt aber auch andere Möglichkeiten, wie z.B. auf einer Garage, einem
+Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
 
 ### Solar-Regler und Wechselrichter {#Wechselrichter}
 
