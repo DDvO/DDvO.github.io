@@ -25,7 +25,7 @@ soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
 Photovoltaik (PV) und ihr möglicher Energie-Ertrag {#Photovoltaik}
 --------------------------------------------------
 
-Mit Solarzellen kann man Sonnenlicht in elektrische Energie umwandeln,
+Mit Solarzellen kann man Sonnenlicht in elektrischen Strom umwandeln,
 wenn auch leider nicht gerade effizient. Der
 [Wirkungsgrad](https://de.wikipedia.org/wiki/Solarzelle#Wirkungsgrad)
 der heutzutage üblichen Photovoltaik-Technologie mit Siliziumzellen
@@ -35,8 +35,12 @@ nicht senkrecht zur Einstrahlung ausgerichtet, (teil-)verschattet,
 verschmutzt oder zu warm sind. Zu berücksichtigen ist zudem der
 Wirkungsgrad der übrigen PV-Anlage von etwa 80 bis 95%.
 
-![Bild: Globalstrahlung in Deutschland](
-Globalstrahlung_Deutschland.jpg){:.right width="550"}
+[![Bild: Globalstrahlung in Deutschland](
+Globalstrahlung_Deutschland.jpg){:.right width="550"
+style="margin-left: 30px; margin-right: 30px"}](
+https://solargis.com/maps-and-gis-data/download/germany)
+Die von Solarzellen abgegebene Leistung hängt ziemlich linear
+von der Intensität der Sonnen-Einstrahlung ab.
 Die maximale Einstrahlung
 auf die Erde mittags bei klarem Himmel in Bodennähe auf eine Fläche
 senkrecht zum Sonnenstand liegt bei 1361 W/m² und wird als
@@ -44,9 +48,11 @@ senkrecht zum Sonnenstand liegt bei 1361 W/m² und wird als
 http://www.energieinfo.de/eglossar/sonneneinstrahlung)
 bezeichnet. Natürlich ist die tatsächliche Sonneneinstrahlung im
 Durchschnitt viel geringer. Sie hängt stark vom Standort auf der Erde ab
-(siehe z.B. [Simulationswerte von
-Solargis](https://globalsolaratlas.info/map)) und ist je nach Bewölkung,
-Tages- und Jahreszeit sehr variabel.
+und ist je nach Bewölkung, Tages- und Jahreszeit sehr variabel.\
+Die nebenstehende
+[Karte von Solargis](https://solargis.com/maps-and-gis-data/download)
+gibt für Deutschland einen Überblick, welche Menge an Sonnenstrahlung
+pro Quadratmeter horizontaler Fläche durchschnittlich im Jahr zusammenkommt.
 
 {:style="clear:both"}
 Die **Nennleistung** von Solarmodulen wird in **Wp** ([*Watt Peak](
@@ -68,7 +74,8 @@ besonders chinesische Händler von flexiblen Solarmodulen dazu tendieren,
 bei den Leistungsangaben deutlich zu übertreiben. Daher lohnt sich als
 Plausibiltäts-Check, den Wirkungsgrad nachzurechnen.
 
-![Bild: PV-Potential in Europa](PVOUT_Europe.png){:.center}
+[![Bild: PV-Potential in Europa](PVOUT_Europe.png){:.center}](
+https://solargis.com/maps-and-gis-data/download/europe)
 In unseren
 Breitengraden ist je nach Standort bei optimaler statischer Ausrichtung
 von Solarmodulen ein Ertrag je nach Quelle von [etwa 900 bis 1000
@@ -91,7 +98,7 @@ von 1 kWp für die installierte max. PV-Leistung.
 ![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_PV-Potential.png){:width="392" }
 ![Bild: Ertragsanteil nach Ausrichtung von Solarmodulen](
-Solarmodule_Ausrichtung_Ertragsanteil.png){:width="392" .right}
+Solarmodule_Ausrichtung_Ertragsanteil.png){:width="385" .right}
 Die [beste Ausbeute](
 https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
 bekommt man in süddeutschen Breitengraden bei Ausrichtung genau nach
@@ -166,7 +173,8 @@ in Österreich gilt nach einer EU-Richtlinie eine Obergrenze von 800 W.
 
 ![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
 Solarstrom-Einspeisung](
-Stromleitung_Überlastung_Solareinspeisung.jpg){:.right width="450"}
+Stromleitung_Überlastung_Solareinspeisung.jpg){:.right width="450"
+style="margin-left: 20px; margin-right: 20px"}
 Hintergrund dieser Beschränkung sind vornehmlich Sicherheitsbedenken:
 Falls über die Wohnungs-Stromleitung, an der die Einspeisung
 stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
@@ -179,6 +187,14 @@ werden, was allerdings insgesamt in der Praxis höchst unwahrscheinlich ist.
 Von der ESTI (Schweiz) wird aus diesem Grund
 die Leitungsüberlastung durch Stecker-Solar-Geräte
 [nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
+
+Ein weiterer Grund für die Beschränkung sind mögliche Rückwirkungen
+der Einspeisung auf die Stabilität des allgemeinen Stromnetzes.
+Wenn durch sog.
+[*Nulleinspeisung*](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/eigenverbrauch/nulleinspeisung)
+sichergestellt ist, kein überflüssiger Strom ins externe Netz fließt,
+können Balkonkraftwerke [auch z.B. 1800 W](
+https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/) liefern.
 
 {:style="clear:both"}
 
@@ -225,7 +241,7 @@ extern bezogenen Strom, berücksichtigt und entsprechend langsamer läuft.
 Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
 die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
 die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
-die Stromzähler arbeiten *saldierend*, d.h. sie bilden die Gesamtsumme
+die Stromzähler arbeiten *phasensaldierend*, d.h. sie bilden die Gesamtsumme
 von Verbrauch und Erzeugung, welche dabei negatives Vorzeichen hat.
 
 Je stromhungriger ein Haushalt tagsüber ist, desto größer der zu erwartende
@@ -248,7 +264,8 @@ im Haus, so dass man weniger fossile Brennstoffe verbraucht.
 ### Stromverbrauch im Haushalt
 
 ![Bild: Energiekosten-Messgerät in Steckdosenform](
-Energiekosten-Messgeraet.png){:.right width="350"}
+Energiekosten-Messgeraet.png){:.right width="300"
+style="margin-left: 70px; margin-right: 70px"}
 Den Stromverbrauch von Elektrogeräten im Haushalt kann man recht einfach
 mit Energiekosten-Messgeräten in Steckdosenform bestimmen. Diese messen
 nicht nur den momentanen Stromverbrauch in Watt, sondern bei längerer
@@ -277,8 +294,8 @@ pro Jahr. Wenn der damit erzeugte Strom komplett selbst verbraucht wird
 und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
 ergibt sich eine Amortisationszeit von nur 2,5 Jahren.
 
-![Bild: Ertragsrechnung Balkonanlage](
-PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}
+[![Bild: Ertragsrechnung Balkonanlage](
+PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
 Beispielsweise mit
 dem [PV-Rechner](PV-Rechner_v6+.xls) (der eigentlich für \"große\"
 PV-Anlagen auf Hausdächern konzipiert ist) kann man die Rechnung
@@ -306,71 +323,80 @@ So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
 
 ### Stecker-Solaranlage mit Batteriepuffer {#Batteriepuffer}
 
-![Bild: Balkonkraftwerk mit Speicher](
-Balkonkraftwerk_mit_Speicher.jpg){:.right width="480"}
-Es ist auch möglich, die
-Solarenergie nicht direkt ins Netz, sondern über einen Solar-Laderegler
-(s.u.) zunächst in einer aufladbaren Batterie (Akkumulator)
-zwischenzuspeichern und von dort nach Bedarf zeitlich versetzt über
-einen netzgekoppelten Wechselrichter (s.u.) ins Hausnetz einzuspeisen.
-Diese Betriebsart wird auch *Nachteinspeisung* genannt.
+[![Bild: Balkonkraftwerk mit Speicher - Solaranlage](
+Balkonkraftwerk_mit_Speicher.jpg){:.right width="350"}](
+https://www.youtube.com/watch?v=f-iz6WE8GD8)
+Statt die Solarenergie direkt einzuspeisen, kann man sie auch über einen
+Solar-Laderegler (s.u.) zunächst in einer aufladbaren Batterie zwischenspeichern
+und von dort nach Bedarf zeitlich versetzt über einen
+netzgekoppelten Wechselrichter (s.u.) ins Hausnetz einspeisen.
+Diese Betriebsart wird auch *Strompufferung* oder *Nachteinspeisung* genannt.
 Sie maximiert den Nutzen der PV-Anlage für den eigenen Stromverbrauch,
 lohnt sich finanziell aber nur, wenn man die Batterie schon aus anderen Gründen
 hat, z.B. für eine Notstromversorgung oder als Fahrzeugbatterie.
-Außerdem ist es für die ökologische Gesamtbilanz eigentlich viel besser, den
+Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
 
-Für die zeitversetzte Einspeisung empfiehlt sich ein [regelbarer
+Für die Einspeisung aus der Batterie bietet sich ein [regelbarer
 Netzwechselrichter](https://de.aliexpress.com/item/1005001445871590.html)
-wie in [diesem genialen Video von
+an wie in [diesem genialen Video von
 Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8).
 Wenn man aber schon einen Solar-Wechselrichter hat und diesen verwenden
 möchte, könnte es im einfachsten Fall genügen, ihn direkt mit der
 Batterie zu verbinden und über einen Schalter manuell zu
 steuern --- allerdings nur, wenn die Batteriespannung (z.B. 24 V) höher
 ist als die minimale Eingangsspannung des Wechselrichters und dieser mit
-seiner vollen Leistung betrieben werden kann (z.B. mit einem 300 W
-PV-Modul-Eingang). Um die Stromstärke regeln zu können, kann man ein
-Labornetzteil verwenden, evtl. mit DC-DC-Wandler wie das [Joy-IT
-DPM8624](https://www.idealo.de/preisvergleich/OffersOfProduct/202115817)
-aus dem [Video von Andreas
-Schmitz](https://www.youtube.com/watch?v=yOcoux9IbzM) oder einen
+seiner vollen Leistung betrieben werden kann
+(z.B. mit einem auf 300 W begrenzten PV-Modul-Eingang).\
+Um die Stromstärke regelbar zu drosseln, kann man ein
+Labornetzteil verwenden, evtl. mit DC-DC-Wandler wie das [Joy-IT DPM8624](
+https://www.idealo.de/preisvergleich/OffersOfProduct/202115817)
+aus dem [Video von Andreas Schmitz](
+https://www.youtube.com/watch?v=yOcoux9IbzM) oder einen
 günstigen Gleichspannungswandler mit regelbarer Strombegrenzung (s.u.).
+Wenn man zudem bereits eine Powerstation hat, kann man zwischen ihren
+Wechselstrom-Ausgang und den Netzwechselrichter ein regelbares Netzteil hängen,
+siehe [sein Nachfolge-Video](https://www.youtube.com/watch?v=ZXHAXrJS9CU), was
+allerdings zu unnötigen Verlusten durch Hin- und Her-Wandlung des Stroms führt.
 
-Oder wenn man zudem bereits eine Powerstation hat, kann man zwischen
-ihren Wechselstrom-Ausgang und den Netzwechselrichter ein regelbares
-Netzteil hängen, siehe [sein
-Nachfolge-Video](https://www.youtube.com/watch?v=ZXHAXrJS9CU), was
-allerdings zu unnötigen Verlusten durch Hin- und Her-Wandlung des Stroms
-führt.
+Vor Allem im Sinne der Stromkosten-Optimierung wäre es schön,
+wenn die Einspeisung der gespeicherten Energie automatisch so stark erfolgt, wie
+sie auch benötigt wird, aber das wäre eine regelungstechnische Herausforderung.
+Viel einfachster und für die meisten Anwendungsfälle ausreichend ist aber,
+die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
+so abzustimmen, dass lediglich ein Großteil der Grundlast des Haushalts,
+z.B. 50 bis 100 W, für eine Dauer von 1-2 Tagen abgedeckt wird.
+Das kann man bei Bedarf auch mit einer Zeitschaltuhr kombinieren.
 
-In jedem Fall muss für die Situation, dass die Batterieladung zur Neige
-geht (bei LiFePO4 spätestens bei 90% Entladung) eine automatische
-Abschaltung vorhanden sein, damit die Batterie nicht durch Tiefentladung
-geschädigt wird. Außerdem wäre es v.A. im Sinne der
-Stromkosten-Optimierung schön, wenn die Einspeisung der gespeicherten
-Energie automatisch so stark erfolgt, wie sie auch benötigt wird, was
-aber eine regelungstechnische Herausforderung wäre.
+[![Bild: Balkonkraftwerk mit Speicher - PV&E](
+Balkonkraftwerk_mit_Speicher.png){:.right width="400"}](
+https://www.youtube.com/watch?v=N6NqMXQHP2I)
+Auf jeden Fall muss für die Situation, dass die Batterieladung zur Neige geht
+(bei LiFePO4 spätestens bei 90% Entladung) eine automatische Abschaltung
+vorhanden sein, damit die Batterie nicht durch Tiefentladung geschädigt wird.
+Falls man für den Notfall stets eine gewisse Strommenge zur Verfügung halten
+möchte, sollte die Abschaltung schon entsprechend früher erfolgen.\
+Wenn der Solar-Laderegler einen Lastausgang mit einstellbarer Schutzabschaltung
+hat, wie z.B. beim Victron BlueSolar, kann man diesen so verwenden, wie in
+[diesem schönen Video von PV&E](https://www.youtube.com/watch?v=N6NqMXQHP2I)
+gezeigt. Zudem kann dessen Straßenlichtfunktion für die zeitliche Steuerung
+genutzt werden.\
+Ansonsten kann man zur Regelung einen recht simplen
+programmierbarer Batteriespannungswächter (s.u.) verwenden, wie im
+[Video von Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8) vorgeführt.
+Er wird so eingestellt, dass bei es beim Erreichen einer Batteriespannung, die
+z.B. annähernd einer Vollladung entspricht, den Wechselrichter einschaltet und
+z.B. in der Nähe der Batterie-Entladeschlussspannung diesen wieder ausschaltet.
+Damit wird die über die sonnenreiche Tageszeit gesammelte Solarenergie
+auch über sonnenarme Zeiten (solange die Ladung reicht, typischerweise
+bis zum nächsten Vormittag) gleichmäßig abgegeben,
+mehr oder weniger ohne Strom nach extern zu verschenken.
 
-Am einfachsten ist aber, die Ausgangsleistung des Wechselrichters und
-die Batteriekapazität so abzustimmen, dass lediglich ein Großteil der
-Grundlast des Haushalts, z.B. 100 W, für eine Dauer von 1-2 Tagen
-abgedeckt wird. Dann genügt zur Regelung ein recht simpler
-programmierbarer Batteriespannungswächter (s.u.), wie in [im Video von
-Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8) vorgeführt. Es
-wird so eingestellt, dass bei es beim Erreichen einer Batteriespannung,
-die annähernd einer Vollladung entspricht, den Wechselrichter
-einschaltet und in der Nähe der Batterie-Entladeschlussspannung diesen
-wieder ausschaltet. Damit wird die über die sonnenreiche Tageszeit
-gesammelte Solarenergie dann über sonnenarme Zeiten (solange die Ladung
-reicht, typischerweise bis zum nächsten Vormittag) gleichmäßig
-abgegeben, mehr oder weniger ohne Strom nach extern zu verschenken.
-
-![Bild: Wasserspeicher als Analogie](Wasserspeicher.jpg){:.right width="400"}
-Hier als
-Analogie eine Skizze eines automatischen Wasserspeichers, der z.B. über
-die Dachrinne eines Hauses gespeist wird. Wenn er voll genug ist, läuft
-das Wasser über die rechte innere Begrenzung und lässt die Kugel
+![Bild: Wasserspeicher als Analogie](Wasserspeicher.jpg){:.right width="400"
+style="margin-left: 50px; margin-right: 50px"}
+Hier als Analogie eine Skizze eines automatischen Wasserspeichers,
+der z.B. über die Dachrinne eines Hauses gespeist wird. Wenn er voll genug ist,
+läuft das Wasser über die rechte innere Begrenzung und lässt die Kugel
 aufschwimmen, die bis dahin den Auslass blockiert hat. Dann fließt das
 Wasser aus dem Speicher langsam und gleichmäßig nach unten aus. Wenn der
 Speicher fast leer ist, verschließt die Kugel den Auslass wieder. Der
@@ -431,7 +457,7 @@ geschalteten Solarzellen zusammengesetzt, die Sonnenlicht in Gleichstrom
 umwandeln.
 
 ![Bild: Spannung und Strom abhängig von der Bestrahlungsstärke](
-Kennlinie_Bestrahlungsstaerke_Spannung-Strom.jpg){:.right width="500"}
+Kennlinie_Bestrahlungsstaerke_Spannung-Strom.jpg){:.right width="530"}
 Bei den üblichen Silizium-Solarzellen steigt der entnehmbare Strom
 (Kurzschlussstrom) linear mit der Bestrahlungsstärke. Ihre
 Leerlaufspannung hingegen steigt schon bei geringer Helligkeit stark an
@@ -508,7 +534,7 @@ gleiche Ausrichtung und relativ gleich(zeitig) verschattet werden.
     Dafür hat man aber weniger Verluste durch Teilverschattung.
 
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
-I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="550"}
+I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
 Zu beachten ist noch, dass die Regler-Eingangsspannung je nach Modell
 bis zu 5 V über der gewünschten Ausgangsspannung des Reglers (z.B. der
 Speicherbatterie) liegen muss, damit der Regler effektiv Strom liefern
@@ -519,7 +545,7 @@ Wetter (mit vielleicht nur 100 - 200 W/m²) ziemlich eng.
 
 {:style="clear:both"}
 
-![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.left width="545"}
+![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.left width="510"}
 ![Bild: Solaranlage auf Pergola](Pergola-Anlage.jpg){:.right width="245"}
 
 {:style="clear:both"}
@@ -534,7 +560,7 @@ Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
 ### Solar-Regler und Wechselrichter {#Wechselrichter}
 
 ![Bild: Strom-/Leistungs-Spannungskennlinien einer Solarzelle](
-I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="500"}
+I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="450"}
 Für die Umwandlung des \'rohen\' Solarstroms benötigt man sog. *Spannungsregler*.
 Dabei ist die [*MPPT* (Maximal-Leistungspunkt-Suche, engl. _maximum power point
 tracking_)](https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking)
@@ -542,23 +568,24 @@ zu empfehlen, weil sie auch bei stark wechselnder Einstrahlung optimale
 Energieausbeute bringt. MPPT-Regler sind allerdings deutlich teurer als die
 wesentlich einfacheren PWM-Regler (mit *Pulsweitenmodulation*).
 
-![Bild: Solar-Microinverter](Solar-Microinverter.png){:.right width="500"}
+![Bild: Solar-Microinverter](Solar-Microinverter.png){:.right width="500"
+style="margin: 20px 20px 20px 20px"}
 Für die Umwandlung von Gleichstrom in Wechselstrom (bei uns meist mit
 230 V) benötigt man einen
-[*Wechselrichter*](https://de.wikipedia.org/wiki/Wechselrichter) (manchmal
-auch *Spannungswandler* genannt, engl. _inverter_). Bei einem
-Wechselrichter sollte man darauf achten, dass er ordentlichen
+[*Wechselrichter*](https://de.wikipedia.org/wiki/Wechselrichter)
+(manchmal auch *Spannungswandler* genannt, engl. _inverter_).
+Bei einem Wechselrichter sollte man darauf achten, dass er ordentlichen
 Wechselstrom liefert (sog. *reine Sinuswelle*, engl. _pure sine wave_)
 sowie einen hohen
 [Wirkungsgrad](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/wechselrichter/wirkungsgrad)
 (engl. _efficiency_) und einen geringen Ruhe-/Leerlaufstromverbrauch
-(engl. _standby power consumption_) hat. Außerdem ist empfehlenswert, ihn
-mit ausreichend Leistungsreserve zu dimensionieren, auch weil er sonst
+(engl. _standby power consumption_) hat. Außerdem ist empfehlenswert,
+ihn mit etwas Leistungsreserve zu dimensionieren, auch weil er sonst
 schnell unangenehm lautes Lüftergeräusch verbreiten und bei
 Dauerbelastung leichter Schaden nehmen kann.
 
-Für die Einspeisung ins Stromnetz muss ein *netzgekoppelter
-Wechselrichter* verwendet werden. Dieser wird auch *Netzwechselrichter*
+Für die Einspeisung ins Stromnetz wird ein *netzgekoppelter Wechselrichter*
+verwendet. Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*
 oder *fremd geführter Wechselrichter* genannt, weil er sich automatisch
 an die Frequenz und Phase des anliegenden Wechselstroms anpasst und bei
 fehlendem Stromanschluss den Ausgang abschaltet --- auch aus
@@ -570,7 +597,8 @@ Balkonkraftwerken wird dann meist nur vereinfacht von einem
 *Wechselrichter* (*WR*) gesprochen.
 
 ![Bild: Gleichspannungswandler mit regelbarer Strombegrenzung](
-DC-DC-converter.png){:.right width="400"}
+DC-DC-converter.png){:.right width="400"
+style="margin-left: 40px; margin-right: 40px"}
 Für die Nutzung zur [regelbaren Einspeisung](#Batteriepuffer) aus einem
 Strompuffer ins Hausnetz braucht man eine einstellbaren Strombegrenzer,
 wie er in manchen *Gleichspannungswandler* (engl. _DC-to-DC-converter_)
@@ -587,12 +615,20 @@ des Netzwechselrichters passende Spannung (z.B. mindestens 20 V) zu bringen.
 werden vom Stromnetz unabhängig betrieben. Mit ihnen kann man die üblichen
 Haushaltsgeräte auch im Falle eines Stromausfalls mit einer Batterie versorgen,
 natürlich nur im Rahmen der Belastbarkeit und Kapazität der Batterie.
+Auch bei dieser Art von Wechselrichter ist darauf zu achten,
+dass er eine reine Sinusspannung liefert und sein Wirkungsgrad hoch ist.
+Hinzu kommt, dass sein Standby-Verbrauch (also sein Ruhestrom) gering sein
+sollte, seine Dauerleistung groß genug für die daran betriebenen Geräte sein
+muss und dass seine Spitzenleistung auch deren Anlaufstrom abdecken muss.
+Die benötigte Anlaufleistung eines Kühl- oder Gefrierschrankes kann das
+Zehnfache der Scheinleistung (nicht nur Wirkleistung) im laufenden Betrieb
+betragen. Da kommt man schnell mal auf 1000 W (wenn auch nur für 1-2 Sekunden).
 
 ### Solar-Laderegler {#Laderegler}
 
-![Bild: Solar-Laderegler](Solar-Laderegler.png){:.right width="400"}
-Wenn man über
-Solarmodule eine Batterie laden möchte, benötigt man einen
+![Bild: Solar-Laderegler](Solar-Laderegler.png){:.right width="400"
+style="margin-left: 70px; margin-right: 70px"}
+Wenn man über Solarmodule eine Batterie laden möchte, benötigt man einen
 *Solar-Laderegler*, der einen Spannungsregler mit einem Batterieladegerät
 verbindet. Mit billigen chinesischen (angeblich) MPPT-Reglern habe ich
 keine guten Erfahrungen gemacht, wohl aber mit den europäischen Marken
@@ -601,9 +637,9 @@ Victron und Votronic.
 ### Hybridgeräte: Solar-Laderegler mit Wechselrichter {#Hybrid}
 
 ![Bild: Hybrides Solar-Ladegerät mit Wechselrichter](
-Solar-off-grid-inverter.png){:.right width="500"}
+Solar-off-grid-inverter.png){:.right width="450"}
 Es gibt auch
-[Kombigeräte](https://www.solarserver.de/2021/07/26/green-cell-bietet-neuen-solarwechselrichter-an/),welche
+[Kombigeräte](https://www.solarserver.de/2021/07/26/green-cell-bietet-neuen-solarwechselrichter-an/), welche
 die Funktionen Solar-Laderegler, Batterie-Netzladegerät und
 Inselwechselrichter in sich vereinen. Damit können Elektrogeräte
 vorzugsweise direkt mit Solarstrom versorgt werden, wobei die
@@ -612,21 +648,23 @@ unzureichender Stromversorgung aus den Solarmodulen ergänzt das Gerät
 die benötigte Energie automatisch aus der Batterie und schaltet bei
 leerer Batterie (oder je nach konfigurierter Präferenz auch schon bei
 fehlendem Solarstrom) auf eine externe Stromquelle (Stromnetz oder
-Generator) um, worüber auch die Batterie geladen wird. Solch ein
-Kombigerät ist in seiner Funktionsweise sehr praktisch, außerdem
-einfacher zu installieren und zu verwenden, außerdem wirtschaftlicher
-als entsprechende Einzelkomponenten. Es hat aber [auch
+Generator) um, worüber auch die Batterie geladen wird.
+Solch ein Kombigerät ist in seiner Funktionsweise sehr praktisch, braucht
+weniger Platz, ist im Einkauf günstiger und zudem einfacher zu installieren
+und zu verwenden als entsprechende Einzelkomponenten. Es hat aber [auch
 Nachteile](https://www.oeko-energie.de/shop1/de/Solarstrom/Insel-WR/Kombigeraet-Laderegler-MPPT-Wechselrichter-Batterieladegeraet/)
-wie geringe Flexibilität bei der Komponentenwahl.\
-Und offenbar gibt es kein Gerät, das neben der Nutzungsart als
-Inselanlage (also netzunabhängige Versorgung) auch den einer
-Stecker-Solaranlage (also direkte Netzeinspeisung des Solarstroms)
-ermöglicht.
+wie geringe Flexibilität bei der Komponentenwahl
+und größere Wahrscheinlichkeit für einen Ausfall und dann höhere Kosten.
+
+Offenbar gibt es auf dem Markt kein Gerät, das neben der Nutzungsart
+für eine Inselanlage (also netzunabhängige Stromversorgung) auch
+die einer Stecker-Solaranlage (also Netzeinspeisung des Solarstroms,
+idealerweise mit Nachteinspeisung aus der Batterie) ermöglicht.
 
 ### Speicherbatterien {#Speicher}
 
 ![Bild: LiFePO4-Batterie mit 4 prismatischen Zellen](
-LiFePO4-Batterie.png){:.right width="400"}
+LiFePO4-Batterie.png){:.right width="450"}
 Für die Stromspeicherung bieten sich
 heutzutage Lithium-Eisenphosphat-Batterien (LiFePO4) an. Diese sind zwar
 erheblich teurer als Blei-Säure-Batterien (inkl. der AGM-Variante), wie
@@ -697,7 +735,8 @@ Ah vorzuziehen, aus folgenden Gründen:
     effizienter als solche mit 12 V, zumal Strom und Spannungsspreizung
     geringer sind.
 
-![Bild: Tiefsetzsteller](Tiefsetzsteller.png){:.right width="300"}
+![Bild: Tiefsetzsteller](Tiefsetzsteller.png){:.right width="300"
+style="margin-left: 70px; margin-right: 70px"}
 Ein Problem bei einer
 Batteriespannung von 24 V (oder 48 V) ist, dass Niederspannungs-Geräte
 typischerweise eher mit 12 V zu betreiben sind. Aber dafür gibt es für
@@ -707,7 +746,8 @@ effiziente und kostengünstige Lösung, nämlich sog. *Tiefsetzsteller*
 
 {:style="clear:both"}
 ![Bild: Programmierbarer Batteriespannungswächter](
-Battery_voltage_protector.png){:.right width="500" style="margin-}
+Battery_voltage_protector.png){:.right width="500"
+style="margin-left: 50px; margin-right: 50px"}
 Für die Nutzung als [automatischen Strompuffer](#Batteriepuffer) zur
 zeitversetzten Einspeisung ins Hausnetz braucht man einen *Spannungswächter*,
 der die Einspeisung bei nahezu voller Batterie einschaltet und bei nahezu
