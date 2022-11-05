@@ -1,7 +1,7 @@
 ---
 title: "Solaranlagen für zu Hause und unterwegs"
 lang: de
-keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Inselanlagen, Balkonkraftwerke, Komponenten, Tipps, Erfahrungen, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Pufferbatterie, Spannungsregler, Lageregler, Wechselrichter, Einspeisung, Ertrag]
+keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Amortisation]
 ---
 
 Zusammenfassung {#Zusammenfassung}
@@ -88,7 +88,7 @@ von 1 kWp für die installierte max. PV-Leistung.
 
 ![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_PV-Potential.png){:width="392" }
-![Bild: Ertragssanteil nach Ausrichtung von Solarmodulen](
+![Bild: Ertragsanteil nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_Ertragsanteil.png){:width="392" .right}
 Die [beste Ausbeute](
 https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
@@ -107,8 +107,8 @@ vergütete Einspeisung oder Zwischenspeicherung). Wenn man --- wie mit
 den meisten Stecker-Solaranlagen --- den Strom nur direkt selbst im
 Haushalt verbrauchen kann, ist es meist günstiger, die Ausrichtung der
 Module eher für die Vormittags- und/oder Nachmittagssonne zu optimieren.
-Also möglichst zwei Ausrichtungen, und zwar nach Südost und nach
-Südwest, wählen (die dann aber bzgl. Solarstrom-Regelung (s.u.) getrennt
+Also möglichst zwei Ausrichtungen, und zwar nach Südosten und nach
+Südwesten, wählen (die dann aber bzgl. Solarstrom-Regelung (s.u.) getrennt
 zu behandeln sind) und einen größerem Neigungswinkel, weil zu den Zeiten
 die Sonne flacher steht, ansonsten eine eher flache Anordnung --- aber
 nicht zu flach (sondern z.B. 20°), um weiterhin eine Selbstreinigung der
@@ -159,8 +159,8 @@ genannten Anlagen haben meist eine recht geringe Nennleistung von etwa
 600-700 Wp. Das hat neben der geringen Größe und sehr überschaubaren
 Kosten auch damit zu tun, dass solche Anlagen selbst installiert werden
 dürfen und genehmigungsfrei sind, wenn sie weniger als 600 W in die
-Steckdose einspeisen. Dies gilt für Deutschland; anderswo sind meist 800
-W (oder mehr) erlaubt.
+Steckdose einspeisen. Dies gilt für Deutschland und die Schweiz;
+in Österreich gilt nach einer EU-Richtlinie eine Obergrenze von 800 W.
 
 ![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
 Solarstrom-Einspeisung](
@@ -168,13 +168,15 @@ Stromleitung_Überlastung_Solareinspeisung.jpg){:.right width="450"}
 Hintergrund dieser Beschränkung sind vornehmlich Sicherheitsbedenken:
 Falls über die Wohnungs-Stromleitung, an der die Einspeisung
 stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
-unter ungünstigen Umständen passieren, dass auf Teilen der Leitung mehr
+unter sehr ungünstigen Umständen passieren, dass auf Teilen der Leitung mehr
 Strom fließt als die Sicherung eigentlich erlauben würde, was dann zu
-einer mehr oder weniger starken Erwärmung der Leitung führen kann. Und
-zwar müsste bei einer 16 A-Sicherung mehr als 3500 W, aber weniger als
+einer mehr oder weniger starken Erwärmung der Leitung führen kann.
+Und zwar müsste bei einer 16 A-Sicherung mehr als 3500 W, aber weniger als
 3500 W + die gerade eingespeiste Leistung (z.B. 1300 W) verbraucht
-werden, was allerdings insgesamt in der Praxis höchst unwahrscheinlich
-ist.
+werden, was allerdings insgesamt in der Praxis höchst unwahrscheinlich ist.
+Von der ESTI (Schweiz) wird aus diesem Grund
+die Leitungsüberlastung durch Stecker-Solar-Geräte
+[nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
 
 {:style="clear:both"}
 
@@ -224,20 +226,22 @@ die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
 die Stromzähler arbeiten *saldierend*, d.h. sie bilden die Gesamtsumme
 von Verbrauch und Erzeugung, welche dabei negatives Vorzeichen hat.
 
-Diese Nutzungsart lohnt sich also nur insoweit, wie man während der
-Sonnenscheindauer den erzeugten Strom direkt sinnvoll verbrauchen kann,
-z.B. durch diverse Haushaltsgeräte, Computer, Klimaanlagen oder zum
-Laden von (Fahrzeug-)Batterien, wobei die Akkus von E-Bikes oder
-E-Rollern von der Größenordnung und dem zeitlichen
-Nutzungsprofil besonders geeignet sind. Am einfachsten und am
-besten planbar ist es, wenn man ohnehin eine gewisse relativ
-gleichmäßige Grundlast hat, z.B. durch Kühlschränke und Geräte im Standby.
-Eine Nutzung von überflüssigem Strom, die ich ziemlich clever fände,
-aber von der Steuerung auch nicht ganz einfach wäre, ist das
-(zusätzliche) Aufheizen eines Warmwasserboilers im Haus, so dass man
-weniger fossile Brennstoffe dafür verbraucht.\
-Je größer und tagsüber stromhungriger der Haushalt ist, desto größer der
-zu erwartende Einsparungseffekt durch eine Steckdosen-Anlage.
+Je stromhungriger ein Haushalt tagsüber ist, desto größer der zu erwartende
+Einsparungseffekt durch eine Steckdosen-Anlage ohne Stromspeicher.
+Denn diese Nutzungsart lohnt sich also nur insoweit, wie man während der
+Sonnenscheindauer den erzeugten Strom direkt sinnvoll verbrauchen kann.
+Am einfachsten und am besten planbar geschieht das über die sog. *Grundlast*,
+also ständig und mehr oder weniger gleichmäßig laufende Verbraucher
+wie Kühlschränke, Internetanschluss, Computerserver
+und Geräte, die im Bereitschaftsmodus (engl. _standby_) sind.
+Darüber hinaus kann man gezielt diverse Haushaltsgeräte und Ladegeräte
+vorzugsweise dann betreiben, wenn hohe Sonneneinstrahlung vorhanden ist.
+Dazu bieten sich insbesondere Waschmaschinen und das Laden von Batterien an,
+wobei die Akkus von E-Bikes oder E-Rollern von der Größenordnung
+und ihrem zeitlichen Nutzungsprofil besonders geeignet sind.
+Eine ziemlich clevere Nutzung von überflüssigem Strom finde ich die verstärkte
+Nutzung einer Wärmepumpe oder das zusätzliche Aufheizen des Warmwasserboilers
+im Haus, so dass man weniger fossile Brennstoffe verbraucht.
 
 ### Berechnung von Ertrag und Amortisation {#PV-Rechner}
 
@@ -322,7 +326,7 @@ Abschaltung vorhanden sein, damit die Batterie nicht durch Tiefentladung
 geschädigt wird. Außerdem wäre es v.A. im Sinne der
 Stromkosten-Optimierung schön, wenn die Einspeisung der gespeicherten
 Energie automatisch so stark erfolgt, wie sie auch benötigt wird, was
-aber eine reglungstechnische Herausforderung wäre.
+aber eine regelungstechnische Herausforderung wäre.
 
 Am einfachsten ist aber, die Ausgangsleistung des Wechselrichters und
 die Batteriekapazität so abzustimmen, dass lediglich ein Großteil der
@@ -557,8 +561,8 @@ des Netzwechselrichters passende Spannung (z.B. mindestens 20 V) zu bringen.
 ![Bild: Wechselrichter](Wechselrichter.png){:.right width="500"}
 *Inselwechselrichter*, auch *selbst geführte Wechselrichter* genannt,
 werden vom Stromnetz unabhängig betrieben. Mit ihnen kann man die üblichen
-Haushaltsgeräte auch im Falle eines Stromausfalls mit einer Batterie
-versorgen, natürlich ausreichend Batterieleistung und -Kapazität vorausgesetzt.
+Haushaltsgeräte auch im Falle eines Stromausfalls mit einer Batterie versorgen,
+natürlich nur im Rahmen der Belastbarkeit und Kapazität der Batterie.
 
 ### Solar-Laderegler {#Laderegler}
 
