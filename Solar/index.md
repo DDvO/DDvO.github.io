@@ -574,27 +574,31 @@ Für die Umwandlung von Gleichstrom in Wechselstrom (bei uns meist mit
 230 V) benötigt man einen
 [*Wechselrichter*](https://de.wikipedia.org/wiki/Wechselrichter)
 (manchmal auch *Spannungswandler* genannt, engl. _inverter_).
-Bei einem Wechselrichter sollte man darauf achten, dass er ordentlichen
+Bei jedem Wechselrichter sollte man darauf achten, dass er ordentlichen
 Wechselstrom liefert (sog. *reine Sinuswelle*, engl. _pure sine wave_)
-sowie einen hohen
+und einen hohen
 [Wirkungsgrad](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/wechselrichter/wirkungsgrad)
-(engl. _efficiency_) und einen geringen Ruhe-/Leerlaufstromverbrauch
-(engl. _standby power consumption_) hat. Außerdem ist empfehlenswert,
-ihn mit etwas Leistungsreserve zu dimensionieren, auch weil er sonst
-schnell unangenehm lautes Lüftergeräusch verbreiten und bei
-Dauerbelastung leichter Schaden nehmen kann.
+(engl. _efficiency_) hat.
+Außerdem ist empfehlenswert, ihn mit etwas Leistungsreserve zu dimensionieren,
+weil seine Lebensdauer sonst leiden und er je nach Bauart
+unangenehm lautes Lüftergeräusch verbreiten kann.
+Der kritischste Punkt ist, das seine maximale Eingangsspannung nicht
+überschritten werden darf, weil er sonst zerstört wird.
 
 Für die Einspeisung ins Stromnetz wird ein *netzgekoppelter Wechselrichter*
 verwendet. Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*
 oder *fremd geführter Wechselrichter* genannt, weil er sich automatisch
 an die Frequenz und Phase des anliegenden Wechselstroms anpasst und bei
 fehlendem Stromanschluss den Ausgang abschaltet --- auch aus
-Sicherheitsgründen für den Fall, dass ein blanker Stecker berührt werden
-kann. Bei Stecker-Solaranlagen wird meist ein
-*Solar-Mikrowechselrichter* verwendet, der einen Spannungsregler mit
-einem Netzwechselrichter integriert. Im Zusammenhang von
-Balkonkraftwerken wird dann meist nur vereinfacht von einem
-*Wechselrichter* (*WR*) gesprochen.
+Sicherheitsgründen für den Fall, dass ein blanker Stecker berührt werden kann.
+Bei Stecker-Solaranlagen wird meist ein *Solar-Mikrowechselrichter* verwendet,
+der einen Spannungsregler mit einem Netzwechselrichter integriert.
+Im Zusammenhang von Solaranlagen wird meist vereinfacht nur von einem
+'*Wechselrichter*' (*WR*) gesprochen.
+Zur Dimensionierung von Solar-Wechselrichtern gibt es
+z.B. [hier und auf den Folgeseiten](
+https://photovoltaikbuero.de/pv-know-how-blog/ist-bei-der-wechselrichterauslegung-zu-beachten-kriterium-1/)
+ausführliche Hinweise.
 
 ![Bild: Gleichspannungswandler mit regelbarer Strombegrenzung](
 DC-DC-converter.png){:.right width="400"
@@ -617,9 +621,10 @@ Haushaltsgeräte auch im Falle eines Stromausfalls mit einer Batterie versorgen,
 natürlich nur im Rahmen der Belastbarkeit und Kapazität der Batterie.
 Auch bei dieser Art von Wechselrichter ist darauf zu achten,
 dass er eine reine Sinusspannung liefert und sein Wirkungsgrad hoch ist.
-Hinzu kommt, dass sein Standby-Verbrauch (also sein Ruhestrom) gering sein
-sollte, seine Dauerleistung groß genug für die daran betriebenen Geräte sein
-muss und dass seine Spitzenleistung auch deren Anlaufstrom abdecken muss.
+Hinzukommt, dass sein Leerlauf-/Ruhestromverbrauch
+(engl. _standby power consumption_) gering sein sollte,
+seine Dauerleistung groß genug für die daran betriebenen Geräte sein muss
+und dass seine Spitzenleistung auch deren Anlaufstrom abdecken muss.
 Die benötigte Anlaufleistung eines Kühl- oder Gefrierschrankes kann das
 Zehnfache der Scheinleistung (nicht nur Wirkleistung) im laufenden Betrieb
 betragen. Da kommt man schnell mal auf 1000 W (wenn auch nur für 1-2 Sekunden).
