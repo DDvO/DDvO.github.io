@@ -1,7 +1,7 @@
 ---
 title: "Solaranlagen für zu Hause und unterwegs"
 lang: de
-keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Amortisation]
+keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Amortisation, Ökologie, Umwelt]
 ---
 
 Zusammenfassung {#Zusammenfassung}
@@ -11,6 +11,8 @@ Mit einem sog. *Balkonkraftwerk* kann man relativ einfach und günstig
 Solarstrom gewinnen und über eine Steckdose direkt ins Hausnetz einspeisen.
 Das spart Stromkosten und kann sich schon nach wenigen Jahren Betrieb rechnen,
 allerdings nur soweit man den Strom auch gleichzeitig selbst verbraucht.
+Weil diese Betriebsart den überschüssigen Strom an die Allgemeinheit weitergibt
+und keine Batterie benötigt, ist sie für die ökologische Gesamtbilanz am besten.
 
 Für eine gewisse Unabhängigkeit von der nicht ständig kräftig vorhandenen
 Sonneneinstrahlung und vom allgemeinen Stromnetz
@@ -243,6 +245,27 @@ Eine ziemlich clevere Nutzung von überflüssigem Strom finde ich die verstärkt
 Nutzung einer Wärmepumpe oder das zusätzliche Aufheizen des Warmwasserboilers
 im Haus, so dass man weniger fossile Brennstoffe verbraucht.
 
+### Stromverbrauch im Haushalt
+
+![Bild: Energiekosten-Messgerät in Steckdosenform](
+Energiekosten-Messgeraet.png){:.right width="350"}
+Den Stromverbrauch von Elektrogeräten im Haushalt kann man recht einfach
+mit Energiekosten-Messgeräten in Steckdosenform bestimmen. Diese messen
+nicht nur den momentanen Stromverbrauch in Watt, sondern bei längerer
+Verwendung auch die über die Zeit verbrauchte Strommenge in kWh.
+
+Die Grundlast eines Haushalts kann man über den Haushalts-Stromzähler
+noch einfacher bestimmen, indem man die Differenz der Zählerstände
+über einen Zeitraum von mehreren Stunden, zu dem sonst keine Verbraucher
+eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
+
+Übrigens, eigentlich ist es im Vergleich zum Betrieb einer (möglicherweise
+recht groß dimensionierten) Solaranlage immer noch günstiger und
+umweltfreundlicher, von vornherein den Stromverbrauch zu senken.
+Stromfressende Geräte sollte man möglichst meiden und Geräte, die einen
+hohen Standby-Verbrauch haben, bei längerem Nichtgebrauch ausschalten.
+Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
+
 ### Berechnung von Ertrag und Amortisation {#PV-Rechner}
 
 Wie eingangs geschrieben kann man bei optimaler Platzierung von
@@ -292,14 +315,15 @@ zwischenzuspeichern und von dort nach Bedarf zeitlich versetzt über
 einen netzgekoppelten Wechselrichter (s.u.) ins Hausnetz einzuspeisen.
 Diese Betriebsart wird auch *Nachteinspeisung* genannt.
 Sie maximiert den Nutzen der PV-Anlage für den eigenen Stromverbrauch,
-lohnt sich aber nur, wenn man die Batterie schon aus anderen Gründen
+lohnt sich finanziell aber nur, wenn man die Batterie schon aus anderen Gründen
 hat, z.B. für eine Notstromversorgung oder als Fahrzeugbatterie.
+Außerdem ist es für die ökologische Gesamtbilanz eigentlich viel besser, den
+überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
 
-Dazu empfiehlt sich ein [regelbarer
-(Solar-)Netzwechselrichter](https://de.aliexpress.com/item/1005001445871590.html)
+Für die zeitversetzte Einspeisung empfiehlt sich ein [regelbarer
+Netzwechselrichter](https://de.aliexpress.com/item/1005001445871590.html)
 wie in [diesem genialen Video von
 Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8).
-
 Wenn man aber schon einen Solar-Wechselrichter hat und diesen verwenden
 möchte, könnte es im einfachsten Fall genügen, ihn direkt mit der
 Batterie zu verbinden und über einen Schalter manuell zu
