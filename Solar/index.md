@@ -1,5 +1,5 @@
 ---
-title: "Solaranlagen für zu Hause und unterwegs"
+title: "Mini-Solaranlagen für daheim und unterwegs"
 lang: de
 keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Amortisation, Ökologie, Umwelt]
 ---
@@ -19,8 +19,27 @@ Sonneneinstrahlung und vom allgemeinen Stromnetz
 braucht man eine aufladbare Batterie als Stromspeicher und weitere Geräte,
 was das Ganze aufwendiger und deutlich teurer macht. Damit lässt sich die
 gewonnene Energie über den ganzen Tag und die Nacht verteilt einspeisen.
-Eine sog. *Inselanlage ist auch während Stromausfällen verwendbar,
+Eine sog. *Inselanlage* ist auch während Stromausfällen verwendbar,
 soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
+
+Abgrenzung
+----------
+
+Hier geht es nicht um *Solarthermie*, also die direkte Gewinnung von Wärme
+durch Sonnenstrahlung, sondern um die Erzeugung von elektrischem Strom.
+Es geht hier auch nicht um "große" PV-Anlagen z.B. auf Hausdächern
+(dazu [hier ein fundierter Leitfaden](
+https://solar.htw-berlin.de/wp-content/uploads/HTW-PV-Wegweiser.pdf)),
+wobei die physikalischen und technischen Grundlagen natürlich die gleichen sind.
+
+Außerdem kann ich als Privatperson und auch als naturwissenschaftlich-technisch
+versierter Nichtprofi natürlich keine offiziellen Informationen bzw. absolut
+verlässliche Hinweise geben und für die Inhalte keine Gewähr oder Haftung
+übernehmen. Wer bezüglich steckerfertigen PV-Anlagen etwas Offizielleres sucht,
+der sei z.B. auf den schönen [Leitfaden von SmartGridsBW](
+https://smartgrids-bw.net/public/uploads/2020/04/IBZ-Leitfaden_Balkon-PV-Online.pdf)
+und die ['Fachinformation' des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
+verwiesen.
 
 Photovoltaik (PV) und ihr möglicher Energie-Ertrag {#Photovoltaik}
 --------------------------------------------------
@@ -55,7 +74,7 @@ gibt für Deutschland einen Überblick, welche Menge an Sonnenstrahlung
 pro Quadratmeter horizontaler Fläche durchschnittlich im Jahr zusammenkommt.
 
 {:style="clear:both"}
-Die **Nennleistung** von Solarmodulen wird in **Wp** ([*Watt Peak](
+Die **Nennleistung** von Solarmodulen wird in **Wp** ([*Watt Peak*](
 https://de.wikipedia.org/wiki/Watt_Peak)) angegeben. Zu ihrer
 Bestimmung verwendet man eine Referenzbestrahlung mit einem normierten
 Sonnenlichtspektrum einer Stärke von 1000 W/m² bei Zelltemperatur 25°C.\
@@ -111,17 +130,19 @@ standortspezifisch anhand von Geo- und Klimadaten berechnen/simulieren.
 Bei den PV-Ertrags-Simulationen ist allerdings zu beachten, dass
 üblicherweise der Jahres-Gesamtertrag optimiert wird, also unter der
 Annahme, dass man den zur jeweiligen Tageszeit (und Jahreszeit)
-erzeugten Strom auch voll nutzen kann (sei es durch Eigenverbrauch,
-vergütete Einspeisung oder Zwischenspeicherung). Wenn man --- wie mit
-den meisten Stecker-Solaranlagen --- den Strom nur direkt selbst im
-Haushalt verbrauchen kann, ist es meist günstiger, die Ausrichtung der
-Module eher für die Vormittags- und/oder Nachmittagssonne zu optimieren.
-Also möglichst zwei Ausrichtungen, und zwar nach Südosten und nach
-Südwesten, wählen (die dann aber bzgl. Solarstrom-Regelung (s.u.) getrennt
-zu behandeln sind) und einen größerem Neigungswinkel, weil zu den Zeiten
-die Sonne flacher steht, ansonsten eine eher flache Anordnung --- aber
-nicht zu flach (sondern z.B. 20°), um weiterhin eine Selbstreinigung der
-Moduloberflächen zu ermöglichen.
+erzeugten Strom auch voll nutzen kann, sei es durch Eigenverbrauch,
+vergütete Einspeisung oder Zwischenspeicherung.\
+Wenn man --- wie mit den meisten Stecker-Solaranlagen --- den Strom nur direkt
+selbst im Haushalt verbrauchen kann, ist es meist günstiger, die Ausrichtung der
+Module eher für die Vormittags- und Nachmittagssonne zu optimieren,
+sofern das von der Positionierung und ohne größere Verschattung möglich ist.
+Also möglichst zwei Ausrichtungen, nämlich nach (Süd-)Osten und (Süd-)Westen,
+die dann aber mit [MPPT-Reglern](#Wechselrichter) getrennt zu behandeln sind,
+und einen etwas größerem Neigungswinkel, weil außerhalb der Mittagszeit
+die Sonne flacher steht.\
+Wer aus irgendeinem Grund eine eher flache Anordnung wählt,
+sollte trotzdem einen Neigungswinkel von mindestens 12° verwenden,
+um eine Selbstreinigung der Moduloberflächen zu ermöglichen.
 
 ![Bild: Jahresertrag nach Ausrichtung von Solarmodulen](
 Jahresertrag_nach_Ausrichtung.png){:.center}
@@ -158,23 +179,23 @@ netzgekoppelten Wechselrichter
 ([Solarwechselrichter](https://de.wikipedia.org/wiki/Solarwechselrichter),
 engl. _grid-tie inverter_) direkt ins (lokale oder öffentliche) Stromnetz
 ein, wo er sofort in irgendeiner Form verbraucht wird (bzw. der Rest in
-Form von Wärme verlorengeht). Zu beachten ist, dass diese Nutzungsart
-abseits eines bestehenden Wechselstrom-Netzes und während eines
-Stromausfalls nicht funktioniert, weil sich hierfür
-verwendete Wechselrichter mit dem Stromnetz synchronisieren müssen.
+Form von Wärme verlorengeht).
+Wichtig zu beachten ist, dass diese Nutzungsart abseits eines bestehenden
+Wechselstrom-Netzes und während eines Stromausfalls nicht funktioniert, weil
+sich hierfür verwendete Wechselrichter mit dem Stromnetz synchronisieren müssen.
 
-Die auch [*Balkonkraftwerk*](https://www.steckdosensolar.de/)
-genannten Anlagen haben meist eine recht geringe Nennleistung von etwa
-600-700 Wp. Das hat neben der geringen Größe und sehr überschaubaren
-Kosten auch damit zu tun, dass solche Anlagen selbst installiert werden
-dürfen und genehmigungsfrei sind, wenn sie weniger als 600 W in die
-Steckdose einspeisen. Dies gilt für Deutschland und die Schweiz;
+Die auch [*Balkonkraftwerk*](https://www.steckdosensolar.de/) genannten Anlagen
+haben meist eine recht geringe PV-Nennleistung von etwa 600-700 Wp.
+Das hat neben der geringen Größe und sehr überschaubaren Kosten auch damit zu
+tun, dass sie selbst installiert werden dürfen und genehmigungsfrei (jedoch
+anmeldepflichtig) sind, wenn sie weniger als 600 W in die Steckdose einspeisen.
+Dies gilt für Deutschland und die Schweiz;
 in Österreich gilt nach einer EU-Richtlinie eine Obergrenze von 800 W.
 
-![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
+[![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
 Solarstrom-Einspeisung](
-Stromleitung_Überlastung_Solareinspeisung.jpg){:.right width="450"
-style="margin-left: 20px; margin-right: 20px"}
+Stromleitung_Überlastung_Solareinspeisung.jpg){:.right width="450"}](
+https://www.sonnenenergie.de/index.php?id=30&tx_ttnews[tt_news]=254)
 Hintergrund dieser Beschränkung sind vornehmlich Sicherheitsbedenken:
 Falls über die Wohnungs-Stromleitung, an der die Einspeisung
 stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
@@ -185,16 +206,17 @@ Und zwar müsste bei einer 16 A-Sicherung mehr als 3500 W, aber weniger als
 3500 W + die gerade eingespeiste Leistung (z.B. 1300 W) verbraucht
 werden, was allerdings insgesamt in der Praxis höchst unwahrscheinlich ist.
 Von der ESTI (Schweiz) wird aus diesem Grund
-die Leitungsüberlastung durch Stecker-Solar-Geräte
+die Leitungsüberlastung durch Stecker-Solaranlagen
 [nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
 
-Ein weiterer Grund für die Beschränkung sind mögliche Rückwirkungen
-der Einspeisung auf die Stabilität des allgemeinen Stromnetzes.
-Wenn durch sog.
+Ein wichtigerer Grund für die Beschränkung sind mögliche Rückwirkungen
+massenhafter Einspeisung auf die Stabilität des allgemeinen Stromnetzes.\
+Wenn aber durch sog.
 [*Nulleinspeisung*](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/eigenverbrauch/nulleinspeisung)
-sichergestellt ist, kein überflüssiger Strom ins externe Netz fließt,
-können Balkonkraftwerke [auch z.B. 1800 W](
-https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/) liefern.
+sichergestellt ist, dass kein überflüssiger Strom ins externe Netz fließt,
+können Steckdosen-Anlagen [auch z.B. mit 1800 W Leistung](
+https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/)
+normgerecht betrieben werden.
 
 {:style="clear:both"}
 
@@ -285,14 +307,19 @@ Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
 
 ### Berechnung von Ertrag und Amortisation {#PV-Rechner}
 
-Wie eingangs geschrieben kann man bei optimaler Platzierung von
-Solarmodulen pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter
-Solarleistung gewinnen. Rechnet man beispielsweise mit einer Investition
-von 1,10€/Wp (inklusive anteiliger Kosten für Wechselrichter,
-Installation etc.), ergeben sich Kosten von 1€/kWh erzeugtem Solarstrom
-pro Jahr. Wenn der damit erzeugte Strom komplett selbst verbraucht wird
+Wie eingangs geschrieben kann man bei optimaler Platzierung von Solarmodulen
+pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter Solarleistung gewinnen.
+Rechnet man beispielsweise mit einer Investition von 1,10€/Wp
+(inklusive anteiliger Kosten für Wechselrichter, Installation etc.),
+ergeben sich Kosten von 1€/kWh erzeugtem Solarstrom pro Jahr.
+Falls der damit erzeugte Strom komplett selbst verbraucht wird,
+was aber praktisch selten der Fall ist,
 und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
-ergibt sich eine Amortisationszeit von nur 2,5 Jahren.
+ergibt sich eine Amortisation der Anschaffungskosten in nur 2,5 Jahren.
+Für die Amortisation des energetischen Aufwands zur Herstellung einer
+Mini-PV-Anlage muss man nach [Angaben des DKE](
+https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
+noch 2-3 Jahren länger rechnen.
 
 [![Bild: Ertragsrechnung Balkonanlage](
 PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
@@ -308,7 +335,7 @@ einer Wärmepumpe und die Nutzung eines Stromspeichers. Dabei werden die
 Energieflüsse der Einfachheit halber auf Monatsbasis gerechnet --- pro
 Stunde wäre genauer. Für eine Balkonanlage mit 600 Wp, die 660€ kostet
 und bei optimaler Ausrichtung pro Jahr 660 kWh Ertrag liefert, kann man
-in einem Haushalt mit 3000 kWh Jahresverbrauch, von dem z.B.28% während der
+in einem Haushalt mit 3000 kWh Jahresverbrauch, von dem z.B. 28% während der
 Sonnenscheinzeiten erfolgt, demnach etwa 530 kWh Solarstrom direkt
 selbst verbrauchen und damit jährlich ca. 205€ Stromkosten einsparen.
 Das ergibt eine Amortisationszeit von 3,2 Jahren und eine satte
@@ -327,15 +354,24 @@ So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
 Balkonkraftwerk_mit_Speicher.jpg){:.right width="350"}](
 https://www.youtube.com/watch?v=f-iz6WE8GD8)
 Statt die Solarenergie direkt einzuspeisen, kann man sie auch über einen
-Solar-Laderegler (s.u.) zunächst in einer aufladbaren Batterie zwischenspeichern
+[Solar-Laderegler](#Laderegler) in einer aufladbaren Batterie zwischenspeichern
 und von dort nach Bedarf zeitlich versetzt über einen
-netzgekoppelten Wechselrichter (s.u.) ins Hausnetz einspeisen.
+[netzgekoppelten Wechselrichter](#Netzwechselrichter) ins Hausnetz einspeisen.
 Diese Betriebsart wird auch *Strompufferung* oder *Nachteinspeisung* genannt.
 Sie maximiert den Nutzen der PV-Anlage für den eigenen Stromverbrauch,
 lohnt sich finanziell aber nur, wenn man die Batterie schon aus anderen Gründen
 hat, z.B. für eine Notstromversorgung oder als Fahrzeugbatterie.
 Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
+
+Zu berücksichtigen ist jedenfalls, dass die Zwischenspeicherung des Stroms
+Verluste von etwa 15 bis 20% mit sich bringt.
+Als Faustformel für die Dimensionierung [empfiehlt die Verbraucherzentrale NRW](
+https://www.verbraucherzentrale.nrw/wissen/energie/lohnen-sich-batteriespeicher-fuer-photovoltaikanlagen-24589)
+etwa 1 kWh pro 1000 kWh Jahresstromverbrauch.
+Wer mit der Speicherbatterie zusätzlich eine Notstromversorgung
+über eine [Inselanlage](#Inselanlage) realisieren möchte,
+sollte die Kapazität allerdings größer wählen.
 
 Für die Einspeisung aus der Batterie bietet sich ein [regelbarer
 Netzwechselrichter](https://de.aliexpress.com/item/1005001445871590.html)
@@ -352,8 +388,9 @@ Um die Stromstärke regelbar zu drosseln, kann man ein
 Labornetzteil verwenden, evtl. mit DC-DC-Wandler wie das [Joy-IT DPM8624](
 https://www.idealo.de/preisvergleich/OffersOfProduct/202115817)
 aus dem [Video von Andreas Schmitz](
-https://www.youtube.com/watch?v=yOcoux9IbzM) oder einen
-günstigen Gleichspannungswandler mit regelbarer Strombegrenzung (s.u.).
+https://www.youtube.com/watch?v=yOcoux9IbzM) oder einen günstigen
+[Gleichspannungswandler](#Gleichspannungswandler) mit regelbarer Strombegrenzung.
+
 Wenn man zudem bereits eine Powerstation hat, kann man zwischen ihren
 Wechselstrom-Ausgang und den Netzwechselrichter ein regelbares Netzteil hängen,
 siehe [sein Nachfolge-Video](https://www.youtube.com/watch?v=ZXHAXrJS9CU), was
@@ -382,7 +419,7 @@ hat, wie z.B. beim Victron BlueSolar, kann man diesen so verwenden, wie in
 gezeigt. Zudem kann dessen Straßenlichtfunktion für die zeitliche Steuerung
 genutzt werden.\
 Ansonsten kann man zur Regelung einen recht simplen
-programmierbarer Batteriespannungswächter (s.u.) verwenden, wie im
+[programmierbaren Batteriespannungswächter](#Spannungswächter) verwenden, wie im
 [Video von Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8) vorgeführt.
 Er wird so eingestellt, dass bei es beim Erreichen einer Batteriespannung, die
 z.B. annähernd einer Vollladung entspricht, den Wechselrichter einschaltet und
@@ -422,12 +459,12 @@ geeignet, weil sie bei einem längeren Stromausfall (engl. _blackout_) zu wenig
 Kapazität haben (es seid denn, es scheint dann genug Sonne zum Nachladen), aber
 bei kürzeren Stromausfällen (engl. _brownout_) können sie sehr hilfreich sein.
 
-Neben der Speicherbatterie wird hier zumindest ein Solar-Laderegler (s.u.)
-benötigt, und sofern die Verbraucher nicht direkt mit der
-Batteriespannung (z.B. 12 V oder 24 V Gleichstrom) betrieben werden können,
-zusätzlich ein ausreichend leistungsstarker Wechselrichter (s.u.) zur
-Umwandlung in den üblichen \'Steckdosenstrom\' (also Wechselstrom mit
-ca. 230 V).
+Neben der Speicherbatterie wird hier zumindest ein
+[Solar-Laderegler](#Laderegler) benötigt, und sofern die Verbraucher
+nicht direkt mit der Batteriespannung (z.B. 12 V oder 24 V Gleichstrom)
+betrieben werden können, zusätzlich ein ausreichend leistungsstarker
+[Inselwechselrichter](#Inselwechselrichter) zur Umwandlung
+in den üblichen \'Steckdosenstrom\' (also Wechselstrom mit 230 V).
 
 Ähnlich wie die zuvor genannte Variante ist diese Nutzungsart flexibler,
 aber wegen der nötigen zusätzlichen Komponenten (v.A. Batterie) auch
@@ -561,15 +598,16 @@ Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
 
 ![Bild: Strom-/Leistungs-Spannungskennlinien einer Solarzelle](
 I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="450"}
-Für die Umwandlung des \'rohen\' Solarstroms benötigt man sog. *Spannungsregler*.
-Dabei ist die [*MPPT* (Maximal-Leistungspunkt-Suche, engl. _maximum power point
-tracking_)](https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking)
-zu empfehlen, weil sie auch bei stark wechselnder Einstrahlung optimale
-Energieausbeute bringt. MPPT-Regler sind allerdings deutlich teurer als die
-wesentlich einfacheren PWM-Regler (mit *Pulsweitenmodulation*).
+Für die Umwandlung des recht volatilen \'rohen\' Solarstroms auf die gewünschte
+(nahezu) konstante Zielspannung benötigt man regelbare *Gleichspannungswandler*,
+kurz *Regler* genannt.
+Sehr einfache und billige Regler verwenden dazu *Pulsweitenmodulation* (*PWM*).
+Wesentlich besser sind aber Regler mit Leistungsoptimierung durch
+[*MPPT* (Maximal-Leistungspunkt-Suche, engl. _maximum power point tracking_)](
+https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking), weil sie
+auch unter stark schwankenden Bedingungen optimale Energieausbeute bringen.
 
-![Bild: Solar-Microinverter](Solar-Microinverter.png){:.right width="500"
-style="margin: 20px 20px 20px 20px"}
+![Bild: Solar-Microinverter](Solar-Microinverter.png){:.right width="500"}
 Für die Umwandlung von Gleichstrom in Wechselstrom (bei uns meist mit
 230 V) benötigt man einen
 [*Wechselrichter*](https://de.wikipedia.org/wiki/Wechselrichter)
@@ -584,6 +622,8 @@ weil seine Lebensdauer sonst leiden und er je nach Bauart
 unangenehm lautes Lüftergeräusch verbreiten kann.
 Der kritischste Punkt ist, das seine maximale Eingangsspannung nicht
 überschritten werden darf, weil er sonst zerstört wird.
+
+#### Netzwechselrichter {#Netzwechselrichter}
 
 Für die Einspeisung ins Stromnetz wird ein *netzgekoppelter Wechselrichter*
 verwendet. Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*
@@ -600,6 +640,8 @@ z.B. [hier und auf den Folgeseiten](
 https://photovoltaikbuero.de/pv-know-how-blog/ist-bei-der-wechselrichterauslegung-zu-beachten-kriterium-1/)
 ausführliche Hinweise.
 
+#### Gleichspannungswandler {#Gleichspannungswandler}
+
 ![Bild: Gleichspannungswandler mit regelbarer Strombegrenzung](
 DC-DC-converter.png){:.right width="400"
 style="margin-left: 40px; margin-right: 40px"}
@@ -613,7 +655,8 @@ kann er zudem dazu benutzt werden,
 die Spannung der Pufferbatterie (z.B. 12 V) auf eine für den Eingang
 des Netzwechselrichters passende Spannung (z.B. mindestens 20 V) zu bringen.
 
-{:style="clear:both"}
+#### Inselwechselrichter {#Inselwechselrichter}
+
 ![Bild: Wechselrichter](Wechselrichter.png){:.right width="500"}
 *Inselwechselrichter*, auch *selbst geführte Wechselrichter* genannt,
 werden vom Stromnetz unabhängig betrieben. Mit ihnen kann man die üblichen
@@ -626,8 +669,12 @@ Hinzukommt, dass sein Leerlauf-/Ruhestromverbrauch
 seine Dauerleistung groß genug für die daran betriebenen Geräte sein muss
 und dass seine Spitzenleistung auch deren Anlaufstrom abdecken muss.
 Die benötigte Anlaufleistung eines Kühl- oder Gefrierschrankes kann das
-Zehnfache der Scheinleistung (nicht nur Wirkleistung) im laufenden Betrieb
-betragen. Da kommt man schnell mal auf 1000 W (wenn auch nur für 1-2 Sekunden).
+[Fünffache der Scheinleistung](
+http://www.off-grid-systems.de/mediafiles/Sonstiges/bedienungsanleitung/Wechselrichter/Handbuch-LMP3000W.pdf)
+(angegeben in Volt × Ampere = VA, nicht nur [Wirkleistung](
+https://www.energie-experten.org/energie-sparen/strom-sparen/elektrischer-strom/schein-wirk-blindleistung),
+angegeben in Watt) im laufenden Betrieb betragen.
+Da können schon mal 1000 VA zusammenkommen (wenn auch nur für 1-2 Sekunden).
 
 ### Solar-Laderegler {#Laderegler}
 
@@ -693,6 +740,8 @@ Wandlungsverluste eines Wechselrichters lässt sich damit ein Gerät mit
 1000 W Verbrauch (z.B. Staubsauger, Kaffeemaschine oder Fön) gut eine
 Stunde lang betreiben.
 
+#### Batterie-Dimensionierung
+
 Um den Wandlungsverlust von ca. 10% eines Wechselrichters zu vermeiden,
 sollte man bei einer Inselanlage die Verbraucher möglichst direkt an der
 Batterie anschließen, was z.B. bei LED-Lampen, Radios und
@@ -740,6 +789,8 @@ Ah vorzuziehen, aus folgenden Gründen:
     effizienter als solche mit 12 V, zumal Strom und Spannungsspreizung
     geringer sind.
 
+#### Tiefsetzsteller {#Tiefsetzsteller}
+
 ![Bild: Tiefsetzsteller](Tiefsetzsteller.png){:.right width="300"
 style="margin-left: 70px; margin-right: 70px"}
 Ein Problem bei einer
@@ -748,6 +799,8 @@ typischerweise eher mit 12 V zu betreiben sind. Aber dafür gibt es für
 Geräte mit mäßigem Verbrauch (bis etwa 5 A, also 60 W) eine recht
 effiziente und kostengünstige Lösung, nämlich sog. *Tiefsetzsteller*
 (auch *Abwärtswandler*, engl. _DC-DC buck converter oder _step-down converter_).
+
+#### Spannungswächter {#Spannungswächter}
 
 {:style="clear:both"}
 ![Bild: Programmierbarer Batteriespannungswächter](
@@ -845,13 +898,15 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
     [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
     inkl. Versand
 
--   Hybridwechselrichter mit Solar-Laderegler [EASun 3kW peak Pure Sine Wave Solar Inverter 24V 220V PV Power
-    1500W PWM 50A Solar Charge Controller and AC
-    Charger](https://de.aliexpress.com/item/1005003665568494.html), für
-    185€\
-    wobei ich leider nicht aufpasst habe, die
+-   24 V Hybridwechselrichter
+    [EASun ISolar SPH-3K](https://de.aliexpress.com/item/1005003665568494.html)
+    mit 3000 VA (6000 VA Spitzenlast) reiner-Sinus-Wechselrichter
+    (mit USV-Funktion und angeblich 93% max. Wirkungsgrad),
+    40-50 A PWM Solar-Laderegler und 20-30 A Batterieladegerät über Netzstrom,
+    für 185€\
+    _Leider hatte ich nicht aufpasst, die
     [MPPT-Version](https://de.aliexpress.com/item/1005004488463489.html)
-    zu bestellen, deren Solarwandlungs-Effizienz besser wäre.
+    zu bestellen, deren Solarwandlungs-Effizienz wohl deutlich besser wäre_.
 
 -   24 V 100 Ah LiFePO4-Batterie mit 8S1P-Konfiguration inkl. 100 A BMS
     und Display [CERRNSS LF-24100
