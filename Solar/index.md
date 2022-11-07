@@ -7,7 +7,7 @@ keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwe
 Zusammenfassung {#Zusammenfassung}
 ---------------
 
-Mit einem sog. *Balkonkraftwerk* kann man relativ einfach und günstig
+Mit einem sog. *Balkonkraftwerk* kann man sehr einfach und relativ günstig
 Solarstrom gewinnen und über eine Steckdose direkt ins Hausnetz einspeisen.
 Das spart Stromkosten und kann sich schon nach wenigen Jahren Betrieb rechnen,
 allerdings nur soweit man den Strom auch gleichzeitig selbst verbraucht.
@@ -304,6 +304,9 @@ umweltfreundlicher, von vornherein den Stromverbrauch zu senken.
 Stromfressende Geräte sollte man möglichst meiden und Geräte, die einen
 hohen Standby-Verbrauch haben, bei längerem Nichtgebrauch ausschalten.
 Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
+
+Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
+z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
 
 ### Berechnung von Ertrag und Amortisation {#PV-Rechner}
 
@@ -859,7 +862,7 @@ ich folgende Komponenten besonders interessant:
     Effizienz: 213 Wp/m², ca. 540€\
     oder 4 × 150 Wp flexible ETFE SSP Solarmodule [Solarfam
     SZ-150-36MFE](Solarfam_SSP_SZ-150-36MFE.pdf) mit 188 Wp/m², ca.
-    [664€](https://stromvoll.com/shop/#!/150W-Flexible-Solar-panel-1170-x-680-x-2-mm/)\
+    [664€](https://stromvoll.com/shop/#!/150W-Flexible-Solar-panel-1170-x-680-x-2-mm/p/396304457)\
     oder 2 × 310 Wp sehr langlebige flexible Solarmodule [Sunman eArc
     SMF310M-6X10DW](Datenblatt_Sunman_flexible_310W.pdf) mit 187 Wp/m²,
     ca.
@@ -870,9 +873,11 @@ ich folgende Komponenten besonders interessant:
     ca. 230€\
     oder 1000W Micro Grid Tie Inverter Inverter
     [SG1000MQ](https://www.ebay.de/itm/124731502486), ca. 200€\
-    oder 4 × 400W Micro Solar Wechselrichter [Deye Sun1600g3-EU-230](
-    https://de.made-in-china.com/co_skycorpsolar/product_Deye-Micro-Inverter-1600W-Sun1600g3-EU-230-Micro-Solar-Inverter-on-Grid-Solar-Home-System-Inverter_ysyyygenig.html),
-    ca. 320€
+    _Die Wechselrichter von Deye, und baugleich Bosswerk und revolt (Pearl),
+    z.B. [Sun1600g3-EU-230](
+    https://de.made-in-china.com/co_skycorpsolar/product_Deye-Micro-Inverter-1600W-Sun1600g3-EU-230-Micro-Solar-Inverter-on-Grid-Solar-Home-System-Inverter_ysyyygenig.html) sind bei mir unten durch, weil deren WLAN-Zugang
+    [sträflich Sicherheitslücken reißt](
+    https://www.photovoltaikforum.com/thread/180129-deye-sun600-und-sun2000-erfahrungen/?postID=2846951#post2846951)._
 
 ### Kombi-Anlage {#Kombianlage}
 
@@ -893,7 +898,7 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
     Spitzenleistung, was gerade bei günstigen Modellen nicht
     selbstverständlich ist._
 
--   700 W Netzwechselrichter [Mars Rock Dual MPPT Grid Tie Inverter mit WLAN
+-   700 W Netzwechselrichter mit 2 × MPPT und WLAN [Mars Rock
     EC700MD](https://de.aliexpress.com/item/1005002469159821.html) (oder
     [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
     inkl. Versand
