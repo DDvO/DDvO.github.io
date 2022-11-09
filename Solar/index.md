@@ -540,38 +540,44 @@ Verluste verringert werden. Allerdings ist diese Bauart selten zu finden
 und verhältnismäßig teuer, so dass sie nur dann sinnvoll ist, wenn man
 Platz sparen will/muss.
 
-Solarmodule --- aber bitte nur gleichartige --- kann man wie
-Batteriezellen seriell und/oder parallel verbinden, um mehr Leistung zu
-erhalten, ohne für jedes Modul einen eigenen Regler (bzw.
-Regler-Eingang) verwenden zu müssen. Zum Thema Solar-Regler siehe unten.
-Wenige große Solarmodule sind technisch und wirtschaftlich etwas
-günstiger als entsprechend viele kleine, besonders wenn man einen Regler
-pro Modul verwendet.
+Solarmodule haben als Stromanschluss meist die praktischen MC4-Steckverbinder.
+Generell sollten die Solarkabel, also die Verbindungen der Module
+(untereinander und zum [Solar-Regler](#Wechselrichter)),
+möglichst kurz sein, weil da relativ hohe Ströme fließen,
+was proportional zur Länge zu spürbaren Verlusten führt.
+Aus dem selben Grund sollte der Querschnitt nicht zu klein sein --- mind. 4mm²,
+bei längeren Kabeln und höheren Strömen mind. 6mm² (was allerdings teurer ist).
 
-Solarmodule haben als Stromanschluss meist die praktischen
-MC4-Steckverbinder. Für die parallele Verschaltung bieten sich Y-Kabel
-mit MC4-Anschlüssen an. Man sollte Module nur insoweit zusammenschalten
-und an einem gemeinsamen Regler-Eingang betrieben, wie sie in die
-gleiche Ausrichtung und relativ gleich(zeitig) verschattet werden.
+Solarmodule --- aber bitte nur gleichartige --- kann man wie Batteriezellen
+seriell und/oder parallel verbinden, um mehr Leistung zu erhalten, ohne
+für jedes Modul einen eigenen Regler (bzw. Regler-Eingang) verwenden zu müssen.
+Wenige große Solarmodule sind technisch und wirtschaftlich etwas günstiger als
+entsprechend viele kleine, besonders wenn man einen Regler pro Modul verwendet.
 
--   Bei [*Reihenschaltung*](https://de.wikipedia.org/wiki/Reihenschaltung)
-    (oft auch *Serienschaltung* genannt) addieren sich die Spannungen
-    der einzelnen Module, wobei man unbedingt darauf achten muss, dass
-    die maximale Eingangsspannung, die der Regler verkraftet, nicht
-    überschritten wird. Ein Nachteil der Reihenschaltung ist, dass es
-    dabei leichter zu [Verlusten durch
-    Teilverschattung](https://photovoltaikbuero.de/pv-know-how-blog/teilverschattung-bei-solarmodulen-messungen/)
+-   Bei [*Reihenschaltung*](https://de.wikipedia.org/wiki/Reihenschaltung) (oft
+    auch *Serienschaltung* genannt) hängt man die Module einfach hintereinander.
+    Dabei addieren sich die Spannungen der einzelnen Module,
+    wobei man unbedingt darauf achten muss, dass die maximale Eingangsspannung,
+    die der genutzte Regler-Eingang verkraftet, nicht überschritten wird.
+    Der wesentliche Vorteil gegenüber der Parallelschaltung ist, dass
+    der Strom in den Kabeln und der damit verbundene Verlust nicht steigt.
+    Ein Nachteil der Reihenschaltung ist,
+    dass es dabei viel leichter zu [Verlusten durch Teilverschattung](
+    https://photovoltaikbuero.de/pv-know-how-blog/teilverschattung-bei-solarmodulen-messungen/)
     kommt, denn die Leistung bricht ein, wenn auch nur eines der Module
     verschattet wird.
+    Man sollte Module nur insoweit in Reihe schalten, wie sie
+    die gleiche Ausrichtung haben und relativ gleich(zeitig) verschattet werden.
 
--   Bei
-    [*Parallelschaltung*](https://de.wikipedia.org/wiki/Parallelschaltung)
-    addieren sich die Ströme der einzelnen Module, wobei der je nach
-    Einstrahlung mögliche Maximalstrom unter dem Maximalstrom des
-    Regler-Eingangs liegen sollte, weil sonst zumindest Leistung
-    verschenkt wird. Auch sind höhere Ströme, besonders bei dünnen
-    Kabeln, generell mit etwas mehr elektrischem Verlust verbunden.
-    Dafür hat man aber weniger Verluste durch Teilverschattung.
+-   Bei [*Parallelschaltung*](https://de.wikipedia.org/wiki/Parallelschaltung)
+    addieren sich die Ströme der einzelnen Module. Dabei sollte der je nach
+    Einstrahlung mögliche Maximalstrom unter dem Maximalstrom des genutzten
+    Regler-Eingangs liegen, weil sonst Leistung verschenkt wird (aber der Regler
+    wird dadurch nicht geschädigt --- er nimmt nur so viel Strom, wie er kann).
+    Der elektrische Verlust ist größer als bei Reihenschaltung,
+    andererseits hat man weniger Verluste bei Teilverschattung.
+    Für die parallele Verschaltung bieten sich Y-Kabel mit MC4-Anschlüssen an.
+    Die Kabellänge auf parallelen Zweigen sollten ungefähr gleich sein.
 
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
 I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
@@ -642,6 +648,11 @@ Zur Dimensionierung von Solar-Wechselrichtern gibt es
 z.B. [hier und auf den Folgeseiten](
 https://photovoltaikbuero.de/pv-know-how-blog/ist-bei-der-wechselrichterauslegung-zu-beachten-kriterium-1/)
 ausführliche Hinweise.
+
+Im Gegensatz zu Solarkabeln (s.o.) können 230 V-Kabel
+zwischen Netzwechselrichter und Steckdose durchaus länger sein (z.B. 5 - 10 m).
+Allerdings kann es dort je nach Kabellänge und -Querschnitt bei größeren Strömen
+zu einem höheren Spannungsabfall kommen, der die Netzkoppelung des WR stört.
 
 #### Gleichspannungswandler {#Gleichspannungswandler}
 
