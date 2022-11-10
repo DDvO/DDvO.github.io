@@ -879,16 +879,19 @@ ich folgende Komponenten besonders interessant:
     ca.
     [715€](https://shop-lieckipedia.de/Ab-2-Stueck-310-Watt-Solarmodul-monokristallin-flexibel-Sunman)
 
--   4-in-1 Microinverter 1200W [Hoymiles
+-   4-in-1 Microinverter 1200 W [Hoymiles
     HM-1200](https://www.hoymiles.com/product/microinverter/hm-1200-1500-as/),
     ca. 230€\
-    oder 1000W Micro Grid Tie Inverter Inverter
+    oder 1000 W Micro Grid Tie Inverter Inverter
     [SG1000MQ](https://www.ebay.de/itm/124731502486), ca. 200€\
-    _Die Wechselrichter von Deye, und baugleich Bosswerk und revolt (Pearl),
-    z.B. [Sun1600g3-EU-230](
-    https://de.made-in-china.com/co_skycorpsolar/product_Deye-Micro-Inverter-1600W-Sun1600g3-EU-230-Micro-Solar-Inverter-on-Grid-Solar-Home-System-Inverter_ysyyygenig.html) sind bei mir unten durch, weil deren WLAN-Zugang
-    [sträflich Sicherheitslücken reißt](
-    https://www.photovoltaikforum.com/thread/180129-deye-sun600-und-sun2000-erfahrungen/?postID=2846951#post2846951)._
+    oder 600 W WR mit 2 × 400 W MPPT-Eingang und WLAN [Deye Sun1600g3-EU-230](
+    https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/),
+    ca. 215€\
+    _Achtung,
+    die Wechselrichter von Deye, sowie baugleich Bosswerk und revolt (Pearl),
+    reißen beim WLAN-Zugang [sträfliche Sicherheitslücken](
+    https://www.photovoltaikforum.com/thread/187077-achtung-wifi-sicherheit-der-deye-und-bosswerk-mi600-300-sowie-baugleiche-microwe/).
+    Daher sollte ihre WLAN-Funktion höchstens in einem Gastnetz genutzt werden._
 
 ### Kombi-Anlage {#Kombianlage}
 
@@ -912,7 +915,8 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 -   700 W Netzwechselrichter mit 2 × MPPT und WLAN [Mars Rock
     EC700MD](https://de.aliexpress.com/item/1005002469159821.html) (oder
     [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
-    inkl. Versand
+    inkl. Versand\
+    _Zumindest bei meinem Gerät funktioniert das WLAN nicht._
 
 -   24 V Hybridwechselrichter
     [EASun ISolar SPH-3K](https://de.aliexpress.com/item/1005003665568494.html)
