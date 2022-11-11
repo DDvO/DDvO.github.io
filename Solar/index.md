@@ -1,7 +1,7 @@
 ---
 title: "Mini-Solaranlagen für daheim und unterwegs"
 lang: de
-keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Amortisation, Ökologie, Umwelt]
+keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Optimierung, Nutzungsprofil, Lastprofil, Amortisation, Ökologie, Umwelt]
 ---
 
 Zusammenfassung {#Zusammenfassung}
@@ -95,68 +95,87 @@ Plausibiltäts-Check, den Wirkungsgrad nachzurechnen.
 
 [![Bild: PV-Potential in Europa](PVOUT_Europe.png){:.center}](
 https://solargis.com/maps-and-gis-data/download/europe)
-In unseren
-Breitengraden ist je nach Standort bei optimaler statischer Ausrichtung
-von Solarmodulen ein Ertrag je nach Quelle von [etwa 900 bis 1000
-kWh](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/planung/ertrag)
-oder gar [1200 bis 1300
-kWh](https://gruenes.haus/photovoltaik-pv-ertrag/) pro kWp installierter
-PV-Nennleistung und Jahr möglich. Der Jahresertrag lässt sich leicht
-näherungsweise berechnen durch Multiplikation des standortspezifischen
-*PV-Potentials* (das bereits angenommene typische System-Verlustfaktoren
-beinhaltet und auch *spezifischer Ertrag* genannt wird) in kWh/kWp mit
-der PV-Nennleistung in kWp. Das PV-Potential (PVOUT) erhält man z.B. aus
-den groben [Karten von
-Solargis](https://solargis.com/maps-and-gis-data/download), aus dem
-[Global Solar Atlas der
-Weltbank](https://globalsolaratlas.info/map?c=50.10,11.05,7&s=48.1807,11.604e)
-(auch von Solargis) oder am Genauesten aus der [PVGIS-Datenbank der
-EU](https://re.jrc.ec.europa.eu/pvg_tools/de/) bei der Standard-Eingabe
-von 1 kWp für die installierte max. PV-Leistung.
+In unseren Breitengraden ist je nach Standort bei optimaler statischer
+Ausrichtung der Solarmodule ein Jahres-Ertrag von 1100 kWh pro kWp installierter
+PV-Nennleistung möglich. Manche Angaben dazu sind mit [etwa 900 bis 1000 kWh](
+https://www.energie-experten.org/erneuerbare-energien/photovoltaik/planung/ertrag)
+eher zu konservativ, andere übertreiben mit
+[bis zu 1200 bis 1300kWh](https://gruenes.haus/photovoltaik-pv-ertrag/).\
+Der Jahresertrag lässt sich leicht näherungsweise berechnen, und zwar
+durch Multiplikation des standortspezifischen *PV-Potentials*
+(welches bereits angenommene typische System-Verlustfaktoren
+beinhaltet und auch *spezifischer Ertrag* genannt wird) in kWh/kWp
+mit der PV-Nennleistung in kWp.\
+Das PV-Potential (PVOUT) erhält man z.B. aus den groben
+[Karten von Solargis](https://solargis.com/maps-and-gis-data/download),
+aus dem [Global Solar Atlas der Weltbank](
+https://globalsolaratlas.info/map?c=50.10,11.05,7&s=48.1807,11.604e)
+(auch von Solargis) oder am Genauesten aus der [PVGIS-Datenbank der EU](
+https://re.jrc.ec.europa.eu/pvg_tools/de/)
+bei der Standard-Eingabe von 1 kWp für die installierte max. PV-Leistung.
 
 ![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_PV-Potential.png){:width="392" }
 ![Bild: Ertragsanteil nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_Ertragsanteil.png){:width="385" .right}
-Die [beste Ausbeute](
+Den [besten Jahresertrag](
 https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
-bekommt man in süddeutschen Breitengraden bei Ausrichtung genau nach
-Süden und mit ca. 38° Neigungswinkel (also relativ zur Waagerechten).
+bekommt man in süddeutschen Breitengraden bei Orientierung nach Süden
+und mit ca. 38° Neigung (also Winkel relativ zur Waagerechten).
 Genaueres kann man z.B. über
 [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/) (oder einfacher über
 [Solarserver](https://www.solarserver.de/pv-anlage-online-berechnen/))
 standortspezifisch anhand von Geo- und Klimadaten berechnen/simulieren.
-
-Bei den PV-Ertrags-Simulationen ist allerdings zu beachten, dass
-üblicherweise der Jahres-Gesamtertrag optimiert wird, also unter der
-Annahme, dass man den zur jeweiligen Tageszeit (und Jahreszeit)
-erzeugten Strom auch voll nutzen kann, sei es durch Eigenverbrauch,
-vergütete Einspeisung oder Zwischenspeicherung.\
-Wenn man --- wie mit den meisten Stecker-Solaranlagen --- den Strom nur direkt
-selbst im Haushalt verbrauchen kann, ist es meist günstiger, die Ausrichtung der
-Module eher für die Vormittags- und Nachmittagssonne zu optimieren,
-sofern das von der Positionierung und ohne größere Verschattung möglich ist.
-Also möglichst zwei Ausrichtungen, nämlich nach (Süd-)Osten und (Süd-)Westen,
-die dann aber mit [MPPT-Reglern](#Wechselrichter) getrennt zu behandeln sind,
-und einen etwas größerem Neigungswinkel, weil außerhalb der Mittagszeit
-die Sonne flacher steht.\
-Wer aus irgendeinem Grund eine eher flache Anordnung wählt,
-sollte trotzdem einen Neigungswinkel von mindestens 12° verwenden,
-um eine Selbstreinigung der Moduloberflächen zu ermöglichen.
+Allerdings kommt es auf ein paar Grad hin oder her nicht an.
 
 ![Bild: Jahresertrag nach Ausrichtung von Solarmodulen](
 Jahresertrag_nach_Ausrichtung.png){:.center}
-Diese Grafik zeigt
-sehr schön die relative Änderung des Jahresertrages einer PV-Anlage mit
-zunehmender Winkel-Abweichung von Süden (Azimut) abhängig vom
-Neigungswinkel, wenn der optimale Neigungswinkel 35° beträgt. Sie wurde
-von [bonotos](https://www.bonotos.com/) erzeugt, basierend auf [Daten
-von Prof. Konrad
-Mertens](https://www.fh-muenster.de/eti/downloads/personen/professoren/mertens/frei/2022_05_31_FH-MS_Nachhaltigkeitstag_Vortrag_Solarenergie_Kein_Dach_ohne_Solarstrom_PDF.pdf)
+Diese Grafik zeigt sehr schön die relative Änderung des Jahresertrages
+einer PV-Anlage mit zunehmender Winkel-Abweichung von Süden (*Azimut*)
+abhängig vom Neigungswinkel, wenn der optimale Neigungswinkel 35° beträgt.
+Sie wurde von [bonotos](https://www.bonotos.com/) erzeugt,
+basierend auf [Daten von Prof. Konrad Mertens](
+https://www.fh-muenster.de/eti/downloads/personen/professoren/mertens/frei/2022_05_31_FH-MS_Nachhaltigkeitstag_Vortrag_Solarenergie_Kein_Dach_ohne_Solarstrom_PDF.pdf)
 von der FH Münster.
 
+Bei PV-Ertrags-Simulationen ist zu beachten, dass dabei üblicherweise
+der Jahres-Gesamtertrag betrachtet und optimiert wird.
+Dieser unterliegt der Annahme, dass man den zur jeweiligen Tageszeit
+(und Jahreszeit) erzeugten Strom auch voll nutzen kann, sei es durch
+Eigenverbrauch,  Zwischenspeicherung (was allerdings auch Verluste bringt)
+oder vergütete Einspeisung (die aber leider selten attraktiv ist).\
+Wenn man --- wie mit den meisten Stecker-Solaranlagen --- den erzeugten Strom
+nur direkt im Haushalt verbrauchen kann und der Rest ins externe Netz geht,
+sollte man das Nutzungsprofil berücksichtigen, welches auch auch
+[*Lastprofil*](https://www.energie-lexikon.info/lastprofil.html) genannt wird.
+
+![Bild: Ertrags-Nutzungsanteil nach Ausrichtung von Solarmodulen](
+Solarmodule_Ausrichtung_Ertragsnutzungsanteil.png){:width="385" .right}
+Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil zeigt sich,
+dass --- im Vergleich zu den bekannten Einbußen beim Jahres-Gesamtertrag ---
+* Abweichungen von der allgemein optimalen Südorientierung
+nur etwa halb so starke Einbußen bringen und
+* bei senkrechter Anbringung im Verhältnis zur optimalen Neigung
+die Einbuße etwa 15 Prozentpunkte geringer ausfällt.
+
+Man hat also zur günstigen Ausrichtung seiner Solarmodule
+meist größere Flexibilität als allgemein angenommen.\
+Eine Aufteilung in zwei Orientierungen, z.B. nach Südosten und Südwesten,
+um zu versuchen, auf die Vormittags- und Nachmittagssonne zu optimieren,
+lohnt sich meist nicht, weil die Stahlungsintensität aus südlicher Richtung
+einfach viel höher ist. Trotzdem dafür sprechen kann ein Verbrauchsprofil,
+das stark auf die Morgen- und Abendstunden gespreizt ist. Dagegen spricht
+aber oft die Tendenz zu stärkerer Verschattung durch den flacheren Sonnenstand.
+Außerdem ist die geteilte Montage meist aufwendiger, und die beiden Richtungen
+verlangen zur Optimierung eine getrennte [MPPT-Regelung](#Wechselrichter).
+Bei einer Orientierung von z.B. 60° und -60° abweichend von Süden
+ist eine Neigung von ca. 30° optimal.\
+Wer aus irgendeinem Grund (meist wegen der Befestigung)
+eine möglichst flache Neigung wählt, sollte trotzdem mindestens 12° verwenden,
+um eine Selbstreinigung der Moduloberflächen durch Niederschlag zu ermöglichen.
+
 Wenn man Solarmodule (z.B. auf dem Dach eines Wohnmobils) in
-waagerechter Lage anbringt, ist man zwar von der Himmelsrichtung
+waagerechter Lage anbringt, ist man zwar von der Orientierung (Himmelsrichtung)
 unabhängig, aber kommt nach meiner Erfahrung mit billigen flexiblen
 Modulen selbst mittags an sehr sonnigen Tagen kaum über die Hälfte der
 angegebenen Spitzenleistung hinaus.
@@ -315,14 +334,22 @@ pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter Solarleistung gewinnen.
 Rechnet man beispielsweise mit einer Investition von 1,10€/Wp
 (inklusive anteiliger Kosten für Wechselrichter, Installation etc.),
 ergeben sich Kosten von 1€/kWh erzeugtem Solarstrom pro Jahr.
-Falls der damit erzeugte Strom komplett selbst verbraucht wird,
+
+* Falls der damit erzeugte Strom komplett selbst verbraucht wird,
 was aber praktisch selten der Fall ist,
 und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
 ergibt sich eine Amortisation der Anschaffungskosten in nur 2,5 Jahren.
-Für die Amortisation des energetischen Aufwands zur Herstellung einer
-Mini-PV-Anlage muss man nach [Angaben des DKE](
+* Bei einer typischen Balkonanlage für 660€ mit 600 Wp
+und 88% Wechselrichter-Wirkungsgrad
+liegt bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil
+und einem Jahresverbrauch von 3000 kWh der genutzte Ertrag bei 480 kWh,
+was bei 40 Ct/kWh eine Amortisationszeit von 3,5 Jahren ergibt.\
+Bei einem Jahresverbrauch von 1500 kWh sind es 270 kWh, was 6,1 Jahre ergibt.
+
+Für die Amortisation des energetischen Aufwands
+zur Herstellung einer Mini-PV-Anlage muss man nach [Angaben des DKE](
 https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
-noch 2-3 Jahren länger rechnen.
+allerdings noch 2-3 Jahre länger rechnen.
 
 [![Bild: Ertragsrechnung Balkonanlage](
 PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
@@ -564,9 +591,9 @@ entsprechend viele kleine, besonders wenn man einen Regler pro Modul verwendet.
     Ein Nachteil der Reihenschaltung ist,
     dass es dabei viel leichter zu [Verlusten durch Teilverschattung](
     https://photovoltaikbuero.de/pv-know-how-blog/teilverschattung-bei-solarmodulen-messungen/)
-    kommt, denn die Leistung bricht ein, wenn auch nur eines der Module
+    kommt, weil die Gesamtleistung einbricht, sobald auch nur eines der Module
     verschattet wird.
-    Man sollte Module nur insoweit in Reihe schalten, wie sie
+    Man sollte aus diesem Grund nur Module in Reihe schalten, die
     die gleiche Ausrichtung haben und relativ gleich(zeitig) verschattet werden.
 
 -   Bei [*Parallelschaltung*](https://de.wikipedia.org/wiki/Parallelschaltung)
