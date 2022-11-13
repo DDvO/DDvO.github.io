@@ -758,40 +758,41 @@ idealerweise mit Nachteinspeisung aus der Batterie) ermöglicht.
 
 ![Bild: LiFePO4-Batterie mit 4 prismatischen Zellen](
 LiFePO4-Batterie.png){:.right width="450"}
-Für die Stromspeicherung bieten sich
-heutzutage Lithium-Eisenphosphat-Batterien (LiFePO4) an. Diese sind zwar
-erheblich teurer als Blei-Säure-Batterien (inkl. der AGM-Variante), wie
-man sie vom Auto kennt, aber sind nicht so schwer, viel
-spannungsstabiler und vertragen ein Mehrfaches an Lade-/Entladezyklen.
+Für die Stromspeicherung
+bieten sich heutzutage Lithium-Eisenphosphat-Batterien (LiFePO4) an.
+Diese sind zwar erheblich teurer als Blei-Säure-Batterien
+(inkl. der AGM-Variante), wie man sie vom Auto kennt,
+aber sind nicht so groß und schwer, viel spannungsstabiler und vertragen
+ein Mehrfaches an Lade-/Entladezyklen.
 Im Vergleich zu Li-Ionen- und Li-Polymer-Akkus, welche eine noch höhere
-Energiedichte haben, sind sie recht robust und sicher. Lithium-basierten
-Batterien benötigen für die Reihenschaltung von Akkuzellen ein sog.
-*Batteriemanagementsystem* (*BMS*), das für eine gleichmäßige
-Spannungsverteilung der Zellen sorgt.\
-Eine typische 100 Ah Autobatterie wiegt etwa 26 kg und kostet nur etwa
-100€. Aus ihrer Nennkapazität von 12 V × 100 Ah = 1200 Wh sollte man pro
-Entladung höchstens 50% entnehmen, damit die Batterie nicht durch
-Tiefentladung Schaden nimmt, also maximal 600 Wh. Selbst dann hält ein
-Bleiakku meist weniger als 1000 Lade-/Entladezyklen. Die Zahl der
-Lade-/Entladezyklen eines Lithium-Eisenphosphat-Akkus liegt angeblich
-bei etwa 5000. Eine 12,8 V 100 Ah LiFePO4-Batterie wiegt etwa 11 kg und
-kann zu 90% entladen werden, ohne dass sie Schaden nimmt, so dass sich
-eine effektive Kapazität von 1150 Wh ergibt. Unter Berücksichtigung der
-Wandlungsverluste eines Wechselrichters lässt sich damit ein Gerät mit
-1000 W Verbrauch (z.B. Staubsauger, Kaffeemaschine oder Fön) gut eine
-Stunde lang betreiben.
+Energiedichte haben, sind sie recht robust und sicher.\
+Lithium-basierte Batterien benötigen für die Reihenschaltung der internen
+Akkuzellen ein sog. *Batteriemanagementsystem* (*BMS*),
+das für eine gleichmäßige Spannungsverteilung der Zellen sorgt.\
+Eine typische 100 Ah Autobatterie wiegt etwa 26 kg und kostet nur etwa 100€.
+Aus ihrer Nennkapazität von 12 V × 100 Ah = 1200 Wh sollte man aber höchstens
+50% entnehmen, damit die Batterie nicht durch Tiefentladung Schaden nimmt,
+also maximal 600 Wh.
+Selbst dann hält ein Bleiakku meist weniger als 1000 Lade-/Entladezyklen.\
+Die Zahl der Lade-/Entladezyklen eines Lithium-Eisenphosphat-Akkus liegt
+angeblich bei etwa 5000. Eine 12,8 V 100 Ah LiFePO4-Batterie wiegt etwa 11 kg
+und kann zu 90% entladen werden, ohne dass sie Schaden nimmt, so dass sich
+eine effektive Kapazität von 1150 Wh ergibt.
+Unter Berücksichtigung der Speicherungsverluste und der Wandlungsverluste
+eines Wechselrichters lässt sich damit ein Gerät mit 1000 W Verbrauch
+(z.B. Staubsauger, Kaffeemaschine oder Fön) gut eine Stunde lang betreiben.
 
 #### Batterie-Dimensionierung
 
 Um den Wandlungsverlust von ca. 10% eines Wechselrichters zu vermeiden,
 sollte man bei einer Inselanlage die Verbraucher möglichst direkt an der
 Batterie anschließen, was z.B. bei LED-Lampen, Radios und
-USB-Ladebuchsen gut machbar ist --- aber auch bei Laptops, wenn man für
-sie ein Netzteil mit 12 V (statt 230 V) Eingang verwendet. Bei mittlerer
-Last von 25 W ergeben sich mit einer voll geladenen 12,8 V 100 Ah
-LiFePO4-Batterie gut 50 Stunden Betriebszeit. Ein durchschnittlicher 3,6
-V Smartphone-Akku mit 2500 mAh hat 9 Wh Kapazität. Wenn er jeweils zu
-80% entladen wird, lässt er sich damit etwa 160 mal aufladen.\
+USB-Ladebuchsen gut machbar ist --- aber auch bei Laptops,
+wenn man für sie ein Netzteil mit 12 V (statt 230 V) Eingang verwendet.
+Bei mittlerer Last von 25 W ergeben sich mit einer voll geladenen 12,8 V 100 Ah
+LiFePO4-Batterie gut 50 Stunden Betriebszeit. Ein durchschnittlicher 3,6 V
+Smartphone-Akku mit 2500 mAh hat 9 Wh Kapazität.
+Wenn er jeweils zu 80% entladen ist, lässt er sich damit etwa 160 mal aufladen.\
 Zum Vergleich: Eine Powerbank mit nominell 20.000 mAh Kapazität hat
 (aufgrund oft stark überzogener Hersteller-Angaben und Verlusten bei der
 Wandlung von 3,6 V auf die 5 V eines USB-Anschlusses) effektiv eher die
@@ -804,9 +805,9 @@ Größe/Gesamtkapazität.
 ![Bild: Spannung](What-are-Ohm-Amps-and-Volts.jpg){:.right width="400"}
 Wenn man die Wahl
 hat zwischen höherer Spannung (d.h. mehr Akkuzellen in Reihe) oder
-größere bzw. mehr Zellen parallel, dann besser die höhere Spannung
-nehmen. Also ist z.B. eine 24 V 100 Ah Batterie einer mit 12 V und 200
-Ah vorzuziehen, aus folgenden Gründen:
+größere bzw. mehr Zellen parallel, dann besser die höhere Spannung nehmen.
+Also ist z.B. eine 24 V 100 Ah Batterie einer mit 12 V und 200 Ah vorzuziehen,
+aus folgenden Gründen:
 
 -   Hohe Ströme belasten elektronische Bauteile besonders stark, bringen
     mehr Verluste und verlangen größere Kabelquerschnitte, die schnell
@@ -829,6 +830,14 @@ Ah vorzuziehen, aus folgenden Gründen:
 -   Vermutlich arbeiten Wechselrichter mit 24 V Eingangsspannung etwas
     effizienter als solche mit 12 V, zumal Strom und Spannungsspreizung
     geringer sind.
+
+Man kann auch mehrere Batterien in Reihe (also hintereinander) schalten, um
+z.B. auf 2 * 12 V = 24 V zu kommen,
+muss dann aber für eine dauerhafte *Balancierung* (gleichmäßige Spannungslage)
+der Einzelbatterien sorgen, wie es auch das BMS innerhalb einer Batterie
+für die Einzelzellen tut. Dafür gibt es
+spezielle *Batterie-Balancierer* (engl. _balancer_ oder _equalizer_),
+wie im [Video von Dimitri](https://youtu.be/BcWKrPj6-qs) schön vorgeführt.
 
 #### Tiefsetzsteller {#Tiefsetzsteller}
 
