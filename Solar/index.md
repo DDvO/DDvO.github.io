@@ -189,7 +189,7 @@ einer Spannung je nach Modultyp von üblicherweise 22 bis 44 V. Dieser
 \'rohe\' Strom ist direkt erst mal kaum verwendbar (außer z.B. zum
 Aufheizen eines Warmwasserspeichers).
 
-### Stecker-Solaranlage (\"Balkonkraftwerk\" mit direkter Netzeinspeisung) {#Balkonkraftwerk}
+### Stecker-Solaranlage ("Balkonkraftwerk" mit direkter Netzeinspeisung) {#Balkonkraftwerk}
 
 ![Bild: Aufbau Balkonkraftwerk](Balkonkraftwerk.jpg){:.right width="400"}
 Typischerweise
@@ -243,7 +243,7 @@ Die nominelle Leistung der verwendeten Solarmodule kann und sollte aber
 durchaus größer sein (z.B. 800-1000 Wp), denn in der Praxis werden die
 600 W Ausgangsleistung kaum erreicht, vor Allem in sonnenarmen Zeiten,
 zumal es Verluste nicht nur an den Modulen, sondern auch im
-Wechselrichter gibt. Man hat durch einen gewisse \"Überdimensionierung\"
+Wechselrichter gibt. Man hat durch einen gewisse "Überdimensionierung"
 auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
 (eigentlich sogar überproportional mehr, weil die Schwellspannung
 schneller erreicht wird), allerdings auf recht niedrigem absoluten
@@ -256,7 +256,7 @@ einem Ertrag von etwa 1253 kWh pro Jahr führen würden, macht der Verlust
 durch Begrenzung auf 600 W Ausgangsleistung nur etwa 124 kWh aus. Das
 erklärt sich damit, dass die Kappung realistisch bei nur knapp 9% der
 (Gesamt-)Stunden stattfindet und der dadurch verursachte Verlust im
-Schnitt nur etwa 0,16 kWh pro \"gekappter\" Stunde ausmacht.
+Schnitt nur etwa 0,16 kWh pro "gekappter" Stunde ausmacht.
 
 ![Bild: Symbol für Rücklaufsperre im Stromzähler](
 Ruecklaufsperre.png){:.right width="450"}
@@ -354,7 +354,7 @@ allerdings noch 2-3 Jahre länger rechnen.
 [![Bild: Ertragsrechnung Balkonanlage](
 PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
 Beispielsweise mit
-dem [PV-Rechner](PV-Rechner_v6+.xls) (der eigentlich für \"große\"
+dem [PV-Rechner](PV-Rechner_v6+.xls) (der eigentlich für "große"
 PV-Anlagen auf Hausdächern konzipiert ist) kann man die Rechnung
 deutlich genauer machen. Er berücksichtigt u.A. die Ausrichtung der
 Solarmodule, die jährliche Abschreibung, Reparatur- und Kapitalkosten,
@@ -363,13 +363,14 @@ Ertrages, sowie optional Effekte durch das Laden eines E-Fahrzeugs (was
 normalerweise öfter zu Sonnenscheinzeiten erfolgen kann), den Betrieb
 einer Wärmepumpe und die Nutzung eines Stromspeichers. Dabei werden die
 Energieflüsse der Einfachheit halber auf Monatsbasis gerechnet --- pro
-Stunde wäre genauer. Für eine Balkonanlage mit 600 Wp, die 660€ kostet
-und bei optimaler Ausrichtung pro Jahr 660 kWh Ertrag liefert, kann man
-in einem Haushalt mit 3000 kWh Jahresverbrauch, von dem z.B. 28% während der
-Sonnenscheinzeiten erfolgt, demnach etwa 530 kWh Solarstrom direkt
-selbst verbrauchen und damit jährlich ca. 205€ Stromkosten einsparen.
-Das ergibt eine Amortisationszeit von 3,2 Jahren und eine satte
-(Anfangs-)Rendite von gut 26%.
+Stunde wäre besser, pro Minute noch besser.
+
+Bei einer Balkonanlage mit 600 Wp, die 660€ kostet und bei optimaler Ausrichtung
+pro Jahr 660 kWh Ertrag liefert, ergibt sich für einen Haushalt mit 3000 kWh
+Jahresverbrauch, der zu 28% während der Haupt-Sonnenscheinzeiten erfolgt,
+mit dem PV-Rechner ein Solarstrom-Eigenverbrauch von etwa 530 kWh pro Jahr.
+Damit kann man bei 40 Ct/kWh jährlich ca. 205€ Stromkosten einsparen, was eine
+Amortisationszeit von 3,2 Jahren und eine satte (Anfangs-)Rendite von 26% ergibt.
 
 Hinweis: Der PV-Rechner stammt von [Falko (bonotos)](https://www.bonotos.com/)
 Der originale beinhaltet auch seiner letzten Version 22-06 einen groben Fehler
@@ -377,6 +378,19 @@ in der Rendite-Formel, der zu (fast) doppelt überhöhten Zahlen führt.
 Ich habe mich mit Falko zu diesen und anderen Punkten ausgetauscht.
 Er möchte an dem Tool nichts mehr machen.
 So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
+
+[![Bild: Speichersimulation InGe16 1.-6. April, 1000kWh, PV 660 kWh, 2,4 kWh
+Speicher](Speichersimulation_InGe16_April_1-6.png){:.center}](
+https://brodsoft.de/stromverlauf/profiles/simulation)
+Eine viel genauere Simulation des Eigenverbrauchs, mit oder ohne Stromspeicher,
+gibt es von [brodsoft](https://brodsoft.de/stromverlauf/profiles/simulation).
+Diese basiert auf realen Profildaten für PV-Erzeugung und Stromverbrauch,
+mit denen die Berechnung (zumindest) auf Stundenbasis erfolgt.
+Man kann sich in der Ausgabe auch für jeden Monat Grafiken ausgeben lassen, auf
+deinen man sich sehr schön den Verlauf der elektrischen Größen ansehen kann.
+Damit ergibt sich für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl des Profils
+ein Eigenverbrauch von teils 601 kWh (Profil "allgemein 13/14") und mehr,
+aber typischerweise eher 514 kWh (Profil "InGe 16") pro Jahr.
 
 ### Stecker-Solaranlage mit Batteriepuffer {#Batteriepuffer}
 
