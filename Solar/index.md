@@ -1,7 +1,7 @@
 ---
 title: "Mini-Solaranlagen für daheim und unterwegs"
 lang: de
-keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Optimierung, Nutzungsprofil, Lastprofil, Amortisation, Ökologie, Umwelt]
+keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Optimierung, Nutzungsprofil, Lastprofil, Lastspitzen, Abregelung, Eigenverbrauch, Eigendeckung, Amortisation, Ökologie, Umwelt]
 ---
 
 Zusammenfassung {#Zusammenfassung}
@@ -142,7 +142,7 @@ Bei PV-Ertrags-Simulationen ist zu beachten, dass dabei üblicherweise
 der Jahres-Gesamtertrag betrachtet und optimiert wird.
 Dieser unterliegt der Annahme, dass man den zur jeweiligen Tageszeit
 (und Jahreszeit) erzeugten Strom auch voll nutzen kann, sei es durch
-Eigenverbrauch,  Zwischenspeicherung (was allerdings auch Verluste bringt)
+Eigenverbrauch, Zwischenspeicherung (was allerdings auch Verluste bringt)
 oder vergütete Einspeisung (die aber leider selten attraktiv ist).\
 Wenn man --- wie mit den meisten Stecker-Solaranlagen --- den erzeugten Strom
 nur direkt im Haushalt verbrauchen kann und der Rest ins externe Netz geht,
@@ -248,15 +248,15 @@ auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
 (eigentlich sogar überproportional mehr, weil die Schwellspannung
 schneller erreicht wird), allerdings auf recht niedrigem absoluten
 Niveau. Wenn der Solar-Wechselrichter die Ausgangsleistung auf 600 W
-begrenzt, wird der Gesamtertrag durch die Kappung zwar verringert, aber
-der Effekt ist nicht so groß, wie man meinen könnte: Bei einem als
-konstant angenommenen Gesamt-Systemverlust von 10% und optimal statisch
+begrenzt, wird der Gesamtertrag durch diese Abregelung zwar verringert,
+aber der Effekt ist nicht so groß, wie man meinen könnte: Bei einem (als
+konstant angenommenen) Gesamt-Systemverlust von 10% und optimal statisch
 ausgerichteten 1000 Wp Modulen, die z.B. im Raum München eigentlich zu
 einem Ertrag von etwa 1253 kWh pro Jahr führen würden, macht der Verlust
-durch Begrenzung auf 600 W Ausgangsleistung nur etwa 124 kWh aus. Das
-erklärt sich damit, dass die Kappung realistisch bei nur knapp 9% der
-(Gesamt-)Stunden stattfindet und der dadurch verursachte Verlust im
-Schnitt nur etwa 0,16 kWh pro "gekappter" Stunde ausmacht.
+durch Begrenzung auf 600 W Ausgangsleistung nur etwa 124 kWh aus.
+Das erklärt sich damit, dass die Abregelung realistisch bei nur
+knapp 9% der (Gesamt-)Stunden stattfindet und der dadurch verursachte Verlust
+im Schnitt nur etwa 0,16 kWh pro "gekappter" Stunde ausmacht.
 
 ![Bild: Symbol für Rücklaufsperre im Stromzähler](
 Ruecklaufsperre.png){:.right width="450"}
@@ -339,12 +339,12 @@ ergeben sich Kosten von 1€/kWh erzeugtem Solarstrom pro Jahr.
 was aber praktisch selten der Fall ist,
 und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
 ergibt sich eine Amortisation der Anschaffungskosten in nur 2,5 Jahren.
-* Bei einer typischen Balkonanlage für 660€ mit 600 Wp
-und 88% Wechselrichter-Wirkungsgrad
+* Bei einer typischen Balkonanlage mit 600 Wp und 88% Wechselrichter-Wirkungsgrad
 liegt bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil
-und einem Jahresverbrauch von 3000 kWh der genutzte Ertrag bei 480 kWh,
-was bei 40 Ct/kWh eine Amortisationszeit von 3,5 Jahren ergibt.\
-Bei einem Jahresverbrauch von 1500 kWh sind es 270 kWh, was 6,1 Jahre ergibt.
+und einem Jahresverbrauch von 3000 kWh der genutzte Ertrag bei etwa 460 kWh.
+Bei einer Investition von 660€ und 40 Ct/kWh ergibt sich eine Amortisationszeit
+von 3,6 Jahren.\
+Bei einem Jahresverbrauch von 1500 kWh sind es etwa 330 kWh, was 5 Jahre ergibt.
 
 Für die Amortisation des energetischen Aufwands
 zur Herstellung einer Mini-PV-Anlage muss man nach [Angaben des DKE](
@@ -362,19 +362,19 @@ den Anteil des während der Sonnenscheindauer im Haushalt nutzbaren
 Ertrages, sowie optional Effekte durch das Laden eines E-Fahrzeugs (was
 normalerweise öfter zu Sonnenscheinzeiten erfolgen kann), den Betrieb
 einer Wärmepumpe und die Nutzung eines Stromspeichers. Dabei werden die
-Energieflüsse der Einfachheit halber auf Monatsbasis gerechnet --- pro
-Stunde wäre besser, pro Minute noch besser.
+Energieflüsse der Einfachheit halber nur auf Monatsbasis gerechnet, so dass
+selbst tageszeitliche Effekte nur näherungsweise berücksichtigt werden können.
 
-Bei einer Balkonanlage mit 600 Wp, die 660€ kostet und bei optimaler Ausrichtung
-pro Jahr 660 kWh Ertrag liefert, ergibt sich für einen Haushalt mit 3000 kWh
-Jahresverbrauch, der zu 28% während der Haupt-Sonnenscheinzeiten erfolgt,
-mit dem PV-Rechner ein Solarstrom-Eigenverbrauch von etwa 530 kWh pro Jahr.
-Damit kann man bei 40 Ct/kWh jährlich ca. 205€ Stromkosten einsparen, was eine
-Amortisationszeit von 3,2 Jahren und eine satte (Anfangs-)Rendite von 26% ergibt.
+Bei der o.g. typischen Balkonanlage für 660€ mit 600 Wp und 660 kWh Jahresertrag
+ergibt sich mit dem PV-Rechner für einen Haushalt mit 3000 kWh Jahresverbrauch,
+der zu 28% während der Haupt-Sonnenscheinzeiten erfolgt,
+ein etwas zu optimistischer Solarstrom-Eigenverbrauch von etwa 530 kWh pro Jahr.
+Damit könnte man bei 40 Ct/kWh jährlich ca. 205€ Stromkosten einsparen, was eine
+Amortisationszeit von 3,2 Jahren und eine satte (Anfangs-)Rendite von 26% ergäbe.
 
 Hinweis: Der PV-Rechner stammt von [Falko (bonotos)](https://www.bonotos.com/)
 Der originale beinhaltet auch seiner letzten Version 22-06 einen groben Fehler
-in der Rendite-Formel, der zu (fast) doppelt überhöhten Zahlen führt.
+in der Rendite-Formel, der zu (fast) doppelt überhöhten Rendite-Zahlen führt.
 Ich habe mich mit Falko zu diesen und anderen Punkten ausgetauscht.
 Er möchte an dem Tool nichts mehr machen.
 So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
@@ -382,15 +382,36 @@ So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
 [![Bild: Speichersimulation InGe16 1.-6. April, 1000kWh, PV 660 kWh, 2,4 kWh
 Speicher](Speichersimulation_InGe16_April_1-6.png){:.center}](
 https://brodsoft.de/stromverlauf/profiles/simulation)
-Eine viel genauere Simulation des Eigenverbrauchs, mit oder ohne Stromspeicher,
+Eine genauere Simulation des Eigenverbrauchs für einen gegebenen PV-Nettoertrag,
+ohne oder mit Stromspeicher (mit Angabe von genutzter Kapazität und Wirkungsgrad),
 gibt es von [brodsoft](https://brodsoft.de/stromverlauf/profiles/simulation).
 Diese basiert auf realen Profildaten für PV-Erzeugung und Stromverbrauch,
-mit denen die Berechnung (zumindest) auf Stundenbasis erfolgt.
-Man kann sich in der Ausgabe auch für jeden Monat Grafiken ausgeben lassen, auf
-deinen man sich sehr schön den Verlauf der elektrischen Größen ansehen kann.
-Damit ergibt sich für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl des Profils
-ein Eigenverbrauch von teils 601 kWh (Profil "allgemein 13/14") und mehr,
-aber typischerweise eher 514 kWh (Profil "InGe 16") pro Jahr.
+mit denen die Berechnung immerhin auf Stundenbasis erfolgt.
+Man kann sich in der Ausgabe auch für jeden Monat Grafiken ausgeben lassen,
+auf denen man sich sehr schön den Verlauf der elektrischen Größen ansehen kann.
+Außerdem gibt es gute Info-Seite mit guten Erklärungen zu Eigenverbrauchsanteil
+und Eigendeckungsanteil zu Strategien zu ihrer Optimierung.
+Diese Simulation berechnet für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl
+des Profils einen Eigenverbrauch von teils 601 kWh (Profil "allgemein 13/14")
+und mehr, aber typischerweise eher 514 kWh (Profil "InGe 16") pro Jahr.
+
+Eine eigene Simulation auf Minutenbasis (Details folgen hier noch)
+basierend auf den PV-Profildaten für ein [*typisches meteorologisches Jahr*](
+https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/)
+von [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/)
+und auf einem Mix der 74 minütlichen Haushaltsverbrauchs-Profile,
+die von der Forschungsgruppe Solarspeichersysteme HTW Berlin [veröffentlicht](
+https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
+wurden, kommt auf realistischere Ergebnisse. Für die o.g. Beispiel-Anlage erhalte
+ich für den Raum München einen PV-Nettoertrag (nach Wechselrichter-Verlusten)
+von etwa 640 kWh und eine Eigennutzung von etwa 450 kWh.
+Damit kann man bei 40 Ct/kWh jährlich ca. 180€ Stromkosten einsparen,
+was eine Amortisationszeit von 3,7 Jahren ergibt.
+Das Ergebnis fällt nicht ganz so günstig wie bei den anderen beiden Simulationen
+aus, v.A. weil hier die in der Praxis relativ häufigen Lastspitzen im
+Minutenbereich berücksichtigt werden, die von einer Mini-Solaranlage natürlich
+nicht abgefangen werden können, so dass der Eigenverbrauchsanteil geringer ist
+als bei einer über Stunden oder gar Monate gemittelten Betrachtung.
 
 ### Stecker-Solaranlage mit Batteriepuffer {#Batteriepuffer}
 
