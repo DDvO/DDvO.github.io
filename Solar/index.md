@@ -327,7 +327,7 @@ Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
 Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
 z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
 
-### Berechnung von Ertrag und Amortisation {#PV-Rechner}
+### Ertragsberechnung {#Ertragsberechnung}
 
 Wie eingangs geschrieben kann man bei optimaler Platzierung von Solarmodulen
 pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter Solarleistung gewinnen.
@@ -350,6 +350,8 @@ Für die Amortisation des energetischen Aufwands
 zur Herstellung einer Mini-PV-Anlage muss man nach [Angaben des DKE](
 https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
 allerdings noch 2-3 Jahre länger rechnen.
+
+#### Monatsbasierte Berechnung von Ertrag und Amortisation {#PV-Rechner}
 
 [![Bild: Ertragsrechnung Balkonanlage](
 PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
@@ -379,6 +381,8 @@ Ich habe mich mit Falko zu diesen und anderen Punkten ausgetauscht.
 Er möchte an dem Tool nichts mehr machen.
 So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
 
+#### Speichersimulation {#Speichersimulation}
+
 [![Bild: Speichersimulation InGe16 1.-6. April, 1000kWh, PV 660 kWh, 2,4 kWh
 Speicher](Speichersimulation_InGe16_April_1-6.png){:.center}](
 https://brodsoft.de/stromverlauf/profiles/simulation)
@@ -395,18 +399,30 @@ Diese Simulation berechnet für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl
 des Profils einen Eigenverbrauch von teils 601 kWh (Profil "allgemein 13/14")
 und mehr, aber typischerweise eher 514 kWh (Profil "InGe 16") pro Jahr.
 
-Eine eigene Simulation auf Minutenbasis (Details folgen hier noch)
+#### Simulation auf Minutenbasis {#Minutenbasis}
+
+Eine eigene Simulation auf Minutenbasis
 basierend auf den PV-Profildaten für ein [*typisches meteorologisches Jahr*](
 https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/)
 von [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/)
 und auf einem Mix der 74 minütlichen Haushaltsverbrauchs-Profile,
 die von der Forschungsgruppe Solarspeichersysteme HTW Berlin [veröffentlicht](
 https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
-wurden, kommt auf realistischere Ergebnisse. Für die o.g. Beispiel-Anlage erhalte
-ich für den Raum München einen PV-Nettoertrag (nach Wechselrichter-Verlusten)
+wurden, kommt auf realistischere Ergebnisse.
+Mit einem [Lastprofil-Skript](Lastprofil.pl) können aus den genannten Rohdaten
+Lastprofil-Dateien wie [diese](Lastprofil_4673_kWh.csv) synthetisiert werden.
+So eine Datei wird dann zusammen mit von PVGIS heruntergeladenen Solardaten
+wie [diesen](Solardaten_1215_kWh.csv) als Eingabe für ein
+[Solarertrag-Skript](Solarertrag.pl) verwendet. Weitere Parameter sind die
+Nennleistung und der Wirkungsgrad der Anlage sowie der Jahresverbrauch
+und optional eine Limitierung des PV-Eingangs durch den Wechselrichter.
+
+Mit dieser Simulation ergibt sich bei der o.g. Beispiel-Anlage
+für den Raum München einen PV-Nettoertrag (nach Wechselrichter-Verlusten)
 von etwa 640 kWh und eine Eigennutzung von etwa 450 kWh.
 Damit kann man bei 40 Ct/kWh jährlich ca. 180€ Stromkosten einsparen,
 was eine Amortisationszeit von 3,7 Jahren ergibt.
+
 Das Ergebnis fällt nicht ganz so günstig wie bei den anderen beiden Simulationen
 aus, v.A. weil hier die in der Praxis relativ häufigen Lastspitzen im
 Minutenbereich berücksichtigt werden, die von einer Mini-Solaranlage natürlich
