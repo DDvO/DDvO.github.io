@@ -545,7 +545,12 @@ Neben der Speicherbatterie wird hier zumindest ein
 nicht direkt mit der Batteriespannung (z.B. 12 V oder 24 V Gleichstrom)
 betrieben werden können, zusätzlich ein ausreichend leistungsstarker
 [Inselwechselrichter](#Inselwechselrichter) zur Umwandlung
-in den üblichen \'Steckdosenstrom\' (also Wechselstrom mit 230 V).
+in den üblichen \'Steckdosenstrom\' (also Wechselstrom mit 230 V).\
+An diesen Wechselrichter muss man bei Stromausfall alle
+dann zu verwendenden Geräte (meist über eine Mehrfachsteckdose) anschließen.
+Man kann dann also nicht einfach ins stromlose Hausnetz einspeisen,
+weil dazu die von außen kommende Stromleitung umgeschaltet werden müsste,
+was nur ein Elektriker machen darf.
 
 Ähnlich wie die zuvor genannte Variante ist diese Nutzungsart flexibler,
 aber wegen der nötigen zusätzlichen Komponenten (v.A. Batterie) auch
