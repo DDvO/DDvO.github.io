@@ -22,7 +22,7 @@ gewonnene Energie über den ganzen Tag und die Nacht verteilt einspeisen.
 Eine sog. *Inselanlage* ist auch während Stromausfällen verwendbar,
 soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
 
-Abgrenzung
+Abgrenzung {#Abgrenzung}
 ----------
 
 Hier geht es nicht um *Solarthermie*, also die direkte Gewinnung von Wärme
@@ -192,16 +192,34 @@ Aufheizen eines Warmwasserspeichers).
 ### Stecker-Solaranlage ("Balkonkraftwerk" mit direkter Netzeinspeisung) {#Balkonkraftwerk}
 
 ![Bild: Aufbau Balkonkraftwerk](Balkonkraftwerk.jpg){:.right width="400"}
-Typischerweise
-speisen Solaranlagen den erzeugten Strom nach Umwandlung durch einen
-netzgekoppelten Wechselrichter
+Typischerweise speisen Solaranlagen den erzeugten Strom
+nach Umwandlung durch einen netzgekoppelten Wechselrichter
 ([Solarwechselrichter](https://de.wikipedia.org/wiki/Solarwechselrichter),
-engl. _grid-tie inverter_) direkt ins (lokale oder öffentliche) Stromnetz
-ein, wo er sofort in irgendeiner Form verbraucht wird (bzw. der Rest in
-Form von Wärme verlorengeht).
+engl. _grid-tie inverter_) direkt ins (lokale oder öffentliche) Stromnetz ein,
+wo er sofort in irgendeiner Form verbraucht wird (bzw. der Rest verlorengeht).
+
 Wichtig zu beachten ist, dass diese Nutzungsart abseits eines bestehenden
-Wechselstrom-Netzes und während eines Stromausfalls nicht funktioniert, weil
-sich hierfür verwendete Wechselrichter mit dem Stromnetz synchronisieren müssen.
+Wechselstrom-Netzes und während eines Stromausfalls nicht funktioniert,
+weil sich der verwendete Wechselrichter mit dem Stromnetz synchronisieren muss.
+
+![Bild: Wieland-Unterputz-Dose](Wieland-Unterputz-Dose.png){:.right width="400"}
+Wie schon der Name *Stecker-Solaranlage* ausdrückt, werden solche kleinen
+Anlagen meist einfach über einen (Schuko-)Stecker mit dem Hausnetz verbunden,
+z.B. an einer Außensteckdose auf dem Balkon oder der Terrasse. Das ist sehr
+flexibel und ermöglicht, sehr einfach ein Energiemessgerät dazwischenzustecken,
+wie es unten zur [Verbrauchsmessung]{#Verbrauchsmessung} gezeigt ist.
+Diese Lösung ist m.E. schon sicher genug,
+weil der Wechselrichter die Stromzufuhr sofort unterbricht, wenn man den
+Stecker aus der Dose zieht und seine blanken Kontakte berühren kann.\
+Man kann, wie vom VDE empfohlen, aber auch eine spezielle *Energiesteckdose*
+verwenden. Diese wird auch [*Einspeisesteckdose*](
+https://www.solarenergie-info.de/wieland-einspeisesteckdose/) genannt
+und ist üblicherweise von der Firma Wieland. Sie gilt als besonders sicher,
+ist aber auch recht teuer und muss von einem Elektriker installiert werden.
+[Hier](https://priwatt.de/blog/wieland-vs-schuko-stecker-was-eignet-sich-am-besten-fur-mein-balkonkraftwerk/)
+ein ausführlicher Vergleich.
+Eine weitere Möglichkeit ist, den Wechselrichter direkt fest mit dem Hausnetz
+zu verdrahten, was den Betrieb sogar noch sicherer macht.
 
 Die auch [*Balkonkraftwerk*](https://www.steckdosensolar.de/) genannten Anlagen
 haben meist eine recht geringe PV-Nennleistung von etwa 600-700 Wp.
@@ -211,9 +229,11 @@ anmeldepflichtig) sind, wenn sie weniger als 600 W in die Steckdose einspeisen.
 Dies gilt für Deutschland und die Schweiz;
 in Österreich gilt nach einer EU-Richtlinie eine Obergrenze von 800 W.
 
+#### Beschränkung auf 600 W und ihre Gründe {#Kappung}
+
 [![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
 Solarstrom-Einspeisung](
-Stromleitung_Überlastung_Solareinspeisung.jpg){:.right width="450"}](
+Stromleitung_Ueberlastung_Solareinspeisung.jpg){:.right width="450"}](
 https://www.sonnenenergie.de/index.php?id=30&tx_ttnews[tt_news]=254)
 Hintergrund dieser Beschränkung sind vornehmlich Sicherheitsbedenken:
 Falls über die Wohnungs-Stromleitung, an der die Einspeisung
@@ -237,10 +257,10 @@ können Steckdosen-Anlagen [auch z.B. mit 1800 W Leistung](
 https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/)
 normgerecht betrieben werden.
 
-{:style="clear:both"}
+#### Kappungsverlust durch Beschränkung auf 600 W {#Kappungsverlust}
 
 Die nominelle Leistung der verwendeten Solarmodule kann und sollte aber
-durchaus größer sein (z.B. 800-1000 Wp), denn in der Praxis werden die
+durchaus größer sein (z.B. 800 - 1000 Wp), denn in der Praxis werden die
 600 W Ausgangsleistung kaum erreicht, vor Allem in sonnenarmen Zeiten,
 zumal es Verluste nicht nur an den Modulen, sondern auch im
 Wechselrichter gibt. Man hat durch einen gewisse "Überdimensionierung"
@@ -249,17 +269,40 @@ auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
 schneller erreicht wird), allerdings auf recht niedrigem absoluten
 Niveau. Wenn der Solar-Wechselrichter die Ausgangsleistung auf 600 W
 begrenzt, wird der Gesamtertrag durch diese Abregelung zwar verringert,
-aber der Effekt ist nicht so groß, wie man meinen könnte: Bei einem (als
-konstant angenommenen) Gesamt-Systemverlust von 10% und optimal statisch
-ausgerichteten 1000 Wp Modulen, die z.B. im Raum München eigentlich zu
-einem Ertrag von etwa 1253 kWh pro Jahr führen würden, macht der Verlust
-durch Begrenzung auf 600 W Ausgangsleistung nur etwa 124 kWh aus.
-Das erklärt sich damit, dass die Abregelung realistisch bei nur
-knapp 9% der (Gesamt-)Stunden stattfindet und der dadurch verursachte Verlust
-im Schnitt nur etwa 0,16 kWh pro "gekappter" Stunde ausmacht.
+aber der Effekt ist nicht so groß, wie man meinen könnte.
 
+Bei einem Systemverlust (v.A durch den Wechselrichter) von 12% und optimal
+statisch ausgerichteten 1000 Wp Modulen, die z.B. im Raum München eigentlich
+zu einem Ertrag von etwa 1070 kWh pro Jahr führen würden, macht der Verlust
+durch Begrenzung auf 600 W Ausgangsleistung nur etwa 15 kWh aus.
+Das erklärt sich durch zwei Effekte:
+* Die Abregelung findet zwar während etwa 800 Sonnenstunden im Jahr statt,
+aber die Differenz auf den sonst möglichen Ertrag ist moderat: etwa 110 kWh.
+* Nur während (in Summe) ca. 120 Stunden wird während der Abregelung
+typischerweise so viel Strom verbraucht, dass sich die Kappung bemerkbar macht.
+
+Hingegen bieten 1000 statt 600 Wp eine Leistungsreserve für schwächere
+Sonnenstunden, wodurch im Jahr der Netto-Ertrag (trotz Kappung) am Ausgang des
+Wechselrichters um etwa 315 kWh steigt, und der Eigenverbrauch um etwa 130 kWh.
+Die Amortisationszeit der Gesamt-Anlage bleibt ziemlich gleich, und auf
+lange Sicht ergibt sich eine entsprechend höhere Kostenersparnis als mit 600 Wp.
+
+#### Stromzähler und Rücklaufsperre {#Stromzähler}
+
+Für den selbst erzeugten und gleichzeitig verbrauchten Strom spart man sich
+die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
+und entsprechend langsamer läuft.
+Es wird also nur der vom Stromanbieter bezogene Anteil des Verbrauchs berechnet.
+
+Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
+die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
+die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
+die Stromzähler arbeiten *phasensaldierend*, d.h. sie bilden die Gesamtsumme
+von Verbrauch und Erzeugung, welche dabei negatives Vorzeichen hat.
+
+![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.left width="400"}
 ![Bild: Symbol für Rücklaufsperre im Stromzähler](
-Ruecklaufsperre.png){:.right width="450"}
+Ruecklaufsperre.png){:.right width="370"}
 Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
 verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
 Moderne Stromzähler haben eine *Rücklaufsperre*, was man an dem entsprechenden
@@ -268,6 +311,9 @@ Strom praktisch ins externe Netz verschenkt wird.
 Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
 laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
 Damit kann man \'unter der Hand Strom verkaufen\', was aber nicht erlaubt ist.
+
+Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
+vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
 Eine offiziell angemeldete und vergütete Einspeisung ist mit einiger Bürokratie
 verbunden und bringt wenig --- die Vergütung sank in Deutschland gemäß eEG
 [bis 2022 auf ca. 6 ct/kWh](
@@ -276,14 +322,14 @@ und steigt [ab 2023 auf etwa 8 ct/kWh](
 https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
 --- immer noch sehr mager, besonders im Vergleich zum Verbrauchspreis.
 
-Hingegen spart man sich für den selbst erzeugten und gleichzeitig verbrauchten
-Anteil die Verbrauchskosten, weil der Zähler nur die Differenz, also den von
-extern bezogenen Strom, berücksichtigt und entsprechend langsamer läuft.
-Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
-die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
-die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
-die Stromzähler arbeiten *phasensaldierend*, d.h. sie bilden die Gesamtsumme
-von Verbrauch und Erzeugung, welche dabei negatives Vorzeichen hat.
+### Stromverbrauch im Haushalt {#Stromverbrauch}
+
+Eigentlich ist es im Vergleich zum Betrieb einer (möglicherweise
+recht groß dimensionierten) Solaranlage immer noch günstiger und
+umweltfreundlicher, von vornherein den Stromverbrauch zu senken.
+Stromfressende Geräte sollte man möglichst meiden und Geräte, die einen
+hohen Standby-Verbrauch haben, bei längerem Nichtgebrauch ausschalten.
+Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
 
 Je stromhungriger ein Haushalt tagsüber ist, desto größer der zu erwartende
 Einsparungseffekt durch eine Steckdosen-Anlage ohne Stromspeicher.
@@ -298,11 +344,12 @@ vorzugsweise dann betreiben, wenn hohe Sonneneinstrahlung vorhanden ist.
 Dazu bieten sich insbesondere Waschmaschinen und das Laden von Batterien an,
 wobei die Akkus von E-Bikes oder E-Rollern von der Größenordnung
 und ihrem zeitlichen Nutzungsprofil besonders geeignet sind.
-Eine ziemlich clevere Nutzung von überflüssigem Strom finde ich die verstärkte
-Nutzung einer Wärmepumpe oder das zusätzliche Aufheizen des Warmwasserboilers
-im Haus, so dass man weniger fossile Brennstoffe verbraucht.
 
-### Stromverbrauch im Haushalt
+Eine ziemlich clevere Nutzung von überschüssigem Strom finde ich die verstärkte
+Nutzung einer Wärmepumpe oder das zusätzliche Aufheizen des Warmwasserboilers
+über einen Heizstab, so dass man weniger fossile Brennstoffe verbraucht.
+
+#### Verbrauchsmessung {#Verbrauchsmessung}
 
 ![Bild: Energiekosten-Messgerät in Steckdosenform](
 Energiekosten-Messgeraet.png){:.right width="300"
@@ -317,13 +364,6 @@ noch einfacher bestimmen, indem man die Differenz der Zählerstände
 über einen Zeitraum von mehreren Stunden, zu dem sonst keine Verbraucher
 eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
 
-Übrigens, eigentlich ist es im Vergleich zum Betrieb einer (möglicherweise
-recht groß dimensionierten) Solaranlage immer noch günstiger und
-umweltfreundlicher, von vornherein den Stromverbrauch zu senken.
-Stromfressende Geräte sollte man möglichst meiden und Geräte, die einen
-hohen Standby-Verbrauch haben, bei längerem Nichtgebrauch ausschalten.
-Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
-
 Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
 z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
 
@@ -336,20 +376,25 @@ Rechnet man beispielsweise mit einer Investition von 1,10€/Wp
 ergeben sich Kosten von 1€/kWh erzeugtem Solarstrom pro Jahr.
 
 * Falls der damit erzeugte Strom komplett selbst verbraucht wird,
-was aber praktisch selten der Fall ist,
+was aber praktisch kaum der Fall ist,
 und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
 ergibt sich eine Amortisation der Anschaffungskosten in nur 2,5 Jahren.
-* Bei einer typischen Balkonanlage mit 600 Wp und 88% Wechselrichter-Wirkungsgrad
-liegt bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil
-und einem Jahresverbrauch von 3000 kWh der genutzte Ertrag bei etwa 460 kWh.
-Bei einer Investition von 660€ und 40 Ct/kWh ergibt sich eine Amortisationszeit
-von 3,6 Jahren.\
-Bei einem Jahresverbrauch von 1500 kWh sind es etwa 330 kWh, was 5 Jahre ergibt.
+* Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
+Jahres-Bruttoertrag von etwa 730 kWh, was bei 88% System-Wirkungsgrad
+ca. 640 kWh hinter dem Wechselrichter an der Steckdose bedeutet.
+Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und einem typischen
+Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 450 kWh.
+Bei einer Investition von 660€ und 40 Ct/kWh ergibt sich (ohne Berücksichtigung
+von Kapitalkosten u.ä.) eine Amortisationszeit von 3,7 Jahren.\
+Bei 1500 kWh Jahresverbrauch können immerhin etwa 320 kWh selbst genutzt werden,
+was eine Amortisation in gut 5 Jahren ergibt.
 
 Für die Amortisation des energetischen Aufwands
 zur Herstellung einer Mini-PV-Anlage muss man nach [Angaben des DKE](
 https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
 allerdings noch 2-3 Jahre länger rechnen.
+In die Gesamt-Ökobilanz einer PV-Anlage und ihrer Nutzung gehen natürlich
+noch weitere Effekte ein, die sich aber kaum quantifizieren lassen.
 
 #### Monatsbasierte Berechnung von Ertrag und Amortisation {#PV-Rechner}
 
@@ -580,12 +625,13 @@ geschalteten Solarzellen zusammengesetzt, die Sonnenlicht in Gleichstrom
 umwandeln.
 
 ![Bild: Spannung und Strom abhängig von der Bestrahlungsstärke](
-Kennlinie_Bestrahlungsstaerke_Spannung-Strom.jpg){:.right width="530"}
+Kennlinie_Bestrahlungsstaerke_Spannung-Strom.jpg){:.right width="550"}
 Bei den üblichen Silizium-Solarzellen steigt der entnehmbare Strom
 (Kurzschlussstrom) linear mit der Bestrahlungsstärke. Ihre
 Leerlaufspannung hingegen steigt schon bei geringer Helligkeit stark an
-und nähert sich dann nur noch langsam steigend dem Wert 0,63 V. Generell
-sind *monokristalline* Zellen zu bevorzugen, auch wenn sie ein wenig
+und nähert sich dann nur noch langsam steigend dem Wert 0,63 V.
+
+Generell sind *monokristalline* Zellen zu bevorzugen, auch wenn sie ein wenig
 teurer sind als *polykristalline* oder *amorphe*, weil sie einen höheren
 Wirkungsgrad haben.
 
@@ -838,7 +884,7 @@ Unter Berücksichtigung der Speicherungsverluste und der Wandlungsverluste
 eines Wechselrichters lässt sich damit ein Gerät mit 1000 W Verbrauch
 (z.B. Staubsauger, Kaffeemaschine oder Fön) gut eine Stunde lang betreiben.
 
-#### Batterie-Dimensionierung
+#### Batterie-Dimensionierung {#Dimensionierung}
 
 Um den Wandlungsverlust von ca. 10% eines Wechselrichters zu vermeiden,
 sollte man bei einer Inselanlage die Verbraucher möglichst direkt an der
@@ -971,7 +1017,7 @@ ich folgende Komponenten besonders interessant:
     ca.
     [715€](https://shop-lieckipedia.de/Ab-2-Stueck-310-Watt-Solarmodul-monokristallin-flexibel-Sunman)
 
--   4-in-1 Microinverter 1200 W [Hoymiles
+-   4-in-1 Mikrowechselrichter 1200 W [Hoymiles
     HM-1200](https://www.hoymiles.com/product/microinverter/hm-1200-1500-as/),
     ca. 230€\
     oder 1000 W Micro Grid Tie Inverter Inverter
