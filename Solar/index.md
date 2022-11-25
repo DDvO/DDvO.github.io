@@ -189,13 +189,17 @@ einer Spannung je nach Modultyp von üblicherweise 22 bis 44 V. Dieser
 \'rohe\' Strom ist direkt erst mal kaum verwendbar (außer z.B. zum
 Aufheizen eines Warmwasserspeichers).
 
-### Stecker-Solaranlage ("Balkonkraftwerk" mit direkter Netzeinspeisung) {#Balkonkraftwerk}
+### Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk") {#Balkonkraftwerk}
 
-![Bild: Aufbau Balkonkraftwerk](Balkonkraftwerk.jpg){:.right width="400"}
+![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.left width="400"}
+![Bild: Aufbau Balkonkraftwerk](Balkonkraftwerk.jpg){:.right width="378"}
+
+{:style="clear:both"}
+
 Typischerweise speisen Solaranlagen den erzeugten Strom
 nach Umwandlung durch einen netzgekoppelten Wechselrichter
 ([Solarwechselrichter](https://de.wikipedia.org/wiki/Solarwechselrichter),
-engl. _grid-tie inverter_) direkt ins (lokale oder öffentliche) Stromnetz ein,
+engl. _grid-tie inverter_) direkt ins Hausnetz oder öffentliche Stromnetz ein,
 wo er sofort in irgendeiner Form verbraucht wird (bzw. der Rest verlorengeht).
 
 Wichtig zu beachten ist, dass diese Nutzungsart abseits eines bestehenden
@@ -222,10 +226,10 @@ Eine weitere Möglichkeit ist, den Wechselrichter direkt fest mit dem Hausnetz
 zu verdrahten, was den Betrieb sogar noch sicherer macht.
 
 Die auch [*Balkonkraftwerk*](https://www.steckdosensolar.de/) genannten Anlagen
-haben meist eine recht geringe PV-Nennleistung von etwa 600-700 Wp.
+haben meist eine recht geringe PV-Nennleistung von etwa 600 bis 800 Wp.
 Das hat neben der geringen Größe und sehr überschaubaren Kosten auch damit zu
 tun, dass sie selbst installiert werden dürfen und genehmigungsfrei (jedoch
-anmeldepflichtig) sind, wenn sie weniger als 600 W in die Steckdose einspeisen.
+anmeldepflichtig) sind, wenn sie maximal 600 W in die Steckdose einspeisen.
 Dies gilt für Deutschland und die Schweiz;
 in Österreich gilt nach einer EU-Richtlinie eine Obergrenze von 800 W.
 
@@ -720,8 +724,8 @@ Wetter (mit vielleicht nur 100 - 200 W/m²) ziemlich eng.
 
 {:style="clear:both"}
 
-![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.left width="510"}
-![Bild: Solaranlage auf Pergola](Pergola-Anlage.jpg){:.right width="245"}
+![Bild: Garten-Solaranlage an Hauswand](Garten-Anlage.jpg){:.left width="386"}
+![Bild: Solaranlage auf Pergola](Pergola-Anlage.jpg){:.right width="386"}
 
 {:style="clear:both"}
 Zur Montage bzw.
