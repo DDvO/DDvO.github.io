@@ -38,7 +38,7 @@ verlässliche Hinweise geben und für die Inhalte keine Gewähr oder Haftung
 übernehmen. Wer bezüglich steckerfertigen PV-Anlagen etwas Offizielleres sucht,
 der sei z.B. auf den schönen [Leitfaden von SmartGridsBW](
 https://smartgrids-bw.net/public/uploads/2020/04/IBZ-Leitfaden_Balkon-PV-Online.pdf)
-und die ['Fachinformation' des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
+und die ["Fachinformation" des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
 verwiesen.
 
 Photovoltaik (PV) und ihr möglicher Energie-Ertrag {#Photovoltaik}
@@ -190,9 +190,9 @@ Nutzungsmöglichkeiten {#Nutzung}
 ---------------------
 
 Solarmodule liefern in direkter Abhängigkeit von der Einstrahlungsstärke
-sehr variablen Gleichstrom (je nach Nennleistung maximal z.B. 10 A) mit
-einer Spannung je nach Modultyp von üblicherweise 22 bis 44 V. Dieser
-\'rohe\' Strom ist direkt erst mal kaum verwendbar,
+sehr variablen Gleichstrom (je nach Nennleistung maximal z.B. 11 A)
+mit einer Spannung je nach Modultyp von üblicherweise 22 bis 44 V.
+Dieser "rohe" Strom ist direkt erst mal kaum verwendbar,
 außer z.B. zum Aufheizen eines Warmwasserspeichers mit einem [DC-Heizstab](
 https://www.net4energy.com/de-de/energie/pv-heizstab#unterschiedliche).
 
@@ -229,7 +229,7 @@ Stecker aus der Dose zieht und seine blanken Kontakte berühren kann.\
 Man kann, wie vom VDE empfohlen, aber auch eine spezielle *Energiesteckdose*
 verwenden. Diese wird auch [*Einspeisesteckdose*](
 https://www.solarenergie-info.de/wieland-einspeisesteckdose/) genannt
-und ist üblicherweise von der Firma Wieland. Sie gilt als besonders sicher,
+und ist meist von der Firma Wieland. Sie gilt als besonders sicher,
 ist aber auch recht teuer und muss von einem Elektriker installiert werden.
 [Hier](https://priwatt.de/blog/wieland-vs-schuko-stecker-was-eignet-sich-am-besten-fur-mein-balkonkraftwerk/)
 ein ausführlicher Vergleich.
@@ -264,43 +264,53 @@ Von der ESTI (Schweiz) wird aus diesem Grund
 die Leitungsüberlastung durch Stecker-Solaranlagen
 [nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
 
-Ein wichtigerer Grund für die Beschränkung sind mögliche Rückwirkungen
-massenhafter Einspeisung auf die Stabilität des allgemeinen Stromnetzes.\
-Wenn aber durch sog.
+Ein weiterer Grund für die Beschränkung könnte die Möglichkeit schlecht
+kalkulierbarer Rückwirkungen auf die Stabilität des allgemeinen Stromnetzes
+bei massenhafter Einspeisung und kräftigem stark schwankendem Sonnenschein sein.
+Wenn jedoch durch sog.
 [*Nulleinspeisung*](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/eigenverbrauch/nulleinspeisung)
 sichergestellt ist, dass kein überflüssiger Strom ins externe Netz fließt,
 können Steckdosen-Anlagen [auch z.B. mit 1800 W Leistung](
 https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/)
 normgerecht betrieben werden.
 
+Man kann vermuten, dass die Beschränkung auch nichttechnische Gründe hat,
+etwa dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz wollen.
+
 #### Kappungsverlust durch Beschränkung auf 600 W {#Kappungsverlust}
 
-Die nominelle Leistung der verwendeten Solarmodule kann und sollte aber
-durchaus größer sein (z.B. 800 - 1000 Wp), denn in der Praxis werden die
-600 W Ausgangsleistung kaum erreicht, vor Allem in sonnenarmen Zeiten,
-zumal es Verluste nicht nur an den Modulen, sondern auch im
-Wechselrichter gibt. Man hat durch einen gewisse "Überdimensionierung"
-auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
+Die nominelle Leistung der verwendeten Solarmodule kann und sollte durchaus
+größer sein aus 600 Wp (z.B. 800 bis 1000 Wp), denn in der Praxis werden die
+600 W PV-Ausgangsleistung kaum erreicht, vor Allem in sonnenarmen Zeiten.
+Man hat durch einen gewisse "Überdimensionierung" auch bei Verlusten im Bereich
+der Module und zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
 (eigentlich sogar überproportional mehr, weil die Schwellspannung
-schneller erreicht wird), allerdings auf recht niedrigem absoluten
-Niveau. Wenn der Solar-Wechselrichter die Ausgangsleistung auf 600 W
-begrenzt, wird der Gesamtertrag durch diese Abregelung zwar verringert,
-aber der Effekt ist nicht so groß, wie man meinen könnte.
+schneller erreicht wird), allerdings auf recht niedrigem absoluten Niveau.
 
-Bei einem Systemverlust (v.A durch den Wechselrichter) von 12% und optimal
-statisch ausgerichteten 1000 Wp Modulen, die z.B. im Raum München eigentlich
-zu einem Ertrag von etwa 1070 kWh pro Jahr führen würden, macht der Verlust
-durch Begrenzung auf 600 W Ausgangsleistung nur etwa 15 kWh aus.
-Das erklärt sich durch zwei Effekte:
-* Die Abregelung findet zwar während etwa 800 Sonnenstunden im Jahr statt,
-aber die Differenz auf den sonst möglichen Ertrag ist moderat: etwa 110 kWh.
-* Nur während (in Summe) ca. 120 Stunden wird während der Abregelung
-typischerweise so viel Strom verbraucht, dass sich die Kappung bemerkbar macht.
+Leider realisieren die gängigen Mini-Wechselrichter eine Leistungsbegrenzung
+auf 600 W nicht auf ihrer Ausgangsseite, sondern schon auf ihrer Eingangsseite,
+und das auch noch aufgeteilt pro Eingang, so dass sie nach Abzug ihrer Verluste
+von ca. 12% stets weniger als 530 W liefern.
+Obwohl der Netto-Ertrag durch diese Form der Abregelung also sogar unnötig stark
+verringert wird, ist der Effekt auf den nutzbaren Ertrag längst nicht so groß,
+wie man meinen könnte.
 
-Hingegen bieten 1000 statt 600 Wp eine Leistungsreserve für schwächere
-Sonnenstunden, wodurch im Jahr der Netto-Ertrag (trotz Kappung) am Ausgang des
-Wechselrichters um etwa 315 kWh steigt, und der Eigenverbrauch um etwa 130 kWh.
-Die Amortisationszeit der Gesamt-Anlage bleibt ziemlich gleich, und auf
+Beispielsweise bei 1000 Wp Modulen, die je nach Standort und Ausrichtung
+zu einem Ertrag von etwa 1215 kWh brutto pro Jahr führen können,
+also bei einem Wechselrichter-Wirkungsgrad von 88% etwa 1070 kWh Netto-Ertrag,
+macht der effektive Verlust durch eine Begrenzung auf 600 W Eingangsleistung
+des Wechselrichters gerade mal 15 kWh aus. Dies erklärt sich durch zwei Effekte:
+* Die Abregelung findet zwar während etwa 800 Sonnenstunden im Jahr statt, aber
+die Differenz auf den sonst möglichen Netto-Ertrag ist moderat: etwa 110 kWh.
+* Nur während (in Summe) ca. 120 Stunden wird zeitgleich zu dieser Abregelung
+typischerweise überhaupt so viel Strom verbraucht, dass sich die Kappung beim
+Eigenverbrauch bemerkbar macht, und die Menge dieses Verbrauchs, bei dem die
+Leistung also bei mehr als 530 W liegt, ist typischerweise ziemlich gering.
+
+Hingegen bieten 1000 statt 600 Wp PV-Nennleistung bei mäßigen Zusatzkosten eine
+sinnvolle Reserve für schwächere Sonnenstunden, wodurch der Netto-Ertrag (trotz
+Kappung) um etwa 315 kWh steigt, der Eigenverbrauch um etwa 130 kWh im Jahr.
+Die Amortisationszeit der Gesamt-Anlage bleibt dabei ziemlich gleich, und auf
 lange Sicht ergibt sich eine entsprechend höhere Kostenersparnis als mit 600 Wp.
 
 #### Stromzähler und Rücklaufsperre {#Stromzähler}
@@ -326,7 +336,7 @@ Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
 Strom praktisch ins externe Netz verschenkt wird.
 Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
 laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
-Damit kann man \'unter der Hand Strom verkaufen\', was aber nicht erlaubt ist.
+Damit kann man "unter der Hand Strom verkaufen", was aber nicht erlaubt ist.
 
 Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
 vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
@@ -398,9 +408,11 @@ und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
 ergibt sich eine Amortisation der Anschaffungskosten in nur 2,5 Jahren.
 * Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
 Jahres-Bruttoertrag von etwa 730 kWh, was bei 88% System-Wirkungsgrad
-ca. 640 kWh hinter dem Wechselrichter an der Steckdose bedeutet.
+ca. 640 kWh hinter dem Wechselrichter Einspeisung an der Steckdose bedeutet.
 Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und einem typischen
 Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 450 kWh.
+Der Eigendeckungsanteil liegt damit bei 15% des Verbrauchs,
+der Eigenverbrauchsanteil bei 70% des Ertrags.
 Bei einer Investition von 660€ und 40 Ct/kWh ergibt sich (ohne Berücksichtigung
 von Kapitalkosten u.ä.) eine Amortisationszeit von 3,7 Jahren.\
 Bei 1500 kWh Jahresverbrauch können immerhin etwa 320 kWh selbst genutzt werden,
@@ -641,7 +653,7 @@ Neben der Speicherbatterie wird hier zumindest ein
 nicht direkt mit der Batteriespannung (z.B. 12 V oder 24 V Gleichstrom)
 betrieben werden können, zusätzlich ein ausreichend leistungsstarker
 [Inselwechselrichter](#Inselwechselrichter) zur Umwandlung
-in den üblichen \'Steckdosenstrom\' (also Wechselstrom mit 230 V).\
+in den üblichen "Steckdosenstrom" (also Wechselstrom mit 230 V).\
 An diesen Wechselrichter muss man bei Stromausfall alle
 dann zu verwendenden Geräte (meist über eine Mehrfachsteckdose) anschließen.
 Man speist dann also nicht einfach ins stromlose Hausnetz ein,
@@ -790,7 +802,7 @@ Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
 
 ![Bild: Strom-/Leistungs-Spannungskennlinien einer Solarzelle](
 I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="450"}
-Für die Umwandlung des recht volatilen \'rohen\' Solarstroms auf die gewünschte
+Für die Umwandlung des recht volatilen "rohen" Solarstroms auf die gewünschte
 (nahezu) konstante Zielspannung benötigt man regelbare *Gleichspannungswandler*,
 kurz *Regler* genannt.
 Sehr einfache und billige Regler verwenden dazu *Pulsweitenmodulation* (*PWM*).
@@ -1008,7 +1020,7 @@ aus folgenden Gründen:
     geringer sind.
 
 Man kann auch mehrere Batterien in Reihe (also hintereinander) schalten, um
-z.B. auf 2 * 12 V = 24 V zu kommen,
+z.B. auf 2 × 12 V = 24 V zu kommen,
 muss dann aber für eine dauerhafte *Balancierung* (gleichmäßige Spannungslage)
 der Einzelbatterien sorgen, wie es auch das BMS innerhalb einer Batterie
 für die Einzelzellen tut. Dafür gibt es
