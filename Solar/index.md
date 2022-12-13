@@ -54,7 +54,7 @@ nicht senkrecht zur Einstrahlung ausgerichtet, (teil-)verschattet,
 verschmutzt oder zu warm sind. Zu berücksichtigen ist zudem der
 Wirkungsgrad der übrigen PV-Anlage von etwa 80 bis 95%.
 
-### Sonnenstrahlung
+### Sonnenstrahlung {#Sonnenstrahlung}
 
 [![Bild: Globalstrahlung in Deutschland](
 Globalstrahlung_Deutschland.jpg){:.right width="550"
@@ -75,7 +75,7 @@ Die nebenstehende
 gibt für Deutschland einen Überblick, welche Menge an Sonnenstrahlung
 pro Quadratmeter horizontaler Fläche durchschnittlich im Jahr zusammenkommt.
 
-### Maximalleistung von Solarmodulen
+### Maximalleistung von Solarmodulen {#Maximalleistung}
 
 {:style="clear:both"}
 Die **Nennleistung** von Solarmodulen wird in **Wp** ([*Watt Peak*](
@@ -118,7 +118,7 @@ https://globalsolaratlas.info/map?c=50.10,11.05,7&s=48.1807,11.604e)
 https://re.jrc.ec.europa.eu/pvg_tools/de/)
 bei der Standard-Eingabe von 1 kWp für die installierte max. PV-Leistung.
 
-### Optimale Ausrichtung von Solarmodulen
+### Optimale Ausrichtung von Solarmodulen {#Ausrichtung}
 
 ![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_PV-Potential.png){:width="392" }
@@ -353,8 +353,8 @@ https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
 Eigentlich ist es im Vergleich zum Betrieb einer (möglicherweise
 recht groß dimensionierten) Solaranlage immer noch günstiger und
 umweltfreundlicher, von vornherein den Stromverbrauch zu senken.
-Stromfressende Geräte sollte man möglichst meiden und Geräte, die einen
-hohen Standby-Verbrauch haben, bei längerem Nichtgebrauch ausschalten.
+Stromfressende Geräte sollte man möglichst meiden und Geräte, die einen hohen
+Verbrauch im Bereitschaftsmodus haben, bei längerem Nichtgebrauch ausschalten.
 Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
 
 Je stromhungriger ein Haushalt tagsüber ist, desto größer der zu erwartende
@@ -518,7 +518,7 @@ hat, z.B. für eine Notstromversorgung oder als Fahrzeugbatterie.
 Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
 
-#### Speicherbatterie
+#### Speicherbatterie {#Speicherbatterie}
 
 Zu berücksichtigen ist, dass die Zwischenspeicherung des Stroms je nach Art der
 [Batterie](#Speicher) Verluste von etwa 5 bis 20% mit sich bringt -- bei LiFePO4
@@ -533,7 +533,7 @@ Wer mit der Speicherbatterie zusätzlich eine Notstromversorgung über eine
 [Inselanlage](#Inselanlage) realisieren möchte, wird die Kapazität je nach
 Anwendungsszenario eher größer wählen.
 
-#### Batterieladung
+#### Batterieladung {#Batterieladung}
 
 Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
 über einen [Solar-Laderegler](#Laderegler). Dies nennt man [*DC-Kopplung*](
@@ -545,7 +545,7 @@ Hingegen ist der einzige Vorteil der *AC-Kopplung* übers Haus-Wechselstromnetz
 und ein 230 V-Ladegerät eine große Flexibilität bei der Wahl der Komponenten,
 auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten.
 
-#### Einspeisung aus der Batterie
+#### Einspeisung aus der Batterie {#Einspeisung}
 
 Für die Einspeisung aus der Batterie bietet sich ein [regelbarer
 Netzwechselrichter](https://de.aliexpress.com/item/1005001445871590.html)
@@ -733,7 +733,7 @@ Verluste verringert werden. Allerdings ist diese Bauart selten zu finden
 und verhältnismäßig teuer, so dass sie nur dann sinnvoll ist, wenn man
 Platz sparen will/muss.
 
-#### Anschluss von Solarmodulen
+#### Anschluss von Solarmodulen {#Anschluss}
 
 Solarmodule haben als Stromanschluss meist die praktischen MC4-Steckverbinder.
 Generell sollten die Solarkabel, also die Verbindungen der Module
@@ -750,10 +750,12 @@ Wenige große Solarmodule sind technisch und wirtschaftlich etwas günstiger als
 entsprechend viele kleine, besonders wenn man einen Regler pro Modul verwendet.
 
 -   Bei [*Reihenschaltung*](https://de.wikipedia.org/wiki/Reihenschaltung) (oft
-    auch *Serienschaltung* genannt) hängt man die Module einfach hintereinander.
-    Dabei addieren sich die Spannungen der einzelnen Module,
-    wobei man unbedingt darauf achten muss, dass die maximale Eingangsspannung,
-    die der genutzte Regler-Eingang verkraftet, nicht überschritten wird.
+    auch *Serienschaltung* genannt) hängt man die Module einfach hintereinander,
+    wobei sich die Spannungen der einzelnen Module addieren.
+    Dabei muss man unbedingt darauf achten, dass die maximale Eingangsspannung,
+    die der genutzte Regler-Eingang verkraftet, nicht überschritten wird, und
+    zwar nicht nur bei Normbedingungen (25°C), sondern auch bei sehr niedrigen
+    Temperaturen, wo die (Leerlauf-)Spannung etwa 10 - 20% höher sein kann.
     Der wesentliche Vorteil gegenüber der Parallelschaltung ist, dass
     der Strom in den Kabeln und der damit verbundene Verlust nicht steigt.
     Ein Nachteil der Reihenschaltung ist,
@@ -885,20 +887,6 @@ https://www.energie-experten.org/energie-sparen/strom-sparen/elektrischer-strom/
 angegeben in Watt) im laufenden Betrieb betragen.
 Da können schon mal 1000 VA zusammenkommen (wenn auch nur für 1-2 Sekunden).
 
-#### Kombination aus Batterie und Wechselrichter
-
-Ganz anders als herkömmliche Wechselrichter funktioniert die patentierte sog.
-[*Kaskadierte H-Brücken*-Technologie](
-https://www.finepower.com/fachartikel-hocheffizienter-umrichter-fuer-batteriespeichersysteme/),
-der [Firma SAX](https://sax-power.net/).
-Dabei schaltet eine komplexe Software-Regelung, die gleichzeitig als BMS dient,
-einzelne LiFePO4-Batteriezellen mit geeigneter Frequenz zyklisch so zusammen,
-dass darüber sehr direkt die Wechselstrom-Sinuskurve "zusammengesetzt" wird.
-Daraus ergeben sich einige Vorteile, insbesondere ein Wirkungsgrad von über 99%,
-besonders platzsparende und langlebige Batterien ohne externen Wechselrichter,
-sowie die Nutzbarkeit zur Einspeisung und als Notstromanlage mit USV-Funktion.
-Leider sind die Produkte sehr teuer: 5700€ für eine Anlage mit 5,2kWh.
-
 ### Solar-Laderegler {#Laderegler}
 
 ![Bild: Solar-Laderegler](Solar-Laderegler.png){:.right width="400"
@@ -1026,6 +1014,20 @@ der Einzelbatterien sorgen, wie es auch das BMS innerhalb einer Batterie
 für die Einzelzellen tut. Dafür gibt es
 spezielle *Batterie-Balancierer* (engl. _balancer_ oder _equalizer_),
 wie im [Video von Dimitri](https://youtu.be/BcWKrPj6-qs) schön vorgeführt.
+
+#### Kombination aus Batterie und Wechselrichter {#Kaskadierte}
+
+Ganz anders als herkömmliche Batterien und Wechselrichter funktioniert
+die patentierte sog. [*Kaskadierte H-Brücken*-Technologie](
+https://www.finepower.com/fachartikel-hocheffizienter-umrichter-fuer-batteriespeichersysteme/),
+der [Firma SAX](https://sax-power.net/).
+Dabei schaltet eine komplexe Software-Regelung, die gleichzeitig als BMS dient,
+einzelne LiFePO4-Batteriezellen zur Einspeisung zyklisch so zusammen, dass
+darüber sehr direkt die nötige Wechselstrom-Sinuskurve synthetisiert wird.
+Daraus ergeben sich einige Vorteile, insbesondere ein Wirkungsgrad von über 99%,
+besonders platzsparende und langlebige Batterien ohne externen Wechselrichter,
+sowie die Nutzbarkeit zur Einspeisung und als Notstromanlage mit USV-Funktion.
+Leider sind die Produkte sehr teuer: 5700€ für eine Anlage mit 5,2 kWh.
 
 #### Tiefsetzsteller {#Tiefsetzsteller}
 
