@@ -1124,6 +1124,9 @@ ich folgende Komponenten besonders interessant:
 
 ### Kombi-Anlage {#Kombianlage}
 
+![Bild: Balkonsolaranlage mit senkrechten flexiblen Modulen
+](Balkonsolaranlage_senkrecht_flexibel.jpg)
+
 Als Balkonanlage mit wahlweise direkter oder gepufferter Netzeinspeisung,
 aber auch für eine Notstromversorgung daheim und für einen längeren autarken
 Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
@@ -1132,7 +1135,7 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
     Solarmodule](https://www.solarfam.nl/150w-shingle-etfe-flexible-solar-panel-solarfam.html),
     für 600€\
     _Zuvor hatte ich mir gekauft, aber nicht verwendet, weil mir ihre
-    Montage an der Balkonbrüstung im 4. Stock zu riskant war:\
+    Anbringung an der Balkonbrüstung im 4. Stock zu riskant war:\
     4 × [120Wp starre Eco-Worthy
     Solarpanel](https://www.manomano.de/p/2x120watt-solarpanel-solarmodul-12v-12volt-monocrystalline-wohnwagen-wohnmobil-48845318),
     für 320€\
