@@ -1,7 +1,7 @@
 ---
 title: "Mini-Solaranlagen für daheim und unterwegs"
 lang: de
-keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Optimierung, Nutzungsprofil, Lastprofil, Lastspitzen, Abregelung, Eigenverbrauch, Eigendeckung, Amortisation, Ökologie, Umwelt]
+keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Konstanteinspeisung, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Optimierung, Nutzungsprofil, Lastprofil, Lastspitzen, Abregelung, Eigenverbrauch, Eigendeckung, Amortisation, Ökologie, Umwelt]
 ---
 
 Zusammenfassung {#Zusammenfassung}
@@ -512,6 +512,8 @@ Statt den Solarstrom direkt einzuspeisen, kann man in auch in einer aufladbaren
 Batterie zwischenspeichern und von dort nach Bedarf zeitlich versetzt über einen
 [netzgekoppelten Wechselrichter](#Netzwechselrichter) ins Hausnetz einspeisen.
 Diese Betriebsart kann man allgemein als *Strompufferung* bezeichnen.
+Die einfachsten Ausprägungen davon sind die *Konstanteinspeisung* und (bei
+gezielter Einspeisung zwischen Sonnenunter- und Aufgang) die *Nachteinspeisung*.
 Sie maximiert den Nutzen der PV-Anlage für den eigenen Stromverbrauch,
 lohnt sich finanziell aber nur, wenn man die Batterie schon aus anderen Gründen
 hat, z.B. für eine Notstromversorgung oder als Fahrzeugbatterie.
@@ -563,7 +565,8 @@ Labornetzteil verwenden, evtl. mit DC-DC-Wandler wie das [Joy-IT DPM8624](
 https://www.idealo.de/preisvergleich/OffersOfProduct/202115817)
 aus dem [Video von Andreas Schmitz](
 https://www.youtube.com/watch?v=yOcoux9IbzM) oder einen günstigen
-[Gleichspannungswandler](#Gleichspannungswandler) mit regelbarer Strombegrenzung.
+[Gleichspannungswandler](#Gleichspannungswandler) mit regelbarer
+Strombegrenzung (engl. _limiter_).
 
 Wenn man zudem bereits eine Powerstation hat, kann man zwischen ihren
 Wechselstrom-Ausgang und den Netzwechselrichter ein regelbares Netzteil hängen,
@@ -608,7 +611,7 @@ mehr oder weniger ohne Strom nach extern zu verschenken.
 style="margin-left: 50px; margin-right: 50px"}
 Hier als Analogie eine Skizze eines automatischen Wasserspeichers,
 der z.B. über die Dachrinne eines Hauses gespeist wird. Wenn er voll genug ist,
-läuft das Wasser über die rechte innere Begrenzung und lässt die Kugel
+läuft das Wasser über die rechte innere Trennwand und lässt die Kugel
 aufschwimmen, die bis dahin den Auslass blockiert hat. Dann fließt das
 Wasser aus dem Speicher langsam und gleichmäßig nach unten aus. Wenn der
 Speicher fast leer ist, verschließt die Kugel den Auslass wieder. Der
