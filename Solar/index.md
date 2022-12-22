@@ -1,11 +1,49 @@
 ---
 title: "Mini-Solaranlagen für daheim und unterwegs"
 lang: de
-keywords: [Sonnenenergie, Solarenergie, Solaranlage, Photovoltaik, Balkonkraftwerke, Steckersolaranlage, Konstanteinspeisung, Nachteinspeisung, Inselanlagen, Komponenten, Informationen, Infos, Tipps, Erfahrungen, Beispiel, Konfiguration, Solarzellen, Solarpanels, Solarmodule, Ausrichtung, Speicherung, Stromspeicher, Batteriespeicher, Pufferbatterie, Spannungsregler, Laderegler, Wechselrichter, Einspeisung, Ertrag, Optimierung, Nutzungsprofil, Lastprofil, Lastspitzen, Abregelung, Eigenverbrauch, Eigendeckung, Amortisation, Ökologie, Umwelt]
+keywords:
+- Sonnenenergie
+- Solarenergie
+- Solaranlage
+- Photovoltaik
+- Balkonkraftwerke
+- Steckersolaranlage
+- Konstanteinspeisung
+- Nachteinspeisung
+- Inselanlagen
+- Komponenten
+- Informationen
+- Infos
+- Tipps
+- Erfahrungen
+- Beispiel
+- Konfiguration
+- Solarzellen
+- Solarpanels
+- Solarmodule
+- Ausrichtung
+- Speicherung
+- Stromspeicher
+- Batteriespeicher
+- Pufferbatterie
+- Spannungsregler
+- Laderegler
+- Wechselrichter
+- Einspeisung
+- Ertrag
+- Optimierung
+- Nutzungsprofil
+- Lastprofil
+- Lastspitzen
+- Abregelung
+- Eigenverbrauch
+- Eigendeckung
+- Amortisation
+- Ökologie
+- Umwelt
 ---
 
-Zusammenfassung {#Zusammenfassung}
----------------
+# Zusammenfassung {#Zusammenfassung}
 
 Mit einem sog. *Balkonkraftwerk* kann man sehr einfach und relativ günstig
 Solarstrom gewinnen und über eine Steckdose direkt ins Hausnetz einspeisen.
@@ -22,8 +60,7 @@ gewonnene Energie über den ganzen Tag und die Nacht verteilt einspeisen.
 Eine sog. *Inselanlage* ist auch während Stromausfällen verwendbar,
 soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
 
-Abgrenzung {#Abgrenzung}
-----------
+# Abgrenzung {#Abgrenzung}
 
 Hier geht es nicht um *Solarthermie*, also die direkte Gewinnung von Wärme
 durch Sonnenstrahlung, sondern um die Erzeugung von elektrischem Strom.
@@ -41,7 +78,108 @@ https://smartgrids-bw.net/public/uploads/2020/04/IBZ-Leitfaden_Balkon-PV-Online.
 und die ["Fachinformation" des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
 verwiesen.
 
-Photovoltaik (PV) und ihr möglicher Energie-Ertrag {#Photovoltaik}
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<!--
+**Inhaltsverzeichnis**
+
+- [Zusammenfassung {#Zusammenfassung}](#zusammenfassung-zusammenfassung)
+- [Abgrenzung {#Abgrenzung}](#abgrenzung-abgrenzung)
+    - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+    - [Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}](#photovoltaik-und-ihr-möglicher-ertrag-photovoltaik)
+        - [Sonnenstrahlung {#Sonnenstrahlung}](#sonnenstrahlung-sonnenstrahlung)
+        - [Maximalleistung von Solarmodulen {#Maximalleistung}](#maximalleistung-von-solarmodulen-maximalleistung)
+        - [Optimale Ausrichtung von Solarmodulen {#Ausrichtung}](#optimale-ausrichtung-von-solarmodulen-ausrichtung)
+    - [Nutzungsmöglichkeiten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
+        - [Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk") {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
+            - [Beschränkung auf 600 W und ihre Gründe {#Kappung}](#beschränkung-auf-600-w-und-ihre-gründe-kappung)
+            - [Kappungsverlust durch Beschränkung auf 600 W {#Kappungsverlust}](#kappungsverlust-durch-beschränkung-auf-600-w-kappungsverlust)
+            - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
+        - [Stromverbrauch im Haushalt {#Stromverbrauch}](#stromverbrauch-im-haushalt-stromverbrauch)
+            - [Verbrauchsmessung {#Verbrauchsmessung}](#verbrauchsmessung-verbrauchsmessung)
+        - [Ertragsberechnung {#Ertragsberechnung}](#ertragsberechnung-ertragsberechnung)
+            - [Monatsbasierte Berechnung von Ertrag und Amortisation {#PV-Rechner}](#monatsbasierte-berechnung-von-ertrag-und-amortisation-pv-rechner)
+            - [Speichersimulation {#Speichersimulation}](#speichersimulation-speichersimulation)
+            - [Simulation auf Minutenbasis {#Minutenbasis}](#simulation-auf-minutenbasis-minutenbasis)
+        - [Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}](#hausnetzeinspeisung-mit-batteriepuffer-batteriepuffer)
+            - [Speicherbatterie {#Speicherbatterie}](#speicherbatterie-speicherbatterie)
+            - [Ladung der Batterie {#Batterieladung}](#batterieladung-batterieladung)
+            - [Einspeisung aus der Batterie {#Einspeisung}](#einspeisung-aus-der-batterie-einspeisung)
+        - [Inselanlage (mit Batteriespeicherung) {#Inselanlage}](#inselanlage-mit-batteriespeicherung-inselanlage)
+        - [Kombination aus Hausnetzeinspeisung und Inselanlage {#Kombination}](#kombination-aus-hausnetzeinspeisung-und-inselanlage-kombination)
+    - [Auswahl und Nutzung von Komponenten {#Komponenten}](#hinweise-für-die-auswahl-und-nutzung-von-komponenten-komponenten)
+        - [Solarmodule {#Solarmodule}](#solarmodule-solarmodule)
+            - [Elektrischer Anschluss {#Anschluss}](#anschluss-von-solarmodulen-anschluss)
+            - [Montage {#Montage}](#montage-montage)
+        - [Solar-Regler und Wechselrichter {#Wechselrichter}](#solar-regler-und-wechselrichter-wechselrichter)
+            - [Netzwechselrichter {#Netzwechselrichter}](#netzwechselrichter-netzwechselrichter)
+            - [Gleichspannungswandler {#Gleichspannungswandler}](#gleichspannungswandler-gleichspannungswandler)
+            - [Inselwechselrichter {#Inselwechselrichter}](#inselwechselrichter-inselwechselrichter)
+        - [Solar-Laderegler {#Laderegler}](#solar-laderegler-laderegler)
+        - [Hybridgeräte: Solar-Laderegler mit Wechselrichter {#Hybrid}](#hybridgeräte-solar-laderegler-mit-wechselrichter-hybrid)
+        - [Speicherbatterien {#Speicher}](#speicherbatterien-speicher)
+            - [Batterie-Dimensionierung {#Dimensionierung}](#batterie-dimensionierung-dimensionierung)
+            - [Batterie-Strukturierung {#Strukturierung}](#batterie-strukturierung-strukturierung)
+            - [Kombination aus Batterie und Wechselrichter {#Kaskadierte}](#kombination-aus-batterie-und-wechselrichter-kaskadierte)
+            - [Tiefsetzsteller {#Tiefsetzsteller}](#tiefsetzsteller-tiefsetzsteller)
+            - [Spannungswächter {#Spannungswächter}](#spannungswächter-spannungswächter)
+    - [Beispiel-Konfigurationen {#Konfigurationen}](#beispiel-konfigurationen-konfigurationen)
+        - [Mobile Inselanlage {#Mobilanlage}](#mobile-inselanlage-mobilanlage)
+        - [Stecker-Solaranlage {#Steckeranlage}](#stecker-solaranlage-steckeranlage)
+        - [Kombi-Anlage {#Kombianlage}](#kombi-anlage-kombianlage)
+--->
+<!-- markdown-toc end -->
+
+<!-- pandoc -s --toc index.md -o output.md -->
+
+# Inhaltsverzeichnis
+
+-   [Zusammenfassung](#Zusammenfassung)
+-   [Abgrenzung](#Abgrenzung)
+-   [Inhaltsverzeichnis](#inhaltsverzeichnis)
+-   [Photovoltaik und ihr möglicher Ertrag](#Photovoltaik)
+    -   [Sonnenstrahlung](#Sonnenstrahlung)
+    -   [Maximalleistung von Solarmodulen](#Maximalleistung)
+    -   [Optimale Ausrichtung von Solarmodulen](#Ausrichtung)
+-   [Nutzungsmöglichkeiten](#Nutzung)
+    -   [Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk")](#Balkonkraftwerk)
+        - [Beschränkung auf 600 W und ihre Gründe](#Kappung)
+        - [Kappungsverlust durch Beschränkung auf 600 W](#Kappungsverlust)
+        - [Stromzähler und Rücklaufsperre](#Stromzähler)
+    -   [Stromverbrauch im Haushalt](#Stromverbrauch)
+        - [Verbrauchsmessung](#Verbrauchsmessung)
+    -   [Ertragsberechnung](#Ertragsberechnung)
+        - [Monatsbasierte Berechnung von Ertrag und Amortisation](#PV-Rechner)
+        - [Speichersimulation](Speichersimulation)
+        - [Simulation auf Minutenbasis](#Minutenbasis)
+    -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
+        - [Speicherbatterie](#Speicherbatterie)
+        - [Ladung der Batterie](#Batterieladung)
+        - [Einspeisung aus der Batterie](#Einspeisung)
+    -   [Inselanlage (mit Batteriespeicherung)](#Inselanlage)
+    -   [Kombination aus Hausnetzeinspeisung und
+        Inselanlage](#Kombination)
+-   [Auswahl und Nutzung von Komponenten](#Komponenten)
+    -   [Solarmodule](#Solarmodule)
+        - [Elektrischer Anschluss](#Anschluss)
+        - [Montage](#Montage)
+    -   [Solar-Regler und Wechselrichter](#Wechselrichter)
+        - [Netzwechselrichter](#Netzwechselrichter)
+        - [Gleichspannungswandler](#Gleichspannungswandler)
+        - [Inselwechselrichter](#Inselwechselrichter)
+    -   [Solar-Laderegler](#Laderegler)
+    -   [Hybridgeräte: Solar-Laderegler mit Wechselrichter](#Hybrid)
+    -   [Speicherbatterien](#Speicher)
+        - [Batterie-Dimensionierung}](#Dimensionierung)
+        - [Batterie-Strukturierung](#Strukturierung)
+        - [Kombination aus Batterie und Wechselrichter](#Kaskadierte)
+        - [Tiefsetzsteller](#Tiefsetzsteller)
+        - [Spannungswächter](#Spannungswächter)
+-   [Beispiel-Konfigurationen](#Konfigurationen)
+    -   [Mobile Inselanlage](#Mobilanlage)
+    -   [Stecker-Solaranlage](#Steckeranlage)
+    -   [Kombi-Anlage](#Kombianlage)
+
+Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}
 --------------------------------------------------
 
 Mit Solarzellen kann man Sonnenlicht in elektrischen Strom umwandeln,
@@ -309,7 +447,7 @@ Leistung also bei mehr als 530 W liegt, ist typischerweise ziemlich gering.
 
 Hingegen bieten 1000 statt 600 Wp PV-Nennleistung bei mäßigen Zusatzkosten eine
 sinnvolle Reserve für schwächere Sonnenstunden, wodurch der Netto-Ertrag (trotz
-Kappung) um etwa 315 kWh steigt, der Eigenverbrauch um etwa 130 kWh im Jahr.
+Kappung) ca. 315 kWh höher liegt, der Eigenverbrauch ca. 145 kWh höher im Jahr.
 Die Amortisationszeit der Gesamt-Anlage bleibt dabei ziemlich gleich, und auf
 lange Sicht ergibt sich eine entsprechend höhere Kostenersparnis als mit 600 Wp.
 
@@ -535,7 +673,7 @@ Wer mit der Speicherbatterie zusätzlich eine Notstromversorgung über eine
 [Inselanlage](#Inselanlage) realisieren möchte, wird die Kapazität je nach
 Anwendungsszenario eher größer wählen.
 
-#### Batterieladung {#Batterieladung}
+#### Ladung der Batterie {#Batterieladung}
 
 Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
 über einen [Solar-Laderegler](#Laderegler). Dies nennt man [*DC-Kopplung*](
@@ -682,8 +820,8 @@ Solar-Laderegler umgeschaltet (oder ohne Schalter einfach umgestöpselt) bzw.
 am Ausgang der Batterie zwischen Netz- und Insel-Wechselrichter umgeschaltet.
 
 
-Hinweise für die Auswahl und Nutzung von Komponenten {#Komponenten}
---------------------------------------------------------------
+Auswahl und Nutzung von Komponenten {#Komponenten}
+--------------------------------------------------
 
 ### Solarmodule {#Solarmodule}
 
@@ -736,7 +874,7 @@ Verluste verringert werden. Allerdings ist diese Bauart selten zu finden
 und verhältnismäßig teuer, so dass sie nur dann sinnvoll ist, wenn man
 Platz sparen will/muss.
 
-#### Anschluss von Solarmodulen {#Anschluss}
+#### Elektrischer Anschluss {#Anschluss}
 
 Solarmodule haben als Stromanschluss meist die praktischen MC4-Steckverbinder.
 Generell sollten die Solarkabel, also die Verbindungen der Module
@@ -789,7 +927,7 @@ Leerlaufspannung hat, wird es ohne Reihenschaltung bei einer
 Ladeschlussspannung von ca. 14,5 V einer LiFePO4-Batterie bei wolkigem
 Wetter (mit vielleicht nur 100 - 200 W/m²) ziemlich eng.
 
-{:style="clear:both"}
+#### Montage {#Montage}
 
 ![Bild: Garten-Solaranlage an Hauswand](Garten-Anlage.jpg){:.left width="386"}
 ![Bild: Solaranlage auf Pergola](Pergola-Anlage.jpg){:.right width="386"}
@@ -802,6 +940,14 @@ Aufständerung von Solarmodulen auf einem Hausdach oder an einem Balkon
 ein Artikel mit speziellen Tipps zur Installation an einer Balkonbrüstung.
 Es gibt aber auch andere Möglichkeiten, wie z.B. auf einer Garage, einem
 Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
+
+Wichtig ist, dass die Module sicher angebracht werden, besonders bzgl. Sturm.
+Bei über 4 m Montagehöhe gelten besondere Verordnungen für Glasoberflächen,
+wenn sich direkt darunter den Menschen bewegen oder aufhalten können.
+
+Bei Anbringung außen am Haus kann es auch Probleme mit dem optischen
+Erscheinungsbild geben (daher soweit erforderlich, eine Genehmigung einholen)
+und bei spiegelnden Oberflächen eventuell auch mit Blendeffekten.
 
 ### Solar-Regler und Wechselrichter {#Wechselrichter}
 
