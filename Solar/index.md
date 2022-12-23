@@ -2,15 +2,15 @@
 title: "Mini-Solaranlagen für daheim und unterwegs"
 lang: de
 keywords:
+- Photovoltaik
 - Sonnenenergie
 - Solarenergie
 - Solaranlage
-- Photovoltaik
-- Balkonkraftwerke
 - Steckersolaranlage
+- Balkonkraftwerk
 - Konstanteinspeisung
 - Nachteinspeisung
-- Inselanlagen
+- Inselanlage
 - Komponenten
 - Informationen
 - Infos
@@ -186,11 +186,23 @@ Mit Solarzellen kann man Sonnenlicht in elektrischen Strom umwandeln,
 wenn auch leider nicht gerade effizient. Der
 [Wirkungsgrad](https://de.wikipedia.org/wiki/Solarzelle#Wirkungsgrad)
 der heutzutage üblichen Photovoltaik-Technologie mit Siliziumzellen
-liegt typischerweise bei nur etwa 18 bis 20%, bei besonders hochwertigen
-Modulen bis etwa 22%. Außerdem gibt es Verluste, wenn die Solarmodule
-nicht senkrecht zur Einstrahlung ausgerichtet, (teil-)verschattet,
-verschmutzt oder zu warm sind. Zu berücksichtigen ist zudem der
-Wirkungsgrad der übrigen PV-Anlage von etwa 80 bis 95%.
+liegt typischerweise bei nur etwa 18 bis 20%, wobei besonders hochwertige
+Zellen etwa 22% erreichen.
+
+Außerdem gibt es Verluste, die davon abhängen, wie alt die Module sind, wie sehr
+ihre Ausrichtung von der aktuellen Einstrahlungsrichtung der Sonne abweicht
+(wobei senkrechte Einstrahlung natürlich optimal, aber selten erreichbar ist),
+wie stark sie verschattet und/oder verschmutzt sind und wie warm sie sind.
+Die altersbedingte Degradation ist ziemlich linear und liegt bei etwa 0,5%
+pro Jahr, so dass sich bei einer Gesamt-Verwendungsdauer von 20 Jahren
+in durchschnittlicher Verlust durch die Alterung von 5% ergibt.
+Auch der termperaturbedingte Verlust ist praktisch linear und liegt je nach
+Zelltyp bei etwa 10%, wenn die Modultemperatur beispielsweise 55°C beträgt,
+also 30°C über der Standard-Temperatur von 25°C. Genaueres dazu z.B. [hier](
+https://joint-research-centre.ec.europa.eu/pvgis-photovoltaic-geographical-information-system/getting-started-pvgis/pvgis-data-sources-calculation-methods_en#ref-5-calculation-of-pv-power-output).
+
+Zu berücksichtigen ist zudem der elektrische Wirkungsgrad der übrigen PV-Anlage
+(also z.B. von Wechselrichter, Kabeln, ggf. Batterie) von etwa 80 bis 95%.
 
 ### Sonnenstrahlung {#Sonnenstrahlung}
 
@@ -222,15 +234,15 @@ Bestimmung verwendet man eine Referenzbestrahlung mit einem normierten
 Sonnenlichtspektrum einer Stärke von 1000 W/m² bei Zelltemperatur 25°C.\
 Bei näherer Betrachtung bedeutet die Nennleistung in kWp (also 1000 Wp)
 die *effektive Solarfläche* des Moduls, also Fläche (in m²) ×
-Wirkungsgrad.\
-Daher lässt sich auch der **Wirkungsgrad** eines Solarmoduls sehr
+max. Wirkungsgrad.\
+Daher lässt sich auch der maximale **Wirkungsgrad** eines Solarmoduls sehr
 einfach nachrechnen, indem man seine Nennleistung in kWp durch seine
 Fläche in m² teilt.
 
-Die Wp-Angaben von Herstellern und Händlern für Solarmodule sind mit
-Vorsicht zu genießen --- hauptsächlich weil die tatsächliche Leistung
-wie oben erwähnt stark von der Situation (Ausrichtung, Sonnenstand,
-Bewölkung usw.) abhängig und meist deutlich geringer ist. Außerdem weil
+Die Wp-Angaben von Herstellern und Händlern für Solarmodule sind mit Vorsicht
+zu genießen --- hauptsächlich weil die tatsächliche Leistung wie oben erwähnt
+stark von der Situation (Ausrichtung im Vergleich zum Sonnenstand, Bewölkung,
+Verschattung usw.) abhängig und meist deutlich geringer ist. Außerdem weil
 besonders chinesische Händler von flexiblen Solarmodulen dazu tendieren,
 bei den Leistungsangaben deutlich zu übertreiben. Daher lohnt sich als
 Plausibiltäts-Check, den Wirkungsgrad nachzurechnen.
