@@ -5,6 +5,8 @@ keywords:
 - Photovoltaik
 - Sonnenenergie
 - Solarenergie
+- Globalstrahlung
+- Diffusstrahlung
 - Solaranlage
 - Steckersolaranlage
 - Balkonkraftwerk
@@ -183,12 +185,14 @@ Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}
 --------------------------------------------------
 
 Mit Solarzellen kann man Sonnenlicht in elektrischen Strom umwandeln,
-wenn auch leider nicht gerade effizient. Der
-[Wirkungsgrad](https://de.wikipedia.org/wiki/Solarzelle#Wirkungsgrad)
-der heutzutage üblichen Photovoltaik-Technologie mit Siliziumzellen
-liegt typischerweise bei nur etwa 18 bis 20%, wobei besonders hochwertige
-Zellen etwa 22% erreichen.
+wenn auch leider nicht gerade effizient. Das [erste Photovoltaikmodul](
+https://www.photovoltaik4all.de/seit-wann-gibt-es-photovoltaik) wurde 1883
+von Charles Fritts entwickelt und hatte einen Wirkungsgrad von 1%.
 
+Der [Wirkungsgrad](https://de.wikipedia.org/wiki/Solarzelle#Wirkungsgrad)
+der heutzutage üblichen Photovoltaik-Technologie mit Siliziumzellen
+liegt typischerweise bei nur etwa 18 bis 20%,
+wobei besonders hochwertige Zellen etwa 22% erreichen.
 Außerdem gibt es Verluste, die davon abhängen, wie alt die Module sind, wie sehr
 ihre Ausrichtung von der aktuellen Einstrahlungsrichtung der Sonne abweicht
 (wobei senkrechte Einstrahlung natürlich optimal, aber selten erreichbar ist),
@@ -207,23 +211,46 @@ Zu berücksichtigen ist zudem der elektrische Wirkungsgrad der übrigen PV-Anlag
 ### Sonnenstrahlung {#Sonnenstrahlung}
 
 [![Bild: Globalstrahlung in Deutschland](
-Globalstrahlung_Deutschland.jpg){:.right width="550"
-style="margin-left: 30px; margin-right: 30px"}](
+Globalstrahlung_Deutschland.jpg){:.right width="500"
+style="margin-left: 10px; margin-right: 0px"}](
 https://solargis.com/maps-and-gis-data/download/germany)
+
 Die von Solarzellen abgegebene Leistung hängt ziemlich linear
-von der Intensität der Sonnen-Einstrahlung ab.
-Die maximale Einstrahlung
-auf die Erde mittags bei klarem Himmel in Bodennähe auf eine Fläche
-senkrecht zum Sonnenstand liegt bei 1361 W/m² und wird als
-[*terrestrische Solarkonstante*](
-http://www.energieinfo.de/eglossar/sonneneinstrahlung)
-bezeichnet. Natürlich ist die tatsächliche Sonneneinstrahlung im
-Durchschnitt viel geringer. Sie hängt stark vom Standort auf der Erde ab
-und ist je nach Bewölkung, Tages- und Jahreszeit sehr variabel.\
-Die nebenstehende
-[Karte von Solargis](https://solargis.com/maps-and-gis-data/download)
-gibt für Deutschland einen Überblick, welche Menge an Sonnenstrahlung
+von der Intensität der Einstrahlung durch die Sonne ab.
+
+Die maximale Einstrahlung auf unseren Planeten außerhalb der Atmosphäre
+(also ohne Dämpfung durch Luftmoleküle, Wolken und Schmutz)
+senkrecht zum Sonnenstand [berechnet sich zu 1367 W/m²](
+https://www.photovoltaik4all.de/wie-kann-man-die-solarstrahlung-berechnen)
+und wird als **terrestrische Solarkonstante** bezeichnet.
+Die tatsächliche Sonneneinstrahlung auf den flachen Erdboden,
+welche als [**Globalstrahlung**](https://de.wikipedia.org/wiki/Globalstrahlung)
+bezeichnet wird, ist natürlich viel geringer.
+Das Jahresmittel in Deutschland liegt bei [etwa 125 W/m²](
+https://www.solaranlage-ratgeber.de/photovoltaik/photovoltaik-leistung/photovoltaik-ertrag-in-sommer-und-winter).
+Sie hängt stark vom Standort auf der Erde ab und ist je nach Bewölkung,
+Tages- und Jahreszeit sehr variabel.
+An einem wolkenlosen Sommertag werden maximal etwa 900 W/m² erreicht, bei
+leichter Bewölkung mit teils reflektierter Strahlung [bis über 1000 W/m²](
+https://www.photovoltaik4all.de/blog/welche-rolle-spielt-die-temperatur-einer-photovoltaikanlage).
+Bei sehr schlechtem Wetter sinkt der Strahlungswert unter 100 W/m².
+
+Die [Karte von Solargis](https://solargis.com/maps-and-gis-data/download)
+gibt für Deutschland einen Überblick, welche Menge an Globalstrahlung
 pro Quadratmeter horizontaler Fläche durchschnittlich im Jahr zusammenkommt.
+
+[![Bild: Direktstrahlung und Diffusstrahlung](
+Direktstrahlung-Diffusstrahlung.png){:.center width="800"}](
+https://solargis.com/maps-and-gis-data/download/germany)
+Das Sonnenstrahlung erreicht uns nicht nur auf direktem Wege.
+Sie wird auch durch die Erdatmosphäre gestreut und trifft
+als **Diffusstrahlung** auf die Erde, selbst wenn die **Direktstrahlung**
+durch Wolken oder feste Hindernisse abgeschattet wird.
+Die Diffusstrahlung ist nahezu richtungsunabhängig und macht
+im Jahresschnitt fast die Hälfte der Globalstrahlung auf die Horizontale aus.
+Auf eine 40° nach Süden geneigte Fläche sind es gut 40% der Gesamtstrahlung.
+Der Anteil der von der Erdoberfläche (z.B. durch Schnee oder Spiegelungen)
+auf die Fläche reflektierten Strahlung liegt dann bei knapp 2%.
 
 ### Maximalleistung von Solarmodulen {#Maximalleistung}
 
@@ -253,12 +280,18 @@ In unseren Breitengraden ist je nach Standort bei optimaler statischer
 Ausrichtung der Solarmodule ein Jahres-Ertrag von 1100 kWh pro kWp installierter
 PV-Nennleistung möglich. Manche Angaben dazu sind mit [etwa 900 bis 1000 kWh](
 https://www.energie-experten.org/erneuerbare-energien/photovoltaik/planung/ertrag)
-eher zu konservativ, andere übertreiben mit
-[bis zu 1200 bis 1300kWh](https://gruenes.haus/photovoltaik-pv-ertrag/).\
+eher zu konservativ, andere recht optimistisch mit
+[bis zu 1200 bis 1300 kWh](https://gruenes.haus/photovoltaik-pv-ertrag/).
+Es kommt schlichtweg darauf an, welche Werte man bei der Globalstrahlung (je
+nach Standort, in Deutschland in Summe etwa 1095 kWh/m²/a) ansetzt bzw. bei der
+rechnerischen Zahl der Volllasstunden pro Jahr (nämlich [standardmäßig 1000 h/a](
+https://www.photovoltaik4all.de/wie-kann-man-die-solarstrahlung-berechnen),
+aber eher 1100 h/a) bezogen auf die Standardstrahlung von 1000 W/m².
+
 Der Jahresertrag lässt sich leicht näherungsweise berechnen, und zwar
 durch Multiplikation des standortspezifischen *PV-Potentials*
 (welches bereits angenommene typische System-Verlustfaktoren
-beinhaltet und auch *spezifischer Ertrag* genannt wird) in kWh/kWp
+beinhaltet und auch *spezifischer PV-Jahresertrag* genannt wird) in kWh/kWp
 mit der PV-Nennleistung in kWp.\
 Das PV-Potential (PVOUT) erhält man z.B. aus den groben
 [Karten von Solargis](https://solargis.com/maps-and-gis-data/download),
@@ -269,6 +302,16 @@ https://re.jrc.ec.europa.eu/pvg_tools/de/)
 bei der Standard-Eingabe von 1 kWp für die installierte max. PV-Leistung.
 
 ### Optimale Ausrichtung von Solarmodulen {#Ausrichtung}
+
+Die Leistung von Solarmodulen hängt vor Allem von der Direktstrahlung ab ---
+und zwar nicht nur von ihrer Intensität, sondern auch davon, wie sehr ihre
+Fläche auf den aktuellen Sonnenstand ausgerichtet ist.
+Dabei geht es um die zur Modulfläche senkrechte Komponente der Direktstrahlung,
+also um den Faktor Kosinus der Winkelabweichung vom Lot auf die Modulfläche.\
+Mit der Diffusstrahlung, welche
+wie oben erwähnt einen sehr großen Anteil an der Gesamtstrahlung ausmacht,
+können Solarzellen leider wenig anfangen,
+(wobei für diesen effektiv geringen Anteil eine flache Anordnung optimal wäre).
 
 ![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_PV-Potential.png){:width="392" }
