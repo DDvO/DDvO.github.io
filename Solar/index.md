@@ -33,6 +33,8 @@ keywords:
 - Wechselrichter
 - Einspeisung
 - Ertrag
+- spezifisch
+- PV-Jahresertrag
 - Optimierung
 - Nutzungsprofil
 - Lastprofil
@@ -65,8 +67,8 @@ soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
 # Abgrenzung {#Abgrenzung}
 
 Hier geht es nicht um *Solarthermie*, also die direkte Gewinnung von Wärme
-durch Sonnenstrahlung, sondern um die Erzeugung von elektrischem Strom.
-Es geht hier auch nicht um "große" PV-Anlagen z.B. auf Hausdächern
+durch Sonneneinstrahlung, sondern um die Erzeugung von elektrischem Strom.
+Es geht hier auch nicht um "große" Photovoltaik-Anlagen z.B. auf Hausdächern
 (dazu [hier ein fundierter Leitfaden](
 https://solar.htw-berlin.de/wp-content/uploads/HTW-PV-Wegweiser.pdf)),
 wobei die physikalischen und technischen Grundlagen natürlich die gleichen sind.
@@ -88,8 +90,8 @@ verwiesen.
 - [Abgrenzung {#Abgrenzung}](#abgrenzung-abgrenzung)
     - [Inhaltsverzeichnis](#inhaltsverzeichnis)
     - [Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}](#photovoltaik-und-ihr-möglicher-ertrag-photovoltaik)
-        - [Sonnenstrahlung {#Sonnenstrahlung}](#sonnenstrahlung-sonnenstrahlung)
-        - [Maximalleistung von Solarmodulen {#Maximalleistung}](#maximalleistung-von-solarmodulen-maximalleistung)
+        - [Sonneneinstrahlung {#Sonneneinstrahlung}](#sonneneinstrahlung-sonneneinstrahlung)
+        - [Nennleistung und Jahresertrag {#Nennleistung}](#nennleistung-und-jahresertrag-nennleistung)
         - [Optimale Ausrichtung von Solarmodulen {#Ausrichtung}](#optimale-ausrichtung-von-solarmodulen-ausrichtung)
     - [Nutzungsmöglichkeiten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
         - [Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk") {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
@@ -128,7 +130,7 @@ verwiesen.
         - [Mobile Inselanlage {#Mobilanlage}](#mobile-inselanlage-mobilanlage)
         - [Stecker-Solaranlage {#Steckeranlage}](#stecker-solaranlage-steckeranlage)
         - [Kombi-Anlage {#Kombianlage}](#kombi-anlage-kombianlage)
---->
+-->
 <!-- markdown-toc end -->
 
 <!-- pandoc -s --toc index.md -o output.md -->
@@ -139,8 +141,8 @@ verwiesen.
 -   [Abgrenzung](#Abgrenzung)
 -   [Inhaltsverzeichnis](#inhaltsverzeichnis)
 -   [Photovoltaik und ihr möglicher Ertrag](#Photovoltaik)
-    -   [Sonnenstrahlung](#Sonnenstrahlung)
-    -   [Maximalleistung von Solarmodulen](#Maximalleistung)
+    -   [Sonneneinstrahlung](#Sonneneinstrahlung)
+    -   [Nennleistung und Jahresertrag](#Nennleistung)
     -   [Optimale Ausrichtung von Solarmodulen](#Ausrichtung)
 -   [Nutzungsmöglichkeiten](#Nutzung)
     -   [Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk")](#Balkonkraftwerk)
@@ -185,15 +187,18 @@ Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}
 --------------------------------------------------
 
 Mit Solarzellen kann man Sonnenlicht in elektrischen Strom umwandeln,
-wenn auch leider nicht gerade effizient. Das [erste Photovoltaikmodul](
+woraus sich auch die Bezeichnung *Photovoltaik (PV)* ableitet.
+
+Leider ist diese Art der Stromgewinnung nicht besonders effizient.
+Das [erste Photovoltaikmodul](
 https://www.photovoltaik4all.de/seit-wann-gibt-es-photovoltaik) wurde 1883
 von Charles Fritts entwickelt und hatte einen Wirkungsgrad von 1%.
-
 Der [Wirkungsgrad](https://de.wikipedia.org/wiki/Solarzelle#Wirkungsgrad)
-der heutzutage üblichen Photovoltaik-Technologie mit Siliziumzellen
-liegt typischerweise bei nur etwa 18 bis 20%,
-wobei besonders hochwertige Zellen etwa 22% erreichen.
-Außerdem gibt es Verluste, die davon abhängen, wie alt die Module sind, wie sehr
+der heutzutage üblichen Photovoltaik-Technologie mit Siliziumzellen liegt
+bei 18 bis 20%, wobei besonders hochwertige Zellen etwa 22% erreichen.
+
+Abgesehen vom Wirkungsgrad gibt es in der Praxis Verluste, die davon abhängen,
+wie alt die PV-Module sind, wie sehr
 ihre Ausrichtung von der aktuellen Einstrahlungsrichtung der Sonne abweicht
 (wobei senkrechte Einstrahlung natürlich optimal, aber selten erreichbar ist),
 wie stark sie verschattet und/oder verschmutzt sind und wie warm sie sind.
@@ -208,51 +213,62 @@ https://joint-research-centre.ec.europa.eu/pvgis-photovoltaic-geographical-infor
 Zu berücksichtigen ist zudem der elektrische Wirkungsgrad der übrigen PV-Anlage
 (also z.B. von Wechselrichter, Kabeln, ggf. Batterie) von etwa 80 bis 95%.
 
-### Sonnenstrahlung {#Sonnenstrahlung}
+### Sonneneinstrahlung {#Sonneneinstrahlung}
 
+<!--
 [![Bild: Globalstrahlung in Deutschland](
 Globalstrahlung_Deutschland.jpg){:.right width="500"
 style="margin-left: 10px; margin-right: 0px"}](
 https://solargis.com/maps-and-gis-data/download/germany)
-
+-->
 Die von Solarzellen abgegebene Leistung hängt ziemlich linear
 von der Intensität der Einstrahlung durch die Sonne ab.
 
-Die maximale Einstrahlung auf unseren Planeten außerhalb der Atmosphäre
+Die Strahlungsleistung der Sonne auf unseren Planeten außerhalb der Atmosphäre
 (also ohne Dämpfung durch Luftmoleküle, Wolken und Schmutz)
 senkrecht zum Sonnenstand [berechnet sich zu 1367 W/m²](
 https://www.photovoltaik4all.de/wie-kann-man-die-solarstrahlung-berechnen)
-und wird als **terrestrische Solarkonstante** bezeichnet.
-Die tatsächliche Sonneneinstrahlung auf den flachen Erdboden,
-welche als [**Globalstrahlung**](https://de.wikipedia.org/wiki/Globalstrahlung)
-bezeichnet wird, ist natürlich viel geringer.
-Das Jahresmittel in Deutschland liegt bei [etwa 125 W/m²](
+und wird als *terrestrische Solarkonstante* bezeichnet.
+Die Stärke der tatsächlich auf den Erdboden treffende Sonneneinstrahlung,
+welche als [*Globalstrahlung*](https://de.wikipedia.org/wiki/Globalstrahlung)
+(engl. _global horizontal irradiance_, _GHI_), bezeichnet wird, ist natürlich
+viel geringer.
+Der 30-Jahres-Mittelwert in Deutschland liegt bei [etwa 125 W/m²](
 https://www.solaranlage-ratgeber.de/photovoltaik/photovoltaik-leistung/photovoltaik-ertrag-in-sommer-und-winter).
 Sie hängt stark vom Standort auf der Erde ab und ist je nach Bewölkung,
 Tages- und Jahreszeit sehr variabel.
 An einem wolkenlosen Sommertag werden maximal etwa 900 W/m² erreicht, bei
 leichter Bewölkung mit teils reflektierter Strahlung [bis über 1000 W/m²](
 https://www.photovoltaik4all.de/blog/welche-rolle-spielt-die-temperatur-einer-photovoltaikanlage).
-Bei sehr schlechtem Wetter sinkt der Strahlungswert unter 100 W/m².
+Bei sehr schlechtem Wetter kann der Strahlungswert unter 100 W/m² sinken.
 
-Die [Karte von Solargis](https://solargis.com/maps-and-gis-data/download)
-gibt für Deutschland einen Überblick, welche Menge an Globalstrahlung
+[![Bild: Globalstrahlung in Deutschland 1991-2020](
+Globalstrahlung_Deutschland_1991-2020.png){:.center}](
+https://www.dwd.de/DE/leistungen/solarenergie/strahlungskarten_mvs.html#buehneTop)
+
+Die Karten [des DWD](
+https://www.dwd.de/DE/leistungen/solarenergie/strahlungskarten_mvs.html#buehneTop)
+und [von Solargis](https://solargis.com/maps-and-gis-data/download)
+geben einen Überblick, welche Summe an Globalstrahlung
 pro Quadratmeter horizontaler Fläche durchschnittlich im Jahr zusammenkommt.
+In Deutschland sind es im Schnitt der Jahre 1991 bis 2020 nach Berechnungen
+des Deutschen Wetterdienstes [1086 kWh/m²]((
+https://www.dwd.de/DE/leistungen/_config/leistungsteckbriefPublication.pdf?view=nasPublication&nn=16102&imageFilePath=229809516383478732006435024051472532772736564919904973098512541260476561304284049751405651717289583982040495528279338628905695385542275499557266335698545506612756450227783221602239879972072419602639476858490617241105588560029118312992778838770436569905341248614940063541966138585151325296158670892628008524799090834749&download=true)).
 
 [![Bild: Direktstrahlung und Diffusstrahlung](
-Direktstrahlung-Diffusstrahlung.png){:.center width="800"}](
+Direktstrahlung-Diffusstrahlung.png){:.center width="798"}](
 https://solargis.com/maps-and-gis-data/download/germany)
-Das Sonnenstrahlung erreicht uns nicht nur auf direktem Wege.
+Das Sonneneinstrahlung erreicht uns nicht nur auf direktem Wege.
 Sie wird auch durch die Erdatmosphäre gestreut und trifft
-als **Diffusstrahlung** auf die Erde, selbst wenn die **Direktstrahlung**
+als *Diffusstrahlung* auf die Erde, selbst wenn die *Direktstrahlung*
 durch Wolken oder feste Hindernisse abgeschattet wird.
 Die Diffusstrahlung ist nahezu richtungsunabhängig und macht
 im Jahresschnitt fast die Hälfte der Globalstrahlung auf die Horizontale aus.
 Auf eine 40° nach Süden geneigte Fläche sind es gut 40% der Gesamtstrahlung.
-Der Anteil der von der Erdoberfläche (z.B. durch Schnee oder Spiegelungen)
+Der Anteil der von der Erdoberfläche (z.B. durch Wolkenspiegelung oder Schnee)
 auf die Fläche reflektierten Strahlung liegt dann bei knapp 2%.
 
-### Maximalleistung von Solarmodulen {#Maximalleistung}
+### Nennleistung und Jahresertrag {#Nennleistung}
 
 {:style="clear:both"}
 Die **Nennleistung** von Solarmodulen wird in **Wp** ([*Watt Peak*](
@@ -261,8 +277,8 @@ Bestimmung verwendet man eine Referenzbestrahlung mit einem normierten
 Sonnenlichtspektrum einer Stärke von 1000 W/m² bei Zelltemperatur 25°C.\
 Bei näherer Betrachtung bedeutet die Nennleistung in kWp (also 1000 Wp)
 die *effektive Solarfläche* des Moduls, also Fläche (in m²) ×
-max. Wirkungsgrad.\
-Daher lässt sich auch der maximale **Wirkungsgrad** eines Solarmoduls sehr
+max. Wirkungsgrad.
+Daher kann man auch den maximalen Wirkungsgrad eines Solarmoduls sehr
 einfach nachrechnen, indem man seine Nennleistung in kWp durch seine
 Fläche in m² teilt.
 
@@ -274,27 +290,32 @@ besonders chinesische Händler von flexiblen Solarmodulen dazu tendieren,
 bei den Leistungsangaben deutlich zu übertreiben. Daher lohnt sich als
 Plausibiltäts-Check, den Wirkungsgrad nachzurechnen.
 
-[![Bild: PV-Potential in Europa](PVOUT_Europe.png){:.center}](
-https://solargis.com/maps-and-gis-data/download/europe)
 In unseren Breitengraden ist je nach Standort bei optimaler statischer
 Ausrichtung der Solarmodule ein Jahres-Ertrag von 1100 kWh pro kWp installierter
 PV-Nennleistung möglich. Manche Angaben dazu sind mit [etwa 900 bis 1000 kWh](
 https://www.energie-experten.org/erneuerbare-energien/photovoltaik/planung/ertrag)
-eher zu konservativ, andere recht optimistisch mit
+eher zu konservativ bzw. etwas veraltet, andere sehr optimistisch mit
 [bis zu 1200 bis 1300 kWh](https://gruenes.haus/photovoltaik-pv-ertrag/).
-Es kommt schlichtweg darauf an, welche Werte man bei der Globalstrahlung (je
-nach Standort, in Deutschland in Summe etwa 1095 kWh/m²/a) ansetzt bzw. bei der
-rechnerischen Zahl der Volllasstunden pro Jahr (nämlich [standardmäßig 1000 h/a](
+Es kommt schlichtweg darauf an, welche Werte man bei der Globalstrahlung
+ansetzt (je nach Standort, in Deutschland in Jahressumme [etwa 1090 kWh/m²](
+https://www.dwd.de/DE/leistungen/_config/leistungsteckbriefPublication.pdf?view=nasPublication&nn=16102&imageFilePath=229809516383478732006435024051472532772736564919904973098512541260476561304284049751405651717289583982040495528279338628905695385542275499557266335698545506612756450227783221602239879972072419602639476858490617241105588560029118312992778838770436569905341248614940063541966138585151325296158670892628008524799090834749&download=true))
+und welche Annahmen man bzgl. Modul-Ausrichtung und Anlagen-Wirkungsgrad trifft.
+<!-- bzw. bei der
+rechnerischen Zahl der [Volllaststunden](https://gammel.de/de/lexikon/volllaststunden/6288) pro Jahr (nämlich [standardmäßig 1000 h/a](
 https://www.photovoltaik4all.de/wie-kann-man-die-solarstrahlung-berechnen),
-aber eher 1100 h/a) bezogen auf die Standardstrahlung von 1000 W/m².
+aber eher 1100 h/a) bezogen auf die Standardstrahlung von 1000 W/m².-->
 
-Der Jahresertrag lässt sich leicht näherungsweise berechnen, und zwar
-durch Multiplikation des standortspezifischen *PV-Potentials*
-(welches bereits angenommene typische System-Verlustfaktoren
-beinhaltet und auch *spezifischer PV-Jahresertrag* genannt wird) in kWh/kWp
-mit der PV-Nennleistung in kWp.\
-Das PV-Potential (PVOUT) erhält man z.B. aus den groben
-[Karten von Solargis](https://solargis.com/maps-and-gis-data/download),
+[![Bild: PV-Potential in Europa](PVOUT_Europe.png){:.center}](
+https://solargis.com/maps-and-gis-data/download/europe)
+Der Jahresertrag lässt sich leicht näherungsweise berechnen,
+und zwar durch Multiplikation der Nennleistung der PV-Module in kWp
+mit dem [*spezifischen PV-Jahresertrag*](
+https://solar-direktinvest.de/photovoltaik/photovoltaik-investieren/spezifischer-jahresertrag-pv/) (engl. [_PV potential_, *PVOUT*](
+https://globalsolaratlas.info/global-pv-potential-study)) in kWh/kWp.
+Dieser ist standortspezifisch und beinhaltet Annahmen zu typischen praktisch
+relevanten Faktoren wie den Verlust durch Verschmutzung und Wechselrichtung.\
+Man erhält diese auch *spezifischer Ertrag* genannte Kenngröße aus den
+groben [Karten von Solargis](https://solargis.com/maps-and-gis-data/download),
 aus dem [Global Solar Atlas der Weltbank](
 https://globalsolaratlas.info/map?c=50.10,11.05,7&s=48.1807,11.604e)
 (auch von Solargis) oder am Genauesten aus der [PVGIS-Datenbank der EU](
