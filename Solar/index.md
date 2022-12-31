@@ -371,12 +371,13 @@ sollte man das Nutzungsprofil berücksichtigen, welches auch auch
 
 ![Bild: Ertrags-Nutzungsanteil nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_Ertragsnutzungsanteil.png){:width="385" .right}
-Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil zeigt sich,
+Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil zeigt sich
+durch genauere Simulation,
 dass --- im Vergleich zu den bekannten Einbußen beim Jahres-Gesamtertrag ---
-* Abweichungen von der allgemein optimalen Südorientierung
-nur etwa halb so starke Einbußen bringen und
-* bei senkrechter Anbringung im Verhältnis zur optimalen Neigung
-die Einbuße etwa 15 Prozentpunkte geringer ausfällt.
+Abweichungen von der allgemein optimalen Südorientierung
+nur etwa halb so starke Einbußen bringen.
+So liegt bei senkrechter Anbringung im Verhältnis zur optimalen Neigung
+die Einbuße nicht bei 30% vom Optimum, sondern je nach Lastprofil bei 23%.
 
 Man hat also zur günstigen Ausrichtung seiner Solarmodule
 meist größere Flexibilität als allgemein angenommen.\
@@ -454,33 +455,48 @@ Die auch [*Balkonkraftwerk*](https://www.steckdosensolar.de/) genannten Anlagen
 haben meist eine recht geringe PV-Nennleistung von etwa 600 bis 800 Wp.
 Das hat neben der geringen Größe und sehr überschaubaren Kosten auch damit zu
 tun, dass sie selbst installiert werden dürfen und genehmigungsfrei (jedoch
-anmeldepflichtig) sind, wenn sie maximal 600 W in die Steckdose einspeisen.
-Dies gilt für Deutschland und die Schweiz;
-in Österreich gilt nach einer EU-Richtlinie eine Obergrenze von 800 W.
+anmeldepflichtig) sind, wenn sie [maximal 600 W in die Steckdose einspeisen](
+https://solarblitz.blogspot.com/2019/08/zulassigkeit-von-balkonkraftwerken-plug.html).
+Dies gilt für Deutschland und die Schweiz; in Österreich gilt
+nach einer allgemeineren EU-Richtlinie eine Obergrenze von 800 W.
 
 #### Beschränkung auf 600 W und ihre Gründe {#Kappung}
 
 [![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
 Solarstrom-Einspeisung](
-Stromleitung_Ueberlastung_Solareinspeisung.jpg){:.right width="450"}](
+Stromleitung_Ueberlastung_Solareinspeisung.jpg){:.right width="400"}](
 https://www.sonnenenergie.de/index.php?id=30&tx_ttnews[tt_news]=254)
 Hintergrund dieser Beschränkung sind vornehmlich Sicherheitsbedenken:
 Falls über die Wohnungs-Stromleitung, an der die Einspeisung
 stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
 unter sehr ungünstigen Umständen passieren, dass auf Teilen der Leitung mehr
 Strom fließt als die Sicherung eigentlich erlauben würde, was dann zu
-einer mehr oder weniger starken Erwärmung der Leitung führen kann.
-Und zwar müsste bei einer 16 A-Sicherung einerseits mehr als 16 A,
-andererseits aber weniger als die Summe aus 16 A und dem gerade eingespeisten
-Strom (z.B. 16 A + 5 A = 21 A) fließen.
-was allerdings insgesamt in der Praxis höchst unwahrscheinlich ist.
+einer mehr oder weniger starken Erwärmung der Leitung führen kann.\
+Wenn L der momentane Gesamt-Verbrauch auf der Leitung ist und P die momentane
+Erzeugung auf derselben Leitung, kommt bei der Sicherung die Leistung L - P an.
+Wenn die Sicherung auf 16 A ausgelegt ist und die dort ankommende Leistung
+vom Betrag her, also | L - P |, kleiner als 3680 W (= 230 V × 16 A) ist,
+löst die Sicherung nicht aus. Falls dabei L oder P größer als 3680 W ist,
+fließen auf einem Teilabschnitt der Leitung mehr als 16 A Strom.\
+Das kann beispielsweise passieren, falls gerade die Erzeugung 6 A Strom liefert
+und der Stromverbrauch zwischen 16 A und 22 A liegt.\
+Das ist allerdings insgesamt in der Praxis höchst unwahrscheinlich,
+denn kaum jemand betreibt an derselben Leitung gleichzeitig Geräte,
+die in Summe einen Verbrauch von L > 3680 W haben.
+Und selbst wenn das der Fall wäre und die Solaranlage in dieser Zeit auch nur
+mal kurz weniger Leistung als L - 3680 W liefert,
+löst die Sicherung aus und die Überlast ist beendet.\
 Von der ESTI (Schweiz) wird aus diesem Grund
 die Leitungsüberlastung durch Stecker-Solaranlagen
 [nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
 
-Ein weiterer Grund für die Beschränkung könnte die Möglichkeit schlecht
-kalkulierbarer Rückwirkungen auf die Stabilität des allgemeinen Stromnetzes
-bei massenhafter Einspeisung und kräftigem stark schwankendem Sonnenschein sein.
+Ein weiterer Grund für die Beschränkung ist die Möglichkeit nicht immer gut
+kalkulierbarer Rückwirkungen auf die Stabilität des allgemeinen Stromnetzes,
+denn bei massenhafter nicht angemeldeter Einspeisung und kräftigem Sonnenschein
+kann der Strom im Verteilnetz durch ziehende Wolken sehr stark schwanken.
+Außerdem könnten z.B. Mittelspannungs-Stromleitungen, die schon am Limit sind,
+sich durch ungewöhnlich hohen Stromfluss stärker ausdehnen als normal
+und daher die Mindest-Durchfahrtshöhe unterschritten wird.
 Wenn jedoch durch sog.
 [*Nulleinspeisung*](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/eigenverbrauch/nulleinspeisung)
 sichergestellt ist, dass kein überflüssiger Strom ins externe Netz fließt,
