@@ -976,21 +976,17 @@ was proportional zur Länge zu spürbaren Verlusten führt.
 Aus dem selben Grund sollte der Querschnitt nicht zu klein sein --- mind. 4mm²,
 bei längeren Kabeln und höheren Strömen mind. 6mm² (was allerdings teurer ist).
 
-Solarmodule --- aber bitte nur gleichartige --- kann man wie Batteriezellen
-seriell und/oder parallel verbinden, um mehr Leistung zu erhalten, ohne
-für jedes Modul einen eigenen Regler (bzw. Regler-Eingang) verwenden zu müssen.
-Wenige große Solarmodule sind technisch und wirtschaftlich etwas günstiger als
-entsprechend viele kleine, besonders wenn man einen Regler pro Modul verwendet.
+Solarmodule kann man wie Batteriezellen seriell und/oder parallel verbinden,
+um mehr Leistung zu erhalten, ohne für jedes Modul einen eigenen Regler
+(bzw. Regler-Eingang) verwenden zu müssen.
+Dabei sollten die Module alle gleichartig sein, weil es sonst Verluste gibt.\
+Wenige große Solarmodule sind technisch und wirtschaftlich typischerweise
+etwas günstiger als entsprechend viele kleine.
 
 -   Bei [*Reihenschaltung*](https://de.wikipedia.org/wiki/Reihenschaltung) (oft
     auch *Serienschaltung* genannt) hängt man die Module einfach hintereinander,
     wobei sich die Spannungen der einzelnen Module addieren.
-    Dabei muss man unbedingt darauf achten, dass die maximale Eingangsspannung,
-    die der genutzte Regler-Eingang verkraftet, nicht überschritten wird, und
-    zwar nicht nur bei Normbedingungen (25°C), sondern auch bei sehr niedrigen
-    Temperaturen, wo die (Leerlauf-)Spannung etwa 10 - 20% höher sein kann.
-    Der wesentliche Vorteil gegenüber der Parallelschaltung ist, dass
-    der Strom in den Kabeln und der damit verbundene Verlust nicht steigt.
+
     Ein Nachteil der Reihenschaltung ist,
     dass es dabei viel leichter zu [Verlusten durch Teilverschattung](
     https://photovoltaikbuero.de/pv-know-how-blog/teilverschattung-bei-solarmodulen-messungen/)
@@ -1000,14 +996,36 @@ entsprechend viele kleine, besonders wenn man einen Regler pro Modul verwendet.
     die gleiche Ausrichtung haben und relativ gleich(zeitig) verschattet werden.
 
 -   Bei [*Parallelschaltung*](https://de.wikipedia.org/wiki/Parallelschaltung)
-    addieren sich die Ströme der einzelnen Module. Dabei sollte der je nach
-    Einstrahlung mögliche Maximalstrom unter dem Maximalstrom des genutzten
-    Regler-Eingangs liegen, weil sonst Leistung verschenkt wird (aber der Regler
-    wird dadurch nicht geschädigt --- er nimmt nur so viel Strom, wie er kann).
+    addieren sich die Ströme der einzelnen Module. Natürlich sollte die
+    (Gesamt-)Spannung auf den parallel geschalteten Strängen gleich sein.
+
     Der elektrische Verlust ist größer als bei Reihenschaltung,
-    andererseits hat man weniger Verluste bei Teilverschattung.
+    andererseits hat man weniger Verluste auf Modulebene bei Teilverschattung.
+
     Für die parallele Verschaltung bieten sich Y-Kabel mit MC4-Anschlüssen an.
     Die Kabellänge auf parallelen Zweigen sollten ungefähr gleich sein.
+
+    [Hier](
+    https://www.photovoltaikforum.com/core/article/49-ost-west-anlage-mit-einem-wechselrichter/)
+    ein schöner Artikel für eine klassische Anwendung der Parallelschaltung:
+    geteilte Ost-West-Ausrichtung von PV-Modulen auf einem Hausdach
+    oder um den Ertrag über den Tag möglichst gleichmäßig zu verteilen,
+    ohne dafür unbedingt mehr als einen MPPT-Eingang zu benötigen.
+
+Generell muss man unbedingt darauf achten, dass die maximale Eingangsspannung,
+die ein Regler-Eingang verkraftet, nicht überschritten wird --- und
+zwar nicht nur bei Normbedingungen (25°C), sondern auch bei sehr niedrigen
+Temperaturen, wo die (Leerlauf-)Spannung etwa 10 - 20% höher sein kann.
+Der wesentliche Vorteil gegenüber der Parallelschaltung ist, dass
+der Strom in den Kabeln und der damit verbundene Verlust nicht steigt.
+
+Im Gegensatz dazu darf der (je nach Einstrahlung und Temperatur) mögliche
+(Gesamt-)Strom den spezifizierten Maximalstrom eines Regler-Eingangs durchaus
+überschreiten.
+Allerdings wird dann PV-Leistung verschenkt, weil der Wechselrichter
+im Prinzip nicht mehr Leistung aufnimmt als worauf er ausgelegt wurde.
+Auch kann es bei stark wechselnden Lichtverhältnissen und starkem
+Strom-Überangebot zu Überlastungen kommen.
 
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
 I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
