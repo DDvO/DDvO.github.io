@@ -714,10 +714,10 @@ die von der Forschungsgruppe Solarspeichersysteme HTW Berlin [veröffentlicht](
 https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
 wurden, kommt auf realistischere Ergebnisse.
 Mit einem [Lastprofil-Skript](Lastprofil.pl) können aus den genannten Rohdaten
-Lastprofil-Dateien wie [diese](Lastprofil_4673_kWh.csv) synthetisiert werden.
+Lastprofil-Dateien wie [diese](Lastprofil_4685_kWh.csv) synthetisiert werden.
 So eine Datei wird dann zusammen mit von PVGIS heruntergeladenen Solardaten
 wie [diesen](Solardaten_1215_kWh.csv) als Eingabe für ein
-[Solarertrag-Skript](Solarertrag.pl) verwendet. Weitere Parameter sind die
+[Solarertrag-Skript](Solar.pl) verwendet. Weitere Parameter sind die
 Nennleistung und der Wirkungsgrad der Anlage sowie der Jahresverbrauch
 und optional eine Limitierung des PV-Eingangs durch den Wechselrichter.
 
