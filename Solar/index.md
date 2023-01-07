@@ -552,13 +552,18 @@ der Module und zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeut
 (eigentlich sogar überproportional mehr, weil die Schwellspannung
 schneller erreicht wird), allerdings auf recht niedrigem absoluten Niveau.
 
-Leider realisieren die gängigen Mini-Wechselrichter eine Leistungsbegrenzung
-auf 600 W nicht auf ihrer Ausgangsseite, sondern schon auf ihrer Eingangsseite,
-und das auch noch aufgeteilt pro Eingang, so dass sie nach Abzug ihrer Verluste
-von ca. 12% stets weniger als 530 W liefern.
-Obwohl der Netto-Ertrag durch diese Form der Abregelung also sogar unnötig stark
-verringert wird, ist der Effekt auf den nutzbaren Ertrag längst nicht so groß,
-wie man meinen könnte.
+Die auf 600 W gedrosselten Wechselrichter realisieren die Leistungsbegrenzung
+aus energetischen Gründen schon auf ihrer Eingangsseite.
+Leider verwenden einige Modelle (zumindest die von Deye/Bosswerk/revolt),
+wie man in [Diagrammen](
+https://www.photovoltaikforum.com/thread/180129-deye-sun600-und-sun2000-erfahrungen/)
+sehen kann, dabei direkt den Ziel-Grenzwert, statt zu berücksichtigen,
+dass aufgrund des Wirkungsgrades auf der Ausgangsseite ca. 10% weniger ankommen.
+Zudem wird der Grenzwert oft auch noch einfach gleichmäßig auf die Eingänge
+aufgeteilt. So können bei 90% Wirkungsgrad höchstens 540 W geliefert werden.
+Obwohl der Netto-Ertrag durch diese ungeschickte Form der Abregelung also oft
+sogar unnötig stark verringert wird, ist der Effekt auf den nutzbaren Ertrag
+längst nicht so groß wie man meinen könnte.
 
 Beispielsweise bei 1000 Wp Modulen, die je nach Standort und Ausrichtung
 zu einem Ertrag von etwa 1215 kWh brutto pro Jahr führen können,
@@ -1419,9 +1424,9 @@ ich folgende Komponenten besonders interessant:
     oder 600 W WR mit 2 × 400 W MPPT-Eingang und WLAN [Deye Sun1600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/),
     ca. 215€\
-    _Achtung,
+    _Achtung, in älteren Softwareversionen (bis ca. Ende 2022) reißen
     die Wechselrichter von Deye, sowie baugleich Bosswerk und revolt (Pearl),
-    reißen beim WLAN-Zugang [sträfliche Sicherheitslücken](
+    beim WLAN-Zugang [sträfliche Sicherheitslücken](
     https://www.photovoltaikforum.com/thread/187077-achtung-wifi-sicherheit-der-deye-und-bosswerk-mi600-300-sowie-baugleiche-microwe/).
     Daher sollte ihre WLAN-Funktion höchstens in einem Gastnetz genutzt werden._
 
