@@ -384,7 +384,42 @@ meist größere Flexibilität als allgemein angenommen.\
 Eine Aufteilung in zwei Orientierungen, z.B. nach Südosten und Südwesten,
 um zu versuchen, auf die Vormittags- und Nachmittagssonne zu optimieren,
 lohnt sich meist nicht, weil die Stahlungsintensität aus südlicher Richtung
-einfach viel höher ist. Trotzdem dafür sprechen kann ein Verbrauchsprofil,
+einfach viel höher ist, aber sie schadet auch kaum.
+<!-- https://www.mydealz.de/comments/permalink/39540050
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_34deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_33deg_-90deg_2005_2020.csv 300
+
+Variante extrem (Ost-West) gespreizt:
+
+Neigungswinkel  =  34° Azimut =  90°
+Neigungswinkel  =  33° Azimut = -90°
+PV-Bruttoertrag = 610 kWh
+PV-Nettoertrag  = 525 kWh bei System-Wirkungsgrad 86%
+Eigenverbrauch  = 449 kWh
+
+Variante stark gespreizt:
+
+Neigungswinkel  =  30° (opt.) Azimut =  53°
+Neigungswinkel  =  33° (opt.) Azimut = -54°
+PV-Bruttoertrag = 702 kWh
+PV-Nettoertrag  = 604 kWh bei System-Wirkungsgrad 86%
+Eigenverbrauch  = 485 kWh
+
+Variante schwach gespreizt:
+
+Neigungswinkel  =  36° (opt.) Azimut =  30°
+Neigungswinkel  =  35° (opt.) Azimut = -30°
+PV-Bruttoertrag = 741 kWh
+PV-Nettoertrag  = 637 kWh bei System-Wirkungsgrad 86%
+Eigenverbrauch  = 496 kWh
+
+Variante nicht gespreizt:
+
+Neigungswinkel  =  37° (opt.) Azimut = 2° (opt.)
+PV-Bruttoertrag = 762 kWh
+PV-Nettoertrag  = 655 kWh bei System-Wirkungsgrad 86%
+Eigenverbrauch  = 500 kWh
+-->
+Trotzdem dafür sprechen kann ein Verbrauchsprofil,
 das stark auf die Morgen- und Abendstunden gespreizt ist. Dagegen spricht
 aber oft die Tendenz zu stärkerer Verschattung durch den flacheren Sonnenstand.
 Außerdem ist die geteilte Montage meist aufwendiger, und die beiden Richtungen
@@ -637,13 +672,17 @@ was aber praktisch kaum der Fall ist,
 und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
 ergibt sich eine Amortisation der Anschaffungskosten in nur 2,5 Jahren.
 * Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
-Jahres-Bruttoertrag von etwa 730 kWh, was bei 88% System-Wirkungsgrad
-ca. 640 kWh hinter dem Wechselrichter Einspeisung an der Steckdose bedeutet.
+Jahres-Bruttoertrag von etwa 765 kWh, was bei 88% System-Wirkungsgrad
+ca. 670 kWh Netto-Einspeisung des Wechselrichters an der Steckdose bedeutet.
 Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und einem typischen
 Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 450 kWh.
 Der Eigendeckungsanteil liegt damit bei 15% des Verbrauchs,
 der Eigenverbrauchsanteil bei 70% des Ertrags.
-Bei einer Investition von 660€ und 40 Ct/kWh ergibt sich (ohne Berücksichtigung
+<!--./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -eff 88
+ergibt 465 kWh, aber noch etwas Lastspitzen-Abzug
+Bei Lastprofil_4685_kWh.csv  507 kWh -->
+Damit kann man bei 40 Ct/kWh jährlich ungefähr 180€ Stromkosten einsparen.
+Bei einer Investition von 660€ ergibt sich (ohne Berücksichtigung
 von Kapitalkosten u.ä.) eine Amortisationszeit von 3,7 Jahren.\
 Bei 1500 kWh Jahresverbrauch können immerhin etwa 320 kWh selbst genutzt werden,
 was eine Amortisation in gut 5 Jahren ergibt.
@@ -709,29 +748,37 @@ Eine eigene Simulation auf Minutenbasis
 basierend auf den PV-Profildaten für ein [*typisches meteorologisches Jahr*](
 https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/)
 von [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/)
-und auf einem Mix der 74 minütlichen Haushaltsverbrauchs-Profile,
+und auf 74 minütlichen Haushaltsverbrauchs-Profilen,
 die von der Forschungsgruppe Solarspeichersysteme HTW Berlin [veröffentlicht](
 https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
 wurden, kommt auf realistischere Ergebnisse.
 Mit einem [Lastprofil-Skript](Lastprofil.pl) können aus den genannten Rohdaten
-Lastprofil-Dateien wie [diese](Lastprofil_4685_kWh.csv) synthetisiert werden.
+Lastprofil-Dateien wie [diese](Lastprofil_4673_kWh.csv) synthetisiert werden.
 So eine Datei wird dann zusammen mit von PVGIS heruntergeladenen Solardaten
 wie [diesen](Solardaten_1215_kWh.csv) als Eingabe für ein
 [Solarertrag-Skript](Solar.pl) verwendet. Weitere Parameter sind die
 Nennleistung und der Wirkungsgrad der Anlage sowie der Jahresverbrauch
-und optional eine Limitierung des PV-Eingangs durch den Wechselrichter.
+und optional eine Limitierung des PV-Ertrags durch den Wechselrichter.
+Auch die Kombination von PV-Modulgruppen verschiedener Leistung und Ausrichtung
+wird unterstützt.
 
-Mit dieser Simulation ergibt sich bei der o.g. Beispiel-Anlage
-für den Raum München einen PV-Nettoertrag (nach Wechselrichter-Verlusten)
-von etwa 640 kWh und eine Eigennutzung von etwa 450 kWh.
-Damit kann man bei 40 Ct/kWh jährlich ca. 180€ Stromkosten einsparen,
-was eine Amortisationszeit von 3,7 Jahren ergibt.
+Für die o.g. Beispiel-Anlage für den Raum München mit 600 Wp
+und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 730 kWh
+ergibt sich mit dieser Simulation unter Verwendung minutengenauer Lastprofile
+je nach Profil eine Eigennutzung von ca. 450 bis 560 kWh.
 
 Das Ergebnis fällt nicht ganz so günstig wie bei den anderen beiden Simulationen
-aus, v.A. weil hier die in der Praxis relativ häufigen Lastspitzen im
-Minutenbereich berücksichtigt werden, die von einer Mini-Solaranlage natürlich
-nicht abgefangen werden können, so dass der Eigenverbrauchsanteil geringer ist
+aus, v.A. weil hier die in der Praxis relativ häufigen Lastspitzen immerhin im
+Minutenbereich berücksichtigt werden, die von einer Mini-Solaranlage praktisch
+kaum abgefangen werden können, so dass der Eigenverbrauchsanteil geringer ist
 als bei einer über Stunden oder gar Monate gemittelten Betrachtung.
+
+Vergleichsrechnungen auf Grundlage eines Lastprofils mit (annähernd)
+sekündlicher Auflösung haben ergeben, dass die Lastspitzen nur teilweise einen
+spürbaren Einfluss auf die Nutzbarkeit des PV-Ertrags von kleinen Anlagen haben.
+Bei 600 Wp sind die Eigennutzungs-Ergebnisse bei Lastdaten auf Stundenbasis
+etwa 3 bis 6% zu optimistisch, auf Minutenbasis nur bis etwa 1%.
+<!-- bei 3000 kWh: 593 562 557  6%   bei 6000 kWh: 630 623 622  1% -->
 
 ### Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}
 
