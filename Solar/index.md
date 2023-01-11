@@ -204,7 +204,7 @@ ihre Ausrichtung von der aktuellen Einstrahlungsrichtung der Sonne abweicht
 wie stark sie verschattet und/oder verschmutzt sind und wie warm sie sind.
 Die altersbedingte Degradation ist ziemlich linear und liegt bei etwa 0,5%
 pro Jahr, so dass sich bei einer Gesamt-Verwendungsdauer von 20 Jahren
-in durchschnittlicher Verlust durch die Alterung von 5% ergibt.
+in durchschnittlicher Verlust durch die Alterung (nach 10 Jahren) von 5% ergibt.
 Auch der termperaturbedingte Verlust ist praktisch linear und liegt je nach
 Zelltyp bei etwa 10%, wenn die Modultemperatur beispielsweise 55°C beträgt,
 also 30°C über der Standard-Temperatur von 25°C. Genaueres dazu z.B. [hier](
@@ -385,6 +385,7 @@ Eine Aufteilung in zwei Orientierungen, z.B. nach Südosten und Südwesten,
 um zu versuchen, auf die Vormittags- und Nachmittagssonne zu optimieren,
 lohnt sich meist nicht, weil die Stahlungsintensität aus südlicher Richtung
 einfach viel höher ist, aber sie schadet auch kaum.
+
 <!-- https://www.mydealz.de/comments/permalink/39540050
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_34deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_33deg_-90deg_2005_2020.csv 300
 
@@ -419,6 +420,7 @@ PV-Bruttoertrag = 762 kWh
 PV-Nettoertrag  = 655 kWh bei System-Wirkungsgrad 86%
 Eigenverbrauch  = 500 kWh
 -->
+
 Trotzdem dafür sprechen kann ein Verbrauchsprofil,
 das stark auf die Morgen- und Abendstunden gespreizt ist. Dagegen spricht
 aber oft die Tendenz zu stärkerer Verschattung durch den flacheren Sonnenstand.
