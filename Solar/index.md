@@ -95,7 +95,7 @@ verwiesen.
         - [Optimale Ausrichtung von Solarmodulen {#Ausrichtung}](#optimale-ausrichtung-von-solarmodulen-ausrichtung)
     - [Nutzungsmöglichkeiten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
         - [Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk") {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
-            - [Beschränkung auf 600 W und ihre Gründe {#Kappung}](#beschränkung-auf-600-w-und-ihre-gründe-kappung)
+            - [Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}](#beschränkung-auf-600-w-und-ihre-gründe-kappung)
             - [Kappungsverlust durch Beschränkung auf 600 W {#Kappungsverlust}](#kappungsverlust-durch-beschränkung-auf-600-w-kappungsverlust)
             - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
         - [Stromverbrauch im Haushalt {#Stromverbrauch}](#stromverbrauch-im-haushalt-stromverbrauch)
@@ -146,7 +146,7 @@ verwiesen.
     -   [Optimale Ausrichtung von Solarmodulen](#Ausrichtung)
 -   [Nutzungsmöglichkeiten](#Nutzung)
     -   [Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk")](#Balkonkraftwerk)
-        - [Beschränkung auf 600 W und ihre Gründe](#Kappung)
+        - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Kappung)
         - [Kappungsverlust durch Beschränkung auf 600 W](#Kappungsverlust)
         - [Stromzähler und Rücklaufsperre](#Stromzähler)
     -   [Stromverbrauch im Haushalt](#Stromverbrauch)
@@ -203,8 +203,8 @@ ihre Ausrichtung von der aktuellen Einstrahlungsrichtung der Sonne abweicht
 (wobei senkrechte Einstrahlung natürlich optimal, aber selten erreichbar ist),
 wie stark sie verschattet und/oder verschmutzt sind und wie warm sie sind.
 Die altersbedingte Degradation ist ziemlich linear und liegt bei etwa 0,5%
-pro Jahr, so dass sich bei einer Gesamt-Verwendungsdauer von 20 Jahren
-in durchschnittlicher Verlust durch die Alterung (nach 10 Jahren) von 5% ergibt.
+pro Jahr, so dass sich bei projektierten 20 Jahren Gesamt-Verwendungsdauer
+nach 10 Jahren ein durchschnittlicher Verlust durch die Alterung von 5% ergibt.
 Auch der termperaturbedingte Verlust ist praktisch linear und liegt je nach
 Zelltyp bei etwa 10%, wenn die Modultemperatur beispielsweise 55°C beträgt,
 also 30°C über der Standard-Temperatur von 25°C. Genaueres dazu z.B. [hier](
@@ -469,7 +469,6 @@ Wichtig zu beachten ist, dass diese Nutzungsart abseits eines bestehenden
 Wechselstrom-Netzes und während eines Stromausfalls nicht funktioniert,
 weil sich der verwendete Wechselrichter mit dem Stromnetz synchronisieren muss.
 
-![Bild: Wieland-Unterputz-Dose](Wieland-Unterputz-Dose.png){:.right width="400"}
 Wie schon der Name *Stecker-Solaranlage* ausdrückt, werden solche kleinen
 Anlagen meist einfach über einen (Schuko-)Stecker mit dem Hausnetz verbunden,
 z.B. an einer Außensteckdose auf dem Balkon oder der Terrasse. Das ist sehr
@@ -477,9 +476,15 @@ flexibel und ermöglicht, sehr einfach ein Energiemessgerät dazwischenzustecken
 wie es unten zur [Verbrauchsmessung](#Verbrauchsmessung) gezeigt ist.
 Diese Lösung ist m.E. schon sicher genug,
 weil der Wechselrichter die Stromzufuhr sofort unterbricht, wenn man den
-Stecker aus der Dose zieht und seine blanken Kontakte berühren kann.\
-Man kann, wie vom VDE empfohlen, aber auch eine spezielle *Energiesteckdose*
-verwenden. Diese wird auch [*Einspeisesteckdose*](
+Stecker aus der Dose zieht und seine blanken Kontakte berühren kann.
+Anfang 2023 [sprach sich der VDE dafür aus](
+https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv),
+"den Schuko-Stecker für die Einspeisung
+bis zu einer Systemgesamtleistungsgrenze von 800 W zu dulden".
+
+![Bild: Wieland-Unterputz-Dose](Wieland-Unterputz-Dose.png){:.right width="450"}
+Man kann aber auch, wie vom VDE bislang empfohlen, eine spezielle
+*Energiesteckdose* verwenden. Diese wird auch [*Einspeisesteckdose*](
 https://www.solarenergie-info.de/wieland-einspeisesteckdose/) genannt
 und ist meist von der Firma Wieland. Sie gilt als besonders sicher,
 ist aber auch recht teuer und muss von einem Elektriker installiert werden.
@@ -494,10 +499,13 @@ Das hat neben der geringen Größe und sehr überschaubaren Kosten auch damit zu
 tun, dass sie selbst installiert werden dürfen und genehmigungsfrei (jedoch
 anmeldepflichtig) sind, wenn sie [maximal 600 W in die Steckdose einspeisen](
 https://solarblitz.blogspot.com/2019/08/zulassigkeit-von-balkonkraftwerken-plug.html).
-Dies gilt für Deutschland und die Schweiz; in Österreich gilt
-nach einer allgemeineren EU-Richtlinie eine Obergrenze von 800 W.
+Dies gilt bislang für Deutschland und die Schweiz; in Österreich gilt nach einer
+allgemeineren EU-Regel für die vereinfachte Nutzung eine Obergrenze von 800 W.
+Seit Anfang 2023 [empfiehlt selbst der VDE](
+https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), sich
+künftig auch in Deutschland an der "Bagatellgrenze bis 800 W" zu orientieren.
 
-#### Beschränkung auf 600 W und ihre Gründe {#Kappung}
+#### Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}
 
 [![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
 Solarstrom-Einspeisung](
@@ -547,10 +555,10 @@ etwa dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz wollen.
 #### Kappungsverlust durch Beschränkung auf 600 W {#Kappungsverlust}
 
 Die nominelle Leistung der verwendeten Solarmodule kann und sollte durchaus
-größer sein aus 600 Wp (z.B. 800 bis 1000 Wp), denn in der Praxis werden die
-600 W PV-Ausgangsleistung kaum erreicht, vor Allem in sonnenarmen Zeiten.
-Man hat durch einen gewisse "Überdimensionierung" auch bei Verlusten im Bereich
-der Module und zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
+größer sein aus 600 Wp (also eher 800 bis 1000 Wp), denn
+in der Praxis werden sonst 600 W PV-Ausgangsleistung ohnehin nicht oft erreicht,
+gerade in sonnenarmen Zeiten. Man hat durch einen gewisse "Überdimensionierung"
+auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
 (eigentlich sogar überproportional mehr, weil die Schwellspannung
 schneller erreicht wird), allerdings auf recht niedrigem absoluten Niveau.
 
@@ -608,7 +616,10 @@ Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
 Strom praktisch ins externe Netz verschenkt wird.
 Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
 laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
-Damit kann man "unter der Hand Strom verkaufen", was aber nicht erlaubt ist.
+Damit kann man "unter der Hand Strom verkaufen", was aber in Deutschland bislang
+nicht erlaubt ist. Anfang 2023 [sprach sich der VDE jedoch dafür aus](
+https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
+bei PV-Anlagen bis 800 W die Zähler künftig "auch rückwärtslaufen dürfen".
 
 Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
 vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
