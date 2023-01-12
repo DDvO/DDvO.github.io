@@ -100,7 +100,7 @@ verwiesen.
             - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
         - [Stromverbrauch im Haushalt {#Stromverbrauch}](#stromverbrauch-im-haushalt-stromverbrauch)
             - [Verbrauchsmessung {#Verbrauchsmessung}](#verbrauchsmessung-verbrauchsmessung)
-        - [Ertragsberechnung {#Ertragsberechnung}](#ertragsberechnung-ertragsberechnung)
+        - [Ertragsberechnung und Amortisation {#Ertragsberechnung}](#ertragsberechnung-ertragsberechnung)
             - [Monatsbasierte Berechnung von Ertrag und Amortisation {#PV-Rechner}](#monatsbasierte-berechnung-von-ertrag-und-amortisation-pv-rechner)
             - [Speichersimulation {#Speichersimulation}](#speichersimulation-speichersimulation)
             - [Simulation auf Minutenbasis {#Minutenbasis}](#simulation-auf-minutenbasis-minutenbasis)
@@ -151,7 +151,7 @@ verwiesen.
         - [Stromzähler und Rücklaufsperre](#Stromzähler)
     -   [Stromverbrauch im Haushalt](#Stromverbrauch)
         - [Verbrauchsmessung](#Verbrauchsmessung)
-    -   [Ertragsberechnung](#Ertragsberechnung)
+    -   [Ertragsberechnung und Amortisation](#Ertragsberechnung)
         - [Monatsbasierte Berechnung von Ertrag und Amortisation](#PV-Rechner)
         - [Speichersimulation](Speichersimulation)
         - [Simulation auf Minutenbasis](#Minutenbasis)
@@ -666,7 +666,7 @@ eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
 Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
 z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
 
-### Ertragsberechnung {#Ertragsberechnung}
+### Ertragsberechnung und Amortisation {#Ertragsberechnung}
 
 Wie eingangs geschrieben kann man bei optimaler Platzierung von Solarmodulen
 pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter Solarleistung gewinnen.
