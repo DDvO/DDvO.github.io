@@ -41,7 +41,11 @@ keywords:
 - Lastspitzen
 - Abregelung
 - Eigenverbrauch
+- Eigenverbrauchsanteil
 - Eigendeckung
+- Eigendeckungsanteil
+- Autarkiegrad
+- Batterieentladung
 - Amortisation
 - Ökologie
 - Umwelt
@@ -100,6 +104,7 @@ verwiesen.
             - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
         - [Stromverbrauch im Haushalt {#Stromverbrauch}](#stromverbrauch-im-haushalt-stromverbrauch)
             - [Verbrauchsmessung {#Verbrauchsmessung}](#verbrauchsmessung-verbrauchsmessung)
+        - [Eigenverbrauch und Eigendeckung {#Eigenverbrauch}](#eigenverbrauch-und-eigendeckung)
         - [Ertragsberechnung und Amortisation {#Ertragsberechnung}](#ertragsberechnung-ertragsberechnung)
             - [Monatsbasierte Berechnung von Ertrag und Amortisation {#PV-Rechner}](#monatsbasierte-berechnung-von-ertrag-und-amortisation-pv-rechner)
             - [Speichersimulation {#Speichersimulation}](#speichersimulation-speichersimulation)
@@ -151,6 +156,7 @@ verwiesen.
         - [Stromzähler und Rücklaufsperre](#Stromzähler)
     -   [Stromverbrauch im Haushalt](#Stromverbrauch)
         - [Verbrauchsmessung](#Verbrauchsmessung)
+    -   [Eigenverbrauch und Eigendeckung](Eigenverbrauch)
     -   [Ertragsberechnung und Amortisation](#Ertragsberechnung)
         - [Monatsbasierte Berechnung von Ertrag und Amortisation](#PV-Rechner)
         - [Speichersimulation](Speichersimulation)
@@ -557,13 +563,15 @@ etwa dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz wollen.
 Die nominelle Leistung der verwendeten Solarmodule kann und sollte durchaus
 größer sein aus 600 Wp (also eher 800 bis 1000 Wp), denn
 in der Praxis werden sonst 600 W PV-Ausgangsleistung ohnehin nicht oft erreicht,
-gerade in sonnenarmen Zeiten. Man hat durch einen gewisse "Überdimensionierung"
+gerade in sonnenarmen Zeiten.
+Man hat durch einen gewisse Überdimensionierung der PV-Module
+(auch "Überbelegung" des Wechselrichters genannt)
 auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
-(eigentlich sogar überproportional mehr, weil die Schwellspannung
-schneller erreicht wird), allerdings auf recht niedrigem absoluten Niveau.
+(eigentlich sogar überproportional mehr,weil die Schwellspannung schneller
+erreicht wird), allerdings auf eher niedrigem absoluten Niveau.
 
-Die auf 600 W gedrosselten Wechselrichter realisieren die Leistungsbegrenzung
-aus energetischen Gründen schon auf ihrer Eingangsseite.
+Die typischerweise auf 600 W gedrosselten Wechselrichter realisieren
+die Leistungsbegrenzung aus energetischen Gründen schon auf ihrer Eingangsseite.
 Leider verwenden einige Modelle (zumindest die von Deye/Bosswerk/revolt),
 wie man in [Diagrammen](
 https://www.photovoltaikforum.com/thread/180129-deye-sun600-und-sun2000-erfahrungen/)
@@ -676,6 +684,70 @@ eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
 
 Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
 z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
+
+### Eigenverbrauch und Eigendeckung {#Eigenverbrauch}
+
+Wer privat eine PV-Anlage betreibt, möchte möglichst viel von ihrem Ertrag
+auch selbst verbrauchen, und zwar am besten direkt. Überschüssigen Strom in
+einer Batterie für spätere Nutzung zwischenzuspeichern ist aufwendig und teuer.
+Der nicht selbst genutzte Anteil wird meist ins externe Netz eingespeist.
+Bei Balkonkraftwerken geschieht dies ohne Vergütung, aber auch wenn man seinen
+Strom als Kleinunternehmer verscherbelt, hat man einige Bürokratie und bekommt
+ziemlich wenig heraus.
+
+Also geht es ökonomisch darum, den Eigenverbrauchsanteil zu maximieren. Der
+*Eigenverbrauchsanteil* (*Nutzungsgrad*) ist der Anteil der Netto-Stromerzeugung,
+der direkt verbraucht (oder ggf. mit Batterie-Ladeverlusten gespeichert wird).
+Je höher er ist, desto weniger Energie wird ins externe Stromnetz eingespeist.
+Je kleiner die Anlage ist, umso leichter kann man eine hohe Eigenverbrauchsquote
+erreichen, allerdings dann bei entsprechend kleinerem Stromvolumen.
+
+Damit verwandt ist der *Eigendeckungsanteil* (*Selbstversorgungsgrad*), also der
+Anteil des Eigenverbrauchs (ggf. mit Batterieentladung abzüglich Ladeverlusten)
+am Gesamtverbrauch.
+Je höher er ist, desto weniger Energie muss von extern bezogen werden.
+Er wird oft auch als
+[*Autarkiegrad*](https://klarsolar.de/unterschied-eigenverbrauch-autarkie/)
+bezeichnet, was etwas irreführend ist, denn typischerweise arbeitet
+der Wechselrichter der PV-Anlage auch dann nicht ohne Verbindung zum Netzstrom,
+wenn gerade kein *Netzbezug* (also Stromfluss von außen) stattfindet.
+Je größer die Anlage ist, umso höher fällt der Autarkiegrad aus,
+allerdings oft zu Lasten des Eigendeckungsanteils.
+Eine Quasi-Autarkie (Eigendeckungsanteil 100%)
+kann man aber nur mit enormer Stromspeicher-Kapazität erreichen.
+
+[![Bild: Eigenverbrauch einer 7kWp-Anlage mit 5kWh-Speicher über den Tag](
+Eigenverbrauch-7kWp-5kWh-Speicher.png){:.center}](
+https://klarsolar.de/wp-content/uploads/2022/10/Eigenverbrauchsanteil-bei-einer-7kWp-Anlage-mit-5kW-Speicher.pnghttps://klarsolar.de/unterschied-eigenverbrauch-autarkie/)
+Das Bild veranschaulicht den typischen Stromverlauf bei einer Hausdach-PV-Anlage
+mit 7kWp Nennleistung und 5kWh Stromspeicher an einem ziemlich sonnigen Tag mit
+mittags etwas Wolken. Weitere schöne Erklärungen mit Grafiken gibt es
+[hier](https://brodsoft.de/stromverlauf/pages/simulation).
+
+Der Eigendeckungsanteil und Eigenverbrauchsanteil lässt sich sehr einfach
+näherungsweise mit dem ["Stecker-Solar-Simulator"](
+https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
+für Balkonkraftwerke bzw. dem ["Unabhängigkeitsrechner"](
+https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)
+für Hausdach-PV-Anlagen der HTW Berlin berechnen.
+[![Bild: Stecker-Solar-Simulator](Stecker-Solar-Simulator.png)](
+https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
+Beide Simulationen erfolgen mit Daten der Wetterstation Lindenberg bei Berlin
+aus dem Jahr 2017 (für Süddeutschland kann man 10-15% mehr PV-Leistung ansetzen)
+für einen gegebenen Jahresstromverbrauch (mit einer typischen Lastverteilung),
+gegebene PV-Nennleistung (mit einem hohen spezifischen PV-Jahresertrag)
+und optional gegebene nutzbare Speicherkapazität (mit typischem Wirkungsgrad
+für LFP-Batterien und typischen Wandlungsverlusten).
+[![Bild: Unabhängigkeitsrechner](Unabhängigkeitsrechner.png)](
+https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)
+Der Unabhängigkeitsrechner liefert auch den Anteil der Batterieentladung an der
+Stromversorgung, den man zur Ertrags- und [Wirtschaftlichkeitsberechnung von
+PV-Speichern](https://www.youtube.com/watch?v=bE5fLy0w3MM&t=674s)
+verwenden kann (und zwar durch Multiplikation mit dem Stromverbrauch).
+<!--
+Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.
+Für Stromspeicher scheinen sie allerdings recht optimistisch.
+----->
 
 ### Ertragsberechnung und Amortisation {#Ertragsberechnung}
 
@@ -829,6 +901,16 @@ etwa 1 kWh pro 1000 kWh Jahresstromverbrauch, also gut 1/3 des Tagesverbrauchs.
 Wer mit der Speicherbatterie zusätzlich eine Notstromversorgung über eine
 [Inselanlage](#Inselanlage) realisieren möchte, wird die Kapazität je nach
 Anwendungsszenario eher größer wählen.
+
+Die Forschungsgruppe Solarspeichersysteme der HTW Berlin
+gibt [genauere Empfehlungen und Begründungen](
+https://solar.htw-berlin.de/publikationen/auslegung-von-solarstromspeichern/).
+Kurz zusammengefasst:
+Ein Batteriespeicher ist nur sinnvoll, wenn die PV-Leistung mind. 0,5 kWp
+je 1000 kWh Jahresstromverbrauch beträgt. Als Kapazität empfiehlt sie
+maximal 1,5 kWh je 1000 kWh Jahresverbrauch und
+maximal 1,5 kWh je kWp PV-Nominalleistung.
+
 
 #### Ladung der Batterie {#Batterieladung}
 
