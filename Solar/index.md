@@ -513,41 +513,17 @@ künftig auch in Deutschland an der "Bagatellgrenze bis 800 W" zu orientieren.
 
 #### Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}
 
-[![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
-Solarstrom-Einspeisung](
-Stromleitung_Ueberlastung_Solareinspeisung.jpg){:.right width="400"}](
-https://www.sonnenenergie.de/index.php?id=30&tx_ttnews[tt_news]=254)
-Hintergrund dieser Beschränkung sind vornehmlich Sicherheitsbedenken:
-Falls über die Wohnungs-Stromleitung, an der die Einspeisung
-stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
-unter sehr ungünstigen Umständen passieren, dass auf Teilen der Leitung mehr
-Strom fließt als die Sicherung eigentlich erlauben würde, was dann zu
-einer mehr oder weniger starken Erwärmung der Leitung führen kann.\
-Wenn L der momentane Gesamt-Verbrauch auf der Leitung ist und P die momentane
-Erzeugung auf derselben Leitung, kommt bei der Sicherung die Leistung L - P an.
-Wenn die Sicherung auf 16 A ausgelegt ist und die dort ankommende Leistung
-vom Betrag her, also | L - P |, kleiner als 3680 W (= 230 V × 16 A) ist,
-löst die Sicherung nicht aus. Falls dabei L oder P größer als 3680 W ist,
-fließen auf einem Teilabschnitt der Leitung mehr als 16 A Strom.\
-Das kann beispielsweise passieren, falls gerade die Erzeugung 6 A Strom liefert
-und der Stromverbrauch zwischen 16 A und 22 A liegt.\
-Das ist allerdings insgesamt in der Praxis höchst unwahrscheinlich,
-denn kaum jemand betreibt an derselben Leitung gleichzeitig Geräte,
-die in Summe einen Verbrauch von L > 3680 W haben.
-Und selbst wenn das der Fall wäre und die Solaranlage in dieser Zeit auch nur
-mal kurz weniger Leistung als L - 3680 W liefert,
-löst die Sicherung aus und die Überlast ist beendet.\
-Von der ESTI (Schweiz) wird aus diesem Grund
-die Leitungsüberlastung durch Stecker-Solaranlagen
-[nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
+Hintergründe dieser Beschränkung sind nicht in erster Linie, wie meist
+angenommen wird, Sicherheitsbedenken bzgl. der Stromleitungen im Haushalt.
 
-Ein weiterer Grund für die Beschränkung ist die Möglichkeit nicht immer gut
-kalkulierbarer Rückwirkungen auf die Stabilität des allgemeinen Stromnetzes,
-denn bei massenhafter nicht angemeldeter Einspeisung und kräftigem Sonnenschein
-kann der Strom im Verteilnetz durch ziehende Wolken sehr stark schwanken.
-Außerdem könnten z.B. Mittelspannungs-Stromleitungen, die schon am Limit sind,
+Der wesentliche technische Grund sind mögliche nicht immer gut kalkulierbare
+Rückwirkungen auf das allgemeine Stromnetz.
+Bei massenhafter nicht angemeldeter Einspeisung und kräftigem Sonnenschein
+kann der Strom im Verteilnetz durch ziehende Wolken sehr stark schwanken,
+was seine Stabilität beeinträchtigen könnte.
+Auch könnten z.B. Mittelspannungs-Stromleitungen, die schon am Limit sind,
 sich durch ungewöhnlich hohen Stromfluss stärker ausdehnen als normal
-und daher die Mindest-Durchfahrtshöhe unterschritten wird.
+und daher teils die Mindest-Durchfahrtshöhe unterschritten werden.
 Wenn jedoch durch sog.
 [*Nulleinspeisung*](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/eigenverbrauch/nulleinspeisung)
 sichergestellt ist, dass kein überflüssiger Strom ins externe Netz fließt,
@@ -555,8 +531,41 @@ können Steckdosen-Anlagen [auch z.B. mit 1800 W Leistung](
 https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/)
 normgerecht betrieben werden.
 
-Man kann vermuten, dass die Beschränkung auch nichttechnische Gründe hat,
-etwa dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz wollen.
+Man kann durchaus annehmen,
+dass die Beschränkung auch nichttechnisch motiviert ist, etwa
+weil die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
+
+Die Beschränkung leistet auch in gewisser Hinsicht einen Beitrag zum Schutz
+des Haushalts in folgendem sehr selten auftretenden Fall:
+
+[![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
+Solarstrom-Einspeisung](
+Stromleitung_Ueberlastung_Solareinspeisung.jpg){:.right width="380"}](
+https://www.sonnenenergie.de/index.php?id=30&tx_ttnews[tt_news]=254)
+Wenn über die Wohnungs-Stromleitung, an der die Einspeisung
+stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
+unter sehr ungünstigen Umständen passieren, dass auf Teilen der Leitung mehr
+Strom fließt als die Sicherung eigentlich erlauben würde, was dann zu
+einer mehr oder weniger übermäßigen Erwärmung der Leitung führt.\
+Wenn L der momentane Gesamt-Verbrauch auf der Leitung ist und P die momentane
+Erzeugung auf derselben Leitung, kommt bei der Sicherung die Leistung L - P an.
+Wenn die Sicherung auf 16 A ausgelegt ist und die dort ankommende Leistung
+vom Betrag her, also | L - P |, kleiner als 3680 W (= 230 V × 16 A) ist,
+löst die Sicherung nicht aus. Falls dabei L oder P größer als 3680 W ist,
+fließen auf einem Teilabschnitt der Leitung mehr als 16 A Strom.\
+Das kann beispielsweise passieren, wenn gerade die Erzeugung 6 A Strom liefert
+und der Stromverbrauch zwischen 16 A und 22 A liegt.\
+Das ist allerdings insgesamt in der Praxis höchst unwahrscheinlich,
+denn fast niemand betreibt an derselben Leitung gleichzeitig Geräte, die in
+Summe einen Verbrauch L von über 3680 W haben, und dass z.B. durch einen
+Kurzschluss extrem viel Strom fließt, ist möglich, aber kommt selten vor.
+Und selbst wenn das der Fall ist und die Solaranlage in dieser Zeit auch nur
+mal kurz weniger Leistung als L - 3680 W liefert,
+löst die Sicherung wie üblich aus und die Überlast ist beendet.\
+Von der ESTI (Schweiz) wird aus diesem Grund
+die Leitungsüberlastung durch Stecker-Solaranlagen
+[nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
+
 
 #### Kappungsverlust durch Beschränkung auf 600 W {#Kappungsverlust}
 
