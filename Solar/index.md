@@ -587,13 +587,29 @@ Beispielsweise bei 1000 Wp Modulen, die je nach Standort und Ausrichtung
 zu einem Ertrag von etwa 1215 kWh brutto pro Jahr führen können,
 also bei einem Wechselrichter-Wirkungsgrad von 88% etwa 1070 kWh Netto-Ertrag,
 macht der effektive Verlust durch eine Begrenzung auf 600 W Eingangsleistung
+(also 528 W Ausgangsleistung)
 des Wechselrichters gerade mal 15 kWh aus. Dies erklärt sich durch zwei Effekte:
 * Die Abregelung findet zwar während etwa 800 Sonnenstunden im Jahr statt, aber
 die Differenz auf den sonst möglichen Netto-Ertrag ist moderat: etwa 110 kWh.
-* Nur während (in Summe) ca. 120 Stunden wird zeitgleich zu dieser Abregelung
+* Nur während in Summe ca. 120 Stunden wird zeitgleich zu dieser Abregelung
 typischerweise überhaupt so viel Strom verbraucht, dass sich die Kappung beim
-Eigenverbrauch bemerkbar macht, und die Menge dieses Verbrauchs, bei dem die
-Leistung also bei mehr als 530 W liegt, ist typischerweise ziemlich gering.
+Eigenverbrauch bemerkbar macht, und die Menge dieses Verbrauchs, bei dem also
+mehr als 528 W Leistung beansprucht werden, ist typischerweise ziemlich gering.
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -lim 528 -eff 88 -tmy
+PV-Nominalleistung          = 1000 Wp
+Bruttoleistung max.         =  994 W am TMY-04-30 um 11:00 h
+PV-Bruttoertrag             = 1216 kWh
+PV-Nettoertrag              =  957 kWh bei System-Wirkungsgrad 88%
+PV-Abregelungsverlust       =  113 kWh während 800 h durch Limitierung auf 528 W
+Ertragsanteil 9-15 Uhr MEZ  =   69 %
+
+Last durch Haushalt         = 3000 kWh
+Eigenverbrauch mit Limit    =  577 kWh
+Eigenverbrauchsverlust      =   15 kWh während 123 h durch Limitierung auf 528 W
+Eigenverbrauchsanteil       =   60 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
+------>
 
 Hingegen bieten 1000 statt 600 Wp PV-Nennleistung bei mäßigen Zusatzkosten eine
 sinnvolle Reserve für schwächere Sonnenstunden, wodurch der Netto-Ertrag (trotz
