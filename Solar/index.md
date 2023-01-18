@@ -384,63 +384,221 @@ Abweichungen von der allgemein optimalen Südorientierung
 nur etwa halb so starke Einbußen bringen.
 So liegt bei senkrechter Anbringung im Verhältnis zur optimalen Neigung
 die Einbuße nicht bei 30% vom Optimum, sondern je nach Lastprofil bei 23%.
-
 Man hat also zur günstigen Ausrichtung seiner Solarmodule
-meist größere Flexibilität als allgemein angenommen.\
-Eine Aufteilung in zwei Orientierungen, z.B. nach Südosten und Südwesten,
+meist größere Flexibilität als allgemein angenommen.
+
+Eine Aufteilung in zwei Orientierungen, z.B. die klassische Ost-West-Ausrichtung
+oder irgendwo dazwischen nach Südosten und Südwesten,
 um zu versuchen, auf die Vormittags- und Nachmittagssonne zu optimieren,
-lohnt sich meist nicht, weil die Stahlungsintensität aus südlicher Richtung
-einfach viel höher ist, aber sie schadet auch kaum.
+lohnt sich auch dann nicht,
+wenn man den Ertragsüberschuss über die Mittagszeit nicht nutzen kann.
+Sie schadet aber auch kaum, besonders wenn man tagsüber im Vergleich zu den
+Morgen- und Abendstunden wenig Verbrauch hat.
+Das liegt daran, dass die Stahlungsintensität aus südlichen Richtungen
+in der Tages- und Jahressumme viel höher ist -- die Sonne scheint dort einfach
+viel stärker und viel häufiger (besonders im Winter) als im Osten oder Westen.
+Dieser Effekt wird selbst dann nicht durch eine geringere Nutzbarkeit tagsüber
+ausgeglichen, wenn man im Haushalt an Arbeitstagen von 8 bis 18 Uhr
+nur Grundlast von z.B. 100 W hat.
+
+Eine Reihe [genauer Simulationen](#Minutenbasis) für einen Haushalt
+in Süddeutschland mit 3000 kWh Jahresverbrauch mit einer Stecker-PV-Anlage mit
+zwei 300 Wp PV-Modulen und Systemwirkungsgrad 88% liefert für den Eigenverbrauch
+folgende Ergebnisse:
+
+|Azimut |(opt.) Neigungswinkel|Nettoertrag|EV normales Profil|EV tagsüber nur Grundlast|
+|------:|----------------:|----------:|-------------:|-----------------:|
+|+/-90° |      15°        |  549 kWh  |  456 kWh     |  356 kWh         |
+|+/-90° |      20°        |  544 kWh  |  455 kWh     |  357 kWh         |
+|+/-60° |      30°        |  590 kWh  |  481 kWh     |  369 kWh         |
+|+/-30° |      30°        |  637 kWh  |  496 kWh     |  372 kWh         |
+|   0°  |      30°        |  652 kWh  |  500 kWh     |  372 kWh         |
 
 <!-- https://www.mydealz.de/comments/permalink/39540050
-./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_34deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_33deg_-90deg_2005_2020.csv 300
 
-Variante extrem (Ost-West) gespreizt:
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_34deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_33deg_-90deg_2005_2020.csv 300
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_-90deg_2005_2020.csv 300
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_20deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_20deg_-90deg_2005_2020.csv 300
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_-90deg_2005_2020.csv 300
+
+/Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_60deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_-60deg_2005_2020.csv 300
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_60deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-60deg_2005_2020.csv 300
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_60deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_-60deg_2005_2020.csv 300
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_60deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_-60deg_2005_2020.csv 300
+       ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_53deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_33deg_-54deg_2005_2020.csv 300 
+
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_45deg_30deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_45deg_-30deg_2005_2020.csv 300
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_36deg_30deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_-30deg_2005_2020.csv 300
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_30deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-30deg_2005_2020.csv 300
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_30deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_-30deg_2005_2020.csv 300
+
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_37deg_2deg_2005_2020.csv 600
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_31deg_0deg_2005_2020.csv 600
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_28deg_0deg_2005_2020.csv 600
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_0deg_2005_2020.csv 600
+
+Variante extrem (Ost-West) gespreizt
 
 Neigungswinkel  =  34° Azimut =  90°
 Neigungswinkel  =  33° Azimut = -90°
 PV-Bruttoertrag = 610 kWh
 PV-Nettoertrag  = 525 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
 Eigenverbrauch  = 449 kWh
+Eigenverbrauch  = 357 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  25° Azimut =   90°
+Neigungswinkel  =  25° Azimut =  -90°
+PV-Bruttoertrag = 625 kWh
+PV-Nettoertrag  = 538 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  = 453 kWh
+Eigenverbrauch  = 358 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  20° (opt.) Azimut =   90°
+Neigungswinkel  =  20° (opt.) Azimut =  -90°
+PV-Bruttoertrag =  633 kWh
+PV-Nettoertrag  =  544 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  =  455 kWh
+Eigenverbrauch  =  357 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  15° Azimut =   90°
+Neigungswinkel  =  15° Azimut =  -90°
+PV-Bruttoertrag = 639 kWh
+PV-Nettoertrag  = 549 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  =  456 kWh
+Eigenverbrauch  =  356 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
 
 Variante stark gespreizt:
 
-Neigungswinkel  =  30° (opt.) Azimut =  53°
-Neigungswinkel  =  33° (opt.) Azimut = -54°
-PV-Bruttoertrag = 702 kWh
-PV-Nettoertrag  = 604 kWh bei System-Wirkungsgrad 86%
-Eigenverbrauch  = 485 kWh
+Neigungswinkel  =  35° Azimut =   60°
+Neigungswinkel  =  35° Azimut =  -60°
+PV-Bruttoertrag =  686 kWh
+PV-Nettoertrag  =  590 kWh bei System-Wirkungsgrad 86%
+Last Haushalt   = 3000 kWh
+Eigenverbrauch  =  481 kWh
+Eigenverbrauch  =  369 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  30° (opt.) Azimut =   60°
+Neigungswinkel  =  30° (opt.) Azimut =  -60°
+PV-Bruttoertrag =  689 kWh
+PV-Nettoertrag  =  592 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  =  481 kWh
+Eigenverbrauch  =  369 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  25° Azimut =   60°
+Neigungswinkel  =  25° Azimut =  -60°
+PV-Bruttoertrag =  689 kWh
+PV-Nettoertrag  =  592 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  =  480 kWh
+Eigenverbrauch  =  368 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  15° Azimut =   60°
+Neigungswinkel  =  15° Azimut =  -60°
+PV-Bruttoertrag =  680 kWh
+PV-Nettoertrag  =  585 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  =  474 kWh
+Eigenverbrauch  =  364 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+  Neigungswinkel  =  30° (opt.?) Azimut =  53°
+  Neigungswinkel  =  33° (opt.?) Azimut = -54°
+  PV-Bruttoertrag = 702 kWh
+  PV-Nettoertrag  = 604 kWh bei System-Wirkungsgrad 86%
+  Last Haushalt  = 3000 kWh
+  Eigenverbrauch  = 485 kWh
+  Eigenverbrauch  = 371 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
 
 Variante schwach gespreizt:
 
-Neigungswinkel  =  36° (opt.) Azimut =  30°
-Neigungswinkel  =  35° (opt.) Azimut = -30°
+Neigungswinkel  =  45° Azimut =   30°
+Neigungswinkel  =  45° Azimut =  -30°
+PV-Bruttoertrag =  734 kWh
+PV-Nettoertrag  =  631 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  =  492 kWh
+Eigenverbrauch  =  369 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  36° Azimut =  30°
+Neigungswinkel  =  35° Azimut = -30°
 PV-Bruttoertrag = 741 kWh
 PV-Nettoertrag  = 637 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
 Eigenverbrauch  = 496 kWh
+Eigenverbrauch  = 372 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  30° (opt.) Azimut =   30°
+Neigungswinkel  =  30° (opt.) Azimut =  -30°
+PV-Bruttoertrag =  739 kWh
+PV-Nettoertrag  =  636 kWh bei System-Wirkungsgrad 86%
+Last Haushalt   = 3000 kWh
+Eigenverbrauch  =  496 kWh
+Eigenverbrauch  =  372 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  25° Azimut =   30°
+Neigungswinkel  =  25° Azimut =  -30°
+PV-Bruttoertrag =  733 kWh
+PV-Nettoertrag  =  631 kWh bei System-Wirkungsgrad 86%
+Last Haushalt   = 3000 kWh
+Eigenverbrauch  =  494 kWh
+Eigenverbrauch  = 372 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
 
 Variante nicht gespreizt:
 
-Neigungswinkel  =  37° (opt.) Azimut = 2° (opt.)
+Neigungswinkel  =  37° (opt.?) Azimut = 2° (opt.?)
 PV-Bruttoertrag = 762 kWh
 PV-Nettoertrag  = 655 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
 Eigenverbrauch  = 500 kWh
+Eigenverbrauch  = 369 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  31° (opt.) Azimut = 0°
+PV-Bruttoertrag =  758 kWh
+PV-Nettoertrag  =  652 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  = 500 kWh
+Eigenverbrauch  = 372 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  25° (opt.) Azimut = 0°
+PV-Bruttoertrag =  755 kWh
+PV-Nettoertrag  =  649 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  = 500 kWh
+Eigenverbrauch  = 372 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
+
+Neigungswinkel  =  25° Azimut = 0°
+PV-Bruttoertrag =  749 kWh
+PV-Nettoertrag  =  645 kWh bei System-Wirkungsgrad 86%
+Last Haushalt  = 3000 kWh
+Eigenverbrauch  =  498 kWh
+Eigenverbrauch  = 372 kWh wenn Mo-Fr 8-18 Uhr nur 100 W Verbrauch (Grundlast)
 -->
 
-Trotzdem dafür sprechen kann ein Verbrauchsprofil,
-das stark auf die Morgen- und Abendstunden gespreizt ist. Dagegen spricht
-aber oft die Tendenz zu stärkerer Verschattung durch den flacheren Sonnenstand.
+Also selbst bei einem Verbrauchsprofil, das sehr stark auf die Morgen- und
+Abendstunden gespreizt ist, bringt eine Aufteilung der Modul-Ausrichtung
+keinen Vorteil für den Eigenverbrauch. Dagegen spricht zusätzlich 
+die Tendenz zu stärkerer Verschattung durch den flacheren Sonnenstand.
 Außerdem ist die geteilte Montage meist aufwendiger, und die beiden Richtungen
 verlangen zur Optimierung eine getrennte [MPPT-Regelung](#Wechselrichter).
-Bei einer Orientierung von z.B. 60° und -60° abweichend von Süden
-ist eine Neigung von ca. 30° optimal.\
-Wer aus irgendeinem Grund (meist wegen der Befestigung)
+
+Bei reiner Südausrichtung (0° Azimut), ebenso bei einer Orientierung von +/- 30°
+oder +/- 60° abweichend von Süden, ist für den Eigenverbrauch eine Neigung von
+ungefähr 30° optimal, wobei +/- 10° Winkeldifferenz sehr wenig ausmacht.
+Bei einer Orientierung von +/-90° abweichend von Süden (also rein Ost-West) 
+ist eine Neigung von ungefähr 15° bis 20° am günstigen,
+aber bei 25 bis 30° fast gleich gut (besser gesagt: gleich schlecht).
+
+Wer aus irgendeinem Grund (etwa wegen der Befestigung)
 eine möglichst flache Neigung wählt, sollte trotzdem mindestens 12° verwenden,
 um eine Selbstreinigung der Moduloberflächen durch Niederschlag zu ermöglichen.
 
-Wenn man Solarmodule (z.B. auf dem Dach eines Wohnmobils) in
-waagerechter Lage anbringt, ist man zwar von der Orientierung (Himmelsrichtung)
-unabhängig, aber kommt nach meiner Erfahrung mit billigen flexiblen
+Wenn man Solarmodule (z.B. auf dem Dach eines Wohnmobils) in waagerechter Lage
+anbringt, ist man von der Orientierung (Himmelsrichtung) unabhängig.
+Allerdings kommt nach meiner Erfahrung mit billigen flexiblen
 Modulen selbst mittags an sehr sonnigen Tagen kaum über die Hälfte der
 angegebenen Spitzenleistung hinaus.
 
@@ -784,7 +942,7 @@ Als Besonderheit kann man hier schön sehen, wie sich Eigenverbrauchsquote,
 Autarkiegrad und Amortisation in Abhängigkeit von der Anwesenheit und Kapazität
 eines Stromspeichers ändern.\
 Allerdings sind die Ergebnisse deutlich zu optimistisch. Das liegt vermutlich
-am verwendenten Lastprofil und unrealistisch hoch angenommenen Wirkungsgraden.
+am verwendeten Lastprofil und unrealistisch hoch angenommenen Wirkungsgraden.
 Er macht zu diesen wichtigen Punkten und sonstigen Grundlagen seiner Berechnung
 auf seinen beiden PVTool-Seiten keinerlei Angaben.
 
