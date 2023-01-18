@@ -456,7 +456,11 @@ https://www.net4energy.com/de-de/energie/pv-heizstab#unterschiedliche).
 
 Zum Thema *Stromspeicher* in verschiedensten Formen
 und Nutzungsmöglichkeiten im Zusammenhang mit Photovoltaik
-[hier ein ausführlicher Artikel](https://www.net4energy.com/de-de/stromspeicher).
+[hier ein ausführlicher Artikel](https://www.net4energy.com/de-de/stromspeicher)
+und [hier](
+https://www.wegatech.de/ratgeber/photovoltaik/stromspeicher/speicher-kennzahlen/)
+eine gute Erklärung der wichtigsten Begriffe in diesem Zusammenhang,
+z.B. der *Entladetiefe* und der *Zyklenanzahl*.
 
 ### Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk") {#Balkonkraftwerk}
 
@@ -773,6 +777,16 @@ verwenden kann (und zwar durch Multiplikation mit dem Stromverbrauch).
 Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.
 Für Stromspeicher scheinen sie allerdings recht optimistisch.
 ----->
+
+Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
+auch das [PVTool von "AkkuDoktor"](https://www.akkudoktor.net/pvtool-rechner/).
+Als Besonderheit kann man hier schön sehen, wie sich Eigenverbrauchsquote,
+Autarkiegrad und Amortisation in Abhängigkeit von der Anwesenheit und Kapazität
+eines Stromspeichers ändern.\
+Allerdings sind die Ergebnisse deutlich zu optimistisch. Das liegt vermutlich
+am verwendenten Lastprofil und unrealistisch hoch angenommenen Wirkungsgraden.
+Er macht zu diesen wichtigen Punkten und sonstigen Grundlagen seiner Berechnung
+auf seinen beiden PVTool-Seiten keinerlei Angaben.
 
 ### Ertragsberechnung und Amortisation {#Ertragsberechnung}
 
