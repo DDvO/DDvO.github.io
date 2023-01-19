@@ -138,7 +138,7 @@ verwiesen.
 -->
 <!-- markdown-toc end -->
 
-<!-- pandoc -s --toc index.md -o output.md -->
+<!-- pandoc -s - -toc index.md -o output.md -->
 
 # Inhaltsverzeichnis
 
@@ -258,8 +258,8 @@ und [von Solargis](https://solargis.com/maps-and-gis-data/download)
 geben einen Überblick, welche Summe an Globalstrahlung
 pro Quadratmeter horizontaler Fläche durchschnittlich im Jahr zusammenkommt.
 In Deutschland sind es im Schnitt der Jahre 1991 bis 2020 nach Berechnungen
-des Deutschen Wetterdienstes [1086 kWh/m²]((
-https://www.dwd.de/DE/leistungen/_config/leistungsteckbriefPublication.pdf?view=nasPublication&nn=16102&imageFilePath=229809516383478732006435024051472532772736564919904973098512541260476561304284049751405651717289583982040495528279338628905695385542275499557266335698545506612756450227783221602239879972072419602639476858490617241105588560029118312992778838770436569905341248614940063541966138585151325296158670892628008524799090834749&download=true)).
+des Deutschen Wetterdienstes [1086 kWh/m²](
+https://www.dwd.de/DE/leistungen/_config/leistungsteckbriefPublication.pdf?view=nasPublication&nn=16102&imageFilePath=229809516383478732006435024051472532772736564919904973098512541260476561304284049751405651717289583982040495528279338628905695385542275499557266335698545506612756450227783221602239879972072419602639476858490617241105588560029118312992778838770436569905341248614940063541966138585151325296158670892628008524799090834749&download=true).
 
 [![Bild: Direktstrahlung und Diffusstrahlung](
 Direktstrahlung-Diffusstrahlung.png){:.center width="798"}](
@@ -698,12 +698,12 @@ dass die Beschränkung auch nichttechnisch motiviert ist, etwa
 weil die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
 
 Die Beschränkung leistet auch in gewisser Hinsicht einen Beitrag zum Schutz
-des Haushalts in folgendem sehr selten auftretenden Fall:
+der Stromleitungen im Haus in folgendem sehr selten auftretenden Fall:
 
 [![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
 Solarstrom-Einspeisung](
 Stromleitung_Ueberlastung_Solareinspeisung.jpg){:.right width="380"}](
-https://www.sonnenenergie.de/index.php?id=30&tx_ttnews[tt_news]=254)
+https://www.sonnenenergie.de/index.php?id=30&tx_ttnews%5Btt_news%5D=254)
 Wenn über die Wohnungs-Stromleitung, an der die Einspeisung
 stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
 unter sehr ungünstigen Umständen passieren, dass auf Teilen der Leitung mehr
@@ -934,7 +934,7 @@ verwenden kann (und zwar durch Multiplikation mit dem Stromverbrauch).
 <!--
 Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.
 Für Stromspeicher scheinen sie allerdings recht optimistisch.
------>
+-->
 
 Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
 auch das [PVTool von "AkkuDoktor"](https://www.akkudoktor.net/pvtool-rechner/).
