@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 
-title: Web Pearls by David von Oheimb
+title: David von Oheimb
 author: David von Oheimb
 # email: your-email@example.com
 # description will appear in your document head meta (for Google search results) and in your feed.xml site description.
@@ -27,7 +27,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   A collection of information and hints on various topics --
   Eine Sammlung von Infos und Tipps zu verschiedenen Themen.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://perlen.DavOh.de" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "https://perlen.DavOh.de"
+url: "https://David.von-Oheimb.de"
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
@@ -55,3 +56,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+# https://talk.jekyllrb.com/t/minima-header-html-functionality/6721
+# used in _includes/header.html
+
+header_pages:
+- about.md
