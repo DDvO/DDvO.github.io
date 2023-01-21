@@ -88,7 +88,7 @@ https://smartgrids-bw.net/public/uploads/2020/04/IBZ-Leitfaden_Balkon-PV-Online.
 und die ["Fachinformation" des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
 verwiesen.
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<!-- markdown-toc start - Run M-x markdown-toc-refresh-toc -->
 <!--
 **Inhaltsverzeichnis**
 
@@ -112,6 +112,7 @@ verwiesen.
             - [Speichersimulation {#Speichersimulation}](#speichersimulation-speichersimulation)
             - [Simulation auf Minutenbasis {#Minutenbasis}](#simulation-auf-minutenbasis-minutenbasis)
         - [Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}](#hausnetzeinspeisung-mit-batteriepuffer-batteriepuffer)
+            - [Regelungsstrategien für Stromspeicher {#Regelungsstrategien}](#regelungsstrategien-fuer-stromspeicher)
             - [Speicherbatterie {#Speicherbatterie}](#speicherbatterie-speicherbatterie)
             - [Ladung der Batterie {#Batterieladung}](#batterieladung-batterieladung)
             - [Einspeisung aus der Batterie {#Einspeisung}](#einspeisung-aus-der-batterie-einspeisung)
@@ -164,6 +165,7 @@ verwiesen.
         - [Speichersimulation](Speichersimulation)
         - [Simulation auf Minutenbasis](#Minutenbasis)
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
+        - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
         - [Speicherbatterie](#Speicherbatterie)
         - [Ladung der Batterie](#Batterieladung)
         - [Einspeisung aus der Batterie](#Einspeisung)
@@ -772,6 +774,7 @@ typischerweise überhaupt so viel Strom verbraucht, dass sich die Drosselung bei
 Eigenverbrauch bemerkbar macht, und die Menge dieses Verbrauchs, bei dem also
 mehr als 528 W Leistung beansprucht werden, ist typischerweise ziemlich gering.
 
+[//]: #
 <!--
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564
 88%: -peff 93.617
@@ -789,7 +792,7 @@ Eigenverbrauchsverlust      =    6 kWh während 93 h durch Drosselung auf 564 W
 Netzeinspeisung             =  396 kWh
 Eigenverbrauchsanteil       =   59 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
------->
+-->
 
 Hingegen bieten 1000 statt 600 Wp PV-Nennleistung bei mäßigen Zusatzkosten eine
 sinnvolle Reserve für schwächere Sonnenstunden, wodurch der Netto-Ertrag (trotz
@@ -813,7 +816,7 @@ Eigenverbrauchsverlust      =    0 kWh während 0 h durch Drosselung auf 564 W
 Netzeinspeisung             =  187 kWh
 Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
------->
+-->
 
 #### Stromzähler und Rücklaufsperre {#Stromzähler}
 
@@ -964,7 +967,7 @@ Für Stromspeicher scheinen sie allerdings recht optimistisch.
 -->
 
 Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
-auch das [PVTool von "AkkuDoktor"](https://www.akkudoktor.net/pvtool-rechner/).
+auch das [PVTool von Andreas Schmitz ("AkkuDoktor")](https://www.akkudoktor.net/pvtool-rechner/).
 Als Besonderheit kann man hier schön sehen, wie sich Eigenverbrauchsquote,
 Autarkiegrad und Amortisation in Abhängigkeit von der Anwesenheit und Kapazität
 eines Stromspeichers ändern.\
@@ -993,6 +996,7 @@ Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh.
 Der Eigendeckungsanteil liegt damit bei 15% des Verbrauchs,
 der Eigenverbrauchsanteil bei 70% des Ertrags.
 
+[//]: #
 <!-- ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
 ergibt 457 kWh, aber noch etwas Lastspitzen-Abzug
 88%: -peff 93.617
@@ -1111,117 +1115,61 @@ etwa 3 bis 6% zu optimistisch, auf Minutenbasis nur bis etwa 1%.
 
 ### Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}
 
-[![Bild: Balkonkraftwerk mit Speicher - Solaranlage](
-Balkonkraftwerk_mit_Speicher.jpg){:.right width="350"}](
-https://www.youtube.com/watch?v=f-iz6WE8GD8)
+![Bild: Balkonkraftwerk mit Pufferbatterie und Inselwechselrichter](
+Pufferbatterie_und_Inselwechselrichter.png){:.right width="400"
+style="margin-left: 40px}
 Statt den Solarstrom direkt einzuspeisen, kann man in auch in einer aufladbaren
 Batterie zwischenspeichern und von dort nach Bedarf zeitlich versetzt über einen
 [netzgekoppelten Wechselrichter](#Netzwechselrichter) ins Hausnetz einspeisen.
 Diese Betriebsart kann man allgemein als *Strompufferung* bezeichnen.
-Die einfachsten Ausprägungen davon sind die *Konstanteinspeisung* und (bei
-gezielter Einspeisung zwischen Sonnenunter- und Aufgang) die *Nachteinspeisung*.
-Sie maximiert den Nutzen der PV-Anlage für den eigenen Stromverbrauch,
-lohnt sich finanziell aber nur, wenn man die Batterie schon aus anderen Gründen
-hat, z.B. für eine Notstromversorgung oder als Fahrzeugbatterie.
+Ihre einfachsten Ausprägungen sind die [*Konstanteinspeisung*](#Einspeisung),
+wobei eine etwas optimierte Variante *Nachteinspeisung* genannt wird.
+
+Die Strompufferung maximiert den Nutzen der PV-Anlage für den eigenen
+Stromverbrauch, lohnt sich finanziell aber kaum, außer wenn man die Batterie
+sehr günstig bekommt oder schon aus anderen Gründen hat, z.B. für eine
+Notstromversorgung (mit Inselwechselrichter) oder als Fahrzeugbatterie.
 Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
 
-#### Speicherbatterie {#Speicherbatterie}
+#### Regelungsstrategien für Stromspeicher {#Regelungsstrategien}
 
-Zu berücksichtigen ist, dass die Zwischenspeicherung des Stroms je nach Art der
-[Batterie](#Speicher) Verluste von etwa 5 bis 20% mit sich bringt -- bei LiFePO4
-unter 10%. Auch kann man nicht die volle Nennkapazität entnehmen,
-ohne dass die Akkuzellen stark leiden (d.h. schnell an Kapazität verlieren).
-Bei LiFePO4 sind immerhin 90% Entladetiefe problemlos möglich.
+Für die Einsparung von Stromkosten wäre folgende Lade- und Entladeregelung
+ideal:
+* Solange der Speicher nicht voll ist, erfolgt die Ladung
+immer genau so stark wie gerade an PV-Leistung übrig ist,
+also aktuell nicht anderweitig verbraucht wird.
+Damit kann man die sogenannte *Nulleinspeisung* realisieren,
+also dass kein überschüssiger Strom ins externe Netz fließt.
+* Solange der Speicher nicht leer ist, erfolgt die Entladung
+immer genau so stark wie gerade an Last nicht von der PV-Leistung abdeckt wird.
 
-Als Faustformel für die Dimensionierung [empfiehlt die Verbraucherzentrale NRW](
-https://www.verbraucherzentrale.nrw/wissen/energie/lohnen-sich-batteriespeicher-fuer-photovoltaikanlagen-24589)
-etwa 1 kWh pro 1000 kWh Jahresstromverbrauch, also gut 1/3 des Tagesverbrauchs.
-Wer mit der Speicherbatterie zusätzlich eine Notstromversorgung über eine
-[Inselanlage](#Inselanlage) realisieren möchte, wird die Kapazität je nach
-Anwendungsszenario eher größer wählen.
+[//]: #
+Zur Schonung der Batterie solle dabei
+* ein gewisser Ladestrom und ein gewisser Entladestrom nicht überschritten
+werden, wobei die verwendeten Komponenten da ohnehin Grenzen setzen, und
+* die Regelung zeitlich geglättet werden, so dass bei sich schnell ändernder
+Erzeugung und Last nicht ständig zwischen Auf- und Entladung umgeschaltet wird,
 
-Die Forschungsgruppe Solarspeichersysteme der HTW Berlin
-gibt [genauere Empfehlungen und Begründungen](
-https://solar.htw-berlin.de/publikationen/auslegung-von-solarstromspeichern/).
-Kurz zusammengefasst:
-Ein Batteriespeicher ist nur sinnvoll, wenn die PV-Leistung mind. 0,5 kWp
-je 1000 kWh Jahresstromverbrauch beträgt. Als Kapazität empfiehlt sie
-maximal 1,5 kWh je 1000 kWh Jahresverbrauch und
-maximal 1,5 kWh je kWp PV-Nominalleistung.
+[//]: #
+wobei diese Zusatzbedingungen allerdings gewisse Verluste mit sich bringen.
 
+Das alles ist reglungstechnisch ziemlich aufwendig und benötigt jedenfalls
+einen Sensor zur Erfassung des momentanen Haushalts-Stromverbrauchs.
+Es lohnt sich eher nur für größere PV-Anlagen.
 
-#### Ladung der Batterie {#Batterieladung}
-
-Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
-über einen [Solar-Laderegler](#Laderegler). Dies nennt man [*DC-Kopplung*](
-https://www.photovoltaikforum.com/core/article/7-pv-und-batteriespeicher-besser-ac-oder-dc-gekoppelt/),
-weil der Gleichstrom der PV-Module nicht umständlich und verlustreich
-zwischendurch in Wechselstrom hin- und her-gewandelt wird.
-Ein weiterer Vorteil ist (mit einem Inselwechselrichter) die Notstromfähigkeit.
-Hingegen ist der einzige Vorteil der *AC-Kopplung* übers Haus-Wechselstromnetz
-und ein 230 V-Ladegerät eine große Flexibilität bei der Wahl der Komponenten,
-auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten.
-
-#### Einspeisung aus der Batterie {#Einspeisung}
-
-Für die Einspeisung aus der Batterie bietet sich ein [regelbarer
-Netzwechselrichter](https://de.aliexpress.com/item/1005001445871590.html)
-an wie in [diesem genialen Video von
-Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8).
-Wenn man aber schon einen Solar-Wechselrichter hat und diesen verwenden
-möchte, könnte es im einfachsten Fall genügen, ihn direkt mit der
-Batterie zu verbinden und über einen Schalter manuell zu
-steuern --- allerdings nur, wenn die Batteriespannung (z.B. 24 V) höher
-ist als die minimale Eingangsspannung des Wechselrichters und dieser mit
-seiner vollen Leistung betrieben werden kann
-(z.B. mit einem auf 300 W begrenzten PV-Modul-Eingang).\
-Um die Stromstärke regelbar zu drosseln, kann man ein
-Labornetzteil verwenden, evtl. mit DC-DC-Wandler wie das [Joy-IT DPM8624](
-https://www.idealo.de/preisvergleich/OffersOfProduct/202115817)
-aus dem [Video von Andreas Schmitz](
-https://www.youtube.com/watch?v=yOcoux9IbzM) oder einen günstigen
-[Gleichspannungswandler](#Gleichspannungswandler) mit regelbarer
-Strombegrenzung (engl. _limiter_).
-
-Wenn man zudem bereits eine Powerstation hat, kann man zwischen ihren
-Wechselstrom-Ausgang und den Netzwechselrichter ein regelbares Netzteil hängen,
-siehe [sein Nachfolge-Video](https://www.youtube.com/watch?v=ZXHAXrJS9CU), was
-allerdings zu unnötigen Verlusten durch Hin- und Her-Wandlung des Stroms führt.
-
-Im Sinne der Stromkosten-Optimierung wäre es schön, wenn die Einspeisung
-der gespeicherten Energie automatisch so stark erfolgt, wie sie jeweils gerade
-benötigt wird, aber das wäre reglungstechnisch eine ziemliche Herausforderung.
-Viel einfachster und für die meisten Anwendungsfälle ausreichend ist aber,
+Für Stecker-Solaranlagen ist es viel einfacher
+und für die meisten Anwendungsfälle ausreichend,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
-so abzustimmen, dass lediglich die Grundlast (bzw. ein Großteil davon)
-des Haushalts, z.B. 50 bis 100 W, für eine Dauer von 1-2 Tagen abgedeckt wird.
-Das kann man bei Bedarf auch mit einer Zeitschaltuhr kombinieren.
-Diese Betriebsart wird auch *Nachteinspeisung* genannt.
-
-[![Bild: Balkonkraftwerk mit Speicher - PV&E](
-Balkonkraftwerk_mit_Speicher.png){:.right width="400"}](
-https://www.youtube.com/watch?v=N6NqMXQHP2I)
-Auf jeden Fall muss für die Situation, dass die Batterieladung zur Neige geht
-(bei LiFePO4 spätestens bei 90% Entladung) eine automatische Abschaltung
-vorhanden sein, damit die Batterie nicht durch Tiefentladung geschädigt wird.
-Falls man für den Notfall stets eine gewisse Strommenge zur Verfügung halten
-möchte, sollte die Abschaltung schon entsprechend früher erfolgen.\
-Wenn der Solar-Laderegler einen Lastausgang mit einstellbarer Schutzabschaltung
-hat, wie z.B. beim Victron BlueSolar, kann man diesen so verwenden, wie in
-[diesem schönen Video von PV&E](https://www.youtube.com/watch?v=N6NqMXQHP2I)
-gezeigt. Zudem kann dessen Straßenlichtfunktion für die zeitliche Steuerung
-genutzt werden.\
-Ansonsten kann man zur Regelung einen recht simplen
-[programmierbaren Batteriespannungswächter](#Spannungswächter) verwenden, wie im
-[Video von Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8) vorgeführt.
-Er wird so eingestellt, dass bei es beim Erreichen einer Batteriespannung, die
-z.B. annähernd einer Vollladung entspricht, den Wechselrichter einschaltet und
-z.B. in der Nähe der Batterie-Entladeschlussspannung diesen wieder ausschaltet.
-Damit wird die über die sonnenreiche Tageszeit gesammelte Solarenergie
-auch über sonnenarme Zeiten (solange die Ladung reicht, typischerweise
-bis zum nächsten Vormittag) gleichmäßig abgegeben,
-mehr oder weniger ohne Strom nach extern zu verschenken.
+so abzustimmen, dass lediglich ein Großteil der Grundlast des Haushalts,
+z.B. 50 bis 100 W, für eine Dauer von etwa 1-2 Tagen abgedeckt wird.
+Wenn man diese *Konstanteinspeisung* noch mit einer Zeitschaltuhr (oder einem
+Helligkeitssensor) zur Beschränkung zwischen Sonnenunter- und Aufgang
+kombiniert, bekommt man eine *Nachteinspeisung*.\
+Ziel der Konstanteinspeisung ist, die über die sonnenreiche Tageszeit
+gesammelte Solarenergie auch über sonnenarme Zeiten  gleichmäßig abgegeben
+(solange die Ladung reicht, zumindest bis zum nächsten Vormittag),
+und dabei möglichst wenig Strom nach extern zu verschenken.
 
 ![Bild: Wasserspeicher als Analogie](Wasserspeicher.jpg){:.right width="400"
 style="margin-left: 50px; margin-right: 50px"}
@@ -1250,6 +1198,127 @@ kommen (z.B. optisch über die Ladekontrollleuchte). Es kann aber auch von der
 Batteriespannung abhängig gemacht werden, wobei es dann auch vorkommen wird,
 dass Laderegler und Wechselrichter gleichzeitig aktiv sind. Ob das eher stört
 oder sogar vorteilhaft wäre, dürfte von den verwendeten Geräten abhängig sein.
+
+#### Speicherbatterie {#Speicherbatterie}
+
+Zu berücksichtigen ist, dass die Zwischenspeicherung des Stroms je nach Art der
+[Batterie](#Speicher) Verluste von etwa 5 bis 20% mit sich bringt -- bei LiFePO4
+unter 10%. Auch kann man nicht die volle Nennkapazität entnehmen,
+ohne dass die Akkuzellen stark leiden (d.h. schnell an Kapazität verlieren).
+Bei LiFePO4 sind immerhin 90% Entladetiefe problemlos möglich.
+
+Als Faustformel für die Dimensionierung [empfiehlt die Verbraucherzentrale NRW](
+https://www.verbraucherzentrale.nrw/wissen/energie/lohnen-sich-batteriespeicher-fuer-photovoltaikanlagen-24589)
+etwa 1 kWh pro 1000 kWh Jahresstromverbrauch, also gut 1/3 des Tagesverbrauchs.
+Wer mit der Speicherbatterie zusätzlich eine Notstromversorgung über eine
+[Inselanlage](#Inselanlage) realisieren möchte, wird die Kapazität je nach
+Anwendungsszenario eher größer wählen.
+
+Die Forschungsgruppe Solarspeichersysteme der HTW Berlin
+gibt [genauere Empfehlungen und Begründungen](
+https://solar.htw-berlin.de/publikationen/auslegung-von-solarstromspeichern/).
+Kurz zusammengefasst:
+Ein Batteriespeicher ist nur sinnvoll, wenn die PV-Leistung mind. 0,5 kWp
+je 1000 kWh Jahresstromverbrauch beträgt. Als Kapazität empfiehlt sie
+maximal 1,5 kWh je 1000 kWh Jahresverbrauch und
+maximal 1,5 kWh je kWp PV-Nominalleistung.
+
+#### Ladung der Batterie {#Batterieladung}
+
+Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
+über einen [Solar-Laderegler](#Laderegler). Dies nennt man [*DC-Kopplung*](
+https://www.photovoltaikforum.com/core/article/7-pv-und-batteriespeicher-besser-ac-oder-dc-gekoppelt/),
+weil der Gleichstrom der PV-Module nicht umständlich und verlustreich
+zwischendurch in Wechselstrom hin- und her-gewandelt wird.
+Ein weiterer Vorteil ist (mit einem Inselwechselrichter) die Notstromfähigkeit.
+Hingegen ist der einzige Vorteil der *AC-Kopplung* übers Haus-Wechselstromnetz
+und ein 230 V-Ladegerät eine große Flexibilität bei der Wahl der Komponenten,
+auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten.
+
+#### Einspeisung aus der Batterie {#Einspeisung}
+
+Wenn man schon einen Solar-Wechselrichter hat und diesen für eine ganz einfache
+Netzeinspeisung verwenden möchte, könnte es schon genügen, ihn (über eine
+Sicherung und soweit nötig eine automatische Unterspannungsabschaltung)
+mit der Batterie zu verbinden und nach Bedarf über einen Schalter zu steuern ---
+allerdings nur, wenn die Batteriespannung gut im Eingangsspannungsbereich des
+Wechselrichters liegt und dieser mit seiner vollen oder limitierten Leistung
+betrieben werden kann. Dazu kann man beispielsweise einen auf 300 W begrenzten
+PV-Eingang nutzen oder die Drosselung in die Firmware programmieren (lassen),
+wie es z.B. der Kundendienst von Deye (Mail an service@deye.com.cn) anbietet.\
+Wenn der Wechselrichter mehrere Eingänge hat, kann man an die übrigen Eingänge
+auch noch direkt PV-Module anschließen,
+deren Ertrag dann nicht über die Batterie gepuffert wird.
+
+Wer zudem bereits eine Powerstation hat,
+kann zwischen ihren Wechselstrom-Ausgang und den Netzwechselrichter ein
+regelbares Netzteil hängen, wie [von Andreas Schmitz vorgeschlagen](
+https://www.youtube.com/watch?v=ZXHAXrJS9CU),
+was allerdings zu Zusatz-Verlusten durch Hin- und Her-Wandlung des Stroms führt.
+
+![Bild: Netzwechselrichter aus Batterie gespeist](
+Netzwechselrichter-aus-Batterie-gespeist.jpg){:width="600" .right}
+Besser ist allerdings, die Einspeisung regelbar zu gestalten.
+Dazu bietet sich ein Netzwechselrichter wie von
+[Soyosource](https://de.aliexpress.com/item/1005001445871590.html) bzw.
+[PMSUN](https://www.amazon.de/PMSUN-netzgekoppelter-Wechselrichter-einstellbare-Batterieentladung/dp/B0B4RZNHF3)
+an, der für die Verwendung an einer Batterie als Quelle ausgelegt ist
+und dessen Ausgangsleistung innerhalb gewisser Grenzen manuell regelbar ist.
+
+Um die Stromstärke regelbar zu drosseln, kann man dem Solar-Wechselrichter
+auch ein einen günstigen [Gleichspannungswandler](#Gleichspannungswandler)
+mit regelbarer Strombegrenzung (engl. _limiter_) vorschalten.
+
+{:style="clear:both"}
+
+[![Bild: Balkonsolar mit Akku - AkkuDoktor](
+Balkonsolar_AkkuDoktor.png){:.center}](
+https://www.youtube.com/watch?v=yOcoux9IbzM)
+Noch eleganter und flexibler, aber deutlich aufwendiger ist die Verwendung eines
+elektronisch steuerbaren DC-DC-Wandlers, z.B. des [Joy-IT DPM8624](
+https://www.idealo.de/preisvergleich/OffersOfProduct/202115817),
+wie in einem [Video von Andreas Schmitz](
+https://www.youtube.com/watch?v=yOcoux9IbzM) vorgeführt.
+Dann lässt sich die Einspeisung sogar abhängig vom realen Stromverbrauch regeln
+(allerdings mit einer gewissen Verzögerung), und etwa über einen entsprechend
+programmiert Raspberry Pi, der die Verbrauchsdaten über den sog.
+[„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
+oder [„Powerfox“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
+aus dem Haushalts-Stromzähler übermittelt bekommt -- sofern ein smarter
+Stromzähler verbaut ist und man Zugang zu diesem hat.
+
+{:style="clear:both"}
+
+[![Bild: Balkonkraftwerk mit Speicher - PV&E](
+Balkonkraftwerk_mit_Speicher.png){:.right width="380"
+style="margin-left: 40px}](
+https://www.youtube.com/watch?v=N6NqMXQHP2I)
+Auf jeden Fall muss für die Situation, dass die Batterieladung zur Neige geht
+(bei LiFePO4 spätestens bei 90% Entladung) eine automatische Abschaltung
+vorhanden sein, damit die Batterie nicht durch Tiefentladung geschädigt wird.
+Wenn für den Notfall stets eine gewisse Strommenge zur Verfügung bleiben soll,
+muss die Abschaltung schon entsprechend früher erfolgen.
+
+Wenn der Solar-Laderegler einen Lastausgang mit einstellbarer Schutzabschaltung
+hat, wie z.B. beim Victron BlueSolar, kann man diesen so verwenden, wie in
+[diesem schönen Video von PV&E](https://www.youtube.com/watch?v=N6NqMXQHP2I)
+gezeigt. Zudem kann dessen Straßenlichtfunktion für die zeitliche Steuerung
+genutzt werden.
+
+{:style="clear:both"}
+
+[![Bild: Balkonkraftwerk mit Speicher - Solaranlage](
+Balkonkraftwerk_mit_Speicher.jpg){:.right width="350"}](
+https://www.youtube.com/watch?v=f-iz6WE8GD8)
+Um die Einspeisung automatisch in Abhängigkeit vom Ladezustand der Batterie
+ein- und auszuschalten, kann man auch einen recht simplen
+[programmierbaren Batteriespannungswächter](#Spannungswächter) verwenden, wie im
+[Video von Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8) vorgeführt.
+
+Der Spannungswächter wird so eingestellt,
+dass er beim Erreichen einer Batteriespannung, die
+z.B. annähernd einer Vollladung entspricht, den Wechselrichter einschaltet und
+z.B. in der Nähe der Batterie-Entladeschlussspannung diesen wieder ausschaltet.
 
 ### Inselanlage (mit Batteriespeicherung) {#Inselanlage}
 
@@ -1823,3 +1892,35 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 -   Gleichspannungswandler mit Strombegrenzung [300W 20A DC DC Wandler
     Step Down Wandler Konverter Spannungsregler, einstellbar](
     https://www.ebay.de/itm/385099914040), ca. 12€
+
+<!--
+LocalWords: title keywords toc start refresh zusammenfassung abgrenzung pv end
+LocalWords:  inhaltsverzeichnis photovoltaik sonneneinstrahlung
+LocalWords:  nennleistung jahresertrag ausrichtung solarmodulen
+LocalWords:  nutzungsmöglichkeiten nutzung netzeinspeisung fuer
+LocalWords:  stecker solaranlage balkonkraftwerk beschränkung
+LocalWords:  kappung kappungsverlust drosselung stromzähler md
+LocalWords:  rücklaufsperre stromverbrauch haushalt berechnung
+LocalWords:  verbrauchsmessung eigenverbrauch eigendeckung ref
+LocalWords:  ertragsberechnung monatsbasierte amortisation of
+LocalWords:  rechner speichersimulation simulation minutenbasis
+LocalWords:  hausnetzeinspeisung batteriepuffer stromspeicher
+LocalWords:  regelungsstrategien speicherbatterie einspeisung
+LocalWords:  batterieladung batterie inselanlage kombination px
+LocalWords:  batteriespeicherung auswahl komponenten anschluss
+LocalWords:  solarmodule montage solar regler wechselrichter pl
+LocalWords:  netzwechselrichter gleichspannungswandler beispiel
+LocalWords:  inselwechselrichter laderegler hybridgeräte kombi
+LocalWords:  speicherbatterien dimensionierung strukturierung
+LocalWords:  tiefsetzsteller spannungswächter konfigurationen
+LocalWords:  mobilanlage steckeranlage anlage kombianlage index
+LocalWords:  pandoc output calculation power width style margin
+LocalWords:  left right irradiance GHI buehneTop clear both png
+LocalWords:  potential csv grid tie inverter tmy peff ieff curb
+LocalWords:  standby xls jpg Balkonsolar center limiter off to
+LocalWords:  blackout brownout panels busbars shingle panel up
+LocalWords:  maximum point tracking sine wave efficiency boost
+LocalWords:  converter step consumption pdf balancer equalizer
+LocalWords:  buck down SA SZ DW MQ EC LF small LY KREE Battery
+LocalWords:  Charger Discharger Board Under Over Voltage Protection
+-->
