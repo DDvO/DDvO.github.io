@@ -404,9 +404,9 @@ ausgeglichen, wenn man im Haushalt an Arbeitstagen von 8 bis 18 Uhr
 nur Grundlast von z.B. 100 W hat.
 
 Eine Reihe [genauer Simulationen](#Minutenbasis) für einen Haushalt
-in Süddeutschland mit 3000 kWh Jahresverbrauch mit einer Stecker-PV-Anlage mit
-zwei 300 Wp PV-Modulen und Systemwirkungsgrad 88% liefert für den Eigenverbrauch
-folgende Ergebnisse:
+in Süddeutschland mit 3000 kWh Jahresverbrauch mit einer Stecker-PV-Anlage
+mit zwei 300 Wp PV-Modulen und Gesamtsystem-Wirkungsgrad 86%
+liefert für den Eigenverbrauch (EV) folgende Ergebnisse:
 
 |Azimut |(opt.) Neigungswinkel|Nettoertrag|EV normales Profil|EV tagsüber nur Grundlast|
 |------:|----------------:|----------:|-------------:|-----------------:|
@@ -756,41 +756,64 @@ Obwohl der Netto-Ertrag durch diese ungeschickte Form der Abregelung also oft
 sogar unnötig stark verringert wird, ist der Effekt auf den nutzbaren Ertrag
 längst nicht so groß wie man meinen könnte.
 
-Beispielsweise bei 1000 Wp Modulen, die je nach Standort und Ausrichtung
-zu einem Ertrag von etwa 1215 kWh brutto pro Jahr führen können,
-also bei einem Wechselrichter-Wirkungsgrad von 88% etwa 1070 kWh Netto-Ertrag,
-macht der effektive Verlust durch eine Begrenzung auf 600 W Eingangsleistung
-(also 528 W Ausgangsleistung) des Wechselrichters
-nur ungefähr 10 kWh aus. Dies erklärt sich durch zwei Effekte:
-* Die Abregelung findet zwar während etwa 800 Sonnenstunden im Jahr statt, aber
-die Differenz auf den sonst möglichen Netto-Ertrag ist moderat: etwa 110 kWh.
-* Nur während in Summe ca. 120 Stunden wird zeitgleich zu dieser Abregelung
+Nehmen wir beispielsweise eine PV-Anlage mit 1000 Wp, die je nach Standort
+und Ausrichtung zu einem Ertrag von etwa 1215 kWh brutto pro Jahr führen kann,
+also bei einem PV-System-Wirkungsgrad von 92%
+und einem Wechselrichter-Wirkungsgrad von 94% etwa 1050 kWh Netto-Ertrag.
+Dann **macht der effektive Verlust durch Drosselung auf 600 W** Eingangsleistung
+des Wechselrichters (also 564 W Ausgangsleistung bei den 94% Wirkungsgrad)
+**nur ungefähr 10 kWh aus**. Dies erklärt sich durch zwei Effekte:
+* Die Abregelung findet zwar während etwa 650 Sonnenstunden im Jahr statt, aber
+die Differenz auf den sonst möglichen Netto-Ertrag ist moderat: etwa 80 kWh.
+Diese Zahl ist schon relativ klein, und sie wird durch folgenden Effekt nochmal
+deutlich kleiner:
+* Nur während in Summe etwa 90 Stunden wird zeitgleich zu dieser Abregelung
 typischerweise überhaupt so viel Strom verbraucht, dass sich die Drosselung beim
 Eigenverbrauch bemerkbar macht, und die Menge dieses Verbrauchs, bei dem also
 mehr als 528 W Leistung beansprucht werden, ist typischerweise ziemlich gering.
+
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -curb 528 -eff 88 -tmy
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564
+88%: -peff 93.617
 
 PV-Nominalleistung          = 1000 Wp
 Bruttoleistung max.         =  994 W am TMY-04-30 um 11:00 h
 PV-Bruttoertrag             = 1216 kWh
-PV-Nettoertrag              =  957 kWh bei System-Wirkungsgrad 88%
-PV-Ertragsverlust           =  113 kWh während 800 h durch Drosselung auf 528 W
-Ertragsanteil 9-15 Uhr MEZ  =   69 %
+PV-Nettoertrag              =  973 kWh bei PV-System-Wirkungsgrad 92%, Wechselrichter-Wirkungsgrad 94%
+PV-Ertragsverlust           =   78 kWh während 653 h durch Drosselung auf 564 W
+Ertragsanteil 9-15 Uhr MEZ  =   70 %
 
 Last durch Haushalt         = 3000 kWh
 Eigenverbrauch mit Drossel  =  577 kWh
-Eigenverbrauchsverlust      =    9 kWh während 123 h durch Drosselung auf 528 W
-Netzeinspeisung             =  379 kWh
-Eigenverbrauchsanteil       =   60 % des Nettoertrags (Nutzungsgrad)
+Eigenverbrauchsverlust      =    6 kWh während 93 h durch Drosselung auf 564 W
+Netzeinspeisung             =  396 kWh
+Eigenverbrauchsanteil       =   59 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 ------>
 
 Hingegen bieten 1000 statt 600 Wp PV-Nennleistung bei mäßigen Zusatzkosten eine
 sinnvolle Reserve für schwächere Sonnenstunden, wodurch der Netto-Ertrag (trotz
-Kappung) ca. 315 kWh höher liegt, der Eigenverbrauch ca. 145 kWh höher im Jahr.
+Kappung) ca. 340 kWh höher liegt, der Eigenverbrauch ca. 135 kWh höher im Jahr.
 Die Amortisationszeit der Gesamt-Anlage bleibt dabei ziemlich gleich, und auf
 lange Sicht ergibt sich eine entsprechend höhere Kostenersparnis als mit 600 Wp.
+
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 600 -curb 564 -tmy -peff 92 -ieff 94
+
+PV-Nominalleistung          =  600 Wp
+Bruttoleistung max.         =  597 W am TMY-04-30 um 11:00 h
+PV-Bruttoertrag             =  729 kWh
+PV-Nettoertrag              =  631 kWh bei PV-System-Wirkungsgrad 92%, Wechselrichter-Wirkungsgrad 94%
+PV-Ertragsverlust           =    0 kWh während 0 h durch Drosselung auf 564 W
+Ertragsanteil 9-15 Uhr MEZ  =   72 %
+
+Last durch Haushalt         = 3000 kWh
+Eigenverbrauch mit Drossel  =  444 kWh
+Eigenverbrauchsverlust      =    0 kWh während 0 h durch Drosselung auf 564 W
+Netzeinspeisung             =  187 kWh
+Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
+------>
 
 #### Stromzähler und Rücklaufsperre {#Stromzähler}
 
@@ -963,15 +986,30 @@ was aber praktisch kaum der Fall ist,
 und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
 ergibt sich eine Amortisation der Anschaffungskosten in nur 2,5 Jahren.
 * Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
-Jahres-Bruttoertrag von etwa 765 kWh, was bei 88% System-Wirkungsgrad
-ca. 670 kWh Netto-Einspeisung des Wechselrichters an der Steckdose bedeutet.
+Jahres-Bruttoertrag von etwa 765 kWh, was bei 86% Gesamtsystem-Wirkungsgrad
+ca. 660 kWh Netto-Einspeisung des Wechselrichters an der Steckdose bedeutet.
 Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und einem typischen
-Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 450 kWh.
+Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh.
 Der Eigendeckungsanteil liegt damit bei 15% des Verbrauchs,
 der Eigenverbrauchsanteil bei 70% des Ertrags.
-<!--./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -eff 88
-ergibt 465 kWh, aber noch etwas Lastspitzen-Abzug
-Bei Lastprofil_4685_kWh.csv  507 kWh -->
+
+<!-- ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
+ergibt 457 kWh, aber noch etwas Lastspitzen-Abzug
+88%: -peff 93.617
+
+PV-Nominalleistung          =  600 Wp
+Bruttoleistung max.         =  656 W am 2020-03-23 um 11:00 h
+PV-Bruttoertrag             =  765 kWh
+PV-Nettoertrag              =  662 kWh bei PV-System-Wirkungsgrad 92%, Wechselrichter-Wirkungsgrad 94%
+Ertragsanteil 9-15 Uhr MEZ  =   73 %
+
+Last durch Haushalt         = 3000 kWh
+Eigenverbrauch              =  460 kWh
+Netzeinspeisung             =  201 kWh
+Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
+
+Bei Lastprofil_4685_kWh.csv Eigenverbrauch 502 kWh -->
 Damit kann man bei 40 Ct/kWh jährlich ungefähr 180€ Stromkosten einsparen.
 Bei einer Investition von 660€ ergibt sich (ohne Berücksichtigung
 von Kapitalkosten u.ä.) eine Amortisationszeit von 3,7 Jahren.\
