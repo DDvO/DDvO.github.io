@@ -338,29 +338,30 @@ Die Leistung von Solarmodulen hängt vor Allem von der Direktstrahlung ab ---
 und zwar nicht nur von ihrer Intensität, sondern auch davon, wie sehr ihre
 Fläche auf den aktuellen Sonnenstand ausgerichtet ist.
 Dabei geht es um die zur Modulfläche senkrechte Komponente der Direktstrahlung,
-also um den Faktor Kosinus der Winkelabweichung vom Lot auf die Modulfläche.\
+also um den Faktor Kosinus der Winkelabweichung vom Lot auf die Modulfläche.
+
 Mit der Diffusstrahlung, welche
 wie oben erwähnt einen sehr großen Anteil an der Gesamtstrahlung ausmacht,
-können Solarzellen leider wenig anfangen,
-(wobei für diesen effektiv geringen Anteil eine flache Anordnung optimal wäre).
+können Solarzellen leider nicht sehr viel anfangen.
+Für diesen effektiv geringen Anteil wäre eine waagerechte Anordnung optimal.
 
 ![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_PV-Potential.png){:width="392" }
 ![Bild: Ertragsanteil nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_Ertragsanteil.png){:width="385" .right}
-Den [besten Jahresertrag](
+Den [besten Jahres-Gesamtertrag](
 https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
 bekommt man in süddeutschen Breitengraden bei Orientierung nach Süden
 und mit ca. 38° Neigung (also Winkel relativ zur Waagerechten).
 Genaueres kann man z.B. über
 [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/) (oder einfacher über
 [Solarserver](https://www.solarserver.de/pv-anlage-online-berechnen/))
-standortspezifisch anhand von Geo- und Klimadaten berechnen/simulieren.
-Allerdings kommt es auf ein paar Grad hin oder her nicht an.
+standortspezifisch anhand von Geo- und Klimadaten berechnen/simulieren,
+wobei es auf ein paar Grad hin oder her nicht ankommt.
 
 ![Bild: Jahresertrag nach Ausrichtung von Solarmodulen](
 Jahresertrag_nach_Ausrichtung.png){:.center}
-Diese Grafik zeigt sehr schön die relative Änderung des Jahresertrages
+Diese Grafik zeigt sehr schön die relative Änderung des Jahres-Gesamtertrages
 einer PV-Anlage mit zunehmender Winkel-Abweichung von Süden (*Azimut*)
 abhängig vom Neigungswinkel, wenn der optimale Neigungswinkel 35° beträgt.
 Sie wurde von [bonotos](https://www.bonotos.com/) erzeugt,
@@ -369,10 +370,11 @@ https://www.fh-muenster.de/eti/downloads/personen/professoren/mertens/frei/2022_
 von der FH Münster.
 
 Bei PV-Ertrags-Simulationen ist zu beachten, dass dabei üblicherweise
-der Jahres-Gesamtertrag betrachtet und optimiert wird.
-Dieser unterliegt der Annahme, dass man den zur jeweiligen Tageszeit
-(und Jahreszeit) erzeugten Strom auch voll nutzen kann, sei es durch
-Eigenverbrauch, Zwischenspeicherung (was allerdings auch Verluste bringt)
+**der Jahres-Gesamtertrag** betrachtet und optimiert wird.
+Dieser **unterliegt der Annahme, dass man den zur jeweiligen Tageszeit
+(und Jahreszeit) erzeugten Strom auch immer gleichmäßig nutzen kann**,
+sei es durch direkten Eigenverbrauch,
+Zwischenspeicherung (was allerdings auch Verluste mit sich bringt)
 oder vergütete Einspeisung (die aber leider selten attraktiv ist).\
 Wenn man --- wie mit den meisten Stecker-Solaranlagen --- den erzeugten Strom
 nur direkt im Haushalt verbrauchen kann und der Rest ins externe Netz geht,
@@ -381,11 +383,9 @@ sollte man das Nutzungsprofil berücksichtigen, welches auch auch
 
 ![Bild: Ertrags-Nutzungsanteil nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_Ertragsnutzungsanteil.png){:width="385" .right}
-Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil zeigt sich
-durch genauere Simulation,
-dass --- im Vergleich zu den bekannten Einbußen beim Jahres-Gesamtertrag ---
-Abweichungen von der allgemein optimalen Südorientierung
-nur etwa halb so starke Einbußen bringen.
+Durch genaue Simulation für durchschnittliche Haushalts-Tages-Nutzungsprofile
+zeigt sich, dass **eine Abweichung von der optimalen Ausrichtung
+deutlich weniger Einbußen beim selbst genutzten Jahres-Gesamtertrag bringt**.
 So liegt bei senkrechter Anbringung im Verhältnis zur optimalen Neigung
 die Einbuße nicht bei 30% vom Optimum, sondern je nach Lastprofil bei 23%.
 Man hat also zur günstigen Ausrichtung seiner Solarmodule
@@ -393,17 +393,18 @@ meist größere Flexibilität als allgemein angenommen.
 
 Eine Aufteilung in zwei Orientierungen, z.B. die klassische Ost-West-Ausrichtung
 oder irgendwo dazwischen nach Südosten und Südwesten,
-um zu versuchen, auf die Vormittags- und Nachmittagssonne zu optimieren,
-lohnt sich auch dann nicht,
-wenn man den Ertragsüberschuss über die Mittagszeit nicht nutzen kann.
-Sie schadet aber auch kaum, besonders wenn man tagsüber im Vergleich zu den
-Morgen- und Abendstunden wenig Verbrauch hat.
+um **zu versuchen, auf die Vormittags- und Nachmittagssonne zu optimieren,
+lohnt sich nicht**, selbst
+wenn man den Ertragsüberschuss über die Mittagszeit kaum nutzen kann.
 Das liegt daran, dass die Stahlungsintensität aus südlichen Richtungen
 in der Tages- und Jahressumme viel höher ist -- die Sonne scheint dort einfach
 viel stärker und viel häufiger (besonders im Winter) als im Osten oder Westen.
 Dieser Effekt wird selbst dann nicht durch eine geringere Nutzbarkeit tagsüber
 ausgeglichen, wenn man im Haushalt an Arbeitstagen von 8 bis 18 Uhr
-nur Grundlast von z.B. 100 W hat.
+nur Grundlast von z.B. 100 W hat.\
+Eine Ost-West-Ausrichtung (etwa aus baulichen Gründen) schadet der Eigennutzung
+allerdings auch nicht sehr, besonders wenn man tagsüber
+im Vergleich zu den Morgen- und Abendstunden wenig Verbrauch hat.
 
 Eine Reihe [genauer Simulationen](#Minutenbasis) für einen Haushalt
 in Süddeutschland mit 3000 kWh Jahresverbrauch mit einer Stecker-PV-Anlage
