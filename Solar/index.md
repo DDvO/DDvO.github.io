@@ -849,6 +849,68 @@ Netzeinspeisung             =  396 kWh
 Eigenverbrauchsanteil       =   59 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000
+
+PV-Nominalleistung          = 1000 Wp
+Optimale Ladestrategie (nicht gebrauchte Energie)
+Optimale Entladestrategie (so viel wie gebraucht)
+Bruttoleistung max.         =  994 W am TMY-04-30 um 11:00 h
+PV-Bruttoertrag             = 1216 kWh
+PV-Nettoertrag              =  973 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+PV-Ertragsverlust           =   78 kWh während 653 h durch Drosselung auf 564 W
+Ertragsanteil 9-15 Uhr MEZ  =   70 %
+
+Last durch Haushalt         = 3000 kWh
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Lade- und Speicherverluste  =   38 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  298 kWh
+Zwischenspeicherung         =  334 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  334
+
+Eigenverbrauch mit Drossel  =  875 kWh
+Eigenverbrauchsverlust      =    6 kWh während 93 h durch Drosselung auf 564 W
+Netzeinspeisung             =   62 kWh
+Eigenverbrauchsanteil       =   90 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   29 % des Verbrauchs (Autarkiegrad)
+-->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000 -pass 0 -feed 600
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W
+Konstanteinspeisung         =  280 W
+Verlust durch Überschuss    =  106 kWh
+Lade- und Speicherverluste  =   99 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  603 kWh
+Zwischenspeicherung         =  867 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  867
+
+Eigenverbrauch mit Drossel  =  603 kWh
+Eigenverbrauchsverlust      =   43 kWh während 653 h durch Drosselung auf 564 W
+Netzeinspeisung             =  172 kWh
+Eigenverbrauchsanteil       =   62 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
+-->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000 -pass 0 -feed max 1000
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W
+Maximaleinspeisung          = 1000 W
+Verlust durch Überschuss    =   98 kWh
+Lade- und Speicherverluste  =  100 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  781 kWh
+Zwischenspeicherung         =  875 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  875
+
+Eigenverbrauch mit Drossel  =  781 kWh
+Eigenverbrauchsverlust      =   43 kWh während 653 h durch Drosselung auf 564 W
+Netzeinspeisung             =    0 kWh
+Eigenverbrauchsanteil       =   80 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   26 % des Verbrauchs (Autarkiegrad)
+-->
 
 Hingegen bieten 1000 statt 600 Wp PV-Nennleistung bei mäßigen Zusatzkosten eine
 sinnvolle Reserve für schwächere Sonnenstunden, wodurch der Netto-Ertrag (trotz
@@ -1006,21 +1068,20 @@ für Hausdach-PV-Anlagen der HTW Berlin berechnen.
 [![Bild: Stecker-Solar-Simulator](Stecker-Solar-Simulator.png)](
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
 Beide Simulationen erfolgen mit Daten der Wetterstation Lindenberg bei Berlin
-aus dem Jahr 2017 (für Süddeutschland kann man 10-15% mehr PV-Leistung ansetzen)
-für einen gegebenen Jahresstromverbrauch (mit einer typischen Lastverteilung),
-gegebene PV-Nennleistung (mit einem hohen spezifischen PV-Jahresertrag)
-und optional gegebene nutzbare Speicherkapazität (mit typischem Wirkungsgrad
-für LFP-Batterien und typischen Wandlungsverlusten).
+aus dem Jahr 2017
+(für Süddeutschland kann man also 10-15% mehr PV-Leistung ansetzen). Als Eingabe
+verwenden sie den Jahresstromverbrauch (mit einer typischen Lastverteilung), die
+PV-Nennleistung (mit einem spezifischen PV-Jahresertrag von von 1024 kWh/kWp)
+und eine gegebene nutzbare Speicherkapazität, wobei sie einen typischen
+Wirkungsgrad für LFP-Batterien und typische Wandlungsverluste annehmen,
+sowie eine optimale bedarfsgerechte Lade-/Entladeregelung.
 [![Bild: Unabhängigkeitsrechner](Unabhängigkeitsrechner.png)](
 https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)
+Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.\
 Der Unabhängigkeitsrechner liefert auch den Anteil der Batterieentladung an der
 Stromversorgung, den man zur Ertrags- und [Wirtschaftlichkeitsberechnung von
 PV-Speichern](https://www.youtube.com/watch?v=bE5fLy0w3MM&t=674s)
 verwenden kann (und zwar durch Multiplikation mit dem Stromverbrauch).
-<!--
-Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.
-Für Stromspeicher scheinen sie allerdings recht optimistisch.
--->
 
 Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
 auch das [PVTool von Andreas Schmitz ("AkkuDoktor")](https://www.akkudoktor.net/pvtool-rechner/).
@@ -1031,6 +1092,12 @@ Allerdings sind die Ergebnisse deutlich zu optimistisch. Das liegt vermutlich
 am verwendeten Lastprofil und unrealistisch hoch angenommenen Wirkungsgraden.
 Er macht zu diesen wichtigen Punkten und sonstigen Grundlagen seiner Berechnung
 auf seinen beiden PVTool-Seiten keinerlei Angaben.
+
+Die beiden hier genannten Simulationen setzen eine ideale Speicherstrategie
+voraus.
+Ihre Ergebnisse gelten nicht bei Verwendung einer primitiven Regelung, wie sie
+für [Balkonkraftwerke mit Speicherbatterie](#Batteriepuffer) üblich sind.
+Für diese kann die [u.g. Simulation]((#Minutenbasis) verwendet werden.
 
 ### Ertragsberechnung und Amortisation {#Ertragsberechnung}
 
@@ -1133,17 +1200,27 @@ Diese Simulation berechnet für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl
 des Profils einen Eigenverbrauch von teils 601 kWh (Profil "allgemein 13/14")
 und mehr, aber typischerweise eher 514 kWh (Profil "InGe 16") pro Jahr.
 
+Noch genauer und flexibler ist die im nächsten Abschnitt genannte Simulation.
+Bei ihr kann man beliebige Lastprofile mit mindestens stündlicher (oder
+noch größerer) Auflösung verwenden, die angenommenen Wirkungsgrade für
+die Ladung, Speicherung und Entladung frei bestimmen und auch auch aus den
+[weiter unten genannten](#Batteriepuffer) Lade- und Entladestrategien wählen:
+* Optimale Ladestrategie (nicht anderweitig gebrauchte Energie)
+* Konstante Speicher-Umgehung, wahlweise auch für Überschuss
+* Optimale Entladestrategie (so viel wie gerade gebraucht)
+* Konstanteinspeisung oder bedarfsgeregelte Maximaleinspeisung
+
 #### Simulation auf Minutenbasis {#Minutenbasis}
 
 Eine eigene Simulation auf Minutenbasis
 basierend auf den PV-Profildaten für ein [*typisches meteorologisches Jahr*](
 https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/)
 von [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/)
-und auf 74 minütlichen Haushaltsverbrauchs-Profilen,
-die von der Forschungsgruppe Solarspeichersysteme HTW Berlin [veröffentlicht](
-https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
-wurden, kommt auf realistischere Ergebnisse.
-Mit einem [Lastprofil-Skript](Lastprofil.pl) können aus den genannten Rohdaten
+und auf minütlichen Haushaltsverbrauchs-Profilen, wie den 74 von der
+Forschungsgruppe Solarspeichersysteme HTW Berlin [veröffentlichen Profile](
+https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/),
+kommt auf realistischere Ergebnisse.
+Mit einem [Lastprofil-Skript](Lastprofil.pl) können aus Lastprofil-Rohdaten
 Lastprofil-Dateien wie [diese](Lastprofil_4673_kWh.csv) synthetisiert werden.
 So eine Datei wird dann zusammen mit von PVGIS heruntergeladenen Solardaten
 wie [diesen](Solardaten_1215_kWh.csv) als Eingabe für ein
@@ -1151,7 +1228,8 @@ wie [diesen](Solardaten_1215_kWh.csv) als Eingabe für ein
 Nennleistung und der Wirkungsgrad der Anlage sowie der Jahresverbrauch
 und optional eine Limitierung des PV-Ertrags durch den Wechselrichter.
 Auch die Kombination von PV-Modulgruppen verschiedener Leistung und Ausrichtung
-wird unterstützt.
+wird unterstützt, und inzwischen auch ein [Stromspeicher](#Batteriepuffer)
+mit verschiedenen Lade- und Entladestrategien.
 
 Für die o.g. Beispiel-Anlage für den Raum München mit 600 Wp
 und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 730 kWh
@@ -1176,33 +1254,136 @@ etwa 3 bis 6% zu optimistisch, auf Minutenbasis nur bis etwa 1%.
 ![Bild: Balkonkraftwerk mit Pufferbatterie und Inselwechselrichter](
 Pufferbatterie_und_Inselwechselrichter.png){:.right width="400"
 style="margin-left: 40px}
-Statt den Solarstrom direkt einzuspeisen, kann man in auch in einer aufladbaren
+Statt den Solarstrom direkt einzuspeisen, kann man ihn auch in einer aufladbaren
 Batterie zwischenspeichern und von dort nach Bedarf zeitlich versetzt über einen
 [netzgekoppelten Wechselrichter](#Netzwechselrichter) ins Hausnetz einspeisen.
 Diese Betriebsart kann man allgemein als *Strompufferung* bezeichnen.
+
 Ihre einfachsten Ausprägungen sind die [*Konstanteinspeisung*](#Einspeisung),
 wobei eine etwas optimierte Variante *Nachteinspeisung* genannt wird.
+Wie [etwas weiter unten ausgeführt](#Batterieladung),
+bringen allerdings Anlagen mit Konstanteinspeisung, bei der die PV-Erzeugung
+nur in den Speicher geleitet wird (also ohne Überschussmodus oder
+eine noch deutlich aufwendigere lastabhängige Batterieladung),
+auch bei optimaler Wahl der Einspeiseleistung fast nichts, weil bei voller
+Batterie relativ viel überschüssige Energie komplett verloren geht.
+Eine höhere konstante Einspeiseleistung verringert zwar den Verlust durch
+Überschuss, führt aber dazu, dass mehr Energie im Haushalt nicht genutzt
+und stattdessen ins externe Netz abgegeben wird.
 
-Die Strompufferung maximiert den Nutzen der PV-Anlage für den eigenen
-Stromverbrauch, lohnt sich finanziell aber kaum, außer wenn man die Batterie
-sehr günstig bekommt oder schon aus anderen Gründen hat, z.B. für eine
+Die Strompufferung soll den Nutzen der PV-Anlage für den eigenen Stromverbrauch
+erhöhen. Aber **finanziell lohnt sie sich fast nie** --- außer wenn man die
+Batterie sehr günstig bekommt oder schon aus anderen Gründen hat, z.B. für eine
 Notstromversorgung (mit Inselwechselrichter) oder als Fahrzeugbatterie.
 Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
+
+Im Folgenden werden konkrete Zahlen gegeben für die
+[o.g. typische Balkonanlage mit 600 Wp](#Ertragsberechnung) gegeben, der
+eine Pufferbatterie mit 1 kWh effektiv nutzbarer Kapazität hinzugefügt wurde.
+Dazu passt sehr gut eine 12,8 V 100 Ah LiFePO4-Batterie,
+also mit nominell 1,28 kWh Kapazität, denn davon muss man ohnehin
+mindestens 90% für eine gesunde Entladetiefe abziehen, und nochmal
+ungefähr 90% für die durchschnittliche Degradation durch Alterungseffekte.
+Die Eigenverbrauch-Ergebnisse wurden mit der
+[o.g. genauen Simulation](#Minutenbasis) errechnet, unter Annahme einer
+DC-Kopplung mit Laderegler-Wirkungsgrads 94% und Speicher-Wirkungsgrad 95%.
+Wie zuvor sind für den Wirkungsgrad des PV-Systems 92% angenommen und für
+die Wechselrichtung (bzw. bei Entladung aus der Batterie) wieder 94%.
+
+Bei [optimaler Lade-/Entlageregelung, s.u.](#Regelungsstrategien) ergibt sich,
+dass die Hinzunahme des Speichers den den jährlichen Eigenverbrauch von 460 auf
+640 kWh und den Eigenverbrauchsanteil von 59 auf 97% des Nettoertrags steigert.
+Das entspräche bei 40 Ct/kWh einer jährlichen Stromkosten-Einsparung von 72€.
+Selbst wenn die dafür nötigen Geräte sehr günstig für 720€ erworben werden,
+würde die Amortisationszeit für die Aufrüstung mit dem Speicher mindestens
+10 Jahre betragen -- eher länger.
+Allerdings muss man damit rechnen, dass in dieser recht langen Zeitspanne
+bereits ein Teil der Geräte ersetzt werden muss. Vor Allem ist die optimale
+Regelung unrealistisch, und auch eine Annäherung daran ziemlich aufwendig.
+
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie)
+Optimale Entladestrategie (so viel wie gebraucht)
+Lade- und Speicherverluste  =   23 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  179 kWh
+Zwischenspeicherung         =  201 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  201
+
+Eigenverbrauch              =  640 kWh
+Netzeinspeisung             =    1 kWh
+Eigenverbrauchsanteil       =   97 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
+-->
+
+Der [Stecker-Solar-Simulator der HTW Berlin](
+https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
+kommt mit identischen Wirkungsgrad-Annahmen, aber mit etwas anderen Annahmen
+zur PV-Anlage, zur gleichen Steigerungsrate des Eigenverbrauchsanteil.
+
+<!--
+/Solar.pl Lastprofil_4673_kWh.csv 3000 Lindenberg_35deg_0deg_2005_2020.csv 581 -tmy
+
+PV-Nominalleistung          =  581 Wp
+Bruttoleistung max.         =  593 W am TMY-04-21 um 11:00 h
+PV-Bruttoertrag             =  675 kWh
+PV-Nettoertrag              =  581 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
+Ertragsanteil 9-15 Uhr MEZ  =   70 %
+
+Last durch Haushalt         = 3000 kWh
+Eigenverbrauch              =  415 kWh
+Netzeinspeisung             =  166 kWh
+Eigenverbrauchsanteil       =   71 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   14 % des Verbrauchs (Autarkiegrad)
+
+https://solar.htw-berlin.de/rechner/stecker-solar-simulator/
+2 * 300 Wp Module ohne Batteriespeicher
+Stromerzeugung pro Jahr 593 kWh
+Vermiedener Strombezug pro Jahr 404 kWh
+Nutzungsgrad 68 %
+Selbstversorgung 13 %
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Lindenberg_35deg_0deg_2005_2020.csv 581 -tmy -capacity 1000
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie)
+Optimale Entladestrategie (so viel wie gebraucht)
+Lade- und Speicherverluste  =   19 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  148 kWh
+Zwischenspeicherung         =  165 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  165
+
+Eigenverbrauch              =  562 kWh
+Netzeinspeisung             =    1 kWh
+Eigenverbrauchsanteil       =   97 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
+
+https://solar.htw-berlin.de/rechner/stecker-solar-simulator/
+2 * 300 Wp Module mit Batteriespeicher
+Stromerzeugung pro Jahr 593 kWh
+Vermiedener Strombezug pro Jahr 544 kWh
+Nutzungsgrad 92 %
+Selbstversorgung 18 %
+-->
 
 #### Regelungsstrategien für Stromspeicher {#Regelungsstrategien}
 
 Für die Einsparung von Stromkosten wäre folgende Lade- und Entladeregelung
 ideal:
-* Solange der Speicher nicht voll ist, erfolgt die Ladung
-immer genau so stark wie gerade an PV-Leistung übrig ist,
-also aktuell nicht anderweitig verbraucht wird.
-Damit kann man die sogenannte *Nulleinspeisung* realisieren,
-also dass kein überschüssiger Strom ins externe Netz fließt.
-* Solange der Speicher nicht leer ist, erfolgt die Entladung
-immer genau so stark wie gerade an Last nicht von der PV-Leistung abdeckt wird.
+* Solange der Speicher nicht voll ist,
+wird immer genau der Anteil an PV-Leistung zum Laden verwendet,
+der übrig ist (also aktuell nicht anderweitig direkt verbraucht wird),
+* Solange der Speicher nicht leer ist, wird er immer genau so stark entladen
+wie nötig ist, um den Anteil am aktuellen direktem Verbrauch auszugleichen,
+den die PV-Leistung nicht abdeckt.
 
 [//]: #
+Damit kann man die sogenannte *Nulleinspeisung* realisieren,
+also dass kein überschüssiger Strom ins externe Netz fließt.
+
 Zur Schonung der Batterie solle dabei
 * ein gewisser Ladestrom und ein gewisser Entladestrom nicht überschritten
 werden, wobei die verwendeten Komponenten da ohnehin Grenzen setzen, und
@@ -1214,10 +1395,9 @@ wobei diese Zusatzbedingungen allerdings gewisse Verluste mit sich bringen.
 
 Das alles ist reglungstechnisch ziemlich aufwendig und benötigt jedenfalls
 einen Sensor zur Erfassung des momentanen Haushalts-Stromverbrauchs.
-Es lohnt sich eher nur für größere PV-Anlagen.
+Es lohnt sich, wenn überhaupt, nur für größere PV-Anlagen.
 
-Für Stecker-Solaranlagen ist es viel einfacher
-und für die meisten Anwendungsfälle ausreichend,
+Für Stecker-Solaranlagen ist es viel einfacher und meist auch ausreichend,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
 so abzustimmen, dass lediglich ein Großteil der Grundlast des Haushalts,
 z.B. 50 bis 100 W, für eine Dauer von etwa 1-2 Tagen abgedeckt wird.
@@ -1225,37 +1405,23 @@ Wenn man diese *Konstanteinspeisung* noch mit einer Zeitschaltuhr (oder einem
 Helligkeitssensor) zur Beschränkung zwischen Sonnenunter- und Aufgang
 kombiniert, bekommt man eine *Nachteinspeisung*.\
 Ziel der Konstanteinspeisung ist, die über die sonnenreiche Tageszeit
-gesammelte Solarenergie auch über sonnenarme Zeiten  gleichmäßig abgegeben
+gesammelte Solarenergie auch über sonnenarme Zeiten gleichmäßig abzugeben
 (solange die Ladung reicht, zumindest bis zum nächsten Vormittag),
 und dabei möglichst wenig Strom nach extern zu verschenken.
+Auf diese Weise lässt sich allerdings nur die Grundlast effizient abdecken.
 
 ![Bild: Wasserspeicher als Analogie](Wasserspeicher.jpg){:.right width="400"
 style="margin-left: 50px; margin-right: 50px"}
 Hier als Analogie eine Skizze eines automatischen Wasserspeichers,
 der z.B. über die Dachrinne eines Hauses gespeist wird. Wenn er voll genug ist,
-läuft das Wasser über die rechte innere Trennwand und lässt die Kugel
+läuft das Wasser über die rechte innere Trennwand und lässt eine leichte Kugel
 aufschwimmen, die bis dahin den Auslass blockiert hat. Dann fließt das
-Wasser aus dem Speicher langsam und gleichmäßig nach unten aus. Wenn der
-Speicher fast leer ist, verschließt die Kugel den Auslass wieder. Der
-Speicher füllt sich (auch schon zwischendurch) bei Wasserzufuhr wieder
-auf. Zusätzlich ist der Speicher am Einlass mit einem Überlaufschutz
-ausgestattet, der die Wasserzufuhr stoppt, wenn der Speicher sehr voll
-ist und das Wasser durch den kleinen Auslass nicht schnell genug
-abfließt.
-
-Diese einfache Regelung hat allerdings verschiedene Schwächen,
-vor Allem dass damit nur die Grundlast effizient abdeckbar ist.
-Außerdem geht Sonnenenergie verloren, wenn die Batterie voll ist,
-z.B. an sonnenreichen Tagen am Nachmittag, wenn die Solarleistung relativ groß
-ist im Vergleich zur Batteriekapazität bzw. dem Verbrauch durch die Grundlast.
-Mit einer Zusatzschaltung könnte man dafür sorgen, dass in dieser Zeit der
-Solarstrom direkt über einen Netzwechselrichter (idealerweise über den bereits
-vorhandenen) eingespeist wird.
-Das Umschaltsignal für den Überlaufmodus sollte wohl am besten vom Laderegler
-kommen (z.B. optisch über die Ladekontrollleuchte). Es kann aber auch von der
-Batteriespannung abhängig gemacht werden, wobei es dann auch vorkommen wird,
-dass Laderegler und Wechselrichter gleichzeitig aktiv sind. Ob das eher stört
-oder sogar vorteilhaft wäre, dürfte von den verwendeten Geräten abhängig sein.
+Wasser aus dem Speicher langsam und gleichmäßig nach unten aus.
+Wenn der Speicher fast leer ist, verschließt die Kugel den Auslass wieder.
+Der Speicher füllt sich (auch schon zwischendurch) bei Wasserzufuhr wieder auf.
+Zusätzlich ist der Speicher am Einlass mit einem Überlaufschutz
+ausgestattet, der die Wasserzufuhr stoppt, wenn der Speicher voll ist
+und das Wasser durch den kleinen Auslass nicht schnell genug abfließt.
 
 #### Speicherbatterie {#Speicherbatterie}
 
@@ -1287,11 +1453,96 @@ Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
 über einen [Solar-Laderegler](#Laderegler). Dies nennt man [*DC-Kopplung*](
 https://www.photovoltaikforum.com/core/article/7-pv-und-batteriespeicher-besser-ac-oder-dc-gekoppelt/),
 weil der Gleichstrom der PV-Module nicht umständlich und verlustreich
-zwischendurch in Wechselstrom hin- und her-gewandelt wird.
+zwischendurch in Wechselstrom und dann wieder zurück gewandelt wird.
 Ein weiterer Vorteil ist (mit einem Inselwechselrichter) die Notstromfähigkeit.
 Hingegen ist der einzige Vorteil der *AC-Kopplung* übers Haus-Wechselstromnetz
 und ein 230 V-Ladegerät eine große Flexibilität bei der Wahl der Komponenten,
 auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten.
+
+Die im [folgenden Abschnitt](#Einspeisung) aufgeführten Bastellösungen
+führen den erzeugten Solarstrom nur in die Batterie. Das ist natürlich am
+einfachsten, hat aber den großen Nachteil, dass **viel Energie verloren geht**,
+wenn die Batterie voll geworden ist,
+z.B. an sonnenreichen Tagen am Nachmittag, wenn die Solarleistung relativ groß
+ist im Vergleich zur Batteriekapazität bzw. dem Verbrauch durch die Grundlast.
+
+Wenn die [o.g. Balkonanlage mit 1 kWh Pufferspeicher](#Batteriepuffer)
+eine Konstanteinspeisung hat und den PV-Strom nur auf diese Weise nutzt,
+wobei in diesem Fall 210 W Einspeiseleistung optimal sind, bringt die Batterie
+fast nichts, denn der Eigenverbrauch durch Speichernutzung steigt
+gerade mal um 26 kWh auf 486 kWh.
+
+<!--
+Das liegt hier vor Allem an einer Netzeinspeisung von 83 kWh,
+an Lade- und Speicherverlusten von 72 kWh (bei 636 Vollzyklen),
+und teils auch am Verlust durch Überschuss von 25 kWh.
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass 0 -feed 210
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W
+Konstanteinspeisung         =  210 W
+Verlust durch Überschuss    =   25 kWh
+Lade- und Speicherverluste  =   72 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  486 kWh
+Zwischenspeicherung         =  636 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  636
+
+Eigenverbrauch              =  486 kWh
+Netzeinspeisung             =   83 kWh
+Eigenverbrauchsanteil       =   73 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   16 % des Verbrauchs (Autarkiegrad)
+--->
+
+
+Man sollte also bei Konstanteinspeisung mit einer Zusatzschaltung dafür sorgen,
+dass bei vollem Speicher der Solarstrom an der Batterie vorbei geleitet wird
+(und zwar wenn möglich in den Netzwechselrichter, der auch zur Ausspeisung aus
+der Batterie verwendet wird).
+In diesem Fall sind für die Konstanteinspeisung 100 W optimal,
+und der Eigenverbrauch steigt durch die Speichernutzung um 54 kWh auf 514 kWh.
+
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass spill 0 -feed 100
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W   und für Überschuss
+Konstanteinspeisung         =  100 W
+Verlust durch Überschuss    =    0 kWh
+Lade- und Speicherverluste  =   59 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  409 kWh
+Zwischenspeicherung         =  515 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  515
+
+Eigenverbrauch              =  514 kWh
+Netzeinspeisung             =   93 kWh
+Eigenverbrauchsanteil       =   78 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   17 % des Verbrauchs (Autarkiegrad)
+
+
+[alt:
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass spill 0 -feed 110
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Konstanteinspeisung         =  110 W
+Verlust durch Überschuss    =    0 kWh
+Lade- und Speicherverluste  =   60 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  449 kWh
+Zwischenspeicherung         =  530 kWh
+Vollzyklen pro Jahr         =  530
+
+Eigenverbrauch              =  543 kWh
+Netzeinspeisung             =   61 kWh
+Eigenverbrauchsanteil       =   82 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
+]
+--->
+
+Das Umschaltsignal für den Überschussmodus wird wohl am besten vom Laderegler
+kommen (z.B. optisch über die Ladekontrollleuchte). Es kann aber auch von der
+Batteriespannung abhängig gemacht werden, wobei es dann auch vorkommen kann,
+dass Laderegler und Wechselrichter gleichzeitig aktiv sind. Ob das eher stört
+oder sogar vorteilhaft wäre, dürfte von den verwendeten Geräten abhängig sein.
 
 #### Einspeisung aus der Batterie {#Einspeisung}
 
@@ -1338,12 +1589,65 @@ https://www.idealo.de/preisvergleich/OffersOfProduct/202115817),
 wie in einem [Video von Andreas Schmitz](
 https://www.youtube.com/watch?v=yOcoux9IbzM) vorgeführt.
 Dann lässt sich die Einspeisung sogar abhängig vom realen Stromverbrauch regeln
-(allerdings mit einer gewissen Verzögerung), und etwa über einen entsprechend
-programmiert Raspberry Pi, der die Verbrauchsdaten über den sog.
+(allerdings mit einer gewissen Verzögerung),  etwa über einen entsprechend
+programmierten Raspberry Pi. Dieser kann die Verbrauchsdaten über den sog.
 [„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
 oder [„Powerfox“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
-aus dem Haushalts-Stromzähler übermittelt bekommt -- sofern ein smarter
-Stromzähler verbaut ist und man Zugang zu diesem hat.
+aus dem Haushalts-Stromzähler übermittelt bekommen --
+sofern ein smarter Stromzähler verbaut ist und man Zugang zu diesem hat.
+
+Die Maximalleistung dieser bedarfsgerechten Einspeisung sollte möglichst hoch
+sein. Bei einer auf 600 W begrenzten Einspeisung beträgt für die o.g.
+[Balkonanlage mit 1 kWh Pufferspeicher und Überschussmodus](#Batterieladung) die
+Steigerung des Eigenverbrauch durch die Speichernutzung 126 kWh auf 586 kWh.
+
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass spill 0 -feed max 600
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W   und für Überschuss
+Maximaleinspeisung          =  600 W
+Verlust durch Überschuss    =    0 kWh
+Lade- und Speicherverluste  =   73 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  576 kWh
+Zwischenspeicherung         =  645 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  645
+
+Eigenverbrauch              =  586 kWh
+Netzeinspeisung             =    7 kWh
+Eigenverbrauchsanteil       =   89 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
+-->
+
+Allerdings hat keine der in diesem Abschnitt genannten Anlagen mit
+Pufferspeicher einen Überschussmodus oder gar eine optimale Laderegelung.
+* Bei bedarfsgerechter (aber auf 600 W limitierter) Einspeisung
+  aus dem Speicher ohne Überschussmodus bei der Ladung des Speichers
+  fällt die Steigerung des Eigenverbrauchs durch die Speichernutzung
+  aber nur minimal geringer aus, nämlich 124 kWh auf 584 kWh,
+  weil hier der Verlust durch Überschuss mit 8 kWh sehr gering wird.
+
+[//]: #
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass 0 -feed max 600
+
+Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W
+Maximaleinspeisung          =  600 W
+Verlust durch Überschuss    =    8 kWh
+Lade- und Speicherverluste  =   74 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Eigenverbrauch über Speicher=  584 kWh
+Zwischenspeicherung         =  654 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  654
+
+Eigenverbrauch              =  584 kWh
+Netzeinspeisung             =    0 kWh
+Eigenverbrauchsanteil       =   88 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
+-->
+* Bei Anlagen mit bedarfsgerechter konstanter Einspeisung hingegen
+gibt es wie [oben beschrieben](#Batterieladung) auf die eine oder andere Weise
+große Verluste, so dass die Steigerung des Eigenverbrauchs sehr gering ausfällt.
 
 {:style="clear:both"}
 
@@ -1358,7 +1662,7 @@ Wenn für den Notfall stets eine gewisse Strommenge zur Verfügung bleiben soll,
 muss die Abschaltung schon entsprechend früher erfolgen.
 
 Wenn der Solar-Laderegler einen Lastausgang mit einstellbarer Schutzabschaltung
-hat, wie z.B. beim Victron BlueSolar, kann man diesen so verwenden, wie in
+hat, wie z.B. beim Victron BlueSolar, kann man diesen so verwenden wie in
 [diesem schönen Video von PV&E](https://www.youtube.com/watch?v=N6NqMXQHP2I)
 gezeigt. Zudem kann dessen Straßenlichtfunktion für die zeitliche Steuerung
 genutzt werden.
@@ -1377,6 +1681,10 @@ Der Spannungswächter wird so eingestellt,
 dass er beim Erreichen einer Batteriespannung, die
 z.B. annähernd einer Vollladung entspricht, den Wechselrichter einschaltet und
 z.B. in der Nähe der Batterie-Entladeschlussspannung diesen wieder ausschaltet.
+
+Wie [oben ausgeführt](#Batterieladung)
+haben allerdings Anlagen mit Konstanteinspeisung ohne Überschussmodus, wie die
+gerade erwähnten Lösungen von PV&E und von Dimitri, eine miserable Rentabilität.
 
 ### Inselanlage (mit Batteriespeicherung) {#Inselanlage}
 
@@ -1967,8 +2275,8 @@ LocalWords:  inhaltsverzeichnis photovoltaik sonneneinstrahlung feed
 LocalWords:  nennleistung jahresertrag ausrichtung solarmodulen capacity
 LocalWords:  nutzungsmöglichkeiten nutzung netzeinspeisung fuer Eff
 LocalWords:  stecker solaranlage balkonkraftwerk beschränkung spill
-LocalWords:  kappung kappungsverlust drosselung stromzähler md
-LocalWords:  rücklaufsperre stromverbrauch haushalt berechnung
+LocalWords:  kappung kappungsverlust drosselung stromzähler md deg
+LocalWords:  rücklaufsperre stromverbrauch haushalt berechnung load
 LocalWords:  verbrauchsmessung eigenverbrauch eigendeckung ref
 LocalWords:  ertragsberechnung monatsbasierte amortisation of
 LocalWords:  rechner speichersimulation simulation minutenbasis
