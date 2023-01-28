@@ -217,7 +217,8 @@ pro Jahr, so dass sich bei projektierten 20 Jahren Gesamt-Verwendungsdauer
 nach 10 Jahren ein durchschnittlicher Verlust durch die Alterung von 5% ergibt.
 Auch der termperaturbedingte Verlust ist praktisch linear und liegt je nach
 Zelltyp bei etwa 10%, wenn die Modultemperatur beispielsweise 55°C beträgt,
-also 30°C über der Standard-Temperatur von 25°C. Genaueres dazu z.B. [hier](
+also 30°C über der Temperatur von 25°C bei [*Standard-Testbedingungen (STC)*](
+https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/) von 25°C. Genaueres dazu z.B. [hier](
 https://joint-research-centre.ec.europa.eu/pvgis-photovoltaic-geographical-information-system/getting-started-pvgis/pvgis-data-sources-calculation-methods_en#ref-5-calculation-of-pv-power-output).
 
 Zu berücksichtigen ist zudem der elektrische Wirkungsgrad der übrigen PV-Anlage
@@ -590,22 +591,73 @@ die Tendenz zu stärkerer Verschattung durch den flacheren Sonnenstand.
 Außerdem ist die geteilte Montage meist aufwendiger, und die beiden Richtungen
 verlangen zur Optimierung eine getrennte [MPPT-Regelung](#Wechselrichter).
 
+Was die für den Eigenverbrauch optimale Neigung der PV-Module
+bei einer Anlage mit 600 Wp betrifft, ergeben die Simulationen folgendes:
 Bei reiner Südausrichtung (0° Azimut), ebenso bei einer Orientierung von +/- 30°
-oder +/- 60° abweichend von Süden, ist für den Eigenverbrauch eine Neigung von
-ungefähr 30° optimal, wobei +/- 10° Winkeldifferenz sehr wenig ausmacht.
+oder +/- 60° abweichend von Süden, ist eine Neigung von ungefähr 30° optimal,
+wobei +/- 10° Winkeldifferenz sehr wenig ausmacht.
 Bei einer Orientierung von +/-90° abweichend von Süden (also rein Ost-West) 
 ist eine Neigung von ungefähr 15° bis 20° am günstigen,
 aber bei 25 bis 30° fast gleich gut (besser gesagt: gleich schlecht).
 
-Wer aus irgendeinem Grund (etwa wegen der Befestigung)
-eine möglichst flache Neigung wählt, sollte trotzdem mindestens 12° verwenden,
+Bei Verwendung von 4 PV-Modulen kann man im Sinne der Eigenverbrauchsoptimierung
+und gleichmäßigeren Ertragsverteilung über den Tagesverlauf in Betracht ziehen,
+eines nach Osten, zwei nach Süden und eines nach Westen auszurichten.
+Bei 400 Wp Modulen ergibt eine Eigenverbrauchssimulation
+(ebenfalls für ein typisches Lastprofil und 3000 kWh Jahresverbrauch)
+für alle drei Himmelsrichtungen eine optimale Neigungung von um die 30°
+mit ebenfalls sehr geringer Empfindlichkeit auf Abweichungen davon.\
+Die Verteilung 1 × Ost -- 2 × Süd -- 1 x West resultiert in einen
+Nettoertrag von 1577 kWh und einen Eigenverbrauch von 809 kWh.\
+Hingegen bringt die gemeinsame Ausrichtung der 4 Module nach Süden
+einen deutlich höheren Nettoertrag von 1734 kWh und
+einen immer noch minimal höheren Eigenverbrauch von 816 kWh.
+Also lohnt sich auch die weitere Aufteilung auf drei Himmelsrichtungen nicht,
+und eine gemeinsame Montage dürfte einfacher sein und weniger störend aussehen.
+
+<!--
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_31deg_0deg_2005_2020.csv 800 -curb 1200
+Lastprofil-Datei            : Lastprofil_17_teils_64.csv
+
+PV-Nominalleistung          = 1600 Wp = 400+400+800 Wp
+Bruttoleistung max.         = 1466 W am 2020-05-06 um 11:00 h
+PV-Bruttoertrag             = 1834 kWh
+PV-Nettoertrag              = 1577 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
+PV-Ertragsverlust           =    0 kWh während 2 h durch Drosselung auf 1200 W
+Ertragsanteil 9-15 Uhr MEZ  =   70 %
+
+Last durch Haushalt         = 3000 kWh
+Eigenverbrauch mit Drossel  =  809 kWh
+Eigenverbrauchsverlust      =    0 kWh während 0 h durch Drosselung auf 1200 W
+Netzeinspeisung             =  769 kWh
+Eigenverbrauchsanteil       =   51 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   27 % des Verbrauchs (Autarkiegrad)
+
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_31deg_0deg_2005_2020.csv 1600 -curb 1200
+PV-Nominalleistung          = 1600 Wp
+Bruttoleistung max.         = 1757 W am 2020-03-23 um 12:00 h
+PV-Bruttoertrag             = 2023 kWh
+PV-Nettoertrag              = 1734 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
+PV-Ertragsverlust           =    6 kWh während 106 h durch Drosselung auf 1200 W
+Ertragsanteil 9-15 Uhr MEZ  =   72 %
+
+Last durch Haushalt         = 3000 kWh
+Eigenverbrauch mit Drossel  =  816 kWh
+Eigenverbrauchsverlust      =    0 kWh während 5 h durch Drosselung auf 1200 W
+Netzeinspeisung             =  917 kWh
+Eigenverbrauchsanteil       =   47 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   27 % des Verbrauchs (Autarkiegrad)
+-->
+
+Wer aus irgendeinem Grund (etwa wegen der Befestigung) eine möglichst flache
+Neigung der PV-Module wählt, sollte trotzdem mindestens 12° verwenden,
 um eine Selbstreinigung der Moduloberflächen durch Niederschlag zu ermöglichen.
 
 Wenn man Solarmodule (z.B. auf dem Dach eines Wohnmobils) in waagerechter Lage
 anbringt, ist man von der Orientierung (Himmelsrichtung) unabhängig.
-Allerdings kommt nach meiner Erfahrung mit billigen flexiblen
-Modulen selbst mittags an sehr sonnigen Tagen kaum über die Hälfte der
-angegebenen Spitzenleistung hinaus.
+Allerdings kommen nach meiner Erfahrung
+billige flexible PV-Module selbst mittags an sehr sonnigen Tagen
+kaum über die Hälfte der angegebenen Spitzenleistung hinaus.
 
 Nutzungsmöglichkeiten {#Nutzung}
 ---------------------
@@ -777,17 +829,20 @@ mehr als 528 W Leistung beansprucht werden, ist typischerweise ziemlich gering.
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564
+Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564
 88%: -peff 93.617
+Verbrauch gemäß Lastprofil  = 4674 kWh
+Grundlast                   =  286 W
 
 PV-Nominalleistung          = 1000 Wp
 Bruttoleistung max.         =  994 W am TMY-04-30 um 11:00 h
 PV-Bruttoertrag             = 1216 kWh
-PV-Nettoertrag              =  973 kWh bei PV-System-Wirkungsgrad 92%, Wechselrichter-Wirkungsgrad 94%
+PV-Nettoertrag              =  973 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 PV-Ertragsverlust           =   78 kWh während 653 h durch Drosselung auf 564 W
 Ertragsanteil 9-15 Uhr MEZ  =   70 %
 
 Last durch Haushalt         = 3000 kWh
+
 Eigenverbrauch mit Drossel  =  577 kWh
 Eigenverbrauchsverlust      =    6 kWh während 93 h durch Drosselung auf 564 W
 Netzeinspeisung             =  396 kWh
@@ -807,7 +862,7 @@ lange Sicht ergibt sich eine entsprechend höhere Kostenersparnis als mit 600 Wp
 PV-Nominalleistung          =  600 Wp
 Bruttoleistung max.         =  597 W am TMY-04-30 um 11:00 h
 PV-Bruttoertrag             =  729 kWh
-PV-Nettoertrag              =  631 kWh bei PV-System-Wirkungsgrad 92%, Wechselrichter-Wirkungsgrad 94%
+PV-Nettoertrag              =  631 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 PV-Ertragsverlust           =    0 kWh während 0 h durch Drosselung auf 564 W
 Ertragsanteil 9-15 Uhr MEZ  =   72 %
 
@@ -994,18 +1049,19 @@ Jahres-Bruttoertrag von etwa 765 kWh, was bei 86% Gesamtsystem-Wirkungsgrad
 ca. 660 kWh Netto-Einspeisung des Wechselrichters an der Steckdose bedeutet.
 Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und einem typischen
 Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh.
-Der Eigendeckungsanteil liegt damit bei 15% des Verbrauchs,
-der Eigenverbrauchsanteil bei 70% des Ertrags.
+Der Eigenverbrauchsanteil liegt damit bei 70% des Ertrags
+(und der Eigendeckungsanteil bei 15% des Verbrauchs).
 
 [//]: #
-<!-- ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
 ergibt 457 kWh, aber noch etwas Lastspitzen-Abzug
 88%: -peff 93.617
 
 PV-Nominalleistung          =  600 Wp
 Bruttoleistung max.         =  656 W am 2020-03-23 um 11:00 h
 PV-Bruttoertrag             =  765 kWh
-PV-Nettoertrag              =  662 kWh bei PV-System-Wirkungsgrad 92%, Wechselrichter-Wirkungsgrad 94%
+PV-Nettoertrag              =  662 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 Ertragsanteil 9-15 Uhr MEZ  =   73 %
 
 Last durch Haushalt         = 3000 kWh
@@ -1014,7 +1070,8 @@ Netzeinspeisung             =  201 kWh
 Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 
-Bei Lastprofil_4685_kWh.csv Eigenverbrauch 502 kWh -->
+Bei Lastprofil_4685_kWh.csv Eigenverbrauch 502 kWh
+-->
 Damit kann man bei 40 Ct/kWh jährlich ungefähr 180€ Stromkosten einsparen.
 Bei einer Investition von 660€ ergibt sich (ohne Berücksichtigung
 von Kapitalkosten u.ä.) eine Amortisationszeit von 3,7 Jahren.\
@@ -1443,6 +1500,9 @@ etwas günstiger als entsprechend viele kleine.
     auch *Serienschaltung* genannt) hängt man die Module einfach hintereinander,
     wobei sich die Spannungen der einzelnen Module addieren.
 
+    Der wesentliche Vorteil gegenüber der Parallelschaltung ist, dass
+    der Strom in den Kabeln und der damit verbundene Verlust nicht steigt.
+
     Ein Nachteil der Reihenschaltung ist,
     dass es dabei viel leichter zu [Verlusten durch Teilverschattung](
     https://photovoltaikbuero.de/pv-know-how-blog/teilverschattung-bei-solarmodulen-messungen/)
@@ -1469,29 +1529,35 @@ etwas günstiger als entsprechend viele kleine.
     ohne dafür unbedingt mehr als einen MPPT-Eingang zu benötigen.
 
 Generell muss man unbedingt darauf achten, dass die maximale Eingangsspannung,
-die ein Regler-Eingang verkraftet, nicht überschritten wird --- und
-zwar nicht nur bei Normbedingungen (25°C), sondern auch bei sehr niedrigen
-Temperaturen, wo die (Leerlauf-)Spannung etwa 10 - 20% höher sein kann.
-Der wesentliche Vorteil gegenüber der Parallelschaltung ist, dass
-der Strom in den Kabeln und der damit verbundene Verlust nicht steigt.
+die ein Regler-Eingang verkraftet, nicht überschritten wird ---
+und zwar nicht nur bei [*Normalbedingungen (NOCT)*](
+https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/)
+mit 45°C Betriebstemperatur bzw. idealisierten Standard-Testbedingungen (STC)
+mit 25°C, sondern auch bei sehr niedrigen Temperaturen,
+wo die Spannung etwa 10 bis 20% höher sein kann.
+Allerdings werden die Module gerade im Winter kaum unter Optimalbedingungen
+betrieben, so dass die Leerlaufspannung der Module
+auch da wohl nur wenig über den für NOCT oder STC angegebenen Wert kommt.
 
 Im Gegensatz dazu darf der (je nach Einstrahlung und Temperatur) mögliche
 (Gesamt-)Strom den spezifizierten Maximalstrom eines Regler-Eingangs durchaus
 überschreiten.
 Allerdings wird dann PV-Leistung verschenkt, weil der Wechselrichter
 im Prinzip nicht mehr Leistung aufnimmt als worauf er ausgelegt wurde.
-Auch kann es bei stark wechselnden Lichtverhältnissen und starkem
-Strom-Überangebot zu Überlastungen kommen.
+Allerdings kann es bei stark wechselnden Lichtverhältnissen und starkem
+Strom-Überangebot zu zeitweisen Überlastungen des Geräts kommen,
+und wenn es für längere Zeit am Limit läuft, kann es schneller altern
 
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
 I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
-Zu beachten ist noch, dass die Regler-Eingangsspannung je nach Modell
-bis zu 5 V über der gewünschten Ausgangsspannung des Reglers (z.B. der
-Speicherbatterie) liegen muss, damit der Regler effektiv Strom liefern
-kann. Wenn man z.B. kleine Solarmodule mit 100 Wp und 22,6 V
-Leerlaufspannung hat, wird es ohne Reihenschaltung bei einer
-Ladeschlussspannung von ca. 14,5 V einer LiFePO4-Batterie bei wolkigem
-Wetter (mit vielleicht nur 100 - 200 W/m²) ziemlich eng.
+Zu beachten ist noch, dass die Betriebsspannung der PV-Module im MPPT-Bereich
+des Reglers liegen sollte und die Regler- bzw. Wechselrichter-Eingangsspannung
+je nach Modell bis zu 5 V über der gewünschten Ausgangsspannung (z.B. der
+Speicherbatterie) liegen muss, damit der Regler effektiv Strom liefern kann.
+Wenn man z.B. kleine Solarmodule mit 100 Wp und 22,6 V Leerlaufspannung hat,
+wird es ohne Reihenschaltung bei einer Ladeschlussspannung von ca. 14,5 V
+einer LiFePO4-Batterie bei wolkigem Wetter (mit einer Einstrahlung von
+vielleicht nur 100 - 200 W/m²) ziemlich eng.
 
 #### Montage {#Montage}
 
@@ -1895,11 +1961,12 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
     https://www.ebay.de/itm/385099914040), ca. 12€
 
 <!--
+Local IspellDict: german
 LocalWords: title keywords toc start refresh zusammenfassung abgrenzung pv end
-LocalWords:  inhaltsverzeichnis photovoltaik sonneneinstrahlung
-LocalWords:  nennleistung jahresertrag ausrichtung solarmodulen
-LocalWords:  nutzungsmöglichkeiten nutzung netzeinspeisung fuer
-LocalWords:  stecker solaranlage balkonkraftwerk beschränkung
+LocalWords:  inhaltsverzeichnis photovoltaik sonneneinstrahlung feed
+LocalWords:  nennleistung jahresertrag ausrichtung solarmodulen capacity
+LocalWords:  nutzungsmöglichkeiten nutzung netzeinspeisung fuer Eff
+LocalWords:  stecker solaranlage balkonkraftwerk beschränkung spill
 LocalWords:  kappung kappungsverlust drosselung stromzähler md
 LocalWords:  rücklaufsperre stromverbrauch haushalt berechnung
 LocalWords:  verbrauchsmessung eigenverbrauch eigendeckung ref
