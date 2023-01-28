@@ -1,0 +1,21 @@
+# *.diff
+# *.orig
+.#* 
+attic
+Lastprofile
+Datenlog
+Solargis
+*_files
+Wetter
+*#
+*.html
+*.pdf
+*.xcf
+*.csv
+*.xls
+*.xlsx
+*.xlsm
+*.ods
+*.txt
+*.zip
+ 
