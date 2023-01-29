@@ -1111,13 +1111,17 @@ ergeben sich Kosten von 1€/kWh erzeugtem Solarstrom pro Jahr.
 was aber praktisch kaum der Fall ist,
 und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
 ergibt sich eine Amortisation der Anschaffungskosten in nur 2,5 Jahren.
+
 * Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
 Jahres-Bruttoertrag von etwa 765 kWh, was bei 86% Gesamtsystem-Wirkungsgrad
 ca. 660 kWh Netto-Einspeisung des Wechselrichters an der Steckdose bedeutet.
 Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und einem typischen
 Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh.
 Der Eigenverbrauchsanteil liegt damit bei 70% des Ertrags
-(und der Eigendeckungsanteil bei 15% des Verbrauchs).
+(und der Eigendeckungsanteil bei 15% des Verbrauchs).\
+Damit kann man bei 40 Ct/kWh jährlich ungefähr 180€ Stromkosten einsparen.
+Bei einer Investition von 660€ ergibt sich (ohne Berücksichtigung
+von Kapitalkosten u.ä.) eine Amortisationszeit von 3,7 Jahren.
 
 [//]: #
 <!--
@@ -1139,11 +1143,38 @@ Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 
 Bei Lastprofil_4685_kWh.csv Eigenverbrauch 502 kWh
 -->
-Damit kann man bei 40 Ct/kWh jährlich ungefähr 180€ Stromkosten einsparen.
-Bei einer Investition von 660€ ergibt sich (ohne Berücksichtigung
-von Kapitalkosten u.ä.) eine Amortisationszeit von 3,7 Jahren.\
-Bei 1500 kWh Jahresverbrauch können immerhin etwa 320 kWh selbst genutzt werden,
-was eine Amortisation in gut 5 Jahren ergibt.
+
+* Bei 1500 kWh Jahresverbrauch können durchschnittlich immerhin etwa 330 kWh
+selbst genutzt werden, was eine Amortisation in gut 5 Jahren ergibt.
+
+[//]: #
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 
+
+Last durch Haushalt         = 1500 kWh
+Eigenverbrauch              =  329 kWh
+Netzeinspeisung             =  332 kWh
+Eigenverbrauchsanteil       =   50 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   22 % des Verbrauchs (Autarkiegrad)
+-->
+
+* Wenn bei 3000 kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
+nur eine Grundlast von 100 W anfällt,
+verringert sich die Eigennutzung von 460 auf etwa 365 kWh,
+und damit verlängert sich die Amortisationszeit auf 4,5 Jahre.
+
+[//]: #
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -load 130
+
+Last durch Haushalt         = 3000 kWh
+Konstante Last              =  100 W an den ersten 5 Tagen der Woche von 8 bis 16 Uhr
+Eigenverbrauch              =  365 kWh
+Netzeinspeisung             =  296 kWh
+Eigenverbrauchsanteil       =   55 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   12 % des Verbrauchs (Autarkiegrad)
+
+-->
 
 Für die Amortisation des energetischen Aufwands
 zur Herstellung einer Mini-PV-Anlage muss man nach [Angaben des DKE](
