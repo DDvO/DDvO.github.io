@@ -796,13 +796,20 @@ die Leitungsüberlastung durch Stecker-Solaranlagen
 #### Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}
 
 Die nominelle Leistung der verwendeten Solarmodule kann und sollte durchaus
-größer sein aus 600 Wp (also eher 800 bis 1000 Wp), denn
-in der Praxis werden sonst 600 W PV-Ausgangsleistung ohnehin nicht oft erreicht,
-gerade in sonnenarmen Zeiten.
+größer sein aus 600 Wp (also eher 800 bis 1000 Wp), denn in der Praxis
+wird auch mit solchen Modulen eine PV-Ausgangsleistung von 600 W und mehr
+ohnehin kaum (und jedenfalls nicht oft) erreicht, gerade in sonnenarmen Zeiten.
+Der Unterschied beim Jahres-Gesamtertrag mit oder ohne Kappung ist sehr gering.
+Diese Erkenntnis gilt analog auch für größere Anlagen
+und ist übrigens schon [ziemlich alt](
+https://www.photovoltaikforum.com/thread/79306-wechselrichter-unterdimensionierung-welche-ertragseinbu%C3%9Fen/).
+Nochmal geringer ist der Unterschied beim Eigenverbrauch für eine Balkonanlage,
+wie die u.g. Simulationsergebnisse zeigen.
+
 Man hat durch einen gewisse Überdimensionierung der PV-Module
-(auch "Überbelegung" des Wechselrichters genannt)
+(auch *Überbelegung* oder *Unterdimensionierung* des Wechselrichters genannt)
 auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
-(eigentlich sogar überproportional mehr,weil die Schwellspannung schneller
+(eigentlich sogar überproportional mehr, weil die Schwellspannung schneller
 erreicht wird), allerdings auf eher niedrigem absoluten Niveau.
 
 Die typischerweise auf 600 W gedrosselten Wechselrichter realisieren
@@ -933,6 +940,15 @@ Netzeinspeisung             =  187 kWh
 Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 -->
+
+Aus den selben Gründen lohnt es sich (jedenfalls bei PV-Nennleistungen um
+die 1000 Wp) nicht, statt eines auf 600 W gedrosselten Wechselrichters
+einen teureren mit 800 W Maximalleistung zu nehmen oder darauf zu warten,
+bis diese in Deutschland offiziell unter die Bagatellgrenze fallen.
+
+Zu den
+[gleichen Ergebnissen](https://mini-pv-anlage-600-w-oder-800-w.jimdosite.com/)
+kommen auch Simulationen mit PV*Sol.
 
 #### Stromzähler und Rücklaufsperre {#Stromzähler}
 
@@ -2492,7 +2508,7 @@ LocalWords:  batterieladung batterie inselanlage kombination px cells
 LocalWords:  batteriespeicherung auswahl komponenten anschluss open
 LocalWords:  solarmodule montage solar regler wechselrichter pl short
 LocalWords:  netzwechselrichter gleichspannungswandler beispiel SC
-LocalWords:  inselwechselrichter laderegler hybridgeräte kombi
+LocalWords:  inselwechselrichter laderegler hybridgeräte kombi Sol
 LocalWords:  speicherbatterien dimensionierung strukturierung circuit
 LocalWords:  tiefsetzsteller spannungswächter konfigurationen voltage
 LocalWords:  mobilanlage steckeranlage anlage kombianlage index
