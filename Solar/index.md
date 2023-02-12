@@ -38,6 +38,8 @@ keywords:
 - Optimierung
 - Nutzungsprofil
 - Lastprofil
+- Telemetrie
+- OpenDTU
 - Lastspitzen
 - Abregelung
 - Drosselung
@@ -436,7 +438,7 @@ für einen Haushalt in Süddeutschland mit 3000 kWh Jahresverbrauch mit einer
 Stecker-PV-Anlage mit zwei 300 Wp PV-Modulen und Gesamtsystem-Wirkungsgrad 86%.
 Für die Ausrichtungen -/+ 90° (also Ost/West), +/- 60°, +/- 30° und 0° (Süd)
 zeigt die folgende Tabelle den PV-Nettoertrag und den Eigenverbrauch (EV)
-in den angegebenen Situationen, sowie die jeweile optimale Neigung dafür.
+in den angegebenen Situationen, sowie die jeweils optimale Neigung dafür.
 
 |Azimut|Neigung|Nettoertrag|EV normal|EV Mo-Fr 8-16 h 100 W |EV tgl. 8-18 h 0 W|
 |------------:|:----|----------:|--------:|----------------:|----------:|
@@ -1359,7 +1361,7 @@ für Süddeutschland kann man also 10-15% mehr PV-Leistung ansetzen. Als Eingabe
 verwenden sie den Jahresstromverbrauch (mit einer typischen Lastverteilung) und
 die PV-Nennleistung (mit einem spezifischen PV-Jahresertrag von 1024 kWh/kWp).
 Man kann auch eine (nutzbare) Speicherkapazität angeben, wobei ein typischer
-Wirkungsgrad für LFP-Batterien von 95% und typische Wandlungsverluste
+Wirkungsgrad für LiFePO4-Batterien von 95% und typische Wandlungsverluste
 des Ladereglers und des Wechselrichters von jeweils 94% angenommen werden.
 Implizit wird eine optimale bedarfsgerechte Lade-/Entladeregelung vorausgesetzt.
 [![Bild: Unabhängigkeitsrechner](Unabhängigkeitsrechner.png)](
@@ -1868,19 +1870,10 @@ Netzeinspeisung verwenden möchte, könnte es schon genügen, ihn (über eine
 Sicherung und soweit nötig eine automatische Unterspannungsabschaltung)
 mit der Batterie zu verbinden und nach Bedarf über einen Schalter zu steuern ---
 allerdings nur, wenn die Batteriespannung gut im Eingangsspannungsbereich des
-Wechselrichters liegt und dieser mit seiner vollen oder limitierten Leistung
-betrieben werden kann. Dazu kann man beispielsweise einen auf 300 W begrenzten
+Wechselrichters liegt und es passt, ihn mit seiner vollen oder limitierten
+Leistung zu betreiben. Dazu kann man beispielsweise einen auf 300 W begrenzten
 PV-Eingang nutzen oder die Drosselung in die Firmware programmieren (lassen),
-wie es z.B. der Kundendienst von Deye (Mail an service@deye.com.cn) anbietet.\
-Wenn der Wechselrichter mehrere Eingänge hat, kann man an die übrigen Eingänge
-auch noch direkt PV-Module anschließen,
-deren Ertrag dann nicht über die Batterie gepuffert wird.
-
-Wer zudem bereits eine Powerstation hat,
-kann zwischen ihren Wechselstrom-Ausgang und den Netzwechselrichter ein
-regelbares Netzteil hängen, wie [von Andreas Schmitz vorgeschlagen](
-https://www.youtube.com/watch?v=ZXHAXrJS9CU),
-was allerdings zu Zusatz-Verlusten durch Hin- und Her-Wandlung des Stroms führt.
+wie es z.B. der Kundendienst von Deye (Mail an service@deye.com.cn) anbietet.
 
 ![Bild: Netzwechselrichter aus Batterie gespeist](
 Netzwechselrichter-aus-Batterie-gespeist.jpg){:width="600" .right}
@@ -1891,30 +1884,87 @@ Dazu bietet sich ein Netzwechselrichter wie von
 an, der für die Verwendung an einer Batterie als Quelle ausgelegt ist
 und dessen Ausgangsleistung innerhalb gewisser Grenzen manuell regelbar ist.
 
-Um die Stromstärke regelbar zu drosseln, kann man dem Solar-Wechselrichter
-auch ein einen günstigen [Gleichspannungswandler](#Gleichspannungswandler)
+Wer zudem bereits eine Powerstation hat,
+kann zwischen ihren Wechselstrom-Ausgang und den Netzwechselrichter ein
+regelbares Netzteil hängen, wie [von Andreas Schmitz vorgeschlagen](
+https://www.youtube.com/watch?v=ZXHAXrJS9CU),
+was allerdings zu Zusatz-Verlusten durch Hin- und Her-Wandlung des Stroms führt.
+
+Man kann auch einen normalen Solar-Wechselrichter verwenden und ihm
+einen günstigen [Gleichspannungswandler](#Gleichspannungswandler)
 mit regelbarer Strombegrenzung (engl. _limiter_) vorschalten.
+Allerdings passiert es dann leicht, dass sich die Regelungen der beiden Geräte
+ins Gehege kommen. Daher stellt man die Eingangsspannung für den Wechselrichter
+besser etwas unterhalb des MPPT-Bereichs ein,
+aber (zumindest anfangs) oberhalb seiner Anlaufspannung.
+Außerdem kann es sein, dass der Wechselrichter versucht,
+stets seine maximale Ausgangsleistung zu liefern, was bei eher geringer
+Eingangsspannung zu einem entsprechend hohen Eingangsstrom führt,
+der auch über der Stärke liegen kann, die das Gerät über längere Zeit verträgt.
+Daher und aus Effizienzgründen ist es zu empfehlen, einen Wechselrichter zu
+wählen, der direkt elektronisch regelbar ist, und das lastabhängig zu machen.
+
+Wenn der Wechselrichter mehrere Eingänge hat, kann man an die übrigen Eingänge
+auch noch direkt PV-Module anschließen,
+deren Ertrag dann nicht über die Batterie gepuffert wird.
+
 
 {:style="clear:both"}
 
 [![Bild: Balkonsolar mit Akku - AkkuDoktor](
 Balkonsolar_AkkuDoktor.png){:.center}](
 https://www.youtube.com/watch?v=yOcoux9IbzM)
-Noch eleganter und flexibler, aber deutlich aufwendiger ist die Verwendung eines
-elektronisch steuerbaren DC-DC-Wandlers, z.B. des [Joy-IT DPM8624](
-https://www.idealo.de/preisvergleich/OffersOfProduct/202115817),
+
+Am Elegantesten und vor allem Effizientesten, aber deutlich aufwendiger ist es,
+einen automatisch steuerbaren Netzwechselrichter zu verwenden,
+etwa von [Hoymiles](https://www.hoymiles.com/de/products/microinverter/dtu/),
+oder vor dem Wechselrichter einen elektronisch regelbaren DC-DC-Wandler,
+z.B. den [Joy-IT DPM8616](
+https://www.idealo.de/preisvergleich/ProductCategory/10314.html?q=DPM8616),
 wie in einem [Video von Andreas Schmitz](
 https://www.youtube.com/watch?v=yOcoux9IbzM) vorgeführt.
-Dann lässt sich die Einspeisung sogar abhängig vom realen Stromverbrauch regeln
-(allerdings mit einer gewissen Verzögerung),  etwa über einen entsprechend
-programmierten Raspberry Pi. Dieser kann die Verbrauchsdaten über den sog.
-[„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
+Dann lässt sich die Einspeisung sogar abhängig vom aktuellen Stromverbrauch
+regeln (allerdings mit einer gewissen Verzögerung), etwa über einen entsprechend
+programmierten Raspberry Pi.
+
+{:style="clear:both"}
+
+![Bild: Shelly 3EM](Shelly_3EM.webp){:.right width="150"}
+Die Regelung der lastabhängigen Einspeisung kann die Verbrauchsdaten über den
+sog. [„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
 oder [„Powerfox“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
 aus dem Haushalts-Stromzähler übermittelt bekommen --
-sofern ein smarter Stromzähler verbaut ist und man Zugang zu diesem hat.
+sofern ein moderner Stromzähler verbaut ist und man Zugang zu diesem hat.\
+Alternativ kann man ein 3-Phasen-Energiemessgerät wie den
+[Shelly 3EM](https://www.shelly.cloud/de/products/product-overview/shelly-3em-1)
+oder den teureren, aber wohl genaueren [my-PV WiFi Meter](
+https://www.my-pv.com/de/produkte/my-pv-wifi-meter) verwenden.
+Dieses wird in den Sicherungskasten der Wohnung eingebaut,
+was ein Fachmann machen sollte, und per WLAN eingebunden.
 
-Die Maximalleistung dieser bedarfsgerechten Einspeisung sollte möglichst hoch
-sein. Bei einer auf 600 W begrenzten Einspeisung beträgt für die o.g.
+{:style="clear:both"}
+
+[![Bild: Hardware für OpenDTU](
+OpenDTU_wiring_ESP32.png){:.right width="300"}](
+https://github.com/tbnobody/OpenDTU)
+An einem Netzwechselrichter der Hoymiles HM-Serie und für manche TSUN-Geräte
+kann man anstelle einer teuren proprietären Datenübertragungseinheit
+(engl. *data transfer unit (DTU)* oder allgemein *telemetry gateway*) die offene
+Bastel-Lösung [OpenDTU](https://github.com/roastedelectrons/HoymilesOpenDTU)
+bzw. [AhoyDTU](https://ahoydtu.de/) verwenden. Für beide Varianten gibt es
+schöne Videos auf YouTube wie [dieses](https://youtu.be/YJM913e0tiQ).
+Wer nicht selbst basteln kann oder will, findet z.B. auf
+[eBay-Kleinanzeigen](https://www.ebay-kleinanzeigen.de/s-hoymiles-dtu-ahoy/k0)
+auch betriebsfertige Geräte ab 30€, Bausätze ab 20€. Man kann sie sowohl zum
+[Auslesen](https://www.heise.de/select/ct/2022/24/2224315343257577596)
+der PV-Ertrags- und Geräte- Daten als auch zum [Steuern](
+https://community.symcon.de/t/modul-beta-hoymiles-modulwechselrichter-mit-opendtu/130965)
+des Wechselrichters verwenden.
+
+{:style="clear:both"}
+
+Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
+Bei einer z.B. auf 600 W begrenzten Einspeisung beträgt für die o.g.
 [Balkonanlage mit 1 kWh Pufferspeicher und Überschussableitung](#Batterieladung)
 die Steigerung des Eigenverbrauch durch die Speichernutzung 129 kWh auf 589 kWh.
 Hier findet nur noch eine minimale Netzeinspeisung von 2 kWh statt,
@@ -2285,13 +2335,15 @@ ein Artikel mit speziellen Tipps zur Installation an einer Balkonbrüstung.
 Es gibt aber auch andere Möglichkeiten, wie z.B. auf einer Garage, einem
 Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
 
+![Bild: Gartenhaus mit Solarpanels](Gartenhaus-Panels.jpg){:.right width="798"}
+
+Bei Anbringung an der Fassade einer Wohnanlage ist wegen des Erscheinungsbilds
+meist eine vorherige Genehmigung durch die Eigentümergemeinschaft erforderlich.\
+Bei spiegelnden Oberflächen kann es auch Probleme mit Blendeffekten geben.
+
 Wichtig ist, dass die Module sicher angebracht werden, besonders bzgl. Sturm.
 Bei über 4 m Montagehöhe gelten besondere Verordnungen für Glasoberflächen,
 wenn sich direkt darunter den Menschen bewegen oder aufhalten können.
-
-Bei Anbringung außen am Haus kann es auch Probleme mit dem optischen
-Erscheinungsbild geben (daher soweit erforderlich, eine Genehmigung einholen)
-und bei spiegelnden Oberflächen eventuell auch mit Blendeffekten.
 
 ### Solar-Regler und Wechselrichter {#Wechselrichter}
 
@@ -2328,8 +2380,9 @@ Für die Einspeisung ins Stromnetz kommt ein *netzgekoppelter Wechselrichter*
 zum Einsatz. Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*,
 *netzgeführter Wechselrichter* oder *fremd geführter Wechselrichter* genannt,
 weil er sich automatisch an die Frequenz und Phase des anliegenden Wechselstroms
-anpasst und bei fehlendem Stromanschluss den Ausgang abschaltet --- auch aus
-Sicherheitsgründen für den Fall, dass ein blanker Stecker berührt werden kann.
+anpasst. Bei wegfallendem Stromanschluss schaltet er den Ausgang vor Allem aus
+Sicherheitsgründen ab --- das ist der sog. *NA-Schutz* (nach VDE) für den Fall,
+dass blanke Kontakte eines daran hängenden 230 V Steckers berührt werden können.
 Bei Stecker-Solaranlagen wird meist ein *Solar-Mikrowechselrichter* verwendet,
 der einen adaptiven Spannungsregler mit einem Netzwechselrichter integriert.
 Im Zusammenhang von Solaranlagen wird meist vereinfacht nur von einem
@@ -2428,7 +2481,8 @@ https://de.wikipedia.org/wiki/Lithium-Eisenphosphat-Akkumulator)
 Diese sind zwar erheblich teurer als *Blei-Säure-Batterien* (inkl. Varianten wie
 AGM), wie man sie vom Auto kennt, aber sind wartungsfrei, nicht so groß und
 schwer, sowie viel spannungsstabiler und langlebiger. Sie haben weniger
-Selbstentladung, einen deutlich höheren Wirkungsgrad (über 90%) und vertragen
+Selbstentladung, einen deutlich höheren Wirkungsgrad
+(etwa 95%, bei geringen Lade- und Entladeströmen auch 97%) und vertragen
 ein Vielfaches an Lade-/Entladezyklen sowie recht hohe Lade-/Entladeströme,
 so dass sie in weniger als einer Stunde geladen bzw. entladen werden können.
 Im Vergleich zu anderen Lithium-Ionen-Akkutypen wie Lithium-Polymer (LiPo),
@@ -2550,6 +2604,9 @@ Beispiel-Konfigurationen {#Konfigurationen}
 ------------------------
 
 ### Mobile Inselanlage {#Mobilanlage}
+
+![Bild: Flexible Module auf dem Wohnmobildach.jpg](
+Flexible_Module_am_Wohnmobildach.jpg){:width="798" .right}
 
 Für unser Wohnmobil verwende ich seit Sommer 2019 folgende relativ günstige
 Komponenten zu meiner vollen Zufriedenheit:
@@ -2695,14 +2752,14 @@ LocalWords:  regelungsstrategien speicherbatterie einspeisung zip cut
 LocalWords:  batterieladung batterie inselanlage kombination px cells
 LocalWords:  batteriespeicherung auswahl komponenten anschluss open
 LocalWords:  solarmodule montage solar regler wechselrichter pl short
-LocalWords:  netzwechselrichter gleichspannungswandler beispiel SC
-LocalWords:  inselwechselrichter laderegler hybridgeräte kombi Sol
+LocalWords:  netzwechselrichter gleichspannungswandler beispiel SC NA
+LocalWords:  inselwechselrichter laderegler hybridgeräte kombi Sol my
 LocalWords:  speicherbatterien dimensionierung strukturierung circuit
 LocalWords:  tiefsetzsteller spannungswächter konfigurationen voltage
-LocalWords:  mobilanlage steckeranlage anlage kombianlage index
-LocalWords:  pandoc output calculation power width style margin
-LocalWords:  left right irradiance GHI buehneTop clear both png
-LocalWords:  potential csv grid tie inverter tmy peff ieff curb
+LocalWords:  mobilanlage steckeranlage anlage kombianlage index data
+LocalWords:  pandoc output calculation power width style margin unit
+LocalWords:  left right irradiance GHI buehneTop clear both png tgl
+LocalWords:  potential csv grid tie inverter tmy peff ieff curb WiFi
 LocalWords:  standby xls jpg Balkonsolar center limiter off to
 LocalWords:  blackout brownout panels busbars shingle panel up
 LocalWords:  maximum point tracking sine wave efficiency boost
