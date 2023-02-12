@@ -1016,21 +1016,32 @@ Nehmen wir beispielsweise eine PV-Anlage mit 1000 Wp, die je nach Standort
 und Ausrichtung zu einem Ertrag von 1216 kWh brutto pro Jahr führen kann,
 also bei einem PV-System-Wirkungsgrad von 92%
 und einem Wechselrichter-Wirkungsgrad von 94% etwa 1050 kWh Netto-Ertrag.
-Dann **macht der effektive Verlust durch Drosselung auf 600 W** Eingangsleistung
+Bei 3000 kWh Jahresverbrauch mit einem durchschnittlichen Lastprofil
+**macht der effektive Verlust durch Drosselung auf 600 W** Eingangsleistung
 des Wechselrichters (also 564 W Ausgangsleistung bei den 94% Wirkungsgrad)
 **nur ungefähr 10 kWh aus**. Dies erklärt sich durch zwei Effekte:
 * Die Abregelung findet zwar während etwa 650 Sonnenstunden im Jahr statt, aber
 die Differenz auf den sonst möglichen Netto-Ertrag ist moderat: etwa 80 kWh.
-Diese Zahl ist schon relativ klein, und sie wird durch folgenden Effekt nochmal
+Dieser Verlust ist schon nicht groß, und er wird durch Folgendes nochmal
 deutlich kleiner:
 * Nur während in Summe etwa 90 Stunden wird zeitgleich zu dieser Abregelung
-typischerweise überhaupt so viel Strom verbraucht, dass sich die Drosselung beim
-Eigenverbrauch bemerkbar macht, und die Menge dieses Verbrauchs, bei dem also
-mehr als 528 W Leistung beansprucht werden, ist typischerweise ziemlich gering.
+bei einem durchschnittlichen Lastprofil überhaupt so viel Strom verbraucht,
+dass sich die Drosselung beim Eigenverbrauch bemerkbar macht. Und die Menge
+dieses Verbrauchs, bei dem also mehr als 528 W Leistung beansprucht werden,
+ist ziemlich gering, so dass der Verlust effektiv nur 10 kWh ausmacht.\
+Selbst wenn man es schafft, die Last innerhalb des Tages so zu verschieben,
+dass täglich zwischen 8 und 16 Uhr doppelt so viel verbraucht wird wie normal
+und morgens und abends entsprechend weniger, ist der effektive Kappungsverlust
+im Jahr immer noch nur 20 kWh (während in Summe effektiv 190 Stunden).\
+Und wenn man täglich zwischen 8 und 16 Uhr keine Lastspitzen hat, die über die
+Kappungsgrenze gehen (sondern z.B. nur eine konstante Grundlast von 100 W),
+dann verschwindet der effektive Kappungsverlust natürlich völlig.
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564
+https://www.mydealz.de/comments/permalink/40266559
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92
 88%: -peff 93.617
 Verbrauch gemäß Lastprofil  = 4674 kWh
 Grundlast                   =  286 W
@@ -1043,13 +1054,28 @@ PV-Ertragsverlust           =   78 kWh während 653 h durch Drosselung auf 564 W
 Ertragsanteil 9-15 Uhr MEZ  =   70 %
 
 Last durch Haushalt         = 3000 kWh
+PV-Eigenverbrauch           =  587 kWh
+Netzeinspeisung             =  464 kWh
 
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -curb 564
 Eigenverbrauch mit Drossel  =  577 kWh
 Eigenverbrauchsverlust      =   10 kWh während 93 h durch Drosselung auf 564 W
 Netzeinspeisung             =  396 kWh
-Eigenverbrauchsanteil       =   59 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -curb 564 -load 111 7:8..16
+
+Konstante Last              =  100 W  von 8 bis 16 Uhr
+PV-Eigenverbrauch           =  359 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 564 W
+Netzeinspeisung             =  614 kWh
+
+/Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -curb 564 -distort 1,1,1,1,.5,.5,.5,.5,2,2,2,2,2,2,2,2,.5,.5,.5,.5,1,1,1,1
+
+Last-Verzerrung je Stunde   = 1 1 1 1 .5 .5 .5 .5 2 2 2 2 2 2 2 2 .5 .5 .5 .5 1 PV-Eigenverbrauch           =  682 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =   20 kWh netto während 190 h durch Drosselung auf 564 W
+Netzeinspeisung             =  291 kWh
 -->
+
 <!--
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000
 
