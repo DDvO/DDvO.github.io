@@ -915,14 +915,25 @@ zu verdrahten, was den Betrieb sogar noch sicherer macht.
 Die auch [*Balkonkraftwerk*](https://www.steckdosensolar.de/) genannten Anlagen
 haben meist eine recht geringe PV-Nennleistung von etwa 600 bis 800 Wp.
 Das hat neben der geringen Größe und sehr überschaubaren Kosten auch damit zu
-tun, dass sie selbst installiert werden dürfen und genehmigungsfrei (jedoch
-anmeldepflichtig) sind, wenn sie [maximal 600 W in die Steckdose einspeisen](
+tun, dass sie selbst installiert werden dürfen und genehmigungsfrei sind,
+wenn sie [maximal 600 W in die Steckdose einspeisen](
 https://solarblitz.blogspot.com/2019/08/zulassigkeit-von-balkonkraftwerken-plug.html).
 Dies gilt bislang für Deutschland und die Schweiz; in Österreich gilt nach einer
 allgemeineren EU-Regel für die vereinfachte Nutzung eine Obergrenze von 800 W.
 Seit Anfang 2023 [empfiehlt selbst der VDE](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), sich
 künftig auch in Deutschland an der "Bagatellgrenze bis 800 W" zu orientieren.
+
+In Deutschland sind PV-Anlagen anmeldepflichtig, wenn sie ins externe Netz
+einspeisen können, wobei der Aufwand für Balkonkraftwerke nicht so groß ist.
+Nach einem [Artikel im pv magazine](
+https://www.pv-magazine.de/2022/02/24/markt-groesser-als-gedacht-rund-190-000-stecker-solar-geraete-bereits-installiert/)
+wird geschätzt, dass nur 10 bis 20% der Stecker-Solaranlagen tatsächlich beim
+Netzbetreiber angemeldet werden. Eine dort genannte Umfrage hat auch ergeben,
+dass etwa 77% der Anlagen mit einem Schuko-Stecker angeschlossen werden.
+Bei etwa 1/3 der Anlagen befinden sich die PV-Module auf oder an einem Balkon;
+bei etwa der Hälfte werden die Module z.B. auf einem Flachdach oder im Garten
+aufgeständert.
 
 #### Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}
 
@@ -2763,7 +2774,7 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 
 <!--
 Local IspellDict: german
-LocalWords: title keywords toc start refresh zusammenfassung abgrenzung pv end
+LocalWords:  title keywords toc start refresh zusammenfassung abgrenzung pv end
 LocalWords:  inhaltsverzeichnis photovoltaik sonneneinstrahlung feed
 LocalWords:  nennleistung jahresertrag ausrichtung solarmodulen capacity
 LocalWords:  nutzungsmöglichkeiten nutzung netzeinspeisung fuer Eff
@@ -2792,7 +2803,13 @@ LocalWords:  maximum point tracking sine wave efficiency boost
 LocalWords:  converter step consumption pdf balancer equalizer
 LocalWords:  buck down SA SZ DW MQ EC LF small LY KREE Battery
 LocalWords:  Charger Discharger Board Under Over Voltage Protection
-LocalWords:  Speicherungs current eigenverbrauchs Oekonomie
+LocalWords:  Speicherungs current eigenverbrauchs Oekonomie magazine
 LocalWords:  rendite solbatsim Regelungs Eigenverbrauchsv transfer
 LocalWords:  telemetry gateway distort aufteilung orientierungen
+LocalWords:  
+LocalWords:  
+LocalWords:  
+LocalWords:  
+LocalWords:  
+LocalWords:  
  -->
