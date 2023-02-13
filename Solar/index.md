@@ -1915,13 +1915,24 @@ Generell sind *monokristalline* Zellen zu bevorzugen, auch wenn sie ein wenig
 teurer sind als *polykristalline* oder *amorphe*, weil sie einen höheren
 Wirkungsgrad haben.
 
+In vielen PV-Modulen werden inzwischen sog.
+[*Halbzellen*](https://gruenes.haus/halbzellenmodule/) (engl. *half cut cells*)
+in doppelter Anzahl verwendet. Durch die Halbierung der Größe fließt durch
+sie nur halb so viel Strom, was die inneren elektrischen Verluste verringert
+und damit die [Leistung um 2 bis 3 Prozentpunkte erhöht](
+https://www.energie-experten.org/erneuerbare-energien/photovoltaik/solarmodule/halbzellen).
+
 ![Bild: Bypass-Dioden bei der Arbeit](
 Bypass-Dioden-bei-der-Arbeit.jpg){:.center}
-Leider bricht die
-Leistung von in Reihe geschalteten Zellen ein, sobald auch nur eine
-davon verschattet ist. Daher werden in den üblichen größeren Modulen
+Leider bricht die Leistung von in Reihe geschalteten Zellen ein, sobald auch
+nur eine davon verschattet wird. Daher werden in den üblichen größeren Modulen
 sog. *Bypass-Dioden* eingesetzt, die bei Teilverschattung immerhin einen
 Teil der Leistung fließen lassen.
+
+![Bild: Halbzellenmodule haben weniger Verlust durch Teilverschattung](
+Halbzellenmodule-weniger-Leistungsverlust.webp){:.center}
+Bein Halbzellenmodulen wird durch geschickte interne Parallelschaltung von
+Zellsträngen die Empfindlichkeit auf Teilverschattung noch weiter verringert.
 
 ![Bild: Starre Solarpanels](Starre_Solarpanels.png){:width="392"}
 ![Bild: Flexible Solarpanels](Flexible_Solarpanels.png){:.right width="392"}
@@ -1998,32 +2009,51 @@ etwas günstiger als entsprechend viele kleine.
     oder um den Ertrag über den Tag möglichst gleichmäßig zu verteilen,
     ohne dafür unbedingt mehr als einen MPPT-Eingang zu benötigen.
 
-Generell muss man unbedingt darauf achten, dass die maximale Eingangsspannung,
-die ein Regler-Eingang verkraftet, nicht überschritten wird ---
-und zwar nicht nur bei [*Normalbedingungen (NOCT)*](
+Generell muss man unbedingt darauf achten, dass an jedem Eingang eines
+Ladereglers oder Wechselrichters die durch die angeschlossenen PV-Module
+erzeugte Spannung die erlaubte maximale Eingangsspannung (*V<sub>DC</sub> max*)
+des Geräts nicht überschreiten kann, weil dieses sonst zerstört werden kann.
+Die Spannung wird durch die im Datenblatt der Module angegebene Maximalspannung
+(*Leerlaufspannung*, engl. *open-circuit voltage, V<sub>OC</sub>*) bestimmt
+muss nicht nur bei [*Normalbedingungen (NOCT)*](
 https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/)
 mit 45°C Betriebstemperatur bzw. idealisierten Standard-Testbedingungen (STC)
-mit 25°C, sondern auch bei sehr niedrigen Temperaturen,
-wo die Spannung etwa 10 bis 20% höher sein kann.
-Allerdings werden die Module gerade im Winter kaum unter Optimalbedingungen
-betrieben, so dass die Leerlaufspannung der Module
-auch da wohl nur wenig über den für NOCT oder STC angegebenen Wert kommt.
+mit 25°C eingehalten werden, sondern auch bei sehr niedrigen Temperaturen,
+wo die Spannung je nach Temperaturkoeffizient etwa 10 bis 20% höher sein kann.
+Allerdings werden Module gerade im Winter aufgrund des niedrigen Sonnenstandes
+kaum unter Optimalbedingungen betrieben, so dass die Leerlaufspannungen
+auch da wohl nur wenig über den für NOCT oder STC angegebenen Wert kommen.
 
-Im Gegensatz dazu darf der (je nach Einstrahlung und Temperatur) mögliche
-(Gesamt-)Strom den spezifizierten Maximalstrom eines Regler-Eingangs durchaus
-überschreiten.
-Allerdings wird dann PV-Leistung verschenkt, weil der Wechselrichter
-im Prinzip nicht mehr Leistung aufnimmt als worauf er ausgelegt wurde.
-Allerdings kann es bei stark wechselnden Lichtverhältnissen und starkem
-Strom-Überangebot zu zeitweisen Überlastungen des Geräts kommen,
-und wenn es für längere Zeit am Limit läuft, kann es schneller altern
+Im Gegensatz dazu ist der je nach Einstrahlung und Temperatur mögliche Strom,
+der sich aus dem Maximalstrom (*Kurzschlussstrom*, engl. *short-circuit current,
+I<sub>SC</sub>*) der Module ergibt, weniger kritisch.
+Er darf den maximal nutzbaren Strom eines Eingangs (*I<sub>DC</sub> max*)
+durchaus überschreiten, allerdings wird dann PV-Leistung verschenkt,
+weil der Regler bzw. Wechselrichter im Prinzip nicht mehr Leistung aufnimmt
+als wofür er ausgelegt wurde.
+Das ist ähnlich wie z.B. bei einem an einer Wohnungssteckdose angeschlossenen
+Elektrogerät, das durch seinen Innenwiderstand seine Stromaufnahme begrenzt,
+obwohl die Steckdose viel mehr (je nach Absicherung z.B. 16 A) liefern könnte.
+Es kann aber v.A. bei stark wechselnden Lichtverhältnissen und starkem
+PV-Strom-Überangebot zur zeitweisen Überlastung eines MPPT-Reglers kommen.
+Außerdem kann sich der Regler bzw. Wechselrichter durch eine Fehlfunktion selbst
+überlasten, und wenn er längere Zeit am Limit läuft, kann er schneller altern.
+Daher und wegen der Garantiebedingungen empfiehlt es sich,
+den im Datenblatt des Geräts genannten absoluten Maximal-Eingangsstrom,
+welcher auch [*maximaler DC-Kurzschlussstrom* (*I<sub>SC</sub> PV max*)](
+https://www.sma-sunny.com/wechselrichter-hochstrommodule-missverstaendnis-i-dc-max/)
+genannt wird, einzuhalten.
 
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
 I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
-Zu beachten ist noch, dass die Betriebsspannung der PV-Module im MPPT-Bereich
-des Reglers liegen sollte und die Regler- bzw. Wechselrichter-Eingangsspannung
+Zu beachten ist noch:
+* Die Betriebsspannung der PV-Module am Eingang des Wechselrichters bzw.
+[Solar-Ladereglers](#Laderegler) muss über seiner Anlaufspannung liegen,
+damit er starten kann, und sollte im MPPT-Bereich der Regelung liegen,
+weil sonst Leistung verloren geht.
+* Die Eingangsspannung eines Solar-Ladereglers muss
 je nach Modell bis zu 5 V über der gewünschten Ausgangsspannung (z.B. der
-Speicherbatterie) liegen muss, damit der Regler effektiv Strom liefern kann.
+Speicherbatterie) liegen, damit der Regler effektiv Strom liefern kann.
 Wenn man z.B. kleine Solarmodule mit 100 Wp und 22,6 V Leerlaufspannung hat,
 wird es ohne Reihenschaltung bei einer Ladeschlussspannung von ca. 14,5 V
 einer LiFePO4-Batterie bei wolkigem Wetter (mit einer Einstrahlung von
@@ -2082,14 +2112,14 @@ Der kritischste Punkt ist, das seine maximale Eingangsspannung nicht
 
 #### Netzwechselrichter {#Netzwechselrichter}
 
-Für die Einspeisung ins Stromnetz wird ein *netzgekoppelter Wechselrichter*
-verwendet. Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*
-oder *fremd geführter Wechselrichter* genannt, weil er sich automatisch
-an die Frequenz und Phase des anliegenden Wechselstroms anpasst und bei
-fehlendem Stromanschluss den Ausgang abschaltet --- auch aus
+Für die Einspeisung ins Stromnetz kommt ein *netzgekoppelter Wechselrichter*
+zum Einsatz. Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*,
+*netzgeführter Wechselrichter* oder *fremd geführter Wechselrichter* genannt,
+weil er sich automatisch an die Frequenz und Phase des anliegenden Wechselstroms
+anpasst und bei fehlendem Stromanschluss den Ausgang abschaltet --- auch aus
 Sicherheitsgründen für den Fall, dass ein blanker Stecker berührt werden kann.
 Bei Stecker-Solaranlagen wird meist ein *Solar-Mikrowechselrichter* verwendet,
-der einen Spannungsregler mit einem Netzwechselrichter integriert.
+der einen adaptiven Spannungsregler mit einem Netzwechselrichter integriert.
 Im Zusammenhang von Solaranlagen wird meist vereinfacht nur von einem
 '*Wechselrichter*' (*WR*) gesprochen.
 Zur Dimensionierung von Solar-Wechselrichtern gibt es
@@ -2097,8 +2127,9 @@ z.B. [hier und auf den Folgeseiten](
 https://photovoltaikbuero.de/pv-know-how-blog/ist-bei-der-wechselrichterauslegung-zu-beachten-kriterium-1/)
 ausführliche Hinweise.
 
-Im Gegensatz zu Solarkabeln (s.o.) können 230 V-Kabel
-zwischen Netzwechselrichter und Steckdose durchaus länger sein (z.B. 5 - 10 m).
+Im Gegensatz zu Solarkabeln ([siehe oben](#Anschluss)) können 230 V-Kabel
+zwischen Netzwechselrichter und Steckdose durchaus länger sein (z.B. 5 - 10 m),
+ohne dass es größere Leitungsverluste gibt.
 Allerdings kann es dort je nach Kabellänge und -Querschnitt bei größeren Strömen
 zu einem höheren Spannungsabfall kommen, der die Netzkoppelung des WR stört.
 
@@ -2368,7 +2399,10 @@ ich folgende Komponenten besonders interessant:
     die Wechselrichter von Deye, sowie baugleich Bosswerk und revolt (Pearl),
     beim WLAN-Zugang [sträfliche Sicherheitslücken](
     https://www.photovoltaikforum.com/thread/187077-achtung-wifi-sicherheit-der-deye-und-bosswerk-mi600-300-sowie-baugleiche-microwe/).
-    Daher sollte ihre WLAN-Funktion höchstens in einem Gastnetz genutzt werden._
+    Daher sollte ihre WLAN-Funktion höchstens in einem Gastnetz genutzt werden.
+    Man kann aber einfach per E-Mail ein [Firmware-Update per Internet](
+    https://www.mydealz.de/comments/permalink/40076009) machen lassen.
+    <!-- customerservice@solarmanpv.com auf MW3_16U_5406_1.53 -->
 
 ### Kombi-Anlage {#Kombianlage}
 
