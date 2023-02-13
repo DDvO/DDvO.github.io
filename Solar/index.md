@@ -49,6 +49,7 @@ keywords:
 - Autarkiegrad
 - Batterieentladung
 - Amortisation
+- Rendite
 - Ökologie
 - Umwelt
 ---
@@ -194,7 +195,7 @@ verwiesen.
 Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}
 --------------------------------------------------
 
-Mit Solarzellen kann man Sonnenlicht in elektrischen Strom umwandeln,
+Mit Solarzellen kann man Sonnenlicht in elektrische Energie umwandeln,
 woraus sich auch die Bezeichnung *Photovoltaik (PV)* ableitet.
 
 Leider ist diese Art der Stromgewinnung nicht besonders effizient.
@@ -203,24 +204,30 @@ https://www.photovoltaik4all.de/seit-wann-gibt-es-photovoltaik) wurde 1883
 von Charles Fritts entwickelt und hatte einen Wirkungsgrad von 1%.
 Der [Wirkungsgrad](https://de.wikipedia.org/wiki/Solarzelle#Wirkungsgrad)
 der heutzutage üblichen Photovoltaik-Technologie mit Siliziumzellen liegt
-bei 18 bis 20%, wobei besonders hochwertige Zellen etwa 22% erreichen.
+bei 18 bis 20%, wobei teilweise wohl auch 22% erreicht werden.
+Wenn man nicht sehr mit Platz sparen muss, lohnt es sich allerdings kaum,
+für einen wenige Prozentpunkte höheren Wirkungsgrad mehr Geld auszugeben.
 
 Abgesehen vom Wirkungsgrad gibt es in der Praxis Verluste, die davon abhängen,
 wie alt die PV-Module sind, wie sehr
 ihre Ausrichtung von der aktuellen Einstrahlungsrichtung der Sonne abweicht
 (wobei senkrechte Einstrahlung natürlich optimal, aber selten erreichbar ist),
 wie stark sie verschattet und/oder verschmutzt sind und wie warm sie sind.
-Die altersbedingte Degradation ist ziemlich linear und liegt bei etwa 0,5%
-pro Jahr, so dass sich bei projektierten 20 Jahren Gesamt-Verwendungsdauer
-nach 10 Jahren ein durchschnittlicher Verlust durch die Alterung von 5% ergibt.
+Die altersbedingten Verluste (*Degradation*) steigen ziemlich linear etwa 0,5%
+pro Jahr, so dass sich bei einer projektierten Gesamt-Verwendungsdauer von 20
+Jahren eine durchschnittliche Degradation (also nach 10 Jahren) von 5% ergibt.
 Auch der termperaturbedingte Verlust ist praktisch linear und liegt je nach
-Zelltyp bei etwa 10%, wenn die Modultemperatur beispielsweise 55°C beträgt,
-also 30°C über der Temperatur von 25°C bei [*Standard-Testbedingungen (STC)*](
-https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/) von 25°C. Genaueres dazu z.B. [hier](
+Zelltyp bei insgesamt etwa 10%, wenn die Modultemperatur beispielsweise 55°C
+beträgt, also 30°C über der Temperatur bei [*Standard-Testbedingungen (STC)*](
+https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/) von 25°C.
+Genaueres dazu z.B. [hier](
 https://joint-research-centre.ec.europa.eu/pvgis-photovoltaic-geographical-information-system/getting-started-pvgis/pvgis-data-sources-calculation-methods_en#ref-5-calculation-of-pv-power-output).
 
 Zu berücksichtigen ist zudem der elektrische Wirkungsgrad der übrigen PV-Anlage
-(also z.B. von Wechselrichter, Kabeln, ggf. Batterie) von etwa 80 bis 95%.
+(also z.B. von Wechselrichter, Leitungen, ggf. Batterie) von etwa 80 bis 95%.
+
+Das Hauptproblem der Photovoltaik ist allerdings viel grundlegender, nämlich
+die am Erdboden oft nicht oder nur schwach verfügbare Sonneneinstrahlung.
 
 ### Sonneneinstrahlung {#Sonneneinstrahlung}
 
@@ -339,10 +346,11 @@ Fläche auf den aktuellen Sonnenstand ausgerichtet ist.
 Dabei geht es um die zur Modulfläche senkrechte Komponente der Direktstrahlung,
 also um den Faktor Kosinus der Winkelabweichung vom Lot auf die Modulfläche.
 
-Mit der Diffusstrahlung, welche
-wie oben erwähnt einen sehr großen Anteil an der Gesamtstrahlung ausmacht,
-können Solarzellen leider nicht sehr viel anfangen.
-Für diesen effektiv geringen Anteil wäre eine waagerechte Anordnung optimal.
+Mit der Diffusstrahlung,
+welche wie oben erwähnt von der Richtung der Direktstrahlung unabhängig ist
+und einen erstaunlich großen Anteil an der Gesamtstrahlung ausmacht,
+können Solarzellen leider nicht sehr viel anfangen. Für diesen also
+effektiv geringen Anteil wäre eine waagerechte Anordnung optimal.
 
 ![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
 Solarmodule_Ausrichtung_PV-Potential.png){:width="392" }
