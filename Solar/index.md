@@ -433,9 +433,10 @@ im Sommer einen leichten Vorteil, während zu allen anderen Jahreszeiten
 die Südausrichtung mehr Eigenverbrauch ermöglicht.\
 Eine Ost-West-Ausrichtung (etwa aus baulichen Gründen) schadet der Eigennutzung
 allerdings auch kaum, besonders wenn man tagsüber
-im Vergleich zu den Morgen- und Abendstunden wenig Verbrauch hat. Nur im
-Extremfall, wenn täglich von 8 bis 18 Uhr gar kein Verbrauch stattfinden würde,
-brächte eine Ost-West-Ausrichtung einen minimalen Vorteil beim Eigenverbrauch.
+im Vergleich zu den Morgen- und Abendstunden wenig Verbrauch hat.\
+Im Extremfall, wenn täglich von 8 bis 18 Uhr gar kein Verbrauch stattfinden
+würde, was sehr unrealistisch ist, brächte eine Ost-West-Ausrichtung einen
+minimalen Vorteil beim Eigenverbrauch.
 
 Dies ist das Ergebnis einer Reihe [genauer Simulationen](#SolBatSim)
 für einen Haushalt in Süddeutschland mit 3000 kWh Jahresverbrauch mit einer
@@ -505,7 +506,7 @@ Eigenverbrauch  = 436 kWh
 Eigenverbrauch  = 362 kWh wenn Mo-Fr 8-16 Uhr nur 100 W Verbrauch (Grundlast)
 Eigenverbrauch  = 313 kWh wenn täglich 8-18 Uhr kein Verbrauch
 
-./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_-90deg_2005_2020.csv 300 # -load 130
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_-90deg_2005_2020.csv 300 # -load 130 -load 93 7:8..18
 
 Neigungswinkel  =  40° Azimut =  90°
 Neigungswinkel  =  40° Azimut = -90°
@@ -515,6 +516,8 @@ Last Haushalt  = 3000 kWh
 Eigenverbrauch  = 443 kWh
 Eigenverbrauch  = 365 kWh wenn Mo-Fr 8-16 Uhr nur 100 W Verbrauch (Grundlast)
 Eigenverbrauch  = 314 kWh wenn täglich 8-18 Uhr kein Verbrauch
+/Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_-90deg_2005_2020.csv 300 -distort 1,1,1,1,2,2,2,2,.5,.5,.5,.5,.5,.5,.5,.5,2,2,2,2,1,1,1,1
+PV-Eigenverbrauch           =  343 kWh
 
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_-90deg_2005_2020.csv 300
 
@@ -583,6 +586,7 @@ Eigenverbrauch  = 456 kWh (opt.)
 Eigenverbrauch  = 364 kWh wenn Mo-Fr 8-16 Uhr nur 100 W Verbrauch (Grundlast)
 Eigenverbrauch  = 306 kWh wenn täglich 8-18 Uhr kein Verbrauch
 -->
+
 <!--
 Variante stark gespreizt:
 
@@ -637,6 +641,7 @@ Neigungswinkel  =  30° (opt.?) Azimut =  53°
   Eigenverbrauch  = 485 kWh
   Eigenverbrauch  = 380 kWh wenn Mo-Fr 8-16 Uhr nur 100 W Verbrauch (Grundlast)
 -->
+
 <!--
 Variante schwach gespreizt:
 
@@ -681,7 +686,8 @@ Last Haushalt   = 3000 kWh
 Eigenverbrauch  =  494 kWh
 Eigenverbrauch  = 381 kWh wenn Mo-Fr 8-16 Uhr nur 100 W Verbrauch (Grundlast)
 -->
-<!---
+
+<!--
 Variante nicht gespreizt:
    ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_37deg_2deg_2005_2020.csv 600
 
@@ -723,6 +729,8 @@ Last Haushalt  = 3000 kWh
 Eigenverbrauch  =  498 kWh
 Eigenverbrauch  = 381 kWh wenn Mo-Fr 8-16 Uhr nur 100 W Verbrauch (Grundlast)
 Eigenverbrauch  = 306 kWh wenn täglich 8-18 Uhr kein Verbrauch
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 600 -distort 1,1,1,1,2,2,2,2,.5,.5,.5,.5,.5,.5,.5,.5,2,2,2,2,1,1,1,1
+PV-Eigenverbrauch           =  350 kWh
 
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_20deg_0deg_2005_2020.csv 600 #-load 130
 
@@ -745,7 +753,7 @@ Eigenverbrauch  = 378 kWh wenn Mo-Fr 8-16 Uhr nur 100 W Verbrauch (Grundlast)
 Eigenverbrauch  = 307 kWh wenn täglich 8-18 Uhr kein Verbrauch
 -->
 
-**Also auch bei einem Verbrauchsprofil, das sehr stark auf die Morgen- und
+**Also auch bei einem Verbrauchsprofil, das stark auf die Morgen- und
 Abendstunden konzentriert ist, bringt eine Aufteilung der Modul-Ausrichtung
 keinen Vorteil für den Eigenverbrauch.** Dagegen spricht zusätzlich 
 die Tendenz zu stärkerer Verschattung durch den flacheren Sonnenstand.
@@ -1055,6 +1063,7 @@ dann verschwindet der effektive Kappungsverlust natürlich völlig.
 [//]: #
 <!--
 https://www.mydealz.de/comments/permalink/40266559
+https://www.mydealz.de/comments/permalink/40042755
 
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92
 88%: -peff 93.617
