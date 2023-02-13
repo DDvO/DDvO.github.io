@@ -77,6 +77,12 @@ gewonnene Energie über den ganzen Tag und die Nacht verteilt einspeisen.
 Eine sog. *Inselanlage* ist auch während Stromausfällen verwendbar,
 soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
 
+![Bild: Balkonkraftwerk und Dach-PV-Anlage](
+Balkonkraftwerk_und_Dach-PV-Anlage.jpg)
+<!--https://www.handelsblatt.com/adv/firmen/balkonkraftwerk-solar.html-->
+<!--https://cdn.daa.net/images/photovoltaik/balkonkraftwerk.jpg-->
+<!--https://www.solaranlagen-portal.com/photovoltaik/balkonkraftwerk-->
+
 # Abgrenzung {#Abgrenzung}
 
 Hier geht es nicht um *Solarthermie*, also die direkte Gewinnung von Wärme
