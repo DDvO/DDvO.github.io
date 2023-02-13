@@ -2312,6 +2312,11 @@ was proportional zur Länge zu spürbaren Verlusten führt.
 Aus dem selben Grund sollte der Querschnitt nicht zu klein sein --- mind. 4mm²,
 bei längeren Kabeln und höheren Strömen mind. 6mm² (was allerdings teurer ist).
 
+Wer keine Außensteckdose hat, kann eine kleine PV-Anlage auf dem Balkon
+oder im Garten auch mit einem Flachbandkabel (z.B. [MC4-Fensterdurchführung](
+https://solarmodule-gladbeck.de/produkt/solar-mc4-fensterdurchfuehrung/?sld=3)
+anschließen.
+
 Solarmodule kann man wie Batteriezellen seriell und/oder parallel verbinden,
 um mehr Leistung zu erhalten, ohne für jedes Modul einen eigenen Regler
 (bzw. Regler-Eingang) verwenden zu müssen.
