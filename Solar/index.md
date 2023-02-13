@@ -367,9 +367,9 @@ können Solarzellen leider nicht sehr viel anfangen. Für diesen also
 effektiv geringen Anteil wäre eine waagerechte Anordnung optimal.
 
 ![Bild: PV-Potential nach Ausrichtung von Solarmodulen](
-Solarmodule_Ausrichtung_PV-Potential.png){:width="392" }
+Ausrichtung_PV-Potential.png){:width="392" }
 ![Bild: Ertragsanteil nach Ausrichtung von Solarmodulen](
-Solarmodule_Ausrichtung_Ertragsanteil.png){:width="385" .right}
+Ausrichtung_Ertragsanteil.png){:width="385" .right}
 Den [besten Jahres-Gesamtertrag](
 https://machdeinenstrom.de/optimaler-ertrag-mit-mini-solar-kraftwerken/)
 bekommt man in süddeutschen Breitengraden bei Orientierung genau nach Süden
@@ -403,14 +403,111 @@ sollte man das Nutzungsprofil berücksichtigen, welches auch auch
 [*Lastprofil*](https://www.energie-lexikon.info/lastprofil.html) genannt wird.
 
 ![Bild: Ertrags-Nutzungsanteil nach Ausrichtung von Solarmodulen](
-Solarmodule_Ausrichtung_Ertragsnutzungsanteil.png){:width="385" .right}
-Durch genaue Simulation für durchschnittliche Haushalts-Tages-Nutzungsprofile
-zeigt sich, dass **eine Abweichung von der optimalen Ausrichtung
+Ausrichtung_Eigennutzungsanteil.png){:width="500" .right}
+Durch [genaue Simulation](#SolBatSim) für durchschnittliche
+Haushalts-Tages-Nutzungsprofile zeigt sich, dass
+**eine Abweichung von der optimalen Ausrichtung
 deutlich weniger Einbußen beim selbst genutzten Jahres-Gesamtertrag bringt**.
-So liegt bei senkrechter Anbringung im Verhältnis zur optimalen Neigung
-die Einbuße nicht bei 30% vom Optimum, sondern je nach Lastprofil bei 23%.
-Man hat also zur günstigen Ausrichtung seiner Solarmodule
-meist größere Flexibilität als allgemein angenommen.
+So liegt bei südlicher Ausrichtung, aber senkrechter Anbringung
+im Verhältnis zur optimalen Neigung 35° die Einbuße beim Eigenverbrauch
+nicht bei 30% vom Optimum, sondern je nach Lastprofil bei 23%.
+Die Eigenverbrauchs-Einbuße durch Anbringung auf der West- oder Ostseite
+liegt mit senkrechter Anbringung bei 46% und mit 35° Neigung bei 17%.
+
+|   Azimut  | Neigung | Nettoertrag | Einbuße | Eigenverbrauch| Einbuße |
+|--------------:|:----|------------:|--------:|--------------:|--------:|
+|   W/O: +/-90° | 90° |   323 kWh   |   51%   |  249 kWh      |  46%    |
+|   W/O: +/-90° | 35° |   522 kWh   |   16%   |  382 kWh      |  17%    |
+| SW/SO: +/-45° | 90° |   432 kWh   |   35%   |  333 kWh      |  28%    |
+| SW/SO: +/-45° | 35° |   623 kWh   |    6%   |  445 kWh      |   3%    |
+|       Süd: 0° | 90° |   463 kWh   |   30%   |  355 kWh      |  23%    |
+|       Süd: 0° | 35° |   661 kWh   |    0%   |  461 kWh      |   0%    |
+|:-------------:|:----|------------:|--------:|--------------:|--------:|
+
+Man hat also zur Ausrichtung seiner Solarmodule
+bezüglich Eigenverbrauch größere Flexibilität als allgemein angenommen.
+
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92
+
+Neigungswinkel              =   35°
+Azimut                      =    0°
+Breitengrad                 =   48.215
+Längengrad                  =   11.727
+
+PV-Nominalleistung          =  600 Wp
+Max. PV-Bruttoleistung      =  650 W am 2020-03-23 um 11:00 h
+PV-Bruttoertrag             =  764 kWh
+PV-Nettoertrag              =  661 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  461 kWh
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_90deg_0deg_2005_2020.csv 600 -peff 92
+
+Neigungswinkel              =   90°
+Azimut                      =    0°
+
+PV-Nominalleistung          =  600 Wp
+Max. PV-Bruttoleistung      =  608 W am 2005-02-13 um 12:00 h
+PV-Bruttoertrag             =  535 kWh
+PV-Nettoertrag              =  463 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+PV-Eigenverbrauch           =  355 kWh
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_45deg_2005_2020.csv 600 -peff 92
+
+Neigungswinkel              =   35°
+Azimut                      =   45°
+Breitengrad                 =   48.215
+Längengrad                  =   11.727
+
+PV-Nominalleistung          =  600 Wp
+Max. PV-Bruttoleistung      =  623 W am 2020-03-24 um 12:00 h
+PV-Bruttoertrag             =  721 kWh
+PV-Nettoertrag              =  623 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  445 kWh
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_90deg_45deg_2005_2020.csv 600 -peff 92
+
+Neigungswinkel              =   90°
+Azimut                      =   45°
+
+PV-Nominalleistung          =  600 Wp
+Max. PV-Bruttoleistung      =  644 W am 2005-02-14 um 14:00 h
+PV-Bruttoertrag             =  499 kWh
+PV-Nettoertrag              =  432 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  333 kWh
+
+/Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_90deg_-90deg_2005_2020.csv 600 -peff 92
+
+Neigungswinkel              =   90°
+Azimut                      =  -90°
+
+PV-Nominalleistung          =  600 Wp
+Max. PV-Bruttoleistung      =  513 W am 2020-03-23 um 07:00 h
+PV-Bruttoertrag             =  374 kWh
+PV-Nettoertrag              =  323 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  249 kWh
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_-90deg_2005_2020.csv 600 -peff 92
+
+Neigungswinkel              =   35°
+Azimut                      =  -90°
+Breitengrad                 =   48.215
+Längengrad                  =   11.727
+
+PV-Nominalleistung          =  600 Wp
+Max. PV-Bruttoleistung      =  556 W am 2020-05-06 um 08:00 h
+PV-Bruttoertrag             =  604 kWh
+PV-Nettoertrag              =  522 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+PV-Eigenverbrauch           =  382 kWh
+-->
 
 Wer aus irgendeinem Grund (etwa wegen der Befestigung) eine möglichst flache
 Neigung der PV-Module wählt, sollte trotzdem mindestens 12° verwenden,
@@ -538,7 +635,7 @@ Eigenverbrauch  = 313 kWh wenn täglich 8-18 Uhr kein Verbrauch
 
     ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_34deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_33deg_-90deg_2005_2020.csv 300
 
-Neigungswinkel  =  34° Azimut =  90°
+  Neigungswinkel  =  34° Azimut =  90°
   Neigungswinkel  =  33° Azimut = -90°
   PV-Bruttoertrag = 610 kWh
   PV-Nettoertrag  = 525 kWh bei System-Wirkungsgrad 86%
@@ -639,7 +736,7 @@ Eigenverbrauch  =  372 kWh wenn Mo-Fr 8-16 Uhr nur 100 W Verbrauch (Grundlast)
 
       ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_53deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_33deg_-54deg_2005_2020.csv 300 
 
-Neigungswinkel  =  30° (opt.?) Azimut =  53°
+  Neigungswinkel  =  30° (opt.?) Azimut =  53°
   Neigungswinkel  =  33° (opt.?) Azimut = -54°
   PV-Bruttoertrag = 702 kWh
   PV-Nettoertrag  = 604 kWh bei System-Wirkungsgrad 86%
@@ -1349,15 +1446,17 @@ von Kapitalkosten u.ä.) eine Amortisationszeit von 3,7 Jahren.
 ergibt 457 kWh, aber noch etwas Lastspitzen-Abzug
 88%: -peff 93.617
 
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92
+
 PV-Nominalleistung          =  600 Wp
-Bruttoleistung max.         =  656 W am 2020-03-23 um 11:00 h
-PV-Bruttoertrag             =  765 kWh
-PV-Nettoertrag              =  662 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+Bruttoleistung max.         =  650 W am 2020-03-23 um 11:00 h
+PV-Bruttoertrag             =  764 kWh
+PV-Nettoertrag              =  661 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 Ertragsanteil 9-15 Uhr MEZ  =   73 %
 
 Last durch Haushalt         = 3000 kWh
-Eigenverbrauch              =  460 kWh
-Netzeinspeisung             =  201 kWh
+Eigenverbrauch              =  461 kWh
+Netzeinspeisung             =  200 kWh
 Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 
