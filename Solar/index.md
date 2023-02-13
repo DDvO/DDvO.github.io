@@ -7,6 +7,10 @@ keywords:
 - Solarenergie
 - Globalstrahlung
 - Diffusstrahlung
+- Halbzellen
+- Drittelzellen
+- bifazial
+- Schindel
 - Solaranlage
 - Steckersolaranlage
 - Balkonkraftwerk
@@ -302,8 +306,8 @@ Daher kann man auch den maximalen Wirkungsgrad eines Solarmoduls sehr
 einfach nachrechnen, indem man seine Nennleistung in kWp durch seine
 Fläche in m² teilt.
 
-Die Wp-Angaben von Herstellern und Händlern für Solarmodule sind mit Vorsicht
-zu genießen --- hauptsächlich weil die tatsächliche Leistung wie oben erwähnt
+Die Wp-Angaben für Solarmodule sind mit Vorsicht zu genießen ---
+hauptsächlich weil die tatsächliche Leistung wie oben erwähnt
 stark von der Situation (Ausrichtung im Vergleich zum Sonnenstand, Bewölkung,
 Verschattung usw.) abhängig und meist deutlich geringer ist. Außerdem weil
 besonders chinesische Händler von flexiblen Solarmodulen dazu tendieren,
@@ -2214,13 +2218,6 @@ Generell sind *monokristalline* Zellen zu bevorzugen, auch wenn sie ein wenig
 teurer sind als *polykristalline* oder *amorphe*, weil sie einen höheren
 Wirkungsgrad haben.
 
-In vielen PV-Modulen werden inzwischen sog.
-[*Halbzellen*](https://gruenes.haus/halbzellenmodule/) (engl. *half cut cells*)
-in doppelter Anzahl verwendet. Durch die Halbierung der Größe fließt durch
-sie nur halb so viel Strom, was die inneren elektrischen Verluste verringert
-und damit die [Leistung um 2 bis 3 Prozentpunkte erhöht](
-https://www.energie-experten.org/erneuerbare-energien/photovoltaik/solarmodule/halbzellen).
-
 ![Bild: Bypass-Dioden bei der Arbeit](
 Bypass-Dioden-bei-der-Arbeit.jpg){:.center}
 Leider bricht die Leistung von in Reihe geschalteten Zellen ein, sobald auch
@@ -2228,21 +2225,52 @@ nur eine davon verschattet wird. Daher werden in den üblichen größeren Module
 sog. *Bypass-Dioden* eingesetzt, die bei Teilverschattung immerhin einen
 Teil der Leistung fließen lassen.
 
+In vielen PV-Modulen werden inzwischen sog.
+[*Halbzellen*](https://gruenes.haus/halbzellenmodule/) (engl. *half cut cells*)
+in doppelter Anzahl verwendet. Durch die Halbierung der Größe fließt durch
+sie nur halb so viel Strom, was die inneren elektrischen Verluste verringert
+und damit die [Leistung um 2 bis 3 Prozentpunkte erhöht](
+https://www.energie-experten.org/erneuerbare-energien/photovoltaik/solarmodule/halbzellen).
+Entsprechend größer ist der Effekt bei [Modulen aus Drittelzellen](
+https://www.csp.fraunhofer.de/content/dam/imws/csp/de/documents/Modultechnologie/Produktblatt/Drittelzellenmodul/FhG-CSP_Drittelzellenmodul_DE.pdf).
+
 ![Bild: Halbzellenmodule haben weniger Verlust durch Teilverschattung](
 Halbzellenmodule-weniger-Leistungsverlust.webp){:.center}
-Bein Halbzellenmodulen wird durch geschickte interne Parallelschaltung von
-Zellsträngen die Empfindlichkeit auf Teilverschattung noch weiter verringert.
+Bei Halbzellenmodulen und noch mehr bei Drittelzellenmodulen
+verringert sich durch geschickte interne Parallelschaltung von Zellsträngen
+die Empfindlichkeit auf Teilverschattung.
 
-![Bild: Starre Solarpanels](Starre_Solarpanels.png){:width="392"}
-![Bild: Flexible Solarpanels](Flexible_Solarpanels.png){:.right width="392"}
-[Klassische Solarmodule](https://gruenes.haus/pv-modul-groesse-gewicht/)
-haben einen
-Aluminiumrahmen und eine Größe von typischerweise ca. 1,7 m × 1 m × 3
-cm, was eine Nennleistung von etwa 350 Wp ergibt, und eine Masse von ca.
-20 kg. (Semi-)Flexible Module sind teurer als starre und weniger
-langlebig, dafür aber viel leichter und nur wenige Millimeter dick. Sie
-sind meist auch deutlich kleiner --- typischerweise 1,2 m × 0,5 m bei
-einer Nennleistung von 100 Wp und einer Masse von 1 bis 2 kg.
+![Bild: Starre Solarpanels](Starre_Solarpanels.png){:width="442"}
+![Bild: Flexible Solarpanels](Flexible_Solarpanels.png){:.right width="342"}
+[Klassische Solarmodule](https://gruenes.haus/pv-modul-groesse-gewicht/) haben
+einen Aluminiumrahmen und eine Größe von typischerweise ca. 1,7 m × 1 m × 3 cm,
+was eine Nennleistung von etwa 350 Wp ergibt, und eine Masse von ca. 20 kg.\
+Die günstigeren herkömmlichen Module haben auf der Vorderseite Glasscheibe
+und auf der Rückseite eine Folie und werden daher Glas-Folien-Module genannt.
+Für die Montage auf stabilen Flächen (z.B. Hausdach) gelten sie als ausreichend.
+[Glas-Glas-Module](
+https://solarenergie.de/solarmodule/arten/glas-glas-solarmodule)
+sind robuster und langlebiger, allerdings auch etwas teurer und schwerer.
+Wegen meist dünnerem Glas auf der Vorderseite und besserer Wärmeableitung
+auf der Rückseite sind sie ein wenig effizienter als Glas-Folien-Module.
+
+[![Bild: Bifaziale Module](Bifaziale_Module_Grafik.png){:.right width="550"}](
+https://www.roedl.de/themen/erneuerbare-energien/2020-08/vertikale-bifaziale-photovoltaiksysteme-potenzial-landwirtschaft)
+Eine besondere Variante der Glas-Glas-Module sind [bifaziale Module](
+https://www.energie-experten.org/erneuerbare-energien/solarenergie/solarzelle/bifacial),
+also „zweigesichtige“ Module, welche einfallendes Licht nicht nur auf ihrer
+Vorderseite nutzen können, sondern in einem gewissen Maß auch gestreutes Licht
+auf ihrer Rückseite --- natürlich nur, wenn sie geeignet montiert sind.
+Günstig ist in diesem Fall eine hohe *Albedo* der Flächen hinter den Modulen,
+also ein möglichst hohes Reflexions- oder Rückstrahlvermögen der Oberflächen.
+
+{:style="clear:both"}
+
+(Semi-)Flexible Module sind teurer und wohl deutlich weniger langlebig
+als starre, aber viel leichter und nur wenige Millimeter dick.
+Sie sind meist auch wesentlich kleiner --- typischerweise 1,2 m × 0,5 m bei 
+einer Nennleistung von 100 Wp und einer Masse von 1 bis 2 kg. Vorsicht, bei
+flexiblen Modulen übertreiben Händler besonders gern mit den Leistungsdaten.\
 [Hier](https://solar-generatoren.de/die-richtigen-solarmodule-fuers-wohnmobil/)
 ein Vergleich verschiedener Solarmodul-Typen in Hinblick auf die
 Verwendung für Wohnmobile.
@@ -2806,7 +2834,7 @@ LocalWords:  Charger Discharger Board Under Over Voltage Protection
 LocalWords:  Speicherungs current eigenverbrauchs Oekonomie magazine
 LocalWords:  rendite solbatsim Regelungs Eigenverbrauchsv transfer
 LocalWords:  telemetry gateway distort aufteilung orientierungen
-LocalWords:  
+LocalWords:   Reflexions
 LocalWords:  
 LocalWords:  
 LocalWords:  
