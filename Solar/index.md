@@ -28,6 +28,7 @@ keywords:
 - Solarpanels
 - Solarmodule
 - Ausrichtung
+- PV-Heizstab
 - Speicherung
 - Stromspeicher
 - Batteriespeicher
@@ -976,8 +977,9 @@ Solarmodule liefern in direkter Abhängigkeit von der Einstrahlungsstärke
 sehr variablen Gleichstrom (je nach Nennleistung maximal z.B. 11 A)
 mit einer Spannung je nach Modultyp von üblicherweise 22 bis 44 V.
 Dieser "rohe" Strom ist direkt erst mal kaum verwendbar,
-außer z.B. zum Aufheizen eines Warmwasserspeichers mit einem [DC-Heizstab](
-https://www.net4energy.com/de-de/energie/pv-heizstab#unterschiedliche).
+außer z.B. zum Aufheizen eines Warmwasserspeichers mit einem [PV-Heizstab](
+https://www.net4energy.com/de-de/energie/pv-heizstab) --
+siehe dazu [weiter unten](#Stromverbrauch).
 
 Normalerweise wird der PV-Strom daher in Wechselstrom umgewandelt und
 direkt ins Hausnetz eingespeist, was das Thema des nächsten Abschnitts ist.
@@ -1354,10 +1356,39 @@ Dazu bieten sich insbesondere Waschmaschinen und das Laden von Batterien an,
 wobei die Akkus von E-Bikes oder E-Rollern von der Größenordnung
 und ihrem zeitlichen Nutzungsprofil besonders geeignet sind.
 
-Eine ziemlich clevere Nutzung von überschüssigem Strom finde ich die verstärkte
-Nutzung einer Wärmepumpe oder das zusätzliche Aufheizen des Warmwasserbehälters
-über einen [Heizstab](https://www.net4energy.com/de-de/energie/pv-heizstab),
-so dass man weniger fossile Brennstoffe verbraucht.
+Eine ziemlich clevere Nutzung von überschüssigem Strom ist
+[*Power-to-Heat (P2H)*](https://de.wikipedia.org/wiki/Power-to-Heat),
+also die Verwendung für eine elektrische Heizung, die verstärkte Nutzung
+einer Wärmepumpe (welche den Nutzeffekt sogar vervielfacht) oder
+das zusätzliche Aufheizen des Warmwasserbehälters einer normalen Heizanlage
+über einen [PV-Heizstab](https://www.net4energy.com/de-de/energie/pv-heizstab)
+oder der Einsatz eines gesonderten PV-Boilers.
+All dies führt zu weniger Verbrauch von fossilen Brennstoffen und kann
+je nach Größe der dafür nötigen Investition längerfristig Kosten sparen.
+
+{:style="clear:both"}
+![Bild: PV-Wasserboiler](PV-Wasserboiler.png){:.right width="378"}
+Ein *PV-Heizstab* funktioniert im Prinzip wie ein Tauchsieder und erfordert
+keine Wandlung des Stroms, hat also praktisch keine elektrischen Verluste,
+wenn er DC-seitig (ohne Wechselrichter) angeschlossen wird.
+Allerdings kommt es je nach Stärke der Wärmedämmung zu thermischen Verlusten,
+wenn das darüber erwärmte Wasser nicht zeitnah verwendet wird.
+Auf jeden Fall muss sichergestellt werden, dass das Wasser im Boiler
+nicht überhitzt, falls zu viel PV-Energie vorhanden ist.\
+Natürlich setzt eine Nutzung von Solarstrom aus Überschuss voraus,
+dass der aktuelle sonstige Stromverbrauch [gemessen wird](
+https://www.my-pv.com/de/produkte/my-pv-wifi-meter) und in die Steuerung
+eingeht. Beispielsweise beim [AC Thor](
+https://www.klimaworld.com/ac-thor-set-pv-manager-fuer-eigenverbrauch-warmwasserbereitung-mit-solarstrom.html) und beim [MYPV AC ELWA 2](
+https://www.klimaworld.com/mypv-ac-elwa-2-elektrischer-heizstab-3-5-kw.html)
+ist das der Fall. Allerdings verwenden beide eine AC-Kopplung des Heizstabes,
+was Wechselrichter-Verluste durch den mit sich bringt, aber wohl die Regelung
+vereinfacht und die Möglichkeit bietet, notfalls mit Netzstrom nachzuheizen.
+Diverse andere Heizstäbe und
+[Solarboiler](https://www.solarversand.de/photovoltaik-wasserboiler-30-liter/)
+haben kein solches Energiemanagement, so dass dieses noch ergänzt werden müsste.
+Es fallen besonders für PV-Heizstäbe und PV-Boiler also zusätzlichen Montage-
+und Regelungs-Aufwände an, weshalb sie sich nur bei größeren PV-Anlagen lohnen.
 
 #### Verbrauchsmessung {#Verbrauchsmessung}
 
@@ -2952,8 +2983,8 @@ LocalWords:  buck down SA SZ DW MQ EC LF small LY KREE Battery
 LocalWords:  Charger Discharger Board Under Over Voltage Protection
 LocalWords:  Speicherungs current eigenverbrauchs Oekonomie magazine
 LocalWords:  rendite solbatsim Regelungs Eigenverbrauchsv transfer
-LocalWords:  telemetry gateway distort aufteilung orientierungen
-LocalWords:   Reflexions
+LocalWords:  telemetry gateway distort aufteilung orientierungen Reflexions
+LocalWords:  
 LocalWords:  
 LocalWords:  
 LocalWords:  
