@@ -65,7 +65,8 @@ keywords:
 
 Mit einem sog. *Balkonkraftwerk* kann man sehr einfach und relativ günstig
 Solarstrom gewinnen und über eine Steckdose direkt ins Hausnetz einspeisen.
-Das spart Stromkosten und kann sich schon nach wenigen Jahren Betrieb rechnen,
+Das spart Stromkosten und kann sich je nach verwendeten Komponenten
+und deren Aufstellung schon nach wenigen Jahren Betrieb rechnen ---
 allerdings nur soweit man den Strom auch gleichzeitig selbst verbraucht.
 Weil diese Betriebsart den überschüssigen Strom an die Allgemeinheit weitergibt
 und keine Batterie benötigt, ist sie für die ökologische Gesamtbilanz am besten.
@@ -73,8 +74,9 @@ und keine Batterie benötigt, ist sie für die ökologische Gesamtbilanz am best
 Für eine gewisse Unabhängigkeit von der nicht ständig kräftig vorhandenen
 Sonneneinstrahlung und vom allgemeinen Stromnetz
 braucht man eine aufladbare Batterie als Stromspeicher und weitere Geräte,
-was das Ganze aufwendiger und deutlich teurer macht. Damit lässt sich die
-gewonnene Energie über den ganzen Tag und die Nacht verteilt einspeisen.
+was das Ganze deutlich aufwendiger und teurer macht. Mit einer geeigneten
+vom aktuellen Verbrauch im Haushalt abhängigen Regelung lässt sich überschüssige
+Energie zwischenspeichern und mit gewissen Verlusten nach Bedarf wieder abrufen.
 Eine sog. *Inselanlage* ist auch während Stromausfällen verwendbar,
 soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
 
@@ -84,18 +86,33 @@ Balkonkraftwerk_und_Dach-PV-Anlage.jpg)
 <!--https://cdn.daa.net/images/photovoltaik/balkonkraftwerk.jpg-->
 <!--https://www.solaranlagen-portal.com/photovoltaik/balkonkraftwerk-->
 
-# Abgrenzung {#Abgrenzung}
+# Abgrenzung und Zielsetzung {#Abgrenzung}
 
 Hier geht es nicht um *Solarthermie*, also die direkte Gewinnung von Wärme
 durch Sonneneinstrahlung, sondern um die Erzeugung von elektrischem Strom.
-Es geht hier auch nicht um "große" Photovoltaik-Anlagen z.B. auf Hausdächern
-(dazu [hier ein fundierter Leitfaden](
+Es geht auch nicht primär um „große“ Photovoltaik-Anlagen etwa auf Hausdächern
+(dazu gibt es z.B. einen fundierten [Leitfaden von der HTW Berlin](
 https://solar.htw-berlin.de/wp-content/uploads/HTW-PV-Wegweiser.pdf)),
-wobei die physikalischen und technischen Grundlagen natürlich die gleichen sind.
+wobei viele Aspekte natürlich gleich oder leicht übertragbar sind.
 
-Außerdem kann ich als Privatperson und auch als naturwissenschaftlich-technisch
-versierter Nichtprofi natürlich keine offiziellen Informationen bzw. absolut
-verlässliche Hinweise geben und für die Inhalte keine Gewähr oder Haftung
+Meine Motivation als Autor ist vor allem physikalisch-technische Bildung ---
+also relevante Zusammenhänge zu verstehen und möglichst hilfreich darzustellen.
+Ich verfolge keinerlei kommerzielle Interessen (Verkauf, Sponsoring, o.ä.) ---
+finanziell geht mir es darum, wie ich selbst und Andere mit vertretbarem Aufwand
+und geringen Kosten möglichst viel Nutzen aus eigenem Solarstrom ziehen können.
+
+Alle Inhalte sind von mir selbst recherchiert (meist online) und beschrieben,
+wobei ich viele Quellen verlinke, die ich interessant und hilfreich finde.
+Sehr viel praktisch Relevantes habe ich durch den Austausch zu PV-Angeboten
+auf [myDealz.de](https://www.mydealz.de/) mitbekommen, überprüft und eingebaut.
+Um möglichst verlässliche und detaillierte Werte zum nutzbaren Ertrag von
+PV-Anlagen auch mit besonderen Eigenschaften ohne oder mit Speicher zu erhalten,
+habe ich einen eigenen [Simulator](#SolBatSim) mit vielen Optionen entwickelt,
+dessen Ergebnisse an mehreren Stellen maßgeblich eingeflossen sind.
+
+Als Privatperson und auch als naturwissenschaftlich-technisch versierter
+Nichtprofi kann ich natürlich keine offiziellen Informationen bzw. absolut
+verlässliche Hinweise geben und für die Inhalte keine Gewähr oder gar Haftung
 übernehmen. Wer bezüglich steckerfertigen PV-Anlagen etwas Offizielleres sucht,
 der sei z.B. auf den schönen [Leitfaden von SmartGridsBW](
 https://smartgrids-bw.net/public/uploads/2020/04/IBZ-Leitfaden_Balkon-PV-Online.pdf)
