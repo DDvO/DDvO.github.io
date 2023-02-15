@@ -1110,22 +1110,23 @@ die Leitungsüberlastung durch Stecker-Solaranlagen
 
 #### Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}
 
-Die nominelle Leistung der verwendeten Solarmodule kann und sollte durchaus
-größer sein aus 600 Wp (also eher 800 bis 1000 Wp), denn in der Praxis
+Die nominelle Leistung der verwendeten Solarmodule kann und sollte in Summe
+durchaus größer sein aus 600 Wp, also eher 800 bis 1000 Wp. Denn in der Praxis
 wird auch mit solchen Modulen eine PV-Ausgangsleistung von 600 W und mehr
-ohnehin kaum (und jedenfalls nicht oft) erreicht, gerade in sonnenarmen Zeiten.
-Der Unterschied beim Jahres-Gesamtertrag mit oder ohne Kappung ist sehr gering.
-Diese Erkenntnis gilt analog auch für größere Anlagen
-und ist übrigens schon [ziemlich alt](
-https://www.photovoltaikforum.com/thread/79306-wechselrichter-unterdimensionierung-welche-ertragseinbu%C3%9Fen/).
+ohnehin kaum erreicht, und das auch nicht oft, gerade in sonnenarmen Zeiten.
+Der Unterschied beim Jahres-Gesamtertrag mit oder ohne Kappung ist sehr gering.\
+Diese Erkenntnis ist schon recht alt und wurde wohl erst [für größere Anlagen](
+https://www.photovoltaikforum.com/thread/79306-wechselrichter-unterdimensionierung-welche-ertragseinbu%C3%9Fen/)
+diskutiert, aber wird auch immer wieder [für kleine Anlagen neu entdeckt](
+https://mini-pv-anlage-600-w-oder-800-w.jimdosite.com/).\
 Nochmal geringer ist der Unterschied beim Eigenverbrauch für eine Balkonanlage,
 wie die u.g. Simulationsergebnisse zeigen.
 
-Man hat durch einen gewisse Überdimensionierung der PV-Module
+Man hat durch eine gewisse Überdimensionierung der PV-Module
 (auch *Überbelegung* oder *Unterdimensionierung* des Wechselrichters genannt)
 auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
-(eigentlich sogar überproportional mehr, weil die Schwellspannung schneller
-erreicht wird), allerdings auf eher niedrigem absoluten Niveau.
+(eigentlich sogar überproportional mehr, weil die Anlaufspannung der Regelung
+schneller erreicht wird), allerdings auf eher niedrigem absoluten Niveau.
 
 Die typischerweise auf 600 W gedrosselten Wechselrichter realisieren
 die Leistungsbegrenzung aus energetischen Gründen schon auf ihrer Eingangsseite.
@@ -1133,17 +1134,17 @@ Leider verwenden einige Modelle (zumindest die von Deye/Bosswerk/revolt),
 wie man in [Diagrammen](
 https://www.photovoltaikforum.com/thread/180129-deye-sun600-und-sun2000-erfahrungen/)
 sehen kann, dabei direkt den Ziel-Grenzwert, statt zu berücksichtigen,
-dass aufgrund des Wirkungsgrades auf der Ausgangsseite ca. 10% weniger ankommen.
+dass aufgrund des Wirkungsgrades auf der Ausgangsseite gut 5% weniger ankommen.
 Zudem wird der Grenzwert oft auch noch einfach gleichmäßig auf die Eingänge
-aufgeteilt. So können bei 90% Wirkungsgrad höchstens 540 W geliefert werden.
+aufgeteilt. So können bei 95% Wirkungsgrad höchstens 570 W geliefert werden.
 Obwohl der Netto-Ertrag durch diese ungeschickte Form der Abregelung also oft
 sogar unnötig stark verringert wird, ist der Effekt auf den nutzbaren Ertrag
 längst nicht so groß wie man meinen könnte.
 
 Nehmen wir beispielsweise eine PV-Anlage mit 1000 Wp, die je nach Standort
 und Ausrichtung zu einem Ertrag von 1216 kWh brutto pro Jahr führen kann,
-also bei einem PV-System-Wirkungsgrad von 92%
-und einem Wechselrichter-Wirkungsgrad von 94% etwa 1050 kWh Netto-Ertrag.
+also bei einem PV-System-Wirkungsgrad von 92% und einem typischen
+Wechselrichter-Wirkungsgrad von 94% etwa 1050 kWh Netto-Ertrag.
 Bei 3000 kWh Jahresverbrauch mit einem durchschnittlichen Lastprofil
 **macht der effektive Verlust durch Drosselung auf 600 W** Eingangsleistung
 des Wechselrichters (also 564 W Ausgangsleistung bei den 94% Wirkungsgrad)
@@ -1290,10 +1291,6 @@ Aus den selben Gründen lohnt es sich (jedenfalls bei PV-Nennleistungen um
 die 1000 Wp) nicht, statt eines auf 600 W gedrosselten Wechselrichters
 einen teureren mit 800 W Maximalleistung zu nehmen oder darauf zu warten,
 bis diese in Deutschland offiziell unter die Bagatellgrenze fallen.
-
-Zu den
-[gleichen Ergebnissen](https://mini-pv-anlage-600-w-oder-800-w.jimdosite.com/)
-kommen auch Simulationen mit PV*Sol.
 
 #### Stromzähler und Rücklaufsperre {#Stromzähler}
 
@@ -1600,6 +1597,8 @@ unrealistischerweise so gut wie keine Netzeinspeisung und selbst für das
 Profil "Peak Morgen Abends" eine viel zu niedrige Netzeinspeisung von 52 kWh.
 Außerdem wird etwas verwirrend im Gesamtergebnis nicht der resultierende
 Eigenverbrauch (hier 612 kWh) dargestellt, sondern der Nettoertrag und der Netzbezug.
+
+<!-- TODO Simulationen mit PV*Sol. --->   
 
 Alle hier genannten Simulationen setzen bei Einsatz eines Pufferspeichers
 eine ideale Speicherstrategie voraus.
