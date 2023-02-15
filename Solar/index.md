@@ -2865,8 +2865,8 @@ Komponenten zu meiner vollen Zufriedenheit:
 
 ### Stecker-Solaranlage {#Steckeranlage}
 
-Für eine sehr einfache, aber effiziente Anlage zur Netzeinspeisung finde
-ich folgende Komponenten besonders interessant:
+Für eine sehr einfache, aber effiziente Anlage zur Netzeinspeisung
+finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
 
 -   2 × 400 Wp starre SSP [EcoDelta -
     ECO-400M-66SA](Datenblatt_ECO-380-400M-66SA.pdf) mit besonders hoher
@@ -2879,22 +2879,26 @@ ich folgende Komponenten besonders interessant:
     ca.
     [715€](https://shop-lieckipedia.de/Ab-2-Stueck-310-Watt-Solarmodul-monokristallin-flexibel-Sunman)
 
--   4-in-1 Mikrowechselrichter 1200 W [Hoymiles
-    HM-1200](https://www.hoymiles.com/product/microinverter/hm-1200-1500-as/),
-    ca. 230€\
-    oder 1000 W Micro Grid Tie Inverter Inverter
-    [SG1000MQ](https://www.ebay.de/itm/124731502486), ca. 200€\
-    oder 600 W WR mit 2 × 400 W MPPT-Eingang und WLAN [Deye Sun1600g3-EU-230](
+-   Mikrowechselrichter mit 2 * 300 W MPPT [Hoymiles
+    HM-600](https://www.hoymiles.com/de/products/microinverter/single-phase/),
+    ca. [200€](https://www.idealo.de/preisvergleich/OffersOfProduct/201802725_-hm-600-mikrowechselrichter-hoymiles.html)\
+<!--    oder 1000 W Micro Grid Tie Inverter Inverter SG1000MQ(https://www.ebay.de/itm/124731502486), ca. 200€\-->
+    oder 600 W WR mit 2 × 400 W Eingang und WLAN [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/),
-    ca. 215€\
-    _Achtung, in älteren Softwareversionen (bis ca. Ende 2022) reißen
-    die Wechselrichter von Deye, sowie baugleich Bosswerk und revolt (Pearl),
-    beim WLAN-Zugang [sträfliche Sicherheitslücken](
+    ca. [190€](https://www.idealo.de/preisvergleich/OffersOfProduct/202156668_-sun600g3-eu-230-600w-deye-inverter.html)\
+    _Achtung_, in älteren Versionen (etwa 1.471, bis ca. Ende 2022) der
+    [Firmware](https://github.com/dasrecht/deye-firmware/tree/main/0_D0002_18)
+    reißen die Wechselrichter von Deye, sowie baugleich Bosswerk
+    und revolt (Pearl), beim WLAN-Zugang [sträfliche Sicherheitslücken](
     https://www.photovoltaikforum.com/thread/187077-achtung-wifi-sicherheit-der-deye-und-bosswerk-mi600-300-sowie-baugleiche-microwe/).
-    Daher sollte ihre WLAN-Funktion höchstens in einem Gastnetz genutzt werden.
-    Man kann aber einfach per E-Mail ein [Firmware-Update per Internet](
-    https://www.mydealz.de/comments/permalink/40076009) machen lassen.
-    <!-- customerservice@solarmanpv.com auf MW3_16U_5406_1.53 -->
+    Man kann aber einfach per E-Mail ein [Firmware-Update übers Internet](
+    https://www.heise.de/news/Sicherheitsluecke-bei-Mikrowechselrichtern-von-Deye-Haendler-nicht-zustaendig-7483376.html)
+    <!-- https://www.mydealz.de/comments/permalink/40076009 -->
+    <!-- customerservice@solarmanpv.com oder service@deye.com.cn auf  -->
+    machen lassen oder das Update auf mindestens Version MW3\_16U_5406\_1.53
+    selbst [über einen PC durchführen](
+    https://zinnzgreen.de/service/deye-mikrowechselrichter-systemupdate/).
+    Ohnehin empfiehlt sich, solchen Geräten nur Zugang zum Gastnetz zu geben.
 
 ### Kombi-Anlage {#Kombianlage}
 
@@ -2918,12 +2922,13 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
     Spitzenleistung, was gerade bei günstigen Modellen nicht
     selbstverständlich ist._
 
--   700 W Netzwechselrichter mit 2 × MPPT und WLAN [Mars Rock
+-   2 * 300 W MPPT Mikrowechselrichter [Deye Sun600g3-EU-230](
+    https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/) für ca. 170€\
+    und zusätzlich (z.B. für Einspeisung aus meiner Batterie):\
+    700 W Netzwechselrichter mit 2 × MPPT und WLAN [Mars Rock
     EC700MD](https://de.aliexpress.com/item/1005002469159821.html) (oder
     [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
-    inkl. Versand\
-    _Zumindest bei meinem Gerät funktioniert das WLAN nicht._
-
+    inkl. Versand. _Zumindest bei meinem Gerät funktioniert das WLAN nicht._
 -   24 V Hybridwechselrichter
     [EASun ISolar SPH-3K](https://de.aliexpress.com/item/1005003665568494.html)
     mit 3000 VA (6000 VA Spitzenlast) reiner-Sinus-Wechselrichter
