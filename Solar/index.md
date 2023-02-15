@@ -2504,17 +2504,26 @@ Im Gegensatz dazu ist der je nach Einstrahlung und Temperatur mögliche Strom,
 der sich aus dem Maximalstrom (*Kurzschlussstrom*, engl. *short-circuit current,
 I<sub>SC</sub>*) der Module ergibt, weniger kritisch.
 Er darf den maximal nutzbaren Strom eines Eingangs (*I<sub>DC</sub> max*)
-durchaus überschreiten, allerdings wird dann PV-Leistung verschenkt,
-weil der Regler bzw. Wechselrichter im Prinzip nicht mehr Leistung aufnimmt
+durchaus überschreiten -- allerdings wird in dem Moment PV-Leistung verschenkt,
+weil der Regler (bzw. Wechselrichter) im Prinzip nicht mehr Leistung aufnimmt
 als wofür er ausgelegt wurde.
 Das ist ähnlich wie z.B. bei einem an einer Wohnungssteckdose angeschlossenen
 Elektrogerät, das durch seinen Innenwiderstand seine Stromaufnahme begrenzt,
-obwohl die Steckdose viel mehr (je nach Absicherung z.B. 16 A) liefern könnte.
-Es kann aber v.A. bei stark wechselnden Lichtverhältnissen und starkem
-PV-Strom-Überangebot zur zeitweisen Überlastung eines MPPT-Reglers kommen.
-Außerdem kann sich der Regler bzw. Wechselrichter durch eine Fehlfunktion selbst
-überlasten, und wenn er längere Zeit am Limit läuft, kann er schneller altern.
-Daher und wegen der Garantiebedingungen empfiehlt es sich,
+obwohl die Steckdose viel mehr (je nach Absicherung z.B. 16 A) liefern könnte.\
+Ein MPPT-Regler beginnt mit seiner Optimierung bei der Leerlaufspannung der
+angeschlossenen PV-Module, wobei noch kein Strom fließt, und verringert dann
+seinen Innenwiderstand sukzessive so lange, bis das Maximum an PV-Leistung
+erreicht wurde oder er an der Grenze seiner Stromaufnahme angekommen ist.
+
+<!--https://www.photovoltaikforum.com/thread/135363-envertech-erlaubt-keine-%C3%BCberbelegung-der-neuen-evt-300-und-evt-560/-->
+
+Wenn allerdings ein Regler für längere Zeit unter Volllast läuft, kann es sein,
+dass er schneller altert als normal, weil er dafür nicht ausgelegt wurde.
+Es könnte bei PV-Strom-Überangebot und schnell wechselnden Lichtverhältnissen
+auch zu kurzzeitigen Überlastungen eines MPPT-Reglers kommen,
+wenn er nicht schnell genug nachregelt.
+Außerdem könnte sich der Regler bzw. Wechselrichter durch eine Fehlfunktion
+selbst überlasten. Daher und wegen der Garantiebedingungen empfiehlt es sich,
 den im Datenblatt des Geräts genannten absoluten Maximal-Eingangsstrom,
 welcher auch [*maximaler DC-Kurzschlussstrom* (*I<sub>SC</sub> PV max*)](
 https://www.sma-sunny.com/wechselrichter-hochstrommodule-missverstaendnis-i-dc-max/)
