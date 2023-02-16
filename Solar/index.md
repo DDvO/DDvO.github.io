@@ -1487,25 +1487,34 @@ mittags etwas Wolken. Weitere schöne Erklärungen mit Grafiken gibt es
 
 Wie eingangs geschrieben kann man bei optimaler Platzierung von Solarmodulen
 pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter Solarleistung gewinnen.
-Rechnet man beispielsweise mit einer Investition von 1,10€/Wp
-(inklusive anteiliger Kosten für Wechselrichter, Installation etc.),
-ergeben sich Kosten von 1€/kWh erzeugtem Solarstrom pro Jahr.
+Rechnen wir beispielsweise mit einer Investition für die PV-Anlage von 1,10€/Wp
+(inklusive anteiliger Kosten für Wechselrichter, Montage, Reparatur, etc.),
+dann ergeben sich einmalige Kosten von 1€ pro kWh Jahresertrag.\
+Nehmen wir für die folgenden Beispiele zudem an, dass der sog. *Arbeitspreis*,
+also die Kosten für vom Stromanbieter bezogenen Strom, 40 Ct/kWh beträgt.
+Dann spart man 0,40€ für jede kWh Strom, die von der PV-Anlage produziert wird
+und die man auch selbst verbraucht, statt sie von außen einzukaufen.\
+Wenn die Einsparung an Stromkosten durch die Anlage ihre Kosten eingeholt hat,
+hat sich die Anlage *amortisiert*, also die Investition kaufmännisch gelohnt.
+Die Investition rentiert sich im Verhältnis der Jahres-Ersparnis zu den Kosten.
 
-* Falls der damit erzeugte Strom komplett selbst verbraucht wird,
-was aber praktisch kaum der Fall ist,
-und man einen dadurch eingesparten Arbeitspreis von 40 ct/kWh ansetzt,
-ergibt sich eine Amortisation der Anschaffungskosten in nur 2,5 Jahren.
+* Falls man den erzeugten PV-Strom komplett selbst verbraucht,
+was aber praktisch kaum der Fall ist, ergibt sich eine Einsparung von 0,40€
+pro kWh Jahresertrag und eine Amortisation der Investition in nur 2,5 Jahren.
+Die Rendite würde in diesem Fall satte 40% betragen.
 
 * Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
 Jahres-Bruttoertrag von etwa 765 kWh, was bei 86% Gesamtsystem-Wirkungsgrad
-ca. 662 kWh Netto-Einspeisung des Wechselrichters an der Steckdose bedeutet.
-Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und einem typischen
-Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh.
-Der Eigenverbrauchsanteil liegt damit bei 70% des Ertrags
-(und der Eigendeckungsanteil bei 15% des Verbrauchs).\
-Damit kann man bei 40 Ct/kWh jährlich ungefähr 180€ Stromkosten einsparen.
-Bei einer Investition von 660€ ergibt sich (ohne Berücksichtigung
-von Kapitalkosten u.ä.) eine Amortisationszeit von 3,7 Jahren.
+ca. 660 kWh Netto-Ertrag (Einspeisung des Wechselrichters) pro Jahr bedeutet.
+Rechnen wir wieder mit Kosten von 1,10€/Wp, also für diese Anlage 660€.
+
+  - Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und
+  Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh
+  pro Jahr. Der Eigenverbrauchsanteil liegt also bei 70% des Nettoertrags
+  (und der Eigendeckungsanteil bei 15% des Verbrauchs).\
+  Damit werden bei 40 Ct/kWh Arbeitspreis jährlich 184€ eingespart.
+  Für die Investition von 660€ ergibt sich eine Amortisationszeit von 3,6 Jahren
+  und eine Rendite von 28%.
 
 [//]: #
 <!--
@@ -1530,8 +1539,24 @@ Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 Bei Lastprofil_4685_kWh.csv Eigenverbrauch 502 kWh
 -->
 
-* Bei 1500 kWh Jahresverbrauch können durchschnittlich immerhin etwa 330 kWh
-selbst genutzt werden, was eine Amortisation in gut 5 Jahren ergibt.
+  - Bei einem relativ hohen Jahresverbrauch von 6000 kWh können durchschnittlich
+  sogar 570 kWh im Jahr (also 87% des Nettoertrags) selbst genutzt werden,
+  was bei den angenommenen Kosten eine Amortisationszeit in 2,9 Jahren ergibt.
+
+[//]: #
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
+
+Verbrauch durch Haushalt    = 6000 kWh
+PV-Eigenverbrauch           =  572 kWh
+Netzeinspeisung             =   89 kWh
+PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
+-->
+
+  - Bei nur 1500 kWh Jahresverbrauch können durchschnittlich nur 330 kWh im Jahr
+  (also 50 % des Nettoertrags) selbst genutzt werden,
+  was eine Amortisation in genau 5 Jahren ergibt.
 
 [//]: #
 <!--
@@ -1544,10 +1569,13 @@ Eigenverbrauchsanteil       =   50 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   22 % des Verbrauchs (Autarkiegrad)
 -->
 
-* Wenn bei 3000 kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
-nur eine Grundlast von 100 W anfällt,
-verringert sich die Eigennutzung von 460 auf etwa 365 kWh,
-und damit verlängert sich die Amortisationszeit auf 4,5 Jahre.
+  - Wenn bei 3000 kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
+  nur eine Grundlast von 100 W anfällt, liegt die Eigennutzung bei 365 kWh
+  im Jahr (also 55 % des Nettoertrags) und die Amortisationszeit bei 4,5 Jahren.
+
+In den beiden zuletzt genannten Fällen könnte man überlegen,
+weniger PV-Leistung als 600 Wp zu installieren,
+allerdings hätte man dann auch langfristig weniger Nutzen.
 
 [//]: #
 <!--
