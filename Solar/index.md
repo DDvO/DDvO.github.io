@@ -131,13 +131,13 @@ verwiesen.
         - [Nennleistung und Jahresertrag {#Nennleistung}](#nennleistung-und-jahresertrag-nennleistung)
         - [Optimale Ausrichtung von Solarmodulen {#Ausrichtung}](#optimale-ausrichtung-von-solarmodulen-ausrichtung)
             - [Aufteilung in mehrere Orientierungen {#Aufteilung}](#aufteilung-in-mehrere-orientierungen)
+    - [Stromverbrauch im Haushalt {#Stromverbrauch}](#stromverbrauch-im-haushalt-stromverbrauch)
+        - [Verbrauchsmessung {#Verbrauchsmessung}](#verbrauchsmessung-verbrauchsmessung)
+        - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
     - [Nutzungsmöglichkeiten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
         - [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“) {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
             - [Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}](#beschränkung-auf-600-w-und-ihre-gründe-kappung)
             - [Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}](#kappungsverlust-durch-drosselung-auf-600-w-kappungsverlust)
-        - [Stromverbrauch im Haushalt {#Stromverbrauch}](#stromverbrauch-im-haushalt-stromverbrauch)
-            - [Verbrauchsmessung {#Verbrauchsmessung}](#verbrauchsmessung-verbrauchsmessung)
-            - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
         - [Eigenverbrauch und Eigendeckung {#Eigenverbrauch}](#eigenverbrauch-und-eigendeckung)
         - [Berechnung des Eigenverbrauchs {#Berechnung}](#berechnung-des-eigenverbrauchs)
             - [Ökonomisch orientierte Berechnung von Rendite und Amortisation {#Oekonomie}](#ökonomisch-orientierte-berechnung-von-rendite-und-amortisation-pv-rechner)
@@ -184,13 +184,13 @@ verwiesen.
     -   [Nennleistung und Jahresertrag](#Nennleistung)
     -   [Optimale Ausrichtung von Solarmodulen](#Ausrichtung)
         - [Aufteilung in mehrere Orientierungen](#Aufteilung)
+-   [Stromverbrauch im Haushalt](#Stromverbrauch)
+    - [Verbrauchsmessung](#Verbrauchsmessung)
+    - [Stromzähler und Rücklaufsperre](#Stromzähler)
 -   [Nutzungsmöglichkeiten](#Nutzung)
     -   [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“)](#Balkonkraftwerk)
         - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Kappung)
         - [Kappungsverlust durch Drosselung auf 600 W](#Kappungsverlust)
-    -   [Stromverbrauch im Haushalt](#Stromverbrauch)
-        - [Verbrauchsmessung](#Verbrauchsmessung)
-        - [Stromzähler und Rücklaufsperre](#Stromzähler)
     -   [Eigenverbrauch und Eigendeckung](Eigenverbrauch)
     -   [Berechnung des Eigenverbrauchs](#Berechnung)
         - [Ökonomisch orientierte Berechnung von Rendite und Amortisation](#Oekonomie)
@@ -987,6 +987,141 @@ Eigenverbrauch mit =  606 kWh wenn Mo-Fr 8-16 Uhr nur 100 W Verbrauch
 Eigenverbrauchsv.  =    0 kWh netto während 2 h durch Drosselung auf 1200 W
 -->
 
+Stromverbrauch im Haushalt {#Stromverbrauch}
+-
+
+Eigentlich ist es im Vergleich zum Betrieb einer (möglicherweise
+recht groß dimensionierten) Solaranlage immer noch günstiger und
+umweltfreundlicher, von vornherein den Stromverbrauch zu senken.
+Stromfressende Geräte sollte man möglichst meiden und Geräte, die einen hohen
+Verbrauch im Bereitschaftsmodus haben, bei längerem Nichtgebrauch ausschalten.
+Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
+
+Je stromhungriger ein Haushalt tagsüber ist, desto größer der zu erwartende
+Einsparungseffekt durch eine Steckdosen-Anlage ohne Stromspeicher.
+Denn diese Nutzungsart lohnt sich also nur insoweit, wie man während der
+Sonnenscheindauer den erzeugten Strom direkt sinnvoll verbrauchen kann.
+Am einfachsten und am besten planbar geschieht das über die sog. *Grundlast*,
+also ständig und mehr oder weniger gleichmäßig laufende Verbraucher
+wie Kühlschränke, Internetanschluss, Computerserver
+und Geräte, die im Bereitschaftsmodus (engl. _standby_) sind.
+Darüber hinaus kann man gezielt diverse Haushaltsgeräte und Ladegeräte
+vorzugsweise dann betreiben, wenn hohe Sonneneinstrahlung vorhanden ist.
+Dazu bieten sich insbesondere Waschmaschinen und das Laden von Batterien an,
+wobei die Akkus von E-Bikes oder E-Rollern von der Größenordnung
+und ihrem zeitlichen Nutzungsprofil besonders geeignet sind.
+
+Eine ziemlich clevere Nutzung von überschüssigem Strom ist
+[*Power-to-Heat (P2H)*](https://de.wikipedia.org/wiki/Power-to-Heat),
+also die Verwendung für eine elektrische Heizung, die verstärkte Nutzung
+einer Wärmepumpe (welche den Nutzeffekt sogar vervielfacht) oder
+das zusätzliche Aufheizen des Warmwasserbehälters einer normalen Heizanlage
+über einen [PV-Heizstab](https://www.net4energy.com/de-de/energie/pv-heizstab)
+oder der Einsatz eines gesonderten PV-Boilers.
+All dies führt zu weniger Verbrauch von fossilen Brennstoffen und kann
+je nach Größe der dafür nötigen Investition längerfristig Kosten sparen.
+
+{:style="clear:both"}
+![Bild: PV-Wasserboiler](PV-Wasserboiler.png){:.right width="378"}
+Ein *PV-Heizstab* funktioniert im Prinzip wie ein Tauchsieder und erfordert
+keine Wandlung des Stroms, hat also praktisch keine elektrischen Verluste,
+wenn er DC-seitig (ohne Wechselrichter) angeschlossen wird.
+Allerdings kommt es je nach Stärke der Wärmedämmung zu thermischen Verlusten,
+wenn das darüber erwärmte Wasser nicht zeitnah verwendet wird.
+Auf jeden Fall muss sichergestellt werden, dass das Wasser im Boiler
+nicht überhitzt, falls zu viel PV-Energie vorhanden ist.\
+Natürlich setzt eine Nutzung von Solarstrom aus Überschuss voraus,
+dass der aktuelle sonstige Stromverbrauch [gemessen wird](
+https://www.my-pv.com/de/produkte/my-pv-wifi-meter) und in die Steuerung
+eingeht. Beispielsweise beim [AC Thor](
+https://www.klimaworld.com/ac-thor-set-pv-manager-fuer-eigenverbrauch-warmwasserbereitung-mit-solarstrom.html) und beim [MYPV AC ELWA 2](
+https://www.klimaworld.com/mypv-ac-elwa-2-elektrischer-heizstab-3-5-kw.html)
+ist das der Fall. Allerdings verwenden beide eine AC-Kopplung des Heizstabes,
+was Wechselrichter-Verluste durch den mit sich bringt, aber wohl die Regelung
+vereinfacht und die Möglichkeit bietet, notfalls mit Netzstrom nachzuheizen.
+Diverse andere Heizstäbe und
+[Solarboiler](https://www.solarversand.de/photovoltaik-wasserboiler-30-liter/)
+haben kein solches Energiemanagement, so dass dieses noch ergänzt werden müsste.
+Es fallen besonders für PV-Heizstäbe und PV-Boiler also zusätzlichen Montage-
+und Regelungs-Aufwände an, weshalb sie sich nur bei größeren PV-Anlagen lohnen.
+
+#### Verbrauchsmessung {#Verbrauchsmessung}
+
+![Bild: Energiekosten-Messgerät in Steckdosenform](
+Energiekosten-Messgeraet.png){:.right width="300"
+style="margin-left: 70px; margin-right: 70px"}
+Den Stromverbrauch von Elektrogeräten im Haushalt kann man recht einfach
+mit Energiekosten-Messgeräten in Steckdosenform bestimmen. Diese messen
+nicht nur den momentanen Stromverbrauch in Watt, sondern bei längerer
+Verwendung auch die über die Zeit verbrauchte Strommenge in kWh.
+
+Die Grundlast eines Haushalts kann man über den Haushalts-Stromzähler
+noch einfacher bestimmen, indem man die Differenz der Zählerstände
+über einen Zeitraum von mehreren Stunden, zu dem sonst keine Verbraucher
+eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
+
+Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
+z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
+
+{:style="clear:both"}
+
+![Bild: Shelly 3EM](Shelly_3EM.webp){:.right width="200"}
+Der Haushalts-Stromverbrauch lässt sich auch kontinuierlich und automatisiert
+messen und übertragen. Das kann für eine Online-Ablesung und genauere Analyse
+des Verbrauchs interessant sein. Besonders wichtig ist es aber für die optimale
+lastabhängige [Regelung](#Regelungsstrategien) der Ladung und/oder Entladung
+eines Stromspeichers.
+* Man kann sich die Verbrauchsdaten über den
+sog. [„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
+oder [„Powerfox“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
+aus dem Haushalts-Stromzähler übermitteln lassen --
+sofern ein moderner Stromzähler verbaut ist und man Zugang zu diesem hat.
+* Alternativ kann man ein 3-Phasen-Energiemessgerät wie den
+[Shelly 3EM](https://www.shelly.cloud/de/products/product-overview/shelly-3em-1)
+oder den teureren, aber wohl genaueren [my-PV WiFi Meter](
+https://www.my-pv.com/de/produkte/my-pv-wifi-meter) verwenden.
+Dieses wird in den Sicherungskasten der Wohnung eingebaut,
+was ein Fachmann machen sollte, und per WLAN eingebunden.
+
+#### Stromzähler und Rücklaufsperre {#Stromzähler}
+
+Für den selbst erzeugten und gleichzeitig verbrauchten Strom spart man sich
+die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
+und entsprechend langsamer läuft.
+Es wird also nur der vom Stromanbieter bezogene Anteil des Verbrauchs berechnet.
+
+Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
+die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
+die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
+die Stromzähler arbeiten *phasensaldierend*, d.h. sie bilden die Gesamtsumme
+über alle drei Leitungen aus dem Verbrauch und der Erzeugung,
+welche dabei umgekehrtes Vorzeichen hat.
+
+![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.left width="400"}
+![Bild: Symbol für Rücklaufsperre im Stromzähler](
+Ruecklaufsperre.png){:.right width="370"}
+Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
+verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
+Moderne Stromzähler haben eine *Rücklaufsperre*, was man an dem entsprechenden
+Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
+Strom praktisch ins externe Netz verschenkt wird.
+Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
+laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
+Damit kann man „unter der Hand Strom verkaufen“, was aber in Deutschland bislang
+nicht erlaubt ist. Anfang 2023 [sprach sich der VDE jedoch dafür aus](
+https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
+bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
+
+Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
+vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
+Eine offiziell angemeldete und vergütete Einspeisung ist mit einiger Bürokratie
+verbunden und bringt wenig --- die Vergütung sank in Deutschland gemäß eEG
+[bis 2022 auf ca. 6 ct/kWh](
+https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
+und steigt [ab 2023 auf etwa 8 ct/kWh](
+https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
+--- immer noch sehr mager, besonders im Vergleich zum Verbrauchspreis.
+
 Nutzungsmöglichkeiten {#Nutzung}
 ---------------------
 
@@ -1308,140 +1443,6 @@ Aus den selben Gründen lohnt es sich (jedenfalls bei PV-Nennleistungen um
 die 1000 Wp) nicht, statt eines auf 600 W gedrosselten Wechselrichters
 einen teureren mit 800 W Maximalleistung zu nehmen oder darauf zu warten,
 bis diese in Deutschland offiziell unter die Bagatellgrenze fallen.
-
-### Stromverbrauch im Haushalt {#Stromverbrauch}
-
-Eigentlich ist es im Vergleich zum Betrieb einer (möglicherweise
-recht groß dimensionierten) Solaranlage immer noch günstiger und
-umweltfreundlicher, von vornherein den Stromverbrauch zu senken.
-Stromfressende Geräte sollte man möglichst meiden und Geräte, die einen hohen
-Verbrauch im Bereitschaftsmodus haben, bei längerem Nichtgebrauch ausschalten.
-Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
-
-Je stromhungriger ein Haushalt tagsüber ist, desto größer der zu erwartende
-Einsparungseffekt durch eine Steckdosen-Anlage ohne Stromspeicher.
-Denn diese Nutzungsart lohnt sich also nur insoweit, wie man während der
-Sonnenscheindauer den erzeugten Strom direkt sinnvoll verbrauchen kann.
-Am einfachsten und am besten planbar geschieht das über die sog. *Grundlast*,
-also ständig und mehr oder weniger gleichmäßig laufende Verbraucher
-wie Kühlschränke, Internetanschluss, Computerserver
-und Geräte, die im Bereitschaftsmodus (engl. _standby_) sind.
-Darüber hinaus kann man gezielt diverse Haushaltsgeräte und Ladegeräte
-vorzugsweise dann betreiben, wenn hohe Sonneneinstrahlung vorhanden ist.
-Dazu bieten sich insbesondere Waschmaschinen und das Laden von Batterien an,
-wobei die Akkus von E-Bikes oder E-Rollern von der Größenordnung
-und ihrem zeitlichen Nutzungsprofil besonders geeignet sind.
-
-Eine ziemlich clevere Nutzung von überschüssigem Strom ist
-[*Power-to-Heat (P2H)*](https://de.wikipedia.org/wiki/Power-to-Heat),
-also die Verwendung für eine elektrische Heizung, die verstärkte Nutzung
-einer Wärmepumpe (welche den Nutzeffekt sogar vervielfacht) oder
-das zusätzliche Aufheizen des Warmwasserbehälters einer normalen Heizanlage
-über einen [PV-Heizstab](https://www.net4energy.com/de-de/energie/pv-heizstab)
-oder der Einsatz eines gesonderten PV-Boilers.
-All dies führt zu weniger Verbrauch von fossilen Brennstoffen und kann
-je nach Größe der dafür nötigen Investition längerfristig Kosten sparen.
-
-{:style="clear:both"}
-![Bild: PV-Wasserboiler](PV-Wasserboiler.png){:.right width="378"}
-Ein *PV-Heizstab* funktioniert im Prinzip wie ein Tauchsieder und erfordert
-keine Wandlung des Stroms, hat also praktisch keine elektrischen Verluste,
-wenn er DC-seitig (ohne Wechselrichter) angeschlossen wird.
-Allerdings kommt es je nach Stärke der Wärmedämmung zu thermischen Verlusten,
-wenn das darüber erwärmte Wasser nicht zeitnah verwendet wird.
-Auf jeden Fall muss sichergestellt werden, dass das Wasser im Boiler
-nicht überhitzt, falls zu viel PV-Energie vorhanden ist.\
-Natürlich setzt eine Nutzung von Solarstrom aus Überschuss voraus,
-dass der aktuelle sonstige Stromverbrauch [gemessen wird](
-https://www.my-pv.com/de/produkte/my-pv-wifi-meter) und in die Steuerung
-eingeht. Beispielsweise beim [AC Thor](
-https://www.klimaworld.com/ac-thor-set-pv-manager-fuer-eigenverbrauch-warmwasserbereitung-mit-solarstrom.html) und beim [MYPV AC ELWA 2](
-https://www.klimaworld.com/mypv-ac-elwa-2-elektrischer-heizstab-3-5-kw.html)
-ist das der Fall. Allerdings verwenden beide eine AC-Kopplung des Heizstabes,
-was Wechselrichter-Verluste durch den mit sich bringt, aber wohl die Regelung
-vereinfacht und die Möglichkeit bietet, notfalls mit Netzstrom nachzuheizen.
-Diverse andere Heizstäbe und
-[Solarboiler](https://www.solarversand.de/photovoltaik-wasserboiler-30-liter/)
-haben kein solches Energiemanagement, so dass dieses noch ergänzt werden müsste.
-Es fallen besonders für PV-Heizstäbe und PV-Boiler also zusätzlichen Montage-
-und Regelungs-Aufwände an, weshalb sie sich nur bei größeren PV-Anlagen lohnen.
-
-#### Verbrauchsmessung {#Verbrauchsmessung}
-
-![Bild: Energiekosten-Messgerät in Steckdosenform](
-Energiekosten-Messgeraet.png){:.right width="300"
-style="margin-left: 70px; margin-right: 70px"}
-Den Stromverbrauch von Elektrogeräten im Haushalt kann man recht einfach
-mit Energiekosten-Messgeräten in Steckdosenform bestimmen. Diese messen
-nicht nur den momentanen Stromverbrauch in Watt, sondern bei längerer
-Verwendung auch die über die Zeit verbrauchte Strommenge in kWh.
-
-Die Grundlast eines Haushalts kann man über den Haushalts-Stromzähler
-noch einfacher bestimmen, indem man die Differenz der Zählerstände
-über einen Zeitraum von mehreren Stunden, zu dem sonst keine Verbraucher
-eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
-
-Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
-z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
-
-{:style="clear:both"}
-
-![Bild: Shelly 3EM](Shelly_3EM.webp){:.right width="200"}
-Der Haushalts-Stromverbrauch lässt sich auch kontinuierlich und automatisiert
-messen und übertragen. Das kann für eine Online-Ablesung und genauere Analyse
-des Verbrauchs interessant sein. Besonders wichtig ist es aber für die optimale
-lastabhängige [Regelung](#Regelungsstrategien) der Ladung und/oder Entladung
-eines Stromspeichers.
-* Man kann sich die Verbrauchsdaten über den
-sog. [„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
-oder [„Powerfox“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
-aus dem Haushalts-Stromzähler übermitteln lassen --
-sofern ein moderner Stromzähler verbaut ist und man Zugang zu diesem hat.
-* Alternativ kann man ein 3-Phasen-Energiemessgerät wie den
-[Shelly 3EM](https://www.shelly.cloud/de/products/product-overview/shelly-3em-1)
-oder den teureren, aber wohl genaueren [my-PV WiFi Meter](
-https://www.my-pv.com/de/produkte/my-pv-wifi-meter) verwenden.
-Dieses wird in den Sicherungskasten der Wohnung eingebaut,
-was ein Fachmann machen sollte, und per WLAN eingebunden.
-
-#### Stromzähler und Rücklaufsperre {#Stromzähler}
-
-Für den selbst erzeugten und gleichzeitig verbrauchten Strom spart man sich
-die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
-und entsprechend langsamer läuft.
-Es wird also nur der vom Stromanbieter bezogene Anteil des Verbrauchs berechnet.
-
-Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
-die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
-die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
-die Stromzähler arbeiten *phasensaldierend*, d.h. sie bilden die Gesamtsumme
-über alle drei Leitungen aus dem Verbrauch und der Erzeugung,
-welche dabei umgekehrtes Vorzeichen hat.
-
-![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.left width="400"}
-![Bild: Symbol für Rücklaufsperre im Stromzähler](
-Ruecklaufsperre.png){:.right width="370"}
-Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
-verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
-Moderne Stromzähler haben eine *Rücklaufsperre*, was man an dem entsprechenden
-Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
-Strom praktisch ins externe Netz verschenkt wird.
-Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
-laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
-Damit kann man „unter der Hand Strom verkaufen“, was aber in Deutschland bislang
-nicht erlaubt ist. Anfang 2023 [sprach sich der VDE jedoch dafür aus](
-https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
-bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
-
-Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
-vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
-Eine offiziell angemeldete und vergütete Einspeisung ist mit einiger Bürokratie
-verbunden und bringt wenig --- die Vergütung sank in Deutschland gemäß eEG
-[bis 2022 auf ca. 6 ct/kWh](
-https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
-und steigt [ab 2023 auf etwa 8 ct/kWh](
-https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
---- immer noch sehr mager, besonders im Vergleich zum Verbrauchspreis.
 
 ### Eigenverbrauch und Eigendeckung {#Eigenverbrauch}
 
