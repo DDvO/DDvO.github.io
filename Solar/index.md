@@ -1026,7 +1026,7 @@ Wie schon der Name *Stecker-Solaranlage* ausdrückt, werden solche kleinen
 Anlagen meist einfach über einen (Schuko-)Stecker mit dem Hausnetz verbunden,
 z.B. an einer Außensteckdose auf dem Balkon oder der Terrasse. Das ist sehr
 flexibel und ermöglicht, sehr einfach ein Energiemessgerät dazwischenzustecken,
-wie es unten zur [Verbrauchsmessung](#Verbrauchsmessung) gezeigt ist.
+wie es unten zur [Verbrauchsmessung](#Verbrauchsmessung) dargestellt ist.
 Diese Lösung ist m.E. schon sicher genug,
 weil der Wechselrichter die Stromzufuhr sofort unterbricht, wenn man den
 Stecker aus der Dose zieht und seine blanken Kontakte berühren kann.
@@ -1320,7 +1320,8 @@ Es wird also nur der vom Stromanbieter bezogene Anteil des Verbrauchs berechnet.
 die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
 die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
 die Stromzähler arbeiten *phasensaldierend*, d.h. sie bilden die Gesamtsumme
-von Verbrauch und Erzeugung, welche dabei negatives Vorzeichen hat.
+über alle drei Leitungen aus dem Verbrauch und der Erzeugung,
+welche dabei umgekehrtes Vorzeichen hat.
 
 ![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.left width="400"}
 ![Bild: Symbol für Rücklaufsperre im Stromzähler](
@@ -1421,6 +1422,26 @@ eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
 
 Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
 z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
+
+{:style="clear:both"}
+
+![Bild: Shelly 3EM](Shelly_3EM.webp){:.right width="200"}
+Der Haushalts-Stromverbrauch lässt sich auch kontinuierlich und automatisiert
+messen und übertragen. Das kann für eine Online-Ablesung und genauere Analyse
+des Verbrauchs interessant sein. Besonders wichtig ist es aber für die optimale
+lastabhängige [Regelung](#Regelungsstrategien) der Ladung und/oder Entladung
+eines Stromspeichers.
+* Man kann sich die Verbrauchsdaten über den
+sog. [„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
+oder [„Powerfox“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
+aus dem Haushalts-Stromzähler übermitteln lassen --
+sofern ein moderner Stromzähler verbaut ist und man Zugang zu diesem hat.
+* Alternativ kann man ein 3-Phasen-Energiemessgerät wie den
+[Shelly 3EM](https://www.shelly.cloud/de/products/product-overview/shelly-3em-1)
+oder den teureren, aber wohl genaueren [my-PV WiFi Meter](
+https://www.my-pv.com/de/produkte/my-pv-wifi-meter) verwenden.
+Dieses wird in den Sicherungskasten der Wohnung eingebaut,
+was ein Fachmann machen sollte, und per WLAN eingebunden.
 
 ### Eigenverbrauch und Eigendeckung {#Eigenverbrauch}
 
@@ -1973,6 +1994,9 @@ Das optimiert die Speichernutzung in mehrfacher Hinsicht:
 
 Der Lastvorrang bringt für die Effizienz fast so viel wie eine optimale
 lastabhängige Entnahme aus der Batterie.
+Der Abschnitt [Verbrauchsmessung](#Verbrauchsmessung) gibt Hinweise,
+wie man die aktuelle Last im Haushalt automatisch messen bzw. auslesen kann.
+
 Wenn die [o.g. Balkonanlage mit 1 kWh Pufferspeicher](#Batteriepuffer) nur eine
 Konstanteinspeisung verwendet (wobei hier eine Entladeleistung von nur 45 W
 optimal ist), ergibt sich mit der optimalen Ladestrategie eine Steigerung des
@@ -2110,7 +2134,6 @@ Wenn der Wechselrichter mehrere Eingänge hat, kann man an die übrigen Eingäng
 auch noch direkt PV-Module anschließen,
 deren Ertrag dann nicht über die Batterie gepuffert wird.
 
-
 {:style="clear:both"}
 
 [![Bild: Balkonsolar mit Akku - AkkuDoktor](
@@ -2127,22 +2150,9 @@ wie in einem [Video von Andreas Schmitz](
 https://www.youtube.com/watch?v=yOcoux9IbzM) vorgeführt.
 Dann lässt sich die Einspeisung sogar abhängig vom aktuellen Stromverbrauch
 regeln (allerdings mit einer gewissen Verzögerung), etwa über einen entsprechend
-programmierten Raspberry Pi.
-
-{:style="clear:both"}
-
-![Bild: Shelly 3EM](Shelly_3EM.webp){:.right width="150"}
-Die Regelung der lastabhängigen Einspeisung kann die Verbrauchsdaten über den
-sog. [„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
-oder [„Powerfox“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
-aus dem Haushalts-Stromzähler übermittelt bekommen --
-sofern ein moderner Stromzähler verbaut ist und man Zugang zu diesem hat.\
-Alternativ kann man ein 3-Phasen-Energiemessgerät wie den
-[Shelly 3EM](https://www.shelly.cloud/de/products/product-overview/shelly-3em-1)
-oder den teureren, aber wohl genaueren [my-PV WiFi Meter](
-https://www.my-pv.com/de/produkte/my-pv-wifi-meter) verwenden.
-Dieses wird in den Sicherungskasten der Wohnung eingebaut,
-was ein Fachmann machen sollte, und per WLAN eingebunden.
+programmierten Raspberry Pi.\
+Möglichkeiten, den Haushalts-Stromverbrauch automatisch auszulesen,
+sind im Abschnitt [Verbrauchsmessung](#Verbrauchsmessung) genannt.
 
 {:style="clear:both"}
 
