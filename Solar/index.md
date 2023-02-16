@@ -135,9 +135,9 @@ verwiesen.
         - [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“) {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
             - [Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}](#beschränkung-auf-600-w-und-ihre-gründe-kappung)
             - [Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}](#kappungsverlust-durch-drosselung-auf-600-w-kappungsverlust)
-            - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
         - [Stromverbrauch im Haushalt {#Stromverbrauch}](#stromverbrauch-im-haushalt-stromverbrauch)
             - [Verbrauchsmessung {#Verbrauchsmessung}](#verbrauchsmessung-verbrauchsmessung)
+            - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
         - [Eigenverbrauch und Eigendeckung {#Eigenverbrauch}](#eigenverbrauch-und-eigendeckung)
         - [Berechnung des Eigenverbrauchs {#Berechnung}](#berechnung-des-eigenverbrauchs)
             - [Ökonomisch orientierte Berechnung von Rendite und Amortisation {#Oekonomie}](#ökonomisch-orientierte-berechnung-von-rendite-und-amortisation-pv-rechner)
@@ -188,9 +188,9 @@ verwiesen.
     -   [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“)](#Balkonkraftwerk)
         - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Kappung)
         - [Kappungsverlust durch Drosselung auf 600 W](#Kappungsverlust)
-        - [Stromzähler und Rücklaufsperre](#Stromzähler)
     -   [Stromverbrauch im Haushalt](#Stromverbrauch)
         - [Verbrauchsmessung](#Verbrauchsmessung)
+        - [Stromzähler und Rücklaufsperre](#Stromzähler)
     -   [Eigenverbrauch und Eigendeckung](Eigenverbrauch)
     -   [Berechnung des Eigenverbrauchs](#Berechnung)
         - [Ökonomisch orientierte Berechnung von Rendite und Amortisation](#Oekonomie)
@@ -1309,45 +1309,6 @@ die 1000 Wp) nicht, statt eines auf 600 W gedrosselten Wechselrichters
 einen teureren mit 800 W Maximalleistung zu nehmen oder darauf zu warten,
 bis diese in Deutschland offiziell unter die Bagatellgrenze fallen.
 
-#### Stromzähler und Rücklaufsperre {#Stromzähler}
-
-Für den selbst erzeugten und gleichzeitig verbrauchten Strom spart man sich
-die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
-und entsprechend langsamer läuft.
-Es wird also nur der vom Stromanbieter bezogene Anteil des Verbrauchs berechnet.
-
-Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
-die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
-die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
-die Stromzähler arbeiten *phasensaldierend*, d.h. sie bilden die Gesamtsumme
-über alle drei Leitungen aus dem Verbrauch und der Erzeugung,
-welche dabei umgekehrtes Vorzeichen hat.
-
-![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.left width="400"}
-![Bild: Symbol für Rücklaufsperre im Stromzähler](
-Ruecklaufsperre.png){:.right width="370"}
-Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
-verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
-Moderne Stromzähler haben eine *Rücklaufsperre*, was man an dem entsprechenden
-Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
-Strom praktisch ins externe Netz verschenkt wird.
-Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
-laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
-Damit kann man „unter der Hand Strom verkaufen“, was aber in Deutschland bislang
-nicht erlaubt ist. Anfang 2023 [sprach sich der VDE jedoch dafür aus](
-https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
-bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
-
-Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
-vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
-Eine offiziell angemeldete und vergütete Einspeisung ist mit einiger Bürokratie
-verbunden und bringt wenig --- die Vergütung sank in Deutschland gemäß eEG
-[bis 2022 auf ca. 6 ct/kWh](
-https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
-und steigt [ab 2023 auf etwa 8 ct/kWh](
-https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
---- immer noch sehr mager, besonders im Vergleich zum Verbrauchspreis.
-
 ### Stromverbrauch im Haushalt {#Stromverbrauch}
 
 Eigentlich ist es im Vergleich zum Betrieb einer (möglicherweise
@@ -1442,6 +1403,45 @@ oder den teureren, aber wohl genaueren [my-PV WiFi Meter](
 https://www.my-pv.com/de/produkte/my-pv-wifi-meter) verwenden.
 Dieses wird in den Sicherungskasten der Wohnung eingebaut,
 was ein Fachmann machen sollte, und per WLAN eingebunden.
+
+#### Stromzähler und Rücklaufsperre {#Stromzähler}
+
+Für den selbst erzeugten und gleichzeitig verbrauchten Strom spart man sich
+die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
+und entsprechend langsamer läuft.
+Es wird also nur der vom Stromanbieter bezogene Anteil des Verbrauchs berechnet.
+
+Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
+die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
+die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
+die Stromzähler arbeiten *phasensaldierend*, d.h. sie bilden die Gesamtsumme
+über alle drei Leitungen aus dem Verbrauch und der Erzeugung,
+welche dabei umgekehrtes Vorzeichen hat.
+
+![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.left width="400"}
+![Bild: Symbol für Rücklaufsperre im Stromzähler](
+Ruecklaufsperre.png){:.right width="370"}
+Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
+verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
+Moderne Stromzähler haben eine *Rücklaufsperre*, was man an dem entsprechenden
+Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
+Strom praktisch ins externe Netz verschenkt wird.
+Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
+laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
+Damit kann man „unter der Hand Strom verkaufen“, was aber in Deutschland bislang
+nicht erlaubt ist. Anfang 2023 [sprach sich der VDE jedoch dafür aus](
+https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
+bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
+
+Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
+vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
+Eine offiziell angemeldete und vergütete Einspeisung ist mit einiger Bürokratie
+verbunden und bringt wenig --- die Vergütung sank in Deutschland gemäß eEG
+[bis 2022 auf ca. 6 ct/kWh](
+https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
+und steigt [ab 2023 auf etwa 8 ct/kWh](
+https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
+--- immer noch sehr mager, besonders im Vergleich zum Verbrauchspreis.
 
 ### Eigenverbrauch und Eigendeckung {#Eigenverbrauch}
 
