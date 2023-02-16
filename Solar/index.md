@@ -116,7 +116,7 @@ verlässliche Hinweise geben und für die Inhalte keine Gewähr oder gar Haftung
 übernehmen. Wer bezüglich steckerfertigen PV-Anlagen etwas Offizielleres sucht,
 der sei z.B. auf den schönen [Leitfaden von SmartGridsBW](
 https://smartgrids-bw.net/public/uploads/2020/04/IBZ-Leitfaden_Balkon-PV-Online.pdf)
-und die ["Fachinformation" des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
+und die [„Fachinformation“ des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
 verwiesen.
 
 <!-- markdown-toc start - Run M-x markdown-toc-refresh-toc -->
@@ -132,7 +132,7 @@ verwiesen.
         - [Optimale Ausrichtung von Solarmodulen {#Ausrichtung}](#optimale-ausrichtung-von-solarmodulen-ausrichtung)
             - [Aufteilung in mehrere Orientierungen {#Aufteilung}](#aufteilung-in-mehrere-orientierungen)
     - [Nutzungsmöglichkeiten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
-        - [Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk") {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
+        - [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“) {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
             - [Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}](#beschränkung-auf-600-w-und-ihre-gründe-kappung)
             - [Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}](#kappungsverlust-durch-drosselung-auf-600-w-kappungsverlust)
             - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
@@ -185,7 +185,7 @@ verwiesen.
     -   [Optimale Ausrichtung von Solarmodulen](#Ausrichtung)
         - [Aufteilung in mehrere Orientierungen](#Aufteilung)
 -   [Nutzungsmöglichkeiten](#Nutzung)
-    -   [Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk")](#Balkonkraftwerk)
+    -   [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“)](#Balkonkraftwerk)
         - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Kappung)
         - [Kappungsverlust durch Drosselung auf 600 W](#Kappungsverlust)
         - [Stromzähler und Rücklaufsperre](#Stromzähler)
@@ -993,7 +993,7 @@ Nutzungsmöglichkeiten {#Nutzung}
 Solarmodule liefern in direkter Abhängigkeit von der Einstrahlungsstärke
 sehr variablen Gleichstrom (je nach Nennleistung maximal z.B. 11 A)
 mit einer Spannung je nach Modultyp von üblicherweise 22 bis 44 V.
-Dieser "rohe" Strom ist direkt erst mal kaum verwendbar,
+Dieser „rohe“ Strom ist direkt erst mal kaum verwendbar,
 außer z.B. zum Aufheizen eines Warmwasserspeichers mit einem [PV-Heizstab](
 https://www.net4energy.com/de-de/energie/pv-heizstab) --
 siehe dazu [weiter unten](#Stromverbrauch).
@@ -1005,7 +1005,7 @@ Man kann gerade nicht benötigten PV-Strom auch in einer Batterie
 zwischenspeichern, was ein Abschnitt [weiter unten](#Batteriepuffer) behandelt,
 der auch erklärt, dass sich das in den seltensten Fällen lohnt.
 
-### Direkte Netzeinspeisung (Stecker-Solaranlage, "Balkonkraftwerk") {#Balkonkraftwerk}
+### Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“) {#Balkonkraftwerk}
 
 ![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.left width="400"}
 ![Bild: Aufbau Balkonkraftwerk](Balkonkraftwerk.jpg){:.right width="378"}
@@ -1032,8 +1032,8 @@ weil der Wechselrichter die Stromzufuhr sofort unterbricht, wenn man den
 Stecker aus der Dose zieht und seine blanken Kontakte berühren kann.
 Anfang 2023 [sprach sich der VDE dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv),
-"den Schuko-Stecker für die Einspeisung
-bis zu einer Systemgesamtleistungsgrenze von 800 W zu dulden".
+„den Schuko-Stecker für die Einspeisung
+bis zu einer Systemgesamtleistungsgrenze von 800 W zu dulden“.
 
 ![Bild: Wieland-Unterputz-Dose](Wieland-Unterputz-Dose.png){:.right width="450"}
 Man kann aber auch, wie vom VDE bislang empfohlen, eine spezielle
@@ -1056,7 +1056,7 @@ Dies gilt bislang für Deutschland und die Schweiz; in Österreich gilt nach ein
 allgemeineren EU-Regel für die vereinfachte Nutzung eine Obergrenze von 800 W.
 Seit Anfang 2023 [empfiehlt selbst der VDE](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), sich
-künftig auch in Deutschland an der "Bagatellgrenze bis 800 W" zu orientieren.
+künftig auch in Deutschland an der „Bagatellgrenze bis 800 W“ zu orientieren.
 
 In Deutschland sind PV-Anlagen anmeldepflichtig, wenn sie ins externe Netz
 einspeisen können, wobei der Aufwand für Balkonkraftwerke nicht so groß ist.
@@ -1333,10 +1333,10 @@ Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
 Strom praktisch ins externe Netz verschenkt wird.
 Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
 laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
-Damit kann man "unter der Hand Strom verkaufen", was aber in Deutschland bislang
+Damit kann man „unter der Hand Strom verkaufen“, was aber in Deutschland bislang
 nicht erlaubt ist. Anfang 2023 [sprach sich der VDE jedoch dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
-bei PV-Anlagen bis 800 W die Zähler künftig "auch rückwärtslaufen dürfen".
+bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
 
 Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
 vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
@@ -1569,10 +1569,10 @@ In die Gesamt-Ökobilanz einer PV-Anlage und ihrer Nutzung gehen natürlich
 noch weitere Effekte ein, die sich aber kaum quantifizieren lassen.
 
 Der Eigendeckungsanteil und Eigenverbrauchsanteil lässt sich sehr einfach
-näherungsweise mit dem ["Stecker-Solar-Simulator"](
-https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
-für Balkonkraftwerke bzw. dem ["Unabhängigkeitsrechner"](
-https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)
+näherungsweise mit dem „[Stecker-Solar-Simulator](
+https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)“
+für Balkonkraftwerke bzw. dem „[Unabhängigkeitsrechner](
+https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)“
 für Hausdach-PV-Anlagen der HTW Berlin berechnen.
 [![Bild: Stecker-Solar-Simulator](Stecker-Solar-Simulator.png)](
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
@@ -1594,7 +1594,7 @@ verwenden kann (und zwar durch Multiplikation mit dem Stromverbrauch).
 Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.
 
 Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
-auch das [PVTool von Andreas Schmitz ("AkkuDoktor")](https://www.akkudoktor.net/pvtool-rechner/).
+auch das [PVTool von Andreas Schmitz („AkkuDoktor“)](https://www.akkudoktor.net/pvtool-rechner/).
 Als Besonderheit kann man hier schön sehen, wie sich Eigenverbrauchsquote,
 Autarkiegrad und Amortisation in Abhängigkeit von der Anwesenheit und Kapazität
 eines Stromspeichers ändern.\
@@ -1616,8 +1616,8 @@ darauf sehr schön den Verlauf der elektrischen Größen ansehen.
 Außerdem gibt es gute Info-Seite mit guten Erklärungen zu Eigenverbrauchsanteil
 und Eigendeckungsanteil zu Strategien zu ihrer Optimierung.
 Diese Simulation berechnet für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl
-des Profils einen Eigenverbrauch von teils 601 kWh (Profil "allgemein 13/14")
-und mehr, aber typischerweise eher 514 kWh (Profil "InGe 16") pro Jahr.
+des Profils einen Eigenverbrauch von teils 601 kWh (Profil „allgemein 13/14“)
+und mehr, aber typischerweise eher 514 kWh (Profil „InGe 16“) pro Jahr.
 
 Es gibt auch eine Android-App namens [PV Calculator](
 https://play.google.com/store/apps/details?id=com.pvstrom.pvcalculator)
@@ -1632,7 +1632,7 @@ Aber das Hauptproblem ist, dass die Last nur im stundenweisen Durchschnitt
 betrachtet wird, also die typischen Lastspitzen unberücksichtigt bleiben.
 Damit ergibt sich bei 3000 kWh Jahres-Strombedarf für die meisten Profile
 unrealistischerweise so gut wie keine Netzeinspeisung und selbst für das
-Profil "Peak Morgen Abends" eine viel zu niedrige Netzeinspeisung von 52 kWh.
+Profil „Peak Morgen Abends“ eine viel zu niedrige Netzeinspeisung von 52 kWh.
 Außerdem wird etwas verwirrend im Gesamtergebnis nicht der resultierende
 Eigenverbrauch (hier 612 kWh) dargestellt, sondern der Nettoertrag und der Netzbezug.
 
@@ -1651,7 +1651,7 @@ PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
 Der per Tabellenkalkulation implementierte [PV-Rechner](PV-Rechner_v6+.xls)
 hat als besonderen Schwerpunkt die kaufmännische Betrachtung inklusive Rendite
 und Kapitalkosten unter Berücksichtigung von Abschreibung für Reparaturen u.ä.
-Er ist für "große" PV-Anlagen auf Hausdächern konzipiert, und behandelt optional
+Er ist für „große“ PV-Anlagen auf Hausdächern konzipiert, und behandelt optional
 gesondert das Laden eines E-Fahrzeugs<!-- (was normalerweise öfter zu
 Sonnenscheinzeiten erfolgen kann)-->, den Betrieb einer Wärmepumpe und
 die Nutzung eines Stromspeichers, funktioniert aber auch für Balkonsolaranlagen.
@@ -2343,7 +2343,7 @@ Neben der Speicherbatterie wird hier zumindest ein
 nicht direkt mit der Batteriespannung (z.B. 12 V oder 24 V Gleichstrom)
 betrieben werden können, zusätzlich ein ausreichend leistungsstarker
 [Inselwechselrichter](#Inselwechselrichter) zur Umwandlung
-in den üblichen "Steckdosenstrom" (also Wechselstrom mit 230 V).\
+in den üblichen „Steckdosenstrom“ (also Wechselstrom mit 230 V).\
 An diesen Wechselrichter muss man bei Stromausfall alle
 dann zu verwendenden Geräte (meist über eine Mehrfachsteckdose) anschließen.
 Man speist dann also nicht einfach ins stromlose Hausnetz ein,
@@ -2599,7 +2599,7 @@ wenn sich direkt darunter den Menschen bewegen oder aufhalten können.
 
 ![Bild: Strom-/Leistungs-Spannungskennlinien einer Solarzelle](
 I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="450"}
-Für die Umwandlung des recht volatilen "rohen" Solarstroms auf die gewünschte
+Für die Umwandlung des recht volatilen „rohen“ Solarstroms auf die gewünschte
 (nahezu) konstante Zielspannung benötigt man regelbare *Gleichspannungswandler*,
 kurz *Regler* genannt.
 Sehr einfache und billige Regler verwenden dazu *Pulsweitenmodulation* (*PWM*).
@@ -2736,7 +2736,7 @@ Selbstentladung, einen deutlich höheren Wirkungsgrad
 ein Vielfaches an Lade-/Entladezyklen sowie recht hohe Lade-/Entladeströme,
 so dass sie in weniger als einer Stunde geladen bzw. entladen werden können.
 Im Vergleich zu anderen Lithium-Ionen-Akkutypen wie Lithium-Polymer (LiPo),
-welche eine noch höhere Energiedichte und keinerlei "Memory-Effekt" haben,
+welche eine noch höhere Energiedichte und keinerlei „Memory-Effekt“ haben,
 sind sie recht robust und sicher und sind weniger umweltschädlich.\
 Alle Lithium-basierten Batterien benötigen, anders als Blei-Batterien, für die
 Reihenschaltung der internen Akkuzellen ein sog. *Batteriemanagementsystem*
