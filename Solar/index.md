@@ -2377,19 +2377,27 @@ Kapazität haben (es seid denn, es scheint dann genug Sonne zum Nachladen), aber
 bei kürzeren Stromausfällen (engl. _brownout_) können sie sehr hilfreich sein.
 
 Neben der Speicherbatterie wird hier zumindest ein
-[Solar-Laderegler](#Laderegler) benötigt, und sofern die Verbraucher
-nicht direkt mit der Batteriespannung (z.B. 12 V oder 24 V Gleichstrom)
-betrieben werden können, zusätzlich ein ausreichend leistungsstarker
-[Inselwechselrichter](#Inselwechselrichter) zur Umwandlung
-in den üblichen „Steckdosenstrom“ (also Wechselstrom mit 230 V).\
+[Solar-Laderegler](#Laderegler) benötigt,
+welcher die PV-Module DC-seitig koppelt.
+
+Verbraucher werden am Effizientesten mit dem Gleichstrom der Batterie betrieben.
+Sollte die Batteriespannung (z.B. 12 V oder 24 V) dafür nicht passen,
+können [Gleichspannungswandler](#Gleichspannungswandler) verwendet werden,
+die natürlich ausreichend dimensioniert und möglichst verlustarm sein sollten.
+Auch Geräte (wie z.B. Laptops und Radios), die ein externes Netzteil haben,
+lassen sich relativ leicht direkt mit Gleichstrom versorgen.
+
+Zum Anschluss sonstiger Verbraucher, welche mit dem üblichen „Steckdosenstrom“
+betrieben werden, braucht man einen ausreichend leistungsstarken
+[Inselwechselrichter](#Inselwechselrichter) zur Umwandlung in 230 V Wechselstrom.\
 An diesen Wechselrichter muss man bei Stromausfall alle
 dann zu verwendenden Geräte (meist über eine Mehrfachsteckdose) anschließen.
 Man speist dann also nicht einfach ins stromlose Hausnetz ein,
 weil dazu die von außen kommende Stromleitung umgeschaltet werden und für eine
-geeignete Erdung gesorgt werden müsste, was nur ein Elektriker machen kann/darf.
+geeignete Erdung gesorgt werden müsste, was nur ein Elektriker machen sollte.
 
 Ähnlich wie die o.g. [Batteriepufferung](#Batteriepuffer) ist diese Nutzungsart
-flexibler aber wegen der nötigen zusätzlichen Komponenten (v.A. der Batterie)
+flexibler, aber wegen der nötigen zusätzlichen Komponenten (v.A. der Batterie)
 auch deutlich teurer und auch etwas anfälliger und wartungsintensiver
 als die [direkte Netzeinspeisung](#Balkonkraftwerk).
 Wirtschaftlich rentabel für die Nutzung zu Hause kann das bei den
@@ -2728,7 +2736,8 @@ Da können schon mal 1000 VA zusammenkommen (wenn auch nur für 1-2 Sekunden).
 style="margin-left: 70px; margin-right: 70px"}
 Wenn man über Solarmodule eine Batterie laden möchte, benötigt man einen
 *Solar-Laderegler*, der einen Spannungsregler mit einem Batterieladegerät
-verbindet. Mit billigen chinesischen (angeblich) MPPT-Reglern habe ich
+kombiniert.\
+Mit billigen chinesischen (angeblich) MPPT-Reglern habe ich
 keine guten Erfahrungen gemacht, wohl aber mit den europäischen Marken
 Victron und Votronic.
 
