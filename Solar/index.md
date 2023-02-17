@@ -990,16 +990,24 @@ Eigenverbrauchsv.  =    0 kWh netto während 2 h durch Drosselung auf 1200 W
 Stromverbrauch im Haushalt {#Stromverbrauch}
 -
 
-Eigentlich ist es im Vergleich zum Betrieb einer (möglicherweise
-recht groß dimensionierten) Solaranlage immer noch günstiger und
-umweltfreundlicher, von vornherein den Stromverbrauch zu senken.
-Stromfressende Geräte sollte man möglichst meiden und Geräte, die einen hohen
-Verbrauch im Bereitschaftsmodus haben, bei längerem Nichtgebrauch ausschalten.
-Man kann damit in einem 3-Personen-Haushalt auf unter 1500 kWh im Jahr kommen.
+Wenn man Strom(kosten) sparen möchte, ist der direkteste, effizienteste und
+umweltfreundlichste Ansatz natürlich, erst mal den Stromverbrauch zu senken.
+Stromfressende Geräte sollte man so weit wie möglich meiden.
+Kandidaten dafür sind vor Allem elektrische Heizungen (auch für Warmwasser)
+und alte und/oder unnötig große Kühlschränke und Gefriertruhen.
+Wer die Möglichkeit hat, erhitzt Wasser und kocht deutlich effizieter mit Gas.
+Zum Wäsche waschen genügt meist auch 30° (statt 40° oder höher).
+Fernseher und Computer müssen normalerweise nicht immer laufen.
+Geräte, die einen hohen Verbrauch im Bereitschaftsmodus haben,
+könnte man bei längerem Nichtgebrauch auch ganz abschalten.
+Man kann beispielsweise in einem 3-Personen-Haushalt
+durchaus auf unter 1500 kWh im Jahr kommen.
 
-Je stromhungriger ein Haushalt tagsüber ist, desto größer der zu erwartende
-Einsparungseffekt durch eine Steckdosen-Anlage ohne Stromspeicher.
-Denn diese Nutzungsart lohnt sich also nur insoweit, wie man während der
+Erst der zweite Schritt zum Einsparen von Stromkosten ist dann eine
+geeignet dimensionierte PV-Anlage.
+Je mehr in Haushalt tagsüber verbraucht wird, desto größer der zu erwartende
+Einsparungseffekt durch eine Anlage ohne Stromspeicher.
+Denn diese Nutzungsart lohnt sich nur insoweit, wie man während der
 Sonnenscheindauer den erzeugten Strom direkt sinnvoll verbrauchen kann.
 Am einfachsten und am besten planbar geschieht das über die sog. *Grundlast*,
 also ständig und mehr oder weniger gleichmäßig laufende Verbraucher
@@ -1007,8 +1015,8 @@ wie Kühlschränke, Internetanschluss, Computerserver
 und Geräte, die im Bereitschaftsmodus (engl. _standby_) sind.
 Darüber hinaus kann man gezielt diverse Haushaltsgeräte und Ladegeräte
 vorzugsweise dann betreiben, wenn hohe Sonneneinstrahlung vorhanden ist.
-Dazu bieten sich insbesondere Waschmaschinen und das Laden von Batterien an,
-wobei die Akkus von E-Bikes oder E-Rollern von der Größenordnung
+Dazu bieten sich insbesondere Spülmaschinen, Waschmaschinen und das Laden von
+Batterien an, wobei die Akkus von E-Bikes oder E-Rollern von der Größenordnung
 und ihrem zeitlichen Nutzungsprofil besonders geeignet sind.
 
 Eine ziemlich clevere Nutzung von überschüssigem Strom ist
@@ -1055,8 +1063,9 @@ mit Energiekosten-Messgeräten in Steckdosenform bestimmen. Diese messen
 nicht nur den momentanen Stromverbrauch in Watt, sondern bei längerer
 Verwendung auch die über die Zeit verbrauchte Strommenge in kWh.
 
-Die Grundlast eines Haushalts kann man über den Haushalts-Stromzähler
-noch einfacher bestimmen, indem man die Differenz der Zählerstände
+Den Jahresverbrauch seines Haushalts erfährt man automatisch über die
+jährliche Stromabrechnung. Die Grundlast lässt sich über den Stromzähler
+relativ einfach bestimmen, indem man die Differenz der Zählerstände
 über einen Zeitraum von mehreren Stunden, zu dem sonst keine Verbraucher
 eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
 
