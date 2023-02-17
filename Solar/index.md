@@ -1,6 +1,9 @@
 ---
 title: "Mini-Solaranlagen für daheim und unterwegs"
 lang: de
+output:
+  html_document:
+  number_sections: true
 keywords:
 - Photovoltaik
 - Sonnenenergie
@@ -134,14 +137,15 @@ verwiesen.
     - [Stromverbrauch im Haushalt {#Stromverbrauch}](#stromverbrauch-im-haushalt-stromverbrauch)
         - [Verbrauchsmessung {#Verbrauchsmessung}](#verbrauchsmessung-verbrauchsmessung)
         - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
-    - [Nutzungsmöglichkeiten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
+    - [Eigenverbrauch und seine Berechnung {#Eigenverbrauch}](#eigenverbrauch-und-seine-berechnung)
+        - [Typische Rentabilität kleiner PV-Anlagen {#rentabel}](#typische-rentabilitaet-kleiner-pv-anlagen-rentabel)
+        - [Online-Berechnung {#Online}](#online-berechnung)
+        - [Ökonomisch orientierter PV-Rechner {#PV-Rechner}](#oekonomisch-orientierter-pv-rechner)
+        - [Hochauflösende Simulation: SolBatSim {#SolBatSim}](#solbatsim-hochauflösende-simulation)
+    - [Nutzungsvarianten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
         - [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“) {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
             - [Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}](#beschränkung-auf-600-w-und-ihre-gründe-kappung)
             - [Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}](#kappungsverlust-durch-drosselung-auf-600-w-kappungsverlust)
-        - [Eigenverbrauch und Eigendeckung {#Eigenverbrauch}](#eigenverbrauch-und-eigendeckung)
-        - [Berechnung des Eigenverbrauchs {#Berechnung}](#berechnung-des-eigenverbrauchs)
-            - [Ökonomisch orientierte Berechnung von Rendite und Amortisation {#Oekonomie}](#ökonomisch-orientierte-berechnung-von-rendite-und-amortisation-pv-rechner)
-            - [Hochauflösende Simulation: SolBatSim {#SolBatSim}](#solbatsim-hochauflösende-simulation)
         - [Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}](#hausnetzeinspeisung-mit-batteriepuffer-batteriepuffer)
             - [Regelungsstrategien für Stromspeicher {#Regelungsstrategien}](#regelungsstrategien-fuer-stromspeicher)
             - [Speicherbatterie {#Speicherbatterie}](#speicherbatterie-speicherbatterie)
@@ -187,14 +191,15 @@ verwiesen.
 -   [Stromverbrauch im Haushalt](#Stromverbrauch)
     - [Verbrauchsmessung](#Verbrauchsmessung)
     - [Stromzähler und Rücklaufsperre](#Stromzähler)
--   [Nutzungsmöglichkeiten](#Nutzung)
+-   [Eigenverbrauch und seine Berechnung](#Eigenverbrauch)
+    -   [Typische Rentabilität kleiner PV-Anlagen](#rentabel)
+    -   [Online-Berechnung](#Online)
+    -   [Ökonomisch orientierter PV-Rechner](#PV-Rechner)
+    -   [Hochauflösende Simulation: SolBatSim](#SolBatSim)
+-   [Nutzungsvarianten](#Nutzung)
     -   [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“)](#Balkonkraftwerk)
         - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Kappung)
         - [Kappungsverlust durch Drosselung auf 600 W](#Kappungsverlust)
-    -   [Eigenverbrauch und Eigendeckung](Eigenverbrauch)
-    -   [Berechnung des Eigenverbrauchs](#Berechnung)
-        - [Ökonomisch orientierte Berechnung von Rendite und Amortisation](#Oekonomie)
-        - [Hochauflösende Simulation: SolBatSim](#SolBatSim)
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
         - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
         - [Speicherbatterie](#Speicherbatterie)
@@ -225,7 +230,7 @@ verwiesen.
     -   [Kombi-Anlage](#Kombianlage)
 
 Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}
---------------------------------------------------
+-----------------------------------------------------
 
 Mit Solarzellen kann man Sonnenlicht in elektrische Energie umwandeln,
 woraus sich auch die Bezeichnung *Photovoltaik (PV)* ableitet.
@@ -988,7 +993,7 @@ Eigenverbrauchsv.  =    0 kWh netto während 2 h durch Drosselung auf 1200 W
 -->
 
 Stromverbrauch im Haushalt {#Stromverbrauch}
--
+--------------------------------------------
 
 Wenn man Strom(kosten) sparen möchte, ist der direkteste, effizienteste und
 umweltfreundlichste Ansatz natürlich, erst mal den Stromverbrauch zu senken.
@@ -1053,7 +1058,7 @@ haben kein solches Energiemanagement, so dass dieses noch ergänzt werden müsst
 Es fallen besonders für PV-Heizstäbe und PV-Boiler also zusätzlichen Montage-
 und Regelungs-Aufwände an, weshalb sie sich nur bei größeren PV-Anlagen lohnen.
 
-#### Verbrauchsmessung {#Verbrauchsmessung}
+### Verbrauchsmessung {#Verbrauchsmessung}
 
 ![Bild: Energiekosten-Messgerät in Steckdosenform](
 Energiekosten-Messgeraet.png){:.right width="300"
@@ -1092,7 +1097,7 @@ https://www.my-pv.com/de/produkte/my-pv-wifi-meter) verwenden.
 Dieses wird in den Sicherungskasten der Wohnung eingebaut,
 was ein Fachmann machen sollte, und per WLAN eingebunden.
 
-#### Stromzähler und Rücklaufsperre {#Stromzähler}
+### Stromzähler und Rücklaufsperre {#Stromzähler}
 
 Für den selbst erzeugten und gleichzeitig verbrauchten Strom spart man sich
 die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
@@ -1131,8 +1136,344 @@ und steigt [ab 2023 auf etwa 8 ct/kWh](
 https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
 --- immer noch sehr mager, besonders im Vergleich zum Verbrauchspreis.
 
-Nutzungsmöglichkeiten {#Nutzung}
----------------------
+Eigenverbrauch und seine Berechnung {#Eigenverbrauch}
+-----------------------------------------------------
+
+Wer privat eine PV-Anlage betreibt, möchte möglichst viel von ihrem Ertrag
+auch selbst verbrauchen, und zwar am besten direkt. Überschüssigen Strom in
+einer Batterie für spätere Nutzung zwischenzuspeichern ist aufwendig und teuer.
+Der nicht selbst genutzte Anteil wird meist ins externe Netz eingespeist.
+Bei Balkonkraftwerken geschieht dies ohne Vergütung, aber auch wenn man seinen
+Strom als Kleinunternehmer verscherbelt, hat man einige Bürokratie und bekommt
+ziemlich wenig heraus.
+
+Also geht es ökonomisch darum, den Eigenverbrauchsanteil zu maximieren. Der
+*Eigenverbrauchsanteil* (*Nutzungsgrad*) ist der Anteil der Netto-Stromerzeugung,
+der direkt verbraucht (oder ggf. mit Batterie-Ladeverlusten gespeichert wird).
+Je höher er ist, desto weniger Energie wird ins externe Stromnetz eingespeist.
+Je kleiner die Anlage ist, umso leichter kann man eine hohe Eigenverbrauchsquote
+erreichen, allerdings dann bei entsprechend kleinerem Stromvolumen.
+
+Damit verwandt ist der *Eigendeckungsanteil* (*Selbstversorgungsgrad*), also der
+Anteil des Eigenverbrauchs (ggf. mit Batterieentladung abzüglich Ladeverlusten)
+am Gesamtverbrauch.
+Je höher er ist, desto weniger Energie muss von extern bezogen werden.
+Er wird oft auch als
+[*Autarkiegrad*](https://klarsolar.de/unterschied-eigenverbrauch-autarkie/)
+bezeichnet, was etwas irreführend ist, denn typischerweise arbeitet
+der Wechselrichter der PV-Anlage auch dann nicht ohne Verbindung zum Netzstrom,
+wenn gerade kein *Netzbezug* (also Stromfluss von außen) stattfindet.
+Je größer die Anlage ist, umso höher fällt der Autarkiegrad aus,
+allerdings oft zu Lasten des Eigendeckungsanteils.
+Eine Quasi-Autarkie (Eigendeckungsanteil 100%)
+kann man aber nur mit enormer Stromspeicher-Kapazität erreichen.
+
+[![Bild: Eigenverbrauch einer 7kWp-Anlage mit 5kWh-Speicher über den Tag](
+Eigenverbrauch-7kWp-5kWh-Speicher.png){:.center}](
+https://klarsolar.de/wp-content/uploads/2022/10/Eigenverbrauchsanteil-bei-einer-7kWp-Anlage-mit-5kW-Speicher.pnghttps://klarsolar.de/unterschied-eigenverbrauch-autarkie/)
+Das Bild veranschaulicht den typischen Stromverlauf bei einer Hausdach-PV-Anlage
+mit 7kWp Nennleistung und 5kWh Stromspeicher an einem ziemlich sonnigen Tag mit
+mittags etwas Wolken. Weitere schöne Erklärungen mit Grafiken gibt es
+[hier](https://brodsoft.de/stromverlauf/pages/simulation).
+
+### Typische Rentabilität kleiner PV-Anlagen {#rentabel}
+
+Wie eingangs geschrieben kann man bei optimaler Platzierung von Solarmodulen
+pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter Solarleistung gewinnen.
+Rechnen wir beispielsweise mit einer Investition für die PV-Anlage von 1,10€/Wp
+(inklusive anteiliger Kosten für Wechselrichter, Montage, Reparatur, etc.),
+dann ergeben sich einmalige Kosten von 1€ pro kWh Jahresertrag.\
+Nehmen wir für die folgenden Beispiele zudem an, dass der sog. *Arbeitspreis*,
+also die Kosten für vom Stromanbieter bezogenen Strom, 40 Ct/kWh beträgt.
+Dann spart man 0,40€ für jede kWh Strom, die von der PV-Anlage produziert wird
+und die man auch selbst verbraucht, statt sie von außen einzukaufen.\
+Wenn die Einsparung an Stromkosten durch die Anlage ihre Kosten eingeholt hat,
+hat sich die Anlage *amortisiert*, also die Investition kaufmännisch gelohnt.
+Die Investition rentiert sich im Verhältnis der Jahres-Ersparnis zu den Kosten.
+
+* Falls man den erzeugten PV-Strom komplett selbst verbraucht,
+was aber praktisch kaum der Fall ist, ergibt sich eine Einsparung von 0,40€
+pro kWh Jahresertrag und eine Amortisation der Investition in nur 2,5 Jahren.
+Die Rendite würde in diesem Fall satte 40% betragen.
+
+* Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
+Jahres-Bruttoertrag von etwa 765 kWh, was bei 86% Gesamtsystem-Wirkungsgrad
+ca. 660 kWh Netto-Ertrag (Einspeisung des Wechselrichters) pro Jahr bedeutet.
+Rechnen wir wieder mit Kosten von 1,10€/Wp, also für diese Anlage 660€.
+
+  - Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und
+  Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh
+  pro Jahr. Der Eigenverbrauchsanteil liegt also bei 70% des Nettoertrags
+  (und der Eigendeckungsanteil bei 15% des Verbrauchs).\
+  Damit werden bei 40 Ct/kWh Arbeitspreis jährlich 184€ eingespart.
+  Für die Investition von 660€ ergibt sich eine Amortisationszeit von 3,6 Jahren
+  und eine Rendite von 28%.
+
+[//]: #
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
+ergibt 457 kWh, aber noch etwas Lastspitzen-Abzug
+88%: -peff 93.617
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92
+
+PV-Nominalleistung          =  600 Wp
+Bruttoleistung max.         =  650 W am 2020-03-23 um 11:00 h
+PV-Bruttoertrag             =  764 kWh
+PV-Nettoertrag              =  661 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+Ertragsanteil 9-15 Uhr MEZ  =   73 %
+
+Last durch Haushalt         = 3000 kWh
+Eigenverbrauch              =  461 kWh
+Netzeinspeisung             =  200 kWh
+Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
+
+Bei Lastprofil_4685_kWh.csv Eigenverbrauch 502 kWh
+-->
+
+  - Bei einem relativ hohen Jahresverbrauch von 6000 kWh können durchschnittlich
+  sogar 570 kWh im Jahr (also 87% des Nettoertrags) selbst genutzt werden,
+  was bei den angenommenen Kosten eine Amortisationszeit in 2,9 Jahren ergibt.
+
+[//]: #
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
+
+Verbrauch durch Haushalt    = 6000 kWh
+PV-Eigenverbrauch           =  572 kWh
+Netzeinspeisung             =   89 kWh
+PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
+-->
+
+  - Bei nur 1500 kWh Jahresverbrauch können durchschnittlich nur 330 kWh im Jahr
+  (also 50 % des Nettoertrags) selbst genutzt werden,
+  was eine Amortisation in genau 5 Jahren ergibt.
+
+[//]: #
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
+
+Last durch Haushalt         = 1500 kWh
+Eigenverbrauch              =  329 kWh
+Netzeinspeisung             =  332 kWh
+Eigenverbrauchsanteil       =   50 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   22 % des Verbrauchs (Autarkiegrad)
+-->
+
+  - Wenn bei 3000 kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
+  nur eine Grundlast von 100 W anfällt, liegt die Eigennutzung bei 365 kWh
+  im Jahr (also 55 % des Nettoertrags) und die Amortisationszeit bei 4,5 Jahren.
+
+In den beiden zuletzt genannten Fällen könnte man überlegen,
+weniger PV-Leistung als 600 Wp zu installieren,
+allerdings hätte man dann auch langfristig weniger Nutzen.
+
+[//]: #
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -load 130
+
+Last durch Haushalt         = 3000 kWh
+Konstante Last              =  100 W an den ersten 5 Tagen der Woche von 8 bis 16 Uhr
+Eigenverbrauch              =  365 kWh
+Netzeinspeisung             =  296 kWh
+Eigenverbrauchsanteil       =   55 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   12 % des Verbrauchs (Autarkiegrad)
+
+-->
+
+Für die Amortisation des energetischen Aufwands
+zur Herstellung einer Mini-PV-Anlage muss man nach [Angaben des DKE](
+https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
+allerdings noch 2-3 Jahre länger rechnen.
+In die Gesamt-Ökobilanz einer PV-Anlage und ihrer Nutzung gehen natürlich
+noch weitere Effekte ein, die sich aber kaum quantifizieren lassen.
+
+### Online-Berechnung {#Online}
+
+Der Eigendeckungsanteil und Eigenverbrauchsanteil lässt sich sehr einfach
+näherungsweise mit dem „[Stecker-Solar-Simulator](
+https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)“
+für Balkonkraftwerke bzw. dem „[Unabhängigkeitsrechner](
+https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)“
+für Hausdach-PV-Anlagen der HTW Berlin berechnen.
+[![Bild: Stecker-Solar-Simulator](Stecker-Solar-Simulator.png)](
+https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
+Beide Simulationen nutzen intern Daten der Wetterstation Lindenberg bei Berlin
+aus dem Jahr 2017 ---
+für Süddeutschland kann man also 10-15% mehr PV-Leistung ansetzen. Als Eingabe
+verwenden sie den Jahresstromverbrauch (mit einer typischen Lastverteilung) und
+die PV-Nennleistung (mit einem spezifischen PV-Jahresertrag von 1024 kWh/kWp).
+Man kann auch eine (nutzbare) Speicherkapazität angeben, wobei ein typischer
+Wirkungsgrad für LiFePO4-Batterien von 95% und typische Wandlungsverluste
+des Ladereglers und des Wechselrichters von jeweils 94% angenommen werden.
+Implizit wird eine optimale bedarfsgerechte Lade-/Entladeregelung vorausgesetzt.
+[![Bild: Unabhängigkeitsrechner](Unabhängigkeitsrechner.png)](
+https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)
+Der Unabhängigkeitsrechner liefert auch den Anteil der Batterieentladung an der
+Stromversorgung, den man zur Ertrags- und [Wirtschaftlichkeitsberechnung von
+PV-Speichern](https://www.youtube.com/watch?v=bE5fLy0w3MM&t=674s)
+verwenden kann (und zwar durch Multiplikation mit dem Stromverbrauch).
+Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.
+
+Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
+auch das [PVTool von Andreas Schmitz („AkkuDoktor“)](https://www.akkudoktor.net/pvtool-rechner/).
+Als Besonderheit kann man hier schön sehen, wie sich Eigenverbrauchsquote,
+Autarkiegrad und Amortisation in Abhängigkeit von der Anwesenheit und Kapazität
+eines Stromspeichers ändern.\
+Allerdings sind die Ergebnisse deutlich zu optimistisch. Das liegt vermutlich
+am verwendeten Lastprofil und unrealistisch hoch angenommenen Wirkungsgraden.
+Er macht zu diesen wichtigen Punkten und sonstigen Grundlagen seiner Berechnung
+auf seinen beiden PVTool-Seiten keinerlei Angaben.
+
+[![Bild: Speichersimulation InGe16 1.-6. April, 1000kWh, PV 660 kWh, 2,4 kWh
+Speicher](Speichersimulation_InGe16_April_1-6.png){:.center}](
+https://brodsoft.de/stromverlauf/profiles/simulation)
+Eine ältere Simulation des Eigenverbrauchs für einen gegebenen PV-Nettoertrag
+mit Fokus auf Stromspeicher (mit gegebener nutzbarer Kapazität und Effizienz),
+gibt es von [brodsoft](https://brodsoft.de/stromverlauf/profiles/simulation).
+Diese basiert auf realen Profildaten für PV-Erzeugung und Stromverbrauch,
+mit denen die Berechnung auf Stundenbasis erfolgt.
+Man kann sich in der Ausgabe auch für jeden Monat Grafiken ausgeben lassen
+darauf sehr schön den Verlauf der elektrischen Größen ansehen.
+Außerdem gibt es gute Info-Seite mit guten Erklärungen zu Eigenverbrauchsanteil
+und Eigendeckungsanteil zu Strategien zu ihrer Optimierung.
+Diese Simulation berechnet für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl
+des Profils einen Eigenverbrauch von teils 601 kWh (Profil „allgemein 13/14“)
+und mehr, aber typischerweise eher 514 kWh (Profil „InGe 16“) pro Jahr.
+
+Es gibt auch eine Android-App namens [PV Calculator](
+https://play.google.com/store/apps/details?id=com.pvstrom.pvcalculator)
+mit relativ flexiblen Parametern und sehr schöner Darstellung der Ergebnisse.
+Sie verwendet die Daten von PVGIS und rechnet auf Stundenbasis.
+Für die o.g. Beispiel-Anlage mit 600 Wp kommt sie für die gegebenen
+Wirkungsgrade korrekt auf einen Jahres-Nettoertrag von 664 kWh.
+Trotzdem sind die Ergebnisse leider zu optimistisch. Das liegt teils an den
+angebotenen Profilen (z.B. VDEW-H0-Werktag), die täglich die gleiche Last
+annehmen, wobei man immerhin selbst welche pro Jahreszeit definieren kann.
+Aber das Hauptproblem ist, dass die Last nur im stundenweisen Durchschnitt
+betrachtet wird, also die typischen Lastspitzen unberücksichtigt bleiben.
+Damit ergibt sich bei 3000 kWh Jahres-Strombedarf für die meisten Profile
+unrealistischerweise so gut wie keine Netzeinspeisung und selbst für das
+Profil „Peak Morgen Abends“ eine viel zu niedrige Netzeinspeisung von 52 kWh.
+Außerdem wird etwas verwirrend im Gesamtergebnis nicht der resultierende
+Eigenverbrauch (hier 612 kWh) dargestellt, sondern der Nettoertrag und der Netzbezug.
+
+<!-- TODO Simulationen mit PV*Sol. --->   
+
+Alle hier genannten Simulationen setzen bei Einsatz eines Pufferspeichers
+eine ideale Speicherstrategie voraus.
+Ihre Ergebnisse **gelten nicht bei Verwendung einer primitiven Regelung**, wie
+sie für [Balkonkraftwerke mit Speicherbatterie](#Batteriepuffer) typisch sind.
+Für diese kann aber der [u.g. Simulator](#SolBatSim) verwendet werden.
+
+### Ökonomisch orientierter PV-Rechner {#PV-Rechner}
+
+[![Bild: Ertragsrechnung Balkonanlage](
+PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
+Der per Tabellenkalkulation implementierte [PV-Rechner](PV-Rechner_v6+.xls)
+hat als besonderen Schwerpunkt die kaufmännische Betrachtung inklusive Rendite
+und Kapitalkosten unter Berücksichtigung von Abschreibung für Reparaturen u.ä.
+Er ist für „große“ PV-Anlagen auf Hausdächern konzipiert, und behandelt optional
+gesondert das Laden eines E-Fahrzeugs<!-- (was normalerweise öfter zu
+Sonnenscheinzeiten erfolgen kann)-->, den Betrieb einer Wärmepumpe und
+die Nutzung eines Stromspeichers, funktioniert aber auch für Balkonsolaranlagen.
+Als Eingabe erwartet er u.A. den spezifischen PV-Jahresertrag, die Ausrichtung
+der Module und den geschätzten Anteil des während der Sonnenscheindauer
+im Haushalt nutzbaren Ertrages.
+Energieflüsse werden der Einfachheit halber nur grob auf Monatsbasis gerechnet,
+so dass wichtige tageszeitliche Effekte und Lastspitzen nicht berücksichtigt
+werden. Besonders die Simulation des Stromspeichers ist stark idealisiert.
+
+Bei der o.g. typischen Balkonanlage für 660€ mit 600 Wp und 660 kWh Jahresertrag
+ergibt sich mit dem PV-Rechner für einen Haushalt mit 3000 kWh Jahresverbrauch,
+der zu 28% während der Haupt-Sonnenscheinzeiten erfolgt,
+ein etwas zu optimistischer Solarstrom-Eigenverbrauch von etwa 530 kWh pro Jahr.
+Damit könnte man bei 40 Ct/kWh jährlich ca. 205€ Stromkosten einsparen, was eine
+Amortisationszeit von 3,2 Jahren und eine satte (Anfangs-)Rendite von 26% ergäbe.
+
+Hinweis: Der PV-Rechner stammt von [Falko (bonotos)](https://www.bonotos.com/)
+Der originale beinhaltet auch seiner letzten Version 22-06 einen groben Fehler
+in der Rendite-Formel, der zu (fast) doppelt überhöhten Rendite-Zahlen führt.
+Ich habe mich mit Falko zu diesen und anderen Punkten ausgetauscht.
+Er möchte an dem Tool nichts mehr machen.
+So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
+
+### Hochauflösende Simulation: SolBatSim {#SolBatSim}
+
+*SolBatSim*, ein selbst entwickelter Simulator, basiert auf Lastprofilen
+des Haushalts-Stromverbrauchs mit mindestens stündlicher, aber besser
+minütlicher Auflösung und kommt daher auf sehr realistische Ergebnisse.
+Dafür können zum Beispiel die 74 von der
+Forschungsgruppe Solarspeichersysteme der HTW Berlin [veröffentlichen Profile](
+https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
+mit 1-Minuten-Auflösung (oder gar 1-Sekunden-Auflösung) verwendet werden.
+Mit einem [Lastprofil-Skript](Lastprofil.pl) kann man aus diesen Rohdaten
+Lastprofil-Dateien wie [diese](Lastprofil_4673_kWh.csv) synthetisieren.
+
+Die zweite wichtige Eingabe sind die PV-Ertragsdaten, welche leider meistens
+höchstens in Stunden-Auflösung erhältlich sind, wie etwa die PV-Ertragsdaten
+von [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/). Von dort kann man
+für einen gegebenen Standort und eine gegebene PV-Modul-Ausrichtung
+(wahlweise für einen Abschnitt von Jahren zwischen 2005 und 2020
+oder für ein [*typisches meteorologisches Jahr*](
+https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/)
+Solardaten wie [diese](Solardaten_1215_kWh.csv) herunterladen.
+Eine oder mehrere solcher Dateien (womit sich auch eine Linearkombination
+von PV-Modulgruppen unterschiedlicher Ausrichtung, Verschattung und
+Leistungsparameter abbilden lässt) wird dann zusammen einer Lastprofil-Datei
+als Eingabe für ein [Simulator-Skript](Solar.pl) verwendet.
+
+Für die Simulation kann das Lastprofil in einem wählbaren täglichen
+Zeitabschnitt durch eine konstante (Grund-)Last adaptiert werden,
+ebenso der Gesamt-Jahresverbrauch aus dem Lastprofil,
+die Nennleistung jeder PV-Modulgruppe
+und weitere Parameter wie der System-Wirkungsgrad der PV-Anlage
+(resultierend aus Verlusten z.B. in den Leitungen und durch
+Verschmutzung, Eigenverschattung und Alterung der Module)
+und der Wirkungsgrad des Wechselrichters, welche als konstant angenommen werden.
+Auch eine Limitierung der Wechselrichter-Ausgangsleistung
+(auf [z.B. 600 W](#Kappungsverlust) wird unterstützt, außerdem
+ein [Stromspeicher](#Batteriepuffer) mit gegebener nutzbarer Kapazität.
+
+Für eine Batterie kann die Ladekopplung DC- oder AC-seitig simuliert,
+die angenommenen Wirkungsgrade der Ladung und Speicherung frei bestimmt
+und aus folgenden [weiter unten](#Batteriepuffer) näher behandelten
+Lade- und Entladestrategien gewählt werden:
+- Ladestrategie (solange die definierte Maximalladung nicht erreicht ist):
+  - Lastvorrang (optimal): Speicherung der nicht anderweitig gebrauchten PV-Energie
+  - vorrangige Speicherung (ohne Berücksichtigung der Last),
+    wobei wahlweise Strom auch teils am Speicher vorbei geleitet werden kann:
+    - für Überschuss, der nicht mehr in den Speicher passt, und/oder
+    - für eine konstante PV-Bruttoleistung
+- Entladestrategie (solange die definierte Minimalladung nicht erreicht ist):
+  - Lastkompensation (optimal): Entnahme so viel wie zusätzlich zum PV-Ertrag gebraucht wird
+  - bedarfsgeregelte Einspeisung: wie vor, aber mit Maximalleistung
+  - Konstanteinspeisung: Entnahme einer definierten Leistung aus dem Speicher
+    optional auf ein Uhrzeit-Intervall eingeschränkt
+
+Für die [o.g. Beispiel-Anlage](#Berechnung) für den Raum München mit 600 Wp
+und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662 kWh
+ergibt sich mit dieser Simulation unter Verwendung minutengenauer Lastprofile
+ohne Speicher je nach Profil eine Eigennutzung von ca. 460 kWh.
+
+Das Ergebnis fällt nicht so günstig wie bei den zuvor genannten Simulationen
+aus, v.A. weil hier die in der Praxis relativ häufigen Lastspitzen immerhin im
+Minutenbereich berücksichtigt werden, die von einer Mini-Solaranlage praktisch
+kaum abgefangen werden können, so dass der Eigenverbrauchsanteil geringer ist
+als bei einer über Stunden oder gar ganze Monate gemittelten Betrachtung.
+
+<!-- TODO: CSV_74_Loadprofiles_1s_W_var.zip verwenden -->   
+Vergleichsrechnungen auf Grundlage eines Lastprofils mit (annähernd)
+sekündlicher Auflösung haben ergeben, dass die Lastspitzen nur teilweise einen
+spürbaren Einfluss auf die Nutzbarkeit des PV-Ertrags von kleinen Anlagen haben.
+Bei 600 Wp sind die Eigennutzungs-Ergebnisse bei Lastdaten auf Stundenbasis
+etwa 3 bis 6% zu optimistisch, auf Minutenbasis nur bis etwa 1%.
+<!-- bei 3000 kWh: 593 562 557  6%   bei 6000 kWh: 630 623 622  1% -->
+
+Nutzungsvarianten {#Nutzung}
+----------------------------
 
 Solarmodule liefern in direkter Abhängigkeit von der Einstrahlungsstärke
 sehr variablen Gleichstrom (je nach Nennleistung maximal z.B. 11 A)
@@ -1452,339 +1793,6 @@ Aus den selben Gründen lohnt es sich (jedenfalls bei PV-Nennleistungen um
 die 1000 Wp) nicht, statt eines auf 600 W gedrosselten Wechselrichters
 einen teureren mit 800 W Maximalleistung zu nehmen oder darauf zu warten,
 bis diese in Deutschland offiziell unter die Bagatellgrenze fallen.
-
-### Eigenverbrauch und Eigendeckung {#Eigenverbrauch}
-
-Wer privat eine PV-Anlage betreibt, möchte möglichst viel von ihrem Ertrag
-auch selbst verbrauchen, und zwar am besten direkt. Überschüssigen Strom in
-einer Batterie für spätere Nutzung zwischenzuspeichern ist aufwendig und teuer.
-Der nicht selbst genutzte Anteil wird meist ins externe Netz eingespeist.
-Bei Balkonkraftwerken geschieht dies ohne Vergütung, aber auch wenn man seinen
-Strom als Kleinunternehmer verscherbelt, hat man einige Bürokratie und bekommt
-ziemlich wenig heraus.
-
-Also geht es ökonomisch darum, den Eigenverbrauchsanteil zu maximieren. Der
-*Eigenverbrauchsanteil* (*Nutzungsgrad*) ist der Anteil der Netto-Stromerzeugung,
-der direkt verbraucht (oder ggf. mit Batterie-Ladeverlusten gespeichert wird).
-Je höher er ist, desto weniger Energie wird ins externe Stromnetz eingespeist.
-Je kleiner die Anlage ist, umso leichter kann man eine hohe Eigenverbrauchsquote
-erreichen, allerdings dann bei entsprechend kleinerem Stromvolumen.
-
-Damit verwandt ist der *Eigendeckungsanteil* (*Selbstversorgungsgrad*), also der
-Anteil des Eigenverbrauchs (ggf. mit Batterieentladung abzüglich Ladeverlusten)
-am Gesamtverbrauch.
-Je höher er ist, desto weniger Energie muss von extern bezogen werden.
-Er wird oft auch als
-[*Autarkiegrad*](https://klarsolar.de/unterschied-eigenverbrauch-autarkie/)
-bezeichnet, was etwas irreführend ist, denn typischerweise arbeitet
-der Wechselrichter der PV-Anlage auch dann nicht ohne Verbindung zum Netzstrom,
-wenn gerade kein *Netzbezug* (also Stromfluss von außen) stattfindet.
-Je größer die Anlage ist, umso höher fällt der Autarkiegrad aus,
-allerdings oft zu Lasten des Eigendeckungsanteils.
-Eine Quasi-Autarkie (Eigendeckungsanteil 100%)
-kann man aber nur mit enormer Stromspeicher-Kapazität erreichen.
-
-[![Bild: Eigenverbrauch einer 7kWp-Anlage mit 5kWh-Speicher über den Tag](
-Eigenverbrauch-7kWp-5kWh-Speicher.png){:.center}](
-https://klarsolar.de/wp-content/uploads/2022/10/Eigenverbrauchsanteil-bei-einer-7kWp-Anlage-mit-5kW-Speicher.pnghttps://klarsolar.de/unterschied-eigenverbrauch-autarkie/)
-Das Bild veranschaulicht den typischen Stromverlauf bei einer Hausdach-PV-Anlage
-mit 7kWp Nennleistung und 5kWh Stromspeicher an einem ziemlich sonnigen Tag mit
-mittags etwas Wolken. Weitere schöne Erklärungen mit Grafiken gibt es
-[hier](https://brodsoft.de/stromverlauf/pages/simulation).
-
-### Berechnung des Eigenverbrauchs {#Berechnung}
-
-Wie eingangs geschrieben kann man bei optimaler Platzierung von Solarmodulen
-pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter Solarleistung gewinnen.
-Rechnen wir beispielsweise mit einer Investition für die PV-Anlage von 1,10€/Wp
-(inklusive anteiliger Kosten für Wechselrichter, Montage, Reparatur, etc.),
-dann ergeben sich einmalige Kosten von 1€ pro kWh Jahresertrag.\
-Nehmen wir für die folgenden Beispiele zudem an, dass der sog. *Arbeitspreis*,
-also die Kosten für vom Stromanbieter bezogenen Strom, 40 Ct/kWh beträgt.
-Dann spart man 0,40€ für jede kWh Strom, die von der PV-Anlage produziert wird
-und die man auch selbst verbraucht, statt sie von außen einzukaufen.\
-Wenn die Einsparung an Stromkosten durch die Anlage ihre Kosten eingeholt hat,
-hat sich die Anlage *amortisiert*, also die Investition kaufmännisch gelohnt.
-Die Investition rentiert sich im Verhältnis der Jahres-Ersparnis zu den Kosten.
-
-* Falls man den erzeugten PV-Strom komplett selbst verbraucht,
-was aber praktisch kaum der Fall ist, ergibt sich eine Einsparung von 0,40€
-pro kWh Jahresertrag und eine Amortisation der Investition in nur 2,5 Jahren.
-Die Rendite würde in diesem Fall satte 40% betragen.
-
-* Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
-Jahres-Bruttoertrag von etwa 765 kWh, was bei 86% Gesamtsystem-Wirkungsgrad
-ca. 660 kWh Netto-Ertrag (Einspeisung des Wechselrichters) pro Jahr bedeutet.
-Rechnen wir wieder mit Kosten von 1,10€/Wp, also für diese Anlage 660€.
-
-  - Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und
-  Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh
-  pro Jahr. Der Eigenverbrauchsanteil liegt also bei 70% des Nettoertrags
-  (und der Eigendeckungsanteil bei 15% des Verbrauchs).\
-  Damit werden bei 40 Ct/kWh Arbeitspreis jährlich 184€ eingespart.
-  Für die Investition von 660€ ergibt sich eine Amortisationszeit von 3,6 Jahren
-  und eine Rendite von 28%.
-
-[//]: #
-<!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
-ergibt 457 kWh, aber noch etwas Lastspitzen-Abzug
-88%: -peff 93.617
-
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92
-
-PV-Nominalleistung          =  600 Wp
-Bruttoleistung max.         =  650 W am 2020-03-23 um 11:00 h
-PV-Bruttoertrag             =  764 kWh
-PV-Nettoertrag              =  661 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
-Ertragsanteil 9-15 Uhr MEZ  =   73 %
-
-Last durch Haushalt         = 3000 kWh
-Eigenverbrauch              =  461 kWh
-Netzeinspeisung             =  200 kWh
-Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
-
-Bei Lastprofil_4685_kWh.csv Eigenverbrauch 502 kWh
--->
-
-  - Bei einem relativ hohen Jahresverbrauch von 6000 kWh können durchschnittlich
-  sogar 570 kWh im Jahr (also 87% des Nettoertrags) selbst genutzt werden,
-  was bei den angenommenen Kosten eine Amortisationszeit in 2,9 Jahren ergibt.
-
-[//]: #
-<!--
-./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
-
-Verbrauch durch Haushalt    = 6000 kWh
-PV-Eigenverbrauch           =  572 kWh
-Netzeinspeisung             =   89 kWh
-PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
--->
-
-  - Bei nur 1500 kWh Jahresverbrauch können durchschnittlich nur 330 kWh im Jahr
-  (also 50 % des Nettoertrags) selbst genutzt werden,
-  was eine Amortisation in genau 5 Jahren ergibt.
-
-[//]: #
-<!--
-./Solar.pl Lastprofil_4673_kWh.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
-
-Last durch Haushalt         = 1500 kWh
-Eigenverbrauch              =  329 kWh
-Netzeinspeisung             =  332 kWh
-Eigenverbrauchsanteil       =   50 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   22 % des Verbrauchs (Autarkiegrad)
--->
-
-  - Wenn bei 3000 kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
-  nur eine Grundlast von 100 W anfällt, liegt die Eigennutzung bei 365 kWh
-  im Jahr (also 55 % des Nettoertrags) und die Amortisationszeit bei 4,5 Jahren.
-
-In den beiden zuletzt genannten Fällen könnte man überlegen,
-weniger PV-Leistung als 600 Wp zu installieren,
-allerdings hätte man dann auch langfristig weniger Nutzen.
-
-[//]: #
-<!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -load 130
-
-Last durch Haushalt         = 3000 kWh
-Konstante Last              =  100 W an den ersten 5 Tagen der Woche von 8 bis 16 Uhr
-Eigenverbrauch              =  365 kWh
-Netzeinspeisung             =  296 kWh
-Eigenverbrauchsanteil       =   55 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   12 % des Verbrauchs (Autarkiegrad)
-
--->
-
-Für die Amortisation des energetischen Aufwands
-zur Herstellung einer Mini-PV-Anlage muss man nach [Angaben des DKE](
-https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
-allerdings noch 2-3 Jahre länger rechnen.
-In die Gesamt-Ökobilanz einer PV-Anlage und ihrer Nutzung gehen natürlich
-noch weitere Effekte ein, die sich aber kaum quantifizieren lassen.
-
-Der Eigendeckungsanteil und Eigenverbrauchsanteil lässt sich sehr einfach
-näherungsweise mit dem „[Stecker-Solar-Simulator](
-https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)“
-für Balkonkraftwerke bzw. dem „[Unabhängigkeitsrechner](
-https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)“
-für Hausdach-PV-Anlagen der HTW Berlin berechnen.
-[![Bild: Stecker-Solar-Simulator](Stecker-Solar-Simulator.png)](
-https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
-Beide Simulationen nutzen intern Daten der Wetterstation Lindenberg bei Berlin
-aus dem Jahr 2017 ---
-für Süddeutschland kann man also 10-15% mehr PV-Leistung ansetzen. Als Eingabe
-verwenden sie den Jahresstromverbrauch (mit einer typischen Lastverteilung) und
-die PV-Nennleistung (mit einem spezifischen PV-Jahresertrag von 1024 kWh/kWp).
-Man kann auch eine (nutzbare) Speicherkapazität angeben, wobei ein typischer
-Wirkungsgrad für LiFePO4-Batterien von 95% und typische Wandlungsverluste
-des Ladereglers und des Wechselrichters von jeweils 94% angenommen werden.
-Implizit wird eine optimale bedarfsgerechte Lade-/Entladeregelung vorausgesetzt.
-[![Bild: Unabhängigkeitsrechner](Unabhängigkeitsrechner.png)](
-https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)
-Der Unabhängigkeitsrechner liefert auch den Anteil der Batterieentladung an der
-Stromversorgung, den man zur Ertrags- und [Wirtschaftlichkeitsberechnung von
-PV-Speichern](https://www.youtube.com/watch?v=bE5fLy0w3MM&t=674s)
-verwenden kann (und zwar durch Multiplikation mit dem Stromverbrauch).
-Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.
-
-Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
-auch das [PVTool von Andreas Schmitz („AkkuDoktor“)](https://www.akkudoktor.net/pvtool-rechner/).
-Als Besonderheit kann man hier schön sehen, wie sich Eigenverbrauchsquote,
-Autarkiegrad und Amortisation in Abhängigkeit von der Anwesenheit und Kapazität
-eines Stromspeichers ändern.\
-Allerdings sind die Ergebnisse deutlich zu optimistisch. Das liegt vermutlich
-am verwendeten Lastprofil und unrealistisch hoch angenommenen Wirkungsgraden.
-Er macht zu diesen wichtigen Punkten und sonstigen Grundlagen seiner Berechnung
-auf seinen beiden PVTool-Seiten keinerlei Angaben.
-
-[![Bild: Speichersimulation InGe16 1.-6. April, 1000kWh, PV 660 kWh, 2,4 kWh
-Speicher](Speichersimulation_InGe16_April_1-6.png){:.center}](
-https://brodsoft.de/stromverlauf/profiles/simulation)
-Eine ältere Simulation des Eigenverbrauchs für einen gegebenen PV-Nettoertrag
-mit Fokus auf Stromspeicher (mit gegebener nutzbarer Kapazität und Effizienz),
-gibt es von [brodsoft](https://brodsoft.de/stromverlauf/profiles/simulation).
-Diese basiert auf realen Profildaten für PV-Erzeugung und Stromverbrauch,
-mit denen die Berechnung auf Stundenbasis erfolgt.
-Man kann sich in der Ausgabe auch für jeden Monat Grafiken ausgeben lassen
-darauf sehr schön den Verlauf der elektrischen Größen ansehen.
-Außerdem gibt es gute Info-Seite mit guten Erklärungen zu Eigenverbrauchsanteil
-und Eigendeckungsanteil zu Strategien zu ihrer Optimierung.
-Diese Simulation berechnet für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl
-des Profils einen Eigenverbrauch von teils 601 kWh (Profil „allgemein 13/14“)
-und mehr, aber typischerweise eher 514 kWh (Profil „InGe 16“) pro Jahr.
-
-Es gibt auch eine Android-App namens [PV Calculator](
-https://play.google.com/store/apps/details?id=com.pvstrom.pvcalculator)
-mit relativ flexiblen Parametern und sehr schöner Darstellung der Ergebnisse.
-Sie verwendet die Daten von PVGIS und rechnet auf Stundenbasis.
-Für die o.g. Beispiel-Anlage mit 600 Wp kommt sie für die gegebenen
-Wirkungsgrade korrekt auf einen Jahres-Nettoertrag von 664 kWh.
-Trotzdem sind die Ergebnisse leider zu optimistisch. Das liegt teils an den
-angebotenen Profilen (z.B. VDEW-H0-Werktag), die täglich die gleiche Last
-annehmen, wobei man immerhin selbst welche pro Jahreszeit definieren kann.
-Aber das Hauptproblem ist, dass die Last nur im stundenweisen Durchschnitt
-betrachtet wird, also die typischen Lastspitzen unberücksichtigt bleiben.
-Damit ergibt sich bei 3000 kWh Jahres-Strombedarf für die meisten Profile
-unrealistischerweise so gut wie keine Netzeinspeisung und selbst für das
-Profil „Peak Morgen Abends“ eine viel zu niedrige Netzeinspeisung von 52 kWh.
-Außerdem wird etwas verwirrend im Gesamtergebnis nicht der resultierende
-Eigenverbrauch (hier 612 kWh) dargestellt, sondern der Nettoertrag und der Netzbezug.
-
-<!-- TODO Simulationen mit PV*Sol. --->   
-
-Alle hier genannten Simulationen setzen bei Einsatz eines Pufferspeichers
-eine ideale Speicherstrategie voraus.
-Ihre Ergebnisse **gelten nicht bei Verwendung einer primitiven Regelung**, wie
-sie für [Balkonkraftwerke mit Speicherbatterie](#Batteriepuffer) typisch sind.
-Für diese kann aber der [u.g. Simulator](#SolBatSim) verwendet werden.
-
-#### Ökonomisch orientierte Berechnung von Rendite und Amortisation {#Oekonomie}
-
-[![Bild: Ertragsrechnung Balkonanlage](
-PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
-Der per Tabellenkalkulation implementierte [PV-Rechner](PV-Rechner_v6+.xls)
-hat als besonderen Schwerpunkt die kaufmännische Betrachtung inklusive Rendite
-und Kapitalkosten unter Berücksichtigung von Abschreibung für Reparaturen u.ä.
-Er ist für „große“ PV-Anlagen auf Hausdächern konzipiert, und behandelt optional
-gesondert das Laden eines E-Fahrzeugs<!-- (was normalerweise öfter zu
-Sonnenscheinzeiten erfolgen kann)-->, den Betrieb einer Wärmepumpe und
-die Nutzung eines Stromspeichers, funktioniert aber auch für Balkonsolaranlagen.
-Als Eingabe erwartet er u.A. den spezifischen PV-Jahresertrag, die Ausrichtung
-der Module und den geschätzten Anteil des während der Sonnenscheindauer
-im Haushalt nutzbaren Ertrages.
-Energieflüsse werden der Einfachheit halber nur grob auf Monatsbasis gerechnet,
-so dass wichtige tageszeitliche Effekte und Lastspitzen nicht berücksichtigt
-werden. Besonders die Simulation des Stromspeichers ist stark idealisiert.
-
-Bei der o.g. typischen Balkonanlage für 660€ mit 600 Wp und 660 kWh Jahresertrag
-ergibt sich mit dem PV-Rechner für einen Haushalt mit 3000 kWh Jahresverbrauch,
-der zu 28% während der Haupt-Sonnenscheinzeiten erfolgt,
-ein etwas zu optimistischer Solarstrom-Eigenverbrauch von etwa 530 kWh pro Jahr.
-Damit könnte man bei 40 Ct/kWh jährlich ca. 205€ Stromkosten einsparen, was eine
-Amortisationszeit von 3,2 Jahren und eine satte (Anfangs-)Rendite von 26% ergäbe.
-
-Hinweis: Der PV-Rechner stammt von [Falko (bonotos)](https://www.bonotos.com/)
-Der originale beinhaltet auch seiner letzten Version 22-06 einen groben Fehler
-in der Rendite-Formel, der zu (fast) doppelt überhöhten Rendite-Zahlen führt.
-Ich habe mich mit Falko zu diesen und anderen Punkten ausgetauscht.
-Er möchte an dem Tool nichts mehr machen.
-So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
-
-#### Hochauflösende Simulation: SolBatSim {#SolBatSim}
-
-*SolBatSim*, ein selbst entwickelter Simulator, basiert auf Lastprofilen
-des Haushalts-Stromverbrauchs mit mindestens stündlicher, aber besser
-minütlicher Auflösung und kommt daher auf sehr realistische Ergebnisse.
-Dafür können zum Beispiel die 74 von der
-Forschungsgruppe Solarspeichersysteme der HTW Berlin [veröffentlichen Profile](
-https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
-mit 1-Minuten-Auflösung (oder gar 1-Sekunden-Auflösung) verwendet werden.
-Mit einem [Lastprofil-Skript](Lastprofil.pl) kann man aus diesen Rohdaten
-Lastprofil-Dateien wie [diese](Lastprofil_4673_kWh.csv) synthetisieren.
-
-Die zweite wichtige Eingabe sind die PV-Ertragsdaten, welche leider meistens
-höchstens in Stunden-Auflösung erhältlich sind, wie etwa die PV-Ertragsdaten
-von [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/). Von dort kann man
-für einen gegebenen Standort und eine gegebene PV-Modul-Ausrichtung
-(wahlweise für einen Abschnitt von Jahren zwischen 2005 und 2020
-oder für ein [*typisches meteorologisches Jahr*](
-https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/)
-Solardaten wie [diese](Solardaten_1215_kWh.csv) herunterladen.
-Eine oder mehrere solcher Dateien (womit sich auch eine Linearkombination
-von PV-Modulgruppen unterschiedlicher Ausrichtung, Verschattung und
-Leistungsparameter abbilden lässt) wird dann zusammen einer Lastprofil-Datei
-als Eingabe für ein [Simulator-Skript](Solar.pl) verwendet.
-
-Für die Simulation kann das Lastprofil in einem wählbaren täglichen
-Zeitabschnitt durch eine konstante (Grund-)Last adaptiert werden,
-ebenso der Gesamt-Jahresverbrauch aus dem Lastprofil,
-die Nennleistung jeder PV-Modulgruppe
-und weitere Parameter wie der System-Wirkungsgrad der PV-Anlage
-(resultierend aus Verlusten z.B. in den Leitungen und durch
-Verschmutzung, Eigenverschattung und Alterung der Module)
-und der Wirkungsgrad des Wechselrichters, welche als konstant angenommen werden.
-Auch eine Limitierung der Wechselrichter-Ausgangsleistung
-(auf [z.B. 600 W](#Kappungsverlust) wird unterstützt, außerdem
-ein [Stromspeicher](#Batteriepuffer) mit gegebener nutzbarer Kapazität.
-
-Für eine Batterie kann die Ladekopplung DC- oder AC-seitig simuliert,
-die angenommenen Wirkungsgrade der Ladung und Speicherung frei bestimmt
-und aus folgenden [weiter unten](#Batteriepuffer) näher behandelten
-Lade- und Entladestrategien gewählt werden:
-- Ladestrategie (solange die definierte Maximalladung nicht erreicht ist):
-  - Lastvorrang (optimal): Speicherung der nicht anderweitig gebrauchten PV-Energie
-  - vorrangige Speicherung (ohne Berücksichtigung der Last),
-    wobei wahlweise Strom auch teils am Speicher vorbei geleitet werden kann:
-    - für Überschuss, der nicht mehr in den Speicher passt, und/oder
-    - für eine konstante PV-Bruttoleistung
-- Entladestrategie (solange die definierte Minimalladung nicht erreicht ist):
-  - Lastkompensation (optimal): Entnahme so viel wie zusätzlich zum PV-Ertrag gebraucht wird
-  - bedarfsgeregelte Einspeisung: wie vor, aber mit Maximalleistung
-  - Konstanteinspeisung: Entnahme einer definierten Leistung aus dem Speicher
-    optional auf ein Uhrzeit-Intervall eingeschränkt
-
-Für die [o.g. Beispiel-Anlage](#Berechnung) für den Raum München mit 600 Wp
-und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662 kWh
-ergibt sich mit dieser Simulation unter Verwendung minutengenauer Lastprofile
-ohne Speicher je nach Profil eine Eigennutzung von ca. 460 kWh.
-
-Das Ergebnis fällt nicht so günstig wie bei den zuvor genannten Simulationen
-aus, v.A. weil hier die in der Praxis relativ häufigen Lastspitzen immerhin im
-Minutenbereich berücksichtigt werden, die von einer Mini-Solaranlage praktisch
-kaum abgefangen werden können, so dass der Eigenverbrauchsanteil geringer ist
-als bei einer über Stunden oder gar ganze Monate gemittelten Betrachtung.
-
-<!-- TODO: CSV_74_Loadprofiles_1s_W_var.zip verwenden -->   
-Vergleichsrechnungen auf Grundlage eines Lastprofils mit (annähernd)
-sekündlicher Auflösung haben ergeben, dass die Lastspitzen nur teilweise einen
-spürbaren Einfluss auf die Nutzbarkeit des PV-Ertrags von kleinen Anlagen haben.
-Bei 600 Wp sind die Eigennutzungs-Ergebnisse bei Lastdaten auf Stundenbasis
-etwa 3 bis 6% zu optimistisch, auf Minutenbasis nur bis etwa 1%.
-<!-- bei 3000 kWh: 593 562 557  6%   bei 6000 kWh: 630 623 622  1% -->
 
 ### Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}
 
