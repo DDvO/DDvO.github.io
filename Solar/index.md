@@ -157,12 +157,14 @@ verwiesen.
         - [Solarmodule {#Solarmodule}](#solarmodule-solarmodule)
             - [Elektrischer Anschluss {#Anschluss}](#anschluss-von-solarmodulen-anschluss)
             - [Montage {#Montage}](#montage-montage)
-        - [Solar-Regler und Wechselrichter {#Wechselrichter}](#solar-regler-und-wechselrichter-wechselrichter)
+        - [Mikrowechselrichter und andere Stromrichter {#Stromrichter}](#mikrowechselrichter-und-andere-stromrichter-stromrichter)
+            - [MPPT-Solarregler {#MPPT}](#mppt-solarregler-mppt)
+            - [Solar-Laderegler {#Laderegler}](#solar-laderegler-laderegler)
+            - [Wechselrichter {#Wechselrichter}](#wechselrichter-wechselrichter)
             - [Netzwechselrichter {#Netzwechselrichter}](#netzwechselrichter-netzwechselrichter)
-            - [Gleichspannungswandler {#Gleichspannungswandler}](#gleichspannungswandler-gleichspannungswandler)
             - [Inselwechselrichter {#Inselwechselrichter}](#inselwechselrichter-inselwechselrichter)
-        - [Solar-Laderegler {#Laderegler}](#solar-laderegler-laderegler)
-        - [Hybridgeräte: Solar-Laderegler mit Wechselrichter {#Hybrid}](#hybridgeräte-solar-laderegler-mit-wechselrichter-hybrid)
+            - [Hybridgeräte: Solar-Laderegler mit Wechselrichter {#Hybrid}](#hybridgeräte-solar-laderegler-mit-wechselrichter-hybrid)
+            - [Gleichspannungswandler {#Gleichspannungswandler}](#gleichspannungswandler-gleichspannungswandler)
         - [Speicherbatterien {#Speicher}](#speicherbatterien-speicher)
             - [Batterie-Dimensionierung {#Dimensionierung}](#batterie-dimensionierung-dimensionierung)
             - [Batterie-Strukturierung {#Strukturierung}](#batterie-strukturierung-strukturierung)
@@ -212,12 +214,14 @@ verwiesen.
     -   [Solarmodule](#Solarmodule)
         - [Elektrischer Anschluss](#Anschluss)
         - [Montage](#Montage)
-    -   [Solar-Regler und Wechselrichter](#Wechselrichter)
+    -   [Mikrowechselrichter und andere Stromrichter](#Stromrichter)
+        - [MPPT-Solarregler](#MPPT)
+        - [Solar-Laderegler](#Laderegler)
+        - [Wechselrichter](#Wechselrichter)
         - [Netzwechselrichter](#Netzwechselrichter)
-        - [Gleichspannungswandler](#Gleichspannungswandler)
         - [Inselwechselrichter](#Inselwechselrichter)
-    -   [Solar-Laderegler](#Laderegler)
-    -   [Hybridgeräte: Solar-Laderegler mit Wechselrichter](#Hybrid)
+        - [Hybridgeräte: Solar-Laderegler mit Wechselrichter](#Hybrid)
+        - [Gleichspannungswandler](#Gleichspannungswandler)
     -   [Speicherbatterien](#Speicher)
         - [Batterie-Dimensionierung}](#Dimensionierung)
         - [Batterie-Strukturierung](#Strukturierung)
@@ -884,7 +888,7 @@ Abendstunden konzentriert ist, bringt eine Aufteilung der Modul-Ausrichtung
 keinen Vorteil für den Eigenverbrauch.** Dagegen spricht zusätzlich 
 die Tendenz zu stärkerer Verschattung durch den flacheren Sonnenstand.
 Außerdem ist die geteilte Montage meist aufwendiger, und die beiden Richtungen
-verlangen zur Optimierung eine getrennte [MPPT-Regelung](#Wechselrichter).
+verlangen zur Optimierung eine getrennte [MPPT-Regelung](#MPPT).
 
 Was die für den Eigenverbrauch optimale Neigung der PV-Module
 bei einer Anlage mit 600 Wp betrifft, ergeben die Simulationen folgendes:
@@ -1000,7 +1004,7 @@ umweltfreundlichste Ansatz natürlich, erst mal den Stromverbrauch zu senken.
 Stromfressende Geräte sollte man so weit wie möglich meiden.
 Kandidaten dafür sind vor Allem elektrische Heizungen (auch für Warmwasser)
 und alte und/oder unnötig große Kühlschränke und Gefriertruhen.
-Wer die Möglichkeit hat, erhitzt Wasser und kocht deutlich effizieter mit Gas.
+Wer die Möglichkeit hat, erhitzt Wasser und kocht deutlich effizienter mit Gas.
 Zum Wäsche waschen genügt meist auch 30° (statt 40° oder höher).
 Fernseher und Computer müssen normalerweise nicht immer laufen.
 Geräte, die einen hohen Verbrauch im Bereitschaftsmodus haben,
@@ -2167,7 +2171,7 @@ einen günstigen [Gleichspannungswandler](#Gleichspannungswandler)
 mit regelbarer Strombegrenzung (engl. _limiter_) vorschalten.
 Allerdings passiert es dann leicht, dass sich die Regelungen der beiden Geräte
 ins Gehege kommen. Daher stellt man die Eingangsspannung für den Wechselrichter
-besser etwas unterhalb des MPPT-Bereichs ein,
+besser etwas unterhalb des [MPPT](#MPPT)-Bereichs ein,
 aber (zumindest anfangs) oberhalb seiner Anlaufspannung.
 Außerdem kann es sein, dass der Wechselrichter versucht,
 stets seine maximale Ausgangsleistung zu liefern, was bei eher geringer
@@ -2516,7 +2520,7 @@ Platz sparen will/muss.
 
 Solarmodule haben als Stromanschluss meist die praktischen MC4-Steckverbinder.
 Generell sollten die Solarkabel, also die Verbindungen der Module
-(untereinander und zum [Solar-Regler](#Wechselrichter)),
+(untereinander und zum [Solarregler bzw. Wechselrichter](#Stromrichter)),
 möglichst kurz sein, weil da relativ hohe Ströme fließen,
 was proportional zur Länge zu spürbaren Verlusten führt.
 Aus dem selben Grund sollte der Querschnitt nicht zu klein sein --- mind. 4mm²,
@@ -2564,12 +2568,12 @@ etwas günstiger als entsprechend viele kleine.
     ein schöner Artikel für eine klassische Anwendung der Parallelschaltung:
     geteilte Ost-West-Ausrichtung von PV-Modulen auf einem Hausdach
     oder um den Ertrag über den Tag möglichst gleichmäßig zu verteilen,
-    ohne dafür unbedingt mehr als einen MPPT-Eingang zu benötigen.
+    ohne dafür unbedingt mehr als einen [MPPT](#MPPT)-Eingang zu benötigen.
 
 Generell muss man unbedingt darauf achten, dass an jedem Eingang eines
-Ladereglers oder Wechselrichters die durch die angeschlossenen PV-Module
-erzeugte Spannung die erlaubte maximale Eingangsspannung (*V<sub>DC</sub> max*)
-des Geräts nicht überschreiten kann, weil dieses sonst zerstört werden kann.
+[Ladereglers oder Wechselrichters](#Stromrichter) die PV-Spannung die erlaubte
+maximale Eingangsspannung (*V<sub>DC</sub> max*) des Geräts nicht überschreiten
+kann, weil dieses sonst leicht zerstört wird.
 Die Spannung wird durch die im Datenblatt der Module angegebene Maximalspannung
 (*Leerlaufspannung*, engl. *open-circuit voltage, V<sub>OC</sub>*) bestimmt
 muss nicht nur bei [*Normalbedingungen (NOCT)*](
@@ -2577,9 +2581,9 @@ https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/)
 mit 45°C Betriebstemperatur bzw. idealisierten Standard-Testbedingungen (STC)
 mit 25°C eingehalten werden, sondern auch bei sehr niedrigen Temperaturen,
 wo die Spannung je nach Temperaturkoeffizient etwa 10 bis 20% höher sein kann.
-Allerdings werden Module gerade im Winter aufgrund des niedrigen Sonnenstandes
-kaum unter Optimalbedingungen betrieben, so dass die Leerlaufspannungen
-auch da wohl nur wenig über den für NOCT oder STC angegebenen Wert kommen.
+Allerdings werden PV-Module gerade im Winter durch den niedrigen Sonnenstand
+eher nicht unter Optimalbedingungen betrieben, so dass die Leerlaufspannungen
+auch da wohl kaum über den für NOCT oder STC angegebenen Wert kommen.
 
 Im Gegensatz dazu ist der je nach Einstrahlung und Temperatur mögliche Strom,
 der sich aus dem Maximalstrom (*Kurzschlussstrom*, engl. *short-circuit current,
@@ -2591,8 +2595,8 @@ als wofür er ausgelegt wurde.
 Das ist ähnlich wie z.B. bei einem an einer Wohnungssteckdose angeschlossenen
 Elektrogerät, das durch seinen Innenwiderstand seine Stromaufnahme begrenzt,
 obwohl die Steckdose viel mehr (je nach Absicherung z.B. 16 A) liefern könnte.\
-Ein MPPT-Regler beginnt mit seiner Optimierung bei der Leerlaufspannung der
-angeschlossenen PV-Module, wobei noch kein Strom fließt, und verringert dann
+Ein [MPPT-Regler](#MPPT) beginnt mit seiner Optimierung bei der Leerlaufspannung
+der angeschlossenen PV-Module, wobei noch kein Strom fließt, und verringert dann
 seinen Innenwiderstand sukzessive so lange, bis das Maximum an PV-Leistung
 erreicht wurde oder er an der Grenze seiner Stromaufnahme angekommen ist.
 
@@ -2615,7 +2619,7 @@ I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage
 Zu beachten ist noch:
 * Die Betriebsspannung der PV-Module am Eingang des Wechselrichters bzw.
 [Solar-Ladereglers](#Laderegler) muss über seiner Anlaufspannung liegen,
-damit er starten kann, und sollte im MPPT-Bereich der Regelung liegen,
+damit er starten kann, und sollte im [MPPT](#MPPT)-Bereich der Regelung liegen,
 weil sonst Leistung verloren geht.
 * Die Eingangsspannung eines Solar-Ladereglers muss
 je nach Modell bis zu 5 V über der gewünschten Ausgangsspannung (z.B. der
@@ -2649,20 +2653,41 @@ Wichtig ist, dass die Module sicher angebracht werden, besonders bzgl. Sturm.
 Bei über 4 m Montagehöhe gelten besondere Verordnungen für Glasoberflächen,
 wenn sich direkt darunter den Menschen bewegen oder aufhalten können.
 
-### Solar-Regler und Wechselrichter {#Wechselrichter}
+### Mikrowechselrichter und andere Stromrichter {#Stromrichter}
+
+Als [*Stromrichter*](https://www.energie-lexikon.info/stromrichter.html)
+werden allgemein elektronische Geräte bezeichnet,
+mit denen eine Stromart in eine andere umgewandelt werden kann.
+
+#### MPPT-Solarregler {#MPPT}
 
 ![Bild: Strom-/Leistungs-Spannungskennlinien einer Solarzelle](
-I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="450"}
+I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="500"
+style="margin-left: 40px}
 Für die Umwandlung des recht volatilen „rohen“ Solarstroms auf die gewünschte
 (nahezu) konstante Zielspannung benötigt man regelbare *Gleichspannungswandler*,
-kurz *Regler* genannt.
-Sehr einfache und billige Regler verwenden dazu *Pulsweitenmodulation* (*PWM*).
-Wesentlich besser sind aber Regler mit Leistungsoptimierung durch
+kurz *Solar-Regler* genannt.
+* Sehr einfache und billige Regler
+verwenden dazu *Pulsweitenmodulation* (*PWM*).
+* Wesentlich besser sind aber Regler mit Leistungsoptimierung durch
 [*MPPT* (Maximal-Leistungspunkt-Suche, engl. _maximum power point tracking_)](
-https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking), weil sie
-auch unter stark schwankenden Bedingungen optimale Energieausbeute bringen.
+https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking), weil sie auch
+unter stark schwankenden Bedingungen nahezu optimale Energieausbeute bringen.
 
-![Bild: Solar-Microinverter](Solar-Microinverter.png){:.right width="500"}
+#### Solar-Laderegler {#Laderegler}
+
+![Bild: Solar-Laderegler](Solar-Laderegler.png){:.right width="400"
+style="margin-left: 70px; margin-right: 70px"}
+Wenn man über Solarmodule eine Batterie laden möchte, verwendet man einen
+*Solar-Laderegler*, also einen Solarregler mit Batterieladefunktion. Wie
+im Abschnitt zuvor erklärt, sollte er für eine optimale Ausbeute MPPT betreiben.
+
+Mit billigen chinesischen (angeblich) MPPT-Reglern habe ich
+keine guten Erfahrungen gemacht, wohl aber mit den europäischen Marken
+Victron und Votronic.
+
+#### Wechselrichter {#Wechselrichter}
+
 Für die Umwandlung von Gleichstrom in Wechselstrom (bei uns meist mit
 230 V) benötigt man einen
 [*Wechselrichter*](https://de.wikipedia.org/wiki/Wechselrichter)
@@ -2672,14 +2697,12 @@ Wechselstrom liefert (sog. *reine Sinuswelle*, engl. _pure sine wave_)
 und einen hohen
 [Wirkungsgrad](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/wechselrichter/wirkungsgrad)
 (engl. _efficiency_) hat.
-Außerdem ist empfehlenswert, ihn mit etwas Leistungsreserve zu dimensionieren,
-weil seine Lebensdauer sonst leiden und er je nach Bauart
-unangenehm lautes Lüftergeräusch verbreiten kann.
 Der kritischste Punkt ist, das seine maximale Eingangsspannung nicht
 überschritten werden darf, weil er sonst zerstört wird.
 
 #### Netzwechselrichter {#Netzwechselrichter}
 
+![Bild: Solar-Microinverter](Solar-Microinverter.png){:.right width="500"}
 Für die Einspeisung ins Stromnetz kommt ein *netzgekoppelter Wechselrichter*
 zum Einsatz. Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*,
 *netzgeführter Wechselrichter* oder *fremd geführter Wechselrichter* genannt,
@@ -2687,10 +2710,11 @@ weil er sich automatisch an die Frequenz und Phase des anliegenden Wechselstroms
 anpasst. Bei wegfallendem Stromanschluss schaltet er den Ausgang vor Allem aus
 Sicherheitsgründen ab --- das ist der sog. *NA-Schutz* (nach VDE) für den Fall,
 dass blanke Kontakte eines daran hängenden 230 V Steckers berührt werden können.
+
 Bei Stecker-Solaranlagen wird meist ein *Solar-Mikrowechselrichter* verwendet,
-der einen adaptiven Spannungsregler mit einem Netzwechselrichter integriert.
+welcher einen MPPT-Solarregler in einem Netzwechselrichter integriert.
 Im Zusammenhang von Solaranlagen wird meist vereinfacht nur von einem
-'*Wechselrichter*' (*WR*) gesprochen.
+„*Wechselrichter*“ (*WR*) gesprochen.
 Zur Dimensionierung von Solar-Wechselrichtern gibt es
 z.B. [hier und auf den Folgeseiten](
 https://photovoltaikbuero.de/pv-know-how-blog/ist-bei-der-wechselrichterauslegung-zu-beachten-kriterium-1/)
@@ -2702,21 +2726,6 @@ ohne dass es größere Leitungsverluste gibt.
 Allerdings kann es dort je nach Kabellänge und -Querschnitt bei größeren Strömen
 zu einem höheren Spannungsabfall kommen, der die Netzkoppelung des WR stört.
 
-#### Gleichspannungswandler {#Gleichspannungswandler}
-
-![Bild: Gleichspannungswandler mit regelbarer Strombegrenzung](
-DC-DC-converter.png){:.right width="400"
-style="margin-left: 40px; margin-right: 40px"}
-Für die Nutzung zur [regelbaren Konstanteinspeisung](#Batteriepuffer) aus einem
-Strompuffer ins Hausnetz braucht man eine einstellbaren Strombegrenzer,
-wie er in manchen *Gleichspannungswandler* (engl. _DC-to-DC-converter_)
-enthalten ist. Er sollte möglichst wenig Verluste haben. Wenn er einen
-[Aufwärtswandler](https://de.wikipedia.org/wiki/Aufw%C3%A4rtswandler)
-(engl. _boost converter_ oder _step-up converter_) enthält,
-kann er zudem dazu benutzt werden,
-die Spannung der Pufferbatterie (z.B. 12 V) auf eine für den Eingang
-des Netzwechselrichters passende Spannung (z.B. mindestens 20 V) zu bringen.
-
 #### Inselwechselrichter {#Inselwechselrichter}
 
 ![Bild: Wechselrichter](Wechselrichter.png){:.right width="500"}
@@ -2724,32 +2733,26 @@ des Netzwechselrichters passende Spannung (z.B. mindestens 20 V) zu bringen.
 werden vom Stromnetz unabhängig betrieben. Mit ihnen kann man die üblichen
 Haushaltsgeräte auch im Falle eines Stromausfalls mit einer Batterie versorgen,
 natürlich nur im Rahmen der Belastbarkeit und Kapazität der Batterie.
-Auch bei dieser Art von Wechselrichter ist darauf zu achten,
-dass er eine reine Sinusspannung liefert und sein Wirkungsgrad hoch ist.
-Hinzukommt, dass sein Leerlauf-/Ruhestromverbrauch
-(engl. _standby power consumption_) gering sein sollte,
-seine Dauerleistung groß genug für die daran betriebenen Geräte sein muss
-und dass seine Spitzenleistung auch deren Anlaufstrom abdecken muss.
-Die benötigte Anlaufleistung eines Kühl- oder Gefrierschrankes kann das
-[Fünffache der Scheinleistung](
+
+Besonders bei dieser Art von Wechselrichter ist darauf zu achten,
+dass er eine reine Sinusspannung liefert und dass sein Wirkungsgrad hoch ist.
+Hinzu kommen weitere Punkte:
+* Seine Dauerleistung muss für die daran betriebenen Geräte groß genug sein.
+Es ist empfehlenswert, ihn mit etwas Leistungsreserve zu dimensionieren,
+weil seine Lebensdauer sonst leiden und er je nach Bauart
+unangenehm lautes Lüftergeräusch verbreiten kann.
+* Seine Spitzenleistung muss auch den Anlaufstrom angeschlossener Geräte
+abdecken. Die benötigte Anlaufleistung eines Kühl- oder Gefrierschrankes
+kann das [Fünffache der Scheinleistung](
 http://www.off-grid-systems.de/mediafiles/Sonstiges/bedienungsanleitung/Wechselrichter/Handbuch-LMP3000W.pdf)
 (angegeben in Volt × Ampere = VA, nicht nur [Wirkleistung](
 https://www.energie-experten.org/energie-sparen/strom-sparen/elektrischer-strom/schein-wirk-blindleistung),
 angegeben in Watt) im laufenden Betrieb betragen.
 Da können schon mal 1000 VA zusammenkommen (wenn auch nur für 1-2 Sekunden).
+* Sein Leerlauf-/Ruhestromverbrauch (engl. _standby power consumption_)
+sollte gering sein.
 
-### Solar-Laderegler {#Laderegler}
-
-![Bild: Solar-Laderegler](Solar-Laderegler.png){:.right width="400"
-style="margin-left: 70px; margin-right: 70px"}
-Wenn man über Solarmodule eine Batterie laden möchte, benötigt man einen
-*Solar-Laderegler*, der einen Spannungsregler mit einem Batterieladegerät
-kombiniert.\
-Mit billigen chinesischen (angeblich) MPPT-Reglern habe ich
-keine guten Erfahrungen gemacht, wohl aber mit den europäischen Marken
-Victron und Votronic.
-
-### Hybridgeräte: Solar-Laderegler mit Wechselrichter {#Hybrid}
+#### Hybridgeräte: Solar-Laderegler mit Wechselrichter {#Hybrid}
 
 ![Bild: Hybrides Solar-Ladegerät mit Wechselrichter](
 Solar-off-grid-inverter.png){:.right width="450"}
@@ -2774,6 +2777,23 @@ und größere Wahrscheinlichkeit für einen Ausfall und dann höhere Kosten.
 Offenbar gibt es auf dem Markt kein Gerät, das neben der Nutzungsart
 für eine Inselanlage (also netzunabhängige Stromversorgung) auch
 die einer Stecker-Solaranlage mit lastabhängiger Strompufferung ermöglicht.
+
+#### Gleichspannungswandler {#Gleichspannungswandler}
+
+![Bild: Gleichspannungswandler mit regelbarer Strombegrenzung](
+DC-DC-converter.png){:.right width="400"
+style="margin-left: 40px; margin-right: 40px"}
+Ein *Gleichspannungswandler* (engl. _DC-to-DC-converter_) dient zur Anpassung
+des Niveaus von Gleichspannungen. Er sollte möglichst wenig Verluste haben.
+
+Ein [Aufwärtswandler](https://de.wikipedia.org/wiki/Aufw%C3%A4rtswandler)
+(engl. _boost converter_ oder _step-up converter_) kann zum Beispiel dazu verwendet
+werden, die Spannung der Pufferbatterie (z.B. 12 V) auf eine für den Eingang
+des Netzwechselrichters passende Spannung (z.B. mindestens 20 V) zu bringen.
+
+Für die Nutzung zur [regelbaren Konstanteinspeisung](#Batteriepuffer) aus einem
+Strompuffer ins Hausnetz sollte er über eine einstellbare Strombegrenzung
+verfügen.
 
 ### Speicherbatterien {#Speicher}
 
@@ -3070,17 +3090,17 @@ LocalWords:  mobilanlage steckeranlage anlage kombianlage index data
 LocalWords:  pandoc output calculation power width style margin unit
 LocalWords:  left right irradiance GHI buehneTop clear both png tgl
 LocalWords:  potential csv grid tie inverter tmy peff ieff curb WiFi
-LocalWords:  standby xls jpg Balkonsolar center limiter off to
-LocalWords:  blackout brownout panels busbars shingle panel up
-LocalWords:  maximum point tracking sine wave efficiency boost
+LocalWords:  standby xls jpg Balkonsolar center limiter off to html
+LocalWords:  blackout brownout panels busbars shingle panel up number
+LocalWords:  maximum point tracking sine wave efficiency boost true
 LocalWords:  converter step consumption pdf balancer equalizer
 LocalWords:  buck down SA SZ DW MQ EC LF small LY KREE Battery
 LocalWords:  Charger Discharger Board Under Over Voltage Protection
 LocalWords:  Speicherungs current eigenverbrauchs Oekonomie magazine
 LocalWords:  rendite solbatsim Regelungs Eigenverbrauchsv transfer
 LocalWords:  telemetry gateway distort aufteilung orientierungen Reflexions
-LocalWords:  
-LocalWords:  
+LocalWords:   document sections rentabilitaet nanlagen oekonomisch
+LocalWords:   Nutzungsvarianten stromwandler
 LocalWords:  
 LocalWords:  
 LocalWords:  
