@@ -2531,37 +2531,44 @@ oder im Garten auch mit einem Flachbandkabel (z.B. [MC4-Fensterdurchführung](
 https://solarmodule-gladbeck.de/produkt/solar-mc4-fensterdurchfuehrung/?sld=3)
 anschließen.
 
-Solarmodule kann man wie Batteriezellen seriell und/oder parallel verbinden,
-um mehr Leistung zu erhalten, ohne für jedes Modul einen eigenen Regler
-(bzw. Regler-Eingang) verwenden zu müssen.
-Dabei sollten die Module alle gleichartig sein, weil es sonst Verluste gibt.\
+Solarmodule kann man wie Batteriezellen [seriell und/oder parallel](
+https://photovoltaik-guru.de/module/reihenschaltung-und-parallelschaltung-elektronik-kurz-erklaert.html),
+verbinden, um mehr Leistung zu erhalten, ohne für jedes Modul
+einen eigenen [Regler](#MPPT) (bzw. Regler-Eingang) verwenden zu müssen.
+Dabei sollten die Module den gleichen Strom bzw. die gleiche Spannung liefern,
+weil es sonst Verluste gibt.\
 Wenige große Solarmodule sind technisch und wirtschaftlich typischerweise
 etwas günstiger als entsprechend viele kleine.
 
 -   Bei [*Reihenschaltung*](https://de.wikipedia.org/wiki/Reihenschaltung) (oft
     auch *Serienschaltung* genannt) hängt man die Module einfach hintereinander,
-    wobei sich die Spannungen der einzelnen Module addieren.
+    wobei sich die Spannungen der einzelnen Module addieren
+    und der Gesamtstrom sich aus dem Minimum der möglichen Einzelströme ergibt.
 
     Der wesentliche Vorteil gegenüber der Parallelschaltung ist, dass
     der Strom in den Kabeln und der damit verbundene Verlust nicht steigt.
 
-    Ein Nachteil der Reihenschaltung ist,
+    Ein wesentlicher Nachteil der Reihenschaltung ist,
     dass es dabei viel leichter zu [Verlusten durch Teilverschattung](
     https://photovoltaikbuero.de/pv-know-how-blog/teilverschattung-bei-solarmodulen-messungen/)
-    kommt, weil die Gesamtleistung einbricht, sobald auch nur eines der Module
-    verschattet wird.
-    Man sollte aus diesem Grund nur Module in Reihe schalten, die
-    die gleiche Ausrichtung haben und relativ gleich(zeitig) verschattet werden.
+    kommt, weil der Gesamtstrom und damit die Gesamtleistung einbricht,
+    sobald auch nur eines der Module verschattet wird.
+    Aus diesem Grund sollten nur gleichartige Module in Reihe geschaltet werden,
+    die zudem gleich ausgerichtet sind und nur gleich(zeitig) verschattet werden,
+    wobei hier [Bypass-Dioden](#Solarmodule) eine gewisse Abhilfe schaffen.
 
 -   Bei [*Parallelschaltung*](https://de.wikipedia.org/wiki/Parallelschaltung)
-    addieren sich die Ströme der einzelnen Module. Natürlich sollte die
-    (Gesamt-)Spannung auf den parallel geschalteten Strängen gleich sein.
+    addieren sich die Ströme der einzelnen Module bzw. parallelen Modulstränge.
+    Weil dabei der Teil mit der geringsten Spannung alle anderen auf sein Niveau
+    herunterzieht, sollten die zusammenzuschaltenden Spannungen gleich sein.
 
-    Der elektrische Verlust ist größer als bei Reihenschaltung,
-    andererseits hat man weniger Verluste auf Modulebene bei Teilverschattung.
+    Der elektrische Verlust ist größer als bei Reihenschaltung, andererseits
+    gibt es weniger Verluste durch Verschattung einzelner Module (bzw. Stränge).
 
     Für die parallele Verschaltung bieten sich Y-Kabel mit MC4-Anschlüssen an.
-    Die Kabellänge auf parallelen Zweigen sollten ungefähr gleich sein.
+    Die Kabel auf parallelen Zweigen sollten möglichst kurz und ungefähr gleich
+    lang sein, damit nicht zusätzliche Verluste durch unterschiedlichen
+    Spannungsabfall entstehen.
 
     [Hier](
     https://www.photovoltaikforum.com/core/article/49-ost-west-anlage-mit-einem-wechselrichter/)
