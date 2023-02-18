@@ -2780,13 +2780,13 @@ Es gibt auch
 [Kombigeräte](https://www.solarserver.de/2021/07/26/green-cell-bietet-neuen-solarwechselrichter-an/), welche
 die Funktionen Solar-Laderegler, Batterie-Netzladegerät und
 Inselwechselrichter in sich vereinen. Damit können Elektrogeräte
-vorzugsweise direkt mit Solarstrom versorgt werden, wobei die
-überschüssige Energie in einer Batterie gespeichert wird. Bei
-unzureichender Stromversorgung aus den Solarmodulen ergänzt das Gerät
-die benötigte Energie automatisch aus der Batterie und schaltet bei
+vorzugsweise direkt mit Solarstrom versorgt werden.
+Bei unzureichender Stromzufuhr aus den Solarmodulen ergänzt das Gerät
+die benötigte Leistung automatisch aus der Batterie und schaltet bei
 leerer Batterie (oder je nach konfigurierter Präferenz auch schon bei
-fehlendem Solarstrom) auf eine externe Stromquelle (Stromnetz oder
-Generator) um, worüber auch die Batterie geladen wird.
+fehlendem Solarstrom) eine externe Stromquelle (Stromnetz oder Generator) hinzu.
+Zum Laden der Batterie wird vorzugsweise Solarstrom verwendet,
+optional aber auch die externe Stromquelle.
 Solch ein Kombigerät ist in seiner Funktionsweise sehr praktisch, braucht
 weniger Platz, ist im Einkauf günstiger und zudem einfacher zu installieren
 und zu verwenden als entsprechende Einzelkomponenten. Es hat aber [auch
