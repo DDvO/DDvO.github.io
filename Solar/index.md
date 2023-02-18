@@ -2664,15 +2664,22 @@ mit denen eine Stromart in eine andere umgewandelt werden kann.
 ![Bild: Strom-/Leistungs-Spannungskennlinien einer Solarzelle](
 I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="500"
 style="margin-left: 40px}
-Für die Umwandlung des recht volatilen „rohen“ Solarstroms auf die gewünschte
-(nahezu) konstante Zielspannung benötigt man regelbare *Gleichspannungswandler*,
-kurz *Solar-Regler* genannt.
-* Sehr einfache und billige Regler
-verwenden dazu *Pulsweitenmodulation* (*PWM*).
-* Wesentlich besser sind aber Regler mit Leistungsoptimierung durch
-[*MPPT* (Maximal-Leistungspunkt-Suche, engl. _maximum power point tracking_)](
-https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking), weil sie auch
-unter stark schwankenden Bedingungen nahezu optimale Energieausbeute bringen.
+Für die Umwandlung des recht volatilen „rohen“ Solarstroms auf die
+gewünschte Zielspannung benötigt man regelnde Gleichspannungswandler, die kurz
+[*Solarregler*](http://solarwelten.de/solaranlagen-und-zubehoer/solarregler/)
+genannt werden. Sie sollten aber nicht nur das Spannungsniveau anpassen.
+Solarzellen sind beim Verhältnis von Spannung und Strom sehr flexibel, wobei
+das Optimum ihrer Leistung, also dem Produkt aus Spannung und Strom, von der
+Einstrahlung abhängt, und die kann sich z.B. durch Wolkenzug schnell ändern.
+Daher sollte eine sich zügig anpassende Leistungsoptimierung stattfinden,
+genannt [*MPPT*](https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking).
+Das ist die Abkürzung des englischen Begriffs _maximum power point tracking_,
+auf Deutsch *Maximal-Leistungspunkt-Suche*.
+Die für den aktuellen Zeitpunkt ermittelte optimale Spannung muss dann noch
+durch den Gleichspannungswandler auf die gewünschte Zielspannung gebracht werden.
+Die komplexe Regelung bringt also auch bei großer Spannungsdifferenz zwischen
+PV-Ausgang und Wechselrichter-Eingang bzw. Batterie-Anschluss und auch
+unter stark schwankenden Bedingungen eine (nahezu) optimale Energieausbeute.
 
 #### Solar-Laderegler {#Laderegler}
 
@@ -2682,9 +2689,22 @@ Wenn man über Solarmodule eine Batterie laden möchte, verwendet man einen
 *Solar-Laderegler*, also einen Solarregler mit Batterieladefunktion. Wie
 im Abschnitt zuvor erklärt, sollte er für eine optimale Ausbeute MPPT betreiben.
 
-Mit billigen chinesischen (angeblich) MPPT-Reglern habe ich
-keine guten Erfahrungen gemacht, wohl aber mit den europäischen Marken
-Victron und Votronic.
+Sehr einfache und billige Regler mit Batterieladefunktion
+verwenden stattdessen *Pulsweitenmodulation* (*PWM*).
+Ein PWM-Regler verbindet die Batterie zum Laden praktisch direkt mit dem
+PV-Ausgang, wobei dieser auf das Niveau der Batterie heruntergezogen wird ---
+unabhängig davon, ob die Solarzellen damit an ihrem Leistungsoptimum laufen.
+Wenn die Batterie voll wird, also ihre Absorbtionsspannung erreicht,
+findet nur noch eine pulsierte Ladung statt, die Ladungsverluste ausgleicht.
+PWM-Regler arbeiten also nur dann effizient, wenn die optimale PV-Spannung
+gleich der Batterie-Ladespannung ist. Der Unterschied zur MPPT-Regelung wird
+[hier](https://www.amumot.de/solar-laderegler-12v-mppt/) sehr schön erklärt.
+Der durchschnittliche Minderertrag durch PWM-Regelung wird mit 20% angegeben.
+
+Mit billigen chinesischen Ladereglern, die angeblich MPPT machen
+(aber vermutlich eigentlich nur PWM) habe ich keine guten Erfahrungen gemacht.
+Die MPPT-Laderegler der europäischen Marken Victron und Votronic sind dagegen
+sehr gut.
 
 #### Wechselrichter {#Wechselrichter}
 
@@ -3093,15 +3113,15 @@ LocalWords:  potential csv grid tie inverter tmy peff ieff curb WiFi
 LocalWords:  standby xls jpg Balkonsolar center limiter off to html
 LocalWords:  blackout brownout panels busbars shingle panel up number
 LocalWords:  maximum point tracking sine wave efficiency boost true
-LocalWords:  converter step consumption pdf balancer equalizer
+LocalWords:  converter step consumption pdf balancer equalizer mppt
 LocalWords:  buck down SA SZ DW MQ EC LF small LY KREE Battery
 LocalWords:  Charger Discharger Board Under Over Voltage Protection
 LocalWords:  Speicherungs current eigenverbrauchs Oekonomie magazine
 LocalWords:  rendite solbatsim Regelungs Eigenverbrauchsv transfer
 LocalWords:  telemetry gateway distort aufteilung orientierungen Reflexions
 LocalWords:   document sections rentabilitaet nanlagen oekonomisch
-LocalWords:   Nutzungsvarianten stromwandler
-LocalWords:  
+LocalWords:   Nutzungsvarianten stromwandler mikrowechselrichter
+LocalWords:   stromrichter solarregler
 LocalWords:  
 LocalWords:  
 LocalWords:  
