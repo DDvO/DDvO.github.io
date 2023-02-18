@@ -2895,14 +2895,20 @@ aus folgenden Gründen:
     Laderegler mit doppelter Strom-Belastbarkeit, und der kostet ca. 50
     bis 80% mehr.
 
--   Vermutlich arbeiten Wechselrichter mit 24 V Eingangsspannung etwas
-    effizienter als solche mit 12 V, zumal Strom und Spannungsspreizung
+-   Vermutlich können Wechselrichter mit 24 V Eingangsspannung etwas
+    effizienter arbeiten als solche mit 12 V, weil Strom und Spannungsspreizung
     geringer sind.
 
-Man kann auch mehrere Batterien in Reihe (also hintereinander) schalten, um
-z.B. auf 2 × 12 V = 24 V zu kommen,
-muss dann aber für eine dauerhafte *Balancierung* (gleichmäßige Spannungslage)
-der Einzelbatterien sorgen, wie es auch das BMS innerhalb einer Batterie
+Man kann Batterien [parallel oder in Reihe schalten](
+https://photovoltaik-guru.de/module/reihenschaltung-und-parallelschaltung-elektronik-kurz-erklaert.html).
+* Bei Parallelschaltung muss die Spannung der Batterien gleich sein,
+während ihre Kapazität unterschiedlich sein darf
+und sich Kapazitäten sowie die Lade- bzw. Entladeströme addieren.
+* Wenn man hingegen Batterien in Reihe (also hintereinander) schaltet,
+müssen die Kapazitäten gleich sein, während die Spannungen unterschiedlich
+sein dürfen und sich addieren. So kommt man z.B. von 2 × 12 V auf 24 V.
+Dabei muss für eine dauerhafte *Balancierung* (gleichmäßige Spannungslage)
+der Batterien gesorgt werden, wie es auch das BMS innerhalb einer Batterie
 für die Einzelzellen tut. Dafür gibt es
 spezielle *Batterie-Balancierer* (engl. _balancer_ oder _equalizer_),
 wie im [Video von Dimitri](https://youtu.be/BcWKrPj6-qs) schön vorgeführt.
