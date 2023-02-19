@@ -1225,21 +1225,21 @@ Rechnen wir wieder mit Kosten von 1,10€/Wp, also für diese Anlage 660€.
 ergibt 457 kWh, aber noch etwas Lastspitzen-Abzug
 88%: -peff 93.617
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 
 PV-Nominalleistung          =  600 Wp
-Bruttoleistung max.         =  650 W am 2020-03-23 um 11:00 h
-PV-Bruttoertrag             =  764 kWh
-PV-Nettoertrag              =  661 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+Max. PV-Bruttoleistung      =  605 W am TMY-04-15 um 12:00 h
+PV-Bruttoertrag             =  763 kWh
+PV-Nettoertrag              =  660 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 Ertragsanteil 9-15 Uhr MEZ  =   73 %
 
-Last durch Haushalt         = 3000 kWh
-Eigenverbrauch              =  461 kWh
-Netzeinspeisung             =  200 kWh
-Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  461 kWh
+Netzeinspeisung             =  199 kWh
+PV-Eigenverbrauchsanteil    =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 
-Bei Lastprofil_4685_kWh.csv Eigenverbrauch 502 kWh
+Bei Lastprofil_4685_kWh.csv Eigenverbrauch 503 kWh
 -->
 
   - Bei einem relativ hohen Jahresverbrauch von 6000 kWh können durchschnittlich
@@ -1248,7 +1248,7 @@ Bei Lastprofil_4685_kWh.csv Eigenverbrauch 502 kWh
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
+./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 
 Verbrauch durch Haushalt    = 6000 kWh
 PV-Eigenverbrauch           =  572 kWh
@@ -1266,8 +1266,8 @@ Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
 ./Solar.pl Lastprofil_4673_kWh.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
 
 Last durch Haushalt         = 1500 kWh
-Eigenverbrauch              =  329 kWh
-Netzeinspeisung             =  332 kWh
+Eigenverbrauch              =  330 kWh
+Netzeinspeisung             =  330 kWh
 Eigenverbrauchsanteil       =   50 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   22 % des Verbrauchs (Autarkiegrad)
 -->
@@ -1282,12 +1282,12 @@ allerdings hätte man dann auch langfristig weniger Nutzen.
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -load 130
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -load 130 -tmy
 
 Last durch Haushalt         = 3000 kWh
 Konstante Last              =  100 W an den ersten 5 Tagen der Woche von 8 bis 16 Uhr
-Eigenverbrauch              =  365 kWh
-Netzeinspeisung             =  296 kWh
+Eigenverbrauch              =  364 kWh
+Netzeinspeisung             =  297 kWh
 Eigenverbrauchsanteil       =   55 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   12 % des Verbrauchs (Autarkiegrad)
 
@@ -1848,41 +1848,87 @@ mit Lade-Wirkungsgrad 94% und Speicherungs-Wirkungsgrad 95%.
 Wie zuvor sind für den Wirkungsgrad des PV-Systems 92% angenommen
 und für die Wechselrichtung (auch bei Entladung aus der Batterie) 94%.
 
-Bei [optimaler Lade-/Entlageregelung, s.u.](#Regelungsstrategien) ließe sich
-durch die Hinzunahme des Speichers den jährlichen Eigenverbrauch von 460 auf
-640 kWh und den Eigenverbrauchsanteil von 59 auf 97% des Nettoertrags steigern.
-Der PV-Bruttoertrag von 765 kWh bzw. Nettoertrag 662 kWh würde also fast maximal
-genutzt, die Netzeinspeisung wäre nur noch etwa 1 kWh, und der Rest wären
-Verluste des Ladereglers, der Speicherbatterie und des Wechselrichters.
-Die Pufferbatterie wäre mit ca. 201 Vollzyklen pro Jahr nur mäßig belastet. Bei
-40 Ct/kWh Strompreis ergäbe sich eine jährliche Stromkosten-Einsparung von 72€.\
-Selbst wenn die dafür nötigen Geräte sehr günstig für z.B. 720€ erworben werden,
-würde die Amortisationszeit für die Aufrüstung mit dem Speicher mindestens
-10 Jahre betragen -- eher länger.
-Allerdings muss man damit rechnen, dass in dieser recht langen Zeitspanne
-bereits ein Teil der Geräte ersetzt werden muss. Vor Allem ist die optimale
-Regelung unrealistisch, und auch eine Annäherung daran ziemlich aufwendig.
+Bei [optimaler Lade-/Entlageregelung, s.u.](#Regelungsstrategien),
+die leider nur sehr schwer zu realisieren ist,
+gäbe es keinen Verlust durch Überlauf des Speichers. Durch die Verwendung
+des Speichers ließe sich der jährliche Eigenverbrauch von 460 auf 640 kWh
+und der Eigenverbrauchsanteil von 59 auf satte 97% des Nettoertrags steigern.
+Für die Auslegung des Speichers sehr interessant ist Folgendes:
+Eine Erhöhung der Speicherkapazität auf 2 kWh
+würde keine weitere Steigerung des Eigenverbrauchs bringen,
+und *schon eine Speicherkapazität auf 0,5 kWh brächte*
+einen Eigenverbrauch von 628 kWh, also *einen Eigenverbrauchsanteil von 95%*.\
+Der PV-Bruttoertrag von 765 kWh bzw. Nettoertrag 660 kWh würde also fast maximal
+genutzt, ab 1 kWh Speicherkapazität wäre die Netzeinspeisung 0 kWh, und der Rest
+wären kleine Verluste des Ladereglers und der Speicherbatterie von 12 + 9 kWh.
+Der 1 kWh Speicher wäre mit ca. 200 Vollzyklen pro Jahr nur mäßig belastet. Bei
+40 Ct/kWh Strompreis ergäbe sich eine jährliche Stromkosten-Einsparung von 72€.
+
+Selbst wenn die dafür nötigen Geräte günstig für z.B. 720€ erworben werden,
+würde die Amortisationszeit für die Aufrüstung mindestens 10 Jahre betragen --
+eher länger. Allerdings kann es sein, dass in dieser recht langen Zeitspanne
+bereits ein Teil der nötigen Geräte erneuert werden muss.
+Vor Allem aber ist für kleine PV-Anlagen die optimale Regelung unrealistisch
+und auch eine Annäherung daran unverhältnismäßig aufwendig.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000
 
 PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  656 W am 2020-03-23 um 11:00 h
-PV-Bruttoertrag             =  765 kWh
-PV-Nettoertrag              =  662 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+Max. PV-Bruttoleistung      =  607 W am TMY-04-15 um 12:00 h
+PV-Bruttoertrag             =  764 kWh
+PV-Nettoertrag              =  660 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 Ertragsanteil 9-15 Uhr MEZ  =   73 %
+
+Verbrauch durch Haushalt    = 3000 kWh
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Optimale Entladestrategie (so viel wie gebraucht)
-Lade- und Speicherverluste  =   23 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
-Eigenverbrauch über Speicher=  179 kWh
-Zwischenspeicherung         =  201 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  201
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   12 kWh durch Lade-Eff. 94%
+Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  178 kWh
+Zwischenspeicherung         =  200 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  200
 
-Eigenverbrauch              =  640 kWh
-Netzeinspeisung             =    1 kWh
-Eigenverbrauchsanteil       =   97 % des Nettoertrags (Nutzungsgrad)
+PV-Eigenverbrauch           =  639 kWh
+Netzeinspeisung             =    0 kWh
+PV-Eigenverbrauchsanteil    =   97 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1500
+
+Speicherkapazität           = 1500 Wh, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie)
+Optimale Entladestrategie (so viel wie gebraucht)
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   12 kWh durch Lade-Eff. 94%
+Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  180 kWh
+Zwischenspeicherung         =  201 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  134
+
+PV-Eigenverbrauch           =  640 kWh
+Netzeinspeisung             =    0 kWh
+PV-Eigenverbrauchsanteil    =   97 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
+
+/Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 500
+
+Speicherkapazität           =  500 Wh, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie)
+Optimale Entladestrategie (so viel wie gebraucht)
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   11 kWh durch Lade-Eff. 94%
+Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  168 kWh
+Zwischenspeicherung         =  188 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  376
+
+PV-Eigenverbrauch           =  628 kWh
+Netzeinspeisung             =   13 kWh
+PV-Eigenverbrauchsanteil    =   95 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
 -->
 
@@ -1892,18 +1938,18 @@ kommt mit identischen Wirkungsgrad-Annahmen, aber mit etwas anderen Annahmen
 zur PV-Anlage, zur gleichen Steigerungsrate des Eigenverbrauchsanteil.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Lindenberg_35deg_0deg_2005_2020.csv 581 -tmy
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_Lindenberg_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 581 -tmy
 
 PV-Nominalleistung          =  581 Wp
-Bruttoleistung max.         =  593 W am TMY-04-21 um 11:00 h
-PV-Bruttoertrag             =  675 kWh
-PV-Nettoertrag              =  581 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
-Ertragsanteil 9-15 Uhr MEZ  =   70 %
+Max. PV-Bruttoleistung      =  582 W am TMY-04-16 um 11:00 h
+PV-Bruttoertrag             =  673 kWh
+PV-Nettoertrag              =  579 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
+Ertragsanteil 9-15 Uhr MEZ  =   71 %
 
-Last durch Haushalt         = 3000 kWh
-Eigenverbrauch              =  415 kWh
-Netzeinspeisung             =  166 kWh
-Eigenverbrauchsanteil       =   71 % des Nettoertrags (Nutzungsgrad)
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  417 kWh
+Netzeinspeisung             =  162 kWh
+PV-Eigenverbrauchsanteil    =   72 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   14 % des Verbrauchs (Autarkiegrad)
 
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/
@@ -1913,19 +1959,21 @@ Vermiedener Strombezug pro Jahr 404 kWh
 Nutzungsgrad 68 %
 Selbstversorgung 13 %
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Lindenberg_35deg_0deg_2005_2020.csv 581 -tmy -capacity 1000
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_Lindenberg_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 581 -tmy -capacity 1000
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Optimale Entladestrategie (so viel wie gebraucht)
-Lade- und Speicherverluste  =   19 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
-Eigenverbrauch über Speicher=  148 kWh
-Zwischenspeicherung         =  166 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  166
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   10 kWh durch Lade-Eff. 94%
+Speicherverlust             =    8 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  144 kWh
+Zwischenspeicherung         =  162 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  162
 
-Eigenverbrauch              =  563 kWh
+PV-Eigenverbrauch           =  562 kWh
 Netzeinspeisung             =    0 kWh
-Eigenverbrauchsanteil       =   97 % des Nettoertrags (Nutzungsgrad)
+PV-Eigenverbrauchsanteil    =   97 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/
@@ -2056,25 +2104,46 @@ wie man die aktuelle Last im Haushalt automatisch messen bzw. auslesen kann.
 Wenn die [o.g. Balkonanlage mit 1 kWh Pufferspeicher](#Batteriepuffer) nur eine
 Konstanteinspeisung verwendet (wobei hier eine Entladeleistung von nur 45 W
 optimal ist), ergibt sich mit der optimalen Ladestrategie eine Steigerung des
-Eigenverbrauchs durch die Speichernutzung um immerhin 115 kWh auf 575 kWh.
+Jahres-Eigenverbrauchs durch die Speichernutzung um immerhin 115 kWh auf 575 kWh.
 Das sind allerdings 65 kWh weniger als wenn auch die Entladung lastoptimiert
-wäre, weil 66 kWh nicht genutzt und ins externe Netz abgeführt werden.
+wäre, weil 66 kWh nicht genutzt und ins externe Netz abgeführt werden.\
+Eine Erhöhung der Speicherkapazität auf 2 kWh brächte nur 10 kWh mehr.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -feed 45
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -feed 45
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Konstanteinspeisung         =   45 W
-Lade- und Speicherverluste  =   22 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  114 kWh
-Zwischenspeicherung         =  192 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  192
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   11 kWh durch Lade-Eff. 94%
+Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  113 kWh
+Zwischenspeicherung         =  190 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  190
 
-PV-Eigenverbrauch           =  575 kWh
-Netzeinspeisung             =   66 kWh
+PV-Eigenverbrauch           =  573 kWh
+Netzeinspeisung             =   67 kWh
 PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2000 -feed 35
+
+Speicherkapazität           = 2000 Wh, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie)
+Konstanteinspeisung         =   35 W
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   11 kWh durch Lade-Eff. 94%
+Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  123 kWh
+Zwischenspeicherung         =  189 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =   94
+
+PV-Eigenverbrauch           =  583 kWh
+Netzeinspeisung             =   57 kWh
+PV-Eigenverbrauchsanteil    =   88 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
+
 -->
 
 Die im [folgenden Abschnitt](#Entnahme) aufgeführten Bastellösungen geben keinen
@@ -2086,30 +2155,48 @@ ist im Vergleich zur Batteriekapazität bzw. dem Verbrauch durch die Grundlast.
 
 Wenn die Anlage eine Konstanteinspeisung hat und den PV-Strom nur auf diese
 Weise nutzt, ergibt sich Folgendes: Selbst bei optimierter Entnahmeleistung
-(in diesem Fall  190 W) bringt die Batteriepufferung fast nichts, weil der
-Eigenverbrauch durch Speichernutzung gerade mal um 26 kWh auf 486 kWh steigt
-und durch Netzeinspeisung und Speicher-Überlauf viel Verlust entsteht.
+(in diesem Fall 180 W) bringt die Batteriepufferung fast nichts: der
+Eigenverbrauch steigt durch Speichernutzung gerade mal um 26 kWh auf 486 kWh.
+Das liegt hier vor Allem an einer Netzeinspeisung von 70 kWh
+und am Verlust durch Überlauf von 38 kWh,
+außerdem an Lade- und Speicherverlusten von 37 + 29 kWh bei 622 Vollzyklen.\
+Eine Erhöhung der Kapazität auf 2 kWh brächte immerhin einen Eigenverbrauch
+von 532 kWh bei einer dann optimalen Konstanteinspeisung von 135 W.
 
 <!--
-Das liegt hier vor Allem an einer Netzeinspeisung von 83 kWh,
-an Lade- und Speicherverlusten von 72 kWh (bei 636 Vollzyklen),
-und teils auch am Verlust durch Überschuss von 25 kWh.
-
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass 0 -feed 190
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed 180
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
-Konstanteinspeisung         =  190 W
-Verlust durch Überschuss    =   32 kWh
-Lade- und Speicherverluste  =   72 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
+Konstanteinspeisung         =  180 W
+Verlust durch Überlauf      =   38 kWh
+Ladeverlust                 =   37 kWh durch Lade-Eff. 94%
+Speicherverlust             =   29 kWh durch Speicher-Eff. 95%
 PV-Nutzung über Speicher    =  486 kWh
-Zwischenspeicherung         =  629 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  629
+Zwischenspeicherung         =  622 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  622
 
 PV-Eigenverbrauch           =  486 kWh
-Netzeinspeisung             =   76 kWh
+Netzeinspeisung             =   70 kWh
 PV-Eigenverbrauchsanteil    =   74 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   16 % des Verbrauchs (Autarkiegrad)
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2000 -pass 0 -feed 135
+
+Speicherkapazität           = 2000 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W
+Konstanteinspeisung         =  135 W
+Verlust durch Überlauf      =    6 kWh
+Ladeverlust                 =   39 kWh durch Lade-Eff. 94%
+Speicherverlust             =   31 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  532 kWh
+Zwischenspeicherung         =  654 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  327
+
+PV-Eigenverbrauch           =  532 kWh
+Netzeinspeisung             =   52 kWh
+PV-Eigenverbrauchsanteil    =   81 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
 -->
 
 
@@ -2119,24 +2206,43 @@ vorbei geleitet wird (und zwar möglichst in den Netzwechselrichter,
 der auch zur Ausspeisung aus der Batterie verwendet wird).
 In diesem Fall sind für die Konstanteinspeisung 110 W Entnahme optimal,
 und der Eigenverbrauch steigt durch die Speichernutzung ein wenig mehr,
-nämlich um 54 kWh auf 514 kWh.
+nämlich um 54 kWh auf 514 kWh.\
+Eine Erhöhung der Kapazität auf 2 kWh brächte einen Eigenverbrauch von 539 kWh,
+wobei die optimale Leistung der Konstanteinspeisung hier bei 110 W bleibt.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass spill 0 -feed 110
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass spill 0 -feed 110
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W   und für Überschuss
 Konstanteinspeisung         =  110 W
-Verlust durch Überschuss    =    0 kWh
-Lade- und Speicherverluste  =   61 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  425 kWh
-Zwischenspeicherung         =  538 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  538
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   33 kWh durch Lade-Eff. 94%
+Speicherverlust             =   25 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  429 kWh
+Zwischenspeicherung         =  542 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  542
 
 PV-Eigenverbrauch           =  514 kWh
-Netzeinspeisung             =   90 kWh
+Netzeinspeisung             =   88 kWh
 PV-Eigenverbrauchsanteil    =   78 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   17 % des Verbrauchs (Autarkiegrad)
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2000 -pass spill 0 -feed 110
+Speicherkapazität           = 2000 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W   und für Überschuss
+Konstanteinspeisung         =  110 W
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   38 kWh durch Lade-Eff. 94%
+Speicherverlust             =   29 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  513 kWh
+Zwischenspeicherung         =  626 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  313
+
+PV-Eigenverbrauch           =  539 kWh
+Netzeinspeisung             =   54 kWh
+PV-Eigenverbrauchsanteil    =   82 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
 -->
 
 Das Signal für die Überschussableitung wird wohl am besten vom Laderegler
@@ -2234,29 +2340,49 @@ des Wechselrichters verwenden.
 Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
 Bei einer z.B. auf 600 W begrenzten Einspeisung beträgt für die o.g.
 [Balkonanlage mit 1 kWh Pufferspeicher und Überschussableitung](#Batterieladung)
-die Steigerung des Eigenverbrauch durch die Speichernutzung 129 kWh auf 589 kWh.
-Hier findet nur noch eine minimale Netzeinspeisung von 2 kWh statt,
+die Steigerung des Eigenverbrauch durch die Speichernutzung 128 kWh auf 588 kWh.
+Hier findet nur noch eine minimale Netzeinspeisung von 3 kWh statt,
 welche aus ungenutzter Überschussableitung resultiert.
-Allerdings wird die Batterie ständig auf- und entladen (659 Vollzyklen im Jahr),
+Allerdings wird die Batterie ständig auf- und entladen (654 Vollzyklen im Jahr),
 was (neben größerer Degradation) zu erheblichen Lade- und Speicherverlusten
-von 75 kWh führt.
+von 39 + 31 kWh führt.\
+Eine Erhöhung der Speicherkapazität bringt praktisch nichts, und eine
+Verringerung auf 0,5 kWh liefert annähernd genauso viel: 569 kWh.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass spill 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -tmy -pass spill 0 -feed max 600
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W   und für Überschuss
 Maximaleinspeisung          =  600 W
-Verlust durch Überschuss    =    0 kWh
-Lade- und Speicherverluste  =   75 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  586 kWh
-Zwischenspeicherung         =  656 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  656
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   39 kWh durch Lade-Eff. 94%
+Speicherverlust             =   31 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  584 kWh
+Zwischenspeicherung         =  654 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  654
 
-PV-Eigenverbrauch           =  589 kWh
-Netzeinspeisung             =    2 kWh
+PV-Eigenverbrauch           =  588 kWh
+Netzeinspeisung             =    3 kWh
 PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 500 -tmy -pass spill 0 -feed max 600
+
+Speicherkapazität           =  500 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W   und für Überschuss
+Maximaleinspeisung          =  600 W
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   36 kWh durch Lade-Eff. 94%
+Speicherverlust             =   28 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  533 kWh
+Zwischenspeicherung         =  597 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  1195
+
+PV-Eigenverbrauch           =  569 kWh
+Netzeinspeisung             =   28 kWh
+PV-Eigenverbrauchsanteil    =   86 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 
 Allerdings hat keine der in diesem Abschnitt genannten Anlagen mit
@@ -2264,28 +2390,48 @@ Pufferspeicher eine Überschussableitung oder gar eine optimale Laderegelung.
 * Bei bedarfsgerechter (aber auf 600 W limitierter) Einspeisung
   aus dem Speicher ohne Überschussableitung bei der Ladung des Speichers
   fällt die Steigerung des Eigenverbrauchs durch die Speichernutzung
-  identisch aus, also wieder 129 kWh auf 589 kWh. Die Zahl der Vollzyklen
-  pro Jahr (659) und die Lade- und Speicherverluste sind fast gleich. 
-  Darüber hinaus fällt wieder nur ein gleich kleiner Verlust von 2 kWh an, in
-  diesem Fall nicht durch Netzeinspeisung, sondern durch Überlauf des Speichers.
+  identisch aus, also wieder 128 kWh auf 588 kWh. Die Zahl der Vollzyklen
+  pro Jahr (658) und die Lade- und Speicherverluste sind fast gleich.
+  Darüber hinaus fällt wieder nur ein gleich kleiner Verlust von 3 kWh an, in
+  diesem Fall nicht durch Netzeinspeisung, sondern durch Überlauf des Speichers.\
+  Auch hier *bringt eine Erhöhung der Speicherkapazität praktisch nichts,
+  und eine Verringerung auf 0,5 kWh liefert nicht wesentlich weniger*: 564 kWh.
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed max 600
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Maximaleinspeisung          =  600 W
-Verlust durch Überschuss    =    2 kWh
-Lade- und Speicherverluste  =   75 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  589 kWh
-Zwischenspeicherung         =  659 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  659
+Verlust durch Überlauf      =    3 kWh
+Ladeverlust                 =   39 kWh durch Lade-Eff. 94%
+Speicherverlust             =   31 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  587 kWh
+Zwischenspeicherung         =  658 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  658
 
-PV-Eigenverbrauch           =  589 kWh
+PV-Eigenverbrauch           =  587 kWh
 Netzeinspeisung             =    0 kWh
 PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
+
+/Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 500 -pass 0 -feed max 600
+
+Speicherkapazität           =  500 Wh, DC-gekoppelt
+Speicher-Umgehung           =    0 W
+Maximaleinspeisung          =  600 W
+Verlust durch Überlauf      =   29 kWh
+Ladeverlust                 =   38 kWh durch Lade-Eff. 94%
+Speicherverlust             =   30 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  564 kWh
+Zwischenspeicherung         =  632 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  1263
+
+PV-Eigenverbrauch           =  564 kWh
+Netzeinspeisung             =    0 kWh
+PV-Eigenverbrauchsanteil    =   85 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 * Bei Anlagen mit konstanter (nicht bedarfsgeregelter) Einspeisung hingegen
 gibt es wie [oben beschrieben](#Batterieladung) auf die eine oder andere Weise
@@ -2313,48 +2459,54 @@ Eine Konstanteinspeisung auch noch zeitlich z.B. auf 18 Uhr abends bis 6 Uhr
 morgens einzuschränken (also eine Nachteinspeisung) erweist sich aber als
 völlig kontraproduktiv, weil der Speicher dann
 sehr oft und schnell überläuft und damit massiv Energie verschwendet wird.
-Es ergib sich für die o.g. Anlage selbst bei einer optimierten Entnahmeleistung
-von 90 W dann nur noch ein Eigenverbrauch von 264 kWh, also eine Verringerung
-um fast 200 kWh im Vergleich zur Basis-Anlage ohne Speicher.
+Es ergibt sich für die o.g. Anlage selbst bei einer optimierten Entnahmeleistung
+von 85 W dann nur noch ein Eigenverbrauch von 269 kWh, also im Vergleich
+zur Basis-Anlage ohne Speicher eine Verringerung um 190 kWh!\
+Durch Erhöhung der Speicherkapazität auf 2 kWh lassen sich zwar immerhin 398 kWh
+Eigenverbrauch erreichen, aber auch dann bleibt der Ansatz kontraproduktiv.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass 0 -feed 18..6 90
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed 18..6 85
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
-Konstanteinspeisung         =   90 W von 18 bis 6 Uhr
-Verlust durch Überschuss    =  351 kWh
-Lade- und Speicherverluste  =   35 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  264 kWh
-Zwischenspeicherung         =  311 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  311
+Konstanteinspeisung         =   85 W von 18 bis 6 Uhr
+Verlust durch Überlauf      =  345 kWh
+Ladeverlust                 =   19 kWh durch Lade-Eff. 94%
+Speicherverlust             =   15 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  269 kWh
+Zwischenspeicherung         =  316 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  316
 
-PV-Eigenverbrauch           =  264 kWh
+PV-Eigenverbrauch           =  269 kWh
 Netzeinspeisung             =   13 kWh
-PV-Eigenverbrauchsanteil    =   40 % des Nettoertrags (Nutzungsgrad)
+PV-Eigenverbrauchsanteil    =   41 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =    9 % des Verbrauchs (Autarkiegrad)
+
 -->
 
 Eine zusätzliche Überschussableitung bringt das Ergebnis zwar wieder ins
 Positive, so dass sich bei dann optimaler Entnahmeleistung von 80 W ein Gewinn
 an Eigenverbrauch von 32 kWh auf 492 kWh ergibt, aber lohnenswert ist das nicht,
 denn auch dann fällt der Gewinn immer nach geringer aus als ohne Einschränkung
-auf die Nachtstunden (wo der [Gewinn 54 kWh](#Batterieladung) beträgt).
+auf die Nachtstunden (wo der [Gewinn 54 kWh](#Batterieladung) beträgt).\
+Eine Erhöhung der Kapazität auf 2 kWh brächte beim Eigenverbrauch nur 10 kWh mehr.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -pass spill 0 -feed 18..6 80
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass spill 0 -feed 18..6 80
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W   und für Überschuss
 Konstanteinspeisung         =   80 W von 18 bis 6 Uhr
-Verlust durch Überschuss    =    0 kWh
-Lade- und Speicherverluste  =   35 kWh durch Lade-Eff. 94%, Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  264 kWh
-Zwischenspeicherung         =  308 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  308
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   19 kWh durch Lade-Eff. 94%
+Speicherverlust             =   15 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  268 kWh
+Zwischenspeicherung         =  313 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  313
 
 PV-Eigenverbrauch           =  492 kWh
-Netzeinspeisung             =  137 kWh
+Netzeinspeisung             =  135 kWh
 PV-Eigenverbrauchsanteil    =   74 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   16 % des Verbrauchs (Autarkiegrad)
 -->
@@ -3137,11 +3289,11 @@ LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test
 LocalWords: Charger Discharger Board Under Over Voltage Protection
 LocalWords: Speicherungs current eigenverbrauchs Oekonomie magazine
 LocalWords: rendite solbatsim Regelungs Eigenverbrauchsv transfer
-LocalWords: telemetry gateway distort aufteilung orientierungen
+LocalWords: telemetry gateway distort aufteilung orientierungen cell
 LocalWords: document sections rentabilitaet nanlagen oekonomisch
 LocalWords: Nutzungsvarianten stromwandler mikrowechselrichter text
 LocalWords: stromrichter solarregler standard conditions Reflexions
-LocalWords: Idealbedingungen
+LocalWords: Idealbedingungen operating temperature Timeseries crystSi
 LocalWords:  
 LocalWords:  
 LocalWords:  
