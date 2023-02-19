@@ -331,20 +331,26 @@ auf die Fläche reflektierten Strahlung liegt dann bei knapp 2%.
 Die **Nennleistung** von Solarmodulen wird in **Wp** ([*Watt Peak*](
 https://de.wikipedia.org/wiki/Watt_Peak)) angegeben. Zu ihrer
 Bestimmung verwendet man eine Referenzbestrahlung mit einem normierten
-Sonnenlichtspektrum einer Stärke von 1000 W/m² bei Zelltemperatur 25°C.\
+Sonnenlichtspektrum einer Stärke von 1000 W/m² bei Zelltemperatur 25°C.
+Diese _standard test conditions (STC)_ sind [ziemlich praxisfern](
+https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/#:~:text=STC%3A%20Idealbedingungen).
+Realistischer sind die *Normalbedingungen* (engl. _nominal operating cell
+temperature (NOCT)_) mit 45° Betriebstemperatur und 800 W/m² Einstrahlung.
+
 Bei näherer Betrachtung bedeutet die Nennleistung in kWp (also 1000 Wp)
-die *effektive Solarfläche* des Moduls, also Fläche (in m²) ×
-max. Wirkungsgrad.
-Daher kann man auch den maximalen Wirkungsgrad eines Solarmoduls sehr
-einfach nachrechnen, indem man seine Nennleistung in kWp durch seine
-Fläche in m² teilt.
+die *effektive Solarfläche* des Moduls, also Fläche (in m²) × Wirkungsgrad.
+Daher lässt sich der Wirkungsgrad eines Solarmoduls sehr einfach nachrechnen,
+indem man seine Nennleistung in kWp durch seine Fläche in m² teilt.
+Für den Wirkungsgrad der verwendeten Solarzellen muss man von der Gesamtfläche
+vorher die Ränder und Zwischenräume abziehen (typischerweise 5-10%).
 
 Die Wp-Angaben für Solarmodule sind mit Vorsicht zu genießen ---
 hauptsächlich weil die tatsächliche Leistung wie oben erwähnt
 stark von der Situation (Ausrichtung im Vergleich zum Sonnenstand, Bewölkung,
 Verschattung usw.) abhängig und meist deutlich geringer ist. Außerdem weil
 besonders chinesische Händler von flexiblen Solarmodulen dazu tendieren,
-bei den Leistungsangaben deutlich zu übertreiben. Daher lohnt sich als
+[bei den Leistungsangaben deutlich zu übertreiben](
+https://www.youtube.com/watch?v=JjmKgrtEMqk). Daher lohnt sich als
 Plausibiltäts-Check, den Wirkungsgrad nachzurechnen.
 
 In unseren Breitengraden ist je nach Standort bei optimaler statischer
@@ -3100,41 +3106,47 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 
 <!--
 Local IspellDict: german
-LocalWords:  title keywords toc start refresh zusammenfassung abgrenzung pv end
-LocalWords:  inhaltsverzeichnis photovoltaik sonneneinstrahlung feed
-LocalWords:  nennleistung jahresertrag ausrichtung solarmodulen capacity
-LocalWords:  nutzungsmöglichkeiten nutzung netzeinspeisung fuer Eff
-LocalWords:  stecker solaranlage balkonkraftwerk beschränkung spill
-LocalWords:  kappung kappungsverlust drosselung stromzähler md deg MW
-LocalWords:  rücklaufsperre stromverbrauch haushalt berechnung load
-LocalWords:  verbrauchsmessung eigenverbrauch eigendeckung ref Heat
-LocalWords:  ertragsberechnung monatsbasierte amortisation of VDEW OC
-LocalWords:  rechner speichersimulation simulation minutenbasis var
-LocalWords:  hausnetzeinspeisung batteriepuffer stromspeicher bypass
-LocalWords:  regelungsstrategien speicherbatterie einspeisung zip cut
-LocalWords:  batterieladung batterie inselanlage kombination px cells
-LocalWords:  batteriespeicherung auswahl komponenten anschluss open
-LocalWords:  solarmodule montage solar regler wechselrichter pl short
-LocalWords:  netzwechselrichter gleichspannungswandler beispiel SC NA
-LocalWords:  inselwechselrichter laderegler hybridgeräte kombi Sol my
-LocalWords:  speicherbatterien dimensionierung strukturierung circuit
-LocalWords:  tiefsetzsteller spannungswächter konfigurationen voltage
-LocalWords:  mobilanlage steckeranlage anlage kombianlage index data
-LocalWords:  pandoc output calculation power width style margin unit
-LocalWords:  left right irradiance GHI buehneTop clear both png tgl
-LocalWords:  potential csv grid tie inverter tmy peff ieff curb WiFi
-LocalWords:  standby xls jpg Balkonsolar center limiter off to html
-LocalWords:  blackout brownout panels busbars shingle panel up number
-LocalWords:  maximum point tracking sine wave efficiency boost true
-LocalWords:  converter step consumption pdf balancer equalizer mppt
-LocalWords:  buck down SA SZ DW MQ EC LF small LY KREE Battery
-LocalWords:  Charger Discharger Board Under Over Voltage Protection
-LocalWords:  Speicherungs current eigenverbrauchs Oekonomie magazine
-LocalWords:  rendite solbatsim Regelungs Eigenverbrauchsv transfer
-LocalWords:  telemetry gateway distort aufteilung orientierungen Reflexions
-LocalWords:   document sections rentabilitaet nanlagen oekonomisch
-LocalWords:   Nutzungsvarianten stromwandler mikrowechselrichter
-LocalWords:   stromrichter solarregler
+LocalWords: title keywords toc start refresh zusammenfassung abgrenzung pv
+LocalWords: inhaltsverzeichnis photovoltaik sonneneinstrahlung feed end
+LocalWords: nennleistung jahresertrag ausrichtung solarmodulen capacity
+LocalWords: nutzungsmöglichkeiten nutzung netzeinspeisung fuer Eff
+LocalWords: stecker solaranlage balkonkraftwerk beschränkung spill
+LocalWords: kappung kappungsverlust drosselung stromzähler md deg MW
+LocalWords: rücklaufsperre stromverbrauch haushalt berechnung load
+LocalWords: verbrauchsmessung eigenverbrauch eigendeckung ref Heat
+LocalWords: ertragsberechnung monatsbasierte amortisation of VDEW OC
+LocalWords: rechner speichersimulation simulation minutenbasis var
+LocalWords: hausnetzeinspeisung batteriepuffer stromspeicher bypass
+LocalWords: regelungsstrategien speicherbatterie einspeisung zip cut
+LocalWords: batterieladung batterie inselanlage kombination px cells
+LocalWords: batteriespeicherung auswahl komponenten anschluss open
+LocalWords: solarmodule montage solar regler wechselrichter pl short
+LocalWords: netzwechselrichter gleichspannungswandler beispiel SC NA
+LocalWords: inselwechselrichter laderegler hybridgeräte kombi Sol my
+LocalWords: speicherbatterien dimensionierung strukturierung circuit
+LocalWords: tiefsetzsteller spannungswächter konfigurationen voltage
+LocalWords: mobilanlage steckeranlage anlage kombianlage index data
+LocalWords: pandoc output calculation power width style margin unit
+LocalWords: left right irradiance GHI buehneTop clear both png tgl
+LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi
+LocalWords: standby xls jpg Balkonsolar center limiter off to html
+LocalWords: blackout brownout panels busbars shingle panel up number
+LocalWords: maximum point tracking sine wave efficiency boost true
+LocalWords: converter step consumption pdf balancer equalizer mppt
+LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test
+LocalWords: Charger Discharger Board Under Over Voltage Protection
+LocalWords: Speicherungs current eigenverbrauchs Oekonomie magazine
+LocalWords: rendite solbatsim Regelungs Eigenverbrauchsv transfer
+LocalWords: telemetry gateway distort aufteilung orientierungen
+LocalWords: document sections rentabilitaet nanlagen oekonomisch
+LocalWords: Nutzungsvarianten stromwandler mikrowechselrichter text
+LocalWords: stromrichter solarregler standard conditions Reflexions
+LocalWords: Idealbedingungen
+LocalWords:  
+LocalWords:  
+LocalWords:  
+LocalWords:  
+LocalWords:  
 LocalWords:  
 LocalWords:  
 LocalWords:  
