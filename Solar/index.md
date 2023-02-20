@@ -108,6 +108,8 @@ Alle Inhalte sind von mir selbst recherchiert (meist online) und beschrieben,
 wobei ich viele Quellen verlinke, die ich interessant und hilfreich finde.
 Sehr viel praktisch Relevantes habe ich durch den Austausch zu PV-Angeboten
 auf [myDealz.de](https://www.mydealz.de/) mitbekommen, überprüft und eingebaut.
+Auch über das [Photovoltaik-Forum](https://www.photovoltaikforum.com/)
+kamen einige wertvolle Hinweise.
 Um möglichst verlässliche und detaillierte Werte zum nutzbaren Ertrag von
 PV-Anlagen auch mit besonderen Eigenschaften ohne oder mit Speicher zu erhalten,
 habe ich einen eigenen [Simulator](#SolBatSim) mit vielen Optionen entwickelt,
