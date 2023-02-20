@@ -150,7 +150,7 @@ verwiesen.
             - [Regelungsstrategien für Stromspeicher {#Regelungsstrategien}](#regelungsstrategien-fuer-stromspeicher)
             - [Speicherbatterie {#Speicherbatterie}](#speicherbatterie-speicherbatterie)
             - [Ladung der Batterie {#Batterieladung}](#batterieladung-batterieladung)
-            - [Entladung der Batterie {#Entnahme}](#einspeisung-aus-der-batterie-einspeisung)
+            - [Entnahme aus der Batterie {#Entnahme}](#entnahme-aus-der-batterie-entnahme)
         - [Inselanlage (mit Batteriespeicherung) {#Inselanlage}](#inselanlage-mit-batteriespeicherung-inselanlage)
         - [Kombination aus Hausnetzeinspeisung und Inselanlage {#Kombination}](#kombination-aus-hausnetzeinspeisung-und-inselanlage-kombination)
     - [Auswahl und Nutzung von Komponenten {#Komponenten}](#hinweise-für-die-auswahl-und-nutzung-von-komponenten-komponenten)
@@ -206,7 +206,7 @@ verwiesen.
         - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
         - [Speicherbatterie](#Speicherbatterie)
         - [Ladung der Batterie](#Batterieladung)
-        - [Entladung der Batterie](#Entnahme)
+        - [Entnahme aus der Batterie](#Entnahme)
     -   [Inselanlage (mit Batteriespeicherung)](#Inselanlage)
     -   [Kombination aus Hausnetzeinspeisung und
         Inselanlage](#Kombination)
@@ -1865,6 +1865,8 @@ wären kleine Verluste des Ladereglers und der Speicherbatterie von 12 + 9 kWh.
 Der 1 kWh Speicher wäre mit ca. 200 Vollzyklen pro Jahr nur mäßig belastet. Bei
 40 Ct/kWh Strompreis ergäbe sich eine jährliche Stromkosten-Einsparung von 72€.
 
+<!-- TODO Simulationen mit 6000 kWh Verbrauch --->   
+
 Selbst wenn die dafür nötigen Geräte günstig für z.B. 720€ erworben werden,
 würde die Amortisationszeit für die Aufrüstung mindestens 10 Jahre betragen --
 eher länger. Allerdings kann es sein, dass in dieser recht langen Zeitspanne
@@ -2267,7 +2269,7 @@ oder vom Kundendienst (Mail an service@deye.com.cn) programmieren lassen kann.
 
 ![Bild: Netzwechselrichter aus Batterie gespeist](
 Netzwechselrichter-aus-Batterie-gespeist.jpg){:width="600" .right}
-Besser ist allerdings, die Einspeisung regelbar zu gestalten.
+Etwas besser ist allerdings, die Einspeisung regelbar zu gestalten.
 Dazu bietet sich ein Netzwechselrichter wie von
 [Soyosource](https://de.aliexpress.com/item/1005001445871590.html) bzw.
 [PMSUN](https://www.amazon.de/PMSUN-netzgekoppelter-Wechselrichter-einstellbare-Batterieentladung/dp/B0B4RZNHF3)
@@ -2298,23 +2300,49 @@ Wenn der Wechselrichter mehrere Eingänge hat, kann man an die übrigen Eingäng
 auch noch direkt PV-Module anschließen,
 deren Ertrag dann nicht über die Batterie gepuffert wird.
 
+Deutlich effizienter als die bisher genannten Lösungen ist es,
+das Ausspeisen aus der Batterie ins Wechselstromnetz lastgesteuert zu machen
+und damit eine Nulleinspeisung zu realisieren.
+
+{:style="clear:both"}
+
+[![Bild: Y&H Sun-1000 GTIL Netzwechselrichter mit Limiter.png](
+Sun-1000_GTIL_Wechselrichter_mit_Limiter.png){:.right width="450"}](
+https://www.youtube.com/watch?v=jPgWE-qQ3SE&t=1012s)
+Ein [Sun GTIL Grid Tie Inverter with Limiter (GTIL)](
+https://de.aliexpress.com/item/32840070519.html) von Y&H,
+also ein Netzwechselrichter mit lastbasierter Strom-Begrenzungs-Regelung,
+<!--, gibt es mit 1000 und 2000 W Leistung -->
+ermöglicht eine einphasige Nulleinspeisung ohne Basteln und Programmieren.
+Man muss nur den Limiter-Sensor im Sicherungskasten an der Phase anbringen,
+über die die Einspeisung laufen soll. Dann lässt sich der Wechselrichter so
+einstellen, dass er maximal so viel einspeist wie zum Ausgleich der aktuellen
+Last auf dieser Phase benötigt wird, wie [von Dimitri vorgeführt](
+https://www.youtube.com/watch?v=jPgWE-qQ3SE).
+Für dreiphasige Anwendung ist gedacht, je Phase ein solches Gerät einzusetzen,
+was sich natürlich nur für größere Anlagen lohnt. Man kann sich aber auch
+einen 3-Phasen-Sensor für ein Gerät zusammenstricken, etwa wie [hier](
+https://www.photovoltaikforum.com/thread/193693-sun1000-gti-nulleinspeisung-mit-3-phasen-limiter/?pageNo=1)
+beschrieben.
+
 {:style="clear:both"}
 
 [![Bild: Balkonsolar mit Akku - AkkuDoktor](
 Balkonsolar_AkkuDoktor.png){:.center}](
 https://www.youtube.com/watch?v=yOcoux9IbzM)
 
-Am Elegantesten und vor allem Effizientesten, aber deutlich aufwendiger ist es,
-einen automatisch steuerbaren Netzwechselrichter zu verwenden,
-etwa von [Hoymiles](https://www.hoymiles.com/de/products/microinverter/dtu/),
-oder vor dem Wechselrichter einen elektronisch regelbaren DC-DC-Wandler,
-z.B. den [Joy-IT DPM8616](
+Am Elegantesten und Flexibelsten, aber deutlich aufwendiger ist es,
+einen per Software regelbaren Netzwechselrichter zu verwenden, etwa über die
+[Hoymiles DTU](https://www.hoymiles.com/de/products/microinverter/dtu/),
+oder vor einen beliebigen Netzwechselrichter einen elektronisch regelbaren
+DC-DC-Wandler zu hängen, z.B. den [Joy-IT DPM8616](
 https://www.idealo.de/preisvergleich/ProductCategory/10314.html?q=DPM8616),
 wie in einem [Video von Andreas Schmitz](
 https://www.youtube.com/watch?v=yOcoux9IbzM) vorgeführt.
-Dann lässt sich die Einspeisung sogar abhängig vom aktuellen Stromverbrauch
-regeln (allerdings mit einer gewissen Verzögerung), etwa über einen entsprechend
-programmierten Raspberry Pi.\
+Wenn in die Regelung ein elektronisch auslesbarer (möglichst dreiphasiger)
+Lastsensor eingebunden wird, lässt sich die Einspeisung abhängig vom aktuellen
+Stromverbrauch (mit einer gewissen Verzögerung) etwa über einen entsprechend
+programmierten Raspberry Pi so steuern, dass eine Nulleinspeisung erreicht wird.\
 Möglichkeiten, den Haushalts-Stromverbrauch automatisch auszulesen,
 sind im Abschnitt [Verbrauchsmessung](#Verbrauchsmessung) genannt.
 
@@ -2329,7 +2357,7 @@ kann man anstelle einer teuren proprietären Datenübertragungseinheit
 Bastel-Lösung [OpenDTU](https://github.com/roastedelectrons/HoymilesOpenDTU)
 bzw. [AhoyDTU](https://ahoydtu.de/) verwenden. Für beide Varianten gibt es
 schöne Videos auf YouTube wie [dieses](https://youtu.be/YJM913e0tiQ).
-Wer nicht selbst basteln kann oder will, findet z.B. auf
+Wer nicht selbst die Elektronik zusammenlöten kann oder will, findet z.B. auf
 [eBay-Kleinanzeigen](https://www.ebay-kleinanzeigen.de/s-hoymiles-dtu-ahoy/k0)
 auch betriebsfertige Geräte ab 30€, Bausätze ab 20€. Man kann sie sowohl zum
 [Auslesen](https://www.heise.de/select/ct/2022/24/2224315343257577596)
@@ -3296,7 +3324,7 @@ LocalWords: document sections rentabilitaet nanlagen oekonomisch post
 LocalWords: Nutzungsvarianten stromwandler mikrowechselrichter text
 LocalWords: stromrichter solarregler standard conditions Reflexions
 LocalWords: Idealbedingungen operating temperature Timeseries crystSi
-LocalWords:  
+LocalWords:   with entnahme
 LocalWords:  
 LocalWords:  
 LocalWords:  
