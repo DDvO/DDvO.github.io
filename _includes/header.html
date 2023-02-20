@@ -3,7 +3,7 @@
   <div class="wrapper" style="line-height: 54px">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    Web Pearls by <a class="site-title_disabled" rel="author" href="{{ site.url }}">{{ site.title | escape }}</a>
+    Web Pearls by <a class="site-title_disabled" rel="author" href="{{ site.url }}">{{ site.author | escape }}</a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
