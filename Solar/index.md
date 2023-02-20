@@ -1528,8 +1528,7 @@ weil der Wechselrichter die Stromzufuhr sofort unterbricht, wenn man den
 Stecker aus der Dose zieht und seine blanken Kontakte berühren kann.
 Anfang 2023 [sprach sich der VDE dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv),
-„den Schuko-Stecker für die Einspeisung
-bis zu einer Systemgesamtleistungsgrenze von 800 W zu dulden“.
+„den Schuko-Stecker für die Einspeisung [...] zu dulden“.
 
 ![Bild: Wieland-Unterputz-Dose](Wieland-Unterputz-Dose.png){:.right width="450"}
 Man kann aber auch, wie vom VDE bislang empfohlen, eine spezielle
@@ -1553,6 +1552,9 @@ allgemeineren EU-Regel für die vereinfachte Nutzung eine Obergrenze von 800 W.
 Seit Anfang 2023 [empfiehlt selbst der VDE](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), sich
 künftig auch in Deutschland an der „Bagatellgrenze bis 800 W“ zu orientieren.
+
+Inzwischen gibt es eine Petition für die
+[schnelle Umsetzung des VDE-Positionspapiers](https://balkon.solar/petition/).
 
 In Deutschland sind PV-Anlagen anmeldepflichtig, wenn sie ins externe Netz
 einspeisen können, wobei der Aufwand für Balkonkraftwerke nicht so groß ist.
