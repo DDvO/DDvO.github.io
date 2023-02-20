@@ -1054,9 +1054,10 @@ wenn das darüber erwärmte Wasser nicht zeitnah verwendet wird.
 Auf jeden Fall muss sichergestellt werden, dass das Wasser im Boiler
 nicht überhitzt, falls zu viel PV-Energie vorhanden ist.\
 Natürlich setzt eine Nutzung von Solarstrom aus Überschuss voraus,
-dass der aktuelle sonstige Stromverbrauch [gemessen wird](
-https://www.my-pv.com/de/produkte/my-pv-wifi-meter) und in die Steuerung
-eingeht. Beispielsweise beim [AC Thor](
+dass der aktuelle sonstige Stromverbrauch gemessen wird [(z.B. von my-PV)](
+https://www.my-pv.com/de/produkte/my-pv-wifi-meter), und in die Regelung
+[(z.B. von Victron)](https://www.victronenergy.com/live/actor_ess) eingeht.
+Beispielsweise beim [AC Thor](
 https://www.klimaworld.com/ac-thor-set-pv-manager-fuer-eigenverbrauch-warmwasserbereitung-mit-solarstrom.html) und beim [MYPV AC ELWA 2](
 https://www.klimaworld.com/mypv-ac-elwa-2-elektrischer-heizstab-3-5-kw.html)
 ist das der Fall. Allerdings verwenden beide eine AC-Kopplung des Heizstabes,
@@ -2255,13 +2256,14 @@ oder sogar vorteilhaft wäre, dürfte von den verwendeten Geräten abhängig sei
 
 Wenn man schon einen Solar-Wechselrichter hat und diesen für eine ganz einfache
 Netzeinspeisung verwenden möchte, könnte es schon genügen, ihn (über eine
-Sicherung und soweit nötig eine automatische Unterspannungsabschaltung)
+Sicherung und wenn nötig eine gesonderte automatische Unterspannungsabschaltung)
 mit der Batterie zu verbinden und nach Bedarf über einen Schalter zu steuern ---
 allerdings nur, wenn die Batteriespannung gut im Eingangsspannungsbereich des
 Wechselrichters liegt und es passt, ihn mit seiner vollen oder limitierten
 Leistung zu betreiben. Dazu kann man beispielsweise einen auf 300 W begrenzten
-PV-Eingang nutzen oder die Drosselung in die Firmware programmieren (lassen),
-wie es z.B. der Kundendienst von Deye (Mail an service@deye.com.cn) anbietet.
+PV-Eingang nutzen oder die Drosselung konfigurieren, wie man es z.B. beim Deye
+[selbst machen](https://www.photovoltaikforum.com/thread/191715-deye-sun600-umstellen-auf-800w/?pageNo=9#post3019090)
+oder vom Kundendienst (Mail an service@deye.com.cn) programmieren lassen kann.
 
 ![Bild: Netzwechselrichter aus Batterie gespeist](
 Netzwechselrichter-aus-Batterie-gespeist.jpg){:width="600" .right}
@@ -3290,7 +3292,7 @@ LocalWords: Charger Discharger Board Under Over Voltage Protection
 LocalWords: Speicherungs current eigenverbrauchs Oekonomie magazine
 LocalWords: rendite solbatsim Regelungs Eigenverbrauchsv transfer
 LocalWords: telemetry gateway distort aufteilung orientierungen cell
-LocalWords: document sections rentabilitaet nanlagen oekonomisch
+LocalWords: document sections rentabilitaet nanlagen oekonomisch post
 LocalWords: Nutzungsvarianten stromwandler mikrowechselrichter text
 LocalWords: stromrichter solarregler standard conditions Reflexions
 LocalWords: Idealbedingungen operating temperature Timeseries crystSi
