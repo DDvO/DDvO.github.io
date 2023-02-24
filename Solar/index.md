@@ -1156,11 +1156,22 @@ und Regelungs-Aufwände an, weshalb sie sich nur bei größeren PV-Anlagen lohne
 
 ![Bild: Energiekosten-Messgerät in Steckdosenform](
 Energiekosten-Messgeraet.png){:.right width="300"
-style="margin-left: 70px; margin-right: 70px"}
+style="margin-left: 30px; margin-right: 30px"}
 Den Stromverbrauch von Elektrogeräten im Haushalt kann man recht einfach
-mit Energiekosten-Messgeräten in Steckdosenform bestimmen. Diese messen
-nicht nur den momentanen Stromverbrauch in Watt, sondern bei längerer
-Verwendung auch die über die Zeit verbrauchte Strommenge in kWh.
+mit Strom-Messgeräten in Steckdosenform bestimmen. Diese messen nicht nur
+die momentan von angeschlossenen Verbrauchern beanspruchte Leistung in Watt,
+sondern bei längerer Verwendung auch die über die Zeit verbrauchte Strommenge
+in kWh.\
+Man kann ein solches Gerät auch dafür nutzen, die Einspeisung seiner
+Stecker-Solar-Anlage ins Hausnetz zu messen (wobei möglicherweise die
+Zahlen etwas zu gering dargestellt werden, weil anscheinend einige solcher
+Messgeräte die im Einspeise-Fall etwas erhöhte Spannung nicht berücksichtigen).\
+Ein Test smarter Steckdosen mit Verbrauchsmessung findet sich z.B. [hier](
+https://www.computerbild.de/bestenlisten/Smarte-Steckdose-Test-21931325.html)
+und bescheinigt übrigens dem Shelly Plug S eine ungenaue Messung --
+was nach Aussagen von Nutzern in Foren auch für das Shelly 1PM und 3EM gilt.
+
+{:style="clear:both"}
 
 Den Jahresverbrauch seines Haushalts erfährt man automatisch über die
 jährliche Stromabrechnung. Die Grundlast lässt sich über den Stromzähler
@@ -1182,14 +1193,14 @@ eines Stromspeichers.
 * Man kann sich die Verbrauchsdaten über den
 sog. [„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
 oder [„Powerfox“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
-aus dem Haushalts-Stromzähler übermitteln lassen --
+aus dem offiziellen Haushalts-Stromzähler übermitteln lassen --
 sofern ein moderner Stromzähler verbaut ist und man Zugang zu diesem hat.
-* Alternativ kann man ein 3-Phasen-Energiemessgerät wie den
+* Alternativ kann man ein 3-Phasen-Energiemessgerät wie das
 [Shelly 3EM](https://www.shelly.cloud/de/products/product-overview/shelly-3em-1)
-oder den teureren, aber wohl genaueren [my-PV WiFi Meter](
+oder das teurere, aber wohl genauere [my-PV WiFi Meter](
 https://www.my-pv.com/de/produkte/my-pv-wifi-meter) verwenden.
-Dieses wird in den Sicherungskasten der Wohnung eingebaut,
-was ein Fachmann machen sollte, und per WLAN eingebunden.
+Das wird in den Sicherungskasten der Wohnung eingebaut
+(was von Fachpersonal gemacht werden sollte) und per WLAN eingebunden.
 
 ### Stromzähler und Rücklaufsperre {#Stromzähler}
 
@@ -3469,4 +3480,4 @@ LocalWords:
 LocalWords:  
 LocalWords:  
 LocalWords:  
- -->
+-->
