@@ -561,24 +561,25 @@ Eine Aufteilung in zwei Orientierungen, z.B. die klassische
 **um zu versuchen, auf die Vormittags- und Nachmittagssonne zu optimieren,
 lohnt sich nicht wirklich**, selbst
 wenn man den Ertragsüberschuss über die Mittagszeit kaum nutzen kann.
-Das liegt daran, dass die Strahlungsintensität aus südlichen Richtungen
-in der Tages- und Jahressumme viel höher ist -- die Sonne scheint dort einfach
-viel stärker und häufiger (besonders im Winter) als im Osten oder Westen.
+Das liegt daran, dass die Menge der Direktstrahlung aus südlichen Richtungen
+in Summe über den Tag und übers Jahr viel höher ist --
+die Sonne scheint von dort einfach stärker und häufiger (besonders im Winter)
+als von weiter östlich oder westlich.
 
 Dieser Effekt wird selbst dann nicht durch eine geringere Nutzbarkeit tagsüber
-ausgeglichen, wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr nur eine
-Grundlast von z.B. 100 W hat: Dann hat Ost-West-Ausrichtung
-im Sommer einen leichten Vorteil, während zu allen anderen Jahreszeiten
-die Südausrichtung mehr Eigenverbrauch ermöglicht.\
-Erst wenn täglich von 8 bis sogar 18 Uhr nur 50 W Grundlast vorliegt,
+ausgeglichen, wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr nur Grundlast
+von z.B. 100 W hat:
+Dann hat die Ost-West-Ausrichtung im Sommer einen leichten Vorteil, aber zu
+allen anderen Jahreszeiten ermöglicht die Südausrichtung mehr Eigenverbrauch.\
+Erst wenn täglich von 8 bis sogar 18 Uhr nur z.B. 50 W Grundlast vorliegt,
 bringt eine Ost-West-Ausrichtung einen geringen Vorteil beim Eigenverbrauch.
 Allerdings bewegt sich dann der Eigenverbrauch bei nur 200 kWh im Jahr,
 weshalb sich die Amortisation deutlich länger hinzieht als im Durchschnitt.
 
-Obwohl eine West-Ost-Ausrichtung im Normalfall nichts bringt, schadet sie
-andererseits auch kaum, wenn man sie etwa aus baulichen Gründen trotzdem wählt,
-besonders wenn man tagsüber im Vergleich zu den Morgen- und Abendstunden
-eher wenig Verbrauch hat.
+Obwohl eine geteilte Ausrichtung im Vergleich zur reinen Südausrichtung nur
+in besonderen Ausnahmefällen mehr bringt, schadet sie ansonsten aber auch kaum,
+wenn man sie (etwa aus baulichen Gründen) trotzdem wählt, besonders wenn man
+tagsüber im Vergleich zu den Morgen- und Abendstunden eher wenig Verbrauch hat.
 
 Dies ist das Ergebnis einer Reihe [genauer Simulationen](#SolBatSim)
 für einen Haushalt in Süddeutschland mit 3000 kWh Jahresverbrauch mit einer
@@ -956,6 +957,21 @@ Eigenverbrauch  =  374 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
 Eigenverbrauch  =  200 kWh (opt.) wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 
+<!--
+Variante Nord-Süd 50° Süd 20° Nord o.ä. bringt nichts
+https://www.photovoltaikforum.com/thread/122364-ost-west-oder-besser-optimal-s%C3%BCd/?postID=1871373#post1871373 Favorit
+
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_180deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
+Neigungswinkel  =  15° Azimut =  180°
+Neigungswinkel  =  30° Azimut =    0°
+PV-Bruttoertrag =  652 kWh
+PV-Nettoertrag  =  561 kWh bei System-Wirkungsgrad 86%
+Last Haushalt   = 3000 kWh
+Eigenverbrauch  =  462 kWh
+Eigenverbrauch  =  361 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  197 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+-->
+
 **Also auch bei einem Verbrauchsprofil, das stark auf die Morgen- und
 Abendstunden konzentriert ist, bringt eine Aufteilung der Modul-Ausrichtung
 keinen Vorteil für den Eigenverbrauch.** Dagegen spricht zusätzlich 
@@ -967,7 +983,7 @@ Was die für den Eigenverbrauch optimale Neigung der PV-Module
 bei einer Anlage mit 600 Wp betrifft, ergeben die Simulationen folgendes:
 Bei reiner Südausrichtung (0° Azimut), ebenso bei einer Orientierung von +/- 30°
 oder +/- 60° abweichend von Süden, ist eine Neigung von ungefähr 30° optimal.
-Bei einer Orientierung von +/-90° abweichend von Süden (also rein Ost-West) 
+Bei einer Orientierung von +/- 90° abweichend von Süden (also rein Ost-West)
 ist bei einem normalen Lastprofil eine Neigung von ungefähr 15° am günstigen,
 bei tagsüber nur Grundlast wieder 30° optimal.
 Wobei eine Winkelabweichung von +/- 10° sehr wenig ausmacht.
@@ -3439,13 +3455,13 @@ LocalWords: converter step consumption pdf balancer equalizer mppt
 LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test
 LocalWords: Charger Discharger Board Under Over Voltage Protection
 LocalWords: Speicherungs current eigenverbrauchs Oekonomie magazine
-LocalWords: rendite solbatsim Regelungs Eigenverbrauchsv transfer
+LocalWords: rendite solbatsim Regelungs Eigenverbrauchsv transfer WSW
 LocalWords: telemetry gateway distort aufteilung orientierungen cell
 LocalWords: document sections rentabilitaet nanlagen oekonomisch post
 LocalWords: Nutzungsvarianten stromwandler mikrowechselrichter text
 LocalWords: stromrichter solarregler standard conditions Reflexions
 LocalWords: Idealbedingungen operating temperature Timeseries crystSi
-LocalWords:   with entnahme bend
+LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin
 LocalWords:  
 LocalWords:  
 LocalWords:  
