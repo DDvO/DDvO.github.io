@@ -141,7 +141,7 @@ verwiesen.
         - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
     - [Eigenverbrauch und seine Berechnung {#Eigenverbrauch}](#eigenverbrauch-und-seine-berechnung)
         - [Typische Rentabilität kleiner PV-Anlagen {#rentabel}](#typische-rentabilitaet-kleiner-pv-anlagen-rentabel)
-        - [Online-Berechnung {#Online}](#online-berechnung)
+        - [Online-Berechnung {#online}](#online-berechnung)
         - [Ökonomisch orientierter PV-Rechner {#PV-Rechner}](#oekonomisch-orientierter-pv-rechner)
         - [Hochauflösende Simulation: SolBatSim {#SolBatSim}](#solbatsim-hochauflösende-simulation)
     - [Nutzungsvarianten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
@@ -197,7 +197,7 @@ verwiesen.
     - [Stromzähler und Rücklaufsperre](#Stromzähler)
 -   [Eigenverbrauch und seine Berechnung](#Eigenverbrauch)
     -   [Typische Rentabilität kleiner PV-Anlagen](#rentabel)
-    -   [Online-Berechnung](#Online)
+    -   [Online-Berechnung](#online)
     -   [Ökonomisch orientierter PV-Rechner](#PV-Rechner)
     -   [Hochauflösende Simulation: SolBatSim](#SolBatSim)
 -   [Nutzungsvarianten](#Nutzung)
@@ -1395,14 +1395,16 @@ allerdings noch 2-3 Jahre länger rechnen.
 In die Gesamt-Ökobilanz einer PV-Anlage und ihrer Nutzung gehen natürlich
 noch weitere Effekte ein, die sich aber kaum quantifizieren lassen.
 
-### Online-Berechnung {#Online}
+### Online-Berechnung {#online}
 
 Der Eigendeckungsanteil und Eigenverbrauchsanteil lässt sich sehr einfach
 näherungsweise mit dem „[Stecker-Solar-Simulator](
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)“
 für Balkonkraftwerke bzw. dem „[Unabhängigkeitsrechner](
 https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)“
-für Hausdach-PV-Anlagen der HTW Berlin berechnen.
+für Hausdach-PV-Anlagen der HTW Berlin berechnen. Hier im Bild die Ausgabe
+bei 3000 kWh Jahres-Stromverbrauch, einem Strompreis von 40 Ct/kWh und für
+PV-Module mit Südausrichtung, 35° Anstellwinkel (Neigung) und ohne Verschattung.
 [![Bild: Stecker-Solar-Simulator](Stecker-Solar-Simulator.png)](
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
 Beide Simulationen nutzen intern Daten der Wetterstation Lindenberg bei Berlin
@@ -1421,6 +1423,22 @@ Stromversorgung, den man zur Ertrags- und [Wirtschaftlichkeitsberechnung von
 PV-Speichern](https://www.youtube.com/watch?v=bE5fLy0w3MM&t=674s)
 verwenden kann (und zwar durch Multiplikation mit dem Stromverbrauch).
 Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.
+
+Von der sehr soliden kommerziellen
+[Simulationssoftware PV*SOL](https://valentin-software.com/)
+gibt es auch eine kostenlose
+[Online-Variante](https://pvsol-online.valentin-software.com/).
+Auch diese ist eigentlich für große Haus-PV-Anlagen gedacht, aber wenn man beim
+Wechselrichter 'TSUN' auswählt, lässt sie sich für Balkonanlagen verwenden,
+geht aber von einem für Stecker-Solar-Anlagen zu hohen System-Wirkungsgrad
+(über 92%) aus.
+Der mögliche Eigenverbrauch hängt natürlicherweise stark vom gewählten
+Lastprofil ab. Mit der Auswahl '2 Personen mit einem Kind'
+bekommt man Ergebnisse, die dem von der HTW Berlin verwendeten Durchschnitt
+am nächsten kommen (aber etwas niedriger ausfallen).
+<!-- Leider werden die Details der Lastprofile nicht offengelegt. -->
+[![Bild: PV-SOL-online Ergebnis](PV-SOL-online_3000kWh_600Wp_S_35.png)](
+https://pvsol-online.valentin-software.com/)
 
 Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
 auch das [PVTool von Andreas Schmitz („AkkuDoktor“)](https://www.akkudoktor.net/pvtool-rechner/).
@@ -1465,9 +1483,7 @@ Profil „Peak Morgen Abends“ eine viel zu niedrige Netzeinspeisung von 52 kWh
 Außerdem wird etwas verwirrend im Gesamtergebnis nicht der resultierende
 Eigenverbrauch (hier 612 kWh) dargestellt, sondern der Nettoertrag und der Netzbezug.
 
-<!-- TODO Simulationen mit PV*Sol. --->   
-
-Alle hier genannten Simulationen setzen bei Einsatz eines Pufferspeichers
+Die hier genannten Simulationen setzen bei Einsatz eines Pufferspeichers
 eine ideale Speicherstrategie voraus.
 Ihre Ergebnisse **gelten nicht bei Verwendung einer primitiven Regelung**, wie
 sie für [Balkonkraftwerke mit Speicherbatterie](#Batteriepuffer) typisch sind.
@@ -1996,7 +2012,8 @@ PV-Eigenverbrauch           =  639 kWh
 Netzeinspeisung             =    0 kWh
 PV-Eigenverbrauchsanteil    =   97 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
-
+-->
+<!--
 ./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000
 
 Verbrauch durch Haushalt    = 6000 kWh
@@ -2015,7 +2032,8 @@ PV-Eigenverbrauch           =  651 kWh
 Netzeinspeisung             =    0 kWh
 PV-Eigenverbrauchsanteil    =   99 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   11 % des Verbrauchs (Autarkiegrad)
-
+-->
+<!--
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1500
 
 Speicherkapazität           = 1500 Wh, DC-gekoppelt
@@ -2032,8 +2050,9 @@ PV-Eigenverbrauch           =  640 kWh
 Netzeinspeisung             =    0 kWh
 PV-Eigenverbrauchsanteil    =   97 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
-
-/Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 500
+-->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 500
 
 Speicherkapazität           =  500 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
