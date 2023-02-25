@@ -1185,8 +1185,11 @@ relativ einfach bestimmen, indem man die Differenz der Zählerstände
 über einen Zeitraum von mehreren Stunden, zu dem sonst keine Verbraucher
 eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
 
-Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
-z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
+Eine Übersicht von Geräten zur Messung auch der eingespeisten Strommenge findet
+sich z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
+Und ein sehr schöner Artikel zu verschiedenen Shelly-Varianten und ihrer
+Nutzung [hier](https://blog.helmutkarger.de/balkonkraftwerk-teil-6-monitoring/).
+Darin auch die Info, dass beim Shelly Plus 1PM die Genauigkeit verbessert wurde.
 
 Der Haushalts-Stromverbrauch lässt sich auch kontinuierlich und automatisiert
 messen und übertragen. Das kann für eine Online-Ablesung und genauere Analyse
