@@ -2294,8 +2294,8 @@ Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 
 -->
 
-Die im [folgenden Abschnitt](#Entnahme) aufgeführten Bastellösungen geben keinen
-Lastvorrang, sondern führen den erzeugten Solarstrom nur in die Batterie.
+Die im [folgenden Abschnitt](#Entnahme) aufgeführten Entnahme-Varianten geben
+keinen Lastvorrang, sondern führen den erzeugten Solarstrom nur in die Batterie.
 Das ist natürlich am einfachsten, hat aber den großen Nachteil, dass zu den
 Zeiten, wo die Batterie voll ist, **viel PV-Energie verloren geht** ---
 etwa an sonnenreichen Tagen am Nachmittag, wenn die Solarleistung relativ groß
@@ -2508,18 +2508,25 @@ wobei die Regelung den aktuellen Verbrauch über einen
 [Video von Andreas Schmitz](https://www.youtube.com/watch?v=yOcoux9IbzM)
 vorgeführt.
 
-[![Bild: Hardware für OpenDTU](
-OpenDTU_wiring_ESP32.png){:.right width="300"}](
-https://github.com/tbnobody/OpenDTU)
+{:style="clear:both"}
+
+[![Bild: DTUs im Weckglas](
+DTUs_im_Weckglas.jpg){:.right width="340"}](
+https://blog.helmutkarger.de/balkonkraftwerk-teil-8-opendtu-und-ahoydtu-fuer-hoymiles-wechselrichter/)
 An einem Netzwechselrichter der Hoymiles HM-Serie und für manche TSUN-Geräte
 kann man anstelle einer teuren proprietären Datenübertragungseinheit
-[Hoymiles DTU](https://www.hoymiles.com/de/products/microinverter/dtu/),
+[Hoymiles DTU](https://www.hoymiles.com/de/products/microinverter/dtu/)
 (engl. *data transfer unit* oder allgemein *telemetry gateway*) die offene
 Bastel-Lösung [OpenDTU](https://github.com/roastedelectrons/HoymilesOpenDTU)
 bzw. [AhoyDTU](https://ahoydtu.de/) verwenden. Für beide Varianten gibt es
-schöne Videos auf YouTube wie [dieses](https://youtu.be/YJM913e0tiQ).
+schöne Anleitungen wie [diese](
+https://blog.helmutkarger.de/balkonkraftwerk-teil-8-opendtu-und-ahoydtu-fuer-hoymiles-wechselrichter/)
+und hilfreiche Videos auf YouTube wie [dieses](https://youtu.be/YJM913e0tiQ).
 Wer nicht selbst die Elektronik zusammenlöten kann oder will, findet z.B. auf
 [eBay-Kleinanzeigen](https://www.ebay-kleinanzeigen.de/s-hoymiles-dtu-ahoy/k0)
+[![Bild: Hardware für OpenDTU](
+OpenDTU_wiring_ESP32.png){:.left width="230"; margin-right: 20px"}](
+https://github.com/tbnobody/OpenDTU)
 auch betriebsfertige Geräte ab 30€, Bausätze ab 20€. Man kann sie sowohl zum
 [Auslesen](https://www.heise.de/select/ct/2022/24/2224315343257577596)
 der PV-Ertrags- und Geräte- Daten als auch zum [Steuern](
