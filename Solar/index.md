@@ -31,9 +31,11 @@ keywords:
 - Beispiel
 - Konfiguration
 - Solarzellen
+- Teilverschattung
 - Solarpanels
 - Solarmodule
 - Ausrichtung
+- Selbstverschattung
 - PV-Heizstab
 - Speicherung
 - Stromspeicher
@@ -562,17 +564,47 @@ kaum über die Hälfte der angegebenen Spitzenleistung hinaus.
 
 #### Aufteilung in mehrere Orientierungen {#Aufteilung}
 
-Eine Aufteilung in zwei Orientierungen, z.B. die klassische
-**Ost-West-Ausrichtung** oder irgendwo dazwischen nach Südosten und Südwesten,
-**um zu versuchen, auf die Vormittags- und Nachmittagssonne zu optimieren,
-lohnt sich nicht wirklich**, selbst
-wenn man den Ertragsüberschuss über die Mittagszeit kaum nutzen kann.
-Das liegt daran, dass die Menge der Direktstrahlung aus südlichen Richtungen
-in Summe über den Tag und übers Jahr viel höher ist --
+Seit vielen Jahren hält sich in der Community hartnäckig die Legende,
+eine Aufteilung in zwei Orientierungen, z.B. die klassische
+Ost-West-Ausrichtung oder irgendwo dazwischen nach Südosten und Südwesten,
+sei günstig, um auf die Vormittags- und Nachmittagssonne zu optimieren.
+Aber dieser Mythos wurde bereits/spätestens [im Februar 2014 widerlegt](
+https://www.photovoltaikforum.com/thread/97856-mythos-eigenverbrauchsoptimierung-mit-ost-west-ausrichtung/).
+
+**Jegliche Abweichung von der Südausrichtung mindert den Jahresertrag**,
+und auch **für den Jahres-Eigenverbrauch lohnt sich eine Ost-West-Aufteilung
+nicht wirklich**,
+selbst wenn man den Ertragsüberschuss über die Mittagszeit kaum nutzen kann.
+* Das liegt vor Allem daran, dass die Menge der Direktstrahlung aus südlichen
+Richtungen in Summe über den Tag und übers Jahr viel höher ist --
 die Sonne scheint von dort einfach stärker und häufiger (besonders im Winter)
 als von weiter östlich oder westlich.
+* Außerdem ist zwar morgens der Ertrag bei östlicher Ausrichtung höher,
+aber der Ertrag gleichzeitig auf westlicher Seite umso geringer,
+und gegen Abend entsprechend umgekehrt.
+<!--
+https://www.photovoltaikforum.com/core/attachment/44638-pv-vergleich-s-vs-ow-v2-pdf/
+-->
+* Bei niedrigem Sonnenstand, wo die Ost-West-Aufteilung Vorteile bringen soll,
+ist die Tendenz zur Verschattung und damit Minderertrag viel größer.
 
-Dieser Effekt wird selbst dann nicht durch eine geringere Nutzbarkeit tagsüber
+<!--
+https://www.photovoltaikforum.com/thread/97856-mythos-eigenverbrauchsoptimierung-mit-ost-west-ausrichtung/?postID=1050024#post1050024
+-->
+<!--
+* Nachdem bei Ost-West-Ausrichtung oft eine stärkere Neigung gewählt wird
+(anscheinend, weil sie als günstiger angesehen wird, aber ist das wirklich so?
+Ich sehe besonders beim Ertrag, weniger beim Eigenverbrauch, das Gegenteil),
+bringen sie bei Diffuslicht weniger:
+Steil geneigte Anlagen "schauen" teilweise in den dunklen Horizont, während
+flach geneigte Anlagen bei diffusem Licht mehr vom hellen Himmel "sehen".
+https://www.photovoltaikforum.com/thread/97856-mythos-eigenverbrauchsoptimierung-mit-ost-west-ausrichtung/?postID=1049926#post1049926
+-->
+[![Bild: Vergleich Ertrag bei Süd- und O-W-Ausrichtung bei 30° Dachneigung](
+PV_Vergleich_S_vs_OW_v2.png)](
+https://www.photovoltaikforum.com/core/attachment/44638-pv-vergleich-s-vs-ow-v2-pdf/)
+
+Diese Effekte werden selbst dann nicht durch eine geringere Nutzbarkeit tagsüber
 ausgeglichen, wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr nur Grundlast
 von z.B. 100 W hat:
 Dann hat die Ost-West-Ausrichtung im Sommer einen leichten Vorteil, aber zu
@@ -582,12 +614,41 @@ bringt eine Ost-West-Ausrichtung einen geringen Vorteil beim Eigenverbrauch.
 Allerdings bewegt sich dann der Eigenverbrauch bei nur 200 kWh im Jahr,
 weshalb sich die Amortisation deutlich länger hinzieht als im Durchschnitt.
 
+Leider wird die falsche Vorstellung, dass durch Ost-West-Anlagen
+der Eigenverbrauch „oftmals zusätzlich angehoben werden kann“,
+immer noch durch diverse Publikationen gefördert --
+selbst von professionellen Stellen wie
+[PV Austria](https://pvaustria.at/pv-ausrichtung/),
+die es eigentlich besser wissen müssten. Das hat vermutlich folgende Gründe:
+* Kommerzieller und energiepolitischer Grund:
+Besitzer von Häusern mit nach Ost/West geneigten Dächern,
+bei denen also aus baulichen Gründen eine Südausrichtung nicht möglich ist,
+sollen stärker motiviert werden, sich auch eine PV-Anlage anzuschaffen.
+* Energiepolitischer Grund (Stichwort *Systemdienlichkeit*):
+Durch mehr Ost-West-Ausrichtung in einer Region wird eine gleichmäßigere
+Verteilung der Gesamt-PV-Leistung über den Tagesverlauf erreicht, indem eine
+mittägliche Überproduktion teilweise auf morgens und abends verlagert wird.
+
+<!--
+https://www.photovoltaikforum.com/thread/97856-mythos-eigenverbrauchsoptimierung-mit-ost-west-ausrichtung/?postID=1046716#post1046716
+* Unverständnis von Entscheidungsträgern über die physikalischen Gegebenheiten.
+-->
+
+Bei Verwendung vieler Module ist ein Vorteil der geteilten Ost-West-Ausrichtung,
+dass man auf einer gegebenen Grundfläche mehr Modulfläche unterbringen kann --
+bei 30° Neigung theoretisch 15% mehr. Allerdings zu höheren Kosten (auch pro Wp)
+und mit mehr Tendenz zur Verschattung zu den Zeiten direkterer Einstrahlung.
+<!--
+https://www.photovoltaikforum.com/thread/97856-mythos-eigenverbrauchsoptimierung-mit-ost-west-ausrichtung/?postID=1050021#post1050021
+https://www.photovoltaikforum.com/thread/97856-mythos-eigenverbrauchsoptimierung-mit-ost-west-ausrichtung/?postID=1050024#post1050024
+-->
 Obwohl eine geteilte Ausrichtung im Vergleich zur reinen Südausrichtung nur
-in besonderen Ausnahmefällen mehr bringt, schadet sie ansonsten aber auch kaum,
+in besonderen Ausnahmefällen mehr bringt, schadet sie ansonsten aber auch wenig,
 wenn man sie (etwa aus baulichen Gründen) trotzdem wählt, besonders wenn man
 tagsüber im Vergleich zu den Morgen- und Abendstunden eher wenig Verbrauch hat.
 
-Dies ist das Ergebnis einer Reihe [genauer Simulationen](#SolBatSim)
+Die genannten Auswirkungen auf den Eigenverbrauch sind
+das Ergebnis einer Reihe [genauer Simulationen](#SolBatSim)
 für einen Haushalt in Süddeutschland mit 3000 kWh Jahresverbrauch mit einer
 Stecker-PV-Anlage mit 2 × 300 Wp PV-Modulen und Gesamtsystem-Wirkungsgrad 86%.\
 Für die Ausrichtungen -/+ 90° (also Ost/West), +/- 60°, +/- 30° und 0° (Süd)
@@ -980,10 +1041,15 @@ Eigenverbrauch  =  197 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 
 **Also auch bei einem Verbrauchsprofil, das stark auf die Morgen- und
 Abendstunden konzentriert ist, bringt eine Aufteilung der Modul-Ausrichtung
-keinen Vorteil für den Eigenverbrauch.** Dagegen spricht zusätzlich 
-die Tendenz zu stärkerer Verschattung durch den flacheren Sonnenstand.
-Außerdem ist die geteilte Montage meist aufwendiger, und die beiden Richtungen
-verlangen zur Optimierung eine getrennte [MPPT-Regelung](#MPPT).
+keinen Vorteil für den Eigenverbrauch.**
+Dagegen spricht zusätzlich die Tendenz zu stärkerer Verschattung bei flacherem
+Sonnenstand, etwa durch Gebäude und Bäume in der Umgebung und auch
+durch die PV-Module gegenseitig (*Selbstverschattung*).
+Außerdem ist die geteilte Montage meist aufwendiger, und geteile
+Ausrichtungen erfordern zur Optimierung eine getrennte [MPPT-Regelung](#MPPT).
+[![Bild: Selbstverschattung gleichartiger Modulreihen](
+PV_Vergleich_S_vs_OW_add_v1.png)](
+https://www.photovoltaikforum.com/core/attachment/44467-pv-vergleich-s-vs-ow-add-v1-pdf/)
 
 Was die für den Eigenverbrauch optimale Neigung der PV-Module
 bei einer Anlage mit 600 Wp betrifft, ergeben die Simulationen folgendes:
@@ -2837,7 +2903,7 @@ Wirkungsgrad haben.
 Bypass-Dioden-bei-der-Arbeit.jpg){:.center}
 Leider bricht die Leistung von in Reihe geschalteten Zellen ein, sobald auch
 nur eine davon verschattet wird. Daher werden in den üblichen größeren Modulen
-sog. *Bypass-Dioden* eingesetzt, die bei Teilverschattung immerhin einen
+sog. *Bypass-Dioden* eingesetzt, die bei *Teilverschattung* immerhin einen
 Teil der Leistung fließen lassen.
 
 In vielen PV-Modulen werden inzwischen sog.
@@ -3419,6 +3485,7 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
     machen lassen oder das Update auf mindestens Version MW3\_16U_5406\_1.53
     selbst [über einen PC durchführen](
     https://zinnzgreen.de/service/deye-mikrowechselrichter-systemupdate/).
+    <!-- https://www.photovoltaikforum.com/thread/191598-fw-update-offline-deye-sun600g3-eu230-und-baugleiche/ -->
     Ohnehin empfiehlt sich, solchen Geräten nur Zugang zum Gastnetz zu geben.
 
 ### Kombi-Anlage {#Kombianlage}
@@ -3524,7 +3591,7 @@ LocalWords: stromrichter solarregler standard conditions Reflexions
 LocalWords: Idealbedingungen operating temperature Timeseries crystSi
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml
-LocalWords: metadata
+LocalWords: metadata add Austria
 LocalWords:  
 LocalWords:  
 LocalWords:  
