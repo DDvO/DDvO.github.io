@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Photovoltaic systems for home and to go"
+date:   2022-03-20 20:36:16 +0100
+lang: en
+---
+
+This [article](https://Solar.DavOh.de/) is available in German only.
+
+# Here is an English translation of its summary.
+
+A so-called *balcony power plant* allows for harvesting
+solar electricity in very simple and rather inexpensive way
+and feeding it over a plug socket directly into the house net.
+This saves electricity costs and,
+depending on the components used and their installation,
+can pay off after just a few years of operation --
+yet only to the extent that the electricity is also consumed at the same time.
+As this mode of operation passes on surplus electricity to the general public
+and does not require a battery, it is best for the overall ecological balance.
+
+For certain independence from solar radiation, which is not always strong,
+and from the general power grid, one needs a rechargeable battery as well as
+further devices, which makes the whole thing much more complex and expensive.
+With a suitable automatic control that takes into account
+the current consumption in the household,
+excess energy can be temporarily stored and, with certain losses,
+retrieved as needed.
+A stand-alone system can also be used during power outages, as long as
+the storage capacity and irradiation are sufficient for recharging.
+
+![Photo: balcony and rooftop power plant](
+https://Solar.DavOh.de/Balkonkraftwerk_und_Dach-PV-Anlage.jpg)
+
+<!--
+LocalWords: lang
+-->
