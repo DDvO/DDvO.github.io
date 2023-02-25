@@ -1,10 +1,12 @@
 ---
 title: "Mini-Solaranlagen für daheim und unterwegs"
-date:   2022-03-20 20:36:16 +0100
+description: >-
+  Wichtige Hintergrundinfos und viele praktische Tipps für private PV-Anlagen.
+  Exakte Simulationsergebnisse für Rentabilität, optimale Modul-Ausrichtung und
+  die Verwendung von Wechselrichtern und Speicherbatterien inklusive Regelung.
+date: 2022-03-20 20:36:16 +0100
+author: März 2022 - today
 lang: de
-output:
-  html_document:
-  number_sections: true
 keywords:
 - Photovoltaik
 - Sonnenenergie
@@ -63,7 +65,10 @@ keywords:
 - Rendite
 - Ökologie
 - Umwelt
+abstract: |
+  This is the abstract.
 ---
+<!-- https://pandoc.org/MANUAL.html#extension-yaml_metadata_block-->
 
 # Zusammenfassung {#Zusammenfassung}
 
@@ -3474,11 +3479,11 @@ Local IspellDict: german
 LocalWords: title keywords toc start refresh zusammenfassung abgrenzung pv
 LocalWords: inhaltsverzeichnis photovoltaik sonneneinstrahlung feed end
 LocalWords: nennleistung jahresertrag ausrichtung solarmodulen capacity
-LocalWords: nutzungsmöglichkeiten nutzung netzeinspeisung fuer Eff
-LocalWords: stecker solaranlage balkonkraftwerk beschränkung spill
+LocalWords: nutzungsmöglichkeiten nutzung netzeinspeisung fuer Eff is
+LocalWords: stecker solaranlage balkonkraftwerk beschränkung spill It
 LocalWords: kappung kappungsverlust drosselung stromzähler md deg MW
-LocalWords: rücklaufsperre stromverbrauch haushalt berechnung load
-LocalWords: verbrauchsmessung eigenverbrauch eigendeckung ref Heat
+LocalWords: rücklaufsperre stromverbrauch haushalt berechnung load vs
+LocalWords: verbrauchsmessung eigenverbrauch eigendeckung ref Heat OW
 LocalWords: ertragsberechnung monatsbasierte amortisation of VDEW OC
 LocalWords: rechner speichersimulation simulation minutenbasis var
 LocalWords: hausnetzeinspeisung batteriepuffer stromspeicher bypass
@@ -3507,9 +3512,9 @@ LocalWords: document sections rentabilitaet nanlagen oekonomisch post
 LocalWords: Nutzungsvarianten stromwandler mikrowechselrichter text
 LocalWords: stromrichter solarregler standard conditions Reflexions
 LocalWords: Idealbedingungen operating temperature Timeseries crystSi
-LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin
-LocalWords:  
-LocalWords:  
+LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
+LocalWords: author today abstract This the ignored extension yaml
+LocalWords: metadata
 LocalWords:  
 LocalWords:  
 LocalWords:  
