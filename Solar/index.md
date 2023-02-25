@@ -1696,7 +1696,9 @@ Wenn jedoch durch sog.
 sichergestellt ist, dass kein überflüssiger Strom ins externe Netz fließt,
 können Steckdosen-Anlagen [auch z.B. mit 1800 W Leistung](
 https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/)
-normgerecht betrieben werden.
+normgerecht betrieben werden. Dafür ist inzwischen eine fertige Lösung
+von indielux erhältlich, der [ready2plugin-Stromwächter](
+https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/).
 
 Man kann durchaus annehmen,
 dass die Beschränkung auch nichttechnisch motiviert ist, etwa
@@ -2484,7 +2486,6 @@ beschrieben.
 [![Bild: Balkonsolar mit Akku - AkkuDoktor](
 Balkonsolar_AkkuDoktor.png){:.center}](
 https://www.youtube.com/watch?v=yOcoux9IbzM)
-
 Am Elegantesten und Flexibelsten, aber deutlich aufwendiger ist es,
 einen per Software regelbaren Netzwechselrichter zu verwenden, etwa über die
 [Hoymiles DTU](https://www.hoymiles.com/de/products/microinverter/dtu/),
@@ -2496,9 +2497,7 @@ https://www.youtube.com/watch?v=yOcoux9IbzM) vorgeführt.
 Wenn in die Regelung ein elektronisch auslesbarer (möglichst dreiphasiger)
 Lastsensor eingebunden wird, lässt sich die Einspeisung abhängig vom aktuellen
 Stromverbrauch (mit einer gewissen Verzögerung) etwa über einen entsprechend
-programmierten Raspberry Pi so steuern, dass eine Nulleinspeisung erreicht wird.\
-Möglichkeiten, den Haushalts-Stromverbrauch automatisch auszulesen,
-sind im Abschnitt [Verbrauchsmessung](#Verbrauchsmessung) genannt.
+programmierten Raspberry Pi so steuern, dass eine Nulleinspeisung erreicht wird.
 
 {:style="clear:both"}
 
@@ -2520,6 +2519,20 @@ https://community.symcon.de/t/modul-beta-hoymiles-modulwechselrichter-mit-opendt
 des Wechselrichters verwenden.
 
 {:style="clear:both"}
+
+Ohne eigene Programmierung und mit wenig Gebastel kommt man mit dem
+[ready2plugin-Stromwächter](
+https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
+von indielux aus. Der wird auch *Einspeisewächter* genannt, weil er für
+Stecker-Solaranlagen mit oder ohne Speicher eine Nulleinspeisung realisiert.
+Der setzt einen per Modbus RS485 steuerbaren Wechselrichter voraus
+und eine per WLAN angebundene Messung des aktuellen Stromverbrauchs.
+[![Bild: ready2plugin-Stromwächter von indielux](
+ready2plugin-Stromwächter_indielux.png){:.center}](
+https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
+
+Möglichkeiten für die automatische Auslesung des Haushalts-Stromverbrauchs
+sind im Abschnitt [Verbrauchsmessung](#Verbrauchsmessung) genannt.
 
 Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
 Bei einer z.B. auf 600 W begrenzten Einspeisung beträgt für die o.g.
