@@ -1182,19 +1182,21 @@ eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
 Eine schöne Übersicht von Geräten zur Messung auch der eingespeisten Strommenge
 z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
 
-{:style="clear:both"}
-
-![Bild: Shelly 3EM](Shelly_3EM.webp){:.right width="200"}
 Der Haushalts-Stromverbrauch lässt sich auch kontinuierlich und automatisiert
 messen und übertragen. Das kann für eine Online-Ablesung und genauere Analyse
 des Verbrauchs interessant sein. Besonders wichtig ist es aber für die optimale
 lastabhängige [Regelung](#Regelungsstrategien) der Ladung und/oder Entladung
 eines Stromspeichers.
+![Bild: Shelly 3EM](Shelly_3EM.webp){:.right width="200"}
 * Man kann sich die Verbrauchsdaten über den
-sog. [„Volkszähler“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
-oder [„Powerfox“](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
+sog. [„Volkszähler“](https://www.volkszaehler.org/)
+oder [„powerfox poweropt“](https://poweropti.powerfox.energy/)
 aus dem offiziellen Haushalts-Stromzähler übermitteln lassen --
-sofern ein moderner Stromzähler verbaut ist und man Zugang zu diesem hat.
+sofern ein moderner Stromzähler verbaut ist und man Zugang zu diesem hat.\
+Zur Verwendung der [Tasmota](https://www.tasmota.info/)-Software
+gibt es [hier](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
+eine schöne Anleitung.<!--, aber auch für andere
+[Smarthome-Projekte](https://hessburg.de/category/technik/smarthome/).-->
 * Alternativ kann man ein 3-Phasen-Energiemessgerät wie das
 [Shelly 3EM](https://www.shelly.cloud/de/products/product-overview/shelly-3em-1)
 oder das teurere, aber wohl genauere [my-PV WiFi Meter](
