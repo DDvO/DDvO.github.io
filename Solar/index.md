@@ -1,5 +1,6 @@
 ---
 title: "Mini-Solaranlagen für daheim und unterwegs"
+date:   2022-03-20 20:36:16 +0100
 lang: de
 output:
   html_document:
@@ -2483,32 +2484,32 @@ einen 3-Phasen-Sensor für ein Gerät zusammenstricken, etwa wie [hier](
 https://www.photovoltaikforum.com/thread/193693-sun1000-gti-nulleinspeisung-mit-3-phasen-limiter/?pageNo=1)
 beschrieben.
 
-{:style="clear:both"}
-
-[![Bild: Balkonsolar mit Akku - AkkuDoktor](
-Balkonsolar_AkkuDoktor.png){:.center}](
-https://www.youtube.com/watch?v=yOcoux9IbzM)
-Am Elegantesten und Flexibelsten, aber deutlich aufwendiger ist es,
-einen per Software regelbaren Netzwechselrichter zu verwenden, etwa über die
-[Hoymiles DTU](https://www.hoymiles.com/de/products/microinverter/dtu/),
-oder vor einen beliebigen Netzwechselrichter einen elektronisch regelbaren
-DC-DC-Wandler zu hängen, z.B. den [Joy-IT DPM8616](
-https://www.idealo.de/preisvergleich/ProductCategory/10314.html?q=DPM8616),
-wie in einem [Video von Andreas Schmitz](
-https://www.youtube.com/watch?v=yOcoux9IbzM) vorgeführt.
+Am Elegantesten und Flexibelsten, aber **deutlich aufwendiger** ist es,
+einen per Software regelbaren Netzwechselrichter zu verwenden.
 Wenn in die Regelung ein elektronisch auslesbarer (möglichst dreiphasiger)
 Lastsensor eingebunden wird, lässt sich die Einspeisung abhängig vom aktuellen
 Stromverbrauch (mit einer gewissen Verzögerung) etwa über einen entsprechend
 programmierten Raspberry Pi so steuern, dass eine Nulleinspeisung erreicht wird.
+Dazu gibt es eine vielseitige [Software](https://solaranzeige.de/).
 
-{:style="clear:both"}
+[![Bild: Balkonsolar mit Akku - AkkuDoktor](
+Balkonsolar_AkkuDoktor.png){:.center}](
+https://www.youtube.com/watch?v=yOcoux9IbzM)
+Eine Möglichkeit wäre, vor einen Netzwechselrichter einen elektronisch
+regelbaren DC-DC-Wandler zu hängen, z.B. den [Joy-IT DPM8616](
+https://www.idealo.de/preisvergleich/ProductCategory/10314.html?q=DPM8616),
+wobei die Regelung den aktuellen Verbrauch über einen
+[„Volkszähler“](https://www.volkszaehler.org/) mitgeteilt bekommt, wie in einem
+[Video von Andreas Schmitz](https://www.youtube.com/watch?v=yOcoux9IbzM)
+vorgeführt.
 
 [![Bild: Hardware für OpenDTU](
 OpenDTU_wiring_ESP32.png){:.right width="300"}](
 https://github.com/tbnobody/OpenDTU)
 An einem Netzwechselrichter der Hoymiles HM-Serie und für manche TSUN-Geräte
 kann man anstelle einer teuren proprietären Datenübertragungseinheit
-(engl. *data transfer unit (DTU)* oder allgemein *telemetry gateway*) die offene
+[Hoymiles DTU](https://www.hoymiles.com/de/products/microinverter/dtu/),
+(engl. *data transfer unit* oder allgemein *telemetry gateway*) die offene
 Bastel-Lösung [OpenDTU](https://github.com/roastedelectrons/HoymilesOpenDTU)
 bzw. [AhoyDTU](https://ahoydtu.de/) verwenden. Für beide Varianten gibt es
 schöne Videos auf YouTube wie [dieses](https://youtu.be/YJM913e0tiQ).
