@@ -1817,15 +1817,17 @@ die Leitungsüberlastung durch Stecker-Solaranlagen
 
 Die nominelle Leistung der verwendeten Solarmodule kann und sollte in Summe
 durchaus größer sein aus 600 Wp, also eher 800 bis 1000 Wp. Denn in der Praxis
-wird auch mit solchen Modulen eine PV-Ausgangsleistung von 600 W und mehr
+wird auch mit solchen Modulen eine Ausgangsleistung von 600 W und mehr
 ohnehin kaum erreicht, und das auch nicht oft, gerade in sonnenarmen Zeiten.
-Der Unterschied beim Jahres-Gesamtertrag mit oder ohne Kappung ist sehr gering.\
+**Der Unterschied beim Jahres-Gesamtertrag ohne/mit Drosselung des
+Wechselrichters auf 600 W ist sehr gering: etwa 10 kWh**, also knapp 3€ im Jahr.
+
 Diese Erkenntnis ist schon recht alt und wurde wohl erst [für größere Anlagen](
 https://www.photovoltaikforum.com/thread/79306-wechselrichter-unterdimensionierung-welche-ertragseinbu%C3%9Fen/)
 diskutiert, aber wird auch immer wieder [für kleine Anlagen neu entdeckt](
 https://mini-pv-anlage-600-w-oder-800-w.jimdosite.com/).\
 Nochmal geringer ist der Unterschied beim Eigenverbrauch für eine Balkonanlage,
-wie die u.g. Simulationsergebnisse zeigen.
+wie die u.g. Ergebenisse [gennauer Simulationen](#SolBatSim) zeigen.
 
 Man hat durch eine gewisse Überdimensionierung der PV-Module
 (auch *Überbelegung* oder *Unterdimensionierung* des Wechselrichters genannt)
@@ -1851,9 +1853,9 @@ und Ausrichtung zu einem Ertrag von 1216 kWh brutto pro Jahr führen kann,
 also bei einem PV-System-Wirkungsgrad von 92% und einem typischen
 Wechselrichter-Wirkungsgrad von 94% etwa 1050 kWh Netto-Ertrag.
 Bei 3000 kWh Jahresverbrauch mit einem durchschnittlichen Lastprofil
-**macht der effektive Verlust durch Drosselung auf 600 W** Eingangsleistung
+macht der effektive Verlust durch Drosselung auf 600 W Eingangsleistung
 des Wechselrichters (also 564 W Ausgangsleistung bei den 94% Wirkungsgrad)
-**nur ungefähr 10 kWh aus**. Dies erklärt sich durch zwei Effekte:
+nur ungefähr 10 kWh aus. Dies erklärt sich durch zwei Effekte:
 * Die Abregelung findet zwar während etwa 650 Sonnenstunden im Jahr statt, aber
 die Differenz auf den sonst möglichen Netto-Ertrag ist moderat: etwa 80 kWh.
 Dieser Verlust ist schon nicht groß, und er wird durch Folgendes nochmal
@@ -1968,34 +1970,138 @@ PV-Eigenverbrauchsanteil    =   83 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   27 % des Verbrauchs (Autarkiegrad)
 -->
 
-Hingegen bieten 1000 statt 600 Wp PV-Nennleistung bei mäßigen Zusatzkosten eine
-sinnvolle Reserve für schwächere Sonnenstunden, wodurch der Netto-Ertrag (trotz
-Kappung) ca. 340 kWh höher liegt, der Eigenverbrauch ca. 135 kWh höher im Jahr.
+Auch bei Abweichung von der optimalen Südausrichtung verschwinden die ohnehin
+äußerst geringen Eigenverbrauchs-Einbußen durch Kappung auf 600 W zusehends
+und sind bei Ost-West-Aufteilung (Azimut +/-90°) gar nicht mehr vorhanden.
+
+<!--
+https://www.photovoltaikforum.com/thread/195109-optimale-ausrichtung-bei-2-modulen/?postID=3031434#post3031434
+
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Nominalleistung          = 500+500 Wp
+Breitengrad                 =   48.269
+Längengrad                  =   10.408
+-->
+
+<!-- Neigungswinkel              =   30° Azimut = +/-90°
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_90deg_2005_2020.csv 500 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-90deg_2005_2020.csv 500 -peff 92 -tmy -curb 800
+
+PV-Nettoertrag              =  889 kWh
+PV-Netto-Ertragsverlust     =    0 kWh während 0 h durch Drosselung auf 800 W
+PV-Eigenverbrauch           =  569 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 800 W
+-->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_90deg_2005_2020.csv 500 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-90deg_2005_2020.csv 500 -peff 92 -tmy -curb 600
+
+PV-Nettoertrag              =  888 kWh
+PV-Netto-Ertragsverlust     =    1 kWh während 72 h durch Drosselung auf 600 W
+PV-Eigenverbrauch           =  569 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    0 kWh netto während 9 h durch Drosselung auf 600 W
+-->
+
+<!-- Neigungswinkel              =   30° Azimut = +/-45°
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_45deg_2005_2020.csv 500 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-45deg_2005_2020.csv 500 -peff 92 -tmy -curb 800
+
+PV-Nettoertrag              = 1031 kWh
+PV-Netto-Ertragsverlust     =    0 kWh während 4 h durch Drosselung auf 800 W
+PV-Eigenverbrauch           =  600 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 800 W
+-->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_45deg_2005_2020.csv 500 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-45deg_2005_2020.csv 500 -peff 92 -tmy -curb 600
+
+PV-Nettoertrag              = 1003 kWh
+PV-Netto-Ertragsverlust     =   28 kWh während 382 h durch Drosselung auf 600 W
+PV-Eigenverbrauch           =  597 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    3 kWh netto während 45 h durch Drosselung auf 600 W
+-->
+
+<!-- Neigungswinkel              =   30° Azimut = 0°
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 1000 -peff 92 -tmy -curb 800
+
+PV-Nettoertrag              = 1088 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+PV-Netto-Ertragsverlust     =    1 kWh während 31 h durch Drosselung auf 800 W
+PV-Eigenverbrauch           =  603 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    0 kWh netto während 3 h durch Drosselung auf 800 W
+-->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 1000 -peff 92 -tmy -curb 600
+
+PV-Nettoertrag              = 1037 kWh
+PV-Netto-Ertragsverlust     =   52 kWh während 532 h durch Drosselung auf 600 W
+PV-Eigenverbrauch           =  598 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    5 kWh netto während 64 h durch Drosselung auf 600 W
+-->
+
+Aus den genannten Gründen lohnt es sich (jedenfalls bei PV-Nennleistungen
+bis um die 1000 Wp) nicht, statt eines auf 600 W gedrosselten Wechselrichters
+einen teureren mit 800 W Maximalleistung zu nehmen oder darauf zu warten,
+bis diese in Deutschland offiziell unter die Bagatellgrenze fallen.
+
+Hingegen **bieten 800 bis 1000 Wp statt 600 Wp PV-Nennleistung bei relativ
+geringen Zusatzkosten eine sinnvolle Reserve für schwächere Sonnenstunden**,
+wodurch der Netto-Ertrag trotz Kappung 210 bis 360 kWh höher liegt,
+und der Eigenverbrauch immerhin 80 bis 135 kWh höher im Jahr.
 Die Amortisationszeit der Gesamt-Anlage bleibt dabei ziemlich gleich, und auf
 lange Sicht ergibt sich eine entsprechend höhere Kostenersparnis als mit 600 Wp.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 600 -curb 564 -tmy -peff 92 -ieff 94
+Neigungswinkel              =   38°
+Azimut                      =    0°
+Breitengrad                 =   48.215
+Längengrad                  =   11.727
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 600 -curb 564 -tmy -peff 92
 
 PV-Nominalleistung          =  600 Wp
-Bruttoleistung max.         =  597 W am TMY-04-30 um 11:00 h
-PV-Bruttoertrag             =  729 kWh
-PV-Nettoertrag              =  631 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
-PV-Ertragsverlust           =    0 kWh während 0 h durch Drosselung auf 564 W
-Ertragsanteil 9-15 Uhr MEZ  =   72 %
+Max. PV-Bruttoleistung      =  607 W am TMY-04-15 um 12:00 h
+PV-Bruttoertrag             =  764 kWh
+PV-Nettoertrag              =  660 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+PV-Netto-Ertragsverlust     =    0 kWh während 0 h durch Drosselung auf 564 W
+Ertragsanteil 9-15 Uhr MEZ  =   73 %
 
-Last durch Haushalt         = 3000 kWh
-Eigenverbrauch mit Drossel  =  444 kWh
-Eigenverbrauchsverlust      =    0 kWh während 0 h durch Drosselung auf 564 W
-Netzeinspeisung             =  187 kWh
-Eigenverbrauchsanteil       =   70 % des Nettoertrags (Nutzungsgrad)
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  460 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 564 W
+Netzeinspeisung             =  200 kWh
+PV-Eigenverbrauchsanteil    =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 -->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 800 -curb 564 -tmy -peff 92
 
-Aus den selben Gründen lohnt es sich (jedenfalls bei PV-Nennleistungen um
-die 1000 Wp) nicht, statt eines auf 600 W gedrosselten Wechselrichters
-einen teureren mit 800 W Maximalleistung zu nehmen oder darauf zu warten,
-bis diese in Deutschland offiziell unter die Bagatellgrenze fallen.
+PV-Nominalleistung          =  800 Wp
+Max. PV-Bruttoleistung      =  810 W am TMY-04-15 um 12:00 h
+PV-Bruttoertrag             = 1018 kWh
+PV-Nettoertrag              =  871 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+PV-Netto-Ertragsverlust     =   10 kWh während 245 h durch Drosselung auf 564 W
+Ertragsanteil 9-15 Uhr MEZ  =   73 %
+
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  540 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    1 kWh netto während 34 h durch Drosselung auf 564 W
+Netzeinspeisung             =  331 kWh
+PV-Eigenverbrauchsanteil    =   62 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
+-->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -curb 564 -tmy -peff 92
+
+PV-Nominalleistung          = 1000 Wp
+Max. PV-Bruttoleistung      = 1012 W am TMY-04-15 um 12:00 h
+PV-Bruttoertrag             = 1273 kWh
+PV-Nettoertrag              = 1021 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+PV-Netto-Ertragsverlust     =   79 kWh während 679 h durch Drosselung auf 564 W
+Ertragsanteil 9-15 Uhr MEZ  =   71 %
+
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  596 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    9 kWh netto während 91 h durch Drosselung auf 564 W
+Netzeinspeisung             =  425 kWh
+PV-Eigenverbrauchsanteil    =   58 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
+-->
 
 ### Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}
 
