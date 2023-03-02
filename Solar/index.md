@@ -56,6 +56,7 @@ keywords:
 - Lastspitzen
 - Abregelung
 - Drosselung
+- Bagatellgrenze
 - Kappungsverlust
 - Eigenverbrauch
 - Eigenverbrauchsanteil
@@ -154,7 +155,7 @@ verwiesen.
         - [Hochauflösende Simulation: SolBatSim {#SolBatSim}](#solbatsim-hochauflösende-simulation)
     - [Nutzungsvarianten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
         - [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“) {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
-            - [Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}](#beschränkung-auf-600-w-und-ihre-gründe-kappung)
+            - [Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Bagatellgrenze}](#beschränkung-auf-600-w-und-ihre-gründe-bagatellgrenze)
             - [Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}](#kappungsverlust-durch-drosselung-auf-600-w-kappungsverlust)
         - [Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}](#hausnetzeinspeisung-mit-batteriepuffer-batteriepuffer)
             - [Regelungsstrategien für Stromspeicher {#Regelungsstrategien}](#regelungsstrategien-fuer-stromspeicher)
@@ -210,7 +211,7 @@ verwiesen.
     -   [Hochauflösende Simulation: SolBatSim](#SolBatSim)
 -   [Nutzungsvarianten](#Nutzung)
     -   [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“)](#Balkonkraftwerk)
-        - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Kappung)
+        - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Bagatellgrenze)
         - [Kappungsverlust durch Drosselung auf 600 W](#Kappungsverlust)
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
         - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
@@ -1045,7 +1046,7 @@ keinen Vorteil für den Eigenverbrauch.**
 Dagegen spricht zusätzlich die Tendenz zu stärkerer Verschattung bei flacherem
 Sonnenstand, etwa durch Gebäude und Bäume in der Umgebung und auch
 durch die PV-Module gegenseitig (*Selbstverschattung*).
-Außerdem ist die geteilte Montage meist aufwendiger, und geteile
+Außerdem ist die geteilte Montage meist aufwendiger, und geteilte
 Ausrichtungen erfordern zur Optimierung eine getrennte [MPPT-Regelung](#MPPT).
 [![Bild: Selbstverschattung gleichartiger Modulreihen](
 PV_Vergleich_S_vs_OW_add_v1.png)](
@@ -1600,9 +1601,9 @@ So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
 
 ### Hochauflösende Simulation: SolBatSim {#SolBatSim}
 
-*SolBatSim*, ein selbst entwickelter Simulator, basiert auf Lastprofilen
-des Haushalts-Stromverbrauchs mit mindestens stündlicher, aber besser
-minütlicher Auflösung und kommt daher auf sehr realistische Ergebnisse.
+*SolBatSim*, ein selbst entwickelter Simulator, basiert auf Lastprofilen des
+Haushalts-Stromverbrauchs mit mindestens stündlicher, aber besser minütlicher
+oder noch höherer Auflösung und kommt daher auf sehr realistische Ergebnisse.
 Dafür können zum Beispiel die 74 von der
 Forschungsgruppe Solarspeichersysteme der HTW Berlin [veröffentlichen Profile](
 https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
@@ -1663,6 +1664,8 @@ Minutenbereich berücksichtigt werden, die von einer Mini-Solaranlage praktisch
 kaum abgefangen werden können, so dass der Eigenverbrauchsanteil geringer ist
 als bei einer über Stunden oder gar ganze Monate gemittelten Betrachtung.
 
+<!-- TODO: Hinweis, dass dies als Referenzsimulation verwendbar ist -->   
+<!-- TODO: Testbeispiele in Solar.txt durchgehen -->   
 <!-- TODO: CSV_74_Loadprofiles_1s_W_var.zip verwenden -->   
 Vergleichsrechnungen auf Grundlage eines Lastprofils mit (annähernd)
 sekündlicher Auflösung haben ergeben, dass die Lastspitzen nur teilweise einen
@@ -1755,33 +1758,43 @@ Bei etwa 1/3 der Anlagen befinden sich die PV-Module auf oder an einem Balkon;
 bei etwa der Hälfte werden die Module z.B. auf einem Flachdach oder im Garten
 aufgeständert.
 
-#### Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Kappung}
+#### Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Bagatellgrenze}
 
-Hintergründe dieser Beschränkung sind nicht in erster Linie, wie meist
-angenommen wird, Sicherheitsbedenken bzgl. der Stromleitungen im Haushalt.
-
-Der wesentliche technische Grund sind mögliche nicht immer gut kalkulierbare
-Rückwirkungen auf das allgemeine Stromnetz.
-Bei massenhafter nicht angemeldeter Einspeisung und kräftigem Sonnenschein
-kann der Strom im Verteilnetz durch ziehende Wolken sehr stark schwanken,
+Die Hauptgründe für die Leistungsbegrenzung bei der Einspeisung von PV-Strom
+sind nicht, wie von vielen angenommen,
+Sicherheitsbedenken bzgl. der Stromleitungen im Haushalt.
+Die wesentlichen technischen und wirtschaftlichen Gründe sind vielmehr mögliche
+nicht immer gut kalkulierbare Rückwirkungen auf das allgemeine Stromnetz.
+* Bei massenhafter Einspeisung von Solarstrom und kräftigem Sonnenschein
+kann der Strom im Verteilnetz z.B. durch ziehende Wolken sehr stark schwanken,
 was seine Stabilität beeinträchtigen könnte.
+* Außerdem kann es passieren, dass der Netzbetreiber bei großen Schwankungen
+teils besonders teuren Strom nachkaufen muss bzw. für überschüssigen Strom einen
+sehr geringen oder gar negativen Preis bekommt, sprich „Strafe zahlen“ muss.
+* Auch könnten sich Freileitungen, durch die ungewöhnlich viel Strom fließt,
+stärker als üblich ausdehnen und eventuell gefährlich durchhängen.
+<!--
 Auch könnten z.B. Mittelspannungs-Stromleitungen, die schon am Limit sind,
 sich durch ungewöhnlich hohen Stromfluss stärker ausdehnen als normal
 und daher teils die Mindest-Durchfahrtshöhe unterschritten werden.
+-->
+
 Wenn jedoch durch sog.
 [*Nulleinspeisung*](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/eigenverbrauch/nulleinspeisung)
-sichergestellt ist, dass kein überflüssiger Strom ins externe Netz fließt,
+sichergestellt ist, dass kein lokal erzeugter Strom ins externe Netz fließt,
 können Steckdosen-Anlagen [auch z.B. mit 1800 W Leistung](
 https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/)
 normgerecht betrieben werden. Dafür ist inzwischen eine fertige Lösung
 von indielux erhältlich, der [ready2plugin-Stromwächter](
 https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/).
 
-Man kann durchaus annehmen,
-dass die Beschränkung auch nichttechnisch motiviert ist, etwa
-weil die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
+Man kann durchaus annehmen, dass Beschränkungen auch dadurch motiviert sind,
+dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
 
-Die Beschränkung leistet auch in gewisser Hinsicht einen Beitrag zum Schutz
+Die sog. [*Bagatellgrenze* bei 600 bzw. 800 Watt](
+https://www.computerbild.de/artikel/cb-Tipps-Energie-Balkonkraftwerk-800-Watt-erlaubt-35272303.html)
+dient in erster Linie der erleichterten Anmeldung kleiner Stecker-Solaranlagen.
+Die Beschränkung leistet in gewisser Hinsicht aber auch einen Beitrag zum Schutz
 der Stromleitungen im Haus in folgendem sehr selten auftretenden Fall:
 
 [![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
@@ -1827,7 +1840,7 @@ https://www.photovoltaikforum.com/thread/79306-wechselrichter-unterdimensionieru
 diskutiert, aber wird auch immer wieder [für kleine Anlagen neu entdeckt](
 https://mini-pv-anlage-600-w-oder-800-w.jimdosite.com/).\
 Nochmal geringer ist der Unterschied beim Eigenverbrauch für eine Balkonanlage,
-wie die u.g. Ergebenisse [gennauer Simulationen](#SolBatSim) zeigen.
+wie die u.g. Ergebnisse [genauer Simulationen](#SolBatSim) zeigen.
 
 Man hat durch eine gewisse Überdimensionierung der PV-Module
 (auch *Überbelegung* oder *Unterdimensionierung* des Wechselrichters genannt)
@@ -3697,7 +3710,7 @@ LocalWords: stromrichter solarregler standard conditions Reflexions
 LocalWords: Idealbedingungen operating temperature Timeseries crystSi
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml
-LocalWords: metadata add Austria
+LocalWords: metadata add Austria description bagatellgrenze
 LocalWords:  
 LocalWords:  
 LocalWords:  
