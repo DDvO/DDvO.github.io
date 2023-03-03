@@ -460,12 +460,12 @@ liegt mit senkrechter Anbringung bei 46% und mit 35° Neigung bei 17%.
 
 |   Azimut  | Neigung | Nettoertrag | Einbuße | Eigenverbrauch| Einbuße |
 |--------------:|:----|------------:|--------:|--------------:|--------:|
-|   W/O: +/-90° | 90° |   323 kWh   |   51%   |  249 kWh      |  46%    |
-|   W/O: +/-90° | 35° |   522 kWh   |   16%   |  382 kWh      |  17%    |
-| SW/SO: +/-45° | 90° |   432 kWh   |   35%   |  333 kWh      |  28%    |
-| SW/SO: +/-45° | 35° |   623 kWh   |    6%   |  445 kWh      |   3%    |
-|       Süd: 0° | 90° |   463 kWh   |   30%   |  355 kWh      |  23%    |
-|       Süd: 0° | 35° |   661 kWh   |    0%   |  461 kWh      |   0%    |
+|   W/O: +/-90° | 90° |   323 kWh   |   51%   |  252 kWh      |  46%    |
+|   W/O: +/-90° | 35° |   522 kWh   |   21%   |  385 kWh      |  17%    |
+| SW/SO: +/-45° | 90° |   432 kWh   |   36%   |  336 kWh      |  28%    |
+| SW/SO: +/-45° | 35° |   623 kWh   |    6%   |  449 kWh      |   3%    |
+|       Süd: 0° | 90° |   463 kWh   |   30%   |  357 kWh      |  23%    |
+|       Süd: 0° | 35° |   661 kWh   |    0%   |  464 kWh      |   0%    |
 |:-------------:|:----|------------:|--------:|--------------:|--------:|
 
 Man hat also zur Ausrichtung seiner Solarmodule
@@ -480,12 +480,12 @@ Breitengrad                 =   48.215
 Längengrad                  =   11.727
 
 PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  650 W am 2020-03-23 um 11:00 h
+Max. PV-Bruttoleistung      =  650 W am 2020-03-23 um 12:00 h
 PV-Bruttoertrag             =  764 kWh
 PV-Nettoertrag              =  661 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 
 Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  461 kWh
+PV-Eigenverbrauch           =  464 kWh
 
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_90deg_0deg_2005_2020.csv 600 -peff 92
 
@@ -493,11 +493,13 @@ Neigungswinkel              =   90°
 Azimut                      =    0°
 
 PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  608 W am 2005-02-13 um 12:00 h
+Max. PV-Bruttoleistung      =  608 W am 2005-02-13 um 13:00 h
 PV-Bruttoertrag             =  535 kWh
 PV-Nettoertrag              =  463 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
-PV-Eigenverbrauch           =  355 kWh
+PV-Eigenverbrauch           =  357 kWh
+-->
 
+<!--
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_45deg_2005_2020.csv 600 -peff 92
 
 Neigungswinkel              =   35°
@@ -506,12 +508,12 @@ Breitengrad                 =   48.215
 Längengrad                  =   11.727
 
 PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  623 W am 2020-03-24 um 12:00 h
+Max. PV-Bruttoleistung      =  623 W am 2020-03-24 um 13:00 h
 PV-Bruttoertrag             =  721 kWh
 PV-Nettoertrag              =  623 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 
 Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  445 kWh
+PV-Eigenverbrauch           =  449 kWh
 
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_90deg_45deg_2005_2020.csv 600 -peff 92
 
@@ -519,26 +521,15 @@ Neigungswinkel              =   90°
 Azimut                      =   45°
 
 PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  644 W am 2005-02-14 um 14:00 h
+Max. PV-Bruttoleistung      =  644 W am 2005-02-14 um 15:00 h
 PV-Bruttoertrag             =  499 kWh
 PV-Nettoertrag              =  432 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 
 Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  333 kWh
+PV-Eigenverbrauch           =  336 kWh
+-->
 
-/Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_90deg_-90deg_2005_2020.csv 600 -peff 92
-
-Neigungswinkel              =   90°
-Azimut                      =  -90°
-
-PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  513 W am 2020-03-23 um 07:00 h
-PV-Bruttoertrag             =  374 kWh
-PV-Nettoertrag              =  323 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
-
-Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  249 kWh
-
+<!--
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_-90deg_2005_2020.csv 600 -peff 92
 
 Neigungswinkel              =   35°
@@ -547,10 +538,23 @@ Breitengrad                 =   48.215
 Längengrad                  =   11.727
 
 PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  556 W am 2020-05-06 um 08:00 h
+Max. PV-Bruttoleistung      =  556 W am 2020-05-06 um 09:00 h
 PV-Bruttoertrag             =  604 kWh
 PV-Nettoertrag              =  522 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
-PV-Eigenverbrauch           =  382 kWh
+PV-Eigenverbrauch           =  385 kWh
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_90deg_-90deg_2005_2020.csv 600 -peff 92
+
+Neigungswinkel              =   90°
+Azimut                      =  -90°
+
+PV-Nominalleistung          =  600 Wp
+Max. PV-Bruttoleistung      =  513 W am 2020-03-23 um 08:00 h
+PV-Bruttoertrag             =  374 kWh
+PV-Nettoertrag              =  323 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  252 kWh
 -->
 
 Wer aus irgendeinem Grund (etwa wegen der Befestigung) eine möglichst flache
@@ -661,21 +665,21 @@ womit sich auch die jeweils optimale Neigung leicht ablesen lässt.
 |Azimut|Neigung|Nettoertrag|EV normal|EV Mo-Fr 8-16 h 100 W|EV tgl. 8-18 h 50 W|
 |------:|:-----|----------:|-----------:|------------:|----------:|
 |Ost/West:
-|-/+90° |  15° |  549 kWh  | **457 kWh**|   362 kWh   |  201 kWh  |
-|-/+90° |  30° |  531 kWh  |   452 kWh  | **365 kWh** |  205 kWh  |
-|-/+90° |  45° |  512 kWh  |   437 kWh  |   360 kWh   |**207 kWh**|
+|-/+90° |  15° |  549 kWh  | **462 kWh**|   367 kWh   |  186 kWh  |
+|-/+90° |  30° |  531 kWh  |   457 kWh  | **369 kWh** |  193 kWh  |
+|-/+90° |  45° |  512 kWh  |   442 kWh  |   365 kWh   |**195 kWh**|
 |WSW/OSO:
-|+/-60° |  15° |  585 kWh  |   475 kWh  |   369 kW    |  201 kWh  |
-|+/-60° |  30° |  592 kWh  | **481 kWh**| **375 kWh** |  204 kWh  |
-|+/-60° |  45° |  575 kWh  |   475 kWh  |   373 kWh   |**205 kWh**|
+|+/-60° |  15° |  585 kWh  |   480 kWh  |   374 kW    |  185 kWh  |
+|+/-60° |  30° |  592 kWh  | **487 kWh**| **380 kWh** |  190 kWh  |
+|+/-60° |  45° |  575 kWh  |   480 kWh  |   378 kWh   |**191 kWh**|
 |SSW/SSO:
-|+/-30° |  15° |  610 kWh  |   485 kWh  |   373 kWh   |**200 kWh**|
-|+/-30° |  30° |  636 kWh  | **495 kWh**| **376 kWh** |**200 kWh**|
-|+/-30° |  45° |  631 kWh  |   491 kWh  |   371 kWh   |  197 kWh  |
+|+/-30° |  15° |  610 kWh  |   491 kWh  |   379 kWh   |**182 kWh**|
+|+/-30° |  30° |  636 kWh  | **502 kWh**| **382 kWh** |**182 kWh**|
+|+/-30° |  45° |  631 kWh  |   497 kWh  |   377 kWh   |  181 kWh  |
 |rein Süd:
-|    0° |  15° |  620 kWh  |   489 kWh  |   374 kWh   |**200 kWh**|
-|    0° |  30° |  652 kWh  | **499 kWh**| **376 kWh** |  197 kWh  |
-|    0° |  45° |  647 kWh  |   493 kWh  |   367 kWh   |  191 kWh  |
+|    0° |  15° |  620 kWh  |   495 kWh  |   380 kWh   |**181 kWh**|
+|    0° |  30° |  652 kWh  | **506 kWh**| **382 kWh** |  177 kWh  |
+|    0° |  45° |  647 kWh  |   499 kWh  |   373 kWh   |  172 kWh  |
 |------:|-----:|----------:|-----------:|------------:|----------:|
 
 Interessant ist in diesem Zusammenhang auch zu betrachten,
@@ -683,12 +687,12 @@ wie sich die Unterschiede über die Jahreszeiten verteilen.
 
 * Wenn man täglich von 8 bis 18 Uhr eine Grundlast von nur 50 W hätte,
 würde sich bei 30° Neigung der Eigenverbrauch saisonal wie folgt verteilen,
-wobei die Ost-/West-Aufsplittung außer im Winter minimal besser abschneidet:
+wobei die Ost-/West-Aufsplittung außer im Winter etwas besser abschneidet:
 
 |Azimut| Frühjahr |  Sommer  |  Herbst  |  Winter  | Summe   |
 |-----:|---------:|---------:|---------:|---------:|--------:|
-| O/W  |**52 kWh**|**75 kWh**|**52 kWh**|  26 kWh  | 205 kWh |
-| Süd  |  50 kWh  |  69 kWh  |  51 kWh  |**27 kWh**| 197 kWh |
+| O/W  |**49 kWh**|**70 kWh**|**48 kWh**|  26 kWh  | 193 kWh |
+| Süd  |  46 kWh  |  59 kWh  |  45 kWh  |**27 kWh**| 177 kWh |
 |-----:|---------:|---------:|---------:|---------:|--------:|
 
 
@@ -700,8 +704,8 @@ der Eigenverbrauch saisonal wie folgt:
 
 |Azimut| Frühjahr |  Sommer   |  Herbst   |  Winter  | Summe   |
 |-----:|---------:|----------:|----------:|---------:|--------:|
-| O/W  |  93 kWh  |**139 kWh**|   95 kWh  |  38 kWh  | 365 kWh |
-| Süd  |**96 kWh**|  133 kWh  |**100 kWh**|**47 kWh**| 376 kWh |
+| O/W  |  94 kWh  |**141 kWh**|   96 kWh  |  38 kWh  | 369 kWh |
+| Süd  |**98 kWh**|  136 kWh  |**101 kWh**|**47 kWh**| 382 kWh |
 |-----:|---------:|----------:|----------:|---------:|--------:|
 
 [//]: #
@@ -719,8 +723,8 @@ denn dann verteilt sich bei 30° Neigung der Eigenverbrauch wie folgt:
 
 |Azimut|  Frühjahr |  Sommer   |  Herbst   |  Winter  | Summe   |
 |-----:|----------:|----------:|----------:|---------:|--------:|
-| O/W  |  115 kWh  |**178 kWh**|  121 kWh  |  38 kWh  | 452 kWh |
-| Süd  |**127 kWh**|**178 kWh**|**137 kWh**|**57 kWh**| 499 kWh |
+| O/W  |  116 kWh  |**181 kWh**|  122 kWh  |  38 kWh  | 457 kWh |
+| Süd  |**130 kWh**|  180 kWh  |**139 kWh**|**57 kWh**| 506 kWh |
 |-----:|----------:|----------:|----------:|---------:|--------:|
 
 
@@ -738,9 +742,9 @@ Neigungswinkel  =  45° Azimut = -90°
 PV-Bruttoertrag =  595 kWh
 PV-Nettoertrag  =  512 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  437 kWh
-Eigenverbrauch  =  360 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  207 kWh (opt.) wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  442 kWh
+Eigenverbrauch  =  365 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  195 kWh (opt.) wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_-90deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -750,13 +754,11 @@ Neigungswinkel  =  40° Azimut = -90°
 PV-Bruttoertrag =  595 kWh
 PV-Nettoertrag  =  512 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  444 kWh
-Eigenverbrauch  =  363 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  207 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  449 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_-90deg_2005_2020.csv 300 -tmy -bend 1,1,1,1,2,2,2,2,.5,.5,.5,.5,.5,.5,.5,.5,2,2,2,2,1,1,1,1
-PV-Eigenverbrauch           =  343 kWh
+PV-Eigenverbrauch           =  348 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_-90deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -767,9 +769,8 @@ PV-Bruttoertrag =  607 kWh
 PV-Nettoertrag  =  522 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
 Eigenverbrauch  =  448 kWh
-Eigenverbrauch  =  364 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  206 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
+
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-90deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
 
@@ -778,12 +779,12 @@ Neigungswinkel  =  30° Azimut = -90°
 PV-Bruttoertrag =  617 kWh
 PV-Nettoertrag  =  531 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  452 kWh
-                   Frühjahr 114, Sommer 179, Herbst 121, Winter 38
-Eigenverbrauch  =  365 kWh (opt.) wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-                   Frühjahr 93, Sommer 139, Herbst 95, Winter 38
-Eigenverbrauch  =  205 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
-                   Frühjahr 52, Sommer 75, Herbst 52, Winter 26
+Eigenverbrauch  =  457 kWh
+                   Frühjahr 116, Sommer 181, Herbst 122, Winter 38
+Eigenverbrauch  =  369 kWh (opt.) wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+                   Frühjahr 94, Sommer 141, Herbst 96, Winter 38
+Eigenverbrauch  =  193 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+                   Frühjahr 49, Sommer 70, Herbst 48, Winter 26
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_-90deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -793,9 +794,7 @@ Neigungswinkel  =  25° Azimut =  -90°
 PV-Bruttoertrag =  625 kWh
 PV-Nettoertrag  =  538 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  454 kWh
-Eigenverbrauch  =  364 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  204 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  459 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_20deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_20deg_-90deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -805,9 +804,7 @@ Neigungswinkel  =  20° Azimut =  -90°
 PV-Bruttoertrag =  633 kWh
 PV-Nettoertrag  =  544 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  456 kWh
-Eigenverbrauch  =  363 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  202 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  461 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_90deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_-90deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -817,9 +814,9 @@ Neigungswinkel  =  15° Azimut =  -90°
 PV-Bruttoertrag =  639 kWh
 PV-Nettoertrag  =  549 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  457 kWh (opt.)
-Eigenverbrauch  =  362 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  201 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  462 kWh (opt.)
+Eigenverbrauch  =  367 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  186 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 
 <!--
@@ -832,9 +829,9 @@ Neigungswinkel  =  45° Azimut =  -60°
 PV-Bruttoertrag =  669 kWh
 PV-Nettoertrag  =  575 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  475 kWh
-Eigenverbrauch  =  373 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  205 kWh (opt. ) wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  480 kWh
+Eigenverbrauch  =  378 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  191 kWh (opt. ) wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_60deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_-60deg_2005_2020.csv 300 -tmy # load 130 # -load 43 7:8..18
@@ -844,9 +841,7 @@ Neigungswinkel  =  35° Azimut =  -60°
 PV-Bruttoertrag =  684 kWh
 PV-Nettoertrag  =  588 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  480 kWh
-Eigenverbrauch  =  375 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  204 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  486 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_60deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-60deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -856,9 +851,9 @@ Neigungswinkel  =  30° Azimut =  -60°
 PV-Bruttoertrag =  689 kWh
 PV-Nettoertrag  =  592 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  481 kWh (opt.)
-Eigenverbrauch  =  375 kWh (opt.) wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  204 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  487 kWh (opt.)
+Eigenverbrauch  =  380 kWh (opt.) wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  190 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_60deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_-60deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -868,9 +863,7 @@ Neigungswinkel  =  25° Azimut =  -60°
 PV-Bruttoertrag =  689 kWh
 PV-Nettoertrag  =  592 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  480 kWh
-Eigenverbrauch  =  373 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  203 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  486 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_60deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_-60deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -880,9 +873,9 @@ Neigungswinkel  =  15° Azimut =  -60°
 PV-Bruttoertrag =  680 kWh
 PV-Nettoertrag  =  585 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  475 kWh
-Eigenverbrauch  =  369 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  201 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  480 kWh
+Eigenverbrauch  =  374 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  185 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 
 <!--
@@ -892,24 +885,22 @@ Variante schwach gespreizt:
 
 Neigungswinkel  =  45° Azimut =   30°
 Neigungswinkel  =  45° Azimut =  -30°
-PV-Bruttoertrag =  734 kWh
-PV-Nettoertrag  =  631 kWh bei System-Wirkungsgrad 86%
+PV-Bruttoertrag =  731 kWh
+PV-Nettoertrag  =  629 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  491 kWh
-Eigenverbrauch  =  371 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  197 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  497 kWh
+Eigenverbrauch  =  377 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  181 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 <!--
-./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_36deg_30deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_-30deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_30deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_-30deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
 
-Neigungswinkel  =  36° Azimut =  30°
+Neigungswinkel  =  35° Azimut =  30°
 Neigungswinkel  =  35° Azimut = -30°
-PV-Bruttoertrag =  741 kWh
-PV-Nettoertrag  =  637 kWh bei System-Wirkungsgrad 86%
+PV-Bruttoertrag =  739 kWh
+PV-Nettoertrag  =  635 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  495 kWh
-Eigenverbrauch  =  375 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  199 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  502 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_30deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-30deg_2005_2020.csv 300 -tmy # -load 130 -load 43 7:8..18
@@ -919,9 +910,9 @@ Neigungswinkel  =  30° Azimut =  -30°
 PV-Bruttoertrag =  739 kWh
 PV-Nettoertrag  =  636 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  495 kWh (opt.)
-Eigenverbrauch  =  376 kWh (opt.) wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  200 kWh (opt.) wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  502 kWh (opt.)
+Eigenverbrauch  =  382 kWh (opt.) wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  182 kWh (opt.) wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_30deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_-30deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -931,9 +922,7 @@ Neigungswinkel  =  25° Azimut =  -30°
 PV-Bruttoertrag =  733 kWh
 PV-Nettoertrag  =  631 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  494 kWh
-Eigenverbrauch  =  376 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  200 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  500 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_30deg_2005_2020.csv 300 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_-30deg_2005_2020.csv 300 -tmy # -load 130 # -load 43 7:8..18
@@ -943,9 +932,9 @@ Neigungswinkel  =  15° Azimut =  -30°
 PV-Bruttoertrag =  709 kWh
 PV-Nettoertrag  =  610 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  485 kWh
-Eigenverbrauch  =  373 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  200 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  491 kWh
+Eigenverbrauch  =  379 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  182 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 
 <!--
@@ -957,9 +946,9 @@ Neigungswinkel  =  45° Azimut = 0°
 PV-Bruttoertrag =  753 kWh
 PV-Nettoertrag  =  647 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  493 kWh
-Eigenverbrauch  =  367 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  191 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  499 kWh
+Eigenverbrauch  =  373 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  172 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 <!--
 
@@ -969,9 +958,7 @@ Neigungswinkel  =  35° Azimut = 0°
 PV-Bruttoertrag =  761 kWh
 PV-Nettoertrag  =  655 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  499 kWh
-Eigenverbrauch  =  374 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  195 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  506 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 600 -tmy # -load 130 # -load 43 7:8..18
@@ -980,12 +967,12 @@ Neigungswinkel  =  30° Azimut = 0°
 PV-Bruttoertrag =  758 kWh
 PV-Nettoertrag  =  652 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  499 kWh (opt.)
-                   Frühjahr 127, Sommer 178, Herbst 137, Winter 57
-Eigenverbrauch  =  376 kWh (opt.) wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-                   Frühjahr 96, Sommer 133, Herbst 100, Winter 47
-Eigenverbrauch  =  197 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
-                   Frühjahr 50, Sommer 69, Herbst 51, Winter 27
+Eigenverbrauch  =  506 kWh (opt.)
+                   Frühjahr 130, Sommer 180, Herbst 139, Winter 57
+Eigenverbrauch  =  382kWh (opt.) wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+                   Frühjahr 98, Sommer 136, Herbst 101, Winter 47
+Eigenverbrauch  =  177 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+                   Frühjahr 46, Sommer 59, Herbst 45, Winter 27
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_0deg_2005_2020.csv 600 -tmy # -load 130 # -load 43 7:8..18
@@ -994,13 +981,11 @@ Neigungswinkel  =  25° Azimut = 0°
 PV-Bruttoertrag =  749 kWh
 PV-Nettoertrag  =  645 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  498 kWh
-Eigenverbrauch  =  376 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  198 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  504 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 600 -tmy -bend 1,1,1,1,2,2,2,2,.5,.5,.5,.5,.5,.5,.5,.5,2,2,2,2,1,1,1,1
-PV-Eigenverbrauch           =  349 kWh
+-Eigenverbrauch =  357 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_20deg_0deg_2005_2020.csv 600 -tmy # -load 130 # -load 43 7:8..18
@@ -1009,9 +994,7 @@ Neigungswinkel  =  20° Azimut = 0°
 PV-Bruttoertrag =  737 kWh
 PV-Nettoertrag  =  634 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  495 kWh
-Eigenverbrauch  =  376 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  199 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  501 kWh
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_0deg_2005_2020.csv 600 -tmy # -load 130 # -load 43 7:8..18
@@ -1020,9 +1003,9 @@ Neigungswinkel  =  15° Azimut = 0°
 PV-Bruttoertrag =  721 kWh
 PV-Nettoertrag  =  620 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  489 kWh
-Eigenverbrauch  =  374 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  200 kWh (opt.) wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  495 kWh
+Eigenverbrauch  =  380 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  181 kWh (opt.) wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 
 <!--
@@ -1035,9 +1018,9 @@ Neigungswinkel  =  30° Azimut =    0°
 PV-Bruttoertrag =  652 kWh
 PV-Nettoertrag  =  561 kWh bei System-Wirkungsgrad 86%
 Last Haushalt   = 3000 kWh
-Eigenverbrauch  =  462 kWh
-Eigenverbrauch  =  361 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
-Eigenverbrauch  =  197 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
+Eigenverbrauch  =  467 kWh
+Eigenverbrauch  =  366 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch  =  181 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 -->
 
 **Also auch bei einem Verbrauchsprofil, das stark auf die Morgen- und
@@ -1066,18 +1049,18 @@ und gleichmäßigeren Ertragsverteilung über den Tagesverlauf in Betracht ziehe
 eines nach Osten, zwei nach Süden und eines nach Westen auszurichten.
 Bei 400 Wp Modulen ergibt die [Eigenverbrauchssimulation](#SolBatSim), wieder
 für ein typisches Lastprofil und 3000 kWh Jahresverbrauch in Süddeutschland,
-für alle drei Himmelsrichtungen eine optimale Neigungung von um die 25°
+für alle drei Himmelsrichtungen eine optimale Neigungung von um die 30°
 mit wieder sehr geringer Empfindlichkeit auf Abweichungen davon.\
 Die Verteilung 1 × Ost, 2 × Süd und 1 x West resultiert in einem Nettoertrag
-von 1576 kWh und einem Eigenverbrauch von 809 kWh bei optimalen 30°.\
+von 1576 kWh und einem Eigenverbrauch von 831 kWh bei optimalen 30°.\
 Hingegen bringt die gemeinsame Ausrichtung der 4 Module nach Süden
-erwartungsgemäß einen deutlich höheren Gesamt-Nettoertrag von 1734 kWh,
-während der Eigenverbrauch von 816 kWh nur noch minimal höher ist,
+erwartungsgemäß einen deutlich höheren Gesamt-Nettoertrag von 1715 kWh,
+während der Eigenverbrauch von 838 kWh nur noch minimal höher ist,
 und zwar bei optimaler Neigung von 25°.
 Wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr allerdings
 nur eine Grundlast von z.B. 100 W hat, hat die Aufteilung
 auf drei Himmelsrichtungen beim Eigenverbrauch einen hauchdünnen Vorteil
-von 3 kWh (nämlich 609 kWh gegenüber 606 kWh bei reiner Südausrichtung),
+von 3 kWh (nämlich 629 kWh gegenüber 626 kWh bei reiner Südausrichtung),
 und zwar bei optimaler Neigung von 25 bis 30° der südlichen Module
 und 35 bis 40° der östlichen und westlichen Module.\
 Also lohnt sich auch die weitere Aufteilung auf drei Himmelsrichtungen nicht
@@ -1086,8 +1069,9 @@ wirklich, zumal eine gemeinsame Montage meist einfacher und günstiger ist
 
 <!--
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_40deg_-90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_0deg_2005_2020.csv 800 -curb 1200 # -load 130
-./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_-90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_31deg_0deg_2005_2020.csv 800 -curb 1200 # -load 130
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_-90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 800 -curb 1200 # -load 130
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 800 -curb 1200 # load 130
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_-90deg_2005_2020.csv 400 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_0deg_2005_2020.csv 800 -curb 1200 # -load 130
 
 40°+25°
 PV-Nominalleistung = 1600 Wp = 400+400+800 Wp
@@ -1095,18 +1079,18 @@ PV-Bruttoertrag    = 1793 kWh
 PV-Nettoertrag     = 1542 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
 PV-Ertragsverlust  =    0 kWh während 0 h durch Drosselung auf 1200 W
 Verbrauch Haushalt = 3000 kWh
-Eigenverbrauch mit =  806 kWh
-Eigenverbrauch mit =  609 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch mit =  829 kWh
+Eigenverbrauch mit =  630 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
 Eigenverbrauchsv.  =    0 kWh netto während 0 h durch Drosselung auf 1200 W
 
-35°+31° opt. für tagsüber Grundlast
+35°+30° opt. für tagsüber Grundlast
 PV-Nominalleistung = 1600 Wp = 400+400+800 Wp
 PV-Bruttoertrag    = 1820 kWh
 PV-Nettoertrag     = 1566 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
 PV-Ertragsverlust  =    0 kWh während 0 h durch Drosselung auf 1200 W
 Verbrauch Haushalt = 3000 kWh
-Eigenverbrauch mit =  808 kWh
-Eigenverbrauch mit =  609 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch mit =  831 kWh
+Eigenverbrauch mit =  629 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
 Eigenverbrauchsv.  =    0 kWh netto während 0 h durch Drosselung auf 1200 W
 
 30°
@@ -1115,17 +1099,37 @@ PV-Bruttoertrag    = 1833 kWh
 PV-Nettoertrag     = 1576 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
 PV-Ertragsverlust  =    0 kWh während 2 h durch Drosselung auf 1200 W
 Verbrauch Haushalt = 3000 kWh
-Eigenverbrauch mit =  809 kWh
-Eigenverbrauch mit =  608 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch mit =  831 kWh
+Eigenverbrauch mit =  628 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
 Eigenverbrauchsv.  =    0 kWh während 0 h durch Drosselung auf 1200 W
 
 25°
-Eigenverbrauch mit =  807 kWh
-Eigenverbrauch mit =  607 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+PV-Nominalleistung = 1600 Wp = 400+400+800 Wp
+PV-Bruttoertrag    = 1833 kWh
+PV-Nettoertrag     = 1576 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
+PV-Ertragsverlust  =    0 kWh während 3 h durch Drosselung auf 1200 W
+Verbrauch Haushalt = 3000 kWh
+Eigenverbrauch mit =  829 kWh
+Eigenverbrauch mit =  627 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauchsv,  =    0 kWh netto während 0 h durch Drosselung auf 1200 W
+-->
 
+<!--
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1600 -curb 1200 # -load 130
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 1600 -curb 1200 # -load 130
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_25deg_0deg_2005_2020.csv 1600 -curb 1200 # -load 130
 ./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_20deg_0deg_2005_2020.csv 1600 -curb 1200 # -load 130
+./Solar.pl Lastprofil_17_teils_64.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_15deg_0deg_2005_2020.csv 1600 -curb 1200 # -load 130
+
+35°
+PV-Nominalleistung = 1600 Wp
+PV-Bruttoertrag    = 2030 kWh
+PV-Nettoertrag     = 1739 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
+PV-Ertragsverlust  =    0 kWh während 5 h durch Drosselung auf 1200 W
+Last Haushalt      = 3000 kWh
+Eigenverbrauch mit =  835 kWh
+Eigenverbrauch mit =  621 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauchsv.  =    0 kWh während 5 h durch Drosselung auf 1200 W
 
 30°
 PV-Nominalleistung = 1600 Wp
@@ -1133,8 +1137,8 @@ PV-Bruttoertrag    = 2023 kWh
 PV-Nettoertrag     = 1734 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
 PV-Ertragsverlust  =    6 kWh während 106 h durch Drosselung auf 1200 W
 Last Haushalt      = 3000 kWh
-Eigenverbrauch mit =  816 kWh
-Eigenverbrauch mit =  605 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch mit =  837 kWh
+Eigenverbrauch mit =  624 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
 Eigenverbrauchsv.  =    0 kWh während 5 h durch Drosselung auf 1200 W
 
 25°
@@ -1143,8 +1147,8 @@ PV-Bruttoertrag    = 1999 kWh
 PV-Nettoertrag     = 1715 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
 PV-Ertragsverlust  =    4 kWh während 84 h durch Drosselung auf 1200 W
 Verbrauch Haushalt = 3000 kWh
-Eigenverbrauch mit =  816 kWh
-Eigenverbrauch mit =  606 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauch mit =  838 kWh
+Eigenverbrauch mit =  626 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
 Eigenverbrauchsv.  =    0 kWh netto während 3 h durch Drosselung auf 1200 W
 
 20°
@@ -1152,9 +1156,19 @@ PV-Nominalleistung = 1600 Wp
 PV-Bruttoertrag    = 1966 kWh
 PV-Nettoertrag     = 1688 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
 PV-Ertragsverlust  =    3 kWh während 62 h durch Drosselung auf 1200 W
-Verbrauch Haushalt    = 3000 kWh
-Eigenverbrauch mit =  814 kWh
-Eigenverbrauch mit =  606 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Verbrauch Haushalt = 3000 kWh
+Eigenverbrauch mit =  853 kWh
+Eigenverbrauch mit =  625 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
+Eigenverbrauchsv.  =    0 kWh netto während 2 h durch Drosselung auf 1200 W
+
+15°
+PV-Nominalleistung = 1600 Wp
+PV-Bruttoertrag    = 1923 kWh
+PV-Nettoertrag     = 1652 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
+PV-Ertragsverlust  =    0 kWh während 38 h durch Drosselung auf 1200 W
+Verbrauch Haushalt = 3000 kWh
+Eigenverbrauch mit =  821 kWh
+Eigenverbrauch mit =  624 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
 Eigenverbrauchsv.  =    0 kWh netto während 2 h durch Drosselung auf 1200 W
 -->
 
@@ -1395,24 +1409,24 @@ Rechnen wir wieder mit Kosten von 1,10€/Wp, also für diese Anlage 660€.
 [//]: #
 <!--
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
-ergibt 457 kWh, aber noch etwas Lastspitzen-Abzug
+ergibt 464 kWh, aber noch etwas Lastspitzen-Abzug
 88%: -peff 93.617
 
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 
 PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  605 W am TMY-04-15 um 12:00 h
+Max. PV-Bruttoleistung      =  605 W am TMY-04-15 um 13:00 h
 PV-Bruttoertrag             =  763 kWh
 PV-Nettoertrag              =  660 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 Ertragsanteil 9-15 Uhr MEZ  =   73 %
 
 Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  461 kWh
-Netzeinspeisung             =  199 kWh
+PV-Eigenverbrauch           =  464 kWh
+Netzeinspeisung             =  196 kWh
 PV-Eigenverbrauchsanteil    =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 
-Bei Lastprofil_4685_kWh.csv Eigenverbrauch 503 kWh
+Bei Lastprofil_4685_kWh.csv Eigenverbrauch 509 kWh
 -->
 
   - Bei einem relativ hohen Jahresverbrauch von 6000 kWh können durchschnittlich
@@ -1421,11 +1435,11 @@ Bei Lastprofil_4685_kWh.csv Eigenverbrauch 503 kWh
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy
+./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 
 Verbrauch durch Haushalt    = 6000 kWh
-PV-Eigenverbrauch           =  572 kWh
-Netzeinspeisung             =   89 kWh
+PV-Eigenverbrauch           =  574 kWh
+Netzeinspeisung             =   86 kWh
 PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
 -->
@@ -1436,11 +1450,11 @@ Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
+./Solar.pl Lastprofil_4673_kWh.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_15deg_2005_2020.csv 600 -peff 92 -tmy
 
 Last durch Haushalt         = 1500 kWh
-Eigenverbrauch              =  330 kWh
-Netzeinspeisung             =  330 kWh
+Eigenverbrauch              =  333 kWh
+Netzeinspeisung             =  327 kWh
 Eigenverbrauchsanteil       =   50 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   22 % des Verbrauchs (Autarkiegrad)
 -->
@@ -1459,8 +1473,8 @@ allerdings hätte man dann auch langfristig weniger Nutzen.
 
 Last durch Haushalt         = 3000 kWh
 Konstante Last              =  100 W an den ersten 5 Tagen der Woche von 8 bis 16 Uhr
-Eigenverbrauch              =  364 kWh
-Netzeinspeisung             =  297 kWh
+Eigenverbrauch              =  366 kWh
+Netzeinspeisung             =  294 kWh
 Eigenverbrauchsanteil       =   55 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   12 % des Verbrauchs (Autarkiegrad)
 
@@ -1862,9 +1876,9 @@ sogar unnötig stark verringert wird, ist der Effekt auf den nutzbaren Ertrag
 längst nicht so groß wie man meinen könnte.
 
 Nehmen wir beispielsweise eine PV-Anlage mit 1000 Wp, die je nach Standort
-und Ausrichtung zu einem Ertrag von 1216 kWh brutto pro Jahr führen kann,
+und Ausrichtung zu einem Ertrag von 1272 kWh brutto pro Jahr führen kann,
 also bei einem PV-System-Wirkungsgrad von 92% und einem typischen
-Wechselrichter-Wirkungsgrad von 94% etwa 1050 kWh Netto-Ertrag.
+Wechselrichter-Wirkungsgrad von 94% etwa 1100 kWh Netto-Ertrag.
 Bei 3000 kWh Jahresverbrauch mit einem durchschnittlichen Lastprofil
 macht der effektive Verlust durch Drosselung auf 600 W Eingangsleistung
 des Wechselrichters (also 564 W Ausgangsleistung bei den 94% Wirkungsgrad)
@@ -1877,7 +1891,8 @@ deutlich kleiner:
 bei einem durchschnittlichen Lastprofil überhaupt so viel Strom verbraucht,
 dass sich die Drosselung beim Eigenverbrauch bemerkbar macht. Und die Menge
 dieses Verbrauchs, bei dem also mehr als 528 W Leistung beansprucht werden,
-ist ziemlich gering, so dass der Verlust effektiv nur 10 kWh ausmacht.\
+ist ziemlich gering, so dass der Verlust effektiv nur 10 kWh ausmacht.
+
 Selbst wenn man es schafft, die Last innerhalb des Tages so zu verschieben,
 dass täglich zwischen 8 und 16 Uhr doppelt so viel verbraucht wird wie normal
 und morgens und abends entsprechend weniger, ist der effektive Kappungsverlust
@@ -1891,96 +1906,99 @@ dann verschwindet der effektive Kappungsverlust natürlich völlig.
 https://www.mydealz.de/comments/permalink/40266559
 https://www.mydealz.de/comments/permalink/40042755
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -curb 564
 88%: -peff 93.617
 Verbrauch gemäß Lastprofil  = 4674 kWh
 Grundlast                   =  286 W
 
 PV-Nominalleistung          = 1000 Wp
-Bruttoleistung max.         =  994 W am TMY-04-30 um 11:00 h
-PV-Bruttoertrag             = 1216 kWh
-PV-Nettoertrag              =  973 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
-PV-Ertragsverlust           =   78 kWh während 653 h durch Drosselung auf 564 W
-Ertragsanteil 9-15 Uhr MEZ  =   70 %
+Bruttoleistung max.         = 1009 W am TMY-04-15 um 13:00 h
+PV-Bruttoertrag             = 1272 kWh
+PV-Nettoertrag              = 1100 kWh bei PV-System-Eff. 92%, WR-Eff. 94%
+Ertragsanteil 9-15 Uhr MEZ  =   73 %
 
 Last durch Haushalt         = 3000 kWh
-PV-Eigenverbrauch           =  587 kWh
-Netzeinspeisung             =  464 kWh
+PV-Eigenverbrauch           =  612 kWh
+Netzeinspeisung             =  488 kWh
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -curb 564
-Eigenverbrauch mit Drossel  =  577 kWh
-Eigenverbrauchsverlust      =   10 kWh während 93 h durch Drosselung auf 564 W
-Netzeinspeisung             =  396 kWh
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -curb 564
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -curb 564 -load 111 7:8..16
+PV-Nettoertrag              = 1023 kWh bei PV-System-Eff. 92%, WR-Eff. 94%
+Eigenverbrauch mit Drossel  =  603 kWh
+Eigenverbrauchsverlust      =    9 kWh während 90 h durch Drosselung auf 564 W
+Netzeinspeisung             =  420 kWh
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -curb 564 -bend 1,1,1,1,.5,.5,.5,.5,2,2,2,2,2,2,2,2,.5,.5,.5,.5,1,1,1,1
+
+Last-Verzerrung je Stunde   = 1 1 1 1 .5 .5 .5 .5 2 2 2 2 2 2 2 2 .5 .5 .5 .5 1 PV-Eigenverbrauch           =  716 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =   19 kWh netto während 190 h durch Drosselung auf 564 W
+Netzeinspeisung             =  307 kWh
+
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -curb 564 -load 111 7:8..16
 
 Konstante Last              =  100 W  von 8 bis 16 Uhr
-PV-Eigenverbrauch           =  359 kWh mit Drosselung
+PV-Eigenverbrauch           =  371 kWh mit Drosselung
 PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 564 W
-Netzeinspeisung             =  614 kWh
-
-/Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -curb 564 -distort 1,1,1,1,.5,.5,.5,.5,2,2,2,2,2,2,2,2,.5,.5,.5,.5,1,1,1,1
-
-Last-Verzerrung je Stunde   = 1 1 1 1 .5 .5 .5 .5 2 2 2 2 2 2 2 2 .5 .5 .5 .5 1 PV-Eigenverbrauch           =  682 kWh mit Drosselung
-PV-Eigenverbrauchsverlust   =   20 kWh netto während 190 h durch Drosselung auf 564 W
-Netzeinspeisung             =  291 kWh
+Netzeinspeisung             =  652 kWh
 -->
 
+
+
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Optimale Entladestrategie (so viel wie gebraucht)
-Ladeverlust                 =   20 kWh durch Lade-Eff. 94%
-Speicherverlust             =   16 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  304 kWh
-Zwischenspeicherung         =  340 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  340
+Ladeverlust                 =   21 kWh durch Lade-Eff. 94%
+Speicherverlust             =   17 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  316 kWh
+Zwischenspeicherung         =  354 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  354
 
-PV-Eigenverbrauch           =  881 kWh mit Drosselung
-PV-Eigenverbrauchsverlust   =   10 kWh während 93 h durch Drosselung auf 564 W
-Netzeinspeisung             =   56 kWh
-PV-Eigenverbrauchsanteil    =   91 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   29 % des Verbrauchs (Autarkiegrad)
+PV-Eigenverbrauch           =  919 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    9 kWh während 93 h durch Drosselung auf 564 W
+Netzeinspeisung             =   66 kWh
+PV-Eigenverbrauchsanteil    =   90 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   31 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000 -pass 0 -feed 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000 -pass 0 -feed 600
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Konstanteinspeisung         =  600 W
 Verlust durch Überschuss    =    0 kWh
-Ladeverlust                 =   58 kWh durch Lade-Eff. 94%
-Speicherverlust             =   46 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  544 kWh
-Zwischenspeicherung         =  973 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  973
+Ladeverlust                 =   61 kWh durch Lade-Eff. 94%
+Speicherverlust             =   48 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  569 kWh
+Zwischenspeicherung         = 1023 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         = 1023
 
-PV-Eigenverbrauch           =  544 kWh mit Drosselung
-PV-Eigenverbrauchsverlust   =   67 kWh während 653 h durch Drosselung auf 564 W
-Netzeinspeisung             =  325 kWh
+PV-Eigenverbrauch           =  569 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =   66 kWh während 653 h durch Drosselung auf 564 W
+Netzeinspeisung             =  344 kWh
 PV-Eigenverbrauchsanteil    =   56 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
+Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000 -pass 0 -feed max 1000
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000 -pass 0 -feed max 1000
 
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Maximaleinspeisung          = 1000 W
-Verlust durch Überschuss    =   70 kWh
-Ladeverlust                 =   54 kWh durch Lade-Eff. 94%
-Speicherverlust             =   42 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  806 kWh
-Zwischenspeicherung         =  903 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  903
+Verlust durch Überschuss    =   79 kWh
+Ladeverlust                 =   57 kWh durch Lade-Eff. 94%
+Speicherverlust             =   44 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  843 kWh
+Zwischenspeicherung         =  944 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  944
 
-PV-Eigenverbrauch           =  806 kWh mit Drosselung
-PV-Eigenverbrauchsverlust   =   67 kWh während 653 h durch Drosselung auf 564 W
+PV-Eigenverbrauch           =  843 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =   66 kWh während 653 h durch Drosselung auf 564 W
 Netzeinspeisung             =    0 kWh
-PV-Eigenverbrauchsanteil    =   83 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   27 % des Verbrauchs (Autarkiegrad)
+PV-Eigenverbrauchsanteil    =   82 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   28 % des Verbrauchs (Autarkiegrad)
 -->
 
 Auch bei Abweichung von der optimalen Südausrichtung verschwinden die ohnehin
@@ -2001,7 +2019,7 @@ Längengrad                  =   10.408
 
 PV-Nettoertrag              =  889 kWh
 PV-Netto-Ertragsverlust     =    0 kWh während 0 h durch Drosselung auf 800 W
-PV-Eigenverbrauch           =  569 kWh mit Drosselung
+PV-Eigenverbrauch           =  576 kWh mit Drosselung
 PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 800 W
 -->
 <!--
@@ -2009,7 +2027,7 @@ PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 8
 
 PV-Nettoertrag              =  888 kWh
 PV-Netto-Ertragsverlust     =    1 kWh während 72 h durch Drosselung auf 600 W
-PV-Eigenverbrauch           =  569 kWh mit Drosselung
+PV-Eigenverbrauch           =  575 kWh mit Drosselung
 PV-Eigenverbrauchsverlust   =    0 kWh netto während 9 h durch Drosselung auf 600 W
 -->
 
@@ -2017,8 +2035,8 @@ PV-Eigenverbrauchsverlust   =    0 kWh netto während 9 h durch Drosselung auf 6
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_45deg_2005_2020.csv 500 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_-45deg_2005_2020.csv 500 -peff 92 -tmy -curb 800
 
 PV-Nettoertrag              = 1031 kWh
-PV-Netto-Ertragsverlust     =    0 kWh während 4 h durch Drosselung auf 800 W
-PV-Eigenverbrauch           =  600 kWh mit Drosselung
+PV-Netto-Ertragsverlust     =    0 kWh während 0 h durch Drosselung auf 800 W
+PV-Eigenverbrauch           =  606 kWh mit Drosselung
 PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 800 W
 -->
 <!--
@@ -2026,8 +2044,8 @@ PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 8
 
 PV-Nettoertrag              = 1003 kWh
 PV-Netto-Ertragsverlust     =   28 kWh während 382 h durch Drosselung auf 600 W
-PV-Eigenverbrauch           =  597 kWh mit Drosselung
-PV-Eigenverbrauchsverlust   =    3 kWh netto während 45 h durch Drosselung auf 600 W
+PV-Eigenverbrauch           =  603 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    3 kWh netto während 46 h durch Drosselung auf 600 W
 -->
 
 <!-- Neigungswinkel              =   30° Azimut = 0°
@@ -2035,7 +2053,7 @@ PV-Eigenverbrauchsverlust   =    3 kWh netto während 45 h durch Drosselung auf 
 
 PV-Nettoertrag              = 1088 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 PV-Netto-Ertragsverlust     =    1 kWh während 31 h durch Drosselung auf 800 W
-PV-Eigenverbrauch           =  603 kWh mit Drosselung
+PV-Eigenverbrauch           =  609 kWh mit Drosselung
 PV-Eigenverbrauchsverlust   =    0 kWh netto während 3 h durch Drosselung auf 800 W
 -->
 <!--
@@ -2043,8 +2061,8 @@ PV-Eigenverbrauchsverlust   =    0 kWh netto während 3 h durch Drosselung auf 8
 
 PV-Nettoertrag              = 1037 kWh
 PV-Netto-Ertragsverlust     =   52 kWh während 532 h durch Drosselung auf 600 W
-PV-Eigenverbrauch           =  598 kWh mit Drosselung
-PV-Eigenverbrauchsverlust   =    5 kWh netto während 64 h durch Drosselung auf 600 W
+PV-Eigenverbrauch           =  603 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    6 kWh netto während 64 h durch Drosselung auf 600 W
 -->
 
 Aus den genannten Gründen lohnt es sich (jedenfalls bei PV-Nennleistungen
@@ -2054,8 +2072,8 @@ bis diese in Deutschland offiziell unter die Bagatellgrenze fallen.
 
 Hingegen **bieten 800 bis 1000 Wp statt 600 Wp PV-Nennleistung bei relativ
 geringen Zusatzkosten eine sinnvolle Reserve für schwächere Sonnenstunden**,
-wodurch der Netto-Ertrag trotz Kappung 210 bis 360 kWh höher liegt,
-und der Eigenverbrauch immerhin 80 bis 135 kWh höher im Jahr.
+wodurch der Netto-Ertrag trotz Kappung etwa 200 bis 350 kWh höher liegt,
+und der Eigenverbrauch immerhin 80 bis 140 kWh höher im Jahr.
 Die Amortisationszeit der Gesamt-Anlage bleibt dabei ziemlich gleich, und auf
 lange Sicht ergibt sich eine entsprechend höhere Kostenersparnis als mit 600 Wp.
 
@@ -2065,54 +2083,54 @@ Azimut                      =    0°
 Breitengrad                 =   48.215
 Längengrad                  =   11.727
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 600 -curb 564 -tmy -peff 92
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 600 -curb 564 -tmy -peff 92
 
 PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  607 W am TMY-04-15 um 12:00 h
-PV-Bruttoertrag             =  764 kWh
-PV-Nettoertrag              =  660 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+Max. PV-Bruttoleistung      =  631 W am TMY-04-15 um 12:00 h
+PV-Bruttoertrag             =  755 kWh
+PV-Nettoertrag              =  663 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
 PV-Netto-Ertragsverlust     =    0 kWh während 0 h durch Drosselung auf 564 W
-Ertragsanteil 9-15 Uhr MEZ  =   73 %
+Ertragsanteil 9-15 Uhr MEZ  =   72 %
 
 Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  460 kWh mit Drosselung
+PV-Eigenverbrauch           =  461 kWh mit Drosselung
 PV-Eigenverbrauchsverlust   =    0 kWh netto während 0 h durch Drosselung auf 564 W
-Netzeinspeisung             =  200 kWh
+Netzeinspeisung             =  192 kWh
 PV-Eigenverbrauchsanteil    =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 800 -curb 564 -tmy -peff 92
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 800 -curb 564 -tmy -peff 92
 
 PV-Nominalleistung          =  800 Wp
-Max. PV-Bruttoleistung      =  810 W am TMY-04-15 um 12:00 h
-PV-Bruttoertrag             = 1018 kWh
-PV-Nettoertrag              =  871 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
-PV-Netto-Ertragsverlust     =   10 kWh während 245 h durch Drosselung auf 564 W
-Ertragsanteil 9-15 Uhr MEZ  =   73 %
+Max. PV-Bruttoleistung      =  841 W am TMY-04-15 um 12:00 h
+PV-Bruttoertrag             = 1007 kWh
+PV-Nettoertrag              =  861 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+PV-Netto-Ertragsverlust     =    9 kWh während 220 h durch Drosselung auf 564 W
+Ertragsanteil 9-15 Uhr MEZ  =   72 %
 
 Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  540 kWh mit Drosselung
-PV-Eigenverbrauchsverlust   =    1 kWh netto während 34 h durch Drosselung auf 564 W
-Netzeinspeisung             =  331 kWh
-PV-Eigenverbrauchsanteil    =   62 % des Nettoertrags (Nutzungsgrad)
+PV-Eigenverbrauch           =  542 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    1 kWh netto während 29 h durch Drosselung auf 564 W
+Netzeinspeisung             =  319 kWh
+PV-Eigenverbrauchsanteil    =   63 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Solardaten_1215_kWh.csv 1000 -curb 564 -tmy -peff 92
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.269_10.408_SA2_1kWp_crystSi_14_30deg_0deg_2005_2020.csv 1000 -curb 564 -tmy -peff 92
 
 PV-Nominalleistung          = 1000 Wp
-Max. PV-Bruttoleistung      = 1012 W am TMY-04-15 um 12:00 h
-PV-Bruttoertrag             = 1273 kWh
-PV-Nettoertrag              = 1021 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
-PV-Netto-Ertragsverlust     =   79 kWh während 679 h durch Drosselung auf 564 W
-Ertragsanteil 9-15 Uhr MEZ  =   71 %
+Max. PV-Bruttoleistung      = 1051 W am TMY-04-15 um 12:00 h
+PV-Bruttoertrag             = 1259 kWh
+PV-Nettoertrag              = 1015 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+PV-Netto-Ertragsverlust     =   73 kWh während 682 h durch Drosselung auf 564 W
+Ertragsanteil 9-15 Uhr MEZ  =   70 %
 
 Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  596 kWh mit Drosselung
-PV-Eigenverbrauchsverlust   =    9 kWh netto während 91 h durch Drosselung auf 564 W
-Netzeinspeisung             =  425 kWh
-PV-Eigenverbrauchsanteil    =   58 % des Nettoertrags (Nutzungsgrad)
+PV-Eigenverbrauch           =  601 kWh mit Drosselung
+PV-Eigenverbrauchsverlust   =    8 kWh netto während 89 h durch Drosselung auf 564 W
+Netzeinspeisung             =  414 kWh
+PV-Eigenverbrauchsanteil    =   59 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 
@@ -2202,9 +2220,9 @@ Optimale Entladestrategie (so viel wie gebraucht)
 Verlust durch Überlauf      =    0 kWh
 Ladeverlust                 =   12 kWh durch Lade-Eff. 94%
 Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  178 kWh
-Zwischenspeicherung         =  200 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  200
+PV-Nutzung über Speicher    =  176 kWh
+Zwischenspeicherung         =  197 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  197
 
 PV-Eigenverbrauch           =  639 kWh
 Netzeinspeisung             =    0 kWh
@@ -2222,9 +2240,9 @@ Optimale Entladestrategie (so viel wie gebraucht)
 Verlust durch Überlauf      =    0 kWh
 Ladeverlust                 =    5 kWh durch Lade-Eff. 94%
 Speicherverlust             =    4 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =   79 kWh
-Zwischenspeicherung         =   88 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =   88
+PV-Nutzung über Speicher    =   77 kWh
+Zwischenspeicherung         =   86 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =   86
 
 PV-Eigenverbrauch           =  651 kWh
 Netzeinspeisung             =    0 kWh
@@ -2240,11 +2258,11 @@ Optimale Entladestrategie (so viel wie gebraucht)
 Verlust durch Überlauf      =    0 kWh
 Ladeverlust                 =   12 kWh durch Lade-Eff. 94%
 Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  180 kWh
-Zwischenspeicherung         =  201 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  134
+PV-Nutzung über Speicher    =  176 kWh
+Zwischenspeicherung         =  197 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  131
 
-PV-Eigenverbrauch           =  640 kWh
+PV-Eigenverbrauch           =  639 kWh
 Netzeinspeisung             =    0 kWh
 PV-Eigenverbrauchsanteil    =   97 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
@@ -2258,12 +2276,12 @@ Optimale Entladestrategie (so viel wie gebraucht)
 Verlust durch Überlauf      =    0 kWh
 Ladeverlust                 =   11 kWh durch Lade-Eff. 94%
 Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  168 kWh
-Zwischenspeicherung         =  188 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  376
+PV-Nutzung über Speicher    =  165 kWh
+Zwischenspeicherung         =  185 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  369
 
 PV-Eigenverbrauch           =  628 kWh
-Netzeinspeisung             =   13 kWh
+Netzeinspeisung             =   12 kWh
 PV-Eigenverbrauchsanteil    =   95 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
 -->
@@ -2277,15 +2295,15 @@ zur PV-Anlage, zur gleichen Steigerungsrate des Eigenverbrauchsanteil.
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_Lindenberg_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 581 -tmy
 
 PV-Nominalleistung          =  581 Wp
-Max. PV-Bruttoleistung      =  582 W am TMY-04-16 um 11:00 h
+Max. PV-Bruttoleistung      =  582 W am TMY-04-16 um 12:00 h
 PV-Bruttoertrag             =  673 kWh
 PV-Nettoertrag              =  579 kWh bei PV-System-Eff. 91%, Wechselrichter-Eff. 94%
-Ertragsanteil 9-15 Uhr MEZ  =   71 %
+Ertragsanteil 9-15 Uhr MEZ  =   73 %
 
 Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  417 kWh
-Netzeinspeisung             =  162 kWh
-PV-Eigenverbrauchsanteil    =   72 % des Nettoertrags (Nutzungsgrad)
+PV-Eigenverbrauch           =  420 kWh
+Netzeinspeisung             =  159 kWh
+PV-Eigenverbrauchsanteil    =   73 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   14 % des Verbrauchs (Autarkiegrad)
 
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/
@@ -2302,10 +2320,10 @@ Optimale Ladestrategie (nicht gebrauchte Energie)
 Optimale Entladestrategie (so viel wie gebraucht)
 Verlust durch Überlauf      =    0 kWh
 Ladeverlust                 =   10 kWh durch Lade-Eff. 94%
-Speicherverlust             =    8 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  144 kWh
-Zwischenspeicherung         =  162 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  162
+Speicherverlust             =    7 kWh durch Speicher-Eff. 95%
+PV-Nutzung über Speicher    =  142 kWh
+Zwischenspeicherung         =  159 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  159
 
 PV-Eigenverbrauch           =  562 kWh
 Netzeinspeisung             =    0 kWh
@@ -2454,15 +2472,16 @@ Konstanteinspeisung         =   45 W
 Verlust durch Überlauf      =    0 kWh
 Ladeverlust                 =   11 kWh durch Lade-Eff. 94%
 Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  113 kWh
-Zwischenspeicherung         =  190 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  190
+PV-Nutzung über Speicher    =  112 kWh
+Zwischenspeicherung         =  188 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  188
 
-PV-Eigenverbrauch           =  573 kWh
-Netzeinspeisung             =   67 kWh
+PV-Eigenverbrauch           =  575 kWh
+Netzeinspeisung             =   65 kWh
 PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
-
+-->
+<!--
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2000 -feed 35
 
 Speicherkapazität           = 2000 Wh, DC-gekoppelt
@@ -2472,11 +2491,11 @@ Verlust durch Überlauf      =    0 kWh
 Ladeverlust                 =   11 kWh durch Lade-Eff. 94%
 Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
 PV-Nutzung über Speicher    =  123 kWh
-Zwischenspeicherung         =  189 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =   94
+Zwischenspeicherung         =  186 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =   93
 
-PV-Eigenverbrauch           =  583 kWh
-Netzeinspeisung             =   57 kWh
+PV-Eigenverbrauch           =  585 kWh
+Netzeinspeisung             =   55 kWh
 PV-Eigenverbrauchsanteil    =   88 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 
@@ -2512,12 +2531,13 @@ PV-Nutzung über Speicher    =  486 kWh
 Zwischenspeicherung         =  622 kWh (bei PV-System-Eff. und Lade-Eff.)
 Vollzyklen pro Jahr         =  622
 
-PV-Eigenverbrauch           =  486 kWh
-Netzeinspeisung             =   70 kWh
+PV-Eigenverbrauch           =  489 kWh
+Netzeinspeisung             =   66 kWh
 PV-Eigenverbrauchsanteil    =   74 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   16 % des Verbrauchs (Autarkiegrad)
-
-/Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed 235
+-->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed 235
 
 Verbrauch durch Haushalt    = 6000 kWh
 
@@ -2527,15 +2547,16 @@ Konstanteinspeisung         =  235 W
 Verlust durch Überlauf      =    6 kWh
 Ladeverlust                 =   39 kWh durch Lade-Eff. 94%
 Speicherverlust             =   31 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  548 kWh
+PV-Nutzung über Speicher    =  550 kWh
 Zwischenspeicherung         =  654 kWh (bei PV-System-Eff. und Lade-Eff.)
 Vollzyklen pro Jahr         =  654
 
-PV-Eigenverbrauch           =  548 kWh
-Netzeinspeisung             =   36 kWh
+PV-Eigenverbrauch           =  550 kWh
+Netzeinspeisung             =   34 kWh
 PV-Eigenverbrauchsanteil    =   83 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =    9 % des Verbrauchs (Autarkiegrad)
-
+-->
+<!--
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2000 -pass 0 -feed 135
 
 Speicherkapazität           = 2000 Wh, DC-gekoppelt
@@ -2763,7 +2784,7 @@ Zwischenspeicherung         =  654 kWh (bei PV-System-Eff. und Lade-Eff.)
 Vollzyklen pro Jahr         =  654
 
 PV-Eigenverbrauch           =  588 kWh
-Netzeinspeisung             =    3 kWh
+Netzeinspeisung             =    2 kWh
 PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 
@@ -2775,12 +2796,12 @@ Maximaleinspeisung          =  600 W
 Verlust durch Überlauf      =    0 kWh
 Ladeverlust                 =   36 kWh durch Lade-Eff. 94%
 Speicherverlust             =   28 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  533 kWh
-Zwischenspeicherung         =  597 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  1195
+PV-Nutzung über Speicher    =  534 kWh
+Zwischenspeicherung         =  598 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  1196
 
-PV-Eigenverbrauch           =  569 kWh
-Netzeinspeisung             =   28 kWh
+PV-Eigenverbrauch           =  570 kWh
+Netzeinspeisung             =   27 kWh
 PV-Eigenverbrauchsanteil    =   86 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
@@ -2807,15 +2828,16 @@ Maximaleinspeisung          =  600 W
 Verlust durch Überlauf      =    3 kWh
 Ladeverlust                 =   39 kWh durch Lade-Eff. 94%
 Speicherverlust             =   31 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  587 kWh
+PV-Nutzung über Speicher    =  588 kWh
 Zwischenspeicherung         =  658 kWh (bei PV-System-Eff. und Lade-Eff.)
 Vollzyklen pro Jahr         =  658
 
-PV-Eigenverbrauch           =  587 kWh
+PV-Eigenverbrauch           =  588 kWh
 Netzeinspeisung             =    0 kWh
 PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
-
+-->
+<!--
 ./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed max 600
 
 Verbrauch durch Haushalt    = 6000 kWh
@@ -2823,27 +2845,29 @@ Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Verlust durch Überlauf      =    0 kWh
 PV-Nutzung über Speicher    =  590 kWh
 Zwischenspeicherung         =  660 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  660
 
 PV-Eigenverbrauch           =  590 kWh
 Netzeinspeisung             =    0 kWh
 PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
-
+-->
+<!--
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 500 -pass 0 -feed max 600
 
 Speicherkapazität           =  500 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Maximaleinspeisung          =  600 W
-Verlust durch Überlauf      =   29 kWh
+Verlust durch Überlauf      =   28 kWh
 Ladeverlust                 =   38 kWh durch Lade-Eff. 94%
 Speicherverlust             =   30 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  564 kWh
-Zwischenspeicherung         =  632 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  1263
+PV-Nutzung über Speicher    =  565 kWh
+Zwischenspeicherung         =  633 kWh (bei PV-System-Eff. und Lade-Eff.)
+Vollzyklen pro Jahr         =  1265
 
-PV-Eigenverbrauch           =  564 kWh
+PV-Eigenverbrauch           =  565 kWh
 Netzeinspeisung             =    0 kWh
-PV-Eigenverbrauchsanteil    =   85 % des Nettoertrags (Nutzungsgrad)
+PV-Eigenverbrauchsanteil    =   86 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 * Bei Anlagen mit konstanter (nicht bedarfsgeregelter) Einspeisung hingegen
@@ -2884,7 +2908,7 @@ Eigenverbrauch erreichen, aber auch dann bleibt der Ansatz kontraproduktiv.
 Speicherkapazität           = 1000 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Konstanteinspeisung         =   85 W von 18 bis 6 Uhr
-Verlust durch Überlauf      =  345 kWh
+Verlust durch Überlauf      =  344 kWh
 Ladeverlust                 =   19 kWh durch Lade-Eff. 94%
 Speicherverlust             =   15 kWh durch Speicher-Eff. 95%
 PV-Nutzung über Speicher    =  269 kWh
@@ -2918,8 +2942,8 @@ PV-Nutzung über Speicher    =  268 kWh
 Zwischenspeicherung         =  313 kWh (bei PV-System-Eff. und Lade-Eff.)
 Vollzyklen pro Jahr         =  313
 
-PV-Eigenverbrauch           =  492 kWh
-Netzeinspeisung             =  135 kWh
+PV-Eigenverbrauch           =  493 kWh
+Netzeinspeisung             =  134 kWh
 PV-Eigenverbrauchsanteil    =   74 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   16 % des Verbrauchs (Autarkiegrad)
 -->
