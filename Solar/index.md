@@ -2680,11 +2680,13 @@ und damit eine Nulleinspeisung zu realisieren.
 {:style="clear:both"}
 
 [![Bild: Y&H Sun-1000 GTIL Netzwechselrichter mit Limiter.png](
-Sun-1000_GTIL_Wechselrichter_mit_Limiter.png){:.right width="450"}](
+Sun-1000_GTIL_Wechselrichter_mit_Limiter.png){:.right width="500"}](
 https://www.youtube.com/watch?v=jPgWE-qQ3SE&t=1012s)
-Ein [Sun GTIL Grid Tie Inverter with Limiter (GTIL)](
-https://de.aliexpress.com/item/32840070519.html) von Y&H,
-also ein Netzwechselrichter mit lastbasierter Strom-Begrenzungs-Regelung,
+Ein Netzwechselrichter mit lastbasierter Strom-Begrenzungs-Regelung,
+engl. _Grid Tie Inverter with Limiter (GTIL)_ wie der [Sun GTIL](
+https://de.aliexpress.com/item/32840070519.html) von Y&H
+oder ein ähnliches Gerät von [Soyosource](
+https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
 <!--, gibt es mit 1000 und 2000 W Leistung -->
 ermöglicht eine einphasige Nulleinspeisung ohne Basteln und Programmieren.
 Man muss nur den Limiter-Sensor im Sicherungskasten an der Phase anbringen,
@@ -3314,6 +3316,10 @@ Für die Umwandlung von Gleichstrom in Wechselstrom (bei uns meist mit
 230 V) benötigt man einen
 [*Wechselrichter*](https://de.wikipedia.org/wiki/Wechselrichter)
 (manchmal auch *Spannungswandler* genannt, engl. _inverter_).
+Eine schöne Übersicht zu den verschiedenen Arten von Wechselrichtern,
+die für kleine PV-Anlagen geeignet sind, findet sich [hier](
+https://mona-stefan.de/li-ion-akkus-18650/akkus/19-wechselrichter-inverter-3).
+
 Bei jedem Wechselrichter sollte man darauf achten, dass er ordentlichen
 Wechselstrom liefert (sog. *reine Sinuswelle*, engl. _pure sine wave_)
 und einen hohen
@@ -3733,8 +3739,8 @@ LocalWords: Nutzungsvarianten stromwandler mikrowechselrichter text
 LocalWords: stromrichter solarregler standard conditions Reflexions
 LocalWords: Idealbedingungen operating temperature Timeseries crystSi
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
-LocalWords: author today abstract This the ignored extension yaml
-LocalWords: metadata add Austria description bagatellgrenze
+LocalWords: author today abstract This the ignored extension yaml txt
+LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords:  
 LocalWords:  
 LocalWords:  
