@@ -2726,7 +2726,7 @@ vorgeführt.
 {:style="clear:both"}
 
 [![Bild: DTUs im Weckglas](
-DTUs_im_Weckglas.jpg){:.right width="340"}](
+DTUs_im_Weckglas.jpg){:.right width="330"}](
 https://blog.helmutkarger.de/balkonkraftwerk-teil-8-opendtu-und-ahoydtu-fuer-hoymiles-wechselrichter/)
 An einem Netzwechselrichter der Hoymiles HM-Serie und für manche TSUN-Geräte
 kann man anstelle einer teuren proprietären Datenübertragungseinheit
@@ -2747,6 +2747,20 @@ auch betriebsfertige Geräte ab 30€, Bausätze ab 20€. Man kann sie sowohl z
 der PV-Ertrags- und Geräte- Daten als auch zum [Steuern](
 https://community.symcon.de/t/modul-beta-hoymiles-modulwechselrichter-mit-opendtu/130965)
 des Wechselrichters verwenden.
+
+{:style="clear:both"}
+
+[![Bild: ESP und RS485 für Soyosource](
+ESP8266_Rs485_Modul2.png){:.left width="400"}](
+https://github.com/KlausLi/Esp-Soyosource-Controller)
+Eine
+[etwas einfachere Lösung](https://github.com/KlausLi/Esp-Soyosource-Controller)
+mit dreiphasiger Lastmessung ermöglicht der [Soyosource 1200](
+https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
+in der Variante mit Limiter, wobei der mitgelieferte einphasige Lastsensor hier
+nicht verwendet wird. Stattdessen wird ein ESP8266 Mikrocontroller
+an einem RS485-Adapter zur Steuerung mit einer fertigen Software verwendet,
+wobei er die Lastinformation per WLAN von einem Shelly 3EM erhält.
 
 {:style="clear:both"}
 
