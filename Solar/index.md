@@ -89,9 +89,10 @@ und keine Batterie benötigt, ist sie für die ökologische Gesamtbilanz am best
 Für eine gewisse Unabhängigkeit von der nicht ständig kräftig vorhandenen
 Sonneneinstrahlung und vom allgemeinen Stromnetz
 braucht man eine aufladbare Batterie als Stromspeicher und weitere Geräte,
-was das Ganze deutlich aufwendiger und teurer macht. Mit einer geeigneten
-vom aktuellen Verbrauch im Haushalt abhängigen Regelung lässt sich überschüssige
-Energie zwischenspeichern und mit gewissen Verlusten nach Bedarf wieder abrufen.
+was das Ganze deutlich aufwendiger und teurer macht.\
+Durch eine *Strompufferung* mit einer geeigneten vom aktuellen Verbrauch im
+Haushalt abhängigen Regelung lässt sich überschüssige Energie zwischenspeichern
+und bei Bedarf wieder abrufen und damit der Eigenverbrauchsanteil erhöhen.\
 Eine sog. *Inselanlage* ist auch während Stromausfällen verwendbar,
 soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
 
@@ -1463,7 +1464,7 @@ Eigendeckungsanteil         =   22 % des Verbrauchs (Autarkiegrad)
 -->
 
   - Wenn bei 3000 kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
-  nur eine Grundlast von 100 W anfällt, liegt die Eigennutzung bei 365 kWh
+  nur eine Grundlast von 100 W anfällt, liegt der Eigenverbrauch bei 365 kWh
   im Jahr (also 55 % des Nettoertrags) und die Amortisationszeit bei 4,5 Jahren.
 
 In den beiden zuletzt genannten Fällen könnte man überlegen,
@@ -1673,7 +1674,7 @@ Lade- und Entladestrategien gewählt werden:
 Für die [o.g. Beispiel-Anlage](#Berechnung) für den Raum München mit 600 Wp
 und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662 kWh
 ergibt sich mit dieser Simulation unter Verwendung minutengenauer Lastprofile
-ohne Speicher je nach Profil eine Eigennutzung von ca. 460 kWh.
+ohne Speicher je nach Profil ein Eigenverbrauch von ca. 460 kWh.
 
 Das Ergebnis fällt nicht so günstig wie bei den zuvor genannten Simulationen
 aus, v.A. weil hier die in der Praxis relativ häufigen Lastspitzen immerhin im
@@ -1687,7 +1688,7 @@ als bei einer über Stunden oder gar ganze Monate gemittelten Betrachtung.
 Vergleichsrechnungen auf Grundlage eines Lastprofils mit (annähernd)
 sekündlicher Auflösung haben ergeben, dass die Lastspitzen nur teilweise einen
 spürbaren Einfluss auf die Nutzbarkeit des PV-Ertrags von kleinen Anlagen haben.
-Bei 600 Wp sind die Eigennutzungs-Ergebnisse bei Lastdaten auf Stundenbasis
+Bei 600 Wp sind die Eigenverbrauchs-Ergebnisse bei Lastdaten auf Stundenbasis
 etwa 3 bis 6% zu optimistisch, auf Minutenbasis nur bis etwa 1%.
 <!-- bei 3000 kWh: 593 562 557  6%   bei 6000 kWh: 630 623 622  1% -->
 
