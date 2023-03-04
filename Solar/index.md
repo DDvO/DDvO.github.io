@@ -44,6 +44,9 @@ keywords:
 - Spannungsregler
 - Laderegler
 - Wechselrichter
+- Netzkopplung
+- Netzparallelbetrieb
+- Hybridwechselrichter
 - Einspeisung
 - Ertrag
 - spezifisch
@@ -3331,8 +3334,9 @@ Der kritischste Punkt ist, das seine maximale Eingangsspannung nicht
 #### Netzwechselrichter {#Netzwechselrichter}
 
 ![Bild: Solar-Microinverter](Solar-Microinverter.png){:.right width="500"}
-Für die Einspeisung ins Stromnetz kommt ein *netzgekoppelter Wechselrichter*
-zum Einsatz. Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*,
+Für die Einspeisung von Gleichstrom ins Wechselstromnetz kommt ein
+*netzgekoppelter Wechselrichter* (engl. _grid-tie inverter_) zum Einsatz.
+Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*,
 *netzgeführter Wechselrichter* oder *fremd geführter Wechselrichter* genannt,
 weil er sich automatisch an die Frequenz und Phase des anliegenden Wechselstroms
 anpasst. Bei wegfallendem Stromanschluss schaltet er den Ausgang vor Allem aus
@@ -3352,12 +3356,13 @@ Im Gegensatz zu Solarkabeln ([siehe oben](#Anschluss)) können 230 V-Kabel
 zwischen Netzwechselrichter und Steckdose durchaus länger sein (z.B. 5 - 10 m),
 ohne dass es größere Leitungsverluste gibt.
 Allerdings kann es dort je nach Kabellänge und -Querschnitt bei größeren Strömen
-zu einem höheren Spannungsabfall kommen, der die Netzkoppelung des WR stört.
+zu einem höheren Spannungsabfall kommen, der die Netzkopplung des WR stört.
 
 #### Inselwechselrichter {#Inselwechselrichter}
 
-![Bild: Wechselrichter](Wechselrichter.png){:.right width="500"}
-*Inselwechselrichter*, auch *selbst geführte Wechselrichter* genannt,
+![Bild: Wechselrichter](Wechselrichter.png){:.right width="450"}
+*Inselwechselrichter* (engl. _off-grid inverter_),
+auch *selbst geführter Wechselrichter* genannt,
 werden vom Stromnetz unabhängig betrieben. Mit ihnen kann man die üblichen
 Haushaltsgeräte auch im Falle eines Stromausfalls mit einer Batterie versorgen,
 natürlich nur im Rahmen der Belastbarkeit und Kapazität der Batterie.
@@ -3382,29 +3387,71 @@ sollte gering sein.
 
 #### Hybridgeräte: Solar-Laderegler mit Wechselrichter {#Hybrid}
 
-![Bild: Hybrides Solar-Ladegerät mit Wechselrichter](
-Solar-off-grid-inverter.png){:.right width="450"}
-Es gibt auch
-[Kombigeräte](https://www.solarserver.de/2021/07/26/green-cell-bietet-neuen-solarwechselrichter-an/), welche
-die Funktionen Solar-Laderegler, Batterie-Netzladegerät und
-Inselwechselrichter in sich vereinen. Damit können Elektrogeräte
-vorzugsweise direkt mit Solarstrom versorgt werden.
-Bei unzureichender Stromzufuhr aus den Solarmodulen ergänzt das Gerät
-die benötigte Leistung automatisch aus der Batterie und schaltet bei
-leerer Batterie (oder je nach konfigurierter Präferenz auch schon bei
-fehlendem Solarstrom) eine externe Stromquelle (Stromnetz oder Generator) hinzu.
-Zum Laden der Batterie wird vorzugsweise Solarstrom verwendet,
-optional aber auch die externe Stromquelle.
-Solch ein Kombigerät ist in seiner Funktionsweise sehr praktisch, braucht
-weniger Platz, ist im Einkauf günstiger und zudem einfacher zu installieren
-und zu verwenden als entsprechende Einzelkomponenten. Es hat aber [auch
+[![Bild: Hybrides Solar-Ladegerät mit Wechselrichter](
+Solar-off-grid-inverter.png){:.right width="450"}](
+https://de.aliexpress.com/item/1005003665568494.html)
+Kombigeräte, die die Funktionen Solar-Laderegler, Batterie-Netzladegerät und
+Wechselrichter in sich vereinen, werden *Hybridwechselrichter* genannt.
+
+Solche Geräte sind in ihrer Funktionsweise sehr praktisch, brauchen
+weniger Platz, sind im Einkauf günstiger und zudem einfacher zu installieren
+und zu verwenden als entsprechende Einzelkomponenten. Sie haben aber aber [auch
 Nachteile](https://www.oeko-energie.de/shop1/de/Solarstrom/Insel-WR/Kombigeraet-Laderegler-MPPT-Wechselrichter-Batterieladegeraet/)
 wie geringe Flexibilität bei der Komponentenwahl
 und größere Wahrscheinlichkeit für einen Ausfall und dann höhere Kosten.
 
-Offenbar gibt es auf dem Markt kein Gerät, das neben der Nutzungsart
-für eine Inselanlage (also netzunabhängige Stromversorgung) auch
-die einer Stecker-Solaranlage mit lastabhängiger Strompufferung ermöglicht.
+Es gibt einfache sehr günstige Hybridgeräte mit Inselwechselrichter,
+z.B. von [EASun](https://de.aliexpress.com/item/1005003665568494.html)
+bzw. [Y&H](https://de.aliexpress.com/item/1005002870436441.html) (Yong Hui),
+aber auch recht solide, aber teurere z.B. von [Green Cell](
+https://www.solarserver.de/2021/07/26/green-cell-bietet-neuen-solarwechselrichter-an/).
+Verbraucher werden direkt daran angeschlossen, also nicht über das Hausnetz.
+Damit können Elektrogeräte vorzugsweise mit Solarstrom versorgt werden.
+Bei unzureichender Stromzufuhr aus den Solarmodulen ergänzt das Gerät
+die benötigte Leistung automatisch aus der angeschlossenen Batterie und schaltet
+bei leerer Batterie (oder je nach konfigurierter Präferenz auch schon bei
+fehlendem Solarstrom) eine externe Stromquelle (Stromnetz oder Generator) hinzu.
+Zum Laden der Batterie wird vorzugsweise Solarstrom verwendet,
+optional aber auch die externe Stromquelle.
+
+Hybridgeräte mit Netzwechselrichter dienen hingegen dem *Netzparallelbetrieb*.
+Sie werden also (zusätzlich zur externen Stromversorgung, möglichst zentral)
+ans Hausnetz angeschlossen und versorgen die Verbraucher mit Solarstrom
+und unter konfigurierbaren Umständen mit Strom aus der angeschlossenen Batterie.
+Diese Variante ist für daheim praktischer, aber auch teurer.\
+Besonders sinnvoll ist hier die Option der Nulleinspeisung, also dass
+der Wechselrichter nur so viel Leistung (aus den PV-Modulen oder der Batterie)
+ins Hausnetz einspeist, wie für die aktuelle Last benötigt wird,
+welche über ein Energiemessgerät dem Hybridgerät mitgeteilt wird.
+
+Es gibt sogar Hybridgeräte, die neben der Nutzungsart für eine Inselanlage
+(also die netzunabhängige Stromversorgung) auch den Netzparallelbetrieb
+mit lastabhängiger Strompufferung ermöglichen, etwa den
+[SolarPower24 Infinisolar V](
+https://gbc-solino.cz/headpage-de/hybrid-wechselrichter-de/infini-solar-de/).
+Dieser kostet allerdings (zusammen mit einem für die lastabhängige Steuerung
+nötigen Energiemessgerät) an die 1000€ und funktioniert nur mit PV-Spannungen
+ab 250 V und einer Batteriespannung von 48 V, ist also für Stecker-Solaranlagen
+nicht geeignet. Details zu seiner Verwendung sind [hier](
+https://mona-stefan.de/index.php?option=com_content&view=article&id=820)
+schön beschrieben.
+
+<!--
+https://www.photovoltaikforum.com/thread/130146-infinisolar-v-ii-3k-modbus/?postID=3043629#post3043629
+
+Die Beschreibungen z.B. auf https://www.ebay.de/itm/275488457372 sind zwar sehr dürftig, aber
+immerhin liest man: "Mehrere programmierbare Betriebsmodi: Grid-Tie, Off-Grid und Grid-Tie mit Backup"
+was ich sehr interessant finde, denn sonst habe ich kein Hybridgerät gefunden, das Insel- und Netzbetrieb unterstützt.
+
+Hier gibt es mehr Informationen: https://gbc-solino.cz/headpage-de/hybrid-wechselrichter-de/infini-solar-de/
+In den Datenblättern (im Anhang) wird Kommunikation mit RS485 bzw. Modbus erwähnt, was vermuten lassen könnte,
+dass man auch was steuern kann, aber eigentlich sehe ich für eine externe Steuerung keine Notwendigkeit, denn:
+Im Handbuch (auch im Anhang) auf Seite 21 ist eine RS-485-Verbindung zu einem dreiphasigen Energiemessgerät abgebildet. Und später werden verschiedene auch lastabhängige Modi erklärt die m.E. wenig Wünsche offen lassen, z.B.
+
+Zitat
+
+Grid-tie with backup (III)
+-->
 
 #### Gleichspannungswandler {#Gleichspannungswandler}
 
@@ -3741,7 +3788,7 @@ LocalWords: Idealbedingungen operating temperature Timeseries crystSi
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
-LocalWords:  
+LocalWords: Yong Hui Green SolarPower backup
 LocalWords:  
 LocalWords:  
 LocalWords:  
