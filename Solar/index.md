@@ -1302,26 +1302,30 @@ Das wird in den Sicherungskasten der Wohnung eingebaut
 
 Für den selbst erzeugten und gleichzeitig verbrauchten Strom spart man sich
 die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
-und entsprechend langsamer läuft.
-Es wird also nur der vom Stromanbieter bezogene Anteil des Verbrauchs berechnet.
+(jedenfalls solange sie positiv ist) und entsprechend langsamer läuft.
+Es wird also nur der aus dem Netz bezogene Anteil des Verbrauchs berechnet.
 
-Übrigens ist es normalerweise egal, auf welcher Drehstrom-Phase (L1, L2 oder L3)
-die Stecker-Solaranlage angeschlossen wird und auf welcher Phase
-die gleichzeitig verwendeten Verbraucher angeschlossen sind ---
-die Stromzähler arbeiten *phasensaldierend*, d.h. sie bilden die Gesamtsumme
-über alle drei Leitungen aus dem Verbrauch und der Erzeugung,
-welche dabei umgekehrtes Vorzeichen hat.
+Übrigens ist es egal, auf welcher Drehstrom-Phase (L1, L2 oder L3) die
+Stecker-Solaranlage angeschlossen wird und auf welcher Phase die möglicherweise
+gleichzeitig verwendeten Verbraucher angeschlossen sind, weil (fast)
+alle Stromzähler *phasensaldierend* arbeiten, d.h. sie bilden die Gesamtsumme
+über alle drei Leitungen aus dem Verbrauch und der Erzeugung, welche dabei
+umgekehrtes Vorzeichen hat. Das hat erst mal noch nichts damit zu tun,
+wie der Zähler mit dem Fall umgeht, dass die PV-Anlage mehr produziert als
+in dem Moment im Haushalt verbraucht wird, dass also der Saldo negativ ist.
 
 ![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.left width="400"}
 ![Bild: Symbol für Rücklaufsperre im Stromzähler](
 Ruecklaufsperre.png){:.right width="370"}
 Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
 verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
-Moderne Stromzähler haben eine *Rücklaufsperre*, was man an dem entsprechenden
-Symbol auf dem Gehäuse erkennen kann. Das führt dazu, dass der überflüssige
-Strom praktisch ins externe Netz verschenkt wird.
-Die klassischen *Ferrariszähler* mit mechanischer Drehscheibe
-laufen dagegen rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
+Moderne derzeit zumindest in Deutschland verwendete Stromzähler simulieren
+eine *Rücklaufsperre*, was man an dem entsprechenden Symbol auf dem Gehäuse
+erkennen kann. Das bedeutet, dass ein negatives Saldo bei der Energie-Summierung
+nicht einberechnet und damit ins externe Netz eingespeister überschüssiger
+PV-Strom praktisch an den Netzbetreiber verschenkt wird.
+Die (meisten) klassischen *Ferrariszähler* mit mechanischer Drehscheibe laufen
+dagegen einfach rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
 Damit kann man „unter der Hand Strom verkaufen“, was aber in Deutschland bislang
 nicht erlaubt ist. Anfang 2023 [sprach sich der VDE jedoch dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
@@ -1329,11 +1333,11 @@ bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen�
 
 Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
 vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
-Eine offiziell angemeldete und vergütete Einspeisung ist mit einiger Bürokratie
+Eine offiziell angemeldete und vergütete Einspeisung ist mit Bürokratie
 verbunden und bringt wenig --- die Vergütung sank in Deutschland gemäß eEG
 [bis 2022 auf ca. 6 ct/kWh](
 https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
-und steigt [ab 2023 auf etwa 8 ct/kWh](
+und liegt [ab 2023 bei etwa 8 ct/kWh](
 https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
 --- immer noch sehr mager, besonders im Vergleich zum Verbrauchspreis.
 
