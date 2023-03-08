@@ -238,7 +238,7 @@ verwiesen.
         - [Hybridgeräte: Solar-Laderegler mit Wechselrichter](#Hybrid)
         - [Gleichspannungswandler](#Gleichspannungswandler)
     -   [Speicherbatterien](#Speicher)
-        - [Batterie-Dimensionierung}](#Dimensionierung)
+        - [Batterie-Dimensionierung](#Dimensionierung)
         - [Batterie-Strukturierung](#Strukturierung)
         - [Kombination aus Batterie und Wechselrichter](#Kaskadierte)
         - [Tiefsetzsteller](#Tiefsetzsteller)
@@ -3148,6 +3148,7 @@ bei längeren Kabeln und höheren Strömen mind. 6mm² (was allerdings teurer is
 Wer keine Außensteckdose hat, kann eine kleine PV-Anlage auf dem Balkon
 oder im Garten auch mit einem Flachbandkabel (z.B. [MC4-Fensterdurchführung](
 https://solarmodule-gladbeck.de/produkt/solar-mc4-fensterdurchfuehrung/?sld=3)
+oder [selbst gebaut](https://www.youtube.com/watch?v=S7qKzvbc_Gg)
 anschließen.
 
 Solarmodule kann man wie Batteriezellen [seriell und/oder parallel](
