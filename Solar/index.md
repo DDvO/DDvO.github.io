@@ -1335,10 +1335,14 @@ kumulierte) Saldo verrechnet wird.
 Damit kann man überschüssigen Strom praktisch „unter der Hand verkaufen“,,
 und zwar zu dem gleichen Preis, den man auch für Strombezug bezahlen muss.
 Das ist in vielen Ländern (z.B. in den Niederlanden, Italien und USA)
-offiziell so geregelt, während es in Deutschland bislang nicht erlaubt ist.
+offiziell so geregelt, während es in Deutschland nicht erlaubt ist.
 Anfang 2023 [sprach sich der VDE jedoch dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
 bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
+Nach den [Solar-Plänen des dt. BMWK vom 10.03.2023](
+https://www.inside-digital.de/news/bundesregierung-plant-beseitigung-buerokratische-huerden-fuer-balkonkraftwerke)
+will man aber leider nicht so weit gehen, sondern nur
+„rückwärtsdrehende Zähler vorübergehend dulden, bis Zähler getauscht ist“.
 
 Ein [*Zweirichtungszähler*](
 https://www.thermondo.de/info/rat/erneuerbare-energie/zweirichtungszaehler/),
@@ -1755,8 +1759,10 @@ Diese Lösung ist m.E. schon sicher genug,
 weil der Wechselrichter die Stromzufuhr sofort unterbricht, wenn man den
 Stecker aus der Dose zieht und seine blanken Kontakte berühren kann.
 Anfang 2023 [sprach sich der VDE dafür aus](
-https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv),
-„den Schuko-Stecker für die Einspeisung [...] zu dulden“.
+https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), „den
+Schuko-Stecker für die Einspeisung [...] zu dulden“, und nun [will das BMWK](
+https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
+„Schukostecker als Energiesteckvorrichtung ebenfalls zulassen“.
 
 ![Bild: Wieland-Unterputz-Dose](Wieland-Unterputz-Dose.png){:.right width="450"}
 Man kann aber auch, wie vom VDE bislang empfohlen, eine spezielle
@@ -1778,11 +1784,14 @@ https://solarblitz.blogspot.com/2019/08/zulassigkeit-von-balkonkraftwerken-plug.
 Dies gilt bislang für Deutschland und die Schweiz; in Österreich gilt nach einer
 allgemeineren EU-Regel für die vereinfachte Nutzung eine Obergrenze von 800 W.
 Seit Anfang 2023 [empfiehlt selbst der VDE](
-https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), sich
-künftig auch in Deutschland an der „Bagatellgrenze bis 800 W“ zu orientieren.
-
-Inzwischen gibt es eine Petition für die
-[schnelle Umsetzung des VDE-Positionspapiers](https://balkon.solar/petition/).
+https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv),
+sich in Abweichung zur bislang geltenden technischen Norm VDE-AR-N 4105
+künftig auch in Deutschland an der „Bagatellgrenze bis 800 W“ zu orientieren.\
+Anfang März 2023 startete eine Petition für die
+[schnelle Umsetzung des VDE-Positionspapiers](https://balkon.solar/petition/),
+und auch die [PV-Strategie 2023 des dt. BMWK](
+https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
+will „die Grenze auf 800 VA Wechselstromleistung zu erhöhen“.
 
 In Deutschland sind PV-Anlagen anmeldepflichtig, wenn sie ins externe Netz
 einspeisen können, wobei der Aufwand für Balkonkraftwerke nicht so groß ist.
@@ -3288,12 +3297,15 @@ Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
 ![Bild: Gartenhaus mit Solarpanels](Gartenhaus-Panels.jpg){:.right width="798"}
 
 Bei Anbringung an der Fassade einer Wohnanlage ist wegen des Erscheinungsbilds
-meist eine vorherige Genehmigung durch die Eigentümergemeinschaft erforderlich.\
-Bei spiegelnden Oberflächen kann es auch Probleme mit Blendeffekten geben.
+meist eine vorherige Genehmigung durch die Eigentümergemeinschaft erforderlich.
+Erfreulicherweise sieht die [PV-Strategie 2023 des dt. BMWK](
+https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
+„einen Anspruch auf Zustimmung für den Betrieb eines Steckersolargerätes“ vor.
 
 Wichtig ist, dass die Module sicher angebracht werden, besonders bzgl. Sturm.
 Bei über 4 m Montagehöhe gelten besondere Verordnungen für Glasoberflächen,
-wenn sich direkt darunter den Menschen bewegen oder aufhalten können.
+wenn sich direkt darunter den Menschen bewegen oder aufhalten können.\
+Bei spiegelnden Oberflächen kann es auch Probleme mit Blendeffekten geben.
 
 ### Mikrowechselrichter und andere Stromrichter {#Stromrichter}
 
