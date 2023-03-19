@@ -1319,27 +1319,42 @@ in dem Moment im Haushalt verbraucht wird, dass also der Saldo negativ ist.
 Ruecklaufsperre.png){:.right width="370"}
 Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
 verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
-Moderne derzeit zumindest in Deutschland verwendete Stromzähler simulieren
-eine *Rücklaufsperre*, was man an dem entsprechenden Symbol auf dem Gehäuse
-erkennen kann. Das bedeutet, dass ein negatives Saldo bei der Energie-Summierung
-nicht einberechnet und damit ins externe Netz eingespeister überschüssiger
-PV-Strom praktisch an den Netzbetreiber verschenkt wird.
-Die (meisten) klassischen *Ferrariszähler* mit mechanischer Drehscheibe laufen
-dagegen einfach rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
-Damit kann man „unter der Hand Strom verkaufen“, was aber in Deutschland bislang
-nicht erlaubt ist. Anfang 2023 [sprach sich der VDE jedoch dafür aus](
+Die in Deutschland derzeit meist verbauten Stromzähler simulieren allerdings
+für die Abrechnung eine *Rücklaufsperre*,
+was man an dem entsprechenden Symbol auf dem Gehäuse erkennen kann.
+Das bedeutet, dass ein negativer Saldo bei der Summierung für die Abrechnung
+nicht berücksichtigt wird --- überschüssigen ins externe Netz eingespeisten
+Strom verschenkt man damit praktisch an den Verteilnetzbetreiber.
+
+Die (meisten) klassischen *Ferrariszähler* mit mechanischer Drehscheibe
+laufen hingegen einfach rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
+Das damit verbundene Abrechnungsmodell heißt
+[Nettomessung](https://de.wikibrief.org/wiki/Net_metering)
+(engl. _net metering_), weil hier direkt der (über den Abrechnungszeitraum
+kumulierte) Saldo verrechnet wird.
+Damit kann man überschüssigen Strom praktisch „unter der Hand verkaufen“,,
+und zwar zu dem gleichen Preis, den man auch für Strombezug bezahlen muss.
+Das ist in vielen Ländern (z.B. in den Niederlanden, Italien und USA)
+offiziell so geregelt, während es in Deutschland bislang nicht erlaubt ist.
+Anfang 2023 [sprach sich der VDE jedoch dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
 bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
 
-Ein *Zweirichtungszähler* kann die Menge des eingespeisten Stroms unabhängig
-vom Verbrauch messen, was die Möglichkeit der Vergütung eröffnet.
-Eine offiziell angemeldete und vergütete Einspeisung ist mit Bürokratie
-verbunden und bringt wenig --- die Vergütung sank in Deutschland gemäß eEG
-[bis 2022 auf ca. 6 ct/kWh](
+Ein [*Zweirichtungszähler*](
+https://www.thermondo.de/info/rat/erneuerbare-energie/zweirichtungszaehler/),
+auch *Zweiwegezähler* genannt, kann die Menge des eingespeisten Stroms
+unabhängig vom Bezug messen, was die Möglichkeit der Vergütung eröffnet.
+Eine angemeldete und vergütete Überschusseinspeisung ist möglich, aber zumindest
+in Deutschland [mit unverhältnismäßig viel Bürokratie und Kosten verbunden](
+https://www.homeandsmart.de/balkonkraftwerk-einspeisung)
+(einmalig Anmeldung und ggf. Zählertausch für etwa 100€;
+jährlich Abrechnung, Steuererklärung, und Messstellengebühr meist 20€)
+und bringt wenig --- die Einspeisevergütung ist staatlich festgelegt,
+<!-- gemäß eEG [bis 2022 auf ca. 6 ct/kWh](
 https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
-und liegt [ab 2023 bei etwa 8 ct/kWh](
+und liegt--> [seit Anfang 2023 beträgt sie 8,2 ct/kWh](
 https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
---- immer noch sehr mager, besonders im Vergleich zum Verbrauchspreis.
+--- sehr mager im Vergleich zu den Marktpreisen für den Strombezug.
 
 Eigenverbrauch und seine Berechnung {#Eigenverbrauch}
 -----------------------------------------------------
@@ -3808,7 +3823,7 @@ LocalWords: Idealbedingungen operating temperature Timeseries crystSi
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
-LocalWords: Yong Hui Green SolarPower backup
+LocalWords: Yong Hui Green SolarPower backup net metering
 LocalWords:  
 LocalWords:  
 LocalWords:  
