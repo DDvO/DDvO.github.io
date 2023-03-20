@@ -138,6 +138,15 @@ https://smartgrids-bw.net/public/uploads/2020/04/IBZ-Leitfaden_Balkon-PV-Online.
 und die [„Fachinformation“ des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
 verwiesen.
 
+# Nutzungslizenz
+
+Die Verlinkung, Weitergabe und sonstige Weiterverwendung dieser Inhalte,
+auch in geeigneten Auszügen, ist ausdrücklich erlaubt und erwünscht.
+Bedingungen sind dabei Quellenangabe und Weitergabe unter gleichen Bedingungen,
+was bei Verlinkung automatisch der Fall ist.\
+Lizenzkürzel:
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
 <!-- markdown-toc start - Run M-x markdown-toc-refresh-toc -->
 <!--
 **Inhaltsverzeichnis**
