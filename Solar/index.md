@@ -3763,13 +3763,16 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
     Spitzenleistung, was gerade bei günstigen Modellen nicht
     selbstverständlich ist._
 
--   2 * 300 W MPPT Mikrowechselrichter [Deye Sun600g3-EU-230](
+-   2 × 300 W MPPT Mikrowechselrichter [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/) für ca. 170€\
     und zusätzlich (z.B. für Einspeisung aus meiner Batterie):\
-    700 W Netzwechselrichter mit 2 × MPPT und WLAN [Mars Rock
-    EC700MD](https://de.aliexpress.com/item/1005002469159821.html) (oder
-    [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
-    inkl. Versand. _Zumindest bei meinem Gerät funktioniert das WLAN nicht._
+    700 W Netzwechselrichter mit angeblich 2 × MPPT und WLAN SG-700W bzw.
+    [Mars Rock EC700MD](https://de.aliexpress.com/item/1005002469159821.html)
+    (oder [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
+    inkl. Versand. _Zumindest bei meinem Gerät funktioniert das WLAN nicht,
+    das Teil hat real nur einen MPP-Tracker, der auch noch träge ist, und
+    der Gesamt-Wirkungsgrad ist bescheiden --- ist also gar nicht zu empfehlen.
+    Siehe auch ein [Reparatur-Video](https://youtu.be/i63ibUhQpjw)._
 -   24 V Hybridwechselrichter
     [EASun ISolar SPH-3K](https://de.aliexpress.com/item/1005003665568494.html)
     mit 3000 VA (6000 VA Spitzenlast) reiner-Sinus-Wechselrichter
@@ -3845,7 +3848,7 @@ LocalWords: Idealbedingungen operating temperature Timeseries crystSi
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
-LocalWords: Yong Hui Green SolarPower backup net metering
+LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
 LocalWords:  
 LocalWords:  
 LocalWords:  
