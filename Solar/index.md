@@ -5,7 +5,8 @@ description: >-
   Exakte Simulationsergebnisse für Rentabilität, optimale Modul-Ausrichtung und
   die Verwendung von Wechselrichtern und Speicherbatterien inklusive Regelung.
 date: 2022-03-20 20:36:16 +0100
-author: März 2022 - today
+created: ", erstellt in März 2022"
+changed: ", letzte Änderung: "
 lang: de
 keywords:
 - Photovoltaik
@@ -3860,7 +3861,7 @@ LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
-LocalWords:  
+LocalWords: created changed
 LocalWords:  
 LocalWords:  
 LocalWords:  
