@@ -1346,13 +1346,24 @@ Damit kann man überschüssigen Strom praktisch „unter der Hand verkaufen“,,
 und zwar zu dem gleichen Preis, den man auch für Strombezug bezahlen muss.
 Das ist in vielen Ländern (z.B. in den Niederlanden, Italien und USA)
 offiziell so geregelt, während es in Deutschland nicht erlaubt ist.
+
 Anfang 2023 [sprach sich der VDE jedoch dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
 bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
 Nach den [Solar-Plänen des dt. BMWK vom 10.03.2023](
 https://www.inside-digital.de/news/bundesregierung-plant-beseitigung-buerokratische-huerden-fuer-balkonkraftwerke)
-will man aber leider nicht so weit gehen, sondern nur
+will man aber nicht so weit gehen, sondern nur
 „rückwärtsdrehende Zähler vorübergehend dulden, bis Zähler getauscht ist“.
+Es wurde aber eine Stellungnahme eingereicht mit dem Ziel, das noch zu ändern:
+> Dass nicht [...] einfach Nettomessung gemacht wird, hemmt doch sehr den Ausbau privater Solaranlagen, weil sich diese daher allein durch den Eigenverbrauch (also vermiedenen Netzbezug) amortisieren müssen, was besonders für den sehr großen Teil der Bevölkerung schwer möglich ist,  der tagsüber daheim wenig Eigenverbrauch hat. Dass überschüssiger PV-Strom an den Verteilnetzbetreiber verschenkt wird, ist ein Ärgernis für die meisten Interessenten und Anlagenbetreiber und verleitet diejenigen, die sich technisch besser auskennen, sich zumindest Gedanken über Stromspeicher mit aufladbaren Batterien zu machen, welche jedenfalls für Steckersolaranlagen  schon regelungstechnisch unverhältnismäßig aufwendig sowie ökonomisch und ökologisch unsinnig bis kontraproduktiv sind.
+
+> Daher zum Ziel der schnelleren und noch wesentlich weiteren Verbreitung kleiner privater PV-Anlagen unser Plädoyer, für Anlagen bis zur Bagatellgrenze von 800 VA die Nettomessung einzuführen.
+
+> Um das umzusetzen müssten auch keine bestehenden Zähler getauscht werden, denn alte (Ferraris-)Zähler können  meist ohnehin rückwärts laufen, und auch bei allen modernen Zweirichtungszählern inklusive Smart-Metering-Geräten kann man zur Abrechnung nach dem Nettomessungs-Prinzip einfach die Differenz aus Netzbezug und Einspeisung bilden.
+
+> Die sich dadurch ergebende Reduktion der Umlagen und Entgelte aus dem Strompreis sollte für Staat und Netzbetreiber nicht ins Gewicht fallen, weil die Änderung nur die Nettoeinspeisung betrifft und durch die Bagatellgrenze gedeckelt wird.
+
+> Durch den Wegfall der Rücklaufsperre für Steckersolargeräte entfällt für private Interessenten ein erhebliches psychologisches und ökonomisches Hindernis beim Einstieg in diese zukunftsweisende Technik, die der breiten Bevölkerung ermöglicht, ihren persönlichen Beitrag zu Ökologie und Klimaschutz im Zusammenhang mit der Energiewende zu leisten.
 
 Ein [*Zweirichtungszähler*](
 https://www.thermondo.de/info/rat/erneuerbare-energie/zweirichtungszaehler/),
@@ -2404,7 +2415,7 @@ Erzeugung und Last nicht ständig zwischen Auf- und Entladung umgeschaltet wird,
 [//]: #
 wobei diese Zusatzbedingungen allerdings gewisse Verluste mit sich bringen.
 
-Das alles ist reglungstechnisch ziemlich aufwendig und benötigt jedenfalls
+Das alles ist regelungstechnisch ziemlich aufwendig und benötigt jedenfalls
 einen Sensor zur Erfassung des momentanen Haushalts-Stromverbrauchs.
 Es lohnt sich, wenn überhaupt, nur für größere PV-Anlagen.
 
