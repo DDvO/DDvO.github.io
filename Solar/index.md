@@ -1867,7 +1867,7 @@ der Stromleitungen im Haus in folgendem sehr selten auftretenden Fall:
 
 [![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
 Solarstrom-Einspeisung](
-Stromleitung_Ueberlastung_Solareinspeisung.jpg){:.right width="380"}](
+Stromleitung_Ueberlastung_Solareinspeisung.jpg){:.right width="400"}](
 https://www.sonnenenergie.de/index.php?id=30&tx_ttnews%5Btt_news%5D=254)
 Wenn über die Wohnungs-Stromleitung, an der die Einspeisung
 stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
@@ -1888,14 +1888,22 @@ Summe einen Verbrauch L von über 3680 W haben, und dass z.B. durch einen
 Kurzschluss extrem viel Strom fließt, ist möglich, aber kommt selten vor.
 Und selbst wenn das der Fall ist und die Solaranlage in dieser Zeit auch nur
 mal kurz weniger Leistung als L&nbsp;-&nbsp;3680 W liefert,
-löst die Sicherung wie üblich aus und die Überlast ist beendet.\
+löst die Sicherung wie üblich aus und die Überlast ist beendet.
+
 Von der ESTI (Schweiz) wird aus diesem Grund
 die Leitungsüberlastung durch Stecker-Solaranlagen
 [nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
 In Irland macht man sich da auch keine Sorgen und [erlaubt sogar 6 kW für
 einphasige bzw. 11 kW für dreiphasige Einspeisung](
 https://www.energiezukunft.eu/erneuerbare-energien/solar/grosszuegige-bagatellgrenze-fuer-pv-anlagen/)
-zu einfachen Anschluss- und Abrechnungsregeln.
+zu einfachen Anschluss- und Abrechnungsregeln.\
+In Deutschland [schreibt VDE V 0100-551-1 vor](
+https://myblogexperience.de/balkonkraftwerk-warum-nur-600-watt-teil-2/),
+dass die Strombelastbarkeit des Leiters größer sein muss als der Nennstrom
+der Sicherung und der Ausgangsstrom des Netzwechselrichters zusammen.
+Dann ist man auf jeden Fall auf der sicheren Seite, aber von dieser Regel hat
+man als Nichtelektriker wenig, weil man die Belastbarkeit der Leitung kaum
+wissen wird und man auch nicht einfach den Sicherungsautomaten wechseln kann.
 
 #### Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}
 
