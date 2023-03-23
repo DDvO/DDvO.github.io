@@ -1875,9 +1875,9 @@ unter sehr ungünstigen Umständen passieren, dass auf Teilen der Leitung mehr
 Strom fließt als die Sicherung eigentlich erlauben würde, was dann zu
 einer mehr oder weniger übermäßigen Erwärmung der Leitung führt.\
 Wenn L der momentane Gesamt-Verbrauch auf der Leitung ist und P die momentane
-Erzeugung auf derselben Leitung, kommt bei der Sicherung die Leistung L - P an.
+Erzeugung auf derselben Leitung, kommt bei der Sicherung die Leistung L&nbsp;-&nbsp;P an.
 Wenn die Sicherung auf 16 A ausgelegt ist und die dort ankommende Leistung
-vom Betrag her, also | L - P |, kleiner als 3680 W (= 230 V × 16 A) ist,
+vom Betrag her, also |L&nbsp;-&nbsp;P|, kleiner als 3680 W (= 230 V × 16 A) ist,
 löst die Sicherung nicht aus. Falls dabei L oder P größer als 3680 W ist,
 fließen auf einem Teilabschnitt der Leitung mehr als 16 A Strom.\
 Das kann beispielsweise passieren, wenn gerade die Erzeugung 6 A Strom liefert
@@ -1887,12 +1887,15 @@ denn fast niemand betreibt an derselben Leitung gleichzeitig Geräte, die in
 Summe einen Verbrauch L von über 3680 W haben, und dass z.B. durch einen
 Kurzschluss extrem viel Strom fließt, ist möglich, aber kommt selten vor.
 Und selbst wenn das der Fall ist und die Solaranlage in dieser Zeit auch nur
-mal kurz weniger Leistung als L - 3680 W liefert,
+mal kurz weniger Leistung als L&nbsp;-&nbsp;3680 W liefert,
 löst die Sicherung wie üblich aus und die Überlast ist beendet.\
 Von der ESTI (Schweiz) wird aus diesem Grund
 die Leitungsüberlastung durch Stecker-Solaranlagen
 [nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
-
+In Irland macht man sich da auch keine Sorgen und [erlaubt sogar 6 kW für
+einphasige bzw. 11 kW für dreiphasige Einspeisung](
+https://www.energiezukunft.eu/erneuerbare-energien/solar/grosszuegige-bagatellgrenze-fuer-pv-anlagen/)
+zu einfachen Anschluss- und Abrechnungsregeln.
 
 #### Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}
 
@@ -3861,7 +3864,7 @@ LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
-LocalWords: created changed
+LocalWords: created changed nbsp
 LocalWords:  
 LocalWords:  
 LocalWords:  
