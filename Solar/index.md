@@ -1234,7 +1234,7 @@ je nach Größe der dafür nötigen Investition längerfristig Kosten sparen.
 Ein *PV-Heizstab* funktioniert im Prinzip wie ein Tauchsieder und erfordert
 keine Wandlung des Stroms, hat also praktisch keine elektrischen Verluste,
 wenn er DC-seitig (ohne Wechselrichter) angeschlossen wird.
-Allerdings kommt es je nach Stärke der Wärmedämmung zu thermischen Verlusten,
+Es kommt aber zu thermischen Verlusten in Abhängigkeit von der Wärmedämmung,
 wenn das darüber erwärmte Wasser nicht zeitnah verwendet wird.
 Auf jeden Fall muss sichergestellt werden, dass das Wasser im Boiler
 nicht überhitzt, falls zu viel PV-Energie vorhanden ist.\
@@ -1245,8 +1245,10 @@ https://www.my-pv.com/de/produkte/my-pv-wifi-meter), und in die Regelung
 Beispielsweise beim [AC Thor](
 https://www.klimaworld.com/ac-thor-set-pv-manager-fuer-eigenverbrauch-warmwasserbereitung-mit-solarstrom.html) und beim [MYPV AC ELWA 2](
 https://www.klimaworld.com/mypv-ac-elwa-2-elektrischer-heizstab-3-5-kw.html)
-ist das der Fall. Allerdings verwenden beide eine AC-Kopplung des Heizstabes,
-was Wechselrichter-Verluste durch den mit sich bringt, aber wohl die Regelung
+ist das der Fall, und beim deutlich weniger teuren
+[ATON](https://www.ta.co.at/x2-energiemanagement/aton-power-to-heat/).
+Allerdings verwenden alle drei eine AC-Kopplung des Heizstabes,
+was Wechselrichter-Verluste mit sich bringt, aber wohl die Regelung
 vereinfacht und die Möglichkeit bietet, notfalls mit Netzstrom nachzuheizen.
 Diverse andere Heizstäbe und
 [Solarboiler](https://www.solarversand.de/photovoltaik-wasserboiler-30-liter/)
