@@ -1905,7 +1905,11 @@ dass die Strombelastbarkeit des Leiters größer sein muss als der Nennstrom
 der Sicherung und der Ausgangsstrom des Netzwechselrichters zusammen.
 Dann ist man auf jeden Fall auf der sicheren Seite, aber von dieser Regel hat
 man als Nichtelektriker wenig, weil man die Belastbarkeit der Leitung kaum
-wissen wird und man auch nicht einfach den Sicherungsautomaten wechseln kann.
+wissen wird und man auch nicht einfach den Sicherungsautomaten wechseln kann.\
+Besonders in Deutschland herrscht die Neigung, alles möglichst idiotensicher zu
+machen, damit unter keinen Umständen etwas passieren kann. Dann besteht aber
+die Gefahr, dass das Verhältnis von Aufwand zu Nutzen viel zu ungünstig wird.
+<!-- https://www.mydealz.de/comments/permalink/40887036 -->
 
 #### Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}
 
