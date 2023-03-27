@@ -3256,7 +3256,17 @@ etwas günstiger als entsprechend viele kleine.
     herunterzieht, sollten die zusammenzuschaltenden Spannungen gleich sein.
 
     Der elektrische Verlust ist größer als bei Reihenschaltung, andererseits
-    gibt es weniger Verluste durch Verschattung einzelner Module (bzw. Stränge).
+    gibt es deutlich weniger Verluste durch Verschattung einzelner Module
+    bzw. Modul-Stränge, weil die Modulspannungen bei Verschattung kaum abnehmen
+    und somit ein verschatteter Strang die Spannung anderer unverschatteter
+    parallele Stränge kaum herunterzieht.
+
+    Wenn mehr als zwei Stränge parallel geschaltet sind, kann es bei Kurzschluss
+    eines Moduls (etwa durch einen Defekt, aber sehr unwahrscheinlich) zu einem
+    Rückstrom kommen, der so groß ist, dass die übrigen Module des Strangs
+    zerstört werden. Deswegen werden in einem solchen Szenario [Sicherungen oder
+    sog. Stringdioden](https://files.sma.de/downloads/Rueckstrom-UDE083010.pdf)
+    empfohlen.
 
     Für die parallele Verschaltung bieten sich Y-Kabel mit MC4-Anschlüssen an.
     Die Kabel auf parallelen Zweigen sollten möglichst kurz und ungefähr gleich
