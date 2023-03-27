@@ -166,7 +166,7 @@ Lizenzkürzel:
     - [Eigenverbrauch und seine Berechnung {#Eigenverbrauch}](#eigenverbrauch-und-seine-berechnung)
         - [Typische Rentabilität kleiner PV-Anlagen {#rentabel}](#typische-rentabilitaet-kleiner-pv-anlagen-rentabel)
         - [Online-Berechnung {#online}](#online-berechnung)
-        - [Ökonomisch orientierter PV-Rechner {#PV-Rechner}](#oekonomisch-orientierter-pv-rechner)
+        - [Ökonomisch orientierte PV-Rechner {#PV-Rechner}](#oekonomisch-orientierte-pv-rechner)
         - [Hochauflösende Simulation: SolBatSim {#SolBatSim}](#solbatsim-hochauflösende-simulation)
     - [Nutzungsvarianten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
         - [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“) {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
@@ -222,7 +222,7 @@ Lizenzkürzel:
 -   [Eigenverbrauch und seine Berechnung](#Eigenverbrauch)
     -   [Typische Rentabilität kleiner PV-Anlagen](#rentabel)
     -   [Online-Berechnung](#online)
-    -   [Ökonomisch orientierter PV-Rechner](#PV-Rechner)
+    -   [Ökonomisch orientierte PV-Rechner](#PV-Rechner)
     -   [Hochauflösende Simulation: SolBatSim](#SolBatSim)
 -   [Nutzungsvarianten](#Nutzung)
     -   [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“)](#Balkonkraftwerk)
@@ -1632,11 +1632,18 @@ Ihre Ergebnisse **gelten nicht bei Verwendung einer primitiven Regelung**, wie
 sie für [Balkonkraftwerke mit Speicherbatterie](#Batteriepuffer) typisch sind.
 Für diese kann aber der [u.g. Simulator](#SolBatSim) verwendet werden.
 
-### Ökonomisch orientierter PV-Rechner {#PV-Rechner}
+### Ökonomisch orientierte PV-Rechner {#PV-Rechner}
 
-[![Bild: Ertragsrechnung Balkonanlage](
-PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
-Der per Tabellenkalkulation implementierte [PV-Rechner](PV-Rechner_v6+.xls)
+Für die rein kaufmännische Berechnung der Rendite einer PV-Anlage
+und/oder Stromspeicher gibt es ein einfaches [Online-Tool namens *pvroi*](
+https://r4nt.github.io/pvroi/?inflation=0.02&sell_price=0.082&initial_buy_price=0.35&show_panels=on&show_battery=on&panels_years=25&panels_initial_output_pa=900&panels_self_use=0.25&panels_decay=0.8&panels_select_method=irr_from_price&panels_price=1800&panels_irr=&battery_years=10&battery_contribution=8400&battery_output_per_kwh=0.8&battery_decay=0.8&battery_select_method=irr_from_price&battery_price=13000&battery_irr=0.06)
+auf Englisch. Es berücksichtigt Inflation und Degradation,
+aber keine darüber hinausgehende Reparaturen bzw. Abschreibung.
+Als Ergebnis bekommt man entweder für gegebenen Preis die jährliche Rendite in %
+(und kann dann vergleichen, ob die Investition mehr bringt als eine andere)
+oder umgekehrt: Für eine Wunsch-Rendite den Maximalpreis für die Komponenten.
+
+Die Offline-Tabellenkalkulation [*PV-Rechner*](PV-Rechner_v6+.xls)
 hat als besonderen Schwerpunkt die kaufmännische Betrachtung inklusive Rendite
 und Kapitalkosten unter Berücksichtigung von Abschreibung für Reparaturen u.ä.
 Er ist für „große“ PV-Anlagen auf Hausdächern konzipiert, und behandelt optional
@@ -1649,6 +1656,9 @@ im Haushalt nutzbaren Ertrages.
 Energieflüsse werden der Einfachheit halber nur grob auf Monatsbasis gerechnet,
 so dass wichtige tageszeitliche Effekte und Lastspitzen nicht berücksichtigt
 werden. Besonders die Simulation des Stromspeichers ist stark idealisiert.
+
+[![Bild: Ertragsrechnung Balkonanlage](
+PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
 
 Bei der o.g. typischen Balkonanlage für 660€ mit 600 Wp und 660 kWh Jahresertrag
 ergibt sich mit dem PV-Rechner für einen Haushalt mit 3000 kWh Jahresverbrauch,
@@ -3878,7 +3888,7 @@ LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
-LocalWords: created changed nbsp
+LocalWords: created changed nbsp pvroi
 LocalWords:  
 LocalWords:  
 LocalWords:  
