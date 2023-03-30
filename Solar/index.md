@@ -1987,10 +1987,10 @@ dann verschwindet der effektive Kappungsverlust natürlich völlig.
 https://www.mydealz.de/comments/permalink/40266559
 https://www.mydealz.de/comments/permalink/40042755
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -curb 564
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92
 88%: -peff 93.617
 Verbrauch gemäß Lastprofil  = 4674 kWh
-Grundlast                   =  286 W
+Grundlast                   =  184 W
 
 PV-Nominalleistung          = 1000 Wp
 Bruttoleistung max.         = 1009 W am TMY-04-15 um 13:00 h
@@ -2011,7 +2011,8 @@ Netzeinspeisung             =  420 kWh
 
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -curb 564 -bend 1,1,1,1,.5,.5,.5,.5,2,2,2,2,2,2,2,2,.5,.5,.5,.5,1,1,1,1
 
-Last-Verzerrung je Stunde   = 1 1 1 1 .5 .5 .5 .5 2 2 2 2 2 2 2 2 .5 .5 .5 .5 1 PV-Eigenverbrauch           =  716 kWh mit Drosselung
+Last-Verzerrung je Stunde   = 1 1 1 1 .5 .5 .5 .5 2 2 2 2 2 2 2 2 .5 .5 .5 .5 1 1 1 1
+PV-Eigenverbrauch           =  716 kWh mit Drosselung
 PV-Eigenverbrauchsverlust   =   19 kWh netto während 190 h durch Drosselung auf 564 W
 Netzeinspeisung             =  307 kWh
 
