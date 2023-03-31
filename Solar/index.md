@@ -1823,6 +1823,7 @@ sich in Abweichung zur bislang geltenden technischen Norm VDE-AR-N 4105
 künftig auch in Deutschland an der „Bagatellgrenze bis 800 W“ zu orientieren.\
 Anfang März 2023 startete eine Petition für die
 [schnelle Umsetzung des VDE-Positionspapiers](https://balkon.solar/petition/),
+<!--https://epetitionen.bundestag.de/content/petitionen/_2023/_02/_17/Petition_146290.html-->
 und auch die [PV-Strategie 2023 des dt. BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
 will „die Grenze auf 800 VA Wechselstromleistung zu erhöhen“.
