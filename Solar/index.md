@@ -3199,10 +3199,10 @@ also ein möglichst hohes Reflexions- oder Rückstrahlvermögen der Oberflächen
 
 {:style="clear:both"}
 
-(Semi-)Flexible Module sind teurer und wohl deutlich weniger langlebig
-als starre, aber viel leichter und nur wenige Millimeter dick.
-Sie sind meist auch wesentlich kleiner --- typischerweise 1,2 m × 0,5 m bei 
-einer Nennleistung von 100 Wp und einer Masse von 1 bis 2 kg. Vorsicht, bei
+(Semi-)Flexible Module sind teurer und gelten (bis auf Ausnahmen) als weniger
+langlebig als starre, aber viel leichter und nur wenige Millimeter dick.
+Sie sind meist auch wesentlich kleiner --- üblicherweise 1,2 m × 0,5 m
+bei einer Nennleistung von 100 Wp und einer Masse von 1 bis 2 kg. Vorsicht, bei
 flexiblen Modulen übertreiben Händler besonders gern mit den Leistungsdaten.\
 [Hier](https://solar-generatoren.de/die-richtigen-solarmodule-fuers-wohnmobil/)
 ein Vergleich verschiedener Solarmodul-Typen in Hinblick auf die
@@ -3778,7 +3778,7 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
     oder 2 × 310 Wp sehr langlebige flexible Solarmodule [Sunman eArc
     SMF310M-6X10DW](Datenblatt_Sunman_flexible_310W.pdf) mit 187 Wp/m²,
     ca.
-    [715€](https://shop-lieckipedia.de/Ab-2-Stueck-310-Watt-Solarmodul-monokristallin-flexibel-Sunman)
+    [500€](https://www.idealo.de/preisvergleich/Liste/119495785/sunman-310.html?sortKey=minPrice)
 
 -   Mikrowechselrichter mit 2 * 300 W MPPT [Hoymiles
     HM-600](https://www.hoymiles.com/de/products/microinverter/single-phase/),
