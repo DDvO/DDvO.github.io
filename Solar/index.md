@@ -1426,6 +1426,10 @@ mittags etwas Wolken. Weitere schöne Erklärungen mit Grafiken gibt es
 
 ### Typische Rentabilität kleiner PV-Anlagen {#rentabel}
 
+Wenn die Einsparung an Stromkosten durch eine Anlage ihre Kosten eingeholt hat,
+hat sich die Anlage *amortisiert*, also die Investition kaufmännisch gelohnt.
+Die Investition rentiert sich im Verhältnis der Jahres-Ersparnis zu den Kosten.
+
 Wie eingangs geschrieben kann man bei optimaler Platzierung von Solarmodulen
 pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter Solarleistung gewinnen.
 Rechnen wir beispielsweise mit einer Investition für die PV-Anlage von 1,10€/Wp
@@ -1435,19 +1439,25 @@ Nehmen wir für die folgenden Beispiele zudem an, dass der sog. *Arbeitspreis*,
 also die Kosten für vom Stromanbieter bezogenen Strom, 40 Ct/kWh beträgt.
 Dann spart man 0,40€ für jede kWh Strom, die von der PV-Anlage produziert wird
 und die man auch selbst verbraucht, statt sie von außen einzukaufen.\
-Wenn die Einsparung an Stromkosten durch die Anlage ihre Kosten eingeholt hat,
-hat sich die Anlage *amortisiert*, also die Investition kaufmännisch gelohnt.
-Die Investition rentiert sich im Verhältnis der Jahres-Ersparnis zu den Kosten.
+Anfang 2023 fiel in Deutschland die Mehrwertsteuer für die Komponenten kleiner
+privaten PV-Anlagen weg, aber auch die Strompreise sanken im Frühjahr wieder auf
+etwa 30 Ct/kWh. Außerdem wurden PV-Module durch ein globales Überangebot
+günstiger, so dass man Anlagen mit 800 Wp teils schon für 500€ erhalten kann.
+Damit blieb das Kosten-/Nutzen-Verhältnis ungefähr gleich, weil sowohl der
+Kaufpreis als auch der einzusparende Strompreis um ungefähr 25% zurückgingen.
 
-* Falls man den erzeugten PV-Strom komplett selbst verbraucht,
-was aber praktisch kaum der Fall ist, ergibt sich eine Einsparung von 0,40€
-pro kWh Jahresertrag und eine Amortisation der Investition in nur 2,5 Jahren.
-Die Rendite würde in diesem Fall satte 40% betragen.
-
-* Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
+Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
 Jahres-Bruttoertrag von etwa 765 kWh, was bei 86% Gesamtsystem-Wirkungsgrad
 ca. 660 kWh Netto-Ertrag (Einspeisung des Wechselrichters) pro Jahr bedeutet.
-Rechnen wir wieder mit Kosten von 1,10€/Wp, also für diese Anlage 660€.
+Wenn wir mit Kosten von 1,10€/Wp rechnen, ergibt das für diese Anlage 660€.
+Pro kWh Netto-Jahresertrag betragen die einmaligen Kosten also 1€, und bei
+40 Ct/kWh eingespartem Strompreis liegt das Verhältnis genauso günstig
+wie wenn die Anlage nur 495€ kostet und der Strompreis 30 Ct/kWh beträgt.
+
+   - Falls man den erzeugten PV-Strom komplett selbst verbraucht, was aber
+   praktisch kaum der Fall sein wird, ergibt sich eine Einsparung von 0,40€
+   pro kWh Jahresertrag und eine Amortisation der Investition in nur 2,5 Jahren.
+   Die Rendite würde in diesem Fall satte 40% betragen.
 
   - Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und
   Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh
