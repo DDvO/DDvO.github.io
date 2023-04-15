@@ -1474,7 +1474,13 @@ ergibt 464 kWh, aber noch etwas Lastspitzen-Abzug
 88%: -peff 93.617
 
 ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
-
+-->
+<!--
+Mittlere Last/Tag je Stunde = 210 175 162 160 171 224 307 339 351 365 366 381
+                              383 365 362 361 395 450 509 538 516 464 382 284
+Last-Anteil pro 3 Stunden   =  7%  7% 12% 14% 14% 15% 19% 14%
+Last-Anteil pro Monat       = 10%  9%  9%  8%  8%  7%  7%  7%  7%  8%  9% 10%
+Anteil pro Wochentag (Mo-So)= 14% 13% 13% 14% 15% 15% 16%
 PV-Nominalleistung          =  600 Wp
 Max. PV-Bruttoleistung      =  605 W am TMY-04-15 um 13:00 h
 PV-Bruttoertrag             =  763 kWh
@@ -1488,6 +1494,22 @@ PV-Eigenverbrauchsanteil    =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 
 Bei Lastprofil_4685_kWh.csv Eigenverbrauch 509 kWh
+
+./Solar.pl Lastprofil_H0_BDEW.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
+Info: assuming Lastprofil_H0_BDEW.csv is a BDEW load profile
+Mittlere Last/Tag je Stunde = 209 156 135 129 130 148 239 335 388 416 425 445
+                              481 454 394 355 342 389 475 537 504 444 390 298
+Last-Anteil pro 3 Stunden   =  6%  5% 12% 16% 16% 13% 18% 14%
+Last-Anteil pro Monat       = 10%  9%  9%  8%  8%  7%  7%  7%  7%  8%  9% 10%
+Anteil pro Wochentag (Mo-So)= 14% 14% 14% 14% 14% 16% 14%
+
+PV-Nettoertrag              =  660 kWh bei PV-System-Eff. 92%, Wechselrichter-Eff. 94%
+Verbrauch durch Haushalt    = 3000 kWh
+PV-Eigenverbrauch           =  641 kWh
+Netzeinspeisung             =   19 kWh
+PV-Eigenverbrauchsanteil    =   97 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
+
 -->
 
   - Bei einem relativ hohen Jahresverbrauch von 6000 kWh können durchschnittlich
