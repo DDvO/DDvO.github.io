@@ -3608,14 +3608,24 @@ welche eine noch höhere Energiedichte und keinerlei „Memory-Effekt“ haben,
 sind sie recht robust und sicher und sind weniger umweltschädlich.\
 Alle Lithium-basierten Batterien benötigen, anders als Blei-Batterien, für die
 Reihenschaltung der internen Akkuzellen ein sog. *Batteriemanagementsystem*
-(*BMS*), das für eine gleichmäßige Spannungsverteilung der Zellen sorgt.\
+(*BMS*), das für eine gleichmäßige Spannungsverteilung der Zellen sorgt.
+
 Eine typische 100 Ah Autobatterie wiegt etwa 26 kg und kostet nur etwa 100€.
 Aus ihrer Nennkapazität von 12 V × 100 Ah = 1200 Wh sollte man aber höchstens
 50% entnehmen, damit die Batterie nicht durch Tiefentladung Schaden nimmt,
 also maximal 600 Wh.
-Selbst dann hält ein Bleiakku nur etwa 500 bis 1000 Lade-/Entladezyklen.\
+Selbst dann hält ein Bleiakku nur etwa 500 bis 1000 Lade-/Entladezyklen.
+
+[![Bild: Degradation LiFePO4 in Abhängigkeit von Entladetiefe und Zyklenzahl](
+LiFePO4-Zyklen-DoD.jpg){:.right width="500"}](
+https://www.sciencedirect.com/science/article/pii/S0306261922004688?via%3Dihub#fig6)
 Die Zahl der Lade-/Entladezyklen eines LiFePO4-Akkus, bis die Kapazität merklich
 nachgelassen hat, wird mit etwa 5000 angegeben, die Zahl der Jahre mit 15 - 20.
+Die Degradation und Lebensdauer
+[hängt stark von der Maximalladung (SoC) und Entladetiefe (DoD) ab](
+https://www.sciencedirect.com/science/article/pii/S0306261922004688?via%3Dihub#fig6),
+aber auch von der Höhe der Lade- und Entladeströme.
+
 Eine 12,8 V 100 Ah LiFePO4-Batterie wiegt etwa 11 kg und kann problemlos zu 90%
 entladen werden, so dass sich eine effektive Kapazität von 1150 Wh ergibt.
 Unter Berücksichtigung von Speicherungsverlusten und des Wandlungsverlustes
