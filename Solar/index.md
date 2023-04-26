@@ -2060,27 +2060,47 @@ Netzeinspeisung             =  652 kWh
 
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1250
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
-Optimale Ladestrategie (nicht gebrauchte Energie)
-Optimale Entladestrategie (so viel wie gebraucht)
-Ladeverlust                 =   21 kWh durch Lade-Eff. 94%
-Speicherverlust             =   17 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  316 kWh
-Zwischenspeicherung         =  354 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  354
+Lastprofil-Datei            : Lastprofil_4673_kWh.csv
+Grundlast                   =  184 W
+Maximallast                 =13795 W am 2010-02-26 um 06:55 h
 
-PV-Eigenverbrauch           =  919 kWh mit Drosselung
-PV-Eigenverbrauchsverlust   =    9 kWh während 93 h durch Drosselung auf 564 W
-Netzeinspeisung             =   66 kWh
-PV-Eigenverbrauchsanteil    =   90 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   31 % des Verbrauchs (Autarkiegrad)
+PV-Daten-Datei              : Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv
+Neigungswinkel, Azimut      = 35°, 0°
+Breitengrad, Längengrad     = 48.215, 11.727
+Simuliertes PV-Jahr         = TMY (2008..2020)
+
+PV-Nominalleistung          = 1000 Wp
+Max. PV-Bruttoleistung      = 1009 W am TMY (2008..2020)-04-15 um 13:00 h
+PV-Bruttoertrag             = 1272 kWh, PV-System-Wirkungsgrad 92%
+Max. PV-Nettoleistung       =  564 W am TMY (2008..2020)-01-03 um 11:00 h
+PV-Netto-Ertragsverlust     =   77 kWh während 678 h durch WR-Ausgangsdrosselung auf 564 W
+PV-Nettoertrag              = 1023 kWh bei Wechselrichter-Wirkungsgrad 94%
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000 -pass 0 -feed 600
+Verbrauch durch Haushalt    = 3000 kWh
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie), max. Laderate 1 C
+Optimale Entladestrategie (so viel wie gebraucht), max. Entladerate 1 C
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   21 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =   16 kWh durch Speicher-Wirkungsgrad 95%
+PV-Nutzung über Speicher    =  305 kWh
+Zwischenspeicherung         =  342 kWh (nach Ladeverlust)
+Vollzyklen pro Jahr         =  342 der effektiven Kapazität
+
+PV-Eigenverbrauch           =  908 kWh
+PV-Eigenverbrauchsverlust   =    9 kWh netto während 90 h durch WR-Ausgangsdrosselung auf 564 W
+Netzeinspeisung             =   78 kWh
+PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   30 % des Verbrauchs (Autarkiegrad)
+-->
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1250 -pass 0 -feed 600
+
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Konstanteinspeisung         =  600 W
 Verlust durch Überschuss    =    0 kWh
@@ -2097,9 +2117,9 @@ PV-Eigenverbrauchsanteil    =   56 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1000 -pass 0 -feed max 1000
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1250 -pass 0 -feed max 1000
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Maximaleinspeisung          = 1000 W
 Verlust durch Überschuss    =   79 kWh
@@ -2319,7 +2339,7 @@ Vor Allem aber ist für kleine PV-Anlagen die optimale Regelung unrealistisch
 und auch eine Annäherung daran unverhältnismäßig aufwendig.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250
 
 PV-Nominalleistung          =  600 Wp
 Max. PV-Bruttoleistung      =  607 W am TMY-04-15 um 12:00 h
@@ -2329,7 +2349,7 @@ Ertragsanteil 9-15 Uhr MEZ  =   73 %
 
 Verbrauch durch Haushalt    = 3000 kWh
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Optimale Entladestrategie (so viel wie gebraucht)
 Verlust durch Überlauf      =    0 kWh
@@ -2345,11 +2365,11 @@ PV-Eigenverbrauchsanteil    =   97 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000
+./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250
 
 Verbrauch durch Haushalt    = 6000 kWh
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Optimale Entladestrategie (so viel wie gebraucht)
 Verlust durch Überlauf      =    0 kWh
@@ -2365,9 +2385,9 @@ PV-Eigenverbrauchsanteil    =   99 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   11 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1500
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1875
 
-Speicherkapazität           = 1500 Wh, DC-gekoppelt
+Speicherkapazität           = 1875 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Optimale Entladestrategie (so viel wie gebraucht)
 Verlust durch Überlauf      =    0 kWh
@@ -2383,21 +2403,21 @@ PV-Eigenverbrauchsanteil    =   97 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 500
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 625
 
-Speicherkapazität           =  500 Wh, DC-gekoppelt
-Optimale Ladestrategie (nicht gebrauchte Energie)
-Optimale Entladestrategie (so viel wie gebraucht)
+Speicherkapazität           =  625 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie), max. Laderate 1 C
+Optimale Entladestrategie (so viel wie gebraucht), max. Entladerate 1 C
 Verlust durch Überlauf      =    0 kWh
-Ladeverlust                 =   11 kWh durch Lade-Eff. 94%
-Speicherverlust             =    9 kWh durch Speicher-Eff. 95%
-PV-Nutzung über Speicher    =  165 kWh
-Zwischenspeicherung         =  185 kWh (bei PV-System-Eff. und Lade-Eff.)
-Vollzyklen pro Jahr         =  369
+Ladeverlust                 =   10 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =    8 kWh durch Speicher-Wirkungsgrad 95%
+PV-Nutzung über Speicher    =  154 kWh
+Zwischenspeicherung         =  173 kWh (nach Ladeverlust)
+Vollzyklen pro Jahr         =  346 der effektiven Kapazität
 
-PV-Eigenverbrauch           =  628 kWh
-Netzeinspeisung             =   12 kWh
-PV-Eigenverbrauchsanteil    =   95 % des Nettoertrags (Nutzungsgrad)
+PV-Eigenverbrauch           =  618 kWh
+Netzeinspeisung             =   24 kWh
+PV-Eigenverbrauchsanteil    =   94 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
 -->
 
@@ -2428,9 +2448,9 @@ Vermiedener Strombezug pro Jahr 404 kWh
 Nutzungsgrad 68 %
 Selbstversorgung 13 %
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_Lindenberg_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 581 -tmy -capacity 1000
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_Lindenberg_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 581 -tmy -capacity 1250
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Optimale Entladestrategie (so viel wie gebraucht)
 Verlust durch Überlauf      =    0 kWh
@@ -2579,9 +2599,9 @@ wäre, weil 66 kWh nicht genutzt und ins externe Netz abgeführt werden.\
 Eine Erhöhung der Speicherkapazität auf 2 kWh brächte nur 10 kWh mehr.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -feed 45
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -feed 45
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Konstanteinspeisung         =   45 W
 Verlust durch Überlauf      =    0 kWh
@@ -2597,9 +2617,9 @@ PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2000 -feed 35
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -feed 35
 
-Speicherkapazität           = 2000 Wh, DC-gekoppelt
+Speicherkapazität           = 2500 Wh, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie)
 Konstanteinspeisung         =   35 W
 Verlust durch Überlauf      =    0 kWh
@@ -2634,9 +2654,9 @@ Eine Erhöhung der Kapazität auf 2 kWh brächte immerhin einen Eigenverbrauch
 von 532 kWh bei einer dann optimalen Konstanteinspeisung von 135 W.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed 180
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -pass 0 -feed 180
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Konstanteinspeisung         =  180 W
 Verlust durch Überlauf      =   38 kWh
@@ -2652,11 +2672,11 @@ PV-Eigenverbrauchsanteil    =   74 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   16 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed 235
+./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -pass 0 -feed 235
 
 Verbrauch durch Haushalt    = 6000 kWh
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Konstanteinspeisung         =  235 W
 Verlust durch Überlauf      =    6 kWh
@@ -2672,9 +2692,9 @@ PV-Eigenverbrauchsanteil    =   83 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =    9 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2000 -pass 0 -feed 135
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -pass 0 -feed 135
 
-Speicherkapazität           = 2000 Wh, DC-gekoppelt
+Speicherkapazität           = 2500 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Konstanteinspeisung         =  135 W
 Verlust durch Überlauf      =    6 kWh
@@ -2702,9 +2722,9 @@ Eine Erhöhung der Kapazität auf 2 kWh brächte einen Eigenverbrauch von 539 kW
 wobei die optimale Leistung der Konstanteinspeisung hier bei 110 W bleibt.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass spill 0 -feed 110
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -pass spill 0 -feed 110
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W   und für Überschuss
 Konstanteinspeisung         =  110 W
 Verlust durch Überlauf      =    0 kWh
@@ -2719,8 +2739,8 @@ Netzeinspeisung             =   88 kWh
 PV-Eigenverbrauchsanteil    =   78 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   17 % des Verbrauchs (Autarkiegrad)
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2000 -pass spill 0 -feed 110
-Speicherkapazität           = 2000 Wh, DC-gekoppelt
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -pass spill 0 -feed 110
+Speicherkapazität           = 2500 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W   und für Überschuss
 Konstanteinspeisung         =  110 W
 Verlust durch Überlauf      =    0 kWh
@@ -2902,9 +2922,9 @@ Eine Erhöhung der Speicherkapazität bringt praktisch nichts, und eine
 Verringerung auf 0,5 kWh liefert annähernd genauso viel: 569 kWh.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1000 -tmy -pass spill 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1250 -tmy -pass spill 0 -feed max 600
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W   und für Überschuss
 Maximaleinspeisung          =  600 W
 Verlust durch Überlauf      =    0 kWh
@@ -2919,9 +2939,9 @@ Netzeinspeisung             =    2 kWh
 PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 500 -tmy -pass spill 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 625 -tmy -pass spill 0 -feed max 600
 
-Speicherkapazität           =  500 Wh, DC-gekoppelt
+Speicherkapazität           =  625 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W   und für Überschuss
 Maximaleinspeisung          =  600 W
 Verlust durch Überlauf      =    0 kWh
@@ -2951,9 +2971,9 @@ Pufferspeicher eine Überschussableitung oder gar eine optimale Laderegelung.
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -pass 0 -feed max 600
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Maximaleinspeisung          =  600 W
 Verlust durch Überlauf      =    3 kWh
@@ -2969,10 +2989,10 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -pass 0 -feed max 600
 
 Verbrauch durch Haushalt    = 6000 kWh
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Verlust durch Überlauf      =    0 kWh
 PV-Nutzung über Speicher    =  590 kWh
 Zwischenspeicherung         =  660 kWh (bei PV-System-Eff. und Lade-Eff.)
@@ -2984,9 +3004,9 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 500 -pass 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 625 -pass 0 -feed max 600
 
-Speicherkapazität           =  500 Wh, DC-gekoppelt
+Speicherkapazität           =  625 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Maximaleinspeisung          =  600 W
 Verlust durch Überlauf      =   28 kWh
@@ -3034,9 +3054,9 @@ Durch Erhöhung der Speicherkapazität auf 2 kWh lassen sich zwar immerhin 398 k
 Eigenverbrauch erreichen, aber auch dann bleibt der Ansatz kontraproduktiv.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass 0 -feed 18..6 85
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -pass 0 -feed 18..6 85
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W
 Konstanteinspeisung         =   85 W von 18 bis 6 Uhr
 Verlust durch Überlauf      =  344 kWh
@@ -3061,9 +3081,9 @@ auf die Nachtstunden (wo der [Gewinn 54 kWh](#Batterieladung) beträgt).\
 Eine Erhöhung der Kapazität auf 2 kWh brächte beim Eigenverbrauch nur 10 kWh mehr.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1000 -pass spill 0 -feed 18..6 80
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -pass spill 0 -feed 18..6 80
 
-Speicherkapazität           = 1000 Wh, DC-gekoppelt
+Speicherkapazität           = 1250 Wh, DC-gekoppelt
 Speicher-Umgehung           =    0 W   und für Überschuss
 Konstanteinspeisung         =   80 W von 18 bis 6 Uhr
 Verlust durch Überlauf      =    0 kWh
