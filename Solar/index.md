@@ -1616,14 +1616,30 @@ am nächsten kommen (aber etwas niedriger ausfallen).
 https://pvsol-online.valentin-software.com/)
 
 Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
-auch das [PVTool von Andreas Schmitz („AkkuDoktor“)](https://www.akkudoktor.net/pvtool-rechner/).
+auch das [PVTool von „AkkuDoktor“](https://www.akkudoktor.net/pvtool-rechner/).
 Als Besonderheit kann man hier schön sehen, wie sich Eigenverbrauchsquote,
 Autarkiegrad und Amortisation in Abhängigkeit von der Anwesenheit und Kapazität
-eines Stromspeichers ändern.\
-Allerdings sind die Ergebnisse deutlich zu optimistisch. Das liegt vermutlich
-am verwendeten Lastprofil und unrealistisch hoch angenommenen Wirkungsgraden.
-Er macht zu diesen wichtigen Punkten und sonstigen Grundlagen seiner Berechnung
-auf seinen beiden PVTool-Seiten keinerlei Angaben.
+eines Stromspeichers ändern.
+
+[![Bild: PVTool@AkkuDoktor.png Ergebnis](PVTool@AkkuDoktor.png)](
+https://pvtools.sektorsonne.de/) <!-- Andreas Schmitz -->
+Für Speicher wird stillschweigend und nicht änderbar AC-Kopplung angenommen.
+Leider sind die Ergebnisse v.A. ohne Speicher und bei kleineren Speichergrößen
+deutlich zu optimistisch. Dafür gibt es (mindestens) folgende Gründe:
+* Vor Allem wird das [Standard-Haushalts-Lastprofil H0 des VDEW](
+https://www.bdew.de/energie/standardlastprofile-strom/) (inzwischen: BDEW)
+  von 1996/97 verwendet, und das auch nur in Stundenauflösung
+  statt in der verfügbaren 15-minütigen Auflösung.
+  Damit können keinerlei Lastspitzen berücksichtigt werden,
+  wozu mindestens Minutenauflösung (besser: Sekundenauflösung) benötigt wird.\
+  Leider kann man auch kein eigenes (individuelles) Lastprofil verwenden.
+* Es werden keine Speicherverluste berücksichtigt.
+* Die Lade- und Entlade-Wirkungsgrade für den Speicher werden standardmäßig
+  unrealistisch hoch angenommenen,
+  was man aber in den erweiterten Einstellungen anpassen kann.
+* Standardmäßig wird die Lade- und Entladeleistung nicht begrenzt,
+  wobei man das ebenfalls in den erweiterten Einstellungen korrigieren kann.
+
 
 [![Bild: Speichersimulation InGe16 1.-6. April, 1000kWh, PV 660 kWh, 2,4 kWh
 Speicher](Speichersimulation_InGe16_April_1-6.png){:.center}](
