@@ -166,6 +166,11 @@ Lizenzkürzel:
     - [Eigenverbrauch und seine Berechnung {#Eigenverbrauch}](#eigenverbrauch-und-seine-berechnung)
         - [Typische Rentabilität kleiner PV-Anlagen {#rentabel}](#typische-rentabilitaet-kleiner-pv-anlagen-rentabel)
         - [Online-Berechnung {#online}](#online-berechnung)
+            - [Stecker-Solar-Simulator und Unabhängigkeitsrechner {#HTW}](#stecker-solar-simulator-und-unabhängigkeitsrechnerberechnung)
+            - [PV*SOL {#PVSOL}](#pv-sol)
+            - [PVTool@AkkuDoktor {#PVTool}](#pvtool-akkudoktor)
+            - [brodsoft Stromverlauf {#brodsoft}](#brodsoft-stromverlauf)
+            - [PV Calculator {#PVCalculator}](#pv-calculator)
         - [Ökonomisch orientierte PV-Rechner {#PV-Rechner}](#oekonomisch-orientierte-pv-rechner)
         - [Hochauflösende Simulation: SolBatSim {#SolBatSim}](#solbatsim-hochauflösende-simulation)
     - [Nutzungsvarianten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
@@ -222,6 +227,11 @@ Lizenzkürzel:
 -   [Eigenverbrauch und seine Berechnung](#Eigenverbrauch)
     -   [Typische Rentabilität kleiner PV-Anlagen](#rentabel)
     -   [Online-Berechnung](#online)
+        - [Stecker-Solar-Simulator und Unabhängigkeitsrechner](#HTW)
+        - [PV*SOL](#PVSOL)
+        - [PVTool@AkkuDoktor](#PVTool)
+        - [brodsoft Stromverlauf](#brodsoft)
+        - [PV Calculator](#PVCalculator)
     -   [Ökonomisch orientierte PV-Rechner](#PV-Rechner)
     -   [Hochauflösende Simulation: SolBatSim](#SolBatSim)
 -   [Nutzungsvarianten](#Nutzung)
@@ -1572,6 +1582,14 @@ noch weitere Effekte ein, die sich aber kaum quantifizieren lassen.
 
 ### Online-Berechnung {#online}
 
+Achtung: Die in diesem Abschnitt genannten Simulatoren
+setzen bei Einsatz eines Pufferspeichers eine ideale Speicherstrategie voraus.
+Ihre Ergebnisse **gelten nicht bei Verwendung einer primitiven Regelung**, wie
+sie für [Balkonkraftwerke mit Speicherbatterie](#Batteriepuffer) typisch sind.
+Für diese kann aber der [u.g. 'SolBatSim'](#SolBatSim) verwendet werden.
+
+#### Stecker-Solar-Simulator und Unabhängigkeitsrechner {#HTW}
+
 Der Eigendeckungsanteil und Eigenverbrauchsanteil lässt sich sehr einfach
 näherungsweise mit dem „[Stecker-Solar-Simulator](
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)“
@@ -1599,6 +1617,8 @@ PV-Speichern](https://www.youtube.com/watch?v=bE5fLy0w3MM&t=674s)
 verwenden kann (und zwar durch Multiplikation mit dem Stromverbrauch).
 Für Anlagen ohne Stromspeicher sind die Ergebnisse sehr realistisch.
 
+#### PV*SOL {#PVSOL}
+
 Von der sehr soliden kommerziellen
 [Simulationssoftware PV*SOL](https://valentin-software.com/)
 gibt es auch eine kostenlose
@@ -1607,13 +1627,17 @@ Auch diese ist eigentlich für große Haus-PV-Anlagen gedacht, aber wenn man bei
 Wechselrichter 'TSUN' auswählt, lässt sie sich für Balkonanlagen verwenden,
 geht aber von einem für Stecker-Solar-Anlagen zu hohen System-Wirkungsgrad
 (über 92%) aus.
+
+[![Bild: PV-SOL-online Ergebnis](PV-SOL-online_3000kWh_600Wp_S_35.png)](
+https://pvsol-online.valentin-software.com/)
+
 Der mögliche Eigenverbrauch hängt natürlicherweise stark vom gewählten
 Lastprofil ab. Mit der Auswahl '2 Personen mit einem Kind'
 bekommt man Ergebnisse, die dem von der HTW Berlin verwendeten Durchschnitt
 am nächsten kommen (aber etwas niedriger ausfallen).
 <!-- Leider werden die Details der Lastprofile nicht offengelegt. -->
-[![Bild: PV-SOL-online Ergebnis](PV-SOL-online_3000kWh_600Wp_S_35.png)](
-https://pvsol-online.valentin-software.com/)
+
+#### PVTool@AkkuDoktor {#PVTool}
 
 Eine sehr einfache Möglichkeit, online die Amortisation zu berechnen, bietet
 auch das [PVTool von „AkkuDoktor“](https://www.akkudoktor.net/pvtool-rechner/).
@@ -1640,6 +1664,7 @@ https://www.bdew.de/energie/standardlastprofile-strom/) (inzwischen: BDEW)
 * Standardmäßig wird die Lade- und Entladeleistung nicht begrenzt,
   wobei man das ebenfalls in den erweiterten Einstellungen korrigieren kann.
 
+#### brodsoft Stromverlauf {#brodsoft}
 
 [![Bild: Speichersimulation InGe16 1.-6. April, 1000kWh, PV 660 kWh, 2,4 kWh
 Speicher](Speichersimulation_InGe16_April_1-6.png){:.center}](
@@ -1657,6 +1682,8 @@ Diese Simulation berechnet für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl
 des Profils einen Eigenverbrauch von teils 601 kWh (Profil „allgemein 13/14“)
 und mehr, aber typischerweise eher 514 kWh (Profil „InGe 16“) pro Jahr.
 
+#### PV Calculator {#PVCalculator}
+
 Es gibt auch eine Android-App namens [PV Calculator](
 https://play.google.com/store/apps/details?id=com.pvstrom.pvcalculator)
 mit relativ flexiblen Parametern und sehr schöner Darstellung der Ergebnisse.
@@ -1673,12 +1700,6 @@ unrealistischerweise so gut wie keine Netzeinspeisung und selbst für das
 Profil „Peak Morgen Abends“ eine viel zu niedrige Netzeinspeisung von 52 kWh.
 Außerdem wird etwas verwirrend im Gesamtergebnis nicht der resultierende
 Eigenverbrauch (hier 612 kWh) dargestellt, sondern der Nettoertrag und der Netzbezug.
-
-Die hier genannten Simulationen setzen bei Einsatz eines Pufferspeichers
-eine ideale Speicherstrategie voraus.
-Ihre Ergebnisse **gelten nicht bei Verwendung einer primitiven Regelung**, wie
-sie für [Balkonkraftwerke mit Speicherbatterie](#Batteriepuffer) typisch sind.
-Für diese kann aber der [u.g. Simulator](#SolBatSim) verwendet werden.
 
 ### Ökonomisch orientierte PV-Rechner {#PV-Rechner}
 
