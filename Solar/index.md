@@ -1684,6 +1684,9 @@ und mehr, aber typischerweise eher 514 kWh (Profil „InGe 16“) pro Jahr.
 
 #### PV Calculator {#PVCalculator}
 
+[![Bild: PV Calculator Ergebnis](PV_Calculator.png){:.right width="550"}](
+https://play.google.com/store/apps/details?id=com.pvstrom.pvcalculator)
+
 Es gibt auch eine Android-App namens [PV Calculator](
 https://play.google.com/store/apps/details?id=com.pvstrom.pvcalculator)
 mit relativ flexiblen Parametern und sehr schöner Darstellung der Ergebnisse.
