@@ -1764,7 +1764,7 @@ von [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/). Von dort kann man
 für einen gegebenen Standort und eine gegebene PV-Modul-Ausrichtung
 (wahlweise für einen Abschnitt von Jahren zwischen 2005 und 2020
 oder für ein [*typisches meteorologisches Jahr*](
-https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/)
+https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/))
 Solardaten wie [diese](Solardaten_1215_kWh.csv) herunterladen.
 Eine oder mehrere solcher Dateien (womit sich auch eine Linearkombination
 von PV-Modulgruppen unterschiedlicher Ausrichtung, Verschattung und
@@ -1779,13 +1779,16 @@ und weitere Parameter wie der System-Wirkungsgrad der PV-Anlage
 (resultierend aus Verlusten z.B. in den Leitungen und durch
 Verschmutzung, Eigenverschattung und Alterung der Module)
 und der Wirkungsgrad des Wechselrichters, welche als konstant angenommen werden.
-Auch eine Limitierung der Wechselrichter-Ausgangsleistung
-(auf [z.B. 600 W](#Kappungsverlust) wird unterstützt, außerdem
-ein [Stromspeicher](#Batteriepuffer) mit gegebener nutzbarer Kapazität.
+Auch eine Limitierung der Leistung einzelner Modulstränge (an MPPT-Eingängen)
+und der Wechselrichter-Gesamt-Ausgangsleistung
+(auf [z.B. 600 W](#Kappungsverlust)) wird unterstützt
 
-Für eine Batterie kann die Ladekopplung DC- oder AC-seitig simuliert,
-die angenommenen Wirkungsgrade der Ladung und Speicherung frei bestimmt
-und aus folgenden [weiter unten](#Batteriepuffer) näher behandelten
+Außerdem kann die Verwendung eines [Stromspeichers](#Batteriepuffer)
+simuliert werden, dessen Ladung DC- oder AC-seitig gekoppelt sein kann.
+Parameter sind die Brutto-Kapazität, die maximale Lade- und Entladetiefe,
+die maximale Lade- und Entladerate (Stromstärke relativ zur Kapazität),
+und die angenommenen Wirkungsgrade der Ladung und Speicherung.
+Zudem kann aus folgenden [weiter unten](#Batteriepuffer) näher behandelten
 Lade- und Entladestrategien gewählt werden:
 - Ladestrategie (solange die definierte Maximalladung nicht erreicht ist):
   - Lastvorrang (optimal): Speicherung der nicht anderweitig gebrauchten
