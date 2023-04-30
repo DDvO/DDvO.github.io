@@ -1831,6 +1831,7 @@ als bei einer über Stunden oder gar ganze Monate gemittelten Betrachtung.
 
 <!-- TODO: Hinweis, dass dies als Referenzsimulation verwendbar ist -->   
 <!-- TODO: Testbeispiele in Solar.txt durchgehen -->   
+<!-- TODO: Alle Ausgaben mit -capacity und speziell -feed aktualisieren
 <!-- TODO: CSV_74_Loadprofiles_1s_W_var.zip verwenden -->   
 Vergleichsrechnungen auf Grundlage eines Lastprofils mit (annähernd)
 sekündlicher Auflösung haben ergeben, dass die Lastspitzen nur teilweise einen
