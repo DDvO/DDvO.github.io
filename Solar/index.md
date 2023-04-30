@@ -1715,6 +1715,21 @@ Als Ergebnis bekommt man entweder für gegebenen Preis die jährliche Rendite in
 (und kann dann vergleichen, ob die Investition mehr bringt als eine andere)
 oder umgekehrt: Für eine Wunsch-Rendite den Maximalpreis für die Komponenten.
 
+<!--
+Zyklenzahl pro Jahr = EV-Steigerung pro Jahr / Speicher-Wirkungsgrad / ( Kapazität * Entladetiefe )
+Gesamt-EV-Steigerung = EV-Steigerung pro Jahr * Lebensdauer
+Gesamt-Speichertrag = Gesamt-EV-Steigerung * (Strompreis - Einspeisevergütung  / Speicher-Wirkungsgrad)
+break-even: Speicherkosten = Gesamt-Speicherertrag
+
+Zyklenzahl pro Jahr =
+Speicherkosten / (Strompreis - Einspeisevergütung/Speicher-Wirkungsgrad)
+/ Lebensdauer / Speicher-Wirkungsgrad / ( Kapazität * Entladetiefe )
+
+EV-Steigerung pro Jahr  =
+Speicherkosten / (Strompreis - Einspeisevergütung/Speicher-Wirkungsgrad)
+/ Lebensdauer
+-->
+
 Die Offline-Tabellenkalkulation [*PV-Rechner*](PV-Rechner_v6+.xls)
 hat als besonderen Schwerpunkt die kaufmännische Betrachtung inklusive Rendite
 und Kapitalkosten unter Berücksichtigung von Abschreibung für Reparaturen u.ä.
