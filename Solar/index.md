@@ -153,59 +153,6 @@ Lizenzkürzel:
 **Inhaltsverzeichnis**
 
 - [Zusammenfassung {#Zusammenfassung}](#zusammenfassung-zusammenfassung)
-- [Abgrenzung {#Abgrenzung}](#abgrenzung-abgrenzung)
-    - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-    - [Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}](#photovoltaik-und-ihr-möglicher-ertrag-photovoltaik)
-        - [Sonneneinstrahlung {#Sonneneinstrahlung}](#sonneneinstrahlung-sonneneinstrahlung)
-        - [Nennleistung und Jahresertrag {#Nennleistung}](#nennleistung-und-jahresertrag-nennleistung)
-        - [Optimale Ausrichtung von Solarmodulen {#Ausrichtung}](#optimale-ausrichtung-von-solarmodulen-ausrichtung)
-            - [Aufteilung in mehrere Orientierungen {#Aufteilung}](#aufteilung-in-mehrere-orientierungen)
-    - [Stromverbrauch im Haushalt {#Stromverbrauch}](#stromverbrauch-im-haushalt-stromverbrauch)
-        - [Verbrauchsmessung {#Verbrauchsmessung}](#verbrauchsmessung-verbrauchsmessung)
-        - [Stromzähler und Rücklaufsperre {#Stromzähler}](#stromzähler-und-rücklaufsperre-stromzähler)
-    - [Eigenverbrauch und seine Berechnung {#Eigenverbrauch}](#eigenverbrauch-und-seine-berechnung)
-        - [Typische Rentabilität kleiner PV-Anlagen {#rentabel}](#typische-rentabilitaet-kleiner-pv-anlagen-rentabel)
-        - [Online-Berechnung {#online}](#online-berechnung)
-            - [Stecker-Solar-Simulator und Unabhängigkeitsrechner {#HTW}](#stecker-solar-simulator-und-unabhängigkeitsrechnerberechnung)
-            - [PV*SOL {#PVSOL}](#pv-sol)
-            - [PVTool@AkkuDoktor {#PVTool}](#pvtool-akkudoktor)
-            - [brodsoft Stromverlauf {#brodsoft}](#brodsoft-stromverlauf)
-            - [PV Calculator {#PVCalculator}](#pv-calculator)
-        - [Ökonomisch orientierte PV-Rechner {#PV-Rechner}](#oekonomisch-orientierte-pv-rechner)
-        - [Hochauflösende Simulation: SolBatSim {#SolBatSim}](#solbatsim-hochauflösende-simulation)
-    - [Nutzungsvarianten {#Nutzung}](#nutzungsmöglichkeiten-nutzung)
-        - [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“) {#Balkonkraftwerk}](#direkte-netzeinspeisung-stecker-solaranlage-balkonkraftwerk-balkonkraftwerk)
-            - [Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Bagatellgrenze}](#beschränkung-auf-600-w-und-ihre-gründe-bagatellgrenze)
-            - [Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}](#kappungsverlust-durch-drosselung-auf-600-w-kappungsverlust)
-        - [Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}](#hausnetzeinspeisung-mit-batteriepuffer-batteriepuffer)
-            - [Regelungsstrategien für Stromspeicher {#Regelungsstrategien}](#regelungsstrategien-fuer-stromspeicher)
-            - [Speicherbatterie {#Speicherbatterie}](#speicherbatterie-speicherbatterie)
-            - [Ladung der Batterie {#Batterieladung}](#batterieladung-batterieladung)
-            - [Entnahme aus der Batterie {#Entnahme}](#entnahme-aus-der-batterie-entnahme)
-        - [Inselanlage (mit Batteriespeicherung) {#Inselanlage}](#inselanlage-mit-batteriespeicherung-inselanlage)
-        - [Kombination aus Hausnetzeinspeisung und Inselanlage {#Kombination}](#kombination-aus-hausnetzeinspeisung-und-inselanlage-kombination)
-    - [Auswahl und Nutzung von Komponenten {#Komponenten}](#hinweise-für-die-auswahl-und-nutzung-von-komponenten-komponenten)
-        - [Solarmodule {#Solarmodule}](#solarmodule-solarmodule)
-            - [Elektrischer Anschluss {#Anschluss}](#anschluss-von-solarmodulen-anschluss)
-            - [Montage {#Montage}](#montage-montage)
-        - [Mikrowechselrichter und andere Stromrichter {#Stromrichter}](#mikrowechselrichter-und-andere-stromrichter-stromrichter)
-            - [MPPT-Solarregler {#MPPT}](#mppt-solarregler-mppt)
-            - [Solar-Laderegler {#Laderegler}](#solar-laderegler-laderegler)
-            - [Wechselrichter {#Wechselrichter}](#wechselrichter-wechselrichter)
-            - [Netzwechselrichter {#Netzwechselrichter}](#netzwechselrichter-netzwechselrichter)
-            - [Inselwechselrichter {#Inselwechselrichter}](#inselwechselrichter-inselwechselrichter)
-            - [Hybridgeräte: Solar-Laderegler mit Wechselrichter {#Hybrid}](#hybridgeräte-solar-laderegler-mit-wechselrichter-hybrid)
-            - [Gleichspannungswandler {#Gleichspannungswandler}](#gleichspannungswandler-gleichspannungswandler)
-        - [Speicherbatterien {#Speicher}](#speicherbatterien-speicher)
-            - [Batterie-Dimensionierung {#Dimensionierung}](#batterie-dimensionierung-dimensionierung)
-            - [Batterie-Strukturierung {#Strukturierung}](#batterie-strukturierung-strukturierung)
-            - [Kombination aus Batterie und Wechselrichter {#Kaskadierte}](#kombination-aus-batterie-und-wechselrichter-kaskadierte)
-            - [Tiefsetzsteller {#Tiefsetzsteller}](#tiefsetzsteller-tiefsetzsteller)
-            - [Spannungswächter {#Spannungswächter}](#spannungswächter-spannungswächter)
-    - [Beispiel-Konfigurationen {#Konfigurationen}](#beispiel-konfigurationen-konfigurationen)
-        - [Mobile Inselanlage {#Mobilanlage}](#mobile-inselanlage-mobilanlage)
-        - [Stecker-Solaranlage {#Steckeranlage}](#stecker-solaranlage-steckeranlage)
-        - [Kombi-Anlage {#Kombianlage}](#kombi-anlage-kombianlage)
 -->
 <!-- markdown-toc end -->
 
@@ -1718,7 +1665,7 @@ oder umgekehrt: Für eine Wunsch-Rendite den Maximalpreis für die Komponenten.
 <!--
 Zyklenzahl pro Jahr = EV-Steigerung pro Jahr / Speicher-Wirkungsgrad / ( Kapazität * Entladetiefe )
 Gesamt-EV-Steigerung = EV-Steigerung pro Jahr * Lebensdauer
-Gesamt-Speichertrag = Gesamt-EV-Steigerung * (Strompreis - Einspeisevergütung  / Speicher-Wirkungsgrad)
+Gesamt-Speicherertrag = Gesamt-EV-Steigerung * (Strompreis - Einspeisevergütung  / Speicher-Wirkungsgrad)
 break-even: Speicherkosten = Gesamt-Speicherertrag
 
 Zyklenzahl pro Jahr =
@@ -3981,26 +3928,7 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 
 <!--
 Local IspellDict: german
-LocalWords: title keywords toc start refresh zusammenfassung abgrenzung pv
-LocalWords: inhaltsverzeichnis photovoltaik sonneneinstrahlung feed end
-LocalWords: nennleistung jahresertrag ausrichtung solarmodulen capacity
-LocalWords: nutzungsmöglichkeiten nutzung netzeinspeisung fuer Eff is
-LocalWords: stecker solaranlage balkonkraftwerk beschränkung spill It
-LocalWords: kappung kappungsverlust drosselung stromzähler md deg MW
-LocalWords: rücklaufsperre stromverbrauch haushalt berechnung load vs
-LocalWords: verbrauchsmessung eigenverbrauch eigendeckung ref Heat OW
-LocalWords: ertragsberechnung monatsbasierte amortisation of VDEW OC
-LocalWords: rechner speichersimulation simulation minutenbasis var
-LocalWords: hausnetzeinspeisung batteriepuffer stromspeicher bypass
-LocalWords: regelungsstrategien speicherbatterie einspeisung zip cut
-LocalWords: batterieladung batterie inselanlage kombination px cells
-LocalWords: batteriespeicherung auswahl komponenten anschluss open
-LocalWords: solarmodule montage solar regler wechselrichter pl short
-LocalWords: netzwechselrichter gleichspannungswandler beispiel SC NA
-LocalWords: inselwechselrichter laderegler hybridgeräte kombi Sol my
-LocalWords: speicherbatterien dimensionierung strukturierung circuit
-LocalWords: tiefsetzsteller spannungswächter konfigurationen voltage
-LocalWords: mobilanlage steckeranlage anlage kombianlage index data
+LocalWords: title keywords toc start refresh zusammenfassung
 LocalWords: pandoc output calculation power width style margin unit
 LocalWords: left right irradiance GHI buehneTop clear both png tgl
 LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi
@@ -4010,18 +3938,15 @@ LocalWords: maximum point tracking sine wave efficiency boost true
 LocalWords: converter step consumption pdf balancer equalizer mppt
 LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test
 LocalWords: Charger Discharger Board Under Over Voltage Protection
-LocalWords: Speicherungs current eigenverbrauchs Oekonomie magazine
-LocalWords: rendite solbatsim Regelungs Eigenverbrauchsv transfer WSW
-LocalWords: telemetry gateway distort aufteilung orientierungen cell
-LocalWords: document sections rentabilitaet nanlagen oekonomisch post
-LocalWords: Nutzungsvarianten stromwandler mikrowechselrichter text
-LocalWords: stromrichter solarregler standard conditions Reflexions
-LocalWords: Idealbedingungen operating temperature Timeseries crystSi
+LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW
+LocalWords: telemetry gateway distort cell document sections profile
+LocalWords: post text standard conditions Reflexions PVSOL assuming
+LocalWords: operating temperature Timeseries crystSi PVCalculator
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
-LocalWords: created changed nbsp pvroi
+LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD
 LocalWords:  
 LocalWords:  
 LocalWords:  
