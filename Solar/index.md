@@ -1735,18 +1735,24 @@ So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
 
 ### Hochauflösende Simulation: SolBatSim {#SolBatSim}
 
-*SolBatSim*, ein selbst entwickelter Simulator, basiert auf Lastprofilen des
-Haushalts-Stromverbrauchs mit mindestens stündlicher, aber besser minütlicher
-oder noch höherer Auflösung und kommt daher auf sehr realistische Ergebnisse.
-Dafür können zum Beispiel die 74 von der
-Forschungsgruppe Solarspeichersysteme der HTW Berlin [veröffentlichen Profile](
+*SolBatSim*, ein selbst entwickelter Simulator, basiert auf Lastprofilen
+des Stromverbrauchs mit mindestens stündlicher, aber besser minütlicher
+(oder noch höherer) Auflösung. Daher und weil er die verschiedenen
+Arten von möglichen Verlusten differenziert berücksichtigt
+kommt er auf sehr realistische Ergebnisse.
+Aufgrund seiner großen Flexibilität deckt er fast alle üblichen Situationen ab.
+Aus diesen Gründen ist er auch als Referenz für andere Simulationen verwendbar.
+
+Für die Simulation allgemeiner Haushaltssituationen
+können zum Beispiel die 74 von der Forschungsgruppe Solarspeichersysteme
+der HTW Berlin [veröffentlichen Lastprofile](
 https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
 mit 1-Minuten-Auflösung (oder gar 1-Sekunden-Auflösung) verwendet werden.
 Mit einem [Lastprofil-Skript](Lastprofil.pl) kann man aus diesen Rohdaten
 Lastprofil-Dateien wie [diese](Lastprofil_4673_kWh.csv) synthetisieren.
 
-Die zweite wichtige Eingabe sind die PV-Ertragsdaten, welche leider meistens
-höchstens in Stunden-Auflösung erhältlich sind, wie etwa die PV-Ertragsdaten
+Die zweite wichtige Eingabe sind die PV-Ertragsdaten, welche meistens
+in Stunden-Auflösung erhältlich sind, wie etwa die PV-Ertragsdaten
 von [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/). Von dort kann man
 für einen gegebenen Standort und eine gegebene PV-Modul-Ausrichtung
 (wahlweise für einen Abschnitt von Jahren zwischen 2005 und 2020
@@ -1758,6 +1764,13 @@ von PV-Modulgruppen unterschiedlicher Ausrichtung, Verschattung und
 Leistungsparameter abbilden lässt) wird dann zusammen einer Lastprofil-Datei
 als Eingabe für ein [Simulator-Skript](Solar.pl) verwendet.
 
+Die Simulation läuft normalerweise über alle Jahre mit vorhandenen PV-Daten
+und mittelt in der Ausgabe die Energie-Werte über die betrachteten Jahre.
+Sie kann aber auch beschränkt werden auf ein typisches meteorologisches Jahr
+oder auf eine bestimmte Jahresspanne, für die PV-Daten vorhanden sind.
+Außerdem kann man weiter einschränken auf eine bestimmte Monatspanne,
+Tagesspanne und/oder Stundenspanne.
+
 Für die Simulation kann das Lastprofil in einem wählbaren täglichen
 Zeitabschnitt durch eine konstante (Grund-)Last adaptiert werden,
 ebenso der Gesamt-Jahresverbrauch aus dem Lastprofil,
@@ -1768,13 +1781,14 @@ Verschmutzung, Eigenverschattung und Alterung der Module)
 und der Wirkungsgrad des Wechselrichters, welche als konstant angenommen werden.
 Auch eine Limitierung der Leistung einzelner Modulstränge (an MPPT-Eingängen)
 und der Wechselrichter-Gesamt-Ausgangsleistung
-(auf [z.B. 600 W](#Kappungsverlust)) wird unterstützt
+(auf [z.B. 600 W](#Kappungsverlust)) wird unterstützt.
 
 Außerdem kann die Verwendung eines [Stromspeichers](#Batteriepuffer)
 simuliert werden, dessen Ladung DC- oder AC-seitig gekoppelt sein kann.
 Parameter sind die Brutto-Kapazität, die maximale Lade- und Entladetiefe,
 die maximale Lade- und Entladerate (Leistung als Vielfaches der Kapazität/h),
-und die angenommenen Wirkungsgrade der Ladung und Speicherung.
+die angenommenen Wirkungsgrade der Ladung und Speicherung, sowie optional
+der Wirkungsgrad des für die Entladung verwendeten Wechselrichters.
 Zudem kann aus folgenden [weiter unten](#Batteriepuffer) näher behandelten
 Lade- und Entladestrategien gewählt werden:
 - Ladestrategie (solange die definierte Maximalladung nicht erreicht ist):
@@ -1790,6 +1804,14 @@ Lade- und Entladestrategien gewählt werden:
   - Konstanteinspeisung: Entnahme einer definierten Leistung aus dem Speicher
     optional auf ein Uhrzeit-Intervall eingeschränkt
 
+Die Simulation besitzt einen Testmodus für Debugging- und Demonstrationszwecke.
+Optional können die Parameter und Ergebnisse auch in CSV-Dateien ausgegeben
+werden, mit tabellarischer Ausgabe der wichtigsten variablen Größen wie
+PV-Brutto- und Netto-Leistung, Verbrauch, Eigenverbrauch und Netzeinspeisung,
+sowie bei Verwendung eines Speichers Ladung, Entladung und Ladezustand.
+Zusätzlich zur festen Mittlung über ggf. mehrere Jahre werden diese Größen
+dabei wahlweise über Stunden, Tage, Wochen oder Monate gemittelt dargestellt.
+
 Für die [o.g. Beispiel-Anlage](#Berechnung) für den Raum München mit 600 Wp
 und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662 kWh
 ergibt sich mit dieser Simulation unter Verwendung minutengenauer Lastprofile
@@ -1801,7 +1823,6 @@ Minutenbereich berücksichtigt werden, die von einer Mini-Solaranlage praktisch
 kaum abgefangen werden können, so dass der Eigenverbrauchsanteil geringer ist
 als bei einer über Stunden oder gar ganze Monate gemittelten Betrachtung.
 
-<!-- TODO: Hinweis, dass dies als Referenzsimulation verwendbar ist -->   
 <!-- TODO: Testbeispiele in Solar.txt durchgehen -->   
 <!-- TODO: CSV_74_Loadprofiles_1s_W_var.zip verwenden -->   
 Vergleichsrechnungen auf Grundlage eines Lastprofils mit (annähernd)
