@@ -3897,9 +3897,12 @@ Komponenten zu meiner vollen Zufriedenheit:
     Praxis auch 10 A genügt hätten).\
     Sehr praktisch finde ich bei den BlueSolar-Modellen die
     Status-Abfrage auf dem Smartphone.\
-    Leider unterbinden die Victron-Regler ohne Zusatzgerät nicht das Laden
-    bei unter 0°C, was bei LiFePO4-Akkus zu Schäden führen kann,
-    wenn man sie im Winter nicht abklemmt.
+    Leider unterbinden die Victron-Regler nicht das Laden bei unter 0°C,
+    was bei LiFePO4-Akkus zu Schäden führen kann, wenn man sie im Winter nicht
+    abklemmt. Allerdings bietet Victron eine Lösung mit einem Zusatzgerät namens
+    [Smart Battery Sense](
+    https://www.idealo.de/preisvergleich/OffersOfProduct/201937361_-smart-battery-sense-victron.html),
+    das allerdings etwa 40€ extra kostet.
 
 -   12,8 V 100 Ah 4S1P LiFePO4-Batterie inkl. 100 A BMS [Delong
     DL-12100](https://www.alibaba.com/product-detail/Delong-Factory-Rechargeable-12-8V-100Ah_62388029440.html),
@@ -4038,7 +4041,7 @@ LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
 LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD
-LocalWords:  
+LocalWords: Sense
 LocalWords:  
 LocalWords:  
 -->
