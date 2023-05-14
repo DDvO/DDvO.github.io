@@ -1307,12 +1307,13 @@ und zwar zu dem gleichen Preis, den man auch für Strombezug bezahlen muss.
 Das ist in vielen Ländern (z.B. in den Niederlanden, Italien und USA)
 offiziell so geregelt, während es in Deutschland nicht erlaubt ist.
 
+
 Anfang 2023 [sprach sich der VDE jedoch dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
 bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
 Nach den [Solar-Plänen des dt. BMWK vom 10.03.2023](
 https://www.inside-digital.de/news/bundesregierung-plant-beseitigung-buerokratische-huerden-fuer-balkonkraftwerke)
-will man aber nicht so weit gehen, sondern nur
+wollte man aber nicht so weit gehen, sondern nur
 „rückwärtsdrehende Zähler vorübergehend dulden, bis Zähler getauscht ist“.
 Es wurde aber eine Stellungnahme eingereicht mit dem Ziel, das noch zu ändern:
 > Dass nicht [...] einfach Nettomessung gemacht wird, hemmt doch sehr den Ausbau privater Solaranlagen, weil sich diese daher allein durch den Eigenverbrauch (also vermiedenen Netzbezug) amortisieren müssen, was besonders für den sehr großen Teil der Bevölkerung schwer möglich ist,  der tagsüber daheim wenig Eigenverbrauch hat. Dass überschüssiger PV-Strom an den Verteilnetzbetreiber verschenkt wird, ist ein Ärgernis für die meisten Interessenten und Anlagenbetreiber und verleitet diejenigen, die sich technisch besser auskennen, sich zumindest Gedanken über Stromspeicher mit aufladbaren Batterien zu machen, welche jedenfalls für Steckersolaranlagen  schon regelungstechnisch unverhältnismäßig aufwendig sowie ökonomisch und ökologisch unsinnig bis kontraproduktiv sind.
@@ -1324,6 +1325,19 @@ Es wurde aber eine Stellungnahme eingereicht mit dem Ziel, das noch zu ändern:
 > Die sich dadurch ergebende Reduktion der Umlagen und Entgelte aus dem Strompreis sollte für Staat und Netzbetreiber nicht ins Gewicht fallen, weil die Änderung nur die Nettoeinspeisung betrifft und durch die Bagatellgrenze gedeckelt wird.
 
 > Durch den Wegfall der Rücklaufsperre für Steckersolargeräte entfällt für private Interessenten ein erhebliches psychologisches und ökonomisches Hindernis beim Einstieg in diese zukunftsweisende Technik, die der breiten Bevölkerung ermöglicht, ihren persönlichen Beitrag zu Ökologie und Klimaschutz im Zusammenhang mit der Energiewende zu leisten.
+
+Inzwischen wurde allerdings klar, dass dieser Vorstoß nicht erfolgreich war. In
+einer Zusammenfassung der Ergebnisse des [zweiten Photovoltaik-Gipfels des BMWK](
+https://www.computerbild.de/artikel/cb-News-Energie-Habeck-PV-Strategie-Balkonkraftwerk-Gesetze-35705479.html)
+am 5.5.2023 steht u.A.:
+
+> *Rückwärtsdrehende Zähler dulden:* Wer ein Balkonkraftwerk anschließt, muss das an einem Zähler mit Rücklaufsperre tun, sodass bei mehr Stromproduktion als -verbrauch der Zähler nicht rückwärts drehen kann. Künftig will das Bundeswirtschaftsministerium ausdrücklich auch den Betrieb an rückwärtsdrehenden Ferraris-Zählern erlauben, und zwar übergangsweise -- bis ein Zweirichtungszähler installiert wird. Dies soll legal möglich machen, dass Menschen nicht auf den Zählerwechsel warten müssen, bevor sie ihr Balkonkraftwerk anschließen. Die Legalisierung des dauerhaften Betriebs von Balkonkraftwerken an solchen Zählern ist aber "nicht geplant".
+
+In dem [finalisierten Photovoltaik-Strategie-Dokument](
+https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile&v=4)
+heißt es darüber hinaus:
+> Ein dauerhafter Betrieb der Balkon-PV-Anlage hinter rückwärtsdrehenden Zählern sowie eine Ausweitung dieser Regelung auf leistungsstärkere PV-Anlagen ist nicht geplant und wäre auch nicht sachgerecht.
+
 
 Ein [*Zweirichtungszähler*](
 https://www.thermondo.de/info/rat/erneuerbare-energie/zweirichtungszaehler/),
