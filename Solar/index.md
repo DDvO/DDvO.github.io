@@ -1,8 +1,12 @@
 ---
 title: "Mini-Solaranlagen für daheim und unterwegs"
 description: >-
-  Wichtige Hintergrundinfos und viele praktische Tipps für private PV-Anlagen.
-  Exakte Simulationsergebnisse für Rentabilität, optimale Modul-Ausrichtung und
+  Online-Artikel von Dr. David von Oheimb
+  mit wichtigen Hintergrund-Infos zum Thema Photovoltaik und
+  vielen praktischen Tipps für Balkonkraftwerke und andere kleine Solar-Anlagen,
+  einschließlich Hinweisen,
+  welche Komponenten und Verwendungsformen sich unter welchen Umständen lohnen:
+  exakte Simulationsergebnisse für Rentabilität, optimale Modul-Ausrichtung und
   die Verwendung von Wechselrichtern und Speicherbatterien inklusive Regelung.
 date: 2022-03-20 20:36:16 +0100
 created: ", erstellt in März 2022"
@@ -75,7 +79,14 @@ keywords:
 abstract: |
   This is the abstract.
 ---
-<!-- https://pandoc.org/MANUAL.html#extension-yaml_metadata_block-->
+<!-- https://jekyllrb.com/docs/front-matter/
+     https://pandoc.org/MANUAL.html#extension-yaml_metadata_block-->
+
+Wichtige Hintergrund-Infos zur Photovoltaik und viele praktische Tipps für
+Balkonkraftwerke und andere kleine Solar-Anlagen -- einschließlich Hinweisen,
+welche Komponenten und Verwendungsformen sich unter welchen Umständen lohnen:
+exakte Simulationsergebnisse für Rentabilität, optimale Modul-Ausrichtung und
+die Verwendung von Wechselrichtern und Speicherbatterien inklusive Regelung.
 
 # Zusammenfassung {#Zusammenfassung}
 
