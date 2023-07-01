@@ -1833,12 +1833,15 @@ Lade- und Entladestrategien gewählt werden:
     optional auf ein Uhrzeit-Intervall eingeschränkt
 
 Die Simulation besitzt einen Testmodus für Debugging- und Demonstrationszwecke.
-Optional können die Parameter und Ergebnisse auch in CSV-Dateien ausgegeben
-werden, mit tabellarischer Ausgabe der wichtigsten variablen Größen wie
-PV-Brutto- und Netto-Leistung, Verbrauch, Eigenverbrauch und Netzeinspeisung,
+Die Ausgabe aller Parameter und Ergebnisse erfolgt textuell im Terminal.
+Die Ergebnisse, wie z.B. die PV-Erträge und der Eigenverbrauch, sowie ggf. der
+Speicherdurchsatz usw., werden über alle simulierten Jahre gemittelt ausgegeben.
+Optional kann die Ausgabe zusätzlich in CSV-Dateien geschehen. Dann erfolgt
+zusätzlich eine tabellarische Ausgabe der wichtigsten variablen Größen:
+PV-Brutto- und Netto-Ertrag, Verbrauch, Eigenverbrauch und Netzeinspeisung,
 sowie bei Verwendung eines Speichers Ladung, Entladung und Ladezustand.
-Zusätzlich zur festen Mittlung über ggf. mehrere Jahre werden diese Größen
-dabei wahlweise über Stunden, Tage, Wochen oder Monate gemittelt dargestellt.
+Diese werden wahlweise in voller Auflösung (also mit je einer Zeile pro Wert
+im Lastprofil oder über Stunden, Tage, Wochen oder Monate gemittelt ausgegeben.
 
 Für die [o.g. Beispiel-Anlage](#Berechnung) für den Raum München mit 600 Wp
 und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662 kWh
