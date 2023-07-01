@@ -169,11 +169,11 @@ Lizenzkürzel:
 
 <!-- pandoc -s - -toc index.md -o output.md -->
 
-# Inhaltsverzeichnis
+# Inhaltsverzeichnis {#Inhaltsverzeichnis}
 
 -   [Zusammenfassung](#Zusammenfassung)
 -   [Abgrenzung](#Abgrenzung)
--   [Inhaltsverzeichnis](#inhaltsverzeichnis)
+-   [Inhaltsverzeichnis](#Inhaltsverzeichnis)
 -   [Photovoltaik und ihr möglicher Ertrag](#Photovoltaik)
     -   [Sonneneinstrahlung](#Sonneneinstrahlung)
     -   [Nennleistung und Jahresertrag](#Nennleistung)
@@ -4086,14 +4086,15 @@ LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test
 LocalWords: Charger Discharger Board Under Over Voltage Protection
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW
 LocalWords: telemetry gateway distort cell document sections profile
-LocalWords: post text standard conditions Reflexions PVSOL assuming
+LocalWords: post text standard conditions Reflexions PVSOL SOL assuming
 LocalWords: operating temperature Timeseries crystSi PVCalculator
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
-LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD
-LocalWords: Sense
-LocalWords:  
-LocalWords:  
+LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW
+LocalWords: Sense is end index output md ref of pv px Eff vs OW Heat
+LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
+LocalWords: data transfer solar cut cells open short circuit voltage
+LocalWords:
 -->
