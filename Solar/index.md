@@ -2036,7 +2036,7 @@ Die nominelle Leistung der verwendeten Solarmodule kann und sollte in Summe
 durchaus größer sein aus 600 Wp, also eher 800 bis 1000 Wp. Denn in der Praxis
 wird auch mit solchen Modulen eine Ausgangsleistung von 600 W und mehr
 ohnehin kaum erreicht, und das auch nicht oft, gerade in sonnenarmen Zeiten.
-**Der Unterschied beim Jahres-Gesamtertrag ohne/mit Drosselung des
+**Der Unterschied beim nutzbaren Jahres-Gesamtertrag ohne/mit Drosselung des
 Wechselrichters auf 600 W ist sehr gering: etwa 10 kWh**, also knapp 3€ im Jahr.
 
 Diese Erkenntnis ist schon recht alt und wurde wohl erst [für größere Anlagen](
