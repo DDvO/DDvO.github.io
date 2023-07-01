@@ -1768,6 +1768,7 @@ kommt er auf sehr realistische Ergebnisse.
 Aufgrund seiner großen Flexibilität deckt er fast alle üblichen Situationen ab.
 Aus diesen Gründen ist er auch als Referenz für andere Simulationen verwendbar.
 
+Das [Simulator-Skript](Solar.pl) benötigt als Eingabe eine Lastprofil-Datei.
 Für die Simulation allgemeiner Haushaltssituationen
 können zum Beispiel die 74 von der Forschungsgruppe Solarspeichersysteme
 der HTW Berlin [veröffentlichen Lastprofile](
@@ -1784,10 +1785,10 @@ für einen gegebenen Standort und eine gegebene PV-Modul-Ausrichtung
 oder für ein [*typisches meteorologisches Jahr*](
 https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/))
 Solardaten wie [diese](Solardaten_1215_kWh.csv) herunterladen.
-Eine oder mehrere solcher Dateien (womit sich auch eine Linearkombination
-von PV-Modulgruppen unterschiedlicher Ausrichtung, Verschattung und
-Leistungsparameter abbilden lässt) wird dann zusammen einer Lastprofil-Datei
-als Eingabe für ein [Simulator-Skript](Solar.pl) verwendet.
+Der Simulator kann eine oder mehrere solcher Dateien als Eingabe verwenden,
+womit sich auch eine Linearkombination von PV-Modulsträngen unterschiedlicher
+Ausrichtung, Verschattung und Leistungsparameter abbilden lässt. Jede Datei
+stellt dabei einen Strang von Modulen mit gleicher Einstrahlung dar.
 
 Die Simulation läuft normalerweise über alle Jahre mit vorhandenen PV-Daten
 und mittelt in der Ausgabe die Energie-Werte über die betrachteten Jahre.
@@ -1810,6 +1811,8 @@ und der Wechselrichter-Gesamt-Ausgangsleistung
 
 Außerdem kann die Verwendung eines [Stromspeichers](#Batteriepuffer)
 simuliert werden, dessen Ladung DC- oder AC-seitig gekoppelt sein kann.
+Für jeden Strang von PV-Modulen lässt sich angeben, ob er mit dem Speicher
+gekoppelt ist oder direkt (über den Wechselrichter) ins Hausnetz einspeist.
 Parameter sind die Brutto-Kapazität, die maximale Lade- und Entladetiefe,
 die maximale Lade- und Entladerate (Leistung als Vielfaches der Kapazität/h),
 die angenommenen Wirkungsgrade der Ladung und Speicherung, sowie optional
