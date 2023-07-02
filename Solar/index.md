@@ -1799,7 +1799,7 @@ Außerdem kann man weiter einschränken auf eine bestimmte Monatspanne,
 Tagesspanne und/oder Stundenspanne.
 
 Für die Simulation kann das Lastprofil in einem wählbaren täglichen
-Zeitabschnitt durch eine konstante (Grund-)Last adaptiert werden,
+Zeitabschnitt durch eine konstante oder minimale (Grund-)Last adaptiert werden,
 ebenso der Gesamt-Jahresverbrauch aus dem Lastprofil,
 die Nennleistung jeder PV-Modulgruppe
 und weitere Parameter wie der System-Wirkungsgrad der PV-Anlage
@@ -1833,16 +1833,21 @@ Lade- und Entladestrategien gewählt werden:
   - Konstanteinspeisung: Entnahme einer definierten Leistung aus dem Speicher
     optional auf ein Uhrzeit-Intervall eingeschränkt
 
-Die Simulation besitzt einen Testmodus für Debugging- und Demonstrationszwecke.
 Die Ausgabe aller Parameter und Ergebnisse erfolgt textuell im Terminal.
 Die Ergebnisse, wie z.B. die PV-Erträge und der Eigenverbrauch, sowie ggf. der
 Speicherdurchsatz usw., werden über alle simulierten Jahre gemittelt ausgegeben.
+Optional wird auch die Verteilung der PV-Leistung, Last, Netzeinspeiseleistung,
+Lade- und Entladeleistung über die 24 Stunden der Tage ausgegeben,
+und zwar gemittelt über alle Tage und als Maximalwerte für die jeweilige Stunde.
 Optional kann die Ausgabe zusätzlich in CSV-Dateien geschehen. Dann erfolgt
 zusätzlich eine tabellarische Ausgabe der wichtigsten variablen Größen:
 PV-Brutto- und Netto-Ertrag, Verbrauch, Eigenverbrauch und Netzeinspeisung,
 sowie bei Verwendung eines Speichers Ladung, Entladung und Ladezustand.
 Diese werden wahlweise in voller Auflösung (also mit je einer Zeile pro Wert
-im Lastprofil oder über Stunden, Tage, Wochen oder Monate gemittelt ausgegeben.
+im Lastprofil) oder über Stunden, Tage, Wochen oder Monate gemittelt ausgegeben.
+
+Der Simulator hat auch einen Testmodus für Debugging- und Demonstrationszwecke
+und kann bei Bedarf detaillierte Daten für jeden Simulationsschritt anzeigen.
 
 Für die [o.g. Beispiel-Anlage](#Berechnung) für den Raum München mit 600 Wp
 und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662 kWh
