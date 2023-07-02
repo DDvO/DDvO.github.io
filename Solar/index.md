@@ -114,7 +114,7 @@ Balkonkraftwerk_und_Dach-PV-Anlage.jpg)
 <!--https://cdn.daa.net/images/photovoltaik/balkonkraftwerk.jpg-->
 <!--https://www.solaranlagen-portal.com/photovoltaik/balkonkraftwerk-->
 
-# Abgrenzung und Zielsetzung {#Abgrenzung}
+# Zielsetzung und Abgrenzung {#Zielsetzung}
 
 Hier geht es nicht um *Solarthermie*, also die direkte Gewinnung von Wärme
 durch Sonneneinstrahlung, sondern um die Erzeugung von elektrischem Strom.
@@ -150,7 +150,7 @@ https://smartgrids-bw.net/public/uploads/2020/04/IBZ-Leitfaden_Balkon-PV-Online.
 und die [„Fachinformation“ des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
 verwiesen.
 
-# Nutzungslizenz
+# Nutzungslizenz {#Nutzungslizenz}
 
 Die Verlinkung, Weitergabe und sonstige Weiterverwendung dieser Inhalte,
 auch in geeigneten Auszügen, ist ausdrücklich erlaubt und erwünscht.
@@ -163,7 +163,7 @@ Lizenzkürzel:
 <!--
 **Inhaltsverzeichnis**
 
-- [Zusammenfassung {#Zusammenfassung}](#zusammenfassung-zusammenfassung)
+- [Zusammenfassung { # Zusammenfassung}](#zusammenfassung-zusammenfassung)
 -->
 <!-- markdown-toc end -->
 
@@ -172,7 +172,8 @@ Lizenzkürzel:
 # Inhaltsverzeichnis {#Inhaltsverzeichnis}
 
 -   [Zusammenfassung](#Zusammenfassung)
--   [Abgrenzung](#Abgrenzung)
+-   [Zielsetzung und Abgrenzung](#Zielsetzung)
+-   [Nutzunglizenz](#Nutzunglizenz)
 -   [Inhaltsverzeichnis](#Inhaltsverzeichnis)
 -   [Photovoltaik und ihr möglicher Ertrag](#Photovoltaik)
     -   [Sonneneinstrahlung](#Sonneneinstrahlung)
@@ -191,7 +192,7 @@ Lizenzkürzel:
         - [brodsoft Stromverlauf](#brodsoft)
         - [PV Calculator](#PVCalculator)
     -   [Ökonomisch orientierte PV-Rechner](#PV-Rechner)
-    -   [Hochauflösende Simulation: SolBatSim](#SolBatSim)
+    -   [SolBatSim: Hochauflösende flexible Simulation](#SolBatSim)
 -   [Nutzungsvarianten](#Nutzung)
     -   [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“)](#Balkonkraftwerk)
         - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Bagatellgrenze)
@@ -199,15 +200,15 @@ Lizenzkürzel:
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
         - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
         - [Speicherbatterie](#Speicherbatterie)
-        - [Ladung der Batterie](#Batterieladung)
-        - [Entnahme aus der Batterie](#Entnahme)
+        - [Ladung der Batterie](#Ladung)
+        - [Entladung der Batterie](#Entnahme)
     -   [Inselanlage (mit Batteriespeicherung)](#Inselanlage)
     -   [Kombination aus Hausnetzeinspeisung und
         Inselanlage](#Kombination)
 -   [Auswahl und Nutzung von Komponenten](#Komponenten)
-    -   [Solarmodule](#Solarmodule)
+    -   [PV-Module](#PV-Module)
         - [Elektrischer Anschluss](#Anschluss)
-        - [Montage](#Montage)
+        - [Anbringung](#Anbringung)
     -   [Mikrowechselrichter und andere Stromrichter](#Stromrichter)
         - [MPPT-Solarregler](#MPPT)
         - [Solar-Laderegler](#Laderegler)
@@ -1758,7 +1759,7 @@ Ich habe mich mit Falko zu diesen und anderen Punkten ausgetauscht.
 Er möchte an dem Tool nichts mehr machen.
 So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
 
-### Hochauflösende Simulation: SolBatSim {#SolBatSim}
+### SolBatSim: Hochauflösende flexible Simulation {#SolBatSim}
 
 *SolBatSim*, ein selbst entwickelter Simulator, basiert auf Lastprofilen
 des Stromverbrauchs mit mindestens stündlicher, aber besser minütlicher
@@ -2376,7 +2377,7 @@ Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 
 Die einfachsten Anlagen verwenden eine [*Konstanteinspeisung*](#Entnahme),
 wobei eine zeitgesteuerte Variante *Nachteinspeisung* genannt wird.
-Wie [etwas weiter unten ausgeführt](#Batterieladung),
+Wie [etwas weiter unten ausgeführt](#Ladung),
 bringen allerdings solche Anlagen
 <!-- mit Konstanteinspeisung, bei der die PV-Erzeugung
 nur in den Speicher geleitet wird (also ohne Überschussableitung oder
@@ -2395,7 +2396,7 @@ also mit nominell 1,28 kWh Kapazität, denn davon muss man ohnehin
 mindestens 90% für eine gesunde Entladetiefe abziehen, und nochmal
 ungefähr 90% für die durchschnittliche Degradation durch Alterungseffekte. Die
 Eigenverbrauch-Ergebnisse wurden mit dem [o.g. SolBatSim](#SolBatSim) berechnet,
-unter Annahme einer (effizienteren) [DC-Kopplung](#Batterieladung)
+unter Annahme einer (effizienteren) [DC-Kopplung](#Ladung)
 mit Lade-Wirkungsgrad 94% und Speicherungs-Wirkungsgrad 95%.
 Wie zuvor sind für den Wirkungsgrad des PV-Systems 92% angenommen
 und für die Wechselrichtung (auch bei Entladung aus der Batterie) 94%.
@@ -2603,7 +2604,7 @@ Ziel der Konstanteinspeisung ist zwar, die über die sonnenreiche Tageszeit
 gesammelte Solarenergie auch über sonnenarme Zeiten gleichmäßig abzugeben
 (solange die Ladung reicht, zumindest bis zum nächsten Vormittag),
 und dabei möglichst wenig Strom nach extern zu verschenken.
-Allerdings zeigen die [u.g. Simulationsergebnisse](#Batterieladung),
+Allerdings zeigen die [u.g. Simulationsergebnisse](#Ladung),
 dass sich auf diese Weise nicht mal die Grundlast effizient abdecken lässt.
 
 ![Bild: Wasserspeicher als Analogie](Wasserspeicher.jpg){:.right width="400"
@@ -2654,7 +2655,7 @@ Bei LiFePO4 sind immerhin 90% Entladetiefe problemlos möglich.
 * Im Interesse einer langen Lebensdauer sollte man die Batterie ja nach Typ
 besser nicht ganz voll laden, sondern eher nur zu z.B. 90%.
 
-#### Ladung der Batterie {#Batterieladung}
+#### Ladung der Batterie {#Ladung}
 
 Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
 über einen [Solar-Laderegler](#Laderegler). Dies nennt man [*DC-Kopplung*](
@@ -2985,7 +2986,7 @@ sind im Abschnitt [Verbrauchsmessung](#Verbrauchsmessung) genannt.
 
 Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
 Bei einer z.B. auf 600 W begrenzten Einspeisung beträgt für die o.g.
-[Balkonanlage mit 1 kWh Pufferspeicher und Überschussableitung](#Batterieladung)
+[Balkonanlage mit 1 kWh Pufferspeicher und Überschussableitung](#Ladung)
 die Steigerung des Eigenverbrauch durch die Speichernutzung 128 kWh auf 588 kWh.
 Hier findet nur noch eine minimale Netzeinspeisung von 3 kWh statt,
 welche aus ungenutzter Überschussableitung resultiert.
@@ -3134,7 +3135,7 @@ PV-Eigenverbrauchsanteil    =   82 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
 -->
 * Bei Anlagen mit konstanter (nicht bedarfsgeregelter) Einspeisung hingegen
-gibt es wie [oben beschrieben](#Batterieladung) auf die eine oder andere Weise
+gibt es wie [oben beschrieben](#Ladung) auf die eine oder andere Weise
 große Verluste, so dass die Steigerung des Eigenverbrauchs sehr gering ausfällt.
 
 {:style="clear:both"}
@@ -3207,7 +3208,7 @@ Eine zusätzliche Überschussableitung bringt das Ergebnis zwar wieder ins
 Positive, so dass sich bei dann optimaler Entnahmeleistung von 75 W ein Gewinn
 an Eigenverbrauch von 33 kWh auf 493 kWh ergibt, aber lohnenswert ist das nicht,
 denn auch dann fällt der Gewinn immer nach geringer aus als ohne Einschränkung
-auf die Nachtstunden (wo der [Gewinn 54 kWh](#Batterieladung) beträgt).\
+auf die Nachtstunden (wo der [Gewinn 54 kWh](#Ladung) beträgt).\
 Eine Erhöhung der nutzbaren Kapazität auf 2 kWh
 brächte beim Eigenverbrauch nur 10 kWh mehr.
 
@@ -3263,7 +3264,7 @@ dass er beim Erreichen einer Batteriespannung, die
 z.B. annähernd einer Vollladung entspricht, den Wechselrichter einschaltet und
 z.B. in der Nähe der Batterie-Entladeschlussspannung diesen wieder ausschaltet.
 
-Wie [oben ausgeführt](#Batterieladung) haben allerdings Anlagen mit
+Wie [oben ausgeführt](#Ladung) haben allerdings Anlagen mit
 Konstanteinspeisung wie die gerade erwähnten Bastellösungen von PV&E und von
 Dimitri selbst mit zusätzlicher Überschussableitung eine miserable Rentabilität.
 
@@ -3325,7 +3326,7 @@ am Ausgang der Batterie zwischen Netz- und Insel-Wechselrichter umgeschaltet.
 Auswahl und Nutzung von Komponenten {#Komponenten}
 --------------------------------------------------
 
-### Solarmodule {#Solarmodule}
+### PV-Module {#PV-Module}
 
 Solarmodule (engl. _solar panels_) werden intern aus vielen in Reihe
 geschalteten Solarzellen zusammengesetzt, die Sonnenlicht in Gleichstrom
@@ -3451,7 +3452,7 @@ etwas günstiger als entsprechend viele kleine.
     sobald auch nur eines der Module verschattet wird.
     Aus diesem Grund sollten nur gleichartige Module in Reihe geschaltet werden,
     die zudem gleich ausgerichtet sind und nur gleich(zeitig) verschattet werden,
-    wobei hier [Bypass-Dioden](#Solarmodule) eine gewisse Abhilfe schaffen.
+    wobei hier [Bypass-Dioden](#PV-Module) eine gewisse Abhilfe schaffen.
 
 -   Bei [*Parallelschaltung*](https://de.wikipedia.org/wiki/Parallelschaltung)
     addieren sich die Ströme der einzelnen Module bzw. parallelen Modulstränge.
@@ -3542,7 +3543,7 @@ wird es ohne Reihenschaltung bei einer Ladeschlussspannung von ca. 14,5 V
 einer LiFePO4-Batterie bei wolkigem Wetter (mit einer Einstrahlung von
 vielleicht nur 100 - 200 W/m²) ziemlich eng.
 
-#### Montage {#Montage}
+#### Anbringung {#Anbringung}
 
 ![Bild: Garten-Solaranlage an Hauswand](Garten-Anlage.jpg){:.left width="386"}
 ![Bild: Solaranlage auf Pergola](Pergola-Anlage.jpg){:.right width="386"}
