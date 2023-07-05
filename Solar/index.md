@@ -1826,11 +1826,13 @@ Lade- und Entladestrategien gewählt werden:
   - vorrangige Speicherung (ohne Berücksichtigung der Last),
     wobei wahlweise Strom auch teils am Speicher vorbei geleitet werden kann:
     - für Überschuss, der nicht mehr in den Speicher passt, und/oder
-    - für eine konstante PV-Bruttoleistung
+    - für eine konstante PV-Nettoleistung
 - Entladestrategie (solange die definierte Minimalladung nicht erreicht ist):
   - Lastkompensation (optimal): Entnahme so viel wie zusätzlich zum PV-Ertrag gebraucht wird
   - bedarfsgeregelte Einspeisung: wie vor, aber mit Maximalleistung
-  - Konstanteinspeisung: Entnahme einer definierten Leistung aus dem Speicher
+  - Kompensation schwacher PV-Leistung auf konstante Mindestlast-Zielwert
+  - Umschaltung bei schwacher PV-Leistung auf Konstanteinspeisung, wobei dann die PV-Leistung verworfen wird, wie beim Anker Solix
+  - Konstanteinspeisung: Entnahme einer definierten Leistung aus dem Speicher,
     optional auf ein Uhrzeit-Intervall eingeschränkt
 
 Die Ausgabe aller Parameter und Ergebnisse erfolgt textuell im Terminal.
