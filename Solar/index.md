@@ -1828,12 +1828,18 @@ Lade- und Entladestrategien gewählt werden:
     - für Überschuss, der nicht mehr in den Speicher passt, und/oder
     - für eine konstante PV-Nettoleistung
 - Entladestrategie (solange die definierte Minimalladung nicht erreicht ist):
-  - Lastkompensation (optimal): Entnahme so viel wie zusätzlich zum PV-Ertrag gebraucht wird
-  - bedarfsgeregelte Einspeisung: wie vor, aber mit Maximalleistung
-  - Kompensation schwacher PV-Leistung auf konstante Mindestlast-Zielwert
-  - Umschaltung bei schwacher PV-Leistung auf Konstanteinspeisung, wobei dann die PV-Leistung verworfen wird, wie beim Anker Solix
+  - lastgeregelte Einspeisung (optimal): Entnahme so viel wie zusätzlich zum PV-Ertrag gebraucht wird
+  - lastgeregelte Einspeisung, aber mit Limitierung der abgegebenen Leistung
+    (wobei die Limitierung auf ein Uhrzeit-Intervall eingeschränkt werden kann)
+  - Speicherentladung kompensiert PV-Leistung maximal auf Mindestlast-Zielwert
+    (wobei die Einspeisung auf ein Uhrzeit-Intervall eingeschränkt werden kann)
+  - Umschaltung auf Konstanteinspeisung mit Mindestlast-Zielwert, wenn die
+    PV-Leistung unterhalb eines Schwellwerts (z.B. 100 W) liegt und zudem
+    der Abstand zwischen Zielwert und PV-Leistung über dem Schwellwert liegt -
+    bei Einspeisung geht aber die PV-Leistung verloren (wie beim Anker Solix),
+    und die Einspeisung kann auf ein Uhrzeit-Intervall eingeschränkt werden
   - Konstanteinspeisung: Entnahme einer definierten Leistung aus dem Speicher,
-    optional auf ein Uhrzeit-Intervall eingeschränkt
+    optional auf ein Uhrzeit-Intervall eingeschränkt (z.B. für Nachteinspeisung)
 
 Die Ausgabe aller Parameter und Ergebnisse erfolgt textuell im Terminal.
 Die Ergebnisse, wie z.B. die PV-Erträge und der Eigenverbrauch, sowie ggf. der
@@ -2211,7 +2217,7 @@ Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
  # -curb hat keine Auswirkung mit -dc und -pass 0
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1250 -dc -pass 0 -feed max 1000
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1000 -tmy -peff 92 -ieff 94 -curb 564 -capacity 1250 -dc -pass 0 -feed lim 1000
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -3004,7 +3010,7 @@ Eine Erhöhung der nutzbaren Speicherkapazität bringt praktisch nichts,
 und eine Verringerung auf 0,5 kWh liefert etwas weniger: 560 kWh.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1250 -dc -tmy -pass spill 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1250 -dc -tmy -pass spill 0 -feed lim 600
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
@@ -3022,7 +3028,7 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-/Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 2500 -dc -tmy -pass spill 0 -feed max 600
+/Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 2500 -dc -tmy -pass spill 0 -feed lim 600
 Lastprofil-Datei            : Lastprofil_4673_kWh.csv
 Grundlast                   =  184 W
 Maximallast                 =13795 W am 2010-02-26 um 06:55 h
@@ -3056,7 +3062,7 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 625 -dc -tmy -pass spill 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 625 -dc -tmy -pass spill 0 -feed lim 600
 
 Speicherkapazität           =  625 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
@@ -3088,7 +3094,7 @@ Pufferspeicher eine Überschussableitung oder gar eine optimale Laderegelung.
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed lim 600
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -3106,7 +3112,7 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1875 -dc -pass 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1875 -dc -pass 0 -feed lim 600
 
 Speicherkapazität           = 1875 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -3124,7 +3130,7 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 625 -dc -pass 0 -feed max 600
+./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 625 -dc -pass 0 -feed lim 600
 
 Speicherkapazität           =  625 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -4103,6 +4109,6 @@ LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
 LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW
 LocalWords: Sense is end index output md ref of pv px Eff vs OW Heat
 LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
-LocalWords: data transfer solar cut cells open short circuit voltage
+LocalWords: data transfer solar cut cells open short circuit voltage lim
 LocalWords:
 -->
