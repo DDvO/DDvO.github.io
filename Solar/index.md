@@ -2380,6 +2380,21 @@ Batterie zwischenspeichern und von dort zeitlich versetzt über einen
 [netzgekoppelten Wechselrichter](#Netzwechselrichter) ins Hausnetz einspeisen.
 Diese Betriebsart kann man allgemein als *Strompufferung* bezeichnen.
 
+Für die Auslastung eines Strompuffers gibt es eine Kennzahl, die von der
+Kapazität des Speichers abstrahiert, nämlich die Zahl der *Vollzyklen*
+in einem Zeitraum, typischerweise ein Jahr.
+Sie ist definiert als die Energie, die in dem Zeitraum insgesamt aus dem
+Speicher entnommen wird (nachdem sie natürlich vorher irgendwann eingespeichert
+wurde), geteilt durch seine nutzbare Kapazität (also z.B. 90% der Nennkapazität).
+Bei typischen Dach-PV-Anlagen mit üblicher Dimensionierung des Speichers liegt
+die Zahl der Jahres-Vollzyklen bei etwa 200.
+Aber je nach Größe der PV-Anlage und des Speichers sowie der zeitlichen
+Verteilung von Ertrag und Verbrauch kann die Zyklenzahl auch
+deutlich höher oder niedriger sein, z.B. 400 oder 100.
+Bei einem Wert von 183 wird die verfügbare Speicherkapazität im Jahresschnitt
+alle zwei Tage verwendet --- was aber nicht heißt, dass der Speicher im Schnitt
+jeden zweiten Tag erst mal voll aufgeladen und dann wieder ganz entladen wird.
+
 Die Strompufferung soll den Nutzen der PV-Anlage für den eigenen Stromverbrauch
 erhöhen. Aber **finanziell lohnt sie sich fast nie** --- außer wenn sie über
 eine optimierte (lastgesteuerte) Lade- und Entladeregelung verfügt und man den
@@ -2428,7 +2443,7 @@ Der PV-Bruttoertrag von 765 kWh bzw. Nettoertrag 660 kWh würde also fast maxima
 genutzt, ab 1 kWh nutzbarer Kapazität wäre die Netzeinspeisung 0 kWh,
 und der Rest
 wären kleine Verluste des Ladereglers und der Speicherbatterie von 12 + 9 kWh.
-Der 1 kWh Speicher wäre mit ca. 200 Vollzyklen pro Jahr nur mäßig belastet. Bei
+Der 1 kWh Speicher wäre mit ca. 195 Vollzyklen pro Jahr nur mäßig belastet. Bei
 40 Ct/kWh Strompreis ergäbe sich eine jährliche Stromkosten-Einsparung von 72€.
 
 <!-- TODO Simulationen mit 6000 kWh Verbrauch --->   
@@ -2753,7 +2768,7 @@ Weise nutzt, ergibt sich Folgendes: Selbst bei optimierter Entnahmeleistung
 Eigenverbrauch steigt durch Speichernutzung gerade mal um 29 kWh auf 489 kWh.
 Das liegt hier vor Allem an einer Netzeinspeisung von 74 kWh
 und am Verlust durch Überlauf von 29 kWh,
-außerdem an Lade- und Speicherverlusten von 38 + 30 kWh bei 631Vollzyklen.\
+außerdem an Lade- und Speicherverlusten von 38 + 30 kWh bei 631 Vollzyklen.\
 Eine Erhöhung der nutzbaren Kapazität auf 2 kWh
 brächte immerhin einen Eigenverbrauch von 532 kWh
 bei einer dann optimalen Konstanteinspeisung von 125 W.
@@ -3003,9 +3018,9 @@ Bei einer z.B. auf 600 W begrenzten Einspeisung beträgt für die o.g.
 die Steigerung des Eigenverbrauch durch die Speichernutzung 128 kWh auf 588 kWh.
 Hier findet nur noch eine minimale Netzeinspeisung von 3 kWh statt,
 welche aus ungenutzter Überschussableitung resultiert.
-Allerdings wird die Batterie ständig auf- und entladen (655 Vollzyklen im Jahr),
-was (neben größerer Degradation) zu erheblichen Lade- und Speicherverlusten
-von 39 + 31 kWh führt.\
+Allerdings wird die Batterie im Schnitt pro Tag fast zweimal auf- und entladen
+(655 Vollzyklen im Jahr), was neben größerer Degradation
+zu erheblichen Lade- und Speicherverlusten von 39 + 31 kWh führt.\
 Eine Erhöhung der nutzbaren Speicherkapazität bringt praktisch nichts,
 und eine Verringerung auf 0,5 kWh liefert etwas weniger: 560 kWh.
 
