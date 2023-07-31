@@ -2172,6 +2172,7 @@ Max. PV-Bruttoleistung      = 1009 W am TMY (2008..2020)-04-15 um 13:00 h
 PV-Bruttoertrag             = 1272 kWh, PV-System-Wirkungsgrad 92%
 Max. PV-Nettoleistung       =  564 W am TMY (2008..2020)-01-03 um 11:00 h
 PV-Netto-Ertragsverlust     =   77 kWh während 678 h durch WR-Ausgangsdrosselung auf 564 W
+TODO wrong: PV-Netto-Ertragsverlust     = 5.18 kWh während 641 h durch WR-Ausgangs-Drosselung auf 564 W   
 PV-Nettoertrag              = 1023 kWh bei Wechselrichter-Wirkungsgrad 94%
 -->
 <!--
@@ -2189,7 +2190,7 @@ Zwischenspeicherung         =  337 kWh (nach Ladeverlust)
 Vollzyklen pro Jahr         =  337 der effektiven Kapazität
 
 PV-Eigenverbrauch           =  903 kWh
-PV-Eigenverbrauchsverlust   =    3 kWh netto - nur näherungsweise, tatsächlich 3 kWh - während 0 h durch WR-Ausgangsdrosselung auf 564 W
+PV-Eigenverbrauchsverlust   = 5.18 kWh netto - nur näherungsweise, tatsächlich 3 kWh - während 38?? h durch WR-Ausgangsdrosselung auf 564 W   
 Netzeinspeisung             =  161 kWh
 PV-Eigenverbrauchsanteil    =   77 % des PV-DC-Ertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   30 % des Verbrauchs (Autarkiegrad)
@@ -4017,7 +4018,7 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
     HM-600](https://www.hoymiles.com/de/products/microinverter/single-phase/),
     ca. [200€](https://www.idealo.de/preisvergleich/OffersOfProduct/201802725_-hm-600-mikrowechselrichter-hoymiles.html)\
 <!--    oder 1000 W Micro Grid Tie Inverter Inverter SG1000MQ(https://www.ebay.de/itm/124731502486), ca. 200€\-->
-    oder 600 W WR mit 2 × 400 W Eingang und WLAN [Deye Sun600g3-EU-230](
+    oder 600 W WR mit 2 × 400 W Eingängen und WLAN [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/),
     ca. [190€](https://www.idealo.de/preisvergleich/OffersOfProduct/202156668_-sun600g3-eu-230-600w-deye-inverter.html)\
     _Achtung_, in älteren Versionen (etwa 1.471, bis ca. Ende 2022) der
@@ -4033,7 +4034,11 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
     selbst [über einen PC durchführen](
     https://zinnzgreen.de/service/deye-mikrowechselrichter-systemupdate/).
     <!-- https://www.photovoltaikforum.com/thread/191598-fw-update-offline-deye-sun600g3-eu230-und-baugleiche/ -->
-    Ohnehin empfiehlt sich, solchen Geräten nur Zugang zum Gastnetz zu geben.
+    Ohnehin empfiehlt sich, solchen Geräten nur Zugang zum Gastnetz zu geben.\
+    **Update vom Juli 2023:** Aufgrund unvollständigen [NA-Schutzes](
+    https://www.energie-experten.org/erneuerbare-energien/photovoltaik/betrieb/na-schutz)
+    ist für dieses weit verbreitete Modell die [Betriebserlaubnis vorläufig erloschen](
+    https://www.heise.de/news/Balkonkraftwerke-Fehlendes-Relais-bei-Deye-hat-weitere-Folgen-9218441.html).
 
 ### Kombi-Anlage {#Kombianlage}
 
@@ -4057,7 +4062,7 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
     Spitzenleistung, was gerade bei günstigen Modellen nicht
     selbstverständlich ist._
 
--   2 × 300 W MPPT Mikrowechselrichter [Deye Sun600g3-EU-230](
+-   600 W (2 × 400 W Eingänge) MPPT Mikrowechselrichter [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/) für ca. 170€\
     und zusätzlich (z.B. für Einspeisung aus meiner Batterie):\
     700 W Netzwechselrichter mit angeblich 2 × MPPT und WLAN SG-700W bzw.
