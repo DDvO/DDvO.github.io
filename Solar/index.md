@@ -3679,8 +3679,13 @@ Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*,
 *netzgeführter Wechselrichter* oder *fremd geführter Wechselrichter* genannt,
 weil er sich automatisch an die Frequenz und Phase des anliegenden Wechselstroms
 anpasst. Bei wegfallendem Stromanschluss schaltet er den Ausgang vor Allem aus
-Sicherheitsgründen ab --- das ist der sog. *NA-Schutz* (nach VDE) für den Fall,
-dass blanke Kontakte eines daran hängenden 230 V Steckers berührt werden können.
+Sicherheitsgründen ab --- das ist der sog. *Netz- und Anlagenschutz*
+(*[NA-Schutz](
+https://www.energie-experten.org/erneuerbare-energien/photovoltaik/betrieb/na-schutz*)
+nach VDE-Anwendungsregel. Dabei geht es in erster Linie darum, dass bei
+Stromausfall oder Reparaturarbeiten nicht unkontrolliert Strom ins Netz fließt,
+also weniger darum, dass blanke Kontakte
+eines am Wechselrichtre hängenden 230 V Steckers berührt werden könnten.
 
 Bei Stecker-Solaranlagen wird meist ein *Solar-Mikrowechselrichter* verwendet,
 welcher einen MPPT-Solarregler in einem Netzwechselrichter integriert.
