@@ -23,7 +23,10 @@ keywords:
 - bifazial
 - Schindel
 - Solaranlage
-- Steckersolaranlage
+- Steckersolaranlagen
+- Steckersolargeräte
+- Stecker-Solar-Geräte
+- SSG
 - Balkonkraftwerk
 - Konstanteinspeisung
 - Nachteinspeisung
@@ -83,14 +86,14 @@ abstract: |
      https://pandoc.org/MANUAL.html#extension-yaml_metadata_block-->
 
 Wichtige Hintergrund-Infos zur Photovoltaik und viele praktische Tipps für
-Balkonkraftwerke und andere kleine Solar-Anlagen -- einschließlich Hinweisen,
+Balkonkraftwerke und andere kleine Stecker-Solaranlagen -- einschließlich Hinweisen,
 welche Komponenten und Verwendungsformen sich unter welchen Umständen lohnen:
 exakte Simulationsergebnisse für Rentabilität, optimale Modul-Ausrichtung und
 die Verwendung von Wechselrichtern und Speicherbatterien inklusive Regelung.
 
 # Zusammenfassung {#Zusammenfassung}
 
-Mit einem sog. *Balkonkraftwerk* kann man sehr einfach und relativ günstig
+Mit einem sog. *Steckersolargerät* kann man sehr einfach und relativ günstig
 Solarstrom gewinnen und über eine Steckdose direkt ins Hausnetz einspeisen.
 Das spart Stromkosten und kann sich je nach verwendeten Komponenten
 und deren Aufstellung schon nach wenigen Jahren Betrieb rechnen ---
@@ -144,7 +147,7 @@ dessen Ergebnisse an mehreren Stellen maßgeblich eingeflossen sind.
 Als Privatperson und auch als naturwissenschaftlich-technisch versierter
 Nichtprofi kann ich natürlich keine offiziellen Informationen bzw. absolut
 verlässliche Hinweise geben und für die Inhalte keine Gewähr oder gar Haftung
-übernehmen. Wer bezüglich steckerfertigen PV-Anlagen etwas Offizielleres sucht,
+übernehmen. Wer bezüglich Stecker-PV-Anlagen etwas Offizielleres sucht,
 der sei z.B. auf den schönen [Leitfaden von SmartGridsBW](
 https://smartgrids-bw.net/public/uploads/2020/04/IBZ-Leitfaden_Balkon-PV-Online.pdf)
 und die [„Fachinformation“ des DKE](https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
@@ -194,7 +197,7 @@ Lizenzkürzel:
     -   [Ökonomisch orientierte PV-Rechner](#PV-Rechner)
     -   [SolBatSim: Hochauflösende flexible Simulation](#SolBatSim)
 -   [Nutzungsvarianten](#Nutzung)
-    -   [Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“)](#Balkonkraftwerk)
+    -   [Direkte Netzeinspeisung (Steckersolargerät (SSG), „Balkonkraftwerk“)](#SSG)
         - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Bagatellgrenze)
         - [Kappungsverlust durch Drosselung auf 600 W](#Kappungsverlust)
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
@@ -225,7 +228,7 @@ Lizenzkürzel:
         - [Spannungswächter](#Spannungswächter)
 -   [Beispiel-Konfigurationen](#Konfigurationen)
     -   [Mobile Inselanlage](#Mobilanlage)
-    -   [Stecker-Solaranlage](#Steckeranlage)
+    -   [Steckersolargerät](#Steckeranlage)
     -   [Kombi-Anlage](#Kombianlage)
 
 Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}
@@ -425,7 +428,7 @@ Dieser **unterliegt der Annahme, dass man den zur jeweiligen Tageszeit
 sei es durch direkten Eigenverbrauch,
 Zwischenspeicherung (was allerdings auch Verluste mit sich bringt)
 oder vergütete Einspeisung (die aber leider selten attraktiv ist).\
-Wenn man --- wie mit den meisten Stecker-Solaranlagen --- den erzeugten Strom
+Wenn man --- wie mit den meisten Steckersolargeräten --- den erzeugten Strom
 nur direkt im Haushalt verbrauchen kann und der Rest ins externe Netz geht,
 sollte man das Nutzungsprofil berücksichtigen, welches auch auch
 [*Lastprofil*](https://www.energie-lexikon.info/lastprofil.html) genannt wird.
@@ -638,8 +641,8 @@ tagsüber im Vergleich zu den Morgen- und Abendstunden eher wenig Verbrauch hat.
 
 Die genannten Auswirkungen auf den Eigenverbrauch sind
 das Ergebnis einer Reihe [genauer Simulationen](#SolBatSim)
-für einen Haushalt in Süddeutschland mit 3000 kWh Jahresverbrauch mit einer
-Stecker-PV-Anlage mit 2 × 300 Wp PV-Modulen und Gesamtsystem-Wirkungsgrad 86%.\
+für einen Haushalt in Süddeutschland mit 3000 kWh Jahresverbrauch mit einem
+Steckersolargerät mit 2 × 300 Wp PV-Modulen und Gesamtsystem-Wirkungsgrad 86%.\
 Für die Ausrichtungen -/+ 90° (also Ost/West), +/- 60°, +/- 30° und 0° (Süd)
 zeigt die folgende Tabelle den PV-Nettoertrag und den Eigenverbrauch (EV)
 in den angegebenen Situationen, wobei für jede Ausrichtung der jeweils
@@ -1235,8 +1238,8 @@ mit Strom-Messgeräten in Steckdosenform bestimmen. Diese messen nicht nur
 die momentan von angeschlossenen Verbrauchern beanspruchte Leistung in Watt,
 sondern bei längerer Verwendung auch die über die Zeit verbrauchte Strommenge
 in kWh.\
-Man kann ein solches Gerät auch dafür nutzen, die Einspeisung seiner
-Stecker-Solar-Anlage ins Hausnetz zu messen (wobei möglicherweise die
+Man kann ein solches Gerät auch dafür nutzen, die Einspeisung seines
+Steckersolargeräts ins Hausnetz zu messen (wobei möglicherweise die
 Zahlen etwas zu gering dargestellt werden, weil anscheinend einige solcher
 Messgeräte die im Einspeise-Fall etwas erhöhte Spannung nicht berücksichtigen).\
 Ein Test smarter Steckdosen mit Verbrauchsmessung findet sich z.B. [hier](
@@ -1287,13 +1290,13 @@ die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
 (jedenfalls solange sie positiv ist) und entsprechend langsamer läuft.
 Es wird also nur der aus dem Netz bezogene Anteil des Verbrauchs berechnet.
 
-Übrigens ist es egal, auf welcher Drehstrom-Phase (L1, L2 oder L3) die
-Stecker-Solaranlage angeschlossen wird und auf welcher Phase die möglicherweise
+Übrigens ist es egal, auf welcher Drehstrom-Phase (L1, L2 oder L3) ein
+Steckersolargerät angeschlossen wird und auf welcher Phase die möglicherweise
 gleichzeitig verwendeten Verbraucher angeschlossen sind, weil (fast)
 alle Stromzähler *phasensaldierend* arbeiten, d.h. sie bilden die Gesamtsumme
 über alle drei Leitungen aus dem Verbrauch und der Erzeugung, welche dabei
 umgekehrtes Vorzeichen hat. Das hat erst mal noch nichts damit zu tun,
-wie der Zähler mit dem Fall umgeht, dass die PV-Anlage mehr produziert als
+wie der Zähler mit dem Fall umgeht, dass mehr Solarstrom produziert als
 in dem Moment im Haushalt verbraucht wird, dass also der Saldo negativ ist.
 
 ![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.left width="400"}
@@ -1374,7 +1377,7 @@ Wer privat eine PV-Anlage betreibt, möchte möglichst viel von ihrem Ertrag
 auch selbst verbrauchen, und zwar am besten direkt. Überschüssigen Strom in
 einer Batterie für spätere Nutzung zwischenzuspeichern ist aufwendig und teuer.
 Der nicht selbst genutzte Anteil wird meist ins externe Netz eingespeist.
-Bei Balkonkraftwerken geschieht dies ohne Vergütung, aber auch wenn man seinen
+Bei Steckersolargeräten geschieht dies ohne Vergütung, aber auch wenn man seinen
 Strom als Kleinunternehmer verscherbelt, hat man einige Bürokratie und bekommt
 ziemlich wenig heraus.
 
@@ -1583,7 +1586,7 @@ noch weitere Effekte ein, die sich aber kaum quantifizieren lassen.
 Achtung: Die in diesem Abschnitt genannten Simulatoren
 setzen bei Einsatz eines Pufferspeichers eine ideale Speicherstrategie voraus.
 Ihre Ergebnisse **gelten nicht bei Verwendung einer primitiven Regelung**, wie
-sie für [Balkonkraftwerke mit Speicherbatterie](#Batteriepuffer) typisch sind.
+sie für [Steckersolargeräte mit Speicherbatterie](#Batteriepuffer) typisch sind.
 Für diese kann aber der [u.g. 'SolBatSim'](#SolBatSim) verwendet werden.
 
 #### Stecker-Solar-Simulator und Unabhängigkeitsrechner {#HTW}
@@ -1622,8 +1625,8 @@ Von der sehr soliden kommerziellen
 gibt es auch eine kostenlose
 [Online-Variante](https://pvsol-online.valentin-software.com/).
 Auch diese ist eigentlich für große Haus-PV-Anlagen gedacht, aber wenn man beim
-Wechselrichter 'TSUN' auswählt, lässt sie sich für Balkonanlagen verwenden,
-geht aber von einem für Stecker-Solar-Anlagen zu hohen System-Wirkungsgrad
+Wechselrichter 'TSUN' auswählt, lässt sie sich für Balkonanlagen u.ä. verwenden,
+geht aber von einem für Steckersolargeräte zu hohen System-Wirkungsgrad
 (über 92%) aus.
 
 [![Bild: PV-SOL-online Ergebnis](PV-SOL-online_3000kWh_600Wp_S_35.png)](
@@ -1734,7 +1737,7 @@ und Kapitalkosten unter Berücksichtigung von Abschreibung für Reparaturen u.ä
 Er ist für „große“ PV-Anlagen auf Hausdächern konzipiert, und behandelt optional
 gesondert das Laden eines E-Fahrzeugs<!-- (was normalerweise öfter zu
 Sonnenscheinzeiten erfolgen kann)-->, den Betrieb einer Wärmepumpe und
-die Nutzung eines Stromspeichers, funktioniert aber auch für Balkonsolaranlagen.
+die Nutzung eines Stromspeichers, funktioniert aber auch für Steckersolargeräte.
 Als Eingabe erwartet er u.A. den spezifischen PV-Jahresertrag, die Ausrichtung
 der Module und den geschätzten Anteil des während der Sonnenscheindauer
 im Haushalt nutzbaren Ertrages.
@@ -1895,16 +1898,17 @@ Man kann gerade nicht benötigten PV-Strom auch in einer Batterie
 zwischenspeichern, was ein Abschnitt [weiter unten](#Batteriepuffer) behandelt,
 der auch erklärt, dass sich das in den seltensten Fällen lohnt.
 
-### Direkte Netzeinspeisung (Stecker-Solaranlage, „Balkonkraftwerk“) {#Balkonkraftwerk}
+### Direkte Netzeinspeisung (Steckersolargerät (SSG), „Balkonkraftwerk“) {#SSG}
 
 ![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.left width="400"}
 ![Bild: Aufbau Balkonkraftwerk](Balkonkraftwerk.jpg){:.right width="378"}
 
 {:style="clear:both"}
 
-Typischerweise speisen Solaranlagen den erzeugten Strom
+Typischerweise speisen PV-Anlagen, Balkonkraftwerke u.ä. den erzeugten Strom
 nach Umwandlung durch einen netzgekoppelten Wechselrichter
-([Solarwechselrichter](https://de.wikipedia.org/wiki/Solarwechselrichter),
+([Netzwechselrichter](#Netzwechselrichter),
+[Solarwechselrichter](https://de.wikipedia.org/wiki/Solarwechselrichter),
 engl. _grid-tie inverter_) direkt ins Hausnetz oder öffentliche Stromnetz ein,
 wo er sofort in irgendeiner Form verbraucht wird (bzw. der Rest verlorengeht).
 
@@ -1912,8 +1916,8 @@ Wichtig zu beachten ist, dass diese Nutzungsart abseits eines bestehenden
 Wechselstrom-Netzes und während eines Stromausfalls nicht funktioniert,
 weil sich der verwendete Wechselrichter mit dem Stromnetz synchronisieren muss.
 
-Wie schon der Name *Stecker-Solaranlage* ausdrückt, werden solche kleinen
-Anlagen meist einfach über einen (Schuko-)Stecker mit dem Hausnetz verbunden,
+Wie schon der Name *Steckersolargerät* ausdrückt, werden solche kleinen
+PV-Anlagen meist einfach über einen (Schuko-)Stecker mit dem Hausnetz verbunden,
 z.B. an einer Außensteckdose auf dem Balkon oder der Terrasse. Das ist sehr
 flexibel und ermöglicht, sehr einfach ein Energiemessgerät dazwischenzustecken,
 wie es unten zur [Verbrauchsmessung](#Verbrauchsmessung) dargestellt ist.
@@ -1937,7 +1941,7 @@ ein ausführlicher Vergleich.
 Eine weitere Möglichkeit ist, den Wechselrichter direkt fest mit dem Hausnetz
 zu verdrahten, was den Betrieb sogar noch sicherer macht.
 
-Die auch [*Balkonkraftwerk*](https://www.steckdosensolar.de/) genannten Anlagen
+Die oft [*Balkonkraftwerk*](https://www.steckdosensolar.de/) genannten Anlagen
 haben meist eine recht geringe PV-Nennleistung von etwa 600 bis 800 Wp.
 Das hat neben der geringen Größe und sehr überschaubaren Kosten auch damit zu
 tun, dass sie selbst installiert werden dürfen und genehmigungsfrei sind,
@@ -1957,14 +1961,14 @@ https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-202
 will „die Grenze auf 800 VA Wechselstromleistung zu erhöhen“.
 
 In Deutschland sind PV-Anlagen anmeldepflichtig, wenn sie ins externe Netz
-einspeisen können, wobei der Aufwand für Balkonkraftwerke nicht groß ist.
+einspeisen können, wobei der Aufwand für Steckersolargeräte nicht groß ist.
 Ab vsl. Anfang 2024 müssen Steckersolargeräte auch nicht mehr beim Netzbetreiber
 angemeldet werden, aber weiterhin bei der Bundesnetzagentur im
 [Marktstammdatenregister (MaStR)](https://www.marktstammdatenregister.de/MaStR).
 
 Nach einem [Artikel im pv magazine von 2022](
 https://www.pv-magazine.de/2022/02/24/markt-groesser-als-gedacht-rund-190-000-stecker-solar-geraete-bereits-installiert/)
-wurde geschätzt, dass nur 10 bis 20% der Stecker-Solaranlagen tatsächlich beim
+wurde geschätzt, dass nur 10 bis 20% der Steckersolargeräte tatsächlich beim
 Netzbetreiber angemeldet wurden. Eine dort genannte Umfrage hat auch ergeben,
 dass etwa 77% der Anlagen mit einem Schuko-Stecker angeschlossen wurden.
 Bei etwa 1/3 der Anlagen befinden sich die PV-Module auf oder an einem Balkon;
@@ -2006,7 +2010,7 @@ dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
 
 Die sog. [*Bagatellgrenze* bei 600 bzw. 800 Watt](
 https://www.computerbild.de/artikel/cb-Tipps-Energie-Balkonkraftwerk-800-Watt-erlaubt-35272303.html)
-dient in erster Linie der erleichterten Anmeldung kleiner Stecker-Solaranlagen.
+dient in erster Linie der erleichterten Anmeldung kleiner Steckersolargeräte.
 Die Beschränkung leistet in gewisser Hinsicht aber auch einen Beitrag zum Schutz
 der Stromleitungen im Haus in folgendem sehr selten auftretenden Fall:
 
@@ -2036,7 +2040,7 @@ mal kurz weniger Leistung als L&nbsp;-&nbsp;3680 W liefert,
 löst die Sicherung wie üblich aus und die Überlast ist beendet.
 
 Von der ESTI (Schweiz) wird aus diesem Grund
-die Leitungsüberlastung durch Stecker-Solaranlagen
+die Leitungsüberlastung durch Steckersolargeräte
 [nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
 In Irland macht man sich da auch keine Sorgen und [erlaubt sogar 6 kW für
 einphasige bzw. 11 kW für dreiphasige Einspeisung](
@@ -2069,7 +2073,7 @@ Diese Erkenntnis ist schon recht alt und wurde wohl erst [für größere Anlagen
 https://www.photovoltaikforum.com/thread/79306-wechselrichter-unterdimensionierung-welche-ertragseinbu%C3%9Fen/)
 diskutiert, aber wird auch immer wieder [für kleine Anlagen neu entdeckt](
 https://mini-pv-anlage-600-w-oder-800-w.jimdosite.com/).\
-Nochmal geringer ist der Unterschied beim Eigenverbrauch für eine Balkonanlage,
+Nochmal geringer ist der Unterschied beim Eigenverbrauch für ein Steckersolargerät,
 wie die u.g. Ergebnisse [genauer Simulationen](#SolBatSim) zeigen.
 
 Man hat durch eine gewisse [Überdimensionierung der PV-Module](
@@ -2630,7 +2634,7 @@ Das alles ist regelungstechnisch ziemlich aufwendig und benötigt jedenfalls
 einen Sensor zur Erfassung des momentanen Haushalts-Stromverbrauchs.
 Es lohnt sich, wenn überhaupt, nur für größere PV-Anlagen.
 
-Für Stecker-Solaranlagen wäre es viel einfacher, aber leider wenig zielführend,
+Für Steckersolargeräte wäre es viel einfacher, aber leider wenig zielführend,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
 so abzustimmen, dass lediglich ein Großteil der Grundlast des Haushalts,
 z.B. 50 bis 100 W, für eine Dauer von etwa 1-2 Tagen abgedeckt wird.
@@ -3011,7 +3015,7 @@ Ohne eigene Programmierung und mit wenig Gebastel kommt man mit dem
 [ready2plugin-Stromwächter](
 https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
 von indielux aus. Der wird auch *Einspeisewächter* genannt, weil er für
-Stecker-Solaranlagen mit oder ohne Speicher eine Nulleinspeisung realisiert.
+Steckersolargeräte mit oder ohne Speicher eine Nulleinspeisung realisiert.
 Der setzt einen per Modbus RS485 steuerbaren Wechselrichter voraus
 und eine per WLAN angebundene Messung des aktuellen Stromverbrauchs.
 [![Bild: ready2plugin-Stromwächter von indielux](
@@ -3344,7 +3348,7 @@ geeignete Erdung gesorgt werden müsste, was nur ein Elektriker machen sollte.
 Ähnlich wie die o.g. [Batteriepufferung](#Batteriepuffer) ist diese Nutzungsart
 flexibler, aber wegen der nötigen zusätzlichen Komponenten (v.A. der Batterie)
 auch deutlich teurer und auch etwas anfälliger und wartungsintensiver
-als die [direkte Netzeinspeisung](#Balkonkraftwerk).
+als die [direkte Netzeinspeisung](#SSG).
 Wirtschaftlich rentabel für die Nutzung zu Hause kann das bei den
 derzeitigen Preisen nur sein, wenn man eine geeignete Batterie schon aus
 anderen Gründen (z.B. für den mobilen Einsatz in einem Fahrzeug) hat und
@@ -3619,7 +3623,7 @@ z.B. bei Sturm nicht lösen und etwa auf darunter befindliche Flächen fallen
 können, wo sich Menschen bewegen oder aufhalten können
 ([Verkehrssicherungspflicht](https://de.wikipedia.org/wiki/Verkehrssicherungspflicht)).
 Es wird eine Privathaftpflichtversicherung benötigt, die PV-Anlagen einschließt.
-Schäden an der Stecker-PV-Anlage selbst, z.B. durch Wettereinflüsse wie Hagel
+Schäden am Steckersolargerät selbst, z.B. durch Wettereinflüsse wie Hagel
 und Blitzeinschlag, werden [durch eine Hausratversicherung abgedeckt](
 https://www.allianz.de/recht-und-eigentum/hausratversicherung/balkonkraftwerk/),
 auch wenn sie am Balkon befestigt ist.
@@ -3751,7 +3755,7 @@ Stromausfall oder Reparaturarbeiten nicht unkontrolliert Strom ins Netz fließt,
 also weniger darum, dass blanke Kontakte
 eines am Wechselrichtre hängenden 230 V Steckers berührt werden könnten.
 
-Bei Stecker-Solaranlagen wird meist ein *Solar-Mikrowechselrichter* verwendet,
+Bei Steckersolargeräten wird meist ein *Solar-Mikrowechselrichter* verwendet,
 welcher einen MPPT-Solarregler in einem Netzwechselrichter integriert.
 Im Zusammenhang von Solaranlagen wird meist vereinfacht nur von einem
 „*Wechselrichter*“ (*WR*) gesprochen.
@@ -3839,7 +3843,7 @@ mit lastabhängiger Strompufferung ermöglichen, etwa den
 https://gbc-solino.cz/headpage-de/hybrid-wechselrichter-de/infini-solar-de/).
 Dieser kostet allerdings (zusammen mit einem für die lastabhängige Steuerung
 nötigen Energiemessgerät) an die 1000€ und funktioniert nur mit PV-Spannungen
-ab 250 V und einer Batteriespannung von 48 V, ist also für Stecker-Solaranlagen
+ab 250 V und einer Batteriespannung von 48 V, ist also für Steckersolargeräte
 nicht geeignet. Details zu seiner Verwendung sind [hier](
 https://mona-stefan.de/index.php?option=com_content&view=article&id=820)
 schön beschrieben.
@@ -4067,7 +4071,7 @@ Komponenten zu meiner vollen Zufriedenheit:
     Wechselrichter](https://de.aliexpress.com/wholesale?SearchText=pure+sine+wave+inverter+2000w),
     ebenfalls direkt aus China, ca. 70€
 
-### Stecker-Solaranlage {#Steckeranlage}
+### Steckersolargerät {#Steckeranlage}
 
 Für eine sehr einfache, aber effiziente Anlage zur Netzeinspeisung
 finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
@@ -4114,7 +4118,7 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
 ![Bild: Balkonsolaranlage mit senkrechten flexiblen Modulen
 ](Balkonsolaranlage_senkrecht_flexibel.jpg)
 
-Als Balkonanlage mit wahlweise direkter oder gepufferter Netzeinspeisung,
+Als Steckersolargerät mit wahlweise direkter oder gepufferter Netzeinspeisung,
 aber auch für eine Notstromversorgung daheim und für einen längeren autarken
 Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 
