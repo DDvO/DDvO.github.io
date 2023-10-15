@@ -3588,16 +3588,72 @@ Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
 
 ![Bild: Gartenhaus mit Solarpanels](Gartenhaus-Panels.jpg){:.right width="798"}
 
-Bei Anbringung an der Fassade einer Wohnanlage ist wegen des Erscheinungsbilds
-meist eine vorherige Genehmigung durch die Eigentümergemeinschaft erforderlich.
+Bei Anbringung von PV-Modulen am Gemeinschaftseigentum einer Wohnanlage,
+also z.B. an der Hausfassade oder an einer Balkonbrüstung, ist <!-- u.A. wegen
+des optischen Erscheinungsbilds --> meist eine vorherige Genehmigung durch
+die Wohnungseigentümergemeinschaft (WEG) erforderlich.
+Musteranträge dafür gibt es u.A. [hier](https://solar2030.de/balkonkraftwerk/).
+<!--
 Erfreulicherweise sieht die [PV-Strategie 2023 des dt. BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
 „einen Anspruch auf Zustimmung für den Betrieb eines Steckersolargerätes“ vor.
+-->
+Voraussichtlich Anfang 2024 werden Steckersolargeräte in den [Katalog
+privilegierter Maßnahmen im Wohnungseigentumsgesetz und im BGB aufgenommen](
+https://www.bmj.de/SharedDocs/Pressemitteilungen/DE/2023/0913_WEG.html).
+Vermieter und WEGs können dann Balkonkraftwerke u.ä. nicht mehr ablehnen,
+haben aber weiterhin ein Mitspracherecht, Rahmenbedingungen dafür festzulegen.
+[Hier ein guter Artikel](https://www.homeandsmart.de/balkonkraftwerk-mieter)
+auch mit weiteren Informationen zu rechtlichen Aspekten.
 
-Wichtig ist, dass die Module sicher angebracht werden, besonders bzgl. Sturm.
-Bei über 4 m Montagehöhe gelten besondere Verordnungen für Glasoberflächen,
-wenn sich direkt darunter den Menschen bewegen oder aufhalten können.\
-Bei spiegelnden Oberflächen kann es auch Probleme mit Blendeffekten geben.
+Wichtig ist, dass die Module sicher angebracht werden, so dass sie sich auch
+z.B. bei Sturm nicht lösen und etwa auf darunter befindliche Flächen fallen
+können, wo sich Menschen bewegen oder aufhalten können
+([Verkehrssicherungspflicht](https://de.wikipedia.org/wiki/Verkehrssicherungspflicht)).
+Es wird eine Privathaftpflichtversicherung benötigt, die PV-Anlagen einschließt.
+Schäden an der Stecker-PV-Anlage selbst, z.B. durch Wettereinflüsse wie Hagel
+und Blitzeinschlag, werden [durch eine Hausratversicherung abgedeckt](
+https://www.allianz.de/recht-und-eigentum/hausratversicherung/balkonkraftwerk/),
+auch wenn sie am Balkon befestigt ist.
+
+<!--
+https://www.dibt.de/de/aktuelles/meldungen/nachricht-detail/meldung/aktualisiert-welche-bauaufsichtlichen-bestimmungen-gelten-fuer-photovoltaik-module-pv-module
+
+Das Deutsches Institut für Bautechnik (DIBt) hat seine Information
+zu Stecker-PV-Anlagen im Oktober 2023 überarbeitet und ergänzt:
+
+Sonderfall Stecker-PV-Anlagen („Balkonkraftwerke")
+
+Stecker-PV-Anlagen – sogenannte „Balkonkraftwerke“ – bestehen aus PV-Modulen,
+Wechselrichter, Kabel mit Stecker
+und werden über eine Steckdose an den Verbraucherstromkreis angeschlossen.
+Anders als bei PV-Anlagen, die mit dem Stromkreis fest verbunden werden
+und bei denen die Verbindung zwischen baulicher Anlage und Stromquelle
+nicht ohne weiteres aufzulösen ist, kann bei „Balkonkraftwerken“
+die Verbindung zur baulichen Anlage im Hinblick auf die Energieeinspeisung
+durch das einfache Ziehen des Steckers wieder gelöst und das „Balkonkraftwerk"
+beliebig durch den Nutzer (z.B. bei Auszug eines Mieters)
+vom Balkon einfach und ohne großen Aufwand abmontiert werden.
+Da in diesem Fall die PV-Module nicht dauerhaft in die bauliche Anlage eingebaut
+werden, sind sie keine Bauprodukte i.S.d. § 2 Abs. 10 Nr. 1 MBO.
+
+Verwendbarkeitsnachweise scheiden demgemäß
+für PV-Module von „Balkonkraftwerken" aus.
+Bauteile der baulichen Anlage, an denen die Montage der PV-Module von
+„Balkonkraftwerken“ erfolgen soll, müssen dafür geeignet sein (Aufnahme von
+Windlasten u.a.). Haben die PV-Module jedoch selbst eine Funktion für die
+bauliche Anlage, z.B. die Funktion der Absturzsicherung, sind sie
+Teil der baulichen Anlage und damit Bauprodukt i.S.d. § 2 Abs. 10 Nr. 1 MBO.
+-->
+Wie das Deutsche Institut für Bautechnik (DIBt) im September 2023
+klargestellt hat, [gelten Steckersolargeräte nicht als Bauprodukt](
+https://www.golem.de/news/4-meter-regel-technische-bauvorschriften-gelten-nicht-fuer-balkonkraftwerke-2309-177565.html), weil sie nicht dauerhaft verbaut
+werden, so dass technische Bauvorschriften (wie etwa besondere Verordnungen
+für Glasoberflächen bei über 4&nbsp;m Montagehöhe) nicht anwendbar sind.
+Somit ist auch für PV-Module mit ggf. mehr als 2&nbsp;m² Fläche
+[kein Verwendbarkeitsnachweis gefordert](
+https://www.computerbild.de/artikel/cb-News-Energie-Balkonkraftwerk-montieren-Bauvorschrift-4-Meter-36665659.html).\
+Bei spiegelnden Oberflächen kann es allerdings Probleme mit Blendeffekten geben.
 
 ### Mikrowechselrichter und andere Stromrichter {#Stromrichter}
 
