@@ -323,9 +323,9 @@ auf die Fläche reflektierten Strahlung liegt dann bei knapp 2%.
 ### Nennleistung und Jahresertrag {#Nennleistung}
 
 {:style="clear:both"}
-Die **Nennleistung** von Solarmodulen wird in **Wp** ([*Watt Peak*](
-https://de.wikipedia.org/wiki/Watt_Peak)) angegeben. Zu ihrer
-Bestimmung verwendet man eine Referenzbestrahlung mit einem normierten
+Die **Nennleistung** (engl. _nominal power_, _power rating_) von Solarmodulen
+wird in **Wp** ([*Watt Peak*](https://de.wikipedia.org/wiki/Watt_Peak)) angegeben.
+Zu ihrer Bestimmung verwendet man eine Referenzbestrahlung mit einem normierten
 Sonnenlichtspektrum einer Stärke von 1000 W/m² bei Zelltemperatur 25°C.
 Diese _standard test conditions (STC)_ sind [ziemlich praxisfern](
 https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/#:~:text=STC%3A%20Idealbedingungen).
@@ -2673,7 +2673,7 @@ Kurz zusammengefasst:
 Ein Batteriespeicher ist nur sinnvoll, wenn die PV-Leistung mind. 0,5 kWp
 je 1000 kWh Jahresstromverbrauch beträgt. Als Kapazität empfiehlt sie
 maximal 1,5 kWh je 1000 kWh Jahresverbrauch und
-maximal 1,5 kWh je kWp PV-Nominalleistung.
+maximal 1,5 kWh je kWp PV-Nennleistung.
 
 Bei der Batterie-Dimensionierung sind noch folgende Punkte zu berücksichtigen:
 * Die Speicherung des Stroms bringt je nach Art der [Batterie](#Speicher)
