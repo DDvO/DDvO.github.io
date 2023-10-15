@@ -2056,10 +2056,12 @@ die Gefahr, dass das Verhältnis von Aufwand zu Nutzen viel zu ungünstig wird.
 
 #### Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}
 
-Die nominelle Leistung der verwendeten Solarmodule kann und sollte in Summe
-durchaus größer sein aus 600 Wp, also eher 800 bis 1000 Wp. Denn in der Praxis
-wird auch mit solchen Modulen eine Ausgangsleistung von 600 W und mehr
-ohnehin kaum erreicht, und das auch nicht oft, gerade in sonnenarmen Zeiten.
+Die Nennleistung der verwendeten Solarmodule kann und sollte in Summe durchaus
+größer sein als die maximale Ausgangsleistung des Wechselrichters &mdash;
+also bei einem 600 W Wechselrichter statt 600 Wp eher 800 bis 1000 Wp.
+Denn in der Praxis wird auch mit solchen Modul-Nennleistungen
+eine Wechselrichter-Ausgangsleistung von 600 W ohnehin kaum erreicht,
+und wenn, dann auch nicht oft, besonders nicht in sonnenarmen Zeiten.
 **Der Unterschied beim nutzbaren Jahres-Gesamtertrag ohne/mit Drosselung des
 Wechselrichters auf 600 W ist sehr gering: etwa 10 kWh**, also knapp 3€ im Jahr.
 
@@ -2070,8 +2072,10 @@ https://mini-pv-anlage-600-w-oder-800-w.jimdosite.com/).\
 Nochmal geringer ist der Unterschied beim Eigenverbrauch für eine Balkonanlage,
 wie die u.g. Ergebnisse [genauer Simulationen](#SolBatSim) zeigen.
 
-Man hat durch eine gewisse Überdimensionierung der PV-Module
-(auch *Überbelegung* oder *Unterdimensionierung* des Wechselrichters genannt)
+Man hat durch eine gewisse [Überdimensionierung der PV-Module](
+https://energiewende-tipps.de/ueberbelegung-eines-balkonkraftwerkes/)
+(auch *Überbelegung* oder *Unterdimensionierung* des Wechselrichters genannt,
+engl. _overpaneling_)
 auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
 (eigentlich sogar überproportional mehr, weil die Anlaufspannung der Regelung
 schneller erreicht wird), allerdings auf eher niedrigem absoluten Niveau.
