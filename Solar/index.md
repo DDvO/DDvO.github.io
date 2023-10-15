@@ -1957,12 +1957,16 @@ https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-202
 will „die Grenze auf 800 VA Wechselstromleistung zu erhöhen“.
 
 In Deutschland sind PV-Anlagen anmeldepflichtig, wenn sie ins externe Netz
-einspeisen können, wobei der Aufwand für Balkonkraftwerke nicht so groß ist.
-Nach einem [Artikel im pv magazine](
+einspeisen können, wobei der Aufwand für Balkonkraftwerke nicht groß ist.
+Ab vsl. Anfang 2024 müssen Steckersolargeräte auch nicht mehr beim Netzbetreiber
+angemeldet werden, aber weiterhin bei der Bundesnetzagentur im
+[Marktstammdatenregister (MaStR)](https://www.marktstammdatenregister.de/MaStR).
+
+Nach einem [Artikel im pv magazine von 2022](
 https://www.pv-magazine.de/2022/02/24/markt-groesser-als-gedacht-rund-190-000-stecker-solar-geraete-bereits-installiert/)
-wird geschätzt, dass nur 10 bis 20% der Stecker-Solaranlagen tatsächlich beim
-Netzbetreiber angemeldet werden. Eine dort genannte Umfrage hat auch ergeben,
-dass etwa 77% der Anlagen mit einem Schuko-Stecker angeschlossen werden.
+wurde geschätzt, dass nur 10 bis 20% der Stecker-Solaranlagen tatsächlich beim
+Netzbetreiber angemeldet wurden. Eine dort genannte Umfrage hat auch ergeben,
+dass etwa 77% der Anlagen mit einem Schuko-Stecker angeschlossen wurden.
 Bei etwa 1/3 der Anlagen befinden sich die PV-Module auf oder an einem Balkon;
 bei etwa der Hälfte werden die Module z.B. auf einem Flachdach oder im Garten
 aufgeständert.
