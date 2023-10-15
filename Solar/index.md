@@ -4025,7 +4025,7 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
 <!--    oder 1000 W Micro Grid Tie Inverter Inverter SG1000MQ(https://www.ebay.de/itm/124731502486), ca. 200€\-->
     oder 600 W WR mit 2 × 400 W Eingängen und WLAN [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/),
-    ca. [190€](https://www.idealo.de/preisvergleich/OffersOfProduct/202156668_-sun600g3-eu-230-600w-deye-inverter.html)\
+    ca. [190€](https://www.idealo.de/preisvergleich/OffersOfProduct/202156668_-sun600g3-eu-230-600w-deye-inverter.html)  <!-- \
     _Achtung_, in älteren Versionen (etwa 1.471, bis ca. Ende 2022) der
     [Firmware](https://github.com/dasrecht/deye-firmware/tree/main/0_D0002_18)
     reißen die Wechselrichter von Deye, sowie baugleich Bosswerk
@@ -4033,17 +4033,17 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
     https://www.photovoltaikforum.com/thread/187077-achtung-wifi-sicherheit-der-deye-und-bosswerk-mi600-300-sowie-baugleiche-microwe/).
     Man kann aber einfach per E-Mail ein [Firmware-Update übers Internet](
     https://www.heise.de/news/Sicherheitsluecke-bei-Mikrowechselrichtern-von-Deye-Haendler-nicht-zustaendig-7483376.html)
-    <!-- https://www.mydealz.de/comments/permalink/40076009 -->
-    <!-- customerservice@solarmanpv.com oder service@deye.com.cn auf  -->
+    <!- https://www.mydealz.de/comments/permalink/40076009 ->
+    <!- customerservice@solarmanpv.com oder service@deye.com.cn auf  ->
     machen lassen oder das Update auf mindestens Version MW3\_16U_5406\_1.53
     selbst [über einen PC durchführen](
     https://zinnzgreen.de/service/deye-mikrowechselrichter-systemupdate/).
-    <!-- https://www.photovoltaikforum.com/thread/191598-fw-update-offline-deye-sun600g3-eu230-und-baugleiche/ -->
+    <!- https://www.photovoltaikforum.com/thread/191598-fw-update-offline-deye-sun600g3-eu230-und-baugleiche/ ->
     Ohnehin empfiehlt sich, solchen Geräten nur Zugang zum Gastnetz zu geben.\
     **Update vom Juli 2023:** Aufgrund unvollständigen [NA-Schutzes](
     https://www.energie-experten.org/erneuerbare-energien/photovoltaik/betrieb/na-schutz)
     ist für dieses weit verbreitete Modell die [Betriebserlaubnis vorläufig erloschen](
-    https://www.heise.de/news/Balkonkraftwerke-Fehlendes-Relais-bei-Deye-hat-weitere-Folgen-9218441.html).
+    https://www.heise.de/news/Balkonkraftwerke-Fehlendes-Relais-bei-Deye-hat-weitere-Folgen-9218441.html). -->
 
 ### Kombi-Anlage {#Kombianlage}
 
