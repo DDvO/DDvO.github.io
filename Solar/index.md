@@ -1921,14 +1921,16 @@ PV-Anlagen meist einfach über einen (Schuko-)Stecker mit dem Hausnetz verbunden
 z.B. an einer Außensteckdose auf dem Balkon oder der Terrasse. Das ist sehr
 flexibel und ermöglicht, sehr einfach ein Energiemessgerät dazwischenzustecken,
 wie es unten zur [Verbrauchsmessung](#Verbrauchsmessung) dargestellt ist.
-Diese Lösung ist m.E. schon sicher genug,
-weil der Wechselrichter die Stromzufuhr sofort unterbricht, wenn man den
+Der im Abschnitt über [Netzwechselrichter](#Netzwechselrichter) beschriebene
+NA-Schutz macht diese Lösung sicher genug, weil der Wechselrichter
+die Stromzufuhr sofort unterbricht, wenn man den
 Stecker aus der Dose zieht und seine blanken Kontakte berühren kann.
 Anfang 2023 [sprach sich der VDE dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), „den
-Schuko-Stecker für die Einspeisung [...] zu dulden“, und nun [will das BMWK](
+Schuko-Stecker für die Einspeisung [...] zu dulden“, und [das BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
-„Schukostecker als Energiesteckvorrichtung ebenfalls zulassen“.
+will „Schukostecker als Energiesteckvorrichtung ebenfalls zulassen“,
+was vsl. ab Anfang 2024 gesetzlich geregelt ist.
 
 ![Bild: Wieland-Unterputz-Dose](Wieland-Unterputz-Dose.png){:.right width="450"}
 Man kann aber auch, wie vom VDE bislang empfohlen, eine spezielle
@@ -3746,14 +3748,16 @@ Für die Einspeisung von Gleichstrom ins Wechselstromnetz kommt ein
 Dieser wird auch *Netzwechselrichter*, *Einspeisewechselrichter*,
 *netzgeführter Wechselrichter* oder *fremd geführter Wechselrichter* genannt,
 weil er sich automatisch an die Frequenz und Phase des anliegenden Wechselstroms
-anpasst. Bei wegfallendem Stromanschluss schaltet er den Ausgang vor Allem aus
-Sicherheitsgründen ab --- das ist der sog. *Netz- und Anlagenschutz*
-(*[NA-Schutz](
-https://www.energie-experten.org/erneuerbare-energien/photovoltaik/betrieb/na-schutz*)
-nach VDE-Anwendungsregel. Dabei geht es in erster Linie darum, dass bei
-Stromausfall oder Reparaturarbeiten nicht unkontrolliert Strom ins Netz fließt,
-also weniger darum, dass blanke Kontakte
-eines am Wechselrichtre hängenden 230 V Steckers berührt werden könnten.
+anpasst.
+
+Bei wegfallender Stromverbindung schaltet ein Netzwechselrichter seinen Ausgang
+v.A. aus Sicherheitsgründen ab.
+Der sog. *Netz- und Anlagenschutz* (*[NA-Schutz](
+https://www.energie-experten.org/erneuerbare-energien/photovoltaik/betrieb/na-schutz)*)
+nach VDE-Anwendungsregel verhindert, dass bei Stromausfall und Reparaturarbeiten
+am Netz unkontrolliert Strom ins Netz fließt. Er verhindert auch, dass man nach
+Ziehen des 230 V Netzsteckers eines Mikrowechselrichters beim Berühren der
+blanken Kontakte einen Stromschlag bekommen kann.
 
 Bei Steckersolargeräten wird meist ein *Solar-Mikrowechselrichter* verwendet,
 welcher einen MPPT-Solarregler in einem Netzwechselrichter integriert.
