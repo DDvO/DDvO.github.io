@@ -1916,10 +1916,24 @@ Wichtig zu beachten ist, dass diese Nutzungsart abseits eines bestehenden
 Wechselstrom-Netzes und während eines Stromausfalls nicht funktioniert,
 weil sich der verwendete Wechselrichter mit dem Stromnetz synchronisieren muss.
 
-Wie schon der Name *Steckersolargerät* ausdrückt, werden solche kleinen
-PV-Anlagen meist einfach über einen (Schuko-)Stecker mit dem Hausnetz verbunden,
-z.B. an einer Außensteckdose auf dem Balkon oder der Terrasse. Das ist sehr
-flexibel und ermöglicht, sehr einfach ein Energiemessgerät dazwischenzustecken,
+Hier geht es um *Steckersolargeräte* (*SSG*) &mdash; das sind kleine
+Photovoltaikanlagen (mit typischerweise zwei PV-Modulen), die über einen
+Mikrowechselrichter und eine Steckdose einfach mit dem Hausnetz verbunden
+werden, z.B. an einer Außensteckdose auf dem Balkon oder der Terrasse.
+Sie werden auch z.B. *Stecker-PV-Anlage*, *Steckersolaranlage*,
+oder *Balkonkraftwerk* (*BKW*) genannt.
+Im *Erneuerbare-Energien-Gesetz* (*EEG*) werden sie [voraussichtich](
+https://www.bmwk.de/Redaktion/DE/Downloads/Gesetz/20230816-entwurf-eines-gesetzes-zur-aenderung-des-erneuerbare-energien-gesetzes.pdf)
+wie folgt definiert:
+> Steckersolargerät ein Gerät, das aus einer Solaranlage oder aus mehreren Solaranlagen, einem Wechselrichter, einer Anschlussleitung und einem Stecker zur Verbindung mit dem Endstromkreis eines Letztverbrauchers besteht.
+
+Rechtlich bedeutsam ist die Einstufung durch den VDE als _Gerät_,
+denn im Gegensatz zu elektrischen Anlagen
+dürfen elektrische Geräte auch von Laien in Betrieb genommen werden.
+
+Meist werden Steckersolargeräte über einen normalen Schukostecker angeschlossen.
+Das ist sehr einfach und flexibel. Es ermöglicht auch, ganz simpel und günstig
+ein Energiemessgerät für die erzeugte Strommenge dazwischenzustecken,
 wie es unten zur [Verbrauchsmessung](#Verbrauchsmessung) dargestellt ist.
 Der im Abschnitt über [Netzwechselrichter](#Netzwechselrichter) beschriebene
 NA-Schutz macht diese Lösung sicher genug, weil der Wechselrichter
