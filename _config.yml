@@ -35,7 +35,7 @@ url: "https://perlen.DavOh.de"
 # Build settings
 theme: minima
 plugins:
-#  - jekyll-feed
+#  - jekyll-feed # still producing wrong <link type="application/atom+xml" rel="alternate" href="https://david.von-oheimb.de/feed.xml" title="Web Pearls by David von Oheimb">
 
 # Exclude from processing.
 # The following items will not be processed, by default.
