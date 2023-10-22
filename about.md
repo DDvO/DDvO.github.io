@@ -10,7 +10,7 @@ These pages are part of the
 which is a collection of information and hints on various topics.
 
 Diese Seiten sind Teil der
-[Online-Perlensammlung](https://perlen.davoh.de/) von
+[Online-Perlensammlung](https://perlen.DavOh.de/) von
 [David von Oheimb](https://David.von-Oheimb.de/),
 einer Sammlung von Infos und Tipps zu verschiedenen Themen.
 
