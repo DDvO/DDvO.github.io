@@ -75,6 +75,11 @@ keywords:
 - Eigendeckungsanteil
 - Autarkiegrad
 - Batterieentladung
+- Genehmigung
+- Wohnungseigentümergemeinschaft
+- WEG
+- Versicherung
+- Bauvorschriften
 - Amortisation
 - Rendite
 - Ökologie
@@ -211,7 +216,7 @@ Lizenzkürzel:
 -   [Auswahl und Nutzung von Komponenten](#Komponenten)
     -   [PV-Module](#PV-Module)
         - [Elektrischer Anschluss](#Anschluss)
-        - [Anbringung](#Anbringung)
+        - [Anbringung und Rechtliches](#Anbringung)
     -   [Mikrowechselrichter und andere Stromrichter](#Stromrichter)
         - [MPPT-Solarregler](#MPPT)
         - [Solar-Laderegler](#Laderegler)
@@ -3600,7 +3605,7 @@ wird es ohne Reihenschaltung bei einer Ladeschlussspannung von ca. 14,5 V
 einer LiFePO4-Batterie bei wolkigem Wetter (mit einer Einstrahlung von
 vielleicht nur 100 - 200 W/m²) ziemlich eng.
 
-#### Anbringung {#Anbringung}
+#### Anbringung und Rechtliches {#Anbringung}
 
 ![Bild: Garten-Solaranlage an Hauswand](Garten-Anlage.jpg){:.left width="386"}
 ![Bild: Solaranlage auf Pergola](Pergola-Anlage.jpg){:.right width="386"}
@@ -3617,10 +3622,13 @@ Gartenhaus, einer Gartenfläche, an der Hauswand oder als Teil einer Pergola.
 ![Bild: Gartenhaus mit Solarpanels](Gartenhaus-Panels.jpg){:.right width="798"}
 
 Bei Anbringung von PV-Modulen am Gemeinschaftseigentum einer Wohnanlage,
-also z.B. an der Hausfassade oder an einer Balkonbrüstung, ist <!-- u.A. wegen
-des optischen Erscheinungsbilds --> meist eine vorherige Genehmigung durch
-die Wohnungseigentümergemeinschaft (WEG) erforderlich.
+also z.B. an der Hausfassade oder außen an einer Balkonbrüstung,
+ist meist eine vorherige Genehmigung
+durch die Wohnungseigentümergemeinschaft (WEG) erforderlich. Und zwar
+typischerweise wegen Sicherheitsbedenken, Haftungsfragen, möglichen Folgekosten
+und eventuell wegen des optischen Gesamt-Erscheinungsbilds der Wohnanlage.
 Musteranträge dafür gibt es u.A. [hier](https://solar2030.de/balkonkraftwerk/).
+
 <!--
 Erfreulicherweise sieht die [PV-Strategie 2023 des dt. BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
@@ -3631,18 +3639,21 @@ privilegierter Maßnahmen im Wohnungseigentumsgesetz und im BGB aufgenommen](
 https://www.bmj.de/SharedDocs/Pressemitteilungen/DE/2023/0913_WEG.html).
 Vermieter und WEGs können dann Balkonkraftwerke u.ä. nicht mehr ablehnen,
 haben aber weiterhin ein Mitspracherecht, Rahmenbedingungen dafür festzulegen.
+
+Durch PV-Geräte auf Sondereigentum, z.B. innerhalb eines Balkons bzw. einer
+Dachterrasse und in Gärten (auch auf einem Gartenhaus), ist die WEG nicht
+betroffen und daher eine Regelung über sie weder erforderlich noch möglich.
+
+Auch zu gesetzlichen Regelungen und technischen Normen (z.B. des VDE) können
+Vermieter und die WEG/Hausverwaltung keine inhaltlichen Vorgaben machen.
+
 [Hier ein guter Artikel](https://www.homeandsmart.de/balkonkraftwerk-mieter)
 auch mit weiteren Informationen zu rechtlichen Aspekten.
 
-Wichtig ist, dass die Module sicher angebracht werden, so dass sie sich auch
+Wichtig ist, dass die PV-Module sicher angebracht werden, so dass sie sich auch
 z.B. bei Sturm nicht lösen und etwa auf darunter befindliche Flächen fallen
 können, wo sich Menschen bewegen oder aufhalten können
 ([Verkehrssicherungspflicht](https://de.wikipedia.org/wiki/Verkehrssicherungspflicht)).
-Es wird eine Privathaftpflichtversicherung benötigt, die PV-Anlagen einschließt.
-Schäden am Steckersolargerät selbst, z.B. durch Wettereinflüsse wie Hagel
-und Blitzeinschlag, werden [durch eine Hausratversicherung abgedeckt](
-https://www.allianz.de/recht-und-eigentum/hausratversicherung/balkonkraftwerk/),
-auch wenn sie am Balkon befestigt ist.
 
 <!--
 https://www.dibt.de/de/aktuelles/meldungen/nachricht-detail/meldung/aktualisiert-welche-bauaufsichtlichen-bestimmungen-gelten-fuer-photovoltaik-module-pv-module
@@ -3682,6 +3693,19 @@ Somit ist auch für PV-Module mit ggf. mehr als 2&nbsp;m² Fläche
 [kein Verwendbarkeitsnachweis gefordert](
 https://www.computerbild.de/artikel/cb-News-Energie-Balkonkraftwerk-montieren-Bauvorschrift-4-Meter-36665659.html).\
 Bei spiegelnden Oberflächen kann es allerdings Probleme mit Blendeffekten geben.
+
+Es wird eine Privathaftpflichtversicherung benötigt, die PV-Anlagen einschließt.
+
+Schäden am Steckersolargerät selbst, z.B. durch Wettereinflüsse wie Hagel und
+Blitzeinschlag, kann der Besitzer [durch eine Hausratversicherung abdecken](
+https://www.allianz.de/recht-und-eigentum/hausratversicherung/balkonkraftwerk/),
+auch wenn das SSG am Balkon befestigt ist.
+
+Für PV-Anlagen ist die Wohngebäudeversicherung nur relevant, wenn sie fest mit
+dem Gebäude verbunden sind. Eine Montage an der Balkonbrüstung zählt dazu nicht.
+Steckersolargeräte müssen nicht in die Gebäudeversicherung eingeschlossen
+werden, aber der Versicherung muss mitgeteilt werden (durch die Hausverwaltung),
+dass die Installation von Steckersolargeräten geplant ist.
 
 ### Mikrowechselrichter und andere Stromrichter {#Stromrichter}
 
