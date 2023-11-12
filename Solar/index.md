@@ -1041,7 +1041,7 @@ und gleichmäßigeren Ertragsverteilung über den Tagesverlauf in Betracht ziehe
 eines nach Osten, zwei nach Süden und eines nach Westen auszurichten.
 Bei 400 Wp Modulen ergibt die [Eigenverbrauchssimulation](#SolBatSim), wieder
 für ein typisches Lastprofil und 3000 kWh Jahresverbrauch in Süddeutschland,
-für alle drei Himmelsrichtungen eine optimale Neigungung von um die 30°
+für alle drei Himmelsrichtungen eine optimale Neigung von um die 30°
 mit wieder sehr geringer Empfindlichkeit auf Abweichungen davon.\
 Die Verteilung 1 × Ost, 2 × Süd und 1 x West resultiert in einem Nettoertrag
 von 1576 kWh und einem Eigenverbrauch von 831 kWh bei optimalen 30°.\
@@ -1609,7 +1609,7 @@ https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
 Beide Simulationen nutzen intern Daten der Wetterstation Lindenberg bei Berlin
 aus dem Jahr 2017 ---
 für Süddeutschland kann man also 10-15% mehr PV-Leistung ansetzen. Als Eingabe
-verwenden sie den Jahresstromverbrauch (mit einer typischen Lastverteilung) und
+verwenden sie den >Jahresstromverbrauch (mit einer typischen Lastverteilung) und
 die PV-Nennleistung (mit einem spezifischen PV-Jahresertrag von 1024 kWh/kWp).
 Man kann auch eine (nutzbare) Speicherkapazität angeben, wobei ein typischer
 Wirkungsgrad für LiFePO4-Batterien von 95% und typische Wandlungsverluste
@@ -3834,7 +3834,7 @@ Es ist empfehlenswert, ihn mit etwas Leistungsreserve zu dimensionieren,
 weil seine Lebensdauer sonst leiden und er je nach Bauart
 unangenehm lautes Lüftergeräusch verbreiten kann.
 * Seine Spitzenleistung muss auch den Anlaufstrom angeschlossener Geräte
-abdecken. Die benötigte Anlaufleistung eines Kühl- oder Gefrierschrankes
+abdecken. Die benötigte Anlaufleistung eines Kühl- oder Gefrierschranks
 kann das [Fünffache der Scheinleistung](
 http://www.off-grid-systems.de/mediafiles/Sonstiges/bedienungsanleitung/Wechselrichter/Handbuch-LMP3000W.pdf)
 (angegeben in Volt × Ampere = VA, nicht nur [Wirkleistung](
@@ -4227,21 +4227,22 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 -->
 
 <!--
-Local IspellDict: german
-LocalWords: title keywords toc start refresh zusammenfassung Std
-LocalWords: pandoc output calculation power width style margin unit
-LocalWords: left right irradiance GHI buehneTop clear both png tgl
+Local IspellDict: german8
+LocalWords: title keywords toc start refresh markdown pandoc width style margin
+LocalWords: zusammenfassung Messgeraet CC BY Std webp Ferrariszaehler
+LocalWords: output calculation power unit rating Europe TSUN InGe DPM
+LocalWords: left right irradiance GHI buehneTop clear both png tgl RS
 LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi
-LocalWords: standby xls jpg Balkonsolar center limiter off to html
+LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs
 LocalWords: blackout brownout panels busbars shingle panel up number
-LocalWords: maximum point tracking sine wave efficiency boost true
+LocalWords: maximum point tracking sine wave efficiency boost true SG
 LocalWords: converter step consumption pdf balancer equalizer mppt
 LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test
 LocalWords: Charger Discharger Board Under Over Voltage Protection
-LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW
+LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW sub
 LocalWords: telemetry gateway distort cell document sections profile
 LocalWords: post text standard conditions Reflexions PVSOL SOL assuming
-LocalWords: operating temperature Timeseries crystSi PVCalculator
+LocalWords: operating temperature Timeseries crystSi PVCalculator and
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
@@ -4250,5 +4251,9 @@ LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW
 LocalWords: Sense is end index output md ref of pv px Eff vs OW Heat
 LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
 LocalWords: data transfer solar cut cells open short circuit voltage lim
+LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords
+LocalWords: Bestrahlungsstaerke curves under different levels irradiation
+LocalWords: Microinverter What are Amps Volts SMF
+LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar
 LocalWords:
 -->
