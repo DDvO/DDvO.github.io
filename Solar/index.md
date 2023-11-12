@@ -3527,12 +3527,17 @@ etwas günstiger als entsprechend viele kleine.
     und somit ein verschatteter Strang die Spannung anderer unverschatteter
     parallele Stränge kaum herunterzieht.
 
-    Wenn mehr als zwei Stränge parallel geschaltet sind, kann es bei Kurzschluss
-    eines Moduls (etwa durch einen Defekt, aber sehr unwahrscheinlich) zu einem
-    Rückstrom kommen, der so groß ist, dass die übrigen Module des Strangs
-    zerstört werden. Deswegen werden in einem solchen Szenario [Sicherungen oder
-    sog. Stringdioden](https://files.sma.de/downloads/Rueckstrom-UDE083010.pdf)
-    empfohlen.
+    Wenn in einem Strang mindestens zwei Module in Reihe geschaltet sind,
+    kommt es bei Kurzschluss eines Moduls (etwa durch einen Defekt, aber sehr
+    unwahrscheinlich) zu einem Rückstrom über andere parallele Stränge.
+    Wenn es mindestens zwei andere Stränge gibt, kann der so groß sein,
+    dass die übrigen Module des ersten Strangs überhitzen und zerstört werden.
+    Deswegen werden in einem solchen Szenario Sicherungen oder
+    sog. *Strangdioden* (auch *Stringdioden* oder *Sperrdioden* genannt)
+    [empfohlen](https://files.sma.de/downloads/Rueckstrom-UDE083010.pdf).\
+    Wenn bei einem Balkonkraftwerk PV-Module nur parallel angeschlossen werden,
+    kann das allerdings nicht passieren, und dann wäre die Verwendung von Dioden
+    sogar kontraproduktiv, weil sie zu einem gewissen Leistungsverlust führen.
 
     Für die parallele Verschaltung bieten sich Y-Kabel mit MC4-Anschlüssen an.
     Die Kabel auf parallelen Zweigen sollten möglichst kurz und ungefähr gleich
