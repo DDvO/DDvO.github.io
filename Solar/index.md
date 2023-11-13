@@ -1979,7 +1979,9 @@ Anfang März 2023 startete eine Petition für die
 <!--https://epetitionen.bundestag.de/content/petitionen/_2023/_02/_17/Petition_146290.html-->
 und auch die [PV-Strategie 2023 des dt. BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
-will „die Grenze auf 800 VA Wechselstromleistung zu erhöhen“.
+will „die Grenze auf 800 VA Wechselstromleistung zu erhöhen“.\
+Nach Informationen der DGS wird sich die Erhöhung der Obergrenze in Deutschland
+noch bis mindestens Sommer 2024, wahrscheinlich eher Herbst 2024 hinziehen.
 
 In Deutschland sind PV-Anlagen anmeldepflichtig, wenn sie ins externe Netz
 einspeisen können, wobei der Aufwand für Steckersolargeräte nicht groß ist.
