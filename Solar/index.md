@@ -2432,17 +2432,105 @@ alle zwei Tage verwendet --- was aber nicht heißt, dass der Speicher im Schnitt
 jeden zweiten Tag erst mal voll aufgeladen und dann wieder ganz entladen wird.
 
 Die Strompufferung soll den Nutzen der PV-Anlage für den eigenen Stromverbrauch
-erhöhen. Aber **finanziell lohnt sie sich fast nie** --- außer wenn sie über
-eine optimierte (lastgesteuerte) Lade- und Entladeregelung verfügt und man den
+erhöhen. Aber **finanziell lohnt sie sich für kleine PV-Anlagen fast nie** ---
+außer wenn sie über eine nahezu optimale (lastgesteuerte)
+Lade- und/oder Entladeregelung verfügt und man den
 Speicher sehr günstig bekommt oder schon aus anderen Gründen hat, z.B. für
 eine Notstromversorgung (mit Inselwechselrichter) oder als Fahrzeugbatterie.
 Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
 
+Besser sieht es übrigens bei größeren PV-Anlagen aus.
+<!-- https://www.mydealz.de/comments/permalink/44464786 -->
+Hier das Ergebnis von Simulationen für ein Haus mit angenommenen 5000 kWh
+Jahresverbrauch und 200 W Mindestlast und ansonsten typischem Lastprofil,
+PV-Anlage in Süddeutschland mit 10 kWp,
+Speicher AC-gekoppelt mit effektiv 2 kWh,
+der zwischen 19 und 5 Uhr konstant mit 200 W entladen wird,
+und typische Verluste/Wirkungsgrade.
+Nehmen wir mal 30 - 8 = 22 ct/kWh Strompreisdifferenz​ an.
+
+* Wenn der Speicher optimal, also nur mit PV-Überschuss, AC-gekoppelt geladen
+wird, steigt durch die Nachteinspeisung
+der PV-Eigenverbrauch von 1887​ auf 2513​ kWh im Jahr,
+was bei den 22 ct/kWh Strompreisdifferenz etwa 135 €/Jahr Einsparung ausmacht.
+Bei günstig gekauften Komponenten würde sich das also schon nach wenigen Jahren
+amortisieren.
+
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 5000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 10000  -peff 92 -tmy -load min 194 7:0..24 -capacity 2000 -max_charge 100 -max_discharge 100 -feed 200 19..5 
+Lastprofil-Datei            : Lastprofil_4673_kWh.csv
+Nächtliche Durchschnittslast=  329 W von 0 bis 6 Uhr
+Minimallast (Grundlast)     =  200 W am 2010-01-01 um 00:00:00
+Maximallast                 =22208 W am 2010-02-26 um 06:55:56
+
+PV-Daten-Datei              : Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv, enthaltene System-Effizienz 100% wurde übersteuert
+Neigungswinkel, Azimut      = 38°, 0°
+Breitengrad, Längengrad     = 48.215, 11.727
+Simuliertes PV-Jahr         : TMY (2008..2020)
+
+PV-Nennleistung             =10000 Wp
+Max. PV-Bruttoleistung      =10122 W am TMY-04-15 um 13h
+PV-Bruttoertrag             =12729 kWh
+PV-DC-Ertrag                =11711 kWh, PV-System-Wirkungsgrad 92%
+PV-Nettoertrag              =11008 kWh bei Wechselrichter-Wirkungsgrad 94%
+Max. PV-Nettoleistung       = 8754 W am TMY-04-15 um 13h
+
+Verbrauch                   = 5000 kWh über ein Jahr
+Adaptierte minimale Last    =  200 W
+
+Speicherkapazität           = 2000 Wh mit max. Ladehöhe 100%, max. Entladetiefe 100%, AC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie), max. Laderate 1 C
+Konstanteinspeisung         =  200 W von 19 bis 5 Uhr, max. Entladerate 1 C
+Verlust durch Überlauf      =    0 kWh weil AC-gekoppelt
+Ladeverlust                 =   45 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =   35 kWh durch Speicher-Wirkungsgrad 95%
+Verlust mit AC-Kopplung     =   40 kWh durch Entlade-WR-Wirkungsgrad 94%
+PV-Nutzung über Speicher    =  626 kWh
+Netzeinspeisung via Speicher= 3.65 kWh
+max. Ladehöhe               = 2000 Wh am TMY-01-01 um 10:04:51
+Zwischenspeicherung         =  706 kWh nach Ladeverlust
+Vollzyklen                  =  353 (der effektiven Kapazität 2000 Wh)
+
+PV-Eigenverbrauch           = 2513 kWh
+Netzeinspeisung             = 8374 kWh
+PV-Eigenverbrauchsanteil    =   23 % des PV-Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   50 % des Verbrauchs (Autarkiegrad)
+-->
+
+* Wenn aber kein lastgeregeltes Überschussladen verwendet wird,
+sondern der Einfachheit halber ein DC-gekoppeltes Ladegerät,
+das der Speicherladung Priorität gibt,
+dann steigt der Eigenverbrauch nur auf 2259  kWh im Jahr,
+was bei 22 ct/kWh Strompreisdifferenz nur etwa 82 €/Jahr Einsparung ausmacht.​
+Dann zieht sich (je nach Kosten der Komponenten)
+die Amortisation deutlich länger hin.
+
+<!--
+./Solar.pl Lastprofil_4673_kWh.csv 5000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 10000  -peff 92 -tmy -load min 194 7:0..24 -capacity 2000 -max_charge 100 -max_discharge 100 -feed 200 19..5 -pass spill 0 -dc
+Speicherkapazität           = 2000 Wh mit max. Ladehöhe 100%, max. Entladetiefe 100%, DC-gekoppelt
+Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
+Konstanteinspeisung         =  200 W von 19 bis 5 Uhr, max. Entladerate 1 C
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   47 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =   37 kWh durch Speicher-Wirkungsgrad 95%
+Verlust während Entladung   =  698 kWh durch Entlade-WR-Wirkungsgrad 94%
+PV-Nutzung über Speicher    =  661 kWh
+Netzeinspeisung via Speicher= 0.19 kWh
+max. Ladehöhe               = 2000 Wh am TMY-01-01 um 10:00:00
+Zwischenspeicherung         =  742 kWh nach Ladeverlust
+Vollzyklen                  =  370 (der effektiven Kapazität 2000 Wh)
+
+PV-Eigenverbrauch           = 2259 kWh
+Netzeinspeisung             = 8669 kWh
+PV-Eigenverbrauchsanteil    =   19 % des PV-DC-Ertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   45 % des Verbrauchs (Autarkiegrad)
+--->
+
 Die einfachsten Anlagen verwenden eine [*Konstanteinspeisung*](#Entnahme),
 wobei eine zeitgesteuerte Variante *Nachteinspeisung* genannt wird.
 Wie [etwas weiter unten ausgeführt](#Ladung),
-bringen allerdings solche Anlagen
+bringen allerdings Anlagen
 mit Konstanteinspeisung, bei der die PV-Erzeugung
 nur in den Speicher geleitet wird (also ohne Überschussableitung oder
 eine noch deutlich aufwendigere lastabhängige Batterieladung),
@@ -4255,7 +4343,7 @@ LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
 LocalWords: data transfer solar cut cells open short circuit voltage lim
 LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation
-LocalWords: Microinverter What are Amps Volts SMF
+LocalWords: Microinverter What are Amps Volts SMF charge discharge
 LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar
 LocalWords:
 -->
