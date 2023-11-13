@@ -2443,9 +2443,9 @@ Die einfachsten Anlagen verwenden eine [*Konstanteinspeisung*](#Entnahme),
 wobei eine zeitgesteuerte Variante *Nachteinspeisung* genannt wird.
 Wie [etwas weiter unten ausgeführt](#Ladung),
 bringen allerdings solche Anlagen
-<!-- mit Konstanteinspeisung, bei der die PV-Erzeugung
+mit Konstanteinspeisung, bei der die PV-Erzeugung
 nur in den Speicher geleitet wird (also ohne Überschussableitung oder
-eine noch deutlich aufwendigere lastabhängige Batterieladung), -->
+eine noch deutlich aufwendigere lastabhängige Batterieladung),
 selbst bei optimierter Wahl der Entnahmeleistung sehr wenig,
 weil bei voller Batterie relativ viel überschüssige Energie verloren geht.
 Eine höhere konstante Entnahmeleistung oder eine Überschussableitung verringert
