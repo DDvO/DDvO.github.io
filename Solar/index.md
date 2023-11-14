@@ -64,6 +64,7 @@ keywords:
 - Lastprofil
 - Telemetrie
 - OpenDTU
+- Shelly
 - Lastspitzen
 - Abregelung
 - Drosselung
@@ -190,6 +191,7 @@ Lizenzkürzel:
         - [Aufteilung in mehrere Orientierungen](#Aufteilung)
 -   [Stromverbrauch im Haushalt](#Stromverbrauch)
     - [Verbrauchsmessung](#Verbrauchsmessung)
+        - [Details zum Shelly 3EM](#Shelly3EM)
     - [Stromzähler und Rücklaufsperre](#Stromzähler)
 -   [Eigenverbrauch und seine Berechnung](#Eigenverbrauch)
     -   [Typische Rentabilität kleiner PV-Anlagen](#rentabel)
@@ -1249,8 +1251,8 @@ Zahlen etwas zu gering dargestellt werden, weil anscheinend einige solcher
 Messgeräte die im Einspeise-Fall etwas erhöhte Spannung nicht berücksichtigen).\
 Ein Test smarter Steckdosen mit Verbrauchsmessung findet sich z.B. [hier](
 https://www.computerbild.de/bestenlisten/Smarte-Steckdose-Test-21931325.html)
-und bescheinigt übrigens dem Shelly Plug S eine ungenaue Messung --
-was nach Aussagen von Nutzern in Foren auch für das Shelly 1PM und 3EM gilt.
+und bescheinigt übrigens dem Shelly Plug S eine ungenaue Messung, was
+nach Aussagen von Nutzern in Foren auch für den Shelly 1PM <!--und 3EM --> gilt.
 
 {:style="clear:both"}
 
@@ -1266,27 +1268,153 @@ Und ein sehr schöner Artikel zu verschiedenen Shelly-Varianten und ihrer
 Nutzung [hier](https://blog.helmutkarger.de/balkonkraftwerk-teil-6-monitoring/).
 Darin auch die Info, dass beim Shelly Plus 1PM die Genauigkeit verbessert wurde.
 
-Der Haushalts-Stromverbrauch lässt sich auch kontinuierlich und automatisiert
-messen und übertragen. Das kann für eine Online-Ablesung und genauere Analyse
+Der Haushalts-Stromverbrauch (ggf. abzüglich Erzeugung durch Photovoltaik)
+lässt sich auch kontinuierlich und automatisiert messen und übertragen.
+Das kann für eine Online-Ablesung und genauere Analyse
 des Verbrauchs interessant sein. Besonders wichtig ist es aber für die optimale
 lastabhängige [Regelung](#Regelungsstrategien) der Ladung und/oder Entladung
 eines Stromspeichers.
-![Bild: Shelly 3EM](Shelly_3EM.webp){:.right width="200"}
+
 * Man kann sich die Verbrauchsdaten über den
 sog. [„Volkszähler“](https://www.volkszaehler.org/)
 oder [„powerfox poweropt“](https://poweropti.powerfox.energy/)
 aus dem offiziellen Haushalts-Stromzähler übermitteln lassen --
-sofern ein moderner Stromzähler verbaut ist und man Zugang zu diesem hat.\
+sofern ein digitaler Stromzähler verbaut ist und man Zugang zu diesem hat.\
 Zur Verwendung der [Tasmota](https://www.tasmota.info/)-Software
 gibt es [hier](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
 eine schöne Anleitung.<!--, aber auch für andere
 [Smarthome-Projekte](https://hessburg.de/category/technik/smarthome/).-->
+
+
+![Bild: Shelly Pro 3EM mit Clips](Shelly-Pro-3EM-clams.png){:.right width="200"}
 * Alternativ kann man ein 3-Phasen-Energiemessgerät wie das
-[Shelly 3EM](https://www.shelly.cloud/de/products/product-overview/shelly-3em-1)
-oder das teurere, aber wohl genauere [my-PV WiFi Meter](
-https://www.my-pv.com/de/produkte/my-pv-wifi-meter) verwenden.
-Das wird in den Sicherungskasten der Wohnung eingebaut
-(was von Fachpersonal gemacht werden sollte) und per WLAN eingebunden.
+[Shelly 3EM](https://www.shelly.com/de/products/shop/shelly-3em-1) verwenden
+oder das etwas teurere, aber wohl genauere
+[Shelly Pro 3EM](https://www.shelly.com/de/products/shop/shelly-pro-3-em-120-a-1)
+oder das [my-PV WiFi Meter](https://www.my-pv.com/de/produkte/my-pv-wifi-meter).
+<!--https://www.mydealz.de/comments/permalink/44178073-->
+So ein Messgerät wird in den Sicherungskasten bzw. Unterverteiler der Wohnung
+[eingebaut](https://youtu.be/TqYkyg_2-z8), was aus Sicherheitsgründen durch
+Fachpersonal erfolgen sollte &mdash; jedenfalls muss man genau wissen,
+was man tut und was die einzelnen (Drehstrom- und Schutz-)Leitungen bedeuten.\
+Immerhin wird über die mitgelieferten praktischen
+Klapp-[Stromwandler](https://de.wikipedia.org/wiki/Stromwandler) der Stromfluss
+gemessen, ohne dass die Leitungen dafür aufgetrennt werden müssen, im Gegensatz
+etwa zum Billigartikel [Eastron SDM72D-M](https://www.amazon.de/dp/B08XDFK2W2).
+ 
+Die Datenanbindung erfolgt meist über WLAN, wobei das neuere Shelly Pro 3EM auch
+einen Bluetooth- und LAN-Anschluss hat, allerdings nicht mehr ein Relais.\
+<!--https://www.mydealz.de/comments/permalink/44544522-->
+Zum Shelly Pro 3EM und seiner Verknüpfung mit dem Zendure SolarFlow gibt es [hier](
+https://www.tueftler-und-heimwerker.de/shelly-pro-3em-stromverbrauch-ueberwachen-nulleinspeisung-regeln/)
+einen sehr schönen und recht fundierten Artikel,
+allerdings mit kommerzieller Verflechtung.
+Das meiste davon sollte auch für die nicht-Pro-Variante gelten.
+So kann es auch kein ernsthaftes technisches (sondern wohl produktstrategisches)
+Hindernis für seine vollständige Verwendbarkeit mit dem Zendure SolarFlow geben.
+
+<!--
+https://www.mydealz.de/comments/permalink/42351507 Zendure SolarFlow
+https://www.mydealz.de/comments/permalink/42371552 Anker Solix
+https://www.mydealz.de/comments/permalink/42363989 beide
+https://www.mydealz.de/comments/permalink/44075989 Greensolar Plug & Play
+https://www.mydealz.de/comments/permalink/44536868 Golem-Test
+-->
+Gut, dass es inzwischen bei anschlussfertig erhältlichen (aber immer noch
+eigentlich zu teuren und damit nicht rentablen) Batteriepuffer-Produkten
+für SSGs wie dem Zendure SolarFlow, Anker Solix oder GreenSolar Plug & Play
+erste Ansätze gibt, Echtzeit-Lastmessgeräte wie das Shelly Pro 3EM
+zur verbrauchsabhängigen Regelung zu verwenden, denn ohne eine solche Regelung
+bleiben sie unrentables Nerd-Spielzeug bzw. teure Mogelpackungen.
+<!--
+Doch wenn man einen [ersten Test-Artikel dazu](
+https://www.golem.de/news/balkonkraftwerk-mit-shelly-pro-3em-den-zendure-batteriespeicher-steuern-2310-178813-3.html)
+liest, drängt sich der Verdacht auf, dass der Verfasser und/oder Zendure
+das nicht wirklich durchblicken und grobe Umsetzungs-Fehler gemacht haben,
+so dass es (noch?) nicht so funktioniert wie es soll.
+-->
+
+#### Details zum Shelly (Pro) 3EM {#Shelly3EM}
+
+<!--https://www.mydealz.de/comments/permalink/44178520-->
+Die [Einbau-Anleitung des Herstellers](
+https://kb.shelly.cloud/__attachments/63832224/User%20and%20Safety%20Guide%20-%20Multi%20language)
+Allterco Robotics ist etwas unklar und teils unpassend:
+Obwohl es nicht so aussieht, muss der Neutralleiter (N) auf jeden Fall (auch zur
+Stromversorgung) angeschlossen werden, während die beim 3EM vorhandenen
+Anschlüsse I und O für die Relais-Schaltung eines externen Geräts optional sind.
+Und zumindest bei manchen 3EM muss der auf den Stromwandlern dargestellte Pfeil
+entgegen der Anleitung zum externen Netz zeigen, nicht zum Haushalt &mdash;
+bei richtiger Anbringung wird aus dem Netz bezogener Strom positiv dargestellt.
+
+![Bild: Shelly Smart Control App am 3EM](Shelly_Smart_Control_3em.png){:.right width="250"}
+<!--https://www.mydealz.de/comments/permalink/44533142-->
+Auf der
+[Shelly Smart Control App](https://www.shelly.com/de/app/shelly-smart-control),
+aber auch z.B. mit einem Browser, der mit dem lokalen HTTP-Zugang des Geräts
+bzw. mit der [Shelly Cloud](https://control.shelly.cloud) verbunden wird, kann
+man sich alle möglichen Daten über die angeschlossenen Phasen ausgeben lassen.
+
+<!--https://www.mydealz.de/comments/permalink/44495110-->
+Leider ist auch allgemein
+die Shelly [Online-Dokumentation](https://kb.shelly.cloud/knowledge-base/)
+nicht besonders professionell, sondern etwas chaotisch und unvollständig,
+so dass man dort relevante Informationen schwer und teils gar nicht findet,
+und teils ist sie einfach irreführend oder zumindest veraltet.
+So habe ich nur über [einen Forums-Beitrag](
+https://www.shelly-support.eu/forum/thread/16822-3-em-keine-csv-datei-gesamtverbrauch-mehr-zum-download/?postID=174227#post174227)
+herausgefunden, dass der 3EM seit April 2022 keine saldierten Daten mehr
+speichert bzw. sie nicht mehr als CSV-Datei ausgeben kann,
+obwohl das in der &mdash; offenbar veralteten &mdash; [Dokumentation](
+https://www.shelly-support.eu/attachment/5469-shell3em-data-export-pdf/)
+anders behauptet wird. Man kann aber über ein
+Online-Downgrade auf Version 1.11.8
+(dazu einfach in einem Browser
+``http://lokale-IP-Adresse-des-3EM/ota?url=http://archive.shelly-support.eu/v1.11.8-3EM-fix/SHEM-3_build.zip``
+eingeben und ca. 30 Sekunden warten) das frühere Verhalten wieder herstellen,
+wobei allerdings die bislang im Gerät gespeicherten Messdaten gelöscht werden.
+<!--
+Delivered version: 20220415-105853/v1.11.7-25-gb3b096857-v1.11.7-3em
+Latest version: 20230913-114244/v1.14.0-gcb84623
+Downgraded version: 20220324-123835/v1.11.8-3EM-fix-g0014dcb
+-->
+Danach bekommt man wieder über das lokale Web-Interface
+(``http://lokale-IP-Adresse-des-3EM/emeter/3/em_data.csv``)
+wieder Gesamt-Verbrauchsdaten über die drei Phasen,
+und zwar für den aktuellen Tag und den Vortag sogar in Minutenauflösung,
+aber für die weiteren bis zu 365 Tage davor nur in 10-Minuten-Auflösung.
+
+Um ein minutengenaues Haushalts-Lastprofil etwa für ein ganzes Jahr zu erhalten,
+kann man z.B. unter Linux einen sog. _cron job_ einrichten,
+der die Datei täglich speichert.
+
+Über ``http://lokale-IP-Adresse-des-3EM/status`` kann man auch sekündlich
+aktualisierte Statusdaten über das Gerät und die angeschlossenen Phasen bekommen
+(inklusive der saldierten aktuellen Gesamtleistung und
+dem bisherigen Netzbezug pro Phase und der bisherigen Einspeisung pro Phase).
+
+<!--https://www.mydealz.de/comments/permalink/44495110-->
+Es gibt eine web-(REST/MQTT)-API-Dokumentation für den [3EM](
+https://shelly-api-docs.shelly.cloud/gen1/#shelly-3em-emeter-index-em_data-csv),
+den [Pro 3EM](
+https://shelly-api-docs.shelly.cloud/gen2/ComponentsAndServices/EMData#csv-file-download)
+und ähnliche Produkte, wo auch einigermaßen das Format
+und die Bedeutung der vom Gerät gelieferten CSV-Daten beschrieben ist.
+Man findet aber keine klaren Hersteller-Informationen, wie und in welcher
+zeitlichen Auflösung die z.B. über ``/status`` gelieferten phasenweisen
+Energiedaten ``total`` und ``total_returned`` intern akkumuliert werden (wohl
+im Sekundentakt und phasenweise getrennt für positive und negative Werte).
+Eine sehr fundierte Frage zur genauen Bedeutung der gelieferten Werte wurde
+(bezogen auf den Pro 3EM) [im Shelly-Forum gestellt](
+https://www.shelly-support.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/https://www.shelly-support.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/?postID=222899#post222899),
+verbunden mit dem Wunsch sehr vieler Nutzer, die Saldierung mit Rücklaufsperre
+(wie sie in Deutschland und einigen anderen Ländern leider üblich ist,
+siehe [unten](#Stromzähler)) zu unterstützen.
+Dieser Wunsch wird von Allterco Robotics seit Jahren ignoriert, so dass man auf
+Software-Basteleien angewiesen ist &mdash; dazu gibt es verschiedenste Varianten,
+welche meist bei der Weiterverarbeitung der empfangenen Daten z.B. in der
+Hausautomatisierungs-Software [Home Assistant](https://www.home-assistant.io/)
+implementiert werden und damit höchstens sekundengenau funktionieren können.
 
 ### Stromzähler und Rücklaufsperre {#Stromzähler}
 
@@ -1295,6 +1423,7 @@ die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
 (jedenfalls solange sie positiv ist) und entsprechend langsamer läuft.
 Es wird also nur der aus dem Netz bezogene Anteil des Verbrauchs berechnet.
 
+<!--https://www.mydealz.de/comments/permalink/44533131-->
 Übrigens ist es egal, auf welcher Drehstrom-Phase (L1, L2 oder L3) ein
 Steckersolargerät angeschlossen wird und auf welcher Phase die möglicherweise
 gleichzeitig verwendeten Verbraucher angeschlossen sind, weil (fast)
@@ -4320,13 +4449,14 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 Local IspellDict: german8
 LocalWords: title keywords toc start refresh markdown pandoc width style margin
 LocalWords: zusammenfassung Messgeraet CC BY Std webp Ferrariszaehler
+LocalWords: Unabhaengigkeitsrechner Stromwaechter Play SDM
 LocalWords: output calculation power unit rating Europe TSUN InGe DPM
 LocalWords: left right irradiance GHI buehneTop clear both png tgl RS
 LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi
 LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs
 LocalWords: blackout brownout panels busbars shingle panel up number
 LocalWords: maximum point tracking sine wave efficiency boost true SG
-LocalWords: converter step consumption pdf balancer equalizer mppt
+LocalWords: converter step consumption pdf balancer equalizer mppt em
 LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test
 LocalWords: Charger Discharger Board Under Over Voltage Protection
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW sub
@@ -4344,6 +4474,7 @@ LocalWords: data transfer solar cut cells open short circuit voltage lim
 LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation
 LocalWords: Microinverter What are Amps Volts SMF charge discharge
-LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar
+LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
+LocalWords: Delivered Latest Downgraded shelly emeter file status returned
 LocalWords:
 -->
