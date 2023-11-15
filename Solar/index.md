@@ -1744,7 +1744,7 @@ Man kann auch eine (nutzbare) Speicherkapazität angeben, wobei ein typischer
 Wirkungsgrad für LiFePO4-Batterien von 95% und typische Wandlungsverluste
 des Ladereglers und des Wechselrichters von jeweils 94% angenommen werden.
 Implizit wird eine optimale bedarfsgerechte Lade-/Entladeregelung vorausgesetzt.
-[![Bild: Unabhängigkeitsrechner](Unabhängigkeitsrechner.png)](
+[![Bild: Unabhängigkeitsrechner](Unabhaengigkeitsrechner.png)](
 https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)
 Der Unabhängigkeitsrechner liefert auch den Anteil der Batterieentladung an der
 Stromversorgung, den man zur Ertrags- und [Wirtschaftlichkeitsberechnung von
