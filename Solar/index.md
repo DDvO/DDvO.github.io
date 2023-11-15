@@ -3259,7 +3259,7 @@ Steckersolargeräte mit oder ohne Speicher eine Nulleinspeisung realisiert.
 Der setzt einen per Modbus RS485 steuerbaren Wechselrichter voraus
 und eine per WLAN angebundene Messung des aktuellen Stromverbrauchs.
 [![Bild: ready2plugin-Stromwächter von indielux](
-ready2plugin-Stromwächter_indielux.png){:.center}](
+ready2plugin-Stromwaechter_indielux.png){:.center}](
 https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
 
 Möglichkeiten für die automatische Auslesung des Haushalts-Stromverbrauchs
