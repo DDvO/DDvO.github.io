@@ -595,8 +595,8 @@ https://www.photovoltaikforum.com/thread/97856-mythos-eigenverbrauchsoptimierung
 (anscheinend, weil sie als günstiger angesehen wird, aber ist das wirklich so?
 Ich sehe besonders beim Ertrag, weniger beim Eigenverbrauch, das Gegenteil),
 bringen sie bei Diffuslicht weniger:
-Steil geneigte Anlagen "schauen" teilweise in den dunklen Horizont, während
-flach geneigte Anlagen bei diffusem Licht mehr vom hellen Himmel "sehen".
+Steil geneigte Anlagen „schauen“ teilweise in den dunklen Horizont, während
+flach geneigte Anlagen bei diffusem Licht mehr vom hellen Himmel „sehen“.
 https://www.photovoltaikforum.com/thread/97856-mythos-eigenverbrauchsoptimierung-mit-ost-west-ausrichtung/?postID=1049926#post1049926
 -->
 [![Bild: Vergleich Ertrag bei Süd- und O-W-Ausrichtung bei 30° Dachneigung](
@@ -1416,6 +1416,54 @@ welche meist bei der Weiterverarbeitung der empfangenen Daten z.B. in der
 Hausautomatisierungs-Software [Home Assistant](https://www.home-assistant.io/)
 implementiert werden und damit höchstens sekundengenau funktionieren können.
 
+In Online-Foren hält sich hartnäckig die Falschaussage,
+der Shelly (Pro) 3EM könne nicht saldieren.
+Dabei wird was Wort „saldieren“ mit „Abrechnung mit Rücklaufsperre“ verwechselt
+&mdash; siehe dazu auch den [Abschnitt über Stromzähler](Stromzähler).
+Vermutlich hat ein scheinbarer Profi diesen Unfug aufgebracht, der dann von
+einflussreichen Leuten in ihren Blogs und YouTube-Kanälen verbreitet wurde und
+von jeder Menge Foren-Nutzern ohne Bildung und Sachverstand nachgeplappert wird.
+Richtigstellungen werden solchen Möchtegern-Experten zumeist nicht verstanden
+und stattdessen zurückgewiesen oder ignoriert. So hat auch 'IAMKlaus' folgenden
+[Kommentar zu seinem irreführenden Blog-Artikel kurzerhand zensiert](
+https://iamklaus.org/de/shelly-3em-photovoltaik-home-assistant-saldieren/?unapproved=19194&moderation-hash=9d7c46b3671d66116d98704c39b36fa7#comment-19194):
+
+> Dr. David von Oheimb<br>
+> November 19, 2023 um 19:23 Uhr
+>
+> Die Aussage “Der Shelly 3EM kann nicht saldieren – er schaut sich Phase für Phase an.”
+> ist in dieser Formulierung falsch und irreführend. Sie beruht auf einem Missverständnis, was Saldieren bedeutet.
+>
+> (Phasen-)Saldierung bedeutet nämlich schlicht und ergreifend, dass die Werte über alle drei Phasen zusammengezählt werden, wobei Einspeisung mit negativem Vorzeichen eingeht.
+> Saldieren kann man aktuelle Leistungswerte, aber auch (über die Zeit integrierte) Energiewerte.
+> Die darauf beruhende Energie-Abrechnung wird Nettomessung (engl. net metering genannt).
+>
+> Im Gegensatz dazu werden in Deutschland und einigen anderen Ländern für die Stromabrechnung meist saldierende Zähler mit (Simulation einer) Rücklaufsperre verwendet.
+> Dabei bleiben nach der Saldierung der Leistungswerte negative Werte für die Integration/Summenbildung über die Zeit unberücksichtigt – also wird für die Zeitabschnitte, bei denen man netto einspeist (also mehr erzeugt als in Summe verbraucht), nichts verrechnet.
+>
+> Ein Shelly 3EM (auch die Pro-Variante) unterstützt diese verquere Abrechnungsmethode mit Rücklaufsperre nicht. Wer sie trotzdem braucht/will, muss sie sich anderweitig zusammenbasteln, z.B. wie in diesem Artikel beschrieben.
+>
+> Aber: Selbstverständlich kann ein Shelly 3EM (auch die Pro-Variante) saldieren,
+> und je nach verwendetem Interface liefert er auch saldierte Leistungs- und Energiewerte.
+
+<!--
+Dein Kommentar wartet auf Freischaltung.
+
+https://iamklaus.org/de/shelly-3em-photovoltaik-home-assistant-saldieren/?unapproved=19198&moderation-hash=c82098ba602331ba907d9dfcbc38177f#comment-19198
+
+Dr. David von Oheimb
+November 19, 2023 um 21:27 Uhr
+
+Klaus, erst schreibst du irreführend bzgl. Saldierung,
+dann lässt du dir nicht mal was sagen und zensierst auch kommentarlos die Korrektur.
+
+Man kann daraus eigentlich nur schließen, dass du ein Möchtegern-Experte ohne Manieren bist.
+Die von dir zensierter Korrektur-Nachricht von mir steht daher nun mit passendem Kommentar auf
+https://ddvo.github.io/Solar/#Shelly3EM
+
+Dein Kommentar wartet auf Freischaltung.
+-->
+
 ### Stromzähler und Rücklaufsperre {#Stromzähler}
 
 Für den selbst erzeugten und gleichzeitig verbrauchten Strom spart man sich
@@ -1451,11 +1499,10 @@ Das damit verbundene Abrechnungsmodell heißt
 [Nettomessung](https://de.wikibrief.org/wiki/Net_metering)
 (engl. _net metering_), weil hier direkt der (über den Abrechnungszeitraum
 kumulierte) Saldo verrechnet wird.
-Damit kann man überschüssigen Strom praktisch „unter der Hand verkaufen“,,
+Damit kann man überschüssigen Strom praktisch „unter der Hand verkaufen“,
 und zwar zu dem gleichen Preis, den man auch für Strombezug bezahlen muss.
 Das ist in vielen Ländern (z.B. in den Niederlanden, Italien und USA)
 offiziell so geregelt, während es in Deutschland nicht erlaubt ist.
-
 
 Anfang 2023 [sprach sich der VDE jedoch dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
@@ -4118,7 +4165,7 @@ schön beschrieben.
 https://www.photovoltaikforum.com/thread/130146-infinisolar-v-ii-3k-modbus/?postID=3043629#post3043629
 
 Die Beschreibungen z.B. auf https://www.ebay.de/itm/275488457372 sind zwar sehr dürftig, aber
-immerhin liest man: "Mehrere programmierbare Betriebsmodi: Grid-Tie, Off-Grid und Grid-Tie mit Backup"
+immerhin liest man: „Mehrere programmierbare Betriebsmodi: Grid-Tie, Off-Grid und Grid-Tie mit Backup“
 was ich sehr interessant finde, denn sonst habe ich kein Hybridgerät gefunden, das Insel- und Netzbetrieb unterstützt.
 
 Hier gibt es mehr Informationen: https://gbc-solino.cz/headpage-de/hybrid-wechselrichter-de/infini-solar-de/
@@ -4448,8 +4495,8 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 <!--
 Local IspellDict: german8
 LocalWords: title keywords toc start refresh markdown pandoc width style margin
-LocalWords: zusammenfassung Messgeraet CC BY Std webp Ferrariszaehler
-LocalWords: Unabhaengigkeitsrechner Stromwaechter Play SDM
+LocalWords: zusammenfassung Messgeraet CC BY Std webp Ferrariszaehler IAMKlaus
+LocalWords: Unabhaengigkeitsrechner Stromwaechter Play SDM clams comment
 LocalWords: output calculation power unit rating Europe TSUN InGe DPM
 LocalWords: left right irradiance GHI buehneTop clear both png tgl RS
 LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi
