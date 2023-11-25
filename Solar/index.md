@@ -1945,101 +1945,14 @@ So stelle ich hier eine verbesserte und etwas erweiterte Version zur Verfügung.
 
 ### SolBatSim: Hochauflösende flexible Simulation {#SolBatSim}
 
-*SolBatSim*, ein selbst entwickelter Simulator, basiert auf Lastprofilen
+[*SolBatSim*](https://github.com/DDvO/SolBatSim),
+ein selbst entwickelter Simulator, basiert auf Lastprofilen
 des Stromverbrauchs mit mindestens stündlicher, aber besser minütlicher
 (oder noch höherer) Auflösung. Daher und weil er die verschiedenen
 Arten von möglichen Verlusten differenziert berücksichtigt
 kommt er auf sehr realistische Ergebnisse.
 Aufgrund seiner großen Flexibilität deckt er fast alle üblichen Situationen ab.
 Aus diesen Gründen ist er auch als Referenz für andere Simulationen verwendbar.
-
-Das [Simulator-Skript](Solar.pl) benötigt als Eingabe eine Lastprofil-Datei.
-Für die Simulation allgemeiner Haushaltssituationen
-können zum Beispiel die 74 von der Forschungsgruppe Solarspeichersysteme
-der HTW Berlin [veröffentlichen Lastprofile](
-https://solar.htw-berlin.de/elektrische-lastprofile-fuer-wohngebaeude/)
-mit 1-Minuten-Auflösung (oder gar 1-Sekunden-Auflösung) verwendet werden.
-Mit einem [Lastprofil-Skript](Lastprofil.pl) kann man aus diesen Rohdaten
-Lastprofil-Dateien wie [diese](Lastprofil_4673_kWh.csv) synthetisieren.
-
-Die zweite wichtige Eingabe sind die PV-Ertragsdaten, welche meistens
-in Stunden-Auflösung erhältlich sind, wie etwa die PV-Ertragsdaten
-von [PVGIS](https://re.jrc.ec.europa.eu/pvg_tools/de/). Von dort kann man
-für einen gegebenen Standort und eine gegebene PV-Modul-Ausrichtung
-(wahlweise für einen Abschnitt von Jahren zwischen 2005 und 2020
-oder für ein [*typisches meteorologisches Jahr*](
-https://help.valentin-software.com/pvsol/de/berechnungsgrundlagen/einstrahlung/klimadaten/))
-Solardaten wie [diese](Solardaten_1215_kWh.csv) herunterladen.
-Der Simulator kann eine oder mehrere solcher Dateien als Eingabe verwenden,
-womit sich auch eine Linearkombination von PV-Modulsträngen unterschiedlicher
-Ausrichtung, Verschattung und Leistungsparameter abbilden lässt. Jede Datei
-stellt dabei einen Strang von Modulen mit gleicher Einstrahlung dar.
-
-Die Simulation läuft normalerweise über alle Jahre mit vorhandenen PV-Daten
-und mittelt in der Ausgabe die Energie-Werte über die betrachteten Jahre.
-Sie kann aber auch beschränkt werden auf ein typisches meteorologisches Jahr
-oder auf eine bestimmte Jahresspanne, für die PV-Daten vorhanden sind.
-Außerdem kann man weiter einschränken auf eine bestimmte Monatspanne,
-Tagesspanne und/oder Stundenspanne.
-
-Für die Simulation kann das Lastprofil in einem wählbaren täglichen
-Zeitabschnitt durch eine konstante oder minimale (Grund-)Last adaptiert werden,
-ebenso der Gesamt-Jahresverbrauch aus dem Lastprofil,
-die Nennleistung jeder PV-Modulgruppe
-und weitere Parameter wie der System-Wirkungsgrad der PV-Anlage
-(resultierend aus Verlusten z.B. in den Leitungen und durch
-Verschmutzung, Eigenverschattung und Alterung der Module)
-und der Wirkungsgrad des Wechselrichters, welche als konstant angenommen werden.
-Auch eine Limitierung der Leistung einzelner Modulstränge (an MPPT-Eingängen)
-und der Wechselrichter-Gesamt-Ausgangsleistung
-(auf [z.B. 600 W](#Kappungsverlust)) wird unterstützt.
-
-Außerdem kann die Verwendung eines [Stromspeichers](#Batteriepuffer)
-simuliert werden, dessen Ladung DC- oder AC-seitig gekoppelt sein kann.
-Für jeden Strang von PV-Modulen lässt sich angeben, ob er mit dem Speicher
-gekoppelt ist oder direkt (über den Wechselrichter) ins Hausnetz einspeist.
-Parameter sind die Brutto-Kapazität, die maximale Lade- und Entladetiefe,
-die maximale Lade- und Entladerate (Leistung als Vielfaches der Kapazität/h),
-die angenommenen Wirkungsgrade der Ladung und Speicherung, sowie optional
-der Wirkungsgrad des für die Entladung verwendeten Wechselrichters.
-Zudem kann aus folgenden [weiter unten](#Batteriepuffer) näher behandelten
-Lade- und Entladestrategien gewählt werden:
-- Ladestrategie (solange die definierte Maximalladung nicht erreicht ist):
-  - Lastvorrang (optimal): Speicherung der nicht anderweitig gebrauchten
-    PV-Energie -- im Zusammenhang mit E-Fahrzeugen *Überschussladung* genannt
-  - vorrangige Speicherung (ohne Berücksichtigung der Last),
-    wobei wahlweise Strom auch teils am Speicher vorbei geleitet werden kann:
-    - für Überschuss, der nicht mehr in den Speicher passt, und/oder
-    - für eine konstante PV-Nettoleistung
-- Entladestrategie (solange die definierte Minimalladung nicht erreicht ist):
-  - lastgeregelte Einspeisung (optimal): Entnahme so viel wie zusätzlich zum PV-Ertrag gebraucht wird
-  - lastgeregelte Einspeisung, aber mit Limitierung der abgegebenen Leistung
-    (wobei die Limitierung auf ein Uhrzeit-Intervall eingeschränkt werden kann)
-  - Speicherentladung kompensiert PV-Leistung maximal auf Mindestlast-Zielwert
-    (wobei die Einspeisung auf ein Uhrzeit-Intervall eingeschränkt werden kann)
-  - Umschaltung auf Konstanteinspeisung mit Mindestlast-Zielwert, wenn die
-    PV-Leistung unterhalb eines Schwellwerts (z.B. 100 W) liegt und zudem
-    der Abstand zwischen Zielwert und PV-Leistung über dem Schwellwert liegt -
-    bei Einspeisung geht aber die PV-Leistung verloren (wie beim Anker Solix),
-    und die Einspeisung kann auf ein Uhrzeit-Intervall eingeschränkt werden
-  - Konstanteinspeisung: Entnahme einer definierten Leistung aus dem Speicher,
-    optional auf ein Uhrzeit-Intervall eingeschränkt (z.B. für Nachteinspeisung)
-
-Die Ausgabe aller Parameter und Ergebnisse erfolgt textuell im Terminal.
-Die Ergebnisse, wie z.B. die PV-Erträge und der Eigenverbrauch, sowie ggf. der
-Speicherdurchsatz usw., werden über alle simulierten Jahre gemittelt ausgegeben.
-Optional wird auch die Verteilung der PV-Leistung, Last, Netzeinspeiseleistung,
-Lade- und Entladeleistung über die 24 Stunden der Tage ausgegeben,
-und zwar gemittelt über alle Tage und als Maximalwerte für die jeweilige Stunde.
-Optional kann die Ausgabe zusätzlich in CSV-Dateien geschehen. Dann erfolgt
-zusätzlich eine tabellarische Ausgabe der wichtigsten variablen Größen:
-PV-Brutto- und Netto-Ertrag, Verbrauch, Eigenverbrauch und Netzeinspeisung,
-sowie bei Verwendung eines Speichers Ladung, Entladung und Ladezustand.
-Diese werden wahlweise in voller Auflösung (also mit je einer Zeile pro Wert
-im Lastprofil) oder über Stunden, Tage, Wochen oder Monate gemittelt ausgegeben.
-
-Der Simulator hat auch einen Testmodus für Debugging- und Demonstrationszwecke
-und kann bei Bedarf detaillierte Daten für jeden Simulationsschritt anzeigen.
 
 Für die [o.g. Beispiel-Anlage](#Berechnung) für den Raum München mit 600 Wp
 und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662 kWh
