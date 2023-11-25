@@ -1954,7 +1954,7 @@ kommt er auf sehr realistische Ergebnisse.
 Aufgrund seiner großen Flexibilität deckt er fast alle üblichen Situationen ab.
 Aus diesen Gründen ist er auch als Referenz für andere Simulationen verwendbar.
 
-Für die [o.g. Beispiel-Anlage](#Berechnung) für den Raum München mit 600 Wp
+Für die [o.g. Beispiel-Anlage](#rentabel) für den Raum München mit 600 Wp
 und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662 kWh
 ergibt sich mit dieser Simulation unter Verwendung minutengenauer Lastprofile
 ohne Speicher je nach Profil ein Eigenverbrauch von ca. 460 kWh.
@@ -2630,7 +2630,7 @@ zwar den Komplettverlust des Überschusses, führt aber dazu, dass mehr Energie
 im Haushalt nicht genutzt und stattdessen ins externe Netz abgegeben wird.
 
 Im Folgenden werden konkrete Zahlen gegeben für die
-[o.g. typische Balkonanlage mit 600 Wp](#Berechnung) gegeben, der
+[o.g. typische Balkonanlage mit 600 Wp](#rentabel) gegeben, der
 eine Pufferbatterie mit 1 kWh effektiv nutzbarer Kapazität hinzugefügt wurde.
 Dazu passt sehr gut eine 12,8 V 100 Ah LiFePO4-Batterie,
 also mit nominell 1,28 kWh Kapazität, denn davon muss man ohnehin
