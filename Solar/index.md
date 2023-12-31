@@ -604,8 +604,8 @@ PV_Vergleich_S_vs_OW_v2.png)](
 https://www.photovoltaikforum.com/core/attachment/44638-pv-vergleich-s-vs-ow-v2-pdf/)
 
 Diese Effekte werden selbst dann nicht durch eine geringere Nutzbarkeit tagsüber
-ausgeglichen, wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr nur Grundlast
-von z.B. 100 W hat:
+ausgeglichen, wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr nur eine
+[Minimallast (Grundlast)](#Verbrauchsmessung) von z.B. 100 W hat:
 Dann hat die Ost-West-Ausrichtung im Sommer einen leichten Vorteil, aber zu
 allen anderen Jahreszeiten ermöglicht die Südausrichtung mehr Eigenverbrauch.\
 Erst wenn täglich von 8 bis sogar 18 Uhr nur z.B. 50 W Grundlast vorliegt,
@@ -1188,10 +1188,10 @@ Je mehr in Haushalt tagsüber verbraucht wird, desto größer der zu erwartende
 Einsparungseffekt durch eine Anlage ohne Stromspeicher.
 Denn diese Nutzungsart lohnt sich nur insoweit, wie man während der
 Sonnenscheindauer den erzeugten Strom direkt sinnvoll verbrauchen kann.
-Am einfachsten und am besten planbar geschieht das über die sog. *Grundlast*,
-also ständig und mehr oder weniger gleichmäßig laufende Verbraucher
-wie Kühlschränke, Internetanschluss, Computerserver
-und Geräte, die im Bereitschaftsmodus (engl. _standby_) sind.
+Am einfachsten und am besten planbar geschieht das über
+ständig und mehr oder weniger gleichmäßig laufende Verbraucher
+wie Internetanschluss, Computerserver, Heizungspumpen, Lüftung, Kühlschränke,
+Klimaanlage und Geräte, die im Bereitschaftsmodus (engl. _standby_) sind.
 Darüber hinaus kann man gezielt diverse Haushaltsgeräte und Ladegeräte
 vorzugsweise dann betreiben, wenn hohe Sonneneinstrahlung vorhanden ist.
 Dazu bieten sich insbesondere Spülmaschinen, Waschmaschinen und das Laden von
@@ -1256,17 +1256,32 @@ nach Aussagen von Nutzern in Foren auch für den Shelly 1PM <!--und 3EM --> gilt
 
 {:style="clear:both"}
 
-Den Jahresverbrauch seines Haushalts erfährt man automatisch über die
-jährliche Stromabrechnung. Die Grundlast lässt sich über den Stromzähler
-relativ einfach bestimmen, indem man die Differenz der Zählerstände
-über einen Zeitraum von mehreren Stunden, zu dem sonst keine Verbraucher
-eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.
-
 Eine Übersicht von Geräten zur Messung auch der eingespeisten Strommenge findet
 sich z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
 Und ein sehr schöner Artikel zu verschiedenen Shelly-Varianten und ihrer
 Nutzung [hier](https://blog.helmutkarger.de/balkonkraftwerk-teil-6-monitoring/).
 Darin auch die Info, dass beim Shelly Plus 1PM die Genauigkeit verbessert wurde.
+
+Den Jahresverbrauch seines Haushalts erfährt man automatisch über die
+jährliche Stromabrechnung bzw. bestimmt ihn selbst durch die Differenz der
+Zählerstände im Jahresabstand.
+
+Besonders im Zusammenhang mit einer Konstanteinspeisung aus
+[Batteriespeichern](#Batteriepuffer) ist die *Minimallast* interessant,
+also der im Laufe der Zeit geringste Leistungsbezug (Verbrauch) im Haushalt.
+Dieser Wert wird gern (allerdings nicht ganz richtig)
+als [Grundlast](https://de.wikipedia.org/wiki/Grundlast) bezeichnet.\
+Die Minimallast lässt sich über den Haushalts-Stromzähler
+näherungsweise bestimmen, indem man die Differenz der Zählerstände
+über einen Zeitraum von mehreren Stunden, zu dem sonst keine Verbraucher
+eingeschaltet sind (z.B. nachts), durch die Zahl der Stunden teilt.\
+Elektronische Zähler geben meist auch einen LED-Blinkimpuls z.B. pro bezogener
+Wattstunde (Wh) ab - dann kann man die Maximalzeit in Sekunden
+zwischen zwei Impulsen nehmen und 3600s durch diesen Wert teilen.\
+Dabei sollten periodisch laufende Verbraucher wie Kühlschränke möglichst
+ausgeschaltet sein, weil sie sonst das Messergebnis nach oben verfälschen.\
+Genauer ist es, den Verlauf der aufgenommenen Leistung über mindestens einen Tag
+zu messen, wie im Folgenden beschrieben, und davon den Minimalwert zu nehmen.
 
 Der Haushalts-Stromverbrauch (ggf. abzüglich Erzeugung durch Photovoltaik)
 lässt sich auch kontinuierlich und automatisiert messen und übertragen.
