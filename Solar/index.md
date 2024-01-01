@@ -1481,8 +1481,10 @@ Dein Kommentar wartet auf Freischaltung.
 
 ### Stromzähler und Rücklaufsperre {#Stromzähler}
 
-Für den selbst erzeugten und gleichzeitig verbrauchten Strom spart man sich
-die Verbrauchskosten, weil der *Stromzähler* nur die Differenz berücksichtigt
+Für den selbst erzeugten und gleichzeitig verbrauchten Strom
+spart man sich die Verbrauchskosten, weil der
+[*Stromzähler*](https://de.wikipedia.org/wiki/Stromz%C3%A4hler)
+nur die Differenz berücksichtigt
 (jedenfalls solange sie positiv ist) und entsprechend langsamer läuft.
 Es wird also nur der aus dem Netz bezogene Anteil des Verbrauchs berechnet.
 
@@ -1496,37 +1498,64 @@ umgekehrtes Vorzeichen hat. Das hat erst mal noch nichts damit zu tun,
 wie der Zähler mit dem Fall umgeht, dass mehr Solarstrom produziert als
 in dem Moment im Haushalt verbraucht wird, dass also der Saldo negativ ist.
 
-![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.left width="400"}
 ![Bild: Symbol für Rücklaufsperre im Stromzähler](
-Ruecklaufsperre.png){:.right width="370"}
+Ruecklaufsperre.png){:.right width="130"}
 Von gewonnenen Strom fließt der Anteil, der nicht aktuell im Haushalt
 verbraucht (oder gespeichert) wird, automatisch ins allgemeine Stromnetz.
-Die in Deutschland derzeit meist verbauten Stromzähler simulieren allerdings
-für die Abrechnung eine *Rücklaufsperre*,
+Die in Deutschland inzwischen meist verbauten Stromzähler
+simulieren allerdings für die Abrechnung eine *Rücklaufsperre*,
 was man an dem entsprechenden Symbol auf dem Gehäuse erkennen kann.
 Das bedeutet, dass ein negativer Saldo bei der Summierung für die Abrechnung
 nicht berücksichtigt wird --- überschüssigen ins externe Netz eingespeisten
 Strom verschenkt man damit praktisch an den Verteilnetzbetreiber.
 
+![Bild: Zweirichtungszähler mit Pfeilen](
+Zweirichtungszaehler-Pfeile.jpg){:.right width="550"}
+Ein
+[*Zweirichtungszähler*](https://www.4motions-energy.de/zweirichtungszaehler/),
+<!--https://www.thermondo.de/info/rat/erneuerbare-energie/zweirichtungszaehler/-->
+auch *Zweiwegezähler* genannt, differenziert die Menge des eingespeisten Stroms
+(mit negativem Leistungs-Saldo) vom Netzbezug (mit positivem Leistungs-Saldo),
+was durch ein Symbol mit Pfeilen in zwei Richtungen dargestellt wird.
+Die Gesamtsumme (auch über ggf. verschiedene Tarifierungen hinweg)
+des Energie-Bezugs wird dabei in einem Register mit der [*OBIS-Kennzahl*](
+https://de.wikipedia.org/wiki/OBIS-Kennzahlen) 1.8.0 gespeichert und die
+Gesamtsumme der Einspeisung in einem anderen Register mit Kennzahl 2.8.0.\
+Das eröffnet die Möglichkeit der [*Einspeisevergütung*](
+https://de.wikipedia.org/wiki/Einspeiseverg%C3%BCtung) (mit *Einspeisetarif*).
+Eine angemeldete und vergütete Überschusseinspeisung ist möglich,
+aber zumindest in Deutschland [mit Bürokratie und Kosten verbunden](
+https://www.homeandsmart.de/balkonkraftwerk-einspeisung)
+(einmalig Anmeldung und ggf. Zählertausch für etwa 100€;
+jährlich Abrechnung, Steuererklärung, und Messstellengebühr meist 20€)
+und bringt wenig --- die Einspeisevergütung ist staatlich festgelegt,
+<!-- gemäß eEG [bis 2022 auf ca. 6 ct/kWh](
+https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
+und liegt--> [seit Anfang 2023 beträgt sie 8,2 ct/kWh](
+https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
+--- sehr mager im Vergleich zu den Marktpreisen für den Strombezug.
+
+![Bild: Ferrariszähler](Ferrariszaehler.jpg){:.right width="320"}
 Die (meisten) klassischen *Ferrariszähler* mit mechanischer Drehscheibe
-laufen hingegen einfach rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
+laufen einfach rückwärts, wenn mehr Strom erzeugt als verbraucht wird.
 Das damit verbundene Abrechnungsmodell heißt
 [Nettomessung](https://de.wikibrief.org/wiki/Net_metering)
 (engl. _net metering_), weil hier direkt der (über den Abrechnungszeitraum
 kumulierte) Saldo verrechnet wird.
 Damit kann man überschüssigen Strom praktisch „unter der Hand verkaufen“,
 und zwar zu dem gleichen Preis, den man auch für Strombezug bezahlen muss.
-Das ist in vielen Ländern (z.B. in den Niederlanden, Italien und USA)
-offiziell so geregelt, während es in Deutschland nicht erlaubt ist.
+Das ist in vielen Ländern (z.B. in den Niederlanden, Italien und USA) offiziell
+so geregelt, während es in Deutschland im Allgemeinen nicht erlaubt ist.
 
-Anfang 2023 [sprach sich der VDE jedoch dafür aus](
+Anfang 2023 [sprach sich der VDE dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
 bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
 Nach den [Solar-Plänen des dt. BMWK vom 10.03.2023](
 https://www.inside-digital.de/news/bundesregierung-plant-beseitigung-buerokratische-huerden-fuer-balkonkraftwerke)
-wollte man aber nicht so weit gehen, sondern nur
-„rückwärtsdrehende Zähler vorübergehend dulden, bis Zähler getauscht ist“.
-Es wurde aber eine Stellungnahme eingereicht mit dem Ziel, das noch zu ändern:
+wollte man allerdings nicht so weit gehen, sondern nur
+„rückwärtsdrehende Zähler vorübergehend dulden, bis Zähler getauscht ist“. Es
+wurde daraufhin eine Stellungnahme eingereicht mit dem Ziel, das noch zu ändern:
+
 > Dass nicht [...] einfach Nettomessung gemacht wird, hemmt doch sehr den Ausbau privater Solaranlagen, weil sich diese daher allein durch den Eigenverbrauch (also vermiedenen Netzbezug) amortisieren müssen, was besonders für den sehr großen Teil der Bevölkerung schwer möglich ist,  der tagsüber daheim wenig Eigenverbrauch hat. Dass überschüssiger PV-Strom an den Verteilnetzbetreiber verschenkt wird, ist ein Ärgernis für die meisten Interessenten und Anlagenbetreiber und verleitet diejenigen, die sich technisch besser auskennen, sich zumindest Gedanken über Stromspeicher mit aufladbaren Batterien zu machen, welche jedenfalls für Steckersolaranlagen  schon regelungstechnisch unverhältnismäßig aufwendig sowie ökonomisch und ökologisch unsinnig bis kontraproduktiv sind.
 
 > Daher zum Ziel der schnelleren und noch wesentlich weiteren Verbreitung kleiner privater PV-Anlagen unser Plädoyer, für Anlagen bis zur Bagatellgrenze von 800 VA die Nettomessung einzuführen.
@@ -1549,22 +1578,6 @@ https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-202
 heißt es darüber hinaus:
 > Ein dauerhafter Betrieb der Balkon-PV-Anlage hinter rückwärtsdrehenden Zählern sowie eine Ausweitung dieser Regelung auf leistungsstärkere PV-Anlagen ist nicht geplant und wäre auch nicht sachgerecht.
 
-
-Ein [*Zweirichtungszähler*](
-https://www.thermondo.de/info/rat/erneuerbare-energie/zweirichtungszaehler/),
-auch *Zweiwegezähler* genannt, kann die Menge des eingespeisten Stroms
-unabhängig vom Bezug messen, was die Möglichkeit der Vergütung eröffnet.
-Eine angemeldete und vergütete Überschusseinspeisung ist möglich, aber zumindest
-in Deutschland [mit unverhältnismäßig viel Bürokratie und Kosten verbunden](
-https://www.homeandsmart.de/balkonkraftwerk-einspeisung)
-(einmalig Anmeldung und ggf. Zählertausch für etwa 100€;
-jährlich Abrechnung, Steuererklärung, und Messstellengebühr meist 20€)
-und bringt wenig --- die Einspeisevergütung ist staatlich festgelegt,
-<!-- gemäß eEG [bis 2022 auf ca. 6 ct/kWh](
-https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
-und liegt--> [seit Anfang 2023 beträgt sie 8,2 ct/kWh](
-https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
---- sehr mager im Vergleich zu den Marktpreisen für den Strombezug.
 
 Eigenverbrauch und seine Berechnung {#Eigenverbrauch}
 -----------------------------------------------------
@@ -4441,7 +4454,7 @@ LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs
 LocalWords: blackout brownout panels busbars shingle panel up number
 LocalWords: maximum point tracking sine wave efficiency boost true SG
 LocalWords: converter step consumption pdf balancer equalizer mppt em
-LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test
+LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test br
 LocalWords: Charger Discharger Board Under Over Voltage Protection
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW sub
 LocalWords: telemetry gateway distort cell document sections profile
@@ -4460,5 +4473,6 @@ LocalWords: Bestrahlungsstaerke curves under different levels irradiation
 LocalWords: Microinverter What are Amps Volts SMF charge discharge
 LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
 LocalWords: Delivered Latest Downgraded shelly emeter file status returned
+LocalWords:  Zweirichtungszaehler
 LocalWords:
 -->
