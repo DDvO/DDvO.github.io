@@ -2053,7 +2053,9 @@ https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), „den
 Schuko-Stecker für die Einspeisung [...] zu dulden“, und [das BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
 will „Schukostecker als Energiesteckvorrichtung ebenfalls zulassen“,
-was vsl. ab Anfang 2024 gesetzlich geregelt ist.
+was vsl. [im Laufe des Jahres 2024](
+https://www.dke.de/de/arbeitsfelder/energy/news/produktnorm-fuer-steckerfertige-pv-anlagen)
+offiziell geregelt wird.
 
 ![Bild: Wieland-Unterputz-Dose](Wieland-Unterputz-Dose.png){:.right width="450"}
 Man kann aber auch, wie vom VDE bislang empfohlen, eine spezielle
@@ -2084,14 +2086,19 @@ Anfang März 2023 startete eine Petition für die
 und auch die [PV-Strategie 2023 des dt. BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
 will „die Grenze auf 800 VA Wechselstromleistung zu erhöhen“.\
-Nach Informationen der DGS wird sich die Erhöhung der Obergrenze in Deutschland
-noch bis mindestens Sommer 2024, wahrscheinlich eher Herbst 2024 hinziehen.
+Die Erhöhung der Obergrenze in Deutschland, wobei der [VDE federführend ist](
+https://www.dke.de/de/arbeitsfelder/energy/news/produktnorm-fuer-steckerfertige-pv-anlagen),
+wird [sich noch hinziehen](https://youtu.be/gi36KzH5VhA), nach Informationen
+der DGS noch bis mindestens Sommer 2024, wahrscheinlich eher Herbst 2024.
 
 In Deutschland sind PV-Anlagen anmeldepflichtig, wenn sie ins externe Netz
-einspeisen können, wobei der Aufwand für Steckersolargeräte nicht groß ist.
-Ab vsl. Anfang 2024 müssen Steckersolargeräte auch nicht mehr beim Netzbetreiber
-angemeldet werden, aber weiterhin bei der Bundesnetzagentur im
-[Marktstammdatenregister (MaStR)](https://www.marktstammdatenregister.de/MaStR).
+einspeisen können.
+Für Steckersolargeräte ist der Aufwand der Online-Registrierung im
+[Marktstammdatenregister (MaStR)](https://www.marktstammdatenregister.de/MaStR)
+der Bundesnetzagentur gering.
+Eigentlich sollte ab Anfang 2024 die ihre zusätzliche Anmeldung beim
+Netzbetreiber entfallen, aber das hat sich [erst einmal verzögert](
+https://www.giga.de/news/neue-regeln-fuer-2024-balkonkraftwerk-besitzer-muessen-weiter-warten/).
 
 Nach einem [Artikel im pv magazine von 2022](
 https://www.pv-magazine.de/2022/02/24/markt-groesser-als-gedacht-rund-190-000-stecker-solar-geraete-bereits-installiert/)
@@ -3833,7 +3840,9 @@ Erfreulicherweise sieht die [PV-Strategie 2023 des dt. BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
 „einen Anspruch auf Zustimmung für den Betrieb eines Steckersolargerätes“ vor.
 -->
-Voraussichtlich Anfang 2024 werden Steckersolargeräte in den [Katalog
+Voraussichtlich [im zweiten Quartal 2024](
+https://www.computerbild.de/artikel/cb-News-Energie-Bundeskabinett-Balkonkraftwerk-Wohnung-Privileg-36684829.html)
+werden Steckersolargeräte in den [Katalog
 privilegierter Maßnahmen im Wohnungseigentumsgesetz und im BGB aufgenommen](
 https://www.bmj.de/SharedDocs/Pressemitteilungen/DE/2023/0913_WEG.html).
 Vermieter und WEGs können dann Balkonkraftwerke u.ä. nicht mehr ablehnen,
