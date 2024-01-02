@@ -1811,8 +1811,8 @@ PV-Module mit Südausrichtung, 35° Anstellwinkel (Neigung) und ohne Verschattun
 [![Bild: Stecker-Solar-Simulator](Stecker-Solar-Simulator.png)](
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
 Beide Simulationen nutzen intern Daten der Wetterstation Lindenberg bei Berlin
-aus dem Jahr 2017 ---
-für Süddeutschland kann man also 10-15% mehr PV-Leistung ansetzen. Als Eingabe
+aus dem Jahr 2017, in dem die Sonneneinstrahlung schwächer als normal war ---
+für Süddeutschland kann man also gut 15% mehr PV-Leistung ansetzen. Als Eingabe
 verwenden sie den >Jahresstromverbrauch (mit einer typischen Lastverteilung) und
 die PV-Nennleistung (mit einem spezifischen PV-Jahresertrag von 1024 kWh/kWp).
 Man kann auch eine (nutzbare) Speicherkapazität angeben, wobei ein typischer
@@ -1857,22 +1857,34 @@ eines Stromspeichers ändern.
 
 [![Bild: PVTool@AkkuDoktor.png Ergebnis](PVTool@AkkuDoktor.png)](
 https://pvtools.sektorsonne.de/) <!-- Andreas Schmitz -->
-Für Speicher wird stillschweigend und nicht änderbar AC-Kopplung angenommen.
-Leider sind die Ergebnisse v.A. ohne Speicher und bei kleineren Speichergrößen
-deutlich zu optimistisch. Dafür gibt es (mindestens) folgende Gründe:
-* Vor Allem wird das [Standard-Haushalts-Lastprofil H0 des VDEW](
+Inzwischen kann man für die Simulation ein eigenes Lastprofil
+(allerdings nur in Stundenauflösung) hochladen und verwenden lassen.\
+Für Speicher wird stillschweigend vermutlich [AC-Kopplung](#Ladung) angenommen
+sowie eine optimale lastbasierte Lade- und Entladestrategie.\
+<!-- Es werden keine Speicherverluste berücksichtigt.-->
+Die Lade- und Entlade-Wirkungsgrade der Speicherbatterie (inkl. Verluste während
+der Speicherzeit) werden standardmäßig unrealistisch hoch angenommenen (99%),
+was man aber in den erweiterten Einstellungen anpassen kann.\
+Standardmäßig wird die Lade- und Entladeleistung etwas praxisfern nicht begrenzt,
+was sich aber ebenfalls in den erweiterten Einstellungen korrigieren lässt.
+
+Bis Anfang Dezember 2023 waren die Simulationsergebnisse v.A. ohne Speicher
+und bei kleineren Speicherkapazitäten deutlich zu optimistisch.
+Das lag v.A. daran, dass das [Standard-Haushalts-Lastprofil H0 des VDEW](
 https://www.bdew.de/energie/standardlastprofile-strom/) (inzwischen: BDEW)
-  von 1996/97 verwendet, und das auch nur in Stundenauflösung
-  statt in der verfügbaren 15-minütigen Auflösung.
-  Damit können keinerlei Lastspitzen berücksichtigt werden,
-  wozu mindestens Minutenauflösung (besser: Sekundenauflösung) benötigt wird.\
-  Leider kann man auch kein eigenes (individuelles) Lastprofil verwenden.
-* Es werden keine Speicherverluste berücksichtigt.
-* Die Lade- und Entlade-Wirkungsgrade für den Speicher werden standardmäßig
-  unrealistisch hoch angenommenen,
-  was man aber in den erweiterten Einstellungen anpassen kann.
-* Standardmäßig wird die Lade- und Entladeleistung nicht begrenzt,
-  wobei man das ebenfalls in den erweiterten Einstellungen korrigieren kann.
+von 1996/97 verwendet wurde, und zwar auch nur in Stundenauflösung
+(statt in der verfügbaren 15-minütigen Auflösung).
+Damit konnten keinerlei Lastspitzen berücksichtigt werden,
+wozu mindestens Minutenauflösung (besser: Sekundenauflösung) benötigt wird.\
+Das wurde nun [deutlich verbessert](
+https://www.akkudoktor.net/2023/12/11/pv-tool-grosses-update/).
+Stand Anfang 2024 gibt es allerdings noch
+[Unklarheiten z.B. bei den Wirkungsgraden](
+https://github.com/nick81nrw/PVTools/issues/11#issuecomment-1858879387),
+[Merkwürdigkeiten wie kleine nächtliche PV-Erträge und konstante Netzbezüge](
+https://github.com/nick81nrw/PVTools/issues/37) und
+[eindeutige Fehler](https://github.com/nick81nrw/PVTools/issues/47).
+
 
 #### brodsoft Stromverlauf {#brodsoft}
 
@@ -4473,6 +4485,6 @@ LocalWords: Bestrahlungsstaerke curves under different levels irradiation
 LocalWords: Microinverter What are Amps Volts SMF charge discharge
 LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
 LocalWords: Delivered Latest Downgraded shelly emeter file status returned
-LocalWords:  Zweirichtungszaehler
+LocalWords: Zweirichtungszaehler issuecomment
 LocalWords:
 -->
