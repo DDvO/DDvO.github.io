@@ -204,8 +204,8 @@ Lizenzkürzel:
     -   [Ökonomisch orientierte PV-Rechner](#PV-Rechner)
     -   [SolBatSim: Hochauflösende flexible Simulation](#SolBatSim)
 -   [Nutzungsvarianten](#Nutzung)
-    -   [Direkte Netzeinspeisung (Steckersolargerät (SSG), „Balkonkraftwerk“)](#SSG)
-        - [Beschränkung auf 600 bzw. 800 W und ihre Gründe](#Bagatellgrenze)
+    -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](#SSG)
+        - [Hintergrund der Beschränkung auf 600 bzw. 800 W](#Bagatellgrenze)
         - [Kappungsverlust durch Drosselung auf 600 W](#Kappungsverlust)
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
         - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
@@ -2032,7 +2032,7 @@ Man kann gerade nicht benötigten PV-Strom auch in einer Batterie
 zwischenspeichern, was ein Abschnitt [weiter unten](#Batteriepuffer) behandelt,
 der auch erklärt, dass sich das in den seltensten Fällen lohnt.
 
-### Direkte Netzeinspeisung (Steckersolargerät (SSG), „Balkonkraftwerk“) {#SSG}
+### Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“) {#SSG}
 
 ![Bild: Solaranlage am Balkon](Balkonsolaranlage.jpg){:.left width="400"}
 ![Bild: Aufbau Balkonkraftwerk](Balkonkraftwerk.jpg){:.right width="378"}
@@ -2134,7 +2134,7 @@ Bei etwa 1/3 der Anlagen befinden sich die PV-Module auf oder an einem Balkon;
 bei etwa der Hälfte werden die Module z.B. auf einem Flachdach oder im Garten
 aufgeständert.
 
-#### Beschränkung auf 600 bzw. 800 W und ihre Gründe {#Bagatellgrenze}
+#### Hintergrund der Beschränkung auf 600 bzw. 800 W {#Bagatellgrenze}
 
 Die Hauptgründe für die Leistungsbegrenzung bei der Einspeisung von PV-Strom
 sind nicht, wie von vielen angenommen,
