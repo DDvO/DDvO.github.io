@@ -1301,7 +1301,8 @@ eine schöne Anleitung.<!--, aber auch für andere
 [Smarthome-Projekte](https://hessburg.de/category/technik/smarthome/).-->
 
 
-![Bild: Shelly Pro 3EM mit Clips](Shelly-Pro-3EM-clams.png){:.right width="200"}
+![Bild: Shelly Pro 3EM mit Clips](Shelly-Pro-3EM.png){:.right width="140"}
+![Bild: Shelly Pro 3EM Klappwandler](Shelly-clams.png){:.right width="150"}
 * Alternativ kann man ein 3-Phasen-Energiemessgerät wie das
 [Shelly 3EM](https://www.shelly.com/de/products/shop/shelly-3em-1) verwenden
 oder das etwas teurere, aber wohl genauere
@@ -1355,8 +1356,8 @@ so dass es (noch?) nicht so funktioniert wie es soll.
 Die [Einbau-Anleitung des Herstellers](
 https://kb.shelly.cloud/__attachments/63832224/User%20and%20Safety%20Guide%20-%20Multi%20language)
 Allterco Robotics ist etwas unklar und teils unpassend:
-Obwohl es nicht so aussieht, muss der Neutralleiter (N) auf jeden Fall (auch zur
-Stromversorgung) angeschlossen werden, während die beim 3EM vorhandenen
+Obwohl es nicht so aussieht, muss der Neutralleiter (N) auf jeden Fall (auch
+zur Stromversorgung) angeschlossen werden, während die beim 3EM vorhandenen
 Anschlüsse I und O für die Relais-Schaltung eines externen Geräts optional sind.
 Und zumindest bei manchen 3EM muss der auf den Stromwandlern dargestellte Pfeil
 entgegen der Anleitung zum externen Netz zeigen, nicht zum Haushalt &mdash;
@@ -1371,15 +1372,15 @@ bzw. mit der [Shelly Cloud](https://control.shelly.cloud) verbunden wird, kann
 man sich alle möglichen Daten über die angeschlossenen Phasen ausgeben lassen.
 
 <!--https://www.mydealz.de/comments/permalink/44495110-->
-Leider ist auch allgemein
-die Shelly [Online-Dokumentation](https://kb.shelly.cloud/knowledge-base/)
-nicht besonders professionell, sondern etwas chaotisch und unvollständig,
-so dass man dort relevante Informationen schwer und teils gar nicht findet,
-und teils ist sie einfach irreführend oder zumindest veraltet.
+Obwohl die Shelly [Online-Dokumentation](https://kb.shelly.cloud/knowledge-base/)
+deutlich besser ist als im Bereich Heimautomatisierung üblich, kann man sie
+nicht wirklich professionell nennen, sondern etwas chaotisch und unvollständig,
+weil man dort relevante Informationen schwer und teils gar nicht findet,
+und teilweise ist sie einfach irreführend oder zumindest veraltet.\
 So habe ich nur über [einen Forums-Beitrag](
 https://www.shelly-support.eu/forum/thread/16822-3-em-keine-csv-datei-gesamtverbrauch-mehr-zum-download/?postID=174227#post174227)
-herausgefunden, dass der 3EM seit April 2022 keine saldierten Daten mehr
-speichert bzw. sie nicht mehr als CSV-Datei ausgeben kann,
+herausgefunden, dass der 3EM seit April 2022 keine über die drei Phasen
+aufsummierten Daten mehr speichert bzw. sie nicht mehr als CSV-Datei ausgibt,
 obwohl das in der &mdash; offenbar veralteten &mdash; [Dokumentation](
 https://www.shelly-support.eu/attachment/5469-shell3em-data-export-pdf/)
 anders behauptet wird. Man kann aber über ein
@@ -1393,77 +1394,62 @@ Delivered version: 20220415-105853/v1.11.7-25-gb3b096857-v1.11.7-3em
 Latest version: 20230913-114244/v1.14.0-gcb84623
 Downgraded version: 20220324-123835/v1.11.8-3EM-fix-g0014dcb
 -->
-Danach bekommt man wieder über das lokale Web-Interface
-(``http://lokale-IP-Adresse-des-3EM/emeter/3/em_data.csv``)
-wieder Gesamt-Verbrauchsdaten über die drei Phasen,
-und zwar für den aktuellen Tag und den Vortag sogar in Minutenauflösung,
-aber für die weiteren bis zu 365 Tage davor nur in 10-Minuten-Auflösung.
+Danach bekommt man über das lokale Web-Interface
+(``http://lokale-IP-Adresse-des-3EM/emeter/3/em_data.csv``) wieder
+die über alle drei Phasen aufsummierte importierte und exportierte Energie.\
+Wobei man diese Art der Summierung auch selbst durchführen kann,
+indem man zeilenweise die jeweils drei entsprechenden Werte
+in den einzeln pro Phase exportierbaren CSV-Dateien zusammenzählt.
 
-Um ein minutengenaues Haushalts-Lastprofil etwa für ein ganzes Jahr zu erhalten,
-kann man z.B. unter Linux einen sog. _cron job_ einrichten,
-der die Datei täglich speichert.
+Auf welchem der diversen Shelly-Interfaces auch immer man Energiedaten bezieht,
+sie sind immer nur getrennt für jede einzelne der drei Phasen aufsummiert.
+Das hilft einem nicht, wenn man eigentlich an den Riemann-Summen
+des positiven und des negativen Leistungs-Saldos interessiert ist,
+also an der über die Zeit hinweg bezogenen und eingespeisten Energie,
+wie sie ein [Zweirichtungszähler](#Stromzähler) liefert.\
+Dabei hält sich in Online-Foren hartnäckig die etwas irreführende Aussage,
+der Shelly (Pro) 3EM könne nicht saldieren bzw. tue dies falsch.
+Dies ist in der Hinsicht unrichtig, dass dabei was Wort „saldieren“
+mit der Zweiwege-Energie-Summation des Leistungs-Saldos verwechselt wird.
+Das Gerät und die Interfaces von Shelly können sehr wohl die momentane Leistung
+saldieren, aber die Riemann-Summenbildung (also Akkumulation der Leistungswerte
+über die Zeit) geschieht leider nur getrennt für jede der drei Phasen.
 
-Über ``http://lokale-IP-Adresse-des-3EM/status`` kann man auch sekündlich
-aktualisierte Statusdaten über das Gerät und die angeschlossenen Phasen bekommen
-(inklusive der saldierten aktuellen Gesamtleistung und
-dem bisherigen Netzbezug pro Phase und der bisherigen Einspeisung pro Phase).
-
-<!--https://www.mydealz.de/comments/permalink/44495110-->
-Es gibt eine web-(REST/MQTT)-API-Dokumentation für den [3EM](
-https://shelly-api-docs.shelly.cloud/gen1/#shelly-3em-emeter-index-em_data-csv),
-den [Pro 3EM](
-https://shelly-api-docs.shelly.cloud/gen2/ComponentsAndServices/EMData#csv-file-download)
-und ähnliche Produkte, wo auch einigermaßen das Format
-und die Bedeutung der vom Gerät gelieferten CSV-Daten beschrieben ist.
-Man findet aber keine klaren Hersteller-Informationen, wie und in welcher
-zeitlichen Auflösung die z.B. über ``/status`` gelieferten phasenweisen
-Energiedaten ``total`` und ``total_returned`` intern akkumuliert werden (wohl
-im Sekundentakt und phasenweise getrennt für positive und negative Werte).
-Eine sehr fundierte Frage zur genauen Bedeutung der gelieferten Werte wurde
-(bezogen auf den Pro 3EM) [im Shelly-Forum gestellt](
-https://www.shelly-support.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/https://www.shelly-support.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/?postID=222899#post222899),
-verbunden mit dem Wunsch sehr vieler Nutzer, die Saldierung mit Rücklaufsperre
-(wie sie in Deutschland und einigen anderen Ländern leider üblich ist,
-siehe [unten](#Stromzähler)) zu unterstützen.
-Dieser Wunsch wird von Allterco Robotics seit Jahren ignoriert, so dass man auf
-Software-Basteleien angewiesen ist &mdash; dazu gibt es verschiedenste Varianten,
-welche meist bei der Weiterverarbeitung der empfangenen Daten z.B. in der
-Hausautomatisierungs-Software [Home Assistant](https://www.home-assistant.io/)
-implementiert werden und damit höchstens sekundengenau funktionieren können.
-
-In Online-Foren hält sich hartnäckig die Falschaussage,
-der Shelly (Pro) 3EM könne nicht saldieren.
-Dabei wird was Wort „saldieren“ mit „Abrechnung mit Rücklaufsperre“ verwechselt
-&mdash; siehe dazu auch den [Abschnitt über Stromzähler](Stromzähler).
+<!--
 Vermutlich hat ein scheinbarer Profi diesen Unfug aufgebracht, der dann von
 einflussreichen Leuten in ihren Blogs und YouTube-Kanälen verbreitet wurde und
 von jeder Menge Foren-Nutzern ohne Bildung und Sachverstand nachgeplappert wird.
 Richtigstellungen werden solchen Möchtegern-Experten zumeist nicht verstanden
-und stattdessen zurückgewiesen oder ignoriert. So hat auch 'IAMKlaus' folgenden
+und stattdessen zurückgewiesen oder ignoriert.
+-->
+
+<!--
+So hat auch der semikommerzielle 'IAMKlaus' folgenden
 [Kommentar zu seinem irreführenden Blog-Artikel kurzerhand zensiert](
 https://iamklaus.org/de/shelly-3em-photovoltaik-home-assistant-saldieren/?unapproved=19194&moderation-hash=9d7c46b3671d66116d98704c39b36fa7#comment-19194):
 
-> Dr. David von Oheimb<br>
-> November 19, 2023 um 19:23 Uhr
->
-> Die Aussage “Der Shelly 3EM kann nicht saldieren – er schaut sich Phase für Phase an.”
-> ist in dieser Formulierung falsch und irreführend. Sie beruht auf einem Missverständnis, was Saldieren bedeutet.
->
-> (Phasen-)Saldierung bedeutet nämlich schlicht und ergreifend, dass die Werte über alle drei Phasen zusammengezählt werden, wobei Einspeisung mit negativem Vorzeichen eingeht.
-> Saldieren kann man aktuelle Leistungswerte, aber auch (über die Zeit integrierte) Energiewerte.
-> Die darauf beruhende Energie-Abrechnung wird Nettomessung (engl. net metering genannt).
->
-> Im Gegensatz dazu werden in Deutschland und einigen anderen Ländern für die Stromabrechnung meist saldierende Zähler mit (Simulation einer) Rücklaufsperre verwendet.
-> Dabei bleiben nach der Saldierung der Leistungswerte negative Werte für die Integration/Summenbildung über die Zeit unberücksichtigt – also wird für die Zeitabschnitte, bei denen man netto einspeist (also mehr erzeugt als in Summe verbraucht), nichts verrechnet.
->
-> Ein Shelly 3EM (auch die Pro-Variante) unterstützt diese verquere Abrechnungsmethode mit Rücklaufsperre nicht. Wer sie trotzdem braucht/will, muss sie sich anderweitig zusammenbasteln, z.B. wie in diesem Artikel beschrieben.
->
-> Aber: Selbstverständlich kann ein Shelly 3EM (auch die Pro-Variante) saldieren,
-> und je nach verwendetem Interface liefert er auch saldierte Leistungs- und Energiewerte.
+Dr. David von Oheimb<br>
+November 19, 2023 um 19:23 Uhr
+
+Die Aussage “Der Shelly 3EM kann nicht saldieren – er schaut sich Phase für Phase an.”
+ist in dieser Formulierung falsch und irreführend. Sie beruht auf einem Missverständnis, was Saldieren bedeutet.
+
+(Phasen-)Saldierung bedeutet nämlich schlicht und ergreifend, dass die Werte über alle drei Phasen zusammengezählt werden, wobei Einspeisung mit negativem Vorzeichen eingeht.
+Saldieren kann man aktuelle Leistungswerte, aber auch (über die Zeit integrierte) Energiewerte.
+Die darauf beruhende Energie-Abrechnung wird Nettomessung (engl. net metering genannt).
+
+Im Gegensatz dazu werden in Deutschland und einigen anderen Ländern für die Stromabrechnung meist saldierende Zähler mit (Simulation einer) Rücklaufsperre verwendet.
+Dabei bleiben nach der Saldierung der Leistungswerte negative Werte für die Integration/Summenbildung über die Zeit unberücksichtigt – also wird für die Zeitabschnitte, bei denen man netto einspeist (also mehr erzeugt als in Summe verbraucht), nichts verrechnet.
+
+Ein Shelly 3EM (auch die Pro-Variante) unterstützt diese verquere Abrechnungsmethode mit Rücklaufsperre nicht. Wer sie trotzdem braucht/will, muss sie sich anderweitig zusammenbasteln, z.B. wie in diesem Artikel beschrieben.
+
+Aber: Selbstverständlich kann ein Shelly 3EM (auch die Pro-Variante) saldieren,
+und je nach verwendetem Interface liefert er auch saldierte Leistungs- und Energiewerte.
+
+Dein Kommentar wartet auf Freischaltung.
+-->
 
 <!--
-Dein Kommentar wartet auf Freischaltung.
-
 https://iamklaus.org/de/shelly-3em-photovoltaik-home-assistant-saldieren/?unapproved=19198&moderation-hash=c82098ba602331ba907d9dfcbc38177f#comment-19198
 
 Dr. David von Oheimb
@@ -1477,7 +1463,163 @@ Die von dir zensierter Korrektur-Nachricht von mir steht daher nun mit passendem
 https://ddvo.github.io/Solar/#Shelly3EM
 
 Dein Kommentar wartet auf Freischaltung.
+
 -->
+
+<!--
+https://iamklaus.org/de/shelly-3em-photovoltaik-home-assistant-saldieren/?unapproved=20657&moderation-hash=fe65b3c618fb45edb3e83b77be383ea4#comment-20657
+https://iamklaus.org/de/shelly-3em-photovoltaik-home-assistant-saldieren/#comment-20657
+
+Peter
+January 5, 2024 um 07:11 Uhr
+
+Vielen Dank für den YAML Code und die Anleitung!
+Ich hatte allerdings erst mal das Problem, dass es in meiner einfachen Docker-basierten Installation des Home Assistant Installation in den Settings keinen Menüpunkt für Add-ons gibt, weil sie dort gar nicht unter\
+stützt werden!
+Ich habe dann erst einmal versucht, eine mächtigere Installation zu verwenden, bis ich feststellen musste, dass Ubuntu von HA nicht unterstützt wird :-(
+Aber ich konnte die Datei ‘configuration.yaml’ auf meinem Ubuntu-System finden und direkt editieren.
+Bitte erwähne diese Möglichkeit in deiner Anleitung.
+
+IAMKLAUS
+January 5, 2024 um 11:08 Uhr
+
+Das stimmt. Als reine Docker-Version ist Home Assistant leider nicht sinnvoll nutzbar. Das bezieht sich aber nicht nur auf die Nutzung von Addons, sondern vielem mehr.
+
+
+Peter
+January 5, 2024 um 14:21 Uhr
+
+Außer dass es etwas umständlicher ist, HA über die Datei ‘configuration.yaml’ zu konfigurieren, bin ich bislang mit dem Möglichkeiten und dem Funktionsumfang von HA zufrieden.
+
+Wäre echt gut, wenn du zumindest kurz erwähnst, dass das (allerdings mit gewissen Einschränkungen) auch möglich ist. Deine Konfiguration hier geht jedenfalls auch in der Docker-Version (Home Assistant Container).
+
+Dein Kommentar wartet auf Freischaltung.
+-->
+
+<!--
+https://iamklaus.org/de/shelly-3em-photovoltaik-home-assistant-saldieren/?unapproved=20658&moderation-hash=d7a7099405d506a675f633351a06b899#comment-20658
+https://iamklaus.org/de/shelly-3em-photovoltaik-home-assistant-saldieren/#comment-20658
+
+Peter
+January 5, 2024 um 07:23 Uhr
+
+Ja, das ist mir auch aufgefallen.
+Zwischen
+
+% if (states(‘sensor.power_export’)|float(0)) > 0 and (states(‘sensor.power_solargen’)|float(0) – states(‘sensor.power_export’)|float(0)) 0 and (states(‘sensor.power_solargen’)|float(0) – states(‘sensor.power_export’)|float(0)) > 0 %}
+
+fehlt eine Zeile.
+Ich würde da einfach
+{{ 0 }}
+einfügen, weil die erste Bedingung eigentlich gar nicht erfüllt werden kann.
+Denn wie könnte der Export größer werden als die Solarerzeugung?
+Höchstens, wenn noch irgendeine andere Erzeugung stattfindet.
+
+
+
+IAMKLAUS
+January 5, 2024 um 12:22 Uhr
+
+Hi Christian, wenn im if-Zweig nichts ausgeführt wird, dann setzt HA automatisch eine “0”. Ich habe ein {{0}} eingefügt, falls andere auch über den Punkt stolpern und sich fragen ob das funktioniert.
+
+
+Das wurde schon bzgl. der originalen Implementierung diskutiert.
+Ihr Autor 'uksa007' nennt Gründe, warum er diesen merkwürdigen Fall berücksichtigt.
+In diesem Fall wird ein leerer String produziert, der dann zu einem Fehler führt, so dass nichts ausgegeben wird.
+Siehe https://community.home-assistant.io/t/shelly-3em-3-phase-net-metering-templates-for-import-export-and-consumption/390237/54 und die (erst mal eingeklappte) Antwort von 'tamorix'.
+-->
+
+Ein weiteres Problem bei den auf dem Shelly 3EM gespeicherten und über das
+einfache Shelly-Browser-Interface exportierbaren Daten ist ihre geringe
+zeitliche Detaillierung:
+Für den aktuellen Tag und den Vortag immerhin in Minutenauflösung,
+aber für die weiteren bis zu 365 Tage davor nur in 10-Minuten-Auflösung.\
+Um ein minutengenaues Haushalts-Lastprofil etwa für ein ganzes Jahr zu erhalten,
+kann man z.B. unter Linux einen sog. _cron job_ einrichten,
+der die Datei täglich speichert.
+Wenn auf mindestens einer der gemessenen Phasen Stromerzeugung z.B. über ein
+Balkonkraftwerk stattfindet, muss man zur Bestimmung des Haushalts-Verbrauchs
+noch die über die jeweiligen Zeitabschnitte produzierte Energie dazuzählen,
+weil das Energiemessgerät nur die Differenz aus Verbrauch und Erzeugung erfasst.
+
+Über das REST- und MQTT-Interface (z.B. über den HTTP-Endpunkt
+``http://lokale-IP-Adresse-des-3EM/status``) kann man sekündlich
+aktualisierte Statusdaten über das Gerät und die angeschlossenen Phasen beziehen
+(inklusive der saldierten aktuellen Gesamtleistung und
+dem bisherigen Netzbezug pro Phase und der bisherigen Einspeisung pro Phase)
+und weiterverarbeiten, etwa mit [diesem Perl-Skript](
+https://github.com/DDvO/SolBatSim/blob/master/3em_data_collect.pl).
+Damit kann man auch parallel die Statusdaten eines Shelly Plus 1PM über den
+HTTP-Endpunkt ``http://lokale-IP-Adresse-des-1EM//rpc/Shelly.GetStatus``)
+auslesen, der am Wechselrichter einer kleinen PV-Anlage (Balkonkraftwerk o.ä.)
+angeschlossen ist, und damit sowohl Verbrauch als auch Erzeugung protokollieren.
+Es ist auch zur Bestimmung der importierten und exportierten Energie (wie mit
+einen Zweiwegezähler) und zur Erzeugung von Ertrags- und Lastprofilen geeignet.\
+Allerdings muss das Skript zur Protokollierung ständig laufen (wobei es eine
+gewisse Robustheit gegen zeitweise Hänger und Neustarts hat), und bei den
+HTTP-Verbindungen gibt es immer mal wieder Aussetzer von ein paar Sekunden,
+welche dann per Interpolation der Last und Erzeugungsleistung abgefangen werden.
+
+Eine etwas einfacher nutzbare und robustere Alternative ist die Verwendung der
+Hausautomatisierungs-Software [Home Assistant](https://www.home-assistant.io/),
+welche z.B. auf einem Mikrocontroller oder einem Heimserver ständig laufen kann.
+Die Konfiguration mit YAML und Programmierung mit einer eingeschränkten Variante
+von Python ist allerdings extrem mühsam, besonders die Fehlersuche (Debugging).
+Über sog. [File Notifications](https://www.home-assistant.io/integrations/file/)
+kann man sich alle möglichen Sensordaten maximal im Sekundentakt auslesen und
+z.B. als CSV-Datei abspeichern, wie z.B. in dieser [YAML-Konfiguration](
+https://github.com/DDvO/SolBatSim/blob/master/configuration.yaml) definiert.
+Diese Konfiguration bietet ebenfalls
+* die sekundenweise
+Protokollierung der wichtigsten Lastdaten und der PV-Erzeugungsleistung,
+* die Erzeugung eines minutenweisen Ertrags- und Lastprofils, sowie
+* die Bestimmung und stundenweise Protokollierung der verbrauchten und erzeugten
+Energie, des Eigenverbrauchs, der Gesamt-Energiebilanz, sowie der importierten
+und exportierten Energie, wie sie auch von einen Zweiwegezähler geliefert wird.
+
+<!--https://www.mydealz.de/comments/permalink/44495110-->
+Es gibt eine web-(REST/MQTT)-API-Dokumentation für den [3EM](
+https://shelly-api-docs.shelly.cloud/gen1/#shelly-3em-emeter-index-em_data-csv),
+den [Pro 3EM](
+https://shelly-api-docs.shelly.cloud/gen2/ComponentsAndServices/EMData#csv-file-download)
+und ähnliche Produkte, wo auch einigermaßen das Format
+und die Bedeutung der vom Gerät gelieferten CSV-Daten beschrieben ist.
+Man findet aber keine klaren Hersteller-Informationen, wie und in welcher
+zeitlichen Auflösung die z.B. über ``/status`` gelieferten phasenweisen
+Energiedaten ``total`` und ``total_returned`` intern akkumuliert werden, nämlich
+phasenweise getrennt für positive und negative Werte und wohl im Sekundentakt.\
+Eine sehr fundierte Frage zur genauen Bedeutung der gelieferten Werte wurde
+(bezogen auf den Pro 3EM) [im Shelly-Forum gestellt](
+https://www.shelly-support.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/https://www.shelly-support.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/?postID=222899#post222899).
+verbunden mit dem Wunsch sehr vieler Nutzer, die Aufsummierung wie in einem
+Zweiwegezähler (wie sie in Deutschland und einigen anderen Ländern leider
+statt der Nettomessung üblich ist) zu unterstützen.
+
+Die Shelly-Nutzer werden bzgl. einer zeitlichen Zweiwege-Akkumulation des
+Leistungs-Saldos [von Allterco Robotics seit Jahren hingehalten](
+https://www.shelly-support.eu/forum/thread/15874-z%C3%A4hlweise-bzw-saldierende-z%C3%A4hlung/),
+so dass man weiterhin auf
+Software-Basteleien angewiesen ist. Dazu gibt es verschiedenste Ansätze.
+* Ein Saldieren und anschließendes zeitliches Akkumulieren der Energiewere
+aus den oben erwähnten direkt exportierten CSV-Dateien liefert bei vorhandener
+Einspeisung selbst dann falsche Resultate, wenn es in Minutenauflösung geschieht.
+* Eine custom firmware für das Gerät oder ein Shelly Script wie [dieses](
+https://www.shelly-support.eu/forum/thread/19204-saldierung-pro-3em-ja-nein-vielleicht/?postID=223945#post223945),
+welches direkt auf dem Gerät z.B. alle 0,5 Sekunden
+die saldierte Leistung getrennt für Import und Export akkumuliert,
+wäre eine sehr genaue Lösung, ist aber für die wenigsten Nutzer machbar.
+* Direkte Abfrage des Geräts im Sekundentakt über MQTT oder HTTP und
+Aufbereitung der Leistungs-Daten wie etwa mit dem o.g. [Perl-Skript](
+https://github.com/DDvO/SolBatSim/blob/master/3em_data_collect.pl).
+Die Genauigkeit dieser und der folgenden Lösung ist nicht sehr groß,
+aber dürfte für die meisten Anwendungen ausreichen.
+* Indirekte Abfrage des Geräts im Sekundentakt über
+[Home Assistant](https://www.home-assistant.io/), welcher zur Aufbereitung der
+Daten geeignet konfiguriert wird, wie etwa mit der o.g. [YAML-Konfiguration](
+https://github.com/DDvO/SolBatSim/blob/master/configuration.yaml),
+welche teils durch einen [Eintrag im HA-Forum](
+https://community.home-assistant.io/t/shelly-3em-3-phase-net-metering-templates-for-import-export-and-consumption/390237) inspiriert ist.
+<!-- https://community.home-assistant.io/t/shelly-3em-3-phase-net-metering-templates-for-import-export-and-consumption/390237/266?u=ddvo -->
 
 ### Stromzähler und Rücklaufsperre {#Stromzähler}
 
@@ -4467,7 +4609,7 @@ LocalWords: blackout brownout panels busbars shingle panel up number
 LocalWords: maximum point tracking sine wave efficiency boost true SG
 LocalWords: converter step consumption pdf balancer equalizer mppt em
 LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test br
-LocalWords: Charger Discharger Board Under Over Voltage Protection
+LocalWords: Charger Discharger Board Under Over Voltage Protection if
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW sub
 LocalWords: telemetry gateway distort cell document sections profile
 LocalWords: post text standard conditions Reflexions PVSOL SOL assuming
@@ -4485,6 +4627,7 @@ LocalWords: Bestrahlungsstaerke curves under different levels irradiation
 LocalWords: Microinverter What are Amps Volts SMF charge discharge
 LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
 LocalWords: Delivered Latest Downgraded shelly emeter file status returned
-LocalWords: Zweirichtungszaehler issuecomment
-LocalWords:
+LocalWords: Zweirichtungszaehler issuecomment collect Notifications
+LocalWords: Plugs comments January Settings ons configuration states excl comp
+LocalWords: sensor export float uksa tamorix
 -->
