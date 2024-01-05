@@ -209,9 +209,9 @@ Lizenzkürzel:
         - [Kappungsverlust durch Drosselung auf 600 W](#Kappungsverlust)
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
         - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
-        - [Speicherbatterie](#Speicherbatterie)
-        - [Ladung der Batterie](#Ladung)
-        - [Entladung der Batterie](#Entnahme)
+        - [Dimensionierung des Stromspeichers](#Speicherbatterie)
+        - [Ladung des Stromspeichers](#Ladung)
+        - [Entladung des Stromspeichers](#Entnahme)
     -   [Inselanlage (mit Batteriespeicherung)](#Inselanlage)
     -   [Kombination aus Hausnetzeinspeisung und
         Inselanlage](#Kombination)
@@ -228,7 +228,7 @@ Lizenzkürzel:
         - [Hybridgeräte: Solar-Laderegler mit Wechselrichter](#Hybrid)
         - [Gleichspannungswandler](#Gleichspannungswandler)
     -   [Speicherbatterien](#Speicher)
-        - [Batterie-Dimensionierung](#Dimensionierung)
+        - [Batterie-Kapazität](#Kapazität)
         - [Batterie-Strukturierung](#Strukturierung)
         - [Kombination aus Batterie und Wechselrichter](#Kaskadierte)
         - [Tiefsetzsteller](#Tiefsetzsteller)
@@ -2684,7 +2684,7 @@ PV-Eigenverbrauchsanteil    =   59 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 
-### Hausnetzeinspeisung mit Batteriepuffer {#Batteriepuffer}
+### Hausnetzeinspeisung mit Pufferung in Batteriespeicher {#Batteriepuffer}
 
 ![Bild: Balkonkraftwerk mit Pufferbatterie und Inselwechselrichter](
 Pufferbatterie_und_Inselwechselrichter.png){:.right width="400"
@@ -2817,6 +2817,21 @@ weil bei voller Batterie relativ viel überschüssige Energie verloren geht.
 Eine höhere konstante Entnahmeleistung oder eine Überschussableitung verringert
 zwar den Komplettverlust des Überschusses, führt aber dazu, dass mehr Energie
 im Haushalt nicht genutzt und stattdessen ins externe Netz abgegeben wird.
+
+Bei einer Konstanteinspeisung sollte man die Einspeiseleistung so einstellen,
+dass sie sicher unter der Minimallast bleibt und anderseits so hoch ist,
+dass man die gespeicherte Energie auch bis zum nächsten Laden verbraucht.
+Auch sollte man irgendwie dafür sorgen, dass maximal so viel geladen wird,
+wie gerade tatsächlich an PV-Überschuss vorliegt (also die aktuelle Erzeugung
+größer als der Verbrauch ist), aber auch nicht zu wenig geladen wird,
+so dass der Speicher am Ende des Tages möglichst voll ist.
+Je größer die Speicherkapazität im Vergleich zum Verbrauch und zur Erzeugung,
+desto schwieriger ist das ohne lastabhängige Regelung hinzubekommen.\
+Viele scheitern schon an der Bestimmung der [Minimallast](#Verbrauchsmessung),
+den diese ist geringer als etwa die (leichter bestimmbare) Durchschnittslast in
+der Nacht. Wer die Konstanteinspeisung auf die nächtliche Durchschnittslast
+einstellt, verschenkt über die meiste Zeit, wo periodisch laufende Geräte
+wie Kühlschränke nicht laufen, mehr oder weniger teurer gespeicherten Strom!
 
 Im Folgenden werden konkrete Zahlen gegeben für die
 [o.g. typische Balkonanlage mit 600 Wp](#rentabel) gegeben, der
@@ -3000,14 +3015,13 @@ Selbstversorgung 18 %
 Für die Einsparung von Stromkosten wäre folgende Lade- und Entladeregelung
 ideal:
 * Solange der Speicher nicht voll ist,
-wird immer genau der Anteil an PV-Leistung zum Laden verwendet,
-der übrig ist (also aktuell nicht anderweitig direkt verbraucht wird),
+wird immer genau der Anteil an PV-Leistung zum Laden verwendet, der übrig ist,
+also aktuell nicht anderweitig direkt verbraucht wird.\
+Dies wird Lastvorrang oder *Überschussladung* genannt.
 * Solange der Speicher nicht leer ist, wird er immer genau so stark entladen
 wie nötig ist, um den Anteil am aktuellen direktem Verbrauch auszugleichen,
-den die PV-Leistung nicht abdeckt.
-
-[//]: #
-Damit kann man die sogenannte *Nulleinspeisung* realisieren,
+den die PV-Leistung nicht abdeckt.\
+Damit kann man eine sogenannte *Nulleinspeisung* realisieren,
 also dass kein überschüssiger Strom ins externe Netz fließt.
 
 Zur Schonung der Batterie solle dabei
@@ -3015,13 +3029,12 @@ Zur Schonung der Batterie solle dabei
 werden, wobei die verwendeten Komponenten da ohnehin Grenzen setzen, und
 * die Regelung zeitlich geglättet werden, so dass bei sich schnell ändernder
 Erzeugung und Last nicht ständig zwischen Auf- und Entladung umgeschaltet wird,
-
 [//]: #
-wobei diese Zusatzbedingungen allerdings gewisse Verluste mit sich bringen.
+wobei durch diese Zusatzbedingungen allerdings die Effizienz ein wenig leidet.
 
 Das alles ist regelungstechnisch ziemlich aufwendig und benötigt jedenfalls
 einen Sensor zur Erfassung des momentanen Haushalts-Stromverbrauchs.
-Es lohnt sich, wenn überhaupt, nur für größere PV-Anlagen.
+Es lohnt sich bislang, wenn überhaupt, nur für größere PV-Anlagen.
 
 Für Steckersolargeräte wäre es viel einfacher, aber leider wenig zielführend,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
@@ -3050,7 +3063,16 @@ Zusätzlich ist der Speicher am Einlass mit einem Überlaufschutz
 ausgestattet, der die Wasserzufuhr stoppt, wenn der Speicher voll ist
 und das Wasser durch den kleinen Auslass nicht schnell genug abfließt.
 
-#### Speicherbatterie {#Speicherbatterie}
+Übrigens ist es schon technisch nicht möglich und wäre natürlich auch
+nicht sinnvoll, den Speicher gleichzeitig zu laden und zu entladen.
+Bei ungeschickter Laderegelung eines AC-gekoppelten Speichers könnte es aber
+passieren, dass sowohl das Ladegerät als auch der Wechselrichter zur Entnahme
+aus dem Speicher aktiv ist. Dies führt dazu, dass je nach Differenz aus Lade-
+und Wechselrichter-Leistung der Speicher entweder geladen oder entladen wird
+und dass das Minimum der beiden Leistungen sinnlos und mit Verlusten
+zunächst in Gleichstrom und umgehend wieder in Wechselstrom gewandelt wird.
+
+#### Dimensionierung des Stromspeichers {#Speicherbatterie}
 
 Zum Thema *Stromspeicher* in verschiedensten Formen
 und Nutzungsmöglichkeiten im Zusammenhang mit Photovoltaik
@@ -3085,7 +3107,7 @@ Bei LiFePO4 sind immerhin 90% Entladetiefe problemlos möglich.
 * Im Interesse einer langen Lebensdauer sollte man die Batterie ja nach Typ
 besser nicht ganz voll laden, sondern eher nur zu z.B. 90%.
 
-#### Ladung der Batterie {#Ladung}
+#### Ladung des Stromspeichers {#Ladung}
 
 Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
 über einen [Solar-Laderegler](#Laderegler). Dies nennt man [*DC-Kopplung*](
@@ -3214,7 +3236,7 @@ Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
 
 
 Man kann bei Konstanteinspeisung mit einer zusätzlichen *Überschussableitung*
-dafür sorgen, dass bei vollem Speicher der Solarstrom an der Batterie
+(Bypass) dafür sorgen, dass bei vollem Speicher der Solarstrom an der Batterie
 vorbei geleitet wird (und zwar möglichst in den Netzwechselrichter,
 der auch zur Ausspeisung aus der Batterie verwendet wird).
 In diesem Fall sind für die Konstanteinspeisung etwa 100 W Entnahme optimal,
@@ -3267,7 +3289,7 @@ Batteriespannung abhängig gemacht werden, wobei es dann auch vorkommen kann,
 dass Laderegler und Wechselrichter gleichzeitig aktiv sind. Ob das eher stört
 oder sogar vorteilhaft wäre, dürfte von den verwendeten Geräten abhängig sein.
 
-#### Entladung der Batterie {#Entnahme}
+#### Entladung des Stromspeichers {#Entnahme}
 
 Wenn man schon einen Solar-Wechselrichter hat und diesen für eine ganz einfache
 Netzeinspeisung verwenden möchte, könnte es schon genügen, ihn (über eine
@@ -3498,7 +3520,7 @@ Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 
 Allerdings hat keine der in diesem Abschnitt genannten Anlagen mit
-Pufferspeicher eine Überschussableitung oder gar eine optimale Laderegelung.
+Pufferspeicher eine Überschussableitung (Bypass) oder gar eine optimale Laderegelung.
 * Bei bedarfsgerechter (aber auf 600 W limitierter) Einspeisung
   aus dem Speicher ohne Überschussableitung bei der Ladung des Speichers
   fällt die Steigerung des Eigenverbrauchs durch die Speichernutzung
@@ -4342,7 +4364,7 @@ Unter Berücksichtigung von Speicherungsverlusten und des Wandlungsverlustes
 eines Wechselrichters lässt sich damit ein Gerät mit 1000 W Verbrauch
 (z.B. Staubsauger, Kaffeemaschine oder Fön) etwa eine Stunde lang betreiben.
 
-#### Batterie-Dimensionierung {#Dimensionierung}
+#### Batterie-Kapazität {#Kapazität}
 
 Um den Wandlungsverlust von ca. 10% eines Wechselrichters zu vermeiden,
 sollte man bei einer Inselanlage die Verbraucher möglichst direkt an der
