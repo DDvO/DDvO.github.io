@@ -210,6 +210,11 @@ Lizenzkürzel:
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
         - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
         - [Dimensionierung des Stromspeichers](#Speicherbatterie)
+        - [Kommerzielle SSG-Speicherlösungen](#SSG-Speicher)
+          - [Zendure SolarFlow](#SolarFlow)
+          - [Anker Solix](#Solix)
+          - [Weitere Produkte](#SSG-Speicher-sonstige)
+          - [Zusammenfassung und Effizienzbetrachtung](#SSG-Speicher-Effizienz)
         - [Ladung des Stromspeichers](#Ladung)
         - [Entladung des Stromspeichers](#Entnahme)
     -   [Inselanlage (mit Batteriespeicherung)](#Inselanlage)
@@ -1321,34 +1326,12 @@ etwa zum Billigartikel [Eastron SDM72D-M](https://www.amazon.de/dp/B08XDFK2W2).
 Die Datenanbindung erfolgt meist über WLAN, wobei das neuere Shelly Pro 3EM auch
 einen Bluetooth- und LAN-Anschluss hat, allerdings nicht mehr ein Relais.\
 <!--https://www.mydealz.de/comments/permalink/44544522-->
-Zum Shelly Pro 3EM und seiner Verknüpfung mit dem Zendure SolarFlow gibt es [hier](
+Zum Shelly Pro 3EM
+und seiner Verknüpfung mit dem [Zendure SolarFlow](#SolarFlow) gibt es [hier](
 https://www.tueftler-und-heimwerker.de/shelly-pro-3em-stromverbrauch-ueberwachen-nulleinspeisung-regeln/)
 einen sehr schönen und recht fundierten Artikel,
 allerdings mit kommerzieller Verflechtung.
-Das meiste davon sollte auch für die nicht-Pro-Variante gelten.
-So kann es auch kein ernsthaftes technisches (sondern wohl produktstrategisches)
-Hindernis für seine vollständige Verwendbarkeit mit dem Zendure SolarFlow geben.
-
-<!--
-https://www.mydealz.de/comments/permalink/42351507 Zendure SolarFlow
-https://www.mydealz.de/comments/permalink/42371552 Anker Solix
-https://www.mydealz.de/comments/permalink/42363989 beide
-https://www.mydealz.de/comments/permalink/44075989 Greensolar Plug & Play
-https://www.mydealz.de/comments/permalink/44536868 Golem-Test
--->
-Gut, dass es inzwischen bei anschlussfertig erhältlichen (aber immer noch
-eigentlich zu teuren und damit nicht rentablen) Batteriepuffer-Produkten
-für SSGs wie dem Zendure SolarFlow, Anker Solix oder GreenSolar Plug & Play
-erste Ansätze gibt, Echtzeit-Lastmessgeräte wie das Shelly Pro 3EM
-zur verbrauchsabhängigen Regelung zu verwenden, denn ohne eine solche Regelung
-bleiben sie unrentables Nerd-Spielzeug bzw. teure Mogelpackungen.
-<!--
-Doch wenn man einen [ersten Test-Artikel dazu](
-https://www.golem.de/news/balkonkraftwerk-mit-shelly-pro-3em-den-zendure-batteriespeicher-steuern-2310-178813-3.html)
-liest, drängt sich der Verdacht auf, dass der Verfasser und/oder Zendure
-das nicht wirklich durchblicken und grobe Umsetzungs-Fehler gemacht haben,
-so dass es (noch?) nicht so funktioniert wie es soll.
--->
+Das meiste davon gilt auch für die nicht-Pro-Variante.
 
 #### Details zum Shelly (Pro) 3EM {#Shelly3EM}
 
@@ -3107,6 +3090,230 @@ Bei LiFePO4 sind immerhin 90% Entladetiefe problemlos möglich.
 * Im Interesse einer langen Lebensdauer sollte man die Batterie ja nach Typ
 besser nicht ganz voll laden, sondern eher nur zu z.B. 90%.
 
+#### Kommerzielle SSG-Speicherlösungen {#SSG-Speicher}
+
+Aufgrund des wachsenden Interesses an Speicherlösungen auch für kleine
+PV-Anlagen gibt es seit 2023 ein paar steckerfertige Lösungen zu kaufen.
+Eine brauchbare Übersicht findet sich
+[hier](https://www.energiemagazin.com/balkonkraftwerk/speicher/) &mdash;
+wobei das, was dort zur Amortisation geschrieben wurde, irreführend ist, weil es
+unrealistischerweise von einer optimalen Lade- und Entladestrategie ausgeht.
+
+Alle diese Produkte haben u.A. Folgendes gemeinsam.
+* Der Speicher ist proprietär &mdash; man muss also die (recht teuren)
+  Batterien des jeweiligen Herstellers verwenden.
+* Der Speicher ist [DC-gekoppelt]((#Ladung)).
+  Er wird also zusammen mit der Steuerung, welche eine MPPT-Laderegelung
+  beinhaltet und teils direkt mit dem Speicher verbaut ist,
+  zwischen PV-Module und Mikrowechselrichter gesteckt.
+  Der wichtigste Vorteil davon ist größere Effizienz als mit AC-Kopplung.\
+  Ein Nachteil ist, dass der Speicher meist außerhalb der Wohnung steht und
+  dort bei Minusgraden nicht geladen darf und damit nicht genutzt werden kann.
+* Zentral für die Regelung der Geräte ist die aktuelle Zielleistung,
+  die über den angeschlossenen Wechselrichter ins Hausnetz gespeist werden soll.
+* Wenn die verfügbare PV-Leistung mindestens so groß wie die Zielleistung ist,
+ wird diese Leistung eingespeist und der Rest zum Laden des Speichers verwendet.
+* Wenn die aktuelle PV-Leistung unter der Zielleistung liegt, wird (je nach
+  Gerät) die PV-Leistung eingespeist und/oder Strom aus dem Speicher entnommen.
+* Die Speicher-Entladung wird durch die (typischerweiese einstellbare)
+  maximale Entladetiefe begrenzt.
+
+Hier eine Übersicht zu den jeweils unterstützten Lade- und Entladestrategien.
+
+##### Zendure SolarFlow {#SolarFlow}
+
+![Bild: Zendure SolarFlow](Zendure_SolarFlow.png){:.right width="400"}
+
+Das wohl erste und bekannteste Produkt seiner Art ist das [Zendure SolarFlow](
+https://www.chinahandys.net/zendure-solarflow-im-test-der-speicher-fuer-das-balkonkraftwerk/).
+<!--
+https://www.energiemagazin.com/zendure-solarflow-balkonkraftwerk-speicher/
+https://www.allround-pc.com/artikel/2023/test-zendure-solarflow-speicher-fuer-dein-balkonkraftwerk
+-->
+Das Gerät verfügt über zwei PV-Eingänge mit getrennten MPPT.\
+Soweit vorhanden, wird zur Einspeisung PV-Strom verwendet
+und die ggf. zur Zielleistung fehlende Differenz aus dem Speicher entnommen.\
+Wenn der Speicher voll ist, wird im Bypass-Modus der gesamte Ertrag eingespeist.\
+Zur Bestimmung der Zielleistung gibt es inzwischen im Wesentlichen drei Modi:
+* Im *Terminmodus* kann man abhängig von der Uhrzeit eine feste
+Einspeiseleistung (in gewissen Stufen) einstellen, also im Wesentlichen eine
+Konstanteinspeisung bzw. Nachteinspeisung. Dem einfachen Spezialfall, ständig
+100 W einzuspeisen, hat Zendure den Namen *Batterieprioritätsmodus* gegeben.
+* Im sog. *Intelligenten Matching-Modus* wird mindestens so viel eingespeist
+wie nötig, um den Verbrauch aller Geräte abzudecken, die an mit dem SolarFlow
+online gekoppelten *Smart Plugs* (intelligente Steckdosen) hängen &mdash;
+mindestens 100 W und [meist deutlich mehr](
+https://www.hartware.de/2023/08/21/zendure-solarflow-im-test/4/) als nötig.
+* [Seit November 2023](https://www.prnewswire.com/news-releases/zendure-erreicht-bahnbrechende-integration-mit-shelly-pro-3em-shelly-3em-shelly-plus-plug-s-und-shelly-plug-s-und-verbessert-das-intelligente-energiemanagement-301985902.html)
+gibt es den *Smart-CT-Modus*, bei dem die Einspeiseleistung dynamisch an den
+über ein Shelly (Pro) 3EM gemessen Gesamtverbrauch im Haushalt angepasst wird.\
+Nur diese Option ermöglicht eine effiziente Nutzung des PV-Ertrags.
+Allerdings [zeigten Praxistests](https://youtu.be/YzKCvYB-axw&t=148s), dass die
+Regelung auf Verbrauchs- und Ertrags-Schwankungen träge und ungenau reagiert.
+
+Die größere (1.920 Wh) Batterie hat eine eingebaute Heizung bei Minusgraden.
+
+##### Anker Solix {#Solix}
+
+Das zweite relativ bekannte Produkt die [Anker Solix Solarbank](
+https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/).
+<!--https://www.chinahandys.net/anker-solix-solarbank-test/-->
+Es hat nur einen MPPT.
+Der einzige Betriebsart ist Einspeisung mit einer von der Uhrzeit abhängigen
+Zielleistung, welche hier *Familienlastleistungsrate* (FLLR) genannt wird.
+Sie kann 0 W sein (keine Einspeisung)
+und ist ansonsten zwischen 100 und 800 W in Stufen von 10 W wählbar.
+Aufgrund einer Design-Einschränkung kann das Gerät diese Leistung nur entweder
+direkt aus PV-Strom oder aus dem Speicher erbringen, also nicht gleichzeitig
+aus beiden Quellen. Deshalb ist die Regelung etwas eigenartig:
+
+![Bild: Anker Solix Strategie](Anker_Solix_Strategie.png){:.right width="560"}
+* Wenn die PV-Leistung mindestens so hoch ist wie die FLLR,
+  wird mit FLLR eingespeist und der Rest in den Speicher geladen
+  (außer wenn er voll ist, dann erfolgt ein Bypass).
+* Wenn die PV-Leistung mindestens 100 W unter der FLLR liegt und höchstens
+  100 W beträgt, wird die FLLR dem Speicher entnommen
+  (solange die Kapazität reicht) und die PV-Leistung geht verloren.\
+  Dieser Verlust passiert zum Glück nicht groß, siehe u.g. Simulationsergebnisse.
+* Ansonsten, also wenn die PV-Leistung zwischen 100 W und der FLLR liegt
+  oder weniger als 100 W unter der FLLR
+  (was bei einer FLLR von 200 W aufs Gleiche hinausläuft),
+  wird dem Speicher nichts entnommen und die verfügbare PV-Leistung eingespeist.
+
+Das Produkt hat offenbar noch diverse Kinderkrankheiten, von denen z.B. [hier](
+https://www.giga.de/test/anker-solix-solarbank-im-test-bezahlbarer-balkonkraftwerk-speicher-mit-schwaechen/)
+berichtet wurde.
+Im Jahr 2024 [will Anker Verbesserungen bringen](
+https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/#unser-test-fazit-zur-anker-solix-solarbank),
+um auch Smart Plugs und Lastmessgeräte (Smart Home Integration) zu unterstützen.
+
+##### Weitere Produkte {#SSG-Speicher-sonstige}
+
+Es gibt weitere ähnliche Lösungen, etwa
+* [EcoFlow PowerStream](
+  https://www.chinahandys.net/ecoflow-powerstream-im-test/), welches ähnliche
+  Modi bietet wie das ursprüngliche Zendure SolarFlow, also zeitabhängige
+  Konstanteinspeisung oder die Verwendung von Smart Plugs,
+  aber keine von der Gesamtlast abhängige Regelung.
+* [GreenSolar Plug & Play Balkonkraftwerk Basisspeicher](
+https://greensolar.de/produkt/plug-play-balkonkraftwerk-batteriespeicher-set-basisspeicher-erweiterungsspeicher)
+  von der österreichischen Firma Green Solar
+  (nicht zu verwechseln mit GreenAkku bzw. Bosswerk aus Deutschland), welches
+  etwas günstiger ist, aber nur eine simple Konstanteinspeisung bietet, und
+<!--
+https://www.mydealz.de/deals/plug-play-balkonkraftwerk-batteriespeicher-basisspeicher-22-kwh-2249574#comments
+https://www.notebookcheck.com/Deal-Balkonkraftwerk-Speicher-2-24-kWh-mit-Plug-Play-von-Greensolar-jetzt-mit-25-Rabatt-erhaeltlich.754099.0.html
+https://www.homeandsmart.de/green-solar-speicher-ankuendigung
+https://www.infranken.de/ratgeber/wohnen/energiesparen/balkonkraftwerk-speicher-fuer-899-euro-besser-als-anker-zendure-ecoflow-art-5639603
+-->
+
+
+##### Zusammenfassung und Effizienzbetrachtung {#SSG-Speicher-Effizienz}
+
+Diese Produkte haben mehr oder weniger starke Einschränkungen und funktionieren
+in der Praxis nicht so gut und effizient wie vom Marketing behauptet. Nur
+das Zendure SolarFlow unterstützt (Stand Anfang 2024) eine optimale Regelung.
+
+Hier ein Vergleich des mit den unterschiedlichen Ansätzen erzielbaren
+Jahres-Eigenverbrauchs auf Basis von Simulationen mit dem [SolBatSim](#SolBatSim)
+für einen Haushalt mit 3000 kWh Jahresverbrauch
+und einer nächtlicher Durchschnittslast von 190 W
+mit optimal ausgerichteten 850 Wp Modul-Nennleistung in Süddeutschland
+und typischen Wirkungsgraden.
+Der besseren Vergleichbarkeit halber wurde hier generell eine Speicherkapazität
+von 1600 Wh (mit 90% Entladetiefe) wie beim Anker Solix vorausgesetzt
+&mdash; ohnehin fällt sie kaum ins Gewicht.
+* 621 kWh Eigenverbrauch als Vergleichswert nur mit PV ohne Speicher-Nutzung
+* 864 kWh Eigenverbrauch (bei 1000 Wh 822 kWh, bei 2000 Wh 881 kWh)
+  bei optimaler Regelung,\
+  wie sie derzeit nur das Zendure SolarFlow und der Maxxisun Maxxicharge bieten
+* 730 kWh Eigenverbrauch bei Anker Solix Strategie mit optimaler FLLR, hier 180 W;\
+  mit diesen Parametern werden 14 kWh PV-Nettoleistung verworfen
+* 746 kWh Eigenverbrauch bei Konstanteinspeisung
+  mit für diesen Fall optimaler Zielleistung, hier 200 W
+
+Wenn man eine optimale lastabhängige Lade- und Entladestrategie nutzen kann,
+ist das Ergebnis mit Abstand am besten: ein Gewinn von gut 240 kWh im Jahr.\
+Selbst mit mehreren geschickt eingesetzten Smart Plugs oder einer ausgefeilten
+Uhrzeit-abhängigen Steuerung wird man kaum an diesen Maximalwert herankommen.\
+Ansonsten ist es bei konstanter Zielleistung selbst mit günstigster Wahl dieses
+Parameters und mit Bypass-Funktion ziemlich egal, welche Strategie im Detail
+verfolgt wird &mdash; man erhält nur magere 110 bis 125 kWh Gewinn pro Jahr.
+
+Allerdings bringt selbst ein Gewinn von 240 kWh bei 35 Ct/kWh nur 84€ Ersparnis
+pro Jahr. Damit kann sich so ein Gerät, das je nach Speichergröße
+(und Zusatzkosten wie für einen Shelly 3EM) ungefähr 1000€ kostet
+und hoffentlich gut 10 Jahre Lebensdauer hat, kaum amortisieren.\
+Sprich, alle diese Lösungen sind einfach zu teuer, um wirklich rentabel zu sein.
+
+<!--
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy
+Nächtliche Durchschnittslast=  189 W von 0 bis 6 Uhr
+PV-Eigenverbrauch           =  621 kWh
+
+https://www.mydealz.de/comments/permalink/42396908
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 # EcoFlow oder Maxxicharge 1600 Wh opt
+PV-Eigenverbrauch           =  864 kWh   (bei 1000 Wh 822 kWh, 2000 Wh 881 kWh)
+
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 180 -feed excl 100  # Anker Solix
+Verworfene PV-Leistung      =   14 kWh
+PV-Eigenverbrauch           =  730 kWh   (bei 2000 Wh 788 kWh)
+
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 200 -feed comp 200   # Konstanteinspeisung
+PV-Eigenverbrauch           =  746 kWh   (bei 2000 Wh 755 kWh)
+-->
+<!--
+
+Zendure SolarFlow
+https://www.mydealz.de/deals/balkonkraftwerk-750wp-set-mit-1kwh-speicher-wifi-22
+36913
+https://www.computerbild.de/artikel/cb-Tests-Energie-Zendure-SolarFlow-Akku-PV-Hub-Test-36635323.html
+https://www.energiemagazin.com/zendure-solarflow-balkonkraftwerk-speicher/
+
+Anker Solix
+https://www.mydealz.de/comments/permalink/42351507
+
+
+Habe jetzt mal meinen SolBatSim aufgebohrt, um auch diese Kompromiss-Strategie simulieren zu können.
+
+Für einen Haushalt mit 3000 kWh Jahresverbrauch und nächtlicher Mindestlast von 200 W
+mit optimal ausgerichteten 880 Wp Modulen in Süddeutschland ergibt sich folgender Jahres-Eigenverbrauch:
+* 611 kWh ohne Speicher
+* 875 kWh mit 1,6 kWh Speicher, DC-gekoppelt mit 90% Entladetiefe, bei optimaler Strategie
+* 754 kWh mit Speicher mit 140 W (Optimalwert) Bypass und Konstanteinspeisung 90 W (Optimalwert)
+* 772 kWh mit Speicher mit 180 W (Optimalwert) Bypass und Kompensation auf 110 W (Optimalwert), wie ich sie zuerst verstanden habe
+* 760 kWh mit Speicher mit 130 W (Optimalwert) Bypass und Anker Solix Entladestrategie (mit dem festen internen 100 W Grenzwert und 130 W konstanter Entladeleistung) - mit diesen Parametern werden immerhin nur 3,3 kWh PV-Nettoleistung verworfen
+
+Also, wenn man keine optimale lastabhängige Lade- und Entladestrategie fahren kann,
+ist es bei DC-Kopplung und Ladestrategie mit einstellbarer konstanter Bypass-Leistung und vollem Bypass bei Überlauf der Batterie ziemlich egal,, welche sonstige Entladestrategie man hat/wählt,
+sofern man die jeweils optimalen Parameter (Bypass-/Konstanteinspeisung-/Zielleistung) wählt.
+
+Die Gewinne an Eigenverbrauch sind im Vergleich zur Situation ohne Speicher nicht berauschend: etwa 150 kWh pro Jahr, also bei 35 Ct/kWh um die 50€/Jahr.
+So ein Gerät zum Preis von ca. 1000€ amortisiert sich daher nie.
+--->
+<!--
+
+https://www.mydealz.de/comments/permalink/42371552
+https://www.mydealz.de/comments/permalink/42363989 beide
+https://www.mydealz.de/comments/permalink/44075989
+
+
+Gut, dass es inzwischen bei anschlussfertig erhältlichen (aber immer noch
+eigentlich zu teuren und damit nicht rentablen) Batteriepuffer-Produkten
+für SSGs wie dem Zendure SolarFlow, Anker Solix oder GreenSolar Plug & Play
+erste Ansätze gibt, Echtzeit-Lastmessgeräte wie das Shelly Pro 3EM
+zur verbrauchsabhängigen Regelung zu verwenden, denn ohne eine solche Regelung
+bleiben sie unrentables Nerd-Spielzeug bzw. teure Mogelpackungen.
+
+https://www.mydealz.de/comments/permalink/44536868 Golem-Test
+Doch wenn man einen [ersten Test-Artikel dazu](
+https://www.golem.de/news/balkonkraftwerk-mit-shelly-pro-3em-den-zendure-batteriespeicher-steuern-2310-178813-3.html)
+liest, drängt sich der Verdacht auf, dass der Verfasser und/oder Zendure
+das nicht wirklich durchblicken und grobe Umsetzungs-Fehler gemacht haben,
+so dass es (noch?) nicht so funktioniert wie es soll.
+-->
+
+
 #### Ladung des Stromspeichers {#Ladung}
 
 Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
@@ -4621,9 +4828,9 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 Local IspellDict: german8
 LocalWords: title keywords toc start refresh markdown pandoc width style margin
 LocalWords: zusammenfassung Messgeraet CC BY Std webp Ferrariszaehler IAMKlaus
-LocalWords: Unabhaengigkeitsrechner Stromwaechter Play SDM clams comment
-LocalWords: output calculation power unit rating Europe TSUN InGe DPM
-LocalWords: left right irradiance GHI buehneTop clear both png tgl RS
+LocalWords: Unabhaengigkeitsrechner Stromwaechter Play SDM clams comment fazit
+LocalWords: output calculation power unit rating Europe TSUN InGe DPM anker
+LocalWords: left right irradiance GHI buehneTop clear both png tgl RS solix
 LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi
 LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs
 LocalWords: blackout brownout panels busbars shingle panel up number
