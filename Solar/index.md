@@ -3331,9 +3331,9 @@ https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
 ermöglicht eine einphasige Nulleinspeisung ohne Basteln und Programmieren.
 Man muss nur den Limiter-Sensor im Sicherungskasten an der Phase anbringen,
 über die die Einspeisung laufen soll. Dann lässt sich der Wechselrichter so
-einstellen, dass er maximal so viel einspeist wie zum Ausgleich der aktuellen
-Last auf dieser Phase benötigt wird, wie [von Dimitri vorgeführt](
-https://www.youtube.com/watch?v=jPgWE-qQ3SE).
+einstellen, dass er maximal so viel einspeist wie zum Ausgleich
+der aktuellen Last auf dieser Phase benötigt wird,
+wie [von Dimitri vorgeführt](https://youtu.be/jPgWE-qQ3SE).
 Für dreiphasige Anwendung ist gedacht, je Phase ein solches Gerät einzusetzen,
 was sich natürlich nur für größere Anlagen lohnt. Man kann sich aber auch
 einen 3-Phasen-Sensor für ein Gerät zusammenstricken, etwa wie [hier](
@@ -3581,10 +3581,9 @@ Wenn für den Notfall stets eine gewisse Strommenge zur Verfügung bleiben soll,
 muss die Abschaltung schon entsprechend früher erfolgen.
 
 Wenn der Solar-Laderegler einen Lastausgang mit einstellbarer Schutzabschaltung
-hat, wie z.B. beim Victron BlueSolar, kann man diesen so verwenden wie in
-[diesem schönen Video von PV&E](https://www.youtube.com/watch?v=N6NqMXQHP2I)
-gezeigt. Zudem kann dessen Straßenlichtfunktion für die zeitliche Steuerung
-genutzt werden.
+hat, wie z.B. der Victron BlueSolar, kann man ihn so verwenden, wie Tobias Volk
+(PV&E) in [diesem schönen Video](https://youtu.be/N6NqMXQHP2I) zeigt. Zudem
+kann dessen Straßenlichtfunktion für die zeitliche Steuerung genutzt werden.
 
 Eine Konstanteinspeisung auch noch zeitlich z.B. auf 18 Uhr abends bis 6 Uhr
 morgens einzuschränken (also eine Nachteinspeisung) erweist sich aber als
@@ -3686,16 +3685,16 @@ Balkonkraftwerk_mit_Speicher.jpg){:.right width="350"}](
 https://www.youtube.com/watch?v=f-iz6WE8GD8)
 Um die Einspeisung automatisch in Abhängigkeit vom Ladezustand der Batterie
 ein- und auszuschalten, kann man auch einen recht simplen
-[programmierbaren Batteriespannungswächter](#Spannungswächter) verwenden, wie im
-[Video von Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8) vorgeführt.
+[programmierbaren Batteriespannungswächter](#Spannungswächter) verwenden,
+wie im [Video von Dimitri](https://www.youtube.com/watch?v=f-iz6WE8GD8) gezeigt.
 
 Der Spannungswächter wird so eingestellt,
 dass er beim Erreichen einer Batteriespannung, die
 z.B. annähernd einer Vollladung entspricht, den Wechselrichter einschaltet und
 z.B. in der Nähe der Batterie-Entladeschlussspannung diesen wieder ausschaltet.
 
-Wie [oben ausgeführt](#Ladung) haben allerdings Anlagen mit
-Konstanteinspeisung wie die gerade erwähnten Bastellösungen von PV&E und von
+Wie [oben ausgeführt](#Ladung) haben allerdings Anlagen mit Konstanteinspeisung
+wie die gerade erwähnten Bastellösungen von Tobias Volk (PV&E) und von
 Dimitri selbst mit zusätzlicher Überschussableitung eine miserable Rentabilität.
 
 ### Inselanlage (mit Batteriespeicherung) {#Inselanlage}
