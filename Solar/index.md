@@ -215,8 +215,10 @@ Lizenzkürzel:
           - [Anker Solix](#Solix)
           - [Weitere Produkte](#SSG-Speicher-sonstige)
           - [Zusammenfassung und Effizienzbetrachtung](#SSG-Speicher-Effizienz)
-        - [Ladung des Stromspeichers](#Ladung)
-        - [Entladung des Stromspeichers](#Entnahme)
+        - [SSG-Speicherlösungen im Eigenbau](#SSG-Speicher-Eigenbau)
+          - [Beispiel für DC-gekoppelten Speicher](#SSG-DC-gekoppelt)
+          - [Ladung des Stromspeichers](#Ladung)
+          - [Entladung des Stromspeichers](#Entnahme)
     -   [Inselanlage (mit Batteriespeicherung)](#Inselanlage)
     -   [Kombination aus Hausnetzeinspeisung und
         Inselanlage](#Kombination)
@@ -1296,9 +1298,10 @@ lastabhängige [Regelung](#Regelungsstrategien) der Ladung und/oder Entladung
 eines Stromspeichers.
 
 * Man kann sich die Verbrauchsdaten über den
-sog. [„Volkszähler“](https://www.volkszaehler.org/)
-oder [„powerfox poweropt“](https://poweropti.powerfox.energy/)
-aus dem offiziellen Haushalts-Stromzähler übermitteln lassen --
+sog. [„Volkszähler“](https://www.volkszaehler.org/),
+[„powerfox poweropt“](https://poweropti.powerfox.energy/),
+[Tibber Pulse](https://tibber.com/de/pulse) o.ä.
+aus dem offiziellen Haushalts-Stromzähler übermitteln lassen &mdash;
 sofern ein digitaler Stromzähler verbaut ist und man Zugang zu diesem hat.\
 Zur Verwendung der [Tasmota](https://www.tasmota.info/)-Software
 gibt es [hier](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
@@ -3115,7 +3118,7 @@ Alle diese Produkte haben u.A. Folgendes gemeinsam.
  wird diese Leistung eingespeist und der Rest zum Laden des Speichers verwendet.
 * Wenn die aktuelle PV-Leistung unter der Zielleistung liegt, wird (je nach
   Gerät) die PV-Leistung eingespeist und/oder Strom aus dem Speicher entnommen.
-* Die Speicher-Entladung wird durch die (typischerweiese einstellbare)
+* Die Speicher-Entladung wird durch die (typischerweise einstellbare)
   maximale Entladetiefe begrenzt.
 
 Hier eine Übersicht zu den jeweils unterstützten Lade- und Entladestrategien.
@@ -3314,7 +3317,107 @@ so dass es (noch?) nicht so funktioniert wie es soll.
 -->
 
 
-#### Ladung des Stromspeichers {#Ladung}
+#### SSG-Speicherlösungen im Eigenbau {#SSG-Speicher-Eigenbau}
+
+Wer für sein Balkonkraftwerk einen rentablen Stromspeicher haben will, kommt
+derzeit um einen Eigenbau nicht herum, allein schon wegen der Batteriepreise.
+Außerdem muss man sich technisch gut auskennen und einige Arbeit investieren,
+um eine effiziente Regelung hinzubekommen.
+In diesem Abschnitt einige Hinweise und Beispiele,
+wie es gelingen kann und wie es nicht wirklich effizient wird.
+
+##### Beispiel für DC-gekoppelten Speicher {#SSG-DC-gekoppelt}
+
+Hier ein Beispiel für eine sehr gelungene effiziente Lösung
+mit DC-gekoppelter Anbindung eines 48 V LiFePO4 Speichers
+(bestehend aus einer oder zwei Batterien), wozu ein oder zwei Victron
+SmartSolar MPPT 100/20-48V [Solarladeregler](#Laderegler) verwendet werden.
+Sowohl für die sofortige Nutzung des erzeugten PV-Stroms als auch für das
+bedarfsgerechte Laden und Entladen des Speichers kommt ein
+(derzeit auf max. 600 W Leistung gedrosselter) Hoymiles HM-800
+[Netzwechselrichter](#Netzwechselrichter) zum Einsatz,
+der per Heimautomatisierung über eine Ahoy-DTU oder OpenDTU geregelt wird.\
+Optional wird hier ein Victron Phoenix 48 V 800 W
+[Inselwechselrichter](#Inselwechselrichter) verwendet,
+was dann Notstrom-Fähigkeit mit Batterie-gepufferter Sonnenenergie bietet.
+
+![Bild: SSG-mit-DC-gekoppeltem-Speicher.png](
+SSG-mit-DC-gekoppeltem-Speicher.png){:.right width="798"}
+
+Weil die Batteriespannung recht hoch ist und die Solar-Laderegler bis zu 100 V
+Eingangspannung vertragen, können (und müssen) die PV-Module in Reihe
+geschaltet werden, und die Kabelquerschnitte können auch auf DC-Seite
+relativ gering bleiben, ohne dass es zu nennenswerten Leitungsverlusten kommt.\
+Die hier beschriebene Lösung wäre aber auch basierend auf einem 24 V Speicher
+gut möglich, zumal der Eingangspannungs-Bereich des verwendeten Wechselrichters
+auch den Bereich um 24 V umfasst und die Kabel zwischen Laderegler,
+Speicher und Wechselrichter kurz gehalten werden können.
+
+Für eine optimale lastabhängige Regelung müssen die Laderegler nicht von außen
+gesteuert werden, sondern im Prinzip genügt es, die Ausgangsleistung des
+Wechselrichters sukzessive so anzupassen, dass das aktuelle Leistungs-Saldo am
+Wohnungs-Anschluss (das sich aus Last durch den Haushalt abzüglich PV-Leistung
+und bisheriger Ausgangsleistung des Wechselrichters ergibt) möglichst Null ist.
+Je nachdem, ob dabei die Differenz aus aktueller PV-Leistung und
+Abruf durch den Wechselrichter positiv oder negativ ausfällt,
+wird der Speicher mit dieser Differenz-Leistung geladen oder entladen.\
+Um den Speicher zu schonen, sollte man allerdings schnelle Wechsel zwischen
+Laden und Entladen vermeiden. Wenn also die Zielleistung, die über den
+Wechselrichter abgerufen werden soll, nahe an der PV-Leistung liegen würde
+und zu befürchten ist, dass die Differenz durch schwankende Last oder
+PV-Leistung schnell mehrfach hintereinander das Vorzeichen wechselt,
+empfiehlt es sich, die Zielleistung lieber etwas geringer zu wählen,
+so dass tendenziell eher geladen wird.
+Bei vollem Speicher ist es am sinnvollsten, einen vollen Bypass zu machen,
+also die gesamte PV-Leistung über den Wechselrichter abzurufen
+(also dann nicht unbedingt eine Nulleinspeisung zu machen, sondern Strom nach
+extern abzugeben, solange die Last unter der PV-Leistung liegt). Außerdem
+sollte der Speicher generell nur bis zu einer gewissen Grenze entladen werden.
+
+Man kann bei der Regelung noch weitere Faktoren berücksichtigen,
+etwa Uhrzeit, Temperatur, die
+bisherige Entwicklung der PV-Leistung, der Last und des Speicher-Ladezustandes,
+der in nächster Zeit erwartete PV-Ertrag und Verbrauch im Haushalt, usw.\
+Die Messung des (zeitweise negativen) Leistungs-Saldos am Wohnungs-Anschluss,
+also wie viel gerade aus den externen Netz gezogen oder in dieses eingespeist
+wird, erfolgt mit einem [3-Phasen-Energiemessgerät](#Verbrauchsmessung).
+Wenn dazu wie im Bild dargestellt Tibber Pulse verwendet wird, kann die
+Nutzung des Speichers auch vom aktuellen Strompreis abhängig gemacht werden.\
+Die Batteriespannung (damit indirekt der Ladezustand des Speichers)
+und die PV-Leistung kann z.B. über ein Victron VE.Direct USB-Kabel
+von der [Victron Venus Firmware auf einem Raspberry Pi](
+https://www.victronenergy.com/blog/2017/09/06/raspberry-pi-running-victrons-venus-firmware/)
+(hier genügt 2. oder 3. Generation) abgefragt werden.
+
+Die Regelung kann über eine Heimautomatisierungs-Software erfolgen,
+die z.B. auf einen etwas stärkeren Einplatinen-Computer wie Raspberry Pi 4
+läuft oder nebenbei auf einem Home-Server.
+Es empfiehlt sich dazu die Perl-basierte
+„Freundliche Hausautomation und Energie-Messung“
+[(FHEM)](https://fhem.de/fhem_DE.html).
+Dagegen hat der wesentlich bekanntere
+[Home Assistant](https://www.home-assistant.io/)
+eine grauenhafte YAML -und Python-basierte Programmierumgebung,
+bietet dafür aber eine einfache Anbindung von Hardware-Komponenten
+und eine recht hübsche und flexible grafische Bedienungs-Oberfläche.
+
+Um eine DC-Verkabelung ins Haus zu vermeiden, kann man Laderegler, Speicher
+und Wechselrichter auch draußen (z.B. auf dem Balkon oder in einem Schuppen)
+platzieren. Damit die Anlage dann trotzdem auch bei Minusgraden nutzbar ist,
+kann man den LiFePO4-Speicher mit einer Heizung versehen und gegen Kälte
+isolieren. Dazu bieten sich Pflanzen-Heizmatten wie
+[diese](https://www.ebay.de/itm/354441767526?var=623842819621Plfan) an, welche
+man dann allerdings noch temperaturgeregelt mit etwas Strom versorgen muss.
+
+In Minimalausstattung würde die Anlage mit ECO-WORTHY 48 V 2,5 kWh Speicher
+ohne PV-Module unter 1000 € kosten.
+Mit allen optionalen Komponenten inkl. Inselwechselrichter hat die Anlage
+mit 5 kWh Speicherkapazität ohne PV-Module im Herbst 2023 knapp 2200€ gekostet.\
+Details zu der Anlage können bei
+[Michael Steigemann](mailto:michael.steigemann) von
+[Solar2030.de](https://solar2030.de/) erfragt werden.
+
+##### Ladung des Stromspeichers {#Ladung}
 
 Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
 über einen [Solar-Laderegler](#Laderegler). Dies nennt man [*DC-Kopplung*](
@@ -3496,7 +3599,7 @@ Batteriespannung abhängig gemacht werden, wobei es dann auch vorkommen kann,
 dass Laderegler und Wechselrichter gleichzeitig aktiv sind. Ob das eher stört
 oder sogar vorteilhaft wäre, dürfte von den verwendeten Geräten abhängig sein.
 
-#### Entladung des Stromspeichers {#Entnahme}
+##### Entladung des Stromspeichers {#Entnahme}
 
 Wenn man schon einen Solar-Wechselrichter hat und diesen für eine ganz einfache
 Netzeinspeisung verwenden möchte, könnte es schon genügen, ihn (über eine
@@ -4857,5 +4960,5 @@ LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
 LocalWords: Delivered Latest Downgraded shelly emeter file status returned
 LocalWords: Zweirichtungszaehler issuecomment collect Notifications
 LocalWords: Plugs comments January Settings ons configuration states excl comp
-LocalWords: sensor export float uksa tamorix
+LocalWords: sensor export float uksa tamorix custom firmware
 -->
