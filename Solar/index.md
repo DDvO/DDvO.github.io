@@ -1219,8 +1219,8 @@ je nach Größe der dafür nötigen Investition längerfristig Kosten sparen.
 {:style="clear:both"}
 ![Bild: PV-Wasserboiler](PV-Wasserboiler.png){:.right width="378"}
 Ein *PV-Heizstab* funktioniert im Prinzip wie ein Tauchsieder und erfordert
-keine Wandlung des Stroms, hat also praktisch keine elektrischen Verluste,
-wenn er DC-seitig (ohne Wechselrichter) angeschlossen wird.
+keine Wandlung des Stroms, hat also praktisch keine elektrischen Verluste, wenn
+er gleichstromseitig (DC-gekoppelt, ohne Wechselrichter) angeschlossen wird.
 Es kommt aber zu thermischen Verlusten in Abhängigkeit von der Wärmedämmung,
 wenn das darüber erwärmte Wasser nicht zeitnah verwendet wird.
 Auf jeden Fall muss sichergestellt werden, dass das Wasser im Boiler
@@ -2999,29 +2999,139 @@ Selbstversorgung 18 %
 
 #### Regelungsstrategien für Stromspeicher {#Regelungsstrategien}
 
-Für die Einsparung von Stromkosten wäre folgende Lade- und Entladeregelung
-ideal:
+Weil man für ins externe Netz eingespeisten Strom keine Vergütung bekommt oder
+jedenfalls weniger erhält als man für vom Netz bezogenen Strom zahlen muss,
+sollte zur Strom-Kostenersparnis der Netzbezug möglichst minimiert werden.\
+Daher wäre es es optimal, wenn zu jeder Zeit gilt:
+
+<p style="text-align: center;">
+Haushalts-Last + Auflade-Leistung in den Speicher
+</p>
+<p style="text-align: center;">
+≤ &nbsp; bzw. &nbsp; =
+</p>
+<p style="text-align: center;">
+PV-Leistung + Entlade-Leistung aus dem Speicher
+</p>
+
+Nachdem der Gesamt-Leistungssaldo am Einspeisepunkt des Haushalts gleich
+
+<p style="text-align: center;">
+(Haushalts-Last + Speicher-Aufladeleistung) -
+(PV-Leistung + Speicher-Entladeleistung)
+</p>
+
+ist, kann die (Un-)Gleichung auch abgekürzt geschrieben werden als
+
+<p style="text-align: center;">
+Gesamt-Leistungssaldo ≤ 0 &nbsp; &nbsp; bzw.
+&nbsp; &nbsp; Gesamt-Leistungssaldo = 0
+</p>
+
+Wenn die (Un-)Gleichung erfüllt ist, dann wird überhaupt kein Strom
+aus dem Netz bezogen (sondern höchstens eingespeist).
+
+Wenn die PV-Leistung nie kleiner als die Last durch den Haushalt wäre,
+bräuchte man dafür keinen Speicher, aber das ist nicht realistisch.
+Mit Hilfe des Speichers kann die (Un-)Gleichung immerhin viel öfter erfüllt
+werden als ohne, indem bei PV-Leistungsüberschuss der Speicher aufgeladen
+und bei Unterdeckung der Last der Speicher entladen wird.
+
+Die Anbindung des Speichers an die PV-Anlage erfolgt
+entweder *DC-gekoppelt*, also schon gleichstromseitig,
+oder *AC-gekoppelt*, also indirekt über das Wechselstromnetz im Haushalt.
+Details dazu im Abschnitt [Ladung des Stromspeichers](#Ladung).
+
+{:style="clear:both"}
+
+![Bild: DC-Kopplung](DC-Kopplung.jpg){:.left width="408"
+style="margin-right: 2px"}
+![Bild: AC-Kopplung](AC-Kopplung.jpg){:.right width="380"
+style="margin-left: 2px"}
+<!--
+https://selecta-solar.de/stromspeicher/
+https://solar.htw-berlin.de/effizienzleitfaden-fuer-pv-speichersysteme/
+-->
+
+{:style="clear:both"}
+
+Aus der o.g. (Un-)Gleichung folgt nebenbei, dass es nicht zielführend wäre,
+den Speicher gleichzeitig zu laden und zu entladen.
+Das ist auch schon physikalisch-technisch gar nicht möglich.
+Bei ungeschickter Laderegelung eines AC-gekoppelten Speichers könnte es aber
+passieren, dass sowohl das Ladegerät als auch der Wechselrichter zur Entnahme
+aus dem Speicher aktiv ist. Dies führt dazu, dass je nach Differenz aus Lade-
+und Wechselrichter-Leistung der Speicher entweder geladen oder entladen wird
+und dass das Minimum der beiden Leistungen sinnlos und mit Verlusten
+zunächst in Gleichstrom und umgehend wieder in Wechselstrom gewandelt wird.
+
+Für die Regelung wird die PV-Leistung normalerweise auch die Last durch
+den Haushalt als gegeben vorausgesetzt. Allerdings könnte die Regelung
+durchaus gewisse [Überschuss-Verbraucher](#Stromverbrauch) steuern.
+Als die wesentlichen Stellschrauben der Regelung bleibt die Lade- und
+Entladeleistung des Speichers. \
+Unter Berücksichtigung, dass ein Speicher mit gegebener Kapazität nur begrenzt
+geladen und entladen werden kann und sich Laden und Entladen des Speichers
+zeitlich ausschließen, ergibt sich folgende ideale Lade- und Entladeregelung:
+
 * Solange der Speicher nicht voll ist,
 wird immer genau der Anteil an PV-Leistung zum Laden verwendet, der übrig ist,
-also aktuell nicht anderweitig direkt verbraucht wird.\
-Dies wird Lastvorrang oder *Überschussladung* genannt.
-* Solange der Speicher nicht leer ist, wird er immer genau so stark entladen
-wie nötig ist, um den Anteil am aktuellen direktem Verbrauch auszugleichen,
-den die PV-Leistung nicht abdeckt.\
-Damit kann man eine sogenannte *Nulleinspeisung* realisieren,
-also dass kein überschüssiger Strom ins externe Netz fließt.
+also aktuell nicht anderweitig direkt gebraucht werden kann.\
+Dies wird *Lastvorrang* oder *Überschussladung* genannt.
 
-Zur Schonung der Batterie solle dabei
-* ein gewisser Ladestrom und ein gewisser Entladestrom nicht überschritten
-werden, wobei die verwendeten Komponenten da ohnehin Grenzen setzen, und
-* die Regelung zeitlich geglättet werden, so dass bei sich schnell ändernder
-Erzeugung und Last nicht ständig zwischen Auf- und Entladung umgeschaltet wird,
-[//]: #
-wobei durch diese Zusatzbedingungen allerdings die Effizienz ein wenig leidet.
+* Solange sein Ladezustand oberhalb der Entladegrenze ist,
+wird der Speicher immer genau so stark entladen wie nötig ist, um den Anteil der
+aktuellen Last auszugleichen, den die PV-Leistung nicht abdeckt.
+
+Damit kann man eine sogenannte *Nulleinspeisung*
+realisieren, also dass überschüssiger Strom nicht ins externe Netz fließt.
+Bei vollem Speicher kann man aber auch einen *Bypass* erlauben, also dass
+die gesamte PV-Leistung an der Batterie vorbei ins Hausnetz gespeist wird.
+Dies geschieht bei AC-Kopplung automatisch,
+weil bei vollem Speicher das Ladegerät abschaltet.
+Durch den Bypass bei vollem Speicher wird überschüssiger Strom nach extern
+abgegeben, solange die Last geringer als PV-Leistung ist.
+
+In Abweichung von den bisher genannten Punkten sollte
+zur Schonung der Batteriezellen
+* ein gewisser Ladestrom sowie ein gewisser Entladestrom nicht überschritten
+werden, wobei die verwendeten Komponenten da ohnehin Grenzen setzen, sowie
+* schnelle Wechsel zwischen Laden und Entladen vermeiden werden.\
+Wenn also PV-Leistung und Last nahe beieinander liegen
+und zu befürchten ist, dass (durch schwankende Last oder PV-Leistung)
+deren Differenz schnell mehrfach hintereinander das Vorzeichen wechselt
+und in der Folge die Batterie ebenso schnell hintereinander aufgeladen
+und entladen würde, empfiehlt es sich, je nach Speicher-Ladezustand
+tendenziell eher nur zu laden oder nur zu entladen.\
+Bei AC-Kopplung lässt sich das einfach dadurch erreichen, dass der
+Batteriewechselrichter bzw. das Ladegerät erst mal nicht genutzt wird.\
+Bei DC-Kopplung kann man das annähernd erreichen, indem die Zielleistung,
+die über den Wechselrichter abgerufen werden soll, etwas geringer bzw. etwas
+höher gewählt wird als für den eigentlich optimalen Ausgleich
+des Gesamt-Leistungssaldos.
+Zudem sollte man bei DC-Kopplung und vollem Speicher besser keinen vollen Bypass
+machen, um zu vermeiden, dass durch Schwankungen der Last oder der PV-Leistung
+schnell hintereinander nur ein wenig entladen und dann wieder aufgeladen wird.
+
+Durch diese Zusatzbedingungen leidet allerdings die Effizienz ein wenig.
+
+Man kann bei der Regelung auch diverse weitere Faktoren berücksichtigen,
+etwa Uhrzeit, Temperatur, Strompreis, die bisherige Entwicklung
+der PV-Leistung, der Last und des Speicher-Ladezustandes, der in nächster Zeit
+erwartete PV-Ertrag, Verbrauch im Haushalt, Strompreis, usw.
 
 Das alles ist regelungstechnisch ziemlich aufwendig und benötigt jedenfalls
-einen Sensor zur Erfassung des momentanen Haushalts-Stromverbrauchs.
-Es lohnt sich bislang, wenn überhaupt, nur für größere PV-Anlagen.
+ein phasensaldierendes Messgerät zur Erfassung des momentanen Leistungs-Saldos
+am externen Netzanschluss &mdash;
+Details dazu in Abschnitt [Verbrauchsmessung](#Verbrauchsmessung).
+
+Bei AC-Kopplung genügt diese Messung auch als Grundlage
+für die genannten batterieschonenden Maßnahmen,
+während man bei DC-Kopplung dafür zusätzlich das Leistungssaldo am Speicher
+(also die Lade- bzw. Entladeleistung) messen oder damit gleichbedeutend die
+Differenz aus PV-Leistung und Wechselrichter-Eingangsleistung bestimmen muss.
+
+<!-- Es lohnt sich bislang, wenn überhaupt, nur für größere PV-Anlagen. -->
 
 Für Steckersolargeräte wäre es viel einfacher, aber leider wenig zielführend,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
@@ -3049,15 +3159,6 @@ Der Speicher füllt sich (auch schon zwischendurch) bei Wasserzufuhr wieder auf.
 Zusätzlich ist der Speicher am Einlass mit einem Überlaufschutz
 ausgestattet, der die Wasserzufuhr stoppt, wenn der Speicher voll ist
 und das Wasser durch den kleinen Auslass nicht schnell genug abfließt.
-
-Übrigens ist es schon technisch nicht möglich und wäre natürlich auch
-nicht sinnvoll, den Speicher gleichzeitig zu laden und zu entladen.
-Bei ungeschickter Laderegelung eines AC-gekoppelten Speichers könnte es aber
-passieren, dass sowohl das Ladegerät als auch der Wechselrichter zur Entnahme
-aus dem Speicher aktiv ist. Dies führt dazu, dass je nach Differenz aus Lade-
-und Wechselrichter-Leistung der Speicher entweder geladen oder entladen wird
-und dass das Minimum der beiden Leistungen sinnlos und mit Verlusten
-zunächst in Gleichstrom und umgehend wieder in Wechselstrom gewandelt wird.
 
 #### Dimensionierung des Stromspeichers {#Speicherbatterie}
 
@@ -3390,34 +3491,21 @@ Speicher und Wechselrichter kurz gehalten werden können.
 
 Für eine optimale lastabhängige Regelung müssen die Laderegler nicht von außen
 gesteuert werden, sondern im Prinzip genügt es, die Ausgangsleistung des
-Wechselrichters sukzessive so anzupassen, dass das aktuelle Leistungs-Saldo am
-Wohnungs-Anschluss (das sich aus Last durch den Haushalt abzüglich PV-Leistung
+Wechselrichters sukzessive so anzupassen, dass der aktuelle Leistungssaldo am
+Einspeisepunkt der Haushalts (der sich aus Haushalts-Last abzüglich PV-Leistung
 und bisheriger Ausgangsleistung des Wechselrichters ergibt) möglichst Null ist.
 Je nachdem, ob dabei die Differenz aus aktueller PV-Leistung und
 Abruf durch den Wechselrichter positiv oder negativ ausfällt,
-wird der Speicher mit dieser Differenz-Leistung geladen oder entladen.\
-Um den Speicher zu schonen, sollte man allerdings schnelle Wechsel zwischen
-Laden und Entladen vermeiden. Wenn also die Zielleistung, die über den
-Wechselrichter abgerufen werden soll, nahe an der PV-Leistung liegen würde
-und zu befürchten ist, dass die Differenz durch schwankende Last oder
-PV-Leistung schnell mehrfach hintereinander das Vorzeichen wechselt,
-empfiehlt es sich, die Zielleistung lieber etwas geringer zu wählen,
-so dass tendenziell eher geladen wird.
-Bei vollem Speicher ist es am sinnvollsten, einen vollen Bypass zu machen,
-also die gesamte PV-Leistung über den Wechselrichter abzurufen
-(also dann nicht unbedingt eine Nulleinspeisung zu machen, sondern Strom nach
-extern abzugeben, solange die Last unter der PV-Leistung liegt). Außerdem
-sollte der Speicher generell nur bis zu einer gewissen Grenze entladen werden.
+wird der Speicher mit dieser Differenz-Leistung geladen oder entladen.
+Für Details dazu und Hinweise zu Bypass und Schonung der Batteriezellen siehe
+den [Abschnitt zu Regelungsstrategien für Stromspeicher](#Regelungsstrategien).
 
-Man kann bei der Regelung noch weitere Faktoren berücksichtigen,
-etwa Uhrzeit, Temperatur, die
-bisherige Entwicklung der PV-Leistung, der Last und des Speicher-Ladezustandes,
-der in nächster Zeit erwartete PV-Ertrag und Verbrauch im Haushalt, usw.\
-Die Messung des (zeitweise negativen) Leistungs-Saldos am Wohnungs-Anschluss,
-also wie viel gerade aus den externen Netz gezogen oder in dieses eingespeist
+Die Messung des Gesamt-Leistungssaldos am Einspeisepunkt des Haushalts,
+also wie viel gerade aus dem externen Netz gezogen oder in dieses eingespeist
 wird, erfolgt mit einem [3-Phasen-Energiemessgerät](#Verbrauchsmessung).
-Wenn dazu wie im Bild dargestellt Tibber Pulse verwendet wird, kann die
-Nutzung des Speichers auch vom aktuellen Strompreis abhängig gemacht werden.\
+Wenn dazu (wie im Bild dargestellt) Tibber Pulse verwendet wird, kann die
+Nutzung des Speichers auch vom aktuellen Strompreis abhängig gemacht werden.
+
 Die Batteriespannung (damit indirekt der Ladezustand des Speichers)
 und die PV-Leistung kann z.B. über ein Victron VE.Direct USB-Kabel
 von der [Victron Venus Firmware auf einem Raspberry Pi](
@@ -3465,7 +3553,7 @@ und ein 230 V-Ladegerät eine große Flexibilität bei der Wahl der Komponenten,
 auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten.
 
 Die Aufladung der Batterie sollte zu jeder Zeit nur in dem Maße erfolgen, wie
-der PV-Strom gerade nicht anderweitig direkt genutzt werden kann (*Lastvorrang*).
+der PV-Strom gerade nicht anderweitig direkt genutzt werden kann (Lastvorrang).
 Das optimiert die Speichernutzung in mehrfacher Hinsicht:
 * Eine Speicherung des Stroms ist im Vergleich zur direkten Nutzung
   immer mit zusätzlichen Verlusten verbunden.
@@ -4969,7 +5057,7 @@ LocalWords: zusammenfassung Messgeraet CC BY Std webp Ferrariszaehler IAMKlaus
 LocalWords: Unabhaengigkeitsrechner Stromwaechter Play SDM clams comment fazit
 LocalWords: output calculation power unit rating Europe TSUN InGe DPM anker
 LocalWords: left right irradiance GHI buehneTop clear both png tgl RS solix
-LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi
+LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi align
 LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs
 LocalWords: blackout brownout panels busbars shingle panel up number
 LocalWords: maximum point tracking sine wave efficiency boost true SG
@@ -4990,10 +5078,10 @@ LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
 LocalWords: data transfer solar cut cells open short circuit voltage lim
 LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation
-LocalWords: Microinverter What are Amps Volts SMF charge discharge
+LocalWords: Microinverter What are Amps Volts SMF charge discharge Un
 LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
 LocalWords: Delivered Latest Downgraded shelly emeter file status returned
-LocalWords: Zweirichtungszaehler issuecomment collect Notifications
+LocalWords: Zweirichtungszaehler issuecomment collect Notifications height
 LocalWords: Plugs comments January Settings ons configuration states excl comp
 LocalWords: sensor export float uksa tamorix custom firmware en Central zell
 -->
