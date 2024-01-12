@@ -213,6 +213,7 @@ Lizenzkürzel:
         - [Kommerzielle SSG-Speicherlösungen](#SSG-Speicher)
           - [Zendure SolarFlow](#SolarFlow)
           - [Anker Solix](#Solix)
+          - [Maxxisun Maxxicharge](#Maxxicharge)
           - [Weitere Produkte](#SSG-Speicher-sonstige)
           - [Zusammenfassung und Effizienzbetrachtung](#SSG-Speicher-Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](#SSG-Speicher-Eigenbau)
@@ -1299,7 +1300,7 @@ eines Stromspeichers.
 
 * Man kann sich die Verbrauchsdaten über den
 sog. [„Volkszähler“](https://www.volkszaehler.org/),
-[„powerfox poweropt“](https://poweropti.powerfox.energy/),
+[„powerfox poweropti“](https://poweropti.powerfox.energy/),
 [Tibber Pulse](https://tibber.com/de/pulse) o.ä.
 aus dem offiziellen Haushalts-Stromzähler übermitteln lassen &mdash;
 sofern ein digitaler Stromzähler verbaut ist und man Zugang zu diesem hat.\
@@ -3190,6 +3191,39 @@ Im Jahr 2024 [will Anker Verbesserungen bringen](
 https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/#unser-test-fazit-zur-anker-solix-solarbank),
 um auch Smart Plugs und Lastmessgeräte (Smart Home Integration) zu unterstützen.
 
+##### Maxxisun Maxxicharge {#Maxxicharge}
+
+Bislang kaum bekannt und erst ab März 2024 allgemein lieferbar ist der
+[Maxxicharge Batteriespeicher](https://www.maxxisun.de/maxxicharge).
+Seine Entwicklung erfolgt(e) in Zusammenarbeit mit Hochschule Anhalt komplett
+in Deutschland und macht einen sehr soliden Eindruck.
+<!-- Es wird 10 Jahre Garantie gegeben. -->
+Im Gegensatz zu allen vergleichbaren Produkten wurde er von vornherein auf
+[optimale lastabhängige Regelung der Speichernutzung konzipiert](https://www.maxxisun.de/post/zum-ersten-mal-wird-strom-aus-einem-balkonkraftwerk-wirklich-intelligent-verwaltet).
+
+![Bild: Maxxicharge Batteriespeicher](Maxxicharge.jpg){:.right width="798"}
+
+Bei der Steuereinheit, genannt Central Control Unit (CCU), wird entweder ein
+[Shelly (Pro) 3EM](#Shelly3EM) mitgeliefert oder eine Variante des
+[powerfox poweropti](https://poweropti.powerfox.energy/), welcher die CCU
+mit Last-Daten im Sekundentakt versorgt, und zwar in einem eigens aufgespannten
+WLAN, wobei die Reichweite durch eine mitgelieferte Antenne vergrößert wird.
+
+In den Batterien ist eine Heizung eingebaut, die auch an einem Aufstellort
+außerhalb des Hauses eine Ladung bei Minustemperaturen (bis -20°C) ermöglicht.\
+Die größte Variante hat 5 kWh nutzbare Kapazität und unterstützt bis zu 3 kWp
+Modulleistung. Es können auch mehrere Speicher zusammengeschaltet werden
+(bis zu 80 kWh). Der Regelungsalgorithmus berücksichtigen auch unterschiedliche
+effektive Kapazitäten und Ladungsstände der [einzelnen Batterie(zell)en](
+https://www.maxxisun.de/post/maxxicharge-batteriespeichersysteme-denken-mit).\
+Nachdem normale SSGs künftig rechtlich auf 2000 Wp Modulleistung beschränkt
+sollen, wurde Hilfe bei der Anmeldung von Anlagen mit mehr Leistung
+[in Aussicht gestellt](https://www.akkudoktor.net/forum/postid/148774/).
+Am Ende [dieses Artikels](
+https://energiewende-tipps.de/balkonkraftwerke-mit-nulleinspeisung-durch-maxxicharge-batteriespeicher/) dazu der interessante Hinweis, dass der Batteriespeicher
+nicht ortsfeste PV-Anlagen offenbar nicht angemeldet werden müssen.
+
+
 ##### Weitere Produkte {#SSG-Speicher-sonstige}
 
 Es gibt weitere ähnliche Lösungen, etwa
@@ -3213,9 +3247,10 @@ https://www.infranken.de/ratgeber/wohnen/energiesparen/balkonkraftwerk-speicher-
 
 ##### Zusammenfassung und Effizienzbetrachtung {#SSG-Speicher-Effizienz}
 
-Diese Produkte haben mehr oder weniger starke Einschränkungen und funktionieren
-in der Praxis nicht so gut und effizient wie vom Marketing behauptet. Nur
-das Zendure SolarFlow unterstützt (Stand Anfang 2024) eine optimale Regelung.
+Viele dieser Produkte haben mehr oder weniger starke Einschränkungen und
+funktionieren in der Praxis nicht so gut und effizient wie vom Marketing behauptet.
+Stand Anfang 2024 unterstützen nur das Zendure SolarFlow und der Maxxisun
+Maxxicharge eine eine optimale Regelung und können damit rentabel sein.
 
 Hier ein Vergleich des mit den unterschiedlichen Ansätzen erzielbaren
 Jahres-Eigenverbrauchs auf Basis von Simulationen mit dem [SolBatSim](#SolBatSim)
@@ -4960,5 +4995,5 @@ LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
 LocalWords: Delivered Latest Downgraded shelly emeter file status returned
 LocalWords: Zweirichtungszaehler issuecomment collect Notifications
 LocalWords: Plugs comments January Settings ons configuration states excl comp
-LocalWords: sensor export float uksa tamorix custom firmware
+LocalWords: sensor export float uksa tamorix custom firmware en Central zell
 -->
