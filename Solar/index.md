@@ -189,8 +189,10 @@ Lizenzkürzel:
     -   [Nennleistung und Jahresertrag](#Nennleistung)
     -   [Optimale Ausrichtung von Solarmodulen](#Ausrichtung)
         - [Aufteilung in mehrere Orientierungen](#Aufteilung)
--   [Stromverbrauch im Haushalt](#Stromverbrauch)
-    - [Verbrauchsmessung](#Verbrauchsmessung)
+-   [Stromverbrauch und Einspeisung im Haushalt](#Stromverbrauch)
+    - [Strommessung](#Strommessung)
+        - [Einphasige Strommessung](#einphasig)
+        - [Gesamt-Strommessung](#Gesamtstrom)
         - [Details zum Shelly 3EM](#Shelly3EM)
     - [Stromzähler und Rücklaufsperre](#Stromzähler)
 -   [Eigenverbrauch und seine Berechnung](#Eigenverbrauch)
@@ -613,7 +615,7 @@ https://www.photovoltaikforum.com/core/attachment/44638-pv-vergleich-s-vs-ow-v2-
 
 Diese Effekte werden selbst dann nicht durch eine geringere Nutzbarkeit tagsüber
 ausgeglichen, wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr nur eine
-[Minimallast (Grundlast)](#Verbrauchsmessung) von z.B. 100 W hat:
+[Minimallast (Grundlast)](#Strommessung) von z.B. 100 W hat:
 Dann hat die Ost-West-Ausrichtung im Sommer einen leichten Vorteil, aber zu
 allen anderen Jahreszeiten ermöglicht die Südausrichtung mehr Eigenverbrauch.\
 Erst wenn täglich von 8 bis sogar 18 Uhr nur z.B. 50 W Grundlast vorliegt,
@@ -1174,7 +1176,7 @@ Eigenverbrauch mit =  624 kWh wenn Mo-Fr 8-16 Uhr 100 W Verbrauch
 Eigenverbrauchsv.  =    0 kWh netto während 2 h durch Drosselung auf 1200 W
 -->
 
-Stromverbrauch im Haushalt {#Stromverbrauch}
+Stromverbrauch und Einspeisung im Haushalt {#Stromverbrauch}
 --------------------------------------------
 
 Wenn man Strom(kosten) sparen möchte, ist der direkteste, effizienteste und
@@ -1243,7 +1245,9 @@ haben kein solches Energiemanagement, so dass dieses noch ergänzt werden müsst
 Es fallen besonders für PV-Heizstäbe und PV-Boiler also zusätzlichen Montage-
 und Regelungs-Aufwände an, weshalb sie sich nur bei größeren PV-Anlagen lohnen.
 
-### Verbrauchsmessung {#Verbrauchsmessung}
+### Strommessung {#Strommessung}
+
+#### Einphasige Strommessung {#einphasig}
 
 ![Bild: Energiekosten-Messgerät in Steckdosenform](
 Energiekosten-Messgeraet.png){:.right width="300"
@@ -1251,8 +1255,8 @@ style="margin-left: 30px; margin-right: 30px"}
 Den Stromverbrauch von Elektrogeräten im Haushalt kann man recht einfach
 mit Strom-Messgeräten in Steckdosenform bestimmen. Diese messen nicht nur
 die momentan von angeschlossenen Verbrauchern beanspruchte Leistung in Watt,
-sondern bei längerer Verwendung auch die über die Zeit verbrauchte Strommenge
-in kWh.\
+sondern bei längerer Verwendung auch die über die Zeit verbrauchte Energie
+(Strommenge) in kWh.\
 Man kann ein solches Gerät auch dafür nutzen, die Einspeisung seines
 Steckersolargeräts ins Hausnetz zu messen (wobei möglicherweise die
 Zahlen etwas zu gering dargestellt werden, weil anscheinend einige solcher
@@ -1266,13 +1270,23 @@ nach Aussagen von Nutzern in Foren auch für den Shelly 1PM <!--und 3EM --> gilt
 
 Eine Übersicht von Geräten zur Messung auch der eingespeisten Strommenge findet
 sich z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
-Und ein sehr schöner Artikel zu verschiedenen Shelly-Varianten und ihrer
-Nutzung [hier](https://blog.helmutkarger.de/balkonkraftwerk-teil-6-monitoring/).
+Und ein schöner Artikel zur Strommessung v.A. mit verschiedenen Shelly-Geräten
+[hier](https://blog.helmutkarger.de/balkonkraftwerk-teil-6-monitoring/).
 Darin auch die Info, dass beim Shelly Plus 1PM die Genauigkeit verbessert wurde.
 
-Den Jahresverbrauch seines Haushalts erfährt man automatisch über die
+#### Gesamt-Strommessung {#Gesamtstrom}
+
+Den Netto-Jahresverbrauch seines Haushalts erfährt man automatisch über die
 jährliche Stromabrechnung bzw. bestimmt ihn selbst durch die Differenz der
 Zählerstände im Jahresabstand.
+
+Sowohl als Basis der Energieabrechnung für einen Haushalt als auch für die
+optimale [Regelung](#Regelungsstrategien) eines Stromspeichers ist es nötig,
+den *Gesamt-Leistungssaldo* (in Summe über alle drei Phasen) zu bestimmen.
+Diese geschieht am Einspeisepunkt des Haushalts, also am Hauptverteiler
+eines Einfamilienhauses bzw. am Unterverteiler/Sicherungkasten einer Wohnung.
+Ein [Stromzähler](#Stromzähler) bestimmt daraus die verbrauchte (und teils auch
+eingespeiste) Energie durch zeitliche Integration des Gesamt-Leistungssaldos.
 
 Besonders im Zusammenhang mit einer Konstanteinspeisung aus
 [Batteriespeichern](#Batteriepuffer) ist die *Minimallast* interessant,
@@ -1291,7 +1305,8 @@ ausgeschaltet sein, weil sie sonst das Messergebnis nach oben verfälschen.\
 Genauer ist es, den Verlauf der aufgenommenen Leistung über mindestens einen Tag
 zu messen, wie im Folgenden beschrieben, und davon den Minimalwert zu nehmen.
 
-Der Haushalts-Stromverbrauch (ggf. abzüglich Erzeugung durch Photovoltaik)
+Der jeweils aktuelle Gesamt-Leistungssaldo und der Haushalts-Stromverbrauch
+(ggf. abzüglich Erzeugung durch Photovoltaik) über die Zeit hinweg
 lässt sich auch kontinuierlich und automatisiert messen und übertragen.
 Das kann für eine Online-Ablesung und genauere Analyse
 des Verbrauchs interessant sein. Besonders wichtig ist es aber für die optimale
@@ -1308,7 +1323,6 @@ Zur Verwendung der [Tasmota](https://www.tasmota.info/)-Software
 gibt es [hier](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
 eine schöne Anleitung.<!--, aber auch für andere
 [Smarthome-Projekte](https://hessburg.de/category/technik/smarthome/).-->
-
 
 ![Bild: Shelly Pro 3EM mit Clips](Shelly-Pro-3EM.png){:.right width="140"}
 ![Bild: Shelly Pro 3EM Klappwandler](Shelly-clams.png){:.right width="150"}
@@ -1391,13 +1405,13 @@ in den einzeln pro Phase exportierbaren CSV-Dateien zusammenzählt.
 Auf welchem der diversen Shelly-Interfaces auch immer man Energiedaten bezieht,
 sie sind immer nur getrennt für jede einzelne der drei Phasen aufsummiert.
 Das hilft einem nicht, wenn man eigentlich an den Riemann-Summen
-des positiven und des negativen Leistungs-Saldos interessiert ist,
+des positiven und des negativen Leistungssaldos interessiert ist,
 also an der über die Zeit hinweg bezogenen und eingespeisten Energie,
 wie sie ein [Zweirichtungszähler](#Stromzähler) liefert.\
 Dabei hält sich in Online-Foren hartnäckig die etwas irreführende Aussage,
 der Shelly (Pro) 3EM könne nicht saldieren bzw. tue dies falsch.
 Dies ist in der Hinsicht unrichtig, dass dabei was Wort „saldieren“
-mit der Zweiwege-Energie-Summation des Leistungs-Saldos verwechselt wird.
+mit der Zweiwege-Energie-Summation des Leistungssaldos verwechselt wird.
 Das Gerät und die Interfaces von Shelly können sehr wohl die momentane Leistung
 saldieren, aber die Riemann-Summenbildung (also Akkumulation der Leistungswerte
 über die Zeit) geschieht leider nur getrennt für jede der drei Phasen.
@@ -1583,7 +1597,7 @@ Zweiwegezähler (wie sie in Deutschland und einigen anderen Ländern leider
 statt der Nettomessung üblich ist) zu unterstützen.
 
 Die Shelly-Nutzer werden bzgl. einer zeitlichen Zweiwege-Akkumulation des
-Leistungs-Saldos [von Allterco Robotics seit Jahren hingehalten](
+Leistungssaldos [von Allterco Robotics seit Jahren hingehalten](
 https://www.shelly-support.eu/forum/thread/15874-z%C3%A4hlweise-bzw-saldierende-z%C3%A4hlung/),
 so dass man weiterhin auf
 Software-Basteleien angewiesen ist. Dazu gibt es verschiedenste Ansätze.
@@ -1622,8 +1636,8 @@ Es wird also nur der aus dem Netz bezogene Anteil des Verbrauchs berechnet.
 Steckersolargerät angeschlossen wird und auf welcher Phase die möglicherweise
 gleichzeitig verwendeten Verbraucher angeschlossen sind, weil (fast)
 alle Stromzähler *phasensaldierend* arbeiten, d.h. sie bilden die Gesamtsumme
-über alle drei Leitungen aus dem Verbrauch und der Erzeugung, welche dabei
-umgekehrtes Vorzeichen hat. Das hat erst mal noch nichts damit zu tun,
+über alle drei Drehstrom-Leitungen aus dem Verbrauch und der Erzeugung, welche
+dabei umgekehrtes Vorzeichen hat. Das hat erst mal noch nichts damit zu tun,
 wie der Zähler mit dem Fall umgeht, dass mehr Solarstrom produziert als
 in dem Moment im Haushalt verbraucht wird, dass also der Saldo negativ ist.
 
@@ -1644,7 +1658,7 @@ Ein
 [*Zweirichtungszähler*](https://www.4motions-energy.de/zweirichtungszaehler/),
 <!--https://www.thermondo.de/info/rat/erneuerbare-energie/zweirichtungszaehler/-->
 auch *Zweiwegezähler* genannt, differenziert die Menge des eingespeisten Stroms
-(mit negativem Leistungs-Saldo) vom Netzbezug (mit positivem Leistungs-Saldo),
+(mit negativem Leistungssaldo) vom Netzbezug (mit positivem Leistungssaldo),
 was durch ein Symbol mit Pfeilen in zwei Richtungen dargestellt wird.
 Die Gesamtsumme (auch über ggf. verschiedene Tarifierungen hinweg)
 des Energie-Bezugs wird dabei in einem Register mit der [*OBIS-Kennzahl*](
@@ -2197,7 +2211,7 @@ dürfen elektrische Geräte auch von Laien in Betrieb genommen werden.
 Meist werden Steckersolargeräte über einen normalen Schukostecker angeschlossen.
 Das ist sehr einfach und flexibel. Es ermöglicht auch, ganz simpel und günstig
 ein Energiemessgerät für die erzeugte Strommenge dazwischenzustecken,
-wie es unten zur [Verbrauchsmessung](#Verbrauchsmessung) dargestellt ist.
+wie es unten zur [Strommessung](#Strommessung) dargestellt ist.
 Der im Abschnitt über [Netzwechselrichter](#Netzwechselrichter) beschriebene
 NA-Schutz macht diese Lösung sicher genug, weil der Wechselrichter
 die Stromzufuhr sofort unterbricht, wenn man den
@@ -2814,7 +2828,7 @@ größer als der Verbrauch ist), aber auch nicht zu wenig geladen wird,
 so dass der Speicher am Ende des Tages möglichst voll ist.
 Je größer die Speicherkapazität im Vergleich zum Verbrauch und zur Erzeugung,
 desto schwieriger ist das ohne lastabhängige Regelung hinzubekommen.\
-Viele scheitern schon an der Bestimmung der [Minimallast](#Verbrauchsmessung),
+Viele scheitern schon an der Bestimmung der [Minimallast](#Strommessung),
 den diese ist geringer als etwa die (leichter bestimmbare) Durchschnittslast in
 der Nacht. Wer die Konstanteinspeisung auf die nächtliche Durchschnittslast
 einstellt, verschenkt über die meiste Zeit, wo periodisch laufende Geräte
@@ -3123,7 +3137,7 @@ erwartete PV-Ertrag, Verbrauch im Haushalt, Strompreis, usw.
 Das alles ist regelungstechnisch ziemlich aufwendig und benötigt jedenfalls
 ein phasensaldierendes Messgerät zur Erfassung des momentanen Leistungs-Saldos
 am externen Netzanschluss &mdash;
-Details dazu in Abschnitt [Verbrauchsmessung](#Verbrauchsmessung).
+Details dazu in Abschnitt [Gesamt-Strommessung](#Gesamtstrom).
 
 Bei AC-Kopplung genügt diese Messung auch als Grundlage
 für die genannten batterieschonenden Maßnahmen,
@@ -3502,7 +3516,7 @@ den [Abschnitt zu Regelungsstrategien für Stromspeicher](#Regelungsstrategien).
 
 Die Messung des Gesamt-Leistungssaldos am Einspeisepunkt des Haushalts,
 also wie viel gerade aus dem externen Netz gezogen oder in dieses eingespeist
-wird, erfolgt mit einem [3-Phasen-Energiemessgerät](#Verbrauchsmessung).
+wird, erfolgt wie im Abschnitt [Gesamt-Strommessung](#Gesamtstrom) beschrieben.
 Wenn dazu (wie im Bild dargestellt) Tibber Pulse verwendet wird, kann die
 Nutzung des Speichers auch vom aktuellen Strompreis abhängig gemacht werden.
 
@@ -3564,7 +3578,7 @@ Das optimiert die Speichernutzung in mehrfacher Hinsicht:
 
 Der Lastvorrang bringt für die Effizienz fast so viel wie eine optimale
 lastabhängige Entnahme aus der Batterie.
-Der Abschnitt [Verbrauchsmessung](#Verbrauchsmessung) gibt Hinweise,
+Der Abschnitt [Strommessung](#Strommessung) gibt Hinweise,
 wie man die aktuelle Last im Haushalt automatisch messen bzw. auslesen kann.
 
 Wenn die [o.g. Balkonanlage mit 1 kWh Pufferspeicher](#Batteriepuffer) nur eine
@@ -3867,7 +3881,7 @@ ready2plugin-Stromwaechter_indielux.png){:.center}](
 https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
 
 Möglichkeiten für die automatische Auslesung des Haushalts-Stromverbrauchs
-sind im Abschnitt [Verbrauchsmessung](#Verbrauchsmessung) genannt.
+sind im Abschnitt [Strommessung](#Strommessung) genannt.
 
 Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
 Bei einer z.B. auf 600 W begrenzten Einspeisung beträgt für die o.g.
