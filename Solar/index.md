@@ -4452,8 +4452,9 @@ der sich aus dem Maximalstrom (*Kurzschlussstrom*, engl. *short-circuit current,
 I<sub>SC</sub>*) der Module ergibt, weniger kritisch.
 Er darf den maximal nutzbaren Strom eines Eingangs (*I<sub>DC</sub> max*)
 durchaus überschreiten -- allerdings wird in dem Moment PV-Leistung verschenkt,
-weil der Regler (bzw. Wechselrichter) im Prinzip nicht mehr Leistung aufnimmt
-als wofür er ausgelegt wurde.
+weil der Regler (bzw. Wechselrichter) die Leistung der angeschlossenen Module
+nur bis zu einem bestimmten Maximalwert aufnimmt. Dies gilt übrigens auch dann,
+wenn statt PV-Modulen eine Batterie als Stromquelle angeschlossen wird.
 Das ist ähnlich wie z.B. bei einem an einer Wohnungssteckdose angeschlossenen
 Elektrogerät, das durch seinen Innenwiderstand seine Stromaufnahme begrenzt,
 obwohl die Steckdose viel mehr (je nach Absicherung z.B. 16 A) liefern könnte.\
@@ -4464,17 +4465,20 @@ erreicht wurde oder er an der Grenze seiner Stromaufnahme angekommen ist.
 
 <!--https://www.photovoltaikforum.com/thread/135363-envertech-erlaubt-keine-%C3%BCberbelegung-der-neuen-evt-300-und-evt-560/-->
 
-Wenn allerdings ein Regler für längere Zeit unter Volllast läuft, kann es sein,
-dass er schneller altert als normal, weil er dafür nicht ausgelegt wurde.
-Es könnte bei PV-Strom-Überangebot und schnell wechselnden Lichtverhältnissen
-auch zu kurzzeitigen Überlastungen eines MPPT-Reglers kommen,
-wenn er nicht schnell genug nachregelt.
+Wenn allerdings ein Regler und der nachgeschaltete Wechselrichter für längere
+Zeit unter Volllast läuft und das Gerät nicht gut dafür ausgelegt ist,
+kann es sein, dass es das nicht so gut verträgt und schneller altert als normal.
+<!-- https://www.mydealz.de/comments/permalink/46048287 -->
+Es könnte bei PV-Strom-Überangebot und schnell wechselnder Einstrahlung
+auch zu möglicherweise schädlichen kurzzeitigen Überlastungen kommen,
+wenn der MPPT-Regler nicht schnell genug nachregelt.
 Außerdem könnte sich der Regler bzw. Wechselrichter durch eine Fehlfunktion
 selbst überlasten. Daher und wegen der Garantiebedingungen empfiehlt es sich,
 den im Datenblatt des Geräts genannten absoluten Maximal-Eingangsstrom,
 welcher auch [*maximaler DC-Kurzschlussstrom* (*I<sub>SC</sub> PV max*)](
 https://www.sma-sunny.com/wechselrichter-hochstrommodule-missverstaendnis-i-dc-max/)
-genannt wird, einzuhalten.
+genannt wird, nicht längerfristig zu überschreiten oder zumindest
+für ausreichende Kühlung des Geräts in solchen Situationen zu sorgen.
 
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
 I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
