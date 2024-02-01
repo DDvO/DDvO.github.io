@@ -3134,18 +3134,20 @@ werden, wobei die verwendeten Komponenten da ohnehin Grenzen setzen, sowie
 Wenn also PV-Leistung und Last nahe beieinander liegen
 und zu befürchten ist, dass (durch schwankende Last oder PV-Leistung)
 deren Differenz schnell mehrfach hintereinander das Vorzeichen wechselt
-und in der Folge die Batterie ebenso schnell hintereinander aufgeladen
-und entladen würde, empfiehlt es sich, je nach Speicher-Ladezustand
-tendenziell eher nur zu laden oder nur zu entladen.\
-Bei AC-Kopplung lässt sich das einfach dadurch erreichen, dass der
-Batteriewechselrichter bzw. das Ladegerät erst mal nicht genutzt wird.\
-Bei DC-Kopplung kann man das annähernd erreichen, indem die Zielleistung,
-die über den Wechselrichter abgerufen werden soll, etwas geringer bzw. etwas
-höher gewählt wird als für den eigentlich optimalen Ausgleich
-des Gesamt-Leistungssaldos.
-Zudem sollte man bei DC-Kopplung und vollem Speicher besser keinen vollen Bypass
-machen, um zu vermeiden, dass durch Schwankungen der Last oder der PV-Leistung
-schnell hintereinander nur ein wenig entladen und dann wieder aufgeladen wird.
+und in der Folge die Batterie ebenso schnell hintereinander aufgeladen und
+entladen würde, empfiehlt es sich, je nach Speicher-Ladezustand für längere Zeit
+tendenziell eher nur zu laden oder nur zu entladen.
+  - Bei AC-Kopplung lässt sich das einfach dadurch erreichen, dass der
+  Batteriewechselrichter zwischen Sonnenaufgang und Sonnenuntergang (wo das
+  Ladegerät zu den Zeiten aktiv wird, zu denen PV-Überschuss vorhanden ist)
+  eher nicht genutzt wird, außer wenn der Speicher voll ist.\
+  - Bei DC-Kopplung kann man das annähernd erreichen, indem die Zielleistung,
+  die über den Wechselrichter abgerufen werden soll, etwas geringer bzw. etwas
+  höher gewählt wird als für den eigentlich optimalen Ausgleich
+  des Gesamt-Leistungssaldos. Zudem sollte man bei DC-Kopplung
+  und vollem Speicher besser keinen vollen Bypass machen, um auch in dieser
+  Situation zu vermeiden, dass durch Schwankungen der Last oder der PV-Leistung
+  schnell hintereinander nur ein wenig entladen und dann wieder aufgeladen wird.
 
 Durch diese Zusatzbedingungen leidet allerdings die Effizienz ein wenig.
 
