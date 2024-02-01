@@ -3335,6 +3335,16 @@ Im Jahr 2024 [will Anker Verbesserungen bringen](
 https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/#unser-test-fazit-zur-anker-solix-solarbank),
 um auch Smart Plugs und Lastmessgeräte (Smart Home Integration) zu unterstützen.
 
+<!-- https://www.mydealz.de/comments/permalink/45921047 -->
+Es gibt Bastler, die dem Solix eine [nachgelagerte lastabhängige Drosselung](
+https://community.home-assistant.io/t/using-anker-solix-solarbank-e1600-in-ha/636063)
+über einen regelbaren Wechselrichter verpassen, so dass er über Nacht nur so
+viel einspeisen kann wie gerade verbraucht wird. Das macht ihn zwar relativ
+effizient, aber wer diesen Aufwand treibt, kann sich eigentlich gleich besser
+und v.A. günstiger etwas eigenes bauen wie [dies](#SSG-Speicher-Eigenbau).
+(Zusätzlich auch tagsüber in die merkwürdige Solix-Steuerung einzugreifen oder
+sie zu umgehen wäre noch deutlich komplizierter und würde wohl wenig bringen.)
+
 ##### Maxxisun Maxxicharge {#Maxxicharge}
 
 Bislang kaum bekannt und erst ab März 2024 allgemein lieferbar ist der
