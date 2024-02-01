@@ -1807,7 +1807,7 @@ wie wenn die Anlage nur 495€ kostet und der Strompreis 30 Ct/kWh beträgt.
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92
 ergibt 464 kWh, aber noch etwas Lastspitzen-Abzug
 88%: -peff 93.617
 
@@ -1817,7 +1817,7 @@ Netzeinspeisung             =  196 kWh
 PV-Eigenverbrauchsanteil    =   70 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 -->
 <!--
 Mittlere Last/Tag je Stunde = 210 175 162 160 171 224 307 339 351 365 366 381
@@ -1844,7 +1844,7 @@ Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 
 
 Bei Lastprofil_4685_kWh.csv Eigenverbrauch (509 kWh) 578 kW
-./Solar.pl Lastprofil_4685_kWh.csv 4685 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy
+TODO check/update ./Solar.pl Lastprofil_4685_kWh.csv 4685 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 PV-Nominalleistung          =  600 Wp
 Max. PV-Bruttoleistung      =  607 W am TMY (2008..2020)-04-15 um 13:00 h
 PV-Bruttoertrag             =  764 kWh, PV-System-Wirkungsgrad 92%
@@ -1858,7 +1858,7 @@ PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   12 % des Verbrauchs (Autarkiegrad)
 
 
-./Solar.pl Lastprofil_H0_BDEW.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy
+TODO check/update ./Solar.pl Lastprofil_H0_BDEW.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 Info: assuming Lastprofil_H0_BDEW.csv is a BDEW load profile
 Mittlere Last/Tag je Stunde = 209 156 135 129 130 148 239 335 388 416 425 445
                               481 454 394 355 342 389 475 537 504 444 390 298
@@ -1881,7 +1881,7 @@ Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 
 Verbrauch durch Haushalt    = 6000 kWh
 PV-Eigenverbrauch           =  574 kWh
@@ -1896,7 +1896,7 @@ Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 
 Last durch Haushalt         = 1500 kWh
 Eigenverbrauch              =  333 kWh
@@ -1915,7 +1915,7 @@ allerdings hätte man dann auch langfristig weniger Nutzen.
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -load 130 -tmy
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -load 130 -tmy
 
 Last durch Haushalt         = 3000 kWh
 Konstante Last              =  100 W an den ersten 5 Tagen der Woche von 8 bis 16 Uhr
@@ -3595,7 +3595,7 @@ wäre, weil 66 kWh nicht genutzt und ins externe Netz abgeführt werden.\
 Eine Erhöhung der nutzbaren Speicherkapazität auf 2 kWh brächte nur 10 kWh mehr.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -feed 45
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -feed 45
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie), max. Laderate 1 C
@@ -3613,7 +3613,7 @@ PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -feed 35
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -feed 35
 
 Speicherkapazität           = 2500 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie), max. Laderate 1 C
@@ -3650,7 +3650,7 @@ brächte immerhin einen Eigenverbrauch von 532 kWh
 bei einer dann optimalen Konstanteinspeisung von 125 W.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed 180
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed 180
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -3668,7 +3668,7 @@ PV-Eigenverbrauchsanteil    =   74 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   16 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -pass 0 -feed 130
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -pass 0 -feed 130
 
 Speicherkapazität           = 2500 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -3699,7 +3699,7 @@ brächte einen Eigenverbrauch von 539 kWh,
 wobei die optimale Leistung der Konstanteinspeisung hier bei 110 W liegt.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass spill 0 -feed 100
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass spill 0 -feed 100
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
@@ -3717,7 +3717,7 @@ PV-Eigenverbrauchsanteil    =   78 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   17 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -pass spill 0 -feed 110
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -pass spill 0 -feed 110
 
 Speicherkapazität           = 2500 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
@@ -3901,7 +3901,7 @@ Eine Erhöhung der nutzbaren Speicherkapazität bringt praktisch nichts,
 und eine Verringerung auf 0,5 kWh liefert etwas weniger: 560 kWh.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1250 -dc -tmy -pass spill 0 -feed lim 600
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1250 -dc -tmy -pass spill 0 -feed lim 600
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
@@ -3919,7 +3919,7 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-/Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 2500 -dc -tmy -pass spill 0 -feed lim 600
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 2500 -dc -tmy -pass spill 0 -feed lim 600
 Lastprofil-Datei            : Lastprofil_4673_kWh.csv
 Grundlast                   =  184 W
 Maximallast                 =13795 W am 2010-02-26 um 06:55 h
@@ -3953,7 +3953,7 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -capacity 625 -dc -tmy -pass spill 0 -feed lim 600
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 625 -dc -tmy -pass spill 0 -feed lim 600
 
 Speicherkapazität           =  625 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
@@ -3985,7 +3985,7 @@ Pufferspeicher eine Überschussableitung (Bypass) oder gar eine optimale Ladereg
 
 [//]: #
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed lim 600
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed lim 600
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -4003,7 +4003,7 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1875 -dc -pass 0 -feed lim 600
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1875 -dc -pass 0 -feed lim 600
 
 Speicherkapazität           = 1875 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -4021,7 +4021,7 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 625 -dc -pass 0 -feed lim 600
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 625 -dc -pass 0 -feed lim 600
 
 Speicherkapazität           =  625 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -4071,7 +4071,7 @@ lassen sich zwar immerhin 398 kWh Eigenverbrauch erreichen,
 aber auch dann bleibt der Ansatz kontraproduktiv.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed 80 18..6
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed 80 18..6
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -4088,7 +4088,7 @@ Netzeinspeisung             =   13 kWh
 PV-Eigenverbrauchsanteil    =   41 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =    9 % des Verbrauchs (Autarkiegrad)
 
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -pass 0 -feed 150 18..6
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -pass 0 -feed 150 18..6
 
 Speicherkapazität           = 2500 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W, max. Laderate 1 C
@@ -4116,7 +4116,7 @@ Eine Erhöhung der nutzbaren Kapazität auf 2 kWh
 brächte beim Eigenverbrauch nur 10 kWh mehr.
 
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass spill 0 -feed 75 18..6
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass spill 0 -feed 75 18..6
 
 Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
@@ -4134,7 +4134,7 @@ PV-Eigenverbrauchsanteil    =   75 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   16 % des Verbrauchs (Autarkiegrad)
 -->
 <!--
-./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -pass spill 0 -feed 110 18..6
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 2500 -dc -pass spill 0 -feed 110 18..6
 
 Speicherkapazität           = 2500 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
 Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
