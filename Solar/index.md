@@ -3591,18 +3591,20 @@ https://www.photovoltaikforum.com/core/article/7-pv-und-batteriespeicher-besser-
 weil der Gleichstrom der PV-Module nicht umständlich und mit Zusatz-Verlusten
 zwischendurch in Wechselstrom und dann wieder zurück gewandelt wird.
 Ein weiterer Vorteil ist (mit einem Inselwechselrichter) die Notstromfähigkeit.
-Hingegen ist der einzige Vorteil der *AC-Kopplung* übers Haus-Wechselstromnetz
-und ein 230 V-Ladegerät eine große Flexibilität bei der Wahl der Komponenten,
-auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten.
+Hingegen ist der einzige Vorteil der *AC-Kopplung* übers Wechselstromnetz der
+Wohnung mit einem 230 V-Ladegerät und Batteriewechselrichter
+eine große Flexibilität bei der Wahl der Komponenten,
+auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten,
+weil die Batteriespannung von der Systemspannung der PV-Anlage unabhängig ist.
 
 Die Aufladung der Batterie sollte zu jeder Zeit nur in dem Maße erfolgen, wie
 der PV-Strom gerade nicht anderweitig direkt genutzt werden kann (Lastvorrang).
 Das optimiert die Speichernutzung in mehrfacher Hinsicht:
-* Eine Speicherung des Stroms ist im Vergleich zur direkten Nutzung
+* Eine Speicherung ist im Vergleich zur direkten Nutzung
   immer mit zusätzlichen Verlusten verbunden.
 * Je intensiver eine Batterie genutzt wird, desto schneller sinkt ihre Kapazität
   --- daher sollte die Zahl der Lade-/Entladezyklen nicht unnötig groß sein.
-* Je voller der Strompuffer ist, desto größer die Wahrscheinlichkeit, dass sie
+* Je voller der Strompuffer ist, desto größer die Wahrscheinlichkeit, dass er
   keine zusätzliche Ladung mehr aufnehmen kann und der Überschuss verloren geht.
 
 Der Lastvorrang bringt für die Effizienz fast so viel wie eine optimale
@@ -3997,7 +3999,7 @@ Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 
 Allerdings hat keine der in diesem Abschnitt genannten Anlagen mit
 Pufferspeicher eine Überschussableitung (Bypass) oder gar eine optimale Laderegelung.
-* Bei bedarfsgerechter (aber auf 600 W limitierter) Einspeisung
+* Bei bedarfsgerechter Einspeisung
   aus dem Speicher ohne Überschussableitung bei der Ladung des Speichers
   fällt die Steigerung des Eigenverbrauchs durch die Speichernutzung
   identisch aus, also wieder 128 kWh auf 588 kWh. Die Zahl der Vollzyklen
