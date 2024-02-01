@@ -3167,9 +3167,16 @@ während man bei DC-Kopplung dafür zusätzlich das Leistungssaldo am Speicher
 (also die Lade- bzw. Entladeleistung) messen oder damit gleichbedeutend die
 Differenz aus PV-Leistung und Wechselrichter-Eingangsleistung bestimmen muss.
 
+Bei AC-Kopplung ist die Maximalleistung einer bedarfsgerechten Ausspeisung aus
+dem Speicher übrigens ziemlich unerheblich. Etwa bei einem Jahresverbrauch von
+3000 kWh zeigen Simulationen, dass selbst wenn sie auf nur 100 W begrenzt wird,
+das für die Speichernutzung und den Eigenverbrauch so gut wie nichts ausmacht.
+Daher genügt für AC-gekoppelte Pufferspeicher ein kleiner Wechselrichter.
+
 <!-- Es lohnt sich bislang, wenn überhaupt, nur für größere PV-Anlagen. -->
 
-Für Steckersolargeräte wäre es viel einfacher, aber leider wenig zielführend,
+Statt einer lastabhängigen Regelung wäre es besonders für Steckersolargeräte
+viel einfacher, aber leider wenig zielführend,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
 so abzustimmen, dass lediglich ein Großteil der Grundlast des Haushalts,
 z.B. 50 bis 100 W, für eine Dauer von etwa 1-2 Tagen abgedeckt wird.
