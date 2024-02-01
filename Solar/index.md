@@ -1421,6 +1421,15 @@ Das Gerät und die Interfaces von Shelly können sehr wohl die momentane Leistun
 saldieren, aber die Riemann-Summenbildung (also Akkumulation der Leistungswerte
 über die Zeit) geschieht leider nur getrennt für jede der drei Phasen.
 
+Wenn man &mdash; wie es der Shelly (Pro) 3EM macht &mdash; erst über eine
+gewisse Zeit die Werte phasenweise getrennt und nach der Richtung aufgeteilt
+aufsummiert und anschließend nach Bezug und Einspeisung weiter aufsummiert,
+verschiebt sich das Ergebnis in Richtung mehr eingespeister Energie im Vergleich
+zur Zweiwegezählung, wo erst saldiert wird und daher fast immer ein positiver
+Saldo entsteht, bevor aufgeteilt nach Richtung über die Zeit aufsummiert wird.
+Das Ergebnis wäre nur dann gleich, wenn auf der Phase, wo der Wechselrichter
+angeschlossen ist, immer mindestens so viel verbraucht wie eingespeist wird.
+
 <!--
 Vermutlich hat ein scheinbarer Profi diesen Unfug aufgebracht, der dann von
 einflussreichen Leuten in ihren Blogs und YouTube-Kanälen verbreitet wurde und
