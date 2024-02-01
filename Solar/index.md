@@ -4318,6 +4318,15 @@ Platz sparen will/muss.
 #### Elektrischer Anschluss {#Anschluss}
 
 Solarmodule haben als Stromanschluss meist die praktischen MC4-Steckverbinder.
+Diese sind einpolig, aber insofern verpolungssicher, dass per Konvention
+auf Seite der Stromquelle für den Pluspol ein (männlicher) Stecker
+und für den Minuspol eine Buchse (als ein weiblicher Verbinder) verwendet wird.
+Allerdings ist unsinnigerweise auf allen MC4-Steckern ein "+" aufgeprägt
+und auf allen MC4-Buchsen ein "-", was für PV-Module passt, aber
+für den Wechselrichters (also auf Seite des Verbrauchers) genau verkehrt ist.
+![Bild: MC4-Anschluss Wechselrichter](MC4-Anschluss_Wechselrichter.png){:width="720"}
+<!-- https://www.photovoltaikforum.com/thread/159926-hoymiles-300-polarit%C3%A4t-falsch-beschriftet/?postID=3585375#post3585375 -->
+
 Generell sollten die Solarkabel, also die Verbindungen der Module
 (untereinander und zum [Solarregler bzw. Wechselrichter](#Stromrichter)),
 möglichst kurz sein, weil da relativ hohe Ströme fließen,
