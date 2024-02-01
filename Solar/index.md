@@ -1318,7 +1318,12 @@ sog. [„Volkszähler“](https://www.volkszaehler.org/),
 [„powerfox poweropti“](https://poweropti.powerfox.energy/),
 [Tibber Pulse](https://tibber.com/de/pulse) o.ä.
 aus dem offiziellen Haushalts-Stromzähler übermitteln lassen &mdash;
-sofern ein digitaler Stromzähler verbaut ist und man Zugang zu diesem hat.\
+sofern ein digitaler Stromzähler verbaut ist und man Zugang zu diesem hat.
+Allerdings kann man den powerfox inzwischen nur noch über die Cloud verwenden,
+womit man [höchstens alle 25 Sekunden](
+https://community.home-assistant.io/t/using-anker-solix-solarbank-e1600-in-ha/636063)
+Daten bekommt und die vermutlich auch noch deutlich verzögert,
+was ihn für eine lastbasierte Regelung ziemlich unbrauchbar macht.\
 Zur Verwendung der [Tasmota](https://www.tasmota.info/)-Software
 gibt es [hier](https://hessburg.de/tasmota-wifi-smartmeter-konfigurieren/)
 eine schöne Anleitung.<!--, aber auch für andere
