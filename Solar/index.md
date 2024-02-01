@@ -2406,7 +2406,8 @@ Leider verwenden einige Modelle (zumindest die von Deye/Bosswerk/revolt),
 wie man in [Diagrammen](
 https://www.photovoltaikforum.com/thread/180129-deye-sun600-und-sun2000-erfahrungen/)
 sehen kann, dabei direkt den Ziel-Grenzwert, statt zu berücksichtigen,
-dass aufgrund des Wirkungsgrades auf der Ausgangsseite gut 5% weniger ankommen.
+dass aufgrund des Wirkungsgrades auf der Ausgangsseite 5-10% weniger ankommen
+&mdash; pro genutztem Eingang sind es z.B. beim Deye Sun 600 maximal etwa 270 W.
 Zudem wird der Grenzwert oft auch noch einfach gleichmäßig auf die Eingänge
 aufgeteilt. So können bei 95% Wirkungsgrad höchstens 570 W geliefert werden.
 Obwohl der Netto-Ertrag durch diese ungeschickte Form der Abregelung also oft
@@ -5019,12 +5020,15 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
     machen lassen oder das Update auf mindestens Version MW3\_16U_5406\_1.53
     selbst [über einen PC durchführen](
     https://zinnzgreen.de/service/deye-mikrowechselrichter-systemupdate/).
-    <!- https://www.photovoltaikforum.com/thread/191598-fw-update-offline-deye-sun600g3-eu230-und-baugleiche/ ->
+    <!-
+    https://www.photovoltaikforum.com/thread/191598-fw-update-offline-deye-sun600g3-eu230-und-baugleiche/ ->
     Ohnehin empfiehlt sich, solchen Geräten nur Zugang zum Gastnetz zu geben.\
     **Update vom Juli 2023:** Aufgrund unvollständigen [NA-Schutzes](
     https://www.energie-experten.org/erneuerbare-energien/photovoltaik/betrieb/na-schutz)
     ist für dieses weit verbreitete Modell die [Betriebserlaubnis vorläufig erloschen](
-    https://www.heise.de/news/Balkonkraftwerke-Fehlendes-Relais-bei-Deye-hat-weitere-Folgen-9218441.html). -->
+    https://www.heise.de/news/Balkonkraftwerke-Fehlendes-Relais-bei-Deye-hat-weitere-Folgen-9218441.html).
+    https://www.mydealz.de/comments/permalink/45968453 Relaisbox
+    -->
 
 ### Kombi-Anlage {#Kombianlage}
 
