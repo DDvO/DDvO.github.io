@@ -3914,6 +3914,7 @@ https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
 Möglichkeiten für die automatische Auslesung des Haushalts-Stromverbrauchs
 sind im Abschnitt [Strommessung](#Strommessung) genannt.
 
+<!-- falsch:
 Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
 Bei einer z.B. auf 600 W begrenzten Einspeisung beträgt für die o.g.
 [Balkonanlage mit 1 kWh Pufferspeicher und Überschussableitung](#Ladung)
@@ -3925,7 +3926,7 @@ Allerdings wird die Batterie im Schnitt pro Tag fast zweimal auf- und entladen
 zu erheblichen Lade- und Speicherverlusten von 39 + 31 kWh führt.\
 Eine Erhöhung der nutzbaren Speicherkapazität bringt praktisch nichts,
 und eine Verringerung auf 0,5 kWh liefert etwas weniger: 560 kWh.
-
+-->
 <!--
 TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1250 -dc -tmy -pass spill 0 -feed lim 600
 
@@ -3997,6 +3998,7 @@ PV-Eigenverbrauchsanteil    =   85 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
 -->
 
+<!--
 Allerdings hat keine der in diesem Abschnitt genannten Anlagen mit
 Pufferspeicher eine Überschussableitung (Bypass) oder gar eine optimale Laderegelung.
 * Bei bedarfsgerechter Einspeisung
@@ -4010,6 +4012,7 @@ Pufferspeicher eine Überschussableitung (Bypass) oder gar eine optimale Ladereg
   und eine Verringerung auf 0,5 kWh liefert aber wesentlich weniger*: 545 kWh.
 
 [//]: #
+-->
 <!--
 TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed lim 600
 
@@ -4064,9 +4067,11 @@ Netzeinspeisung             =    0 kWh
 PV-Eigenverbrauchsanteil    =   82 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
 -->
+<!--
 * Bei Anlagen mit konstanter (nicht bedarfsgeregelter) Einspeisung hingegen
 gibt es wie [oben beschrieben](#Ladung) auf die eine oder andere Weise
 große Verluste, so dass die Steigerung des Eigenverbrauchs sehr gering ausfällt.
+-->
 
 {:style="clear:both"}
 
