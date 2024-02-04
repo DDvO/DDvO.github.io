@@ -4372,8 +4372,10 @@ Generell sollten die Solarkabel, also die Verbindungen der Module
 (untereinander und zum [Solarregler bzw. Wechselrichter](#Stromrichter)),
 möglichst kurz sein, weil da relativ hohe Ströme fließen,
 was proportional zur Länge zu spürbaren Verlusten führt.
-Aus dem selben Grund sollte der Querschnitt nicht zu klein sein --- mind. 4mm²,
-bei längeren Kabeln und höheren Strömen mind. 6mm² (was allerdings teurer ist).
+Aus dem selben Grund sollte der [Leitungsquerschnitt](
+https://electronicbase.net/de/leitungsquerschnitt-berechnen/)
+nicht zu klein sein --- mindestens 4 mm², bei längeren Kabeln
+und höheren Strömen eher 6 mm² (was allerdings teurer ist).
 
 Wer keine Außensteckdose hat, kann eine kleine PV-Anlage auf dem Balkon
 oder im Garten auch mit einem Flachbandkabel (z.B. [MC4-Fensterdurchführung](
