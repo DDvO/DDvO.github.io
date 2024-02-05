@@ -216,6 +216,7 @@ Lizenzkürzel:
           - [Zendure SolarFlow](#SolarFlow)
           - [Anker Solix](#Solix)
           - [Maxxisun Maxxicharge](#Maxxicharge)
+          - [Tentek Tribune bzw. Anfuote EMS](#Tentek)
           - [Weitere Produkte](#SSG-Speicher-sonstige)
           - [Zusammenfassung und Effizienzbetrachtung](#SSG-Speicher-Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](#SSG-Speicher-Eigenbau)
@@ -3378,6 +3379,29 @@ https://energiewende-tipps.de/balkonkraftwerke-mit-nulleinspeisung-durch-maxxich
 nicht ortsfeste PV-Anlagen offenbar nicht angemeldet werden müssen.
 
 
+##### Tentek Tribune bzw. Anfuote EMS {#Tentek}
+
+![Bild: Tentek_Tribune_EMS_Controler](
+Tentek_Tribune_EMS_Controler.png){:.right width="300"}
+
+Ebenfalls erst ab März 2024 lieferbar ist der [Tentek Tribune EMS Controller](
+https://www.notebookcheck.com/Balkonkraftwerke-effizient-nutzen-Neues-Dreiphasen-Energie-Steuersystem-von-Tentek-ist-vielseitig-und-anpassungsfaehig.775205.0.html)
+bzw. baugleich die [Anfuote EMS-Steuerung](https://www.solarpower.anfuote.com/).
+
+Dies ist das offenbar erste käufliche Steuergerät, das nicht nur allen möglichen
+Netzwechselrichtern, sondern auch mit [angeblich so gut wie jeder Art von
+Speicherbatterie mit 12, 24, 36 oder 48 V Systemspannung)](
+https://www.tentekenergy.com/index.php/products/324.html) verwendbar ist.
+Es hat 2 bzw. 4 MPPT zur Anbindung der PV-Module mit je 30 A Ladeleistung
+für einen DC-gekoppelten Speicher und bietet eine
+[sehr gute lastabhängige Einspeise-Regelung](https://youtu.be/vRo15Xi9tMo),
+wobei zur Messung des Haushalts-Lastsaldos ein mitgelieferter
+WiFi-Energiemonitor oder auch ein Shelly (Pro) 3EM verwendet werden kann.
+
+Das Gerät soll inklusive WiFi-Energiemonitor
+[ab 599€](https://www.youtube.com/watch?v=17W4xpWO9sU&t=2s) kosten,
+so dass man mit einer günstigen Batterie auf etwa 1000€ insgesamt kommen kann.
+
 ##### Weitere Produkte {#SSG-Speicher-sonstige}
 
 Es gibt weitere ähnliche Lösungen, etwa
@@ -3403,8 +3427,9 @@ https://www.infranken.de/ratgeber/wohnen/energiesparen/balkonkraftwerk-speicher-
 
 Viele dieser Produkte haben mehr oder weniger starke Einschränkungen und
 funktionieren in der Praxis nicht so gut und effizient wie vom Marketing behauptet.
-Stand Anfang 2024 unterstützen nur das Zendure SolarFlow und der Maxxisun
-Maxxicharge eine eine optimale Regelung und können damit rentabel sein.
+Stand Anfang 2024 unterstützen nur das Zendure SolarFlow,
+der Maxxisun Maxxicharge das Tentek/Anfuote EMS
+eine lastabhängige Regelung und können damit rentabel sein.
 
 Hier ein Vergleich des mit den unterschiedlichen Ansätzen erzielbaren
 Jahres-Eigenverbrauchs auf Basis von Simulationen mit dem [SolBatSim](#SolBatSim)
@@ -3417,8 +3442,7 @@ von 1600 Wh (mit 90% Entladetiefe) wie beim Anker Solix vorausgesetzt
 &mdash; ohnehin fällt sie kaum ins Gewicht.
 * 621 kWh Eigenverbrauch als Vergleichswert nur mit PV ohne Speicher-Nutzung
 * 864 kWh Eigenverbrauch (bei 1000 Wh 822 kWh, bei 2000 Wh 881 kWh)
-  bei optimaler Regelung,\
-  wie sie derzeit nur das Zendure SolarFlow und der Maxxisun Maxxicharge bieten
+  bei optimaler lastabhängiger Regelung
 * 730 kWh Eigenverbrauch bei Anker Solix Strategie mit optimaler FLLR, hier 180 W;\
   mit diesen Parametern werden 14 kWh PV-Nettoleistung verworfen
 * 746 kWh Eigenverbrauch bei Konstanteinspeisung
@@ -5162,4 +5186,5 @@ LocalWords: Delivered Latest Downgraded shelly emeter file status returned
 LocalWords: Zweirichtungszaehler issuecomment collect Notifications height
 LocalWords: Plugs comments January Settings ons configuration states excl comp
 LocalWords: sensor export float uksa tamorix custom firmware en Central zell
+LocalWords:  Controler
 -->
