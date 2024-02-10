@@ -1262,18 +1262,26 @@ Man kann ein solches Gerät auch dafür nutzen, die Einspeisung seines
 Steckersolargeräts ins Hausnetz zu messen (wobei möglicherweise die
 Zahlen etwas zu gering dargestellt werden, weil anscheinend einige solcher
 Messgeräte die im Einspeise-Fall etwas erhöhte Spannung nicht berücksichtigen).\
-Ein Test smarter Steckdosen mit Verbrauchsmessung findet sich z.B. [hier](
+Ein Test smarter Steckdosen mit Messfunktion findet sich z.B. [hier](
 https://www.computerbild.de/bestenlisten/Smarte-Steckdose-Test-21931325.html)
-und bescheinigt übrigens dem Shelly Plug S eine ungenaue Messung, was
-nach Aussagen von Nutzern in Foren auch für den Shelly 1PM <!--und 3EM --> gilt.
+und bescheinigt übrigens dem Shelly Plug S eine ungenaue Messung, was <!-- nach
+Aussagen von Nutzern in Foren --> auch für den Shelly 1PM <!--und 3EM --> gilt.
+Bei der neueren "Plus"-Generation des Plug S und 1PM wurde das behoben.
 
 {:style="clear:both"}
 
-Eine Übersicht von Geräten zur Messung auch der eingespeisten Strommenge findet
-sich z.B. [hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/).
-Und ein schöner Artikel zur Strommessung v.A. mit verschiedenen Shelly-Geräten
-[hier](https://blog.helmutkarger.de/balkonkraftwerk-teil-6-monitoring/).
-Darin auch die Info, dass beim Shelly Plus 1PM die Genauigkeit verbessert wurde.
+![Bild: Shelly Plus 1PM](Shelly-Plus-1PM.png){:.right width="300"}
+[Hier](https://greenergains.de/balkonkraftwerk-einspeisung-messen/)
+ein Artikel zur Messung der von einem Balkonkraftwerk gelieferten Strommenge
+mit Fokus auf Messsteckdosen.
+Technisch detaillierter ist [dieser schöner Artikel](
+https://blog.helmutkarger.de/balkonkraftwerk-teil-6-monitoring/)
+mit Schwerpunkt auf einphasigen Shelly-Messgeräten wie dem Plus 1 1PM.
+Diese Geräte ermöglichen die detaillierte automatische Erfassung
+von Spannung, Strom, Wirkleistung etc. in Sekundenauflösung.\
+Zusammen mit einer Messung des nach außen ins Netz eingespeisten
+[Gesamt-Strommenge](#Gesamtstrom) lässt sich der PV-Eigenverbrauch bestimmen,
+nämlich als Differenz aus erzeugter und eingespeister Energie.
 
 #### Gesamt-Strommessung {#Gesamtstrom}
 
