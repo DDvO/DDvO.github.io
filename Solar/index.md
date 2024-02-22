@@ -3398,17 +3398,23 @@ bzw. baugleich die [Anfuote EMS-Steuerung](https://www.solarpower.anfuote.com/).
 
 Dies ist das offenbar erste käufliche Steuergerät, das nicht nur allen möglichen
 Netzwechselrichtern, sondern auch mit [angeblich so gut wie jeder Art von
-Speicherbatterie mit 12, 24, 36 oder 48 V Systemspannung)](
+Speicherbatterie mit 48 V Systemspannung)](
 https://www.tentekenergy.com/index.php/products/324.html) verwendbar ist.
 Es hat 2 bzw. 4 MPPT zur Anbindung der PV-Module mit je 30 A Ladeleistung
 für einen DC-gekoppelten Speicher und bietet eine
 [sehr gute lastabhängige Einspeise-Regelung](https://youtu.be/vRo15Xi9tMo),
 wobei zur Messung des Haushalts-Lastsaldos ein mitgelieferter
-WiFi-Energiemonitor oder auch ein Shelly (Pro) 3EM verwendet werden kann.
+WiFi-Energiemonitor [oder wahrscheinlich auch ein Shelly (Pro) 3EM](
+https://www.youtube.com/watch?v=LFtjLljnRvA) verwendet werden kann.
+<!--
+https://www.mydealz.de/deals/balkonkraftwerkspeicher-plugplay-speicher-balkonkraftwerk-anfuote-tentek-2310245#comments
+https://www.photovoltaikforum.com/thread/221060-tentek-tribune-ems-anfuote/?pageNo=8
+-->
 
-Das Gerät soll inklusive WiFi-Energiemonitor
+Das Gerät soll in Deutschland inklusive WiFi-Energiemonitor
 [ab 599€](https://www.youtube.com/watch?v=17W4xpWO9sU&t=2s) kosten,
 so dass man mit einer günstigen Batterie auf etwa 1000€ insgesamt kommen kann.
+Direkt aus China ist das Gerät angeblich für unter 300€ erhältlich.
 
 ##### Weitere Produkte {#SSG-Speicher-sonstige}
 
