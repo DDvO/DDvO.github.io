@@ -1589,17 +1589,22 @@ Hausautomatisierungs-Software [Home Assistant](https://www.home-assistant.io/),
 welche z.B. auf einem Mikrocontroller oder einem Heimserver ständig laufen kann.
 Die Konfiguration mit YAML und Programmierung mit einer eingeschränkten Variante
 von Python ist allerdings extrem mühsam, besonders die Fehlersuche (Debugging).
-Über sog. [File Notifications](https://www.home-assistant.io/integrations/file/)
-kann man sich alle möglichen Sensordaten maximal im Sekundentakt auslesen und
-z.B. als CSV-Datei abspeichern, wie z.B. in dieser [YAML-Konfiguration](
-https://github.com/DDvO/SolBatSim/blob/master/configuration.yaml) definiert.
+Man kann alle möglichen Sensordaten maximal im Sekundentakt auslesen und
+über sog. [File Notifications](https://www.home-assistant.io/integrations/file/)
+z.B. als CSV-Datei abspeichern, etwa wie in dieser [YAML-Konfiguration](
+https://github.com/DDvO/SolBatHome/blob/master/configuration.yaml) definiert.
 Diese Konfiguration bietet ebenfalls
-* die sekundenweise
-Protokollierung der wichtigsten Lastdaten und der PV-Erzeugungsleistung,
-* die Erzeugung eines minutenweisen Ertrags- und Lastprofils, sowie
-* die Bestimmung und stundenweise Protokollierung der verbrauchten und erzeugten
-Energie, des Eigenverbrauchs, der Gesamt-Energiebilanz, sowie der importierten
-und exportierten Energie, wie sie auch von einen Zweiwegezähler geliefert wird.
+* die sekundenweise Protokollierung der wichtigsten Leistungsdaten:
+Bilanz am Unterverteiler pro Phase und saldierte Last,
+sowie ggf. PV-Leistung, Speicher-Lade- und Entladeleistung
+* die Erzeugung eines minutenweisen Ertrags- und Lastprofils
+* die Bestimmung und stundenweise Protokollierung der verbrauchten
+und ggf. erzeugten Energie inklusive des dabei erzielten PV-Eigenverbrauchs,
+der Gesamt-Energiebilanz, sowie der importierten und exportierten Energie,
+wie sie auch von einen Zweiwegezähler geliefert wird.
+Bei Verwendung eines Batteriespeichers
+kann auch die gespeicherte und entladene Energie protokolliert werden
+sowie der Ladezustand jeweils zum Ende der vollen Stunde.
 
 <!--https://www.mydealz.de/comments/permalink/44495110-->
 Es gibt eine web-(REST/MQTT)-API-Dokumentation für den [3EM](
@@ -1635,12 +1640,12 @@ wäre eine sehr genaue Lösung, ist aber für die wenigsten Nutzer machbar.
 * Direkte Abfrage des Geräts im Sekundentakt über MQTT oder HTTP und
 Aufbereitung der Leistungs-Daten wie etwa mit dem o.g. [Perl-Skript](
 https://github.com/DDvO/SolBatSim/blob/master/3em_data_collect.pl).
-Die Genauigkeit dieser und der folgenden Lösung ist nicht sehr groß,
-aber dürfte für die meisten Anwendungen ausreichen.
+Die Genauigkeit dieser und der folgenden Lösung
+dürfte für die meisten Anwendungen ausreichen.
 * Indirekte Abfrage des Geräts im Sekundentakt über
 [Home Assistant](https://www.home-assistant.io/), welcher zur Aufbereitung der
 Daten geeignet konfiguriert wird, wie etwa mit der o.g. [YAML-Konfiguration](
-https://github.com/DDvO/SolBatSim/blob/master/configuration.yaml),
+https://github.com/DDvO/SolBatHome/blob/master/configuration.yaml),
 welche teils durch einen [Eintrag im HA-Forum](
 https://community.home-assistant.io/t/shelly-3em-3-phase-net-metering-templates-for-import-export-and-consumption/390237) inspiriert ist.
 <!-- https://community.home-assistant.io/t/shelly-3em-3-phase-net-metering-templates-for-import-export-and-consumption/390237/266?u=ddvo -->
