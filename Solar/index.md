@@ -1424,20 +1424,41 @@ also an der über die Zeit hinweg bezogenen und eingespeisten Energie,
 wie sie ein [Zweirichtungszähler](#Stromzähler) liefert.\
 Dabei hält sich in Online-Foren hartnäckig die etwas irreführende Aussage,
 der Shelly (Pro) 3EM könne nicht saldieren bzw. tue dies falsch.
-Dies ist in der Hinsicht unrichtig, dass dabei was Wort „saldieren“
+Dies ist in der Hinsicht unrichtig, dass dabei das Wort „saldieren“
 mit der Zweiwege-Energie-Summation des Leistungssaldos verwechselt wird.
 Das Gerät und die Interfaces von Shelly können sehr wohl die momentane Leistung
 saldieren, aber die Riemann-Summenbildung (also Akkumulation der Leistungswerte
-über die Zeit) geschieht leider nur getrennt für jede der drei Phasen.
+über die Zeit) geschieht zwar auch getrennt nach Bezug und Einspeisung,
+aber leider nur getrennt für jede der drei Phasen.
 
-Wenn man &mdash; wie es der Shelly (Pro) 3EM macht &mdash; erst über eine
-gewisse Zeit die Werte phasenweise getrennt und nach der Richtung aufgeteilt
-aufsummiert und anschließend nach Bezug und Einspeisung weiter aufsummiert,
-verschiebt sich das Ergebnis in Richtung mehr eingespeister Energie im Vergleich
-zur Zweiwegezählung, wo erst saldiert wird und daher fast immer ein positiver
-Saldo entsteht, bevor aufgeteilt nach Richtung über die Zeit aufsummiert wird.
-Das Ergebnis wäre nur dann gleich, wenn auf der Phase, wo der Wechselrichter
-angeschlossen ist, immer mindestens so viel verbraucht wie eingespeist wird.
+Wenn man &mdash; wie es der Shelly (Pro) 3EM macht &mdash; bei Einspeisung
+auf einer Phase​ erst über eine gewisse Zeit die Werte phasenweise getrennt und
+nach der Richtung aufgeteilt aufsummiert und anschließend den Bezug auf den drei
+Phasen zusammenrechnet und ebenso die​ Einspeisung auf den drei Phasen, dann
+verschiebt sich das Ergebnis in Richtung weniger Energiebezug im Vergleich
+zur Zweiwegezählung, wo erst saldiert wird und daher öfter ein positiver Saldo
+entsteht, bevor aufgeteilt nach Richtung über die Zeit aufsummiert wird.
+Das Ergebnis wäre nur dann gleich, wenn es zwischen den Phasen keinen Ausgleich
+gibt, also zu jeder Zeit entweder auf der Phase, wo der Wechselrichter
+angeschlossen ist, mindestens so viel verbraucht wie eingespeist wird,
+so dass keine Einspeisung auf dieser Phase stattfindet, oder während der
+Einspeisung auf dieser Phase auf den anderen Phasen kein Verbrauch stattfindet.
+
+Hier ein einfaches Beispiel:
+Nehmen wir an, während einer Stunde liefert eine Balkonanlage konstant 500 W,
+und gleichzeitig hängt an der selben Phase ein Gerät, das konstant 200 W zieht,
+so dass im Unterverteiler auf dieser Phase 300 W Einspeisung ankommen.
+Gleichzeitig hängt an den beiden anderen Phasen in der ersten halben Stunde
+eine Last von konstant je 200 W, in der zweiten halben Stunde konstant je 100 W.
+Nachdem der Shelly (Pro) 3EM einzeln über die Phasen summiert/integriert,
+sind es über die Beispiel-Stunde für die erste Phase 0 Wh Bezug und 300 Wh
+Einspeisung, für die beiden anderen jeweils 150 Wh Bezug und 0 Wh Einspeisung.
+Er meldet also für die Stunde insgesamt 300 Wh Bezug und 300 Wh Einspeisung,
+was bei Nettomessung zu einer ausgeglichenen Energiebilanz (0 Wh) führt.
+Ein Zweiwegezähler hingegen saldiert zuerst, und nachdem per Phasensaldo in der
+ersten halben Stunde 100 W aus dem Netz gezogen und in der zweiten halben Stunde
+mit 100 W eingespeist wird, kommt er auf 50 Wh Bezug und 50 Wh Einspeisung für
+diese Stunde. Wegen fehlender Einspeisevergütung wird für 50 Wh abkassiert.
 
 <!--
 Vermutlich hat ein scheinbarer Profi diesen Unfug aufgebracht, der dann von
