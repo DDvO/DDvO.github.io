@@ -4927,27 +4927,42 @@ verfügen.
 
 ### Speicherbatterien {#Speicher}
 
+Ein aufladbarer Speicher für elektrischen Strom wird auch *Akkumulator*
+(lateinisch für "Aufsammler", kurz *Akku*) genannt. Besonders bei einem
+Verbund von Akkuzellen spricht man gern auch von einer *Batterie*.
+[Hier](https://linergy.de/wiki/grundlagen-der-akkutechnik/) eine informative
+Seite zu den damit verbundenen elektrotechnischen Grundbegriffen.
+
 ![Bild: LiFePO4-Batterie mit 4 prismatischen Zellen](
 LiFePO4-Batterie.png){:.right width="450"}
 Für die Stromspeicherung bieten sich heutzutage
 [*Lithium-Eisenphosphat*-Batterien](
 https://de.wikipedia.org/wiki/Lithium-Eisenphosphat-Akkumulator)
 (*LiFePO<sub>4</sub>* oder noch kürzer *LFP*) an.
-Diese sind zwar erheblich teurer als *Blei-Säure-Batterien* (inkl. Varianten wie
-AGM), wie man sie vom Auto kennt, aber sind wartungsfrei, nicht so groß und
-schwer, sowie viel spannungsstabiler und langlebiger. Sie haben weniger
-Selbstentladung, einen deutlich höheren Wirkungsgrad
+Diese sind zwar bei gleicher Nennkapazität bislang teurer als
+*Blei-Batterien* (inkl. Varianten wie Gel und AGM), wie man sie vom Auto kennt,
+aber sind <!-- wartungsfrei, --> nicht so groß und schwer.
+Sie sind langlebiger und spannungsstabiler,
+haben weniger Selbstentladung, einen höheren Wirkungsgrad
 (etwa 95%, bei geringen Lade- und Entladeströmen auch 97%) und vertragen
 ein Vielfaches an Lade-/Entladezyklen sowie recht hohe Lade-/Entladeströme,
 so dass sie in weniger als einer Stunde geladen bzw. entladen werden können.
-Im Vergleich zu anderen Lithium-Ionen-Akkutypen wie Lithium-Polymer (LiPo),
-welche eine noch höhere Energiedichte und keinerlei „Memory-Effekt“ haben,
-sind sie recht robust und sicher und sind weniger umweltschädlich.\
+Außerdem haben sie keinen „Memory-Effekt“
+und haben im Vergleich Bleiakkus eine fast doppelt so hohe
+effektiv nutzbare Kapazität (nämlich etwa 90% der Nennkapazität).
+Im Vergleich zu anderen Lithium-Ionen-Akkutypen inklusive Lithium-Polymer (LiPo),
+welche eine noch höhere Energiedichte haben, sind sie recht robust und
+[weniger gefährlich](https://www.youtube.com/watch?v=aIy6S0TdSSE&t=514s).
+und vermutlich weniger umweltschädlich, weil sie weniger Lithium enthalten.
+<!--
+Es hat bei einem großen LiFePO4-Speicher aber auch schon eine Explosion gegeben.
+https://www.pv-magazine.de/2023/10/27/ursache-fuer-die-explosion-des-30-kilowattstunden-batteriespeichers-wird-wohl-ungeklaert-bleiben/
+-->
 Alle Lithium-basierten Batterien benötigen, anders als Blei-Batterien, für die
 Reihenschaltung der internen Akkuzellen ein sog. *Batteriemanagementsystem*
 (*BMS*), das für eine gleichmäßige Spannungsverteilung der Zellen sorgt.
 
-Eine typische 100 Ah Autobatterie wiegt etwa 26 kg und kostet nur etwa 100€.
+Eine typische 100 Ah Starterbatterie wiegt etwa 26 kg und kostet nur etwa 100€.
 Aus ihrer Nennkapazität von 12 V × 100 Ah = 1200 Wh sollte man aber höchstens
 50% entnehmen, damit die Batterie nicht durch Tiefentladung Schaden nimmt,
 also maximal 600 Wh.
@@ -4966,7 +4981,7 @@ aber auch von der Höhe der Lade- und Entladeströme.
 Eine 12,8 V 100 Ah LiFePO4-Batterie wiegt etwa 11 kg und kann problemlos zu 90%
 entladen werden, so dass sich eine effektive Kapazität von 1150 Wh ergibt.
 Unter Berücksichtigung von Speicherungsverlusten und des Wandlungsverlustes
-eines Wechselrichters lässt sich damit ein Gerät mit 1000 W Verbrauch
+eines Wechselrichters lässt sich damit ein Gerät mit 1000 W Leistungsaufnahme
 (z.B. Staubsauger, Kaffeemaschine oder Fön) etwa eine Stunde lang betreiben.
 
 #### Batterie-Kapazität {#Kapazität}
