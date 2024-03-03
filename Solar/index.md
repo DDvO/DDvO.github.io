@@ -3202,33 +3202,17 @@ weil bei vollem Speicher das Ladegerät abschaltet.
 Durch den Bypass bei vollem Speicher wird überschüssiger Strom nach extern
 abgegeben, solange die Last geringer als PV-Leistung ist.
 
-In Abweichung von den bisher genannten Punkten sollte
-zur Schonung der Batteriezellen
-* ein gewisser Ladestrom sowie ein gewisser Entladestrom nicht überschritten
-werden, wobei die verwendeten Komponenten da ohnehin Grenzen setzen, sowie
-* schnelle Wechsel zwischen Laden und Entladen vermeiden werden.\
-Wenn also PV-Leistung und Last nahe beieinander liegen
-und zu befürchten ist, dass (durch schwankende Last oder PV-Leistung)
-deren Differenz schnell mehrfach hintereinander das Vorzeichen wechselt
-und in der Folge die Batterie ebenso schnell hintereinander aufgeladen und
-entladen würde, empfiehlt es sich, je nach Speicher-Ladezustand für längere Zeit
-tendenziell eher nur zu laden oder nur zu entladen.
-  - Bei AC-Kopplung lässt sich das einfach dadurch erreichen, dass der
-  Batteriewechselrichter zwischen Sonnenaufgang und Sonnenuntergang (wo das
-  Ladegerät zu den Zeiten aktiv wird, zu denen PV-Überschuss vorhanden ist)
-  eher nicht genutzt wird, außer wenn der Speicher voll ist.\
-  - Bei DC-Kopplung kann man das annähernd erreichen, indem die Zielleistung,
-  die über den Wechselrichter abgerufen werden soll, etwas geringer bzw. etwas
-  höher gewählt wird als für den eigentlich optimalen Ausgleich
-  des Gesamt-Leistungssaldos. Zudem sollte man bei DC-Kopplung
-  und vollem Speicher besser keinen vollen Bypass machen, um auch in dieser
-  Situation zu vermeiden, dass durch Schwankungen der Last oder der PV-Leistung
-  schnell hintereinander nur ein wenig entladen und dann wieder aufgeladen wird.
-
-Durch diese Zusatzbedingungen leidet allerdings die Effizienz ein wenig.
+In teilweiser Abweichung von den bisher genannten Punkten sollte zur Schonung
+der Batteriezellen gewisse Lade- und Entladeströme nicht überschritten werden,
+wobei die verwendeten Komponenten da ohnehin Grenzen setzen.
+Außerdem ist die Reaktionsgeschwindigkeit der Lade- und Entladeregelung
+aus verschiedenen Gründen begrenzt,
+so dass es kurzzeitig z.B. zu unerwünschter Netzeinspeisung kommen kann.
+Auch lassen sich Lastspitzen meist nicht ausgleichen.
+Durch solche Randbedingungen leidet die Effizienz ein wenig.
 
 Man kann bei der Regelung auch diverse weitere Faktoren berücksichtigen,
-etwa Uhrzeit, Temperatur, Strompreis, die bisherige Entwicklung
+etwa Uhrzeit, Sonnenstand, Temperatur, Strompreis, die bisherige Entwicklung
 der PV-Leistung, der Last und des Speicher-Ladezustandes, der in nächster Zeit
 erwartete PV-Ertrag, Verbrauch im Haushalt, Strompreis, usw.
 
@@ -3236,12 +3220,6 @@ Das alles ist regelungstechnisch ziemlich aufwendig und benötigt jedenfalls
 ein phasensaldierendes Messgerät zur Erfassung des momentanen Leistungs-Saldos
 am externen Netzanschluss &mdash;
 Details dazu in Abschnitt [Gesamt-Strommessung](#Gesamtstrom).
-
-Bei AC-Kopplung genügt diese Messung auch als Grundlage
-für die genannten batterieschonenden Maßnahmen,
-während man bei DC-Kopplung dafür zusätzlich das Leistungssaldo am Speicher
-(also die Lade- bzw. Entladeleistung) messen oder damit gleichbedeutend die
-Differenz aus PV-Leistung und Wechselrichter-Eingangsleistung bestimmen muss.
 
 Bei AC-Kopplung ist die Maximalleistung einer bedarfsgerechten Ausspeisung aus
 dem Speicher übrigens ziemlich unerheblich. Etwa bei einem Jahresverbrauch von
