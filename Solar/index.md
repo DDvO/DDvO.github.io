@@ -3650,9 +3650,13 @@ Um eine DC-Verkabelung ins Haus zu vermeiden, kann man Laderegler, Speicher
 und Wechselrichter auch draußen (z.B. auf dem Balkon oder in einem Schuppen)
 platzieren. Damit die Anlage dann trotzdem auch bei Minusgraden nutzbar ist,
 kann man den LiFePO4-Speicher mit einer Heizung versehen und gegen Kälte
-isolieren. Dazu bieten sich Pflanzen-Heizmatten wie
-[diese](https://www.ebay.de/itm/354441767526?var=623842819621Plfan) an, welche
-man dann allerdings noch temperaturgeregelt mit etwas Strom versorgen muss.
+isolieren.
+Dazu könnte man eine Pflanzen-Heizmatten wie
+[diese](https://www.ebay.de/itm/354441767526?var=623842819621Plfan), welche
+man dann allerdings noch temperaturgeregelt mit etwas Strom versorgen muss,
+aber besser gleich eine Heizmatte mit Thermostat, die es auch schon
+[für 15€ gibt](https://www.amazon.de/KIPIDA-Reptilienheizmatte-Einstellbar-Reptilienw%C3%A4rmematte-Temperaturregelung/dp/B0CG3FCJ9H).
+Die Heizmatte braucht nur dann aktiv sein, wenn bei unter 0°C die Sonne scheint.
 
 In Minimalausstattung würde die Anlage mit ECO-WORTHY 48 V 2,5 kWh Speicher
 ohne PV-Module unter 1000 € kosten.
