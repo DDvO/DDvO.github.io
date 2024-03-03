@@ -213,7 +213,7 @@ Lizenzkürzel:
         - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
         - [Dimensionierung des Stromspeichers](#Speicherbatterie)
         - [Kommerzielle SSG-Speicherlösungen](#SSG-Speicher)
-          - [Zendure SolarFlow](#SolarFlow)
+          - [Zendure SolarFlow und AIO 2400](#SolarFlow)
           - [Anker Solix](#Solix)
           - [Maxxisun Maxxicharge](#Maxxicharge)
           - [Tentek Tribune bzw. Anfuote EMS](#Tentek)
@@ -3303,7 +3303,7 @@ Alle diese Produkte haben u.A. Folgendes gemeinsam.
 
 Hier eine Übersicht zu den jeweils unterstützten Lade- und Entladestrategien.
 
-##### Zendure SolarFlow {#SolarFlow}
+##### Zendure SolarFlow und AIO 2400 {#SolarFlow}
 
 ![Bild: Zendure SolarFlow](Zendure_SolarFlow.png){:.right width="400"}
 
@@ -3335,6 +3335,11 @@ Allerdings [zeigten Praxistests](https://youtu.be/YzKCvYB-axw&t=148s), dass die
 Regelung auf Verbrauchs- und Ertrags-Schwankungen träge und ungenau reagiert.
 
 Die größere (1.920 Wh) Batterie hat eine eingebaute Heizung bei Minusgraden.
+
+Ende Februar 2024 brachte Zendure die AIO 2400 heraus &mdash; [hier](
+https://www.computerbase.de/2024-02/zendure-aio-2400-test-balkonkraftwerk-akku-speicher/)
+eine Rezension dazu.
+Sie scheint die selbe Steuerung wie beim SolarFlow zu verwenden.
 
 ##### Anker Solix {#Solix}
 
@@ -3467,9 +3472,9 @@ https://www.infranken.de/ratgeber/wohnen/energiesparen/balkonkraftwerk-speicher-
 
 Viele dieser Produkte haben mehr oder weniger starke Einschränkungen und
 funktionieren in der Praxis nicht so gut und effizient wie vom Marketing behauptet.
-Stand Anfang 2024 unterstützen nur das Zendure SolarFlow,
-der Maxxisun Maxxicharge das Tentek/Anfuote EMS
-eine lastabhängige Regelung und können damit rentabel sein.
+Stand Anfang 2024 unterstützen nur Zendure SolarFlow und AIO 2400,
+der Maxxisun Maxxicharge das Tentek/Anfuote EMS eine lastabhängige Regelung
+und können damit unter realistischen Bedingungen rentabel sein.
 
 Hier ein Vergleich des mit den unterschiedlichen Ansätzen erzielbaren
 Jahres-Eigenverbrauchs auf Basis von Simulationen mit dem [SolBatSim](#SolBatSim)
