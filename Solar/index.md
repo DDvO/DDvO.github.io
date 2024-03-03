@@ -1283,6 +1283,30 @@ Zusammen mit einer Messung des nach außen ins Netz eingespeisten
 [Gesamt-Strommenge](#Gesamtstrom) lässt sich der PV-Eigenverbrauch bestimmen,
 nämlich als Differenz aus erzeugter und eingespeister Energie.
 
+Übrigens sollte man einige Shelly Mini-Varianten mit Vorsicht genießen,
+also besser nur mit einer passenden zusätzlichen Sicherung betreiben,
+weil sie keinen eingebauten Überstromschutz haben. Insbesondere der
+[Shelly 1 Mini Gen3](https://www.shelly.com/de/products/shop/shelly-1-mini-gen3),
+welcher mit nur max. 8 A belastbar ist, könnte bei Überlast
+nicht nur kaputt gehen, sondern auch erst mal [unentdeckt eine unkontrollierte
+Fehlschaltung herbeiführen](https://www.mydealz.de/comments/permalink/46432363).
+<!--
+Naja, so einfach ist es nicht, wie die Kollegen hier schreiben.
+- Leitungsschutzschalter 16A ist, wie der Name schon sagt, um die Leitungen in der Wand zu schützen und kein Geräteschutz. Der Shelly ist aber in dem Fall ein Gerät, auch wenn es wiederum andere Geräte schaltet.
+- Ein Geräteschutz ist eine zugängliche oder auch nicht zugängliche Feinsicherung bemessen am maximal zulässigen Strom des Gerätes (in dem Fall der Shelly mit seiner max. Strombelastung des Relais)
+Keine Ahnung, ob die Shellys eine Feinsicherung eingelötet haben.
+- Wenn der Shelly bei 10-15A bereits abraucht aber der LSS 16A (noch) nicht auslöst, kann auch Schlimmeres passieren, je nach abgerauchtem Schaltzustand der Relaiskontakte und des Shelly selbst. z.B. wenn er hinter der Gardine in der Jalousieschalterdose montiert ist und selbst Funken,Feuer schlägt.
+- Ich finde es aber weitaus schlimmer, wenn durch wiederkehrende Überlastung die Relaiskontakte irgendwann mal UNBEMERKT kleben bleiben, denn je nach angeschlossenem Gerät (z.B. Heizung) kann das böse ins Auge gehen. Man sieht und riecht es dem Shelly nicht an. Selbst der Schaltzustand in der App würde einem suggerieren, dass das Gerät aus ist, aber die Kontakte kleben und das Gerät weiterhin mit Spannung versorgen.
+Angeschlossene Geräte hoher Leistung sollten zumindest noch einen eigenen Schutz haben, wie z.B. Thermostate etc.
+Bei einem Jalousiemotor, sollte das kein Problem sein, denn die schalten ja selbst ab und man darf sie ja auch mit (gegenseitig verriegelten) Schaltern verwenden.
+
+Zur Sicherheit würde ich überhaupt nie Geräte mit mehr als 8-10A an irgendwelche Wifi-Steckdosen/Dosenaktoren im Miniaturformat betreiben.
+Mir ist in letzten Jahren aufgefallen, dass die smarten Steckdosen immer kleiner werden, die Relais dementsprechend auch und viele Hersteller diese immer noch mit 16A bewerben.
+Die alten, von vor 4-6 Jahren, die noch groß und klobig waren, wie eine Zeitschaltuhr, denen habe ich schon mehr Ampere anvertraut.
+Ist aber ein generelles Problem der aktuellen smarten Technik. Alle Hersteller versuchen auf engstem Raum die Wandler von 230V auf 3,3 bzw 5V, die (Funk)-Elektronik und das Relais auf die Größe einer Streichholzschachtel zu minimieren und suggerieren einem, dass man damit locker seinen Ablufttrockner betreiben kann. Eine Zeit lang geht das alles sicher..eine Zeit lang..ja.
+Woher soll ein Laie das alles auch wissen, wenn die Geräte so einfach zu montieren/einzustecken sind.
+-->
+
 #### Gesamt-Strommessung {#Gesamtstrom}
 
 Den Netto-Jahresverbrauch seines Haushalts erfährt man automatisch über die
