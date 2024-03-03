@@ -3332,7 +3332,8 @@ Alle diese Produkte haben u.A. Folgendes gemeinsam.
   zwischen PV-Module und Mikrowechselrichter gesteckt.
   Der wichtigste Vorteil davon ist größere Effizienz als mit AC-Kopplung.\
   Ein Nachteil ist, dass der Speicher meist außerhalb der Wohnung steht und
-  dort bei Minusgraden nicht geladen darf und damit nicht genutzt werden kann.
+  eine LiFePO4-Batterie bei Minustemperaturen nicht geladen darf,
+  so dass sie dann nur nutzbar ist, wenn sie auf über 0°C erwärmt wird.
 * Zentral für die Regelung der Geräte ist die aktuelle Zielleistung,
   die über den angeschlossenen Wechselrichter ins Hausnetz gespeist werden soll.
 * Wenn die verfügbare PV-Leistung mindestens so groß wie die Zielleistung ist,
@@ -3714,12 +3715,24 @@ Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
 https://www.photovoltaikforum.com/core/article/7-pv-und-batteriespeicher-besser-ac-oder-dc-gekoppelt/),
 weil der Gleichstrom der PV-Module nicht umständlich und mit Zusatz-Verlusten
 zwischendurch in Wechselstrom und dann wieder zurück gewandelt wird.
-Ein weiterer Vorteil ist (mit einem Inselwechselrichter) die Notstromfähigkeit.
-Hingegen ist der einzige Vorteil der *AC-Kopplung* übers Wechselstromnetz der
-Wohnung mit einem 230 V-Ladegerät und Batteriewechselrichter
-eine große Flexibilität bei der Wahl der Komponenten,
+Ein weiterer Vorteil ist, dass der Speicher auch bei Stromausfall mit PV-Strom
+geladen werden kann, was (in Zusammenhang mit einem Inselwechselrichter)
+zu Verlängerung der Notstromfähigkeit führt.
+Dem steht der Nachteil gegenüber, dass (relativ dicke) Gleichstromkabel
+bis zum Standort des Speichers geführt werden müssen, man also entweder eine
+Leitung ins Haus braucht oder der Speicher außerhalb stehen muss. Dabei ist zu
+bedenken, dass LiFePO4-Batterien bei Minustemperaturen nicht geladen werden
+dürfen, wobei man da mit einer thermostatgeregelten Heizmatte abhelfen kann.
+
+Bei *AC-Kopplung* hingegen wird der PV-Strom zunächst ins Wechselstromnetz
+eingespeist, so dass die Ladung (an einem beliebigen Ort, meist im Haus)
+mit einem 230 V-Ladegerät geschieht, wobei man zur Entladung einen zweiten
+(Batterie-)Wechselrichter benötigt.
+Ihr besonderer Vorteil ist eine große Flexibilität bei der Wahl der Komponenten,
 auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten,
 weil die Batteriespannung von der Systemspannung der PV-Anlage unabhängig ist.
+Außerdem kann man den Speicher bei Bedarf (z.B. wenn er zu leer geworden ist
+oder zu Testzwecken) auch unabhängig von der PV-Anlage mit Netzstrom laden.
 
 Die Aufladung der Batterie sollte zu jeder Zeit nur in dem Maße erfolgen, wie
 der PV-Strom gerade nicht anderweitig direkt genutzt werden kann (Lastvorrang).
