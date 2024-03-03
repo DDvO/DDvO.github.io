@@ -2794,6 +2794,23 @@ eine Notstromversorgung (mit Inselwechselrichter) oder als Fahrzeugbatterie.
 Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
 
+<!-- https://www.mydealz.de/comments/permalink/46085250 -->
+In diesem Zusammenhang wird von Anbietern und Nutzer oft eine
+naive (Milchmädchen-)Rechnung in folgender Art gemacht:
+> Der Speicher hat eine nutzbare Kapazität von 1,5 kWh und 6000 Ladezyklen. Damit lassen sich also 9000 kWh einsparen, was bei 30 Ct/kWh 2700€ Ertrag bringt.
+
+Das berücksichtigt aber keine Verluste und vor allem nicht, wie lange
+es dauern würde, um auf die (angeblich erreichbare) Zyklenzahl zu kommen.
+Pro Jahr hat man nur mäßig viele sonnige Tage, so dass man typischerweise auf
+nur 150 bis 250 Vollzyklen im Jahr kommt, je nach PV-Leistung, Verbrauch und
+Speicher-Dimensionierung. Somit werden 6000 Vollzyklen erst in ungefähr 30
+Jahren erreicht, und so lange wird das Speicher-Equipment bestimmt nicht halten!
+Zudem beträgt bei 30 Jahren Laufzeit die Rendite bei einem Einkaufspreis von
+1500€ nur 6%, so dass man sich fragen muss, ob sich so eine Investition mit
+sehr langfristiger Kapitalbindung überhaupt lohnt.
+Wobei auch unklar ist, wie sich das Verhältnis
+des Preises für so eine Speicheranlage zum Strompreis langfristig entwickelt.
+
 Besser sieht es bei größeren PV-Anlagen aus.
 <!-- https://www.mydealz.de/comments/permalink/44464786 -->
 Hier das Ergebnis von Simulationen für ein Wohnhaus mit angenommenen 5000 kWh
