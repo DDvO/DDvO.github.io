@@ -4595,7 +4595,14 @@ den im Datenblatt des Geräts genannten absoluten Maximal-Eingangsstrom,
 welcher auch [*maximaler DC-Kurzschlussstrom* (*I<sub>SC</sub> PV max*)](
 https://www.sma-sunny.com/wechselrichter-hochstrommodule-missverstaendnis-i-dc-max/)
 genannt wird, nicht längerfristig zu überschreiten oder zumindest
-für ausreichende Kühlung des Geräts in solchen Situationen zu sorgen.
+für ausreichende Kühlung des Geräts in solchen Situationen zu sorgen.\
+<!-- https://www.mydealz.de/comments/permalink/46587457 -->
+Zum Beispiel schreibt der Hoymiles-Support zum maximalen Eingangsstrom eines
+HM-600:
+> 1. Bedeutet das, dass egal wieviel Strom anliegt nur 11,5 Ampere verarbeitet / abgenommen werden können.
+> 2. Lassen Sie bitte den Strom nicht über 15A ansteigen, da dies den Wechselrichter beschädigen kann.
+Wer da auf der sicheren Seite sein will,
+kann je Eingang eine 15 A Sicherung dazwischenschalten.
 
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
 I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
