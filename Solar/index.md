@@ -239,6 +239,7 @@ Lizenzkürzel:
         - [Hybridgeräte: Solar-Laderegler mit Wechselrichter](#Hybrid)
         - [Gleichspannungswandler](#Gleichspannungswandler)
     -   [Speicherbatterien](#Speicher)
+        - [Batterie-Ladezustand](#Ladezustand)
         - [Batterie-Kapazität](#Kapazität)
         - [Batterie-Strukturierung](#Strukturierung)
         - [Kombination aus Batterie und Wechselrichter](#Kaskadierte)
@@ -3189,7 +3190,7 @@ wird immer genau der Anteil an PV-Leistung zum Laden verwendet, der übrig ist,
 also aktuell nicht anderweitig direkt gebraucht werden kann.\
 Dies wird *Lastvorrang* oder *Überschussladung* genannt.
 
-* Solange sein Ladezustand oberhalb der Entladegrenze ist,
+* Solange sein [Ladezustand](#Ladezustand) oberhalb der Entladegrenze ist,
 wird der Speicher immer genau so stark entladen wie nötig ist, um den Anteil der
 aktuellen Last auszugleichen, den die PV-Leistung nicht abdeckt.
 
@@ -3648,8 +3649,8 @@ wird, erfolgt wie im Abschnitt [Gesamt-Strommessung](#Gesamtstrom) beschrieben.
 Wenn dazu (wie im Bild dargestellt) Tibber Pulse verwendet wird, kann die
 Nutzung des Speichers auch vom aktuellen Strompreis abhängig gemacht werden.
 
-Die Batteriespannung (damit indirekt der Ladezustand des Speichers)
-und die PV-Leistung kann z.B. über ein Victron VE.Direct USB-Kabel
+Die Batteriespannung (damit indirekt der ungefähre [Ladezustand](#Ladezustand)
+des Speichers) und die PV-Leistung kann z.B. über ein Victron VE.Direct USB-Kabel
 von der [Victron Venus Firmware auf einem Raspberry Pi](
 https://www.victronenergy.com/blog/2017/09/06/raspberry-pi-running-victrons-venus-firmware/)
 (hier genügt 2. oder 3. Generation) abgefragt werden.
@@ -4999,6 +5000,41 @@ Unter Berücksichtigung von Speicherungsverlusten und des Wandlungsverlustes
 eines Wechselrichters lässt sich damit ein Gerät mit 1000 W Leistungsaufnahme
 (z.B. Staubsauger, Kaffeemaschine oder Fön) etwa eine Stunde lang betreiben.
 
+#### Batterie-Ladezustand {#Ladezustand}
+
+Der *Ladezustand* (engl. *state of charge*, kurz *SoC*) eines Speichers
+wird meist in Prozent der Nennkapazität angegeben.
+Die Bestimmung des aktuellen Ladezustands einer Lithium-basierten Batterie
+ist nicht so einfach möglich wie man meinen könnte.
+Das liegt nicht nur daran, dass die Spannungskurve beim Laden und Entladen
+in Abhängigkeit vom Ladezustand nicht linear verläuft, sondern recht flach,
+mit zunehmend größerer Steigung bei Annäherung an 0% und an 100%.
+<!-- https://www.mydealz.de/comments/permalink/46614434 -->
+![Bild: Lade-/Entlade-Spannungskurve LiFePO4](LiFePO4-Spannungskurve.jpg)
+
+Die Batteriespannung verhält sich beim Laden bzw. Entladen wie Kaugummi:
+Zu Beginn eines Ladevorgangs steigt sie sofort stark, dann schwächer an
+und sackt nach seinem Ende innerhalb ein paar Minuten Ruhe wieder etwas ab.
+Umgekehrt fällt die Spannung zu Beginn eines Entladevorgangs erst stark,
+dann schwächer, aber erholt sich nach seinem Ende wieder ein wenig.
+
+[![Bild: Batteriecomputer TR16](Batteriecomputer_TR16.jpg){:.left width="250"}](
+https://www.amazon.de/dp/B092W19DMS)
+Man kann also nur in Ruhe einigermaßen von der Spannung auf den Ladezustand
+schließen. Daher empfiehlt sich sehr die Verwendung der Coulomb-Methode,
+also das Mitschneiden der hinein- bzw. herausfließenden Ladungsmenge. Dann
+ergibt sich aus dem Startzustand und dem Saldo der Strommenge der Ladezustand.
+[Hier](https://github.com/DDvO/SolBatHome/blob/master/packages/battery.yaml)
+eine Konfiguration für den Home Assistant, die den Ladezustand in Ruhe über
+die Spannung und während des (Ent-)Ladens über die Coulomb-Methode bestimmt.
+
+Zur Messung der relativ hohen Ströme wird meist ein *Nebenwiderstand* verwendet,
+engl. [*shunt*](https://de.wikipedia.org/wiki/Shunt_(Elektrotechnik)).
+Billige Mess- und Anzeigegeräte taugen oft nichts;
+brauchbare Geräte wie den [Batteriecomputer TR16](
+https://www.microcharge.de/anleitungen/Anleitung_Batteriecomputer_TR16_Deutsch.pdf)
+bekommt man so [ab 35€](https://www.amazon.de/dp/B092W19DMS).
+
 #### Batterie-Kapazität {#Kapazität}
 
 Um den Wandlungsverlust von ca. 10% eines Wechselrichters zu vermeiden,
@@ -5263,7 +5299,7 @@ LocalWords: Unabhaengigkeitsrechner Stromwaechter Play SDM clams comment fazit
 LocalWords: output calculation power unit rating Europe TSUN InGe DPM anker only
 LocalWords: left right irradiance GHI buehneTop clear both png tgl RS solix
 LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi align
-LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs
+LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs Controler
 LocalWords: blackout brownout panels busbars shingle panel up number
 LocalWords: maximum point tracking sine wave efficiency boost true SG
 LocalWords: converter step consumption pdf balancer equalizer mppt em
@@ -5282,12 +5318,12 @@ LocalWords: Sense is end index output md ref of pv px Eff vs OW Heat
 LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
 LocalWords: data transfer solar cut cells open short circuit voltage lim
 LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords
-LocalWords: Bestrahlungsstaerke curves under different levels irradiation
-LocalWords: Microinverter What are Amps Volts SMF charge discharge Un
+LocalWords: Bestrahlungsstaerke curves under different levels irradiation state
+LocalWords: Microinverter What are Amps Volts SMF charge discharge Un Ent shunt
 LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
 LocalWords: Delivered Latest Downgraded shelly emeter file status returned
 LocalWords: Zweirichtungszaehler issuecomment collect Notifications height
 LocalWords: Plugs comments January Settings ons configuration states excl comp
-LocalWords: sensor export float uksa tamorix custom firmware en Central zell
-LocalWords:  Controler
+LocalWords: sensor export float uksa tamorix custom firmware en Central zell TR
+LocalWords: 
 -->
