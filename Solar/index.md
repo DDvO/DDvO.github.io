@@ -3108,45 +3108,49 @@ Nutzungsgrad 83 %
 Selbstversorgung 23 %
 -->
 
-#### Regelungsstrategien für Stromspeicher {#Regelungsstrategien}
+#### Regelungsstrategien für PV-Speicher {#Regelungsstrategien}
 
 Weil man für ins externe Netz eingespeisten Strom keine Vergütung bekommt oder
-jedenfalls weniger erhält als man für vom Netz bezogenen Strom zahlen muss,
-sollte zur Strom-Kostenersparnis der Netzbezug möglichst minimiert werden.\
+jedenfalls deutlich weniger erhält als man für vom Netz bezogenen Strom zahlen
+muss, sollte zur Strom-Kostenersparnis
+die Einspeisung vermieden und der Netzbezug minimiert werden.\
 Daher wäre es es optimal, wenn zu jeder Zeit gilt:
 
 <p style="text-align: center;">
 Haushalts-Last + Auflade-Leistung in den Speicher
 </p>
 <p style="text-align: center;">
-≤ &nbsp; bzw. &nbsp; =
+≥
 </p>
 <p style="text-align: center;">
 PV-Leistung + Entlade-Leistung aus dem Speicher
 </p>
 
-Nachdem der Gesamt-Leistungssaldo am Einspeisepunkt des Haushalts gleich
+Nachdem der Gesamt-Leistungssaldo am externen Netzanschluss des Haushalts gleich
 
 <p style="text-align: center;">
-(Haushalts-Last + Speicher-Aufladeleistung) -
+(Haushalts-Last + Speicher-Aufladeleistung) −
 (PV-Leistung + Speicher-Entladeleistung)
 </p>
 
-ist, kann die (Un-)Gleichung auch abgekürzt geschrieben werden als
+ist, kann die Ungleichung auch abgekürzt geschrieben werden als
 
 <p style="text-align: center;">
-Gesamt-Leistungssaldo ≤ 0 &nbsp; &nbsp; bzw.
-&nbsp; &nbsp; Gesamt-Leistungssaldo = 0
+Gesamt-Leistungssaldo ≥ 0
 </p>
 
-Wenn die (Un-)Gleichung erfüllt ist, dann wird überhaupt kein Strom
-aus dem Netz bezogen (sondern höchstens eingespeist).
+Der Leistungssaldo lässt sich mit digitalen Zugang an einem modernen Stromzähler
+oder mit einem Zusatzgerät im Unterverteiler messen,
+wie im Abschnitt [Gesamt-Strommessung](#Gesamtstrom) beschrieben.
 
-Wenn die PV-Leistung nie kleiner als die Last durch den Haushalt wäre,
+Wenn die Ungleichung erfüllt ist, dann wird trotz PV-Leistung
+überhaupt kein Strom ins Netz eingespeist (sondern höchstens bezogen).
+
+Wenn die PV-Leistung nie größer als die Last durch den Haushalt wäre,
 bräuchte man dafür keinen Speicher, aber das ist nicht realistisch.
-Mit Hilfe des Speichers kann die (Un-)Gleichung immerhin viel öfter erfüllt
+Mit Hilfe des Speichers kann die Ungleichung immerhin viel öfter erfüllt
 werden als ohne, indem bei PV-Leistungsüberschuss der Speicher aufgeladen
-und bei Unterdeckung der Last der Speicher entladen wird.
+und bei Mehrbedarf durch Last im Haushalt der Speicher entladen wird.
 
 Die Anbindung des Speichers an die PV-Anlage erfolgt
 entweder *DC-gekoppelt*, also schon gleichstromseitig,
@@ -3166,8 +3170,8 @@ https://solar.htw-berlin.de/effizienzleitfaden-fuer-pv-speichersysteme/
 
 {:style="clear:both"}
 
-Aus der o.g. (Un-)Gleichung folgt nebenbei, dass es nicht zielführend wäre,
-den Speicher gleichzeitig zu laden und zu entladen.
+Aus der o.g. Regelungs-Ungleichung folgt nebenbei, dass es
+nicht zielführend wäre, den Speicher gleichzeitig zu laden und zu entladen.
 Das ist auch schon physikalisch-technisch gar nicht möglich.
 Bei ungeschickter Laderegelung eines AC-gekoppelten Speichers könnte es aber
 passieren, dass sowohl das Ladegerät als auch der Wechselrichter zur Entnahme
@@ -3176,7 +3180,7 @@ und Wechselrichter-Leistung der Speicher entweder geladen oder entladen wird
 und dass das Minimum der beiden Leistungen sinnlos und mit Verlusten
 zunächst in Gleichstrom und umgehend wieder in Wechselstrom gewandelt wird.
 
-Für die Regelung wird die PV-Leistung normalerweise auch die Last durch
+Für die Regelung wird die PV-Leistung und normalerweise auch die Last durch
 den Haushalt als gegeben vorausgesetzt. Allerdings könnte die Regelung
 durchaus gewisse [Überschuss-Verbraucher](#Stromverbrauch) steuern.
 Als die wesentlichen Stellschrauben der Regelung bleibt die Lade- und
@@ -3203,7 +3207,13 @@ weil bei vollem Speicher das Ladegerät abschaltet.
 Durch den Bypass bei vollem Speicher wird überschüssiger Strom nach extern
 abgegeben, solange die Last geringer als PV-Leistung ist.
 
-In teilweiser Abweichung von den bisher genannten Punkten sollte zur Schonung
+Bei AC-Kopplung ist die Maximalleistung einer bedarfsgerechten Ausspeisung aus
+dem Speicher übrigens ziemlich unerheblich. Etwa bei einem Jahresverbrauch von
+3000 kWh zeigen Simulationen, dass selbst wenn sie auf nur 100 W begrenzt wird,
+das für die Speichernutzung und den Eigenverbrauch so gut wie nichts ausmacht.
+Daher genügt für AC-gekoppelte Pufferspeicher ein kleiner Wechselrichter.
+
+In teilweiser Abweichung von den bisher genannten Punkten sollten zur Schonung
 der Batteriezellen gewisse Lade- und Entladeströme nicht überschritten werden,
 wobei die verwendeten Komponenten da ohnehin Grenzen setzen.
 Außerdem ist die Reaktionsgeschwindigkeit der Lade- und Entladeregelung
@@ -3212,29 +3222,19 @@ so dass es kurzzeitig z.B. zu unerwünschter Netzeinspeisung kommen kann.
 Auch lassen sich Lastspitzen meist nicht ausgleichen.
 Durch solche Randbedingungen leidet die Effizienz ein wenig.
 
-Man kann bei der Regelung auch diverse weitere Faktoren berücksichtigen,
-etwa Uhrzeit, Sonnenstand, Temperatur, Strompreis, die bisherige Entwicklung
+Ein 'intelligentes' Energiemanagement berücksichtigt auch noch diverse weitere
+Faktoren, etwa Uhrzeit, Sonnenstand, Temperatur, die bisherige Entwicklung
 der PV-Leistung, der Last und des Speicher-Ladezustandes, der in nächster Zeit
 erwartete PV-Ertrag, Verbrauch im Haushalt, Strompreis, usw.
 
-Das alles ist regelungstechnisch ziemlich aufwendig und benötigt jedenfalls
-ein phasensaldierendes Messgerät zur Erfassung des momentanen Leistungs-Saldos
-am externen Netzanschluss &mdash;
-Details dazu in Abschnitt [Gesamt-Strommessung](#Gesamtstrom).
+Das alles ist regelungstechnisch ziemlich aufwendig. Es lohnt sich finanziell
+bislang eher für größere PV-Anlagen und für nicht sehr große Speicher.
 
-Bei AC-Kopplung ist die Maximalleistung einer bedarfsgerechten Ausspeisung aus
-dem Speicher übrigens ziemlich unerheblich. Etwa bei einem Jahresverbrauch von
-3000 kWh zeigen Simulationen, dass selbst wenn sie auf nur 100 W begrenzt wird,
-das für die Speichernutzung und den Eigenverbrauch so gut wie nichts ausmacht.
-Daher genügt für AC-gekoppelte Pufferspeicher ein kleiner Wechselrichter.
-
-<!-- Es lohnt sich bislang, wenn überhaupt, nur für größere PV-Anlagen. -->
-
-Statt einer lastabhängigen Regelung wäre es besonders für Steckersolargeräte
-viel einfacher, aber leider wenig zielführend,
+Statt einer lastabhängigen Regelung ist es besonders für Steckersolargeräte
+viel einfacher, aber leider wenig effizient,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
 so abzustimmen, dass lediglich ein Großteil der Grundlast des Haushalts,
-z.B. 50 bis 100 W, für eine Dauer von etwa 1-2 Tagen abgedeckt wird.
+z.B. 100 W, für eine Dauer von etwa 1-2 Tagen abgedeckt wird.
 Wenn man diese *Konstanteinspeisung* noch mit einer Zeitschaltuhr (oder einem
 Helligkeitssensor) zur Beschränkung zwischen Sonnenunter- und Aufgang
 kombiniert, bekommt man eine *Nachteinspeisung*.\
