@@ -4755,7 +4755,7 @@ unter stark schwankenden Bedingungen eine (nahezu) optimale Energieausbeute.
 #### Solar-Laderegler {#Laderegler}
 
 ![Bild: Solar-Laderegler](Solar-Laderegler.png){:.right width="400"
-style="margin-left: 70px; margin-right: 70px"}
+style="margin-left: 30px; margin-right: 30px"}
 Wenn man über Solarmodule eine Batterie laden möchte, verwendet man einen
 *Solar-Laderegler*, also einen Solarregler mit Batterieladefunktion. Wie
 im Abschnitt zuvor erklärt, sollte er für eine optimale Ausbeute MPPT betreiben.
@@ -5115,25 +5115,27 @@ Leider sind die Produkte sehr teuer: 5700€ für eine Anlage mit 5,2 kWh.
 
 #### Tiefsetzsteller {#Tiefsetzsteller}
 
-![Bild: Tiefsetzsteller](Tiefsetzsteller.png){:.right width="300"
-style="margin-left: 70px; margin-right: 70px"}
-Ein Problem bei einer
-Batteriespannung von 24 V (oder 48 V) ist, dass Niederspannungs-Geräte
-typischerweise eher mit 12 V zu betreiben sind. Aber dafür gibt es für
-Geräte mit mäßigem Verbrauch (bis etwa 5 A, also 60 W) eine recht
-effiziente und kostengünstige Lösung, nämlich sog. *Tiefsetzsteller*
-(auch *Abwärtswandler*, engl. _DC-DC buck converter oder _step-down converter_).
+![Bild: Tiefsetzsteller](Tiefsetzsteller.png){:.right width="350"
+style="margin-left: 10px; margin-right: 10px"}
+Ein Problem bei der Verwendung von Gleichstrom ist, dass sehr unterschiedliche
+Spannungen verwendet werden. Niederspannungs-Geräte im Fahrzeugbereich erwarten
+meist 12 V, während im IT-Bereich Spannungen von 5 V und darunter üblich sind.
+Das passt alles nicht zu Batteriespannungen von 24 V oder 48 V.
+Aber es gibt für Geräte mit mäßigem Strombedarf (bis etwa 5 A)
+eine recht effiziente und kostengünstige Möglichkeit, die Spannung anzupassen,
+nämlich sog. *Tiefsetzsteller* (auch *Abwärtswandler*,
+engl. _DC-DC buck converter oder _step-down converter_).
 
 #### Spannungswächter {#Spannungswächter}
 
 {:style="clear:both"}
 ![Bild: Programmierbarer Batteriespannungswächter](
-Battery_voltage_protector.png){:.right width="500"
+Battery_voltage_protector.png){:.right width="450"
 style="margin-left: 50px; margin-right: 50px"}
 Für die Nutzung einer Batterie als [Stromspeicher](#Batteriepuffer) zur
 zeitversetzten Einspeisung ins Hausnetz braucht man einen *Spannungswächter*,
-der die Einspeisung bei nahezu voller Batterie einschaltet und bei nahezu
-leerer Batterie wieder ausschaltet. Wenn dieser nicht schon z.B. in einem
+der die Einspeisung z.B. bei nahezu voller Batterie einschaltet und jedenfalls
+bei nahezu leerer Batterie ausschaltet. Wenn dieser nicht schon z.B. in einem
 Energiemanagement-System integriert ist, kann man auch ein einfaches fertiges
 Modul verwenden, das man nur noch geeignet anschließen und einstellen muss.
 
