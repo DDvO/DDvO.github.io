@@ -207,8 +207,8 @@ Lizenzkürzel:
     -   [SolBatSim: Hochauflösende flexible Simulation](#SolBatSim)
 -   [Nutzungsvarianten](#Nutzung)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](#SSG)
-        - [Hintergrund der Beschränkung auf 600 bzw. 800 W](#Bagatellgrenze)
-        - [Kappungsverlust durch Drosselung auf 600 W](#Kappungsverlust)
+        - [Hintergrund der Beschränkung auf 600 bzw. 800&nbsp;W](#Bagatellgrenze)
+        - [Kappungsverlust durch Drosselung auf 600&nbsp;W](#Kappungsverlust)
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
         - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
         - [Dimensionierung des Stromspeichers](#Speicherbatterie)
@@ -300,21 +300,21 @@ von der Intensität der Einstrahlung durch die Sonne ab.
 
 Die Strahlungsleistung der Sonne auf unseren Planeten außerhalb der Atmosphäre
 (also ohne Dämpfung durch Luftmoleküle, Wolken und Schmutz)
-senkrecht zum Sonnenstand [berechnet sich zu 1367 W/m²](
+senkrecht zum Sonnenstand [berechnet sich zu 1367&nbsp;W/m²](
 https://www.photovoltaik4all.de/wie-kann-man-die-solarstrahlung-berechnen)
 und wird als *terrestrische Solarkonstante* bezeichnet.
 Die Stärke der tatsächlich auf den Erdboden treffende Sonneneinstrahlung,
 welche als [*Globalstrahlung*](https://de.wikipedia.org/wiki/Globalstrahlung)
 (engl. _global horizontal irradiance_, _GHI_), bezeichnet wird, ist natürlich
 viel geringer.
-Der 30-Jahres-Mittelwert in Deutschland liegt bei [etwa 125 W/m²](
+Der 30-Jahres-Mittelwert in Deutschland liegt bei [etwa 125&nbsp;W/m²](
 https://www.solaranlage-ratgeber.de/photovoltaik/photovoltaik-leistung/photovoltaik-ertrag-in-sommer-und-winter).
 Sie hängt stark vom Standort auf der Erde ab und ist je nach Bewölkung,
 Tages- und Jahreszeit sehr variabel.
-An einem wolkenlosen Sommertag werden maximal etwa 900 W/m² erreicht, bei
-leichter Bewölkung mit teils reflektierter Strahlung [bis über 1000 W/m²](
+An einem wolkenlosen Sommertag werden maximal etwa 900&nbsp;W/m² erreicht, bei
+leichter Bewölkung mit teils reflektierter Strahlung [bis über 1000&nbsp;W/m²](
 https://www.photovoltaik4all.de/blog/welche-rolle-spielt-die-temperatur-einer-photovoltaikanlage).
-Bei sehr schlechtem Wetter kann der Strahlungswert unter 100 W/m² sinken.
+Bei sehr schlechtem Wetter kann der Strahlungswert unter 100&nbsp;W/m² sinken.
 
 [![Bild: Globalstrahlung in Deutschland 1991-2020](
 Globalstrahlung_Deutschland_1991-2020.png){:.center}](
@@ -326,7 +326,7 @@ und [von Solargis](https://solargis.com/maps-and-gis-data/download)
 geben einen Überblick, welche Summe an Globalstrahlung
 pro Quadratmeter horizontaler Fläche durchschnittlich im Jahr zusammenkommt.
 In Deutschland sind es im Schnitt der Jahre 1991 bis 2020 nach Berechnungen
-des Deutschen Wetterdienstes [1086 kWh/m²](
+des Deutschen Wetterdienstes [1086&nbsp;kWh/m²](
 https://www.dwd.de/DE/leistungen/_config/leistungsteckbriefPublication.pdf?view=nasPublication&nn=16102&imageFilePath=229809516383478732006435024051472532772736564919904973098512541260476561304284049751405651717289583982040495528279338628905695385542275499557266335698545506612756450227783221602239879972072419602639476858490617241105588560029118312992778838770436569905341248614940063541966138585151325296158670892628008524799090834749&download=true).
 
 [![Bild: Direktstrahlung und Diffusstrahlung](
@@ -348,13 +348,13 @@ auf die Fläche reflektierten Strahlung liegt dann bei knapp 2%.
 Die **Nennleistung** (engl. _nominal power_, _power rating_) von Solarmodulen
 wird in **Wp** ([*Watt Peak*](https://de.wikipedia.org/wiki/Watt_Peak)) angegeben.
 Zu ihrer Bestimmung verwendet man eine Referenzbestrahlung mit einem normierten
-Sonnenlichtspektrum einer Stärke von 1000 W/m² bei Zelltemperatur 25°C.
+Sonnenlichtspektrum einer Stärke von 1000&nbsp;W/m² bei Zelltemperatur 25°C.
 Diese _standard test conditions (STC)_ sind [ziemlich praxisfern](
 https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/#:~:text=STC%3A%20Idealbedingungen).
 Realistischer sind die *Normalbedingungen* (engl. _nominal operating cell
-temperature (NOCT)_) mit 45° Betriebstemperatur und 800 W/m² Einstrahlung.
+temperature (NOCT)_) mit 45° Betriebstemperatur und 800&nbsp;W/m² Einstrahlung.
 
-Bei näherer Betrachtung bedeutet die Nennleistung in kWp (also 1000 Wp)
+Bei näherer Betrachtung bedeutet die Nennleistung in kWp (also 1000&nbsp;Wp)
 die *effektive Solarfläche* des Moduls, also Fläche (in m²) × Wirkungsgrad.
 Daher lässt sich der Wirkungsgrad eines Solarmoduls sehr einfach nachrechnen,
 indem man seine Nennleistung in kWp durch seine Fläche in m² teilt.
@@ -371,19 +371,19 @@ https://www.youtube.com/watch?v=JjmKgrtEMqk). Daher lohnt sich als
 Plausibiltäts-Check, den Wirkungsgrad nachzurechnen.
 
 In unseren Breitengraden ist je nach Standort bei optimaler statischer
-Ausrichtung der Solarmodule ein Jahres-Ertrag von 1100 kWh pro kWp installierter
-PV-Nennleistung möglich. Manche Angaben dazu sind mit [etwa 900 bis 1000 kWh](
+Ausrichtung der Solarmodule ein Jahres-Ertrag von 1100&nbsp;kWh pro kWp installierter
+PV-Nennleistung möglich. Manche Angaben dazu sind mit [etwa 900 bis 1000&nbsp;kWh](
 https://www.energie-experten.org/erneuerbare-energien/photovoltaik/planung/ertrag)
 eher zu konservativ bzw. etwas veraltet, andere sehr optimistisch mit
-[bis zu 1200 bis 1300 kWh](https://gruenes.haus/photovoltaik-pv-ertrag/).
+[bis zu 1200 bis 1300&nbsp;kWh](https://gruenes.haus/photovoltaik-pv-ertrag/).
 Es kommt schlichtweg darauf an, welche Werte man bei der Globalstrahlung
-ansetzt (je nach Standort, in Deutschland in Jahressumme [etwa 1090 kWh/m²](
+ansetzt (je nach Standort, in Deutschland in Jahressumme [etwa 1090&nbsp;kWh/m²](
 https://www.dwd.de/DE/leistungen/_config/leistungsteckbriefPublication.pdf?view=nasPublication&nn=16102&imageFilePath=229809516383478732006435024051472532772736564919904973098512541260476561304284049751405651717289583982040495528279338628905695385542275499557266335698545506612756450227783221602239879972072419602639476858490617241105588560029118312992778838770436569905341248614940063541966138585151325296158670892628008524799090834749&download=true))
 und welche Annahmen man bzgl. Modul-Ausrichtung und Anlagen-Wirkungsgrad trifft.
 <!-- bzw. bei der
-rechnerischen Zahl der [Volllaststunden](https://gammel.de/de/lexikon/volllaststunden/6288) pro Jahr (nämlich [standardmäßig 1000 h/a](
+rechnerischen Zahl der [Volllaststunden](https://gammel.de/de/lexikon/volllaststunden/6288) pro Jahr (nämlich [standardmäßig 1000&nbsp;h/a](
 https://www.photovoltaik4all.de/wie-kann-man-die-solarstrahlung-berechnen),
-aber eher 1100 h/a) bezogen auf die Standardstrahlung von 1000 W/m².-->
+aber eher 1100&nbsp;h/a) bezogen auf die Standardstrahlung von 1000&nbsp;W/m².-->
 
 [![Bild: PV-Potential in Europa](PVOUT_Europe.png){:.center}](
 https://solargis.com/maps-and-gis-data/download/europe)
@@ -391,7 +391,7 @@ Der Jahresertrag lässt sich leicht näherungsweise berechnen,
 und zwar durch Multiplikation der Nennleistung der PV-Module in kWp
 mit dem [*spezifischen PV-Jahresertrag*](
 https://solar-direktinvest.de/photovoltaik/photovoltaik-investieren/spezifischer-jahresertrag-pv/) (engl. [_PV potential_, *PVOUT*](
-https://globalsolaratlas.info/global-pv-potential-study)) in kWh/kWp.
+https://globalsolaratlas.info/global-pv-potential-study)) in&nbsp;kWh/kWp.
 Dieser ist standortspezifisch und beinhaltet Annahmen zu typischen praktisch
 relevanten Faktoren wie den Verlust durch Verschmutzung und Wechselrichtung.\
 Man erhält diese auch *spezifischer Ertrag* genannte Kenngröße aus den
@@ -400,7 +400,7 @@ aus dem [Global Solar Atlas der Weltbank](
 https://globalsolaratlas.info/map?c=50.10,11.05,7&s=48.1807,11.604e)
 (auch von Solargis) oder am Genauesten aus der [PVGIS-Datenbank der EU](
 https://re.jrc.ec.europa.eu/pvg_tools/de/)
-bei der Standard-Eingabe von 1 kWp für die installierte max. PV-Leistung.
+bei der Standard-Eingabe von 1&nbsp;kWp für die installierte max. PV-Leistung.
 
 ### Optimale Ausrichtung von Solarmodulen {#Ausrichtung}
 
@@ -617,12 +617,12 @@ https://www.photovoltaikforum.com/core/attachment/44638-pv-vergleich-s-vs-ow-v2-
 
 Diese Effekte werden selbst dann nicht durch eine geringere Nutzbarkeit tagsüber
 ausgeglichen, wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr nur eine
-[Minimallast (Grundlast)](#Strommessung) von z.B. 100 W hat:
+[Minimallast (Grundlast)](#Strommessung) von z.B. 100&nbsp;W hat:
 Dann hat die Ost-West-Ausrichtung im Sommer einen leichten Vorteil, aber zu
 allen anderen Jahreszeiten ermöglicht die Südausrichtung mehr Eigenverbrauch.\
-Erst wenn täglich von 8 bis sogar 18 Uhr nur z.B. 50 W Grundlast vorliegt,
+Erst wenn täglich von 8 bis sogar 18 Uhr nur z.B. 50&nbsp;W Grundlast vorliegt,
 bringt eine Ost-West-Ausrichtung einen geringen Vorteil beim Eigenverbrauch.
-Allerdings bewegt sich dann der Eigenverbrauch bei nur 200 kWh im Jahr,
+Allerdings bewegt sich dann der Eigenverbrauch bei nur 200&nbsp;kWh im Jahr,
 weshalb sich die Amortisation deutlich länger hinzieht als im Durchschnitt.
 
 Leider wird die falsche Vorstellung, dass durch Ost-West-Anlagen
@@ -660,22 +660,22 @@ tagsüber im Vergleich zu den Morgen- und Abendstunden eher wenig Verbrauch hat.
 
 Die genannten Auswirkungen auf den Eigenverbrauch sind
 das Ergebnis einer Reihe [genauer Simulationen](#SolBatSim)
-für einen Haushalt in Süddeutschland mit 3000 kWh Jahresverbrauch mit einem
-Steckersolargerät mit 2 × 300 Wp PV-Modulen und Gesamtsystem-Wirkungsgrad 86%.\
+für einen Haushalt in Süddeutschland mit 3000&nbsp;kWh Jahresverbrauch mit einem
+Steckersolargerät mit 2 × 300&nbsp;Wp PV-Modulen und Gesamtsystem-Wirkungsgrad 86%.\
 Für die Ausrichtungen -/+ 90° (also Ost/West), +/- 60°, +/- 30° und 0° (Süd)
 zeigt die folgende Tabelle den PV-Nettoertrag und den Eigenverbrauch (EV)
 in den angegebenen Situationen, wobei für jede Ausrichtung der jeweils
 maximale Eigenverbrauch **fett** dargestellt ist,
 womit sich auch die jeweils optimale Neigung leicht ablesen lässt.
 
-|Azimut|Neigung|Nettoertrag|EV normal|EV Mo-Fr 8-16 h 100 W|EV tgl. 8-18 h 50 W|
+|Azimut|Neigung|Nettoertrag|EV normal|EV Mo-Fr 8-16&nbsp;h 100&nbsp;W|EV tgl. 8-18&nbsp;h 50&nbsp;W|
 |------:|:-----|----------:|-----------:|------------:|----------:|
 |Ost/West:
 |-/+90° |  15° |  549 kWh  | **462 kWh**|   367 kWh   |  186 kWh  |
 |-/+90° |  30° |  531 kWh  |   457 kWh  | **369 kWh** |  193 kWh  |
 |-/+90° |  45° |  512 kWh  |   442 kWh  |   365 kWh   |**195 kWh**|
 |WSW/OSO:
-|+/-60° |  15° |  585 kWh  |   480 kWh  |   374 kW    |  185 kWh  |
+|+/-60° |  15° |  585 kWh  |   480 kWh  |   374 kWh   |  185 kWh  |
 |+/-60° |  30° |  592 kWh  | **487 kWh**| **380 kWh** |  190 kWh  |
 |+/-60° |  45° |  575 kWh  |   480 kWh  |   378 kWh   |**191 kWh**|
 |SSW/SSO:
@@ -691,7 +691,7 @@ womit sich auch die jeweils optimale Neigung leicht ablesen lässt.
 Interessant ist in diesem Zusammenhang auch zu betrachten,
 wie sich die Unterschiede über die Jahreszeiten verteilen.
 
-* Wenn man täglich von 8 bis 18 Uhr eine Grundlast von nur 50 W hätte,
+* Wenn man täglich von 8 bis 18 Uhr eine Grundlast von nur 50&nbsp;W hätte,
 würde sich bei 30° Neigung der Eigenverbrauch saisonal wie folgt verteilen,
 wobei die Ost-/West-Aufsplittung außer im Winter etwas besser abschneidet:
 
@@ -703,7 +703,7 @@ wobei die Ost-/West-Aufsplittung außer im Winter etwas besser abschneidet:
 
 
 * Wenn man an Arbeitstagen (Mo - Fr) tagsüber von 8 bis 16 Uhr
-nur eine Grundlast von 100 W hat, verteilt sich bei optimaler Neigung von 30°
+nur eine Grundlast von 100&nbsp;W hat, verteilt sich bei optimaler Neigung von 30°
 der Eigenverbrauch saisonal wie folgt:
 
 [//]: #
@@ -1042,7 +1042,7 @@ PV_Vergleich_S_vs_OW_add_v1.png)](
 https://www.photovoltaikforum.com/core/attachment/44467-pv-vergleich-s-vs-ow-add-v1-pdf/)
 
 Was die für den Eigenverbrauch optimale Neigung der PV-Module
-bei einer Anlage mit 600 Wp betrifft, ergeben die Simulationen folgendes:
+bei einer Anlage mit 600&nbsp;Wp betrifft, ergeben die Simulationen folgendes:
 Bei reiner Südausrichtung (0° Azimut), ebenso bei einer Orientierung von +/- 30°
 oder +/- 60° abweichend von Süden, ist eine Neigung von ungefähr 30° optimal.
 Bei einer Orientierung von +/- 90° abweichend von Süden (also rein Ost-West)
@@ -1053,20 +1053,20 @@ Wobei eine Winkelabweichung von +/- 10° sehr wenig ausmacht.
 Bei Verwendung von 4 PV-Modulen kann man im Sinne der Eigenverbrauchsoptimierung
 und gleichmäßigeren Ertragsverteilung über den Tagesverlauf in Betracht ziehen,
 eines nach Osten, zwei nach Süden und eines nach Westen auszurichten.
-Bei 400 Wp Modulen ergibt die [Eigenverbrauchssimulation](#SolBatSim), wieder
-für ein typisches Lastprofil und 3000 kWh Jahresverbrauch in Süddeutschland,
+Bei 400&nbsp;Wp Modulen ergibt die [Eigenverbrauchssimulation](#SolBatSim), wieder
+für ein typisches Lastprofil und 3000&nbsp;kWh Jahresverbrauch in Süddeutschland,
 für alle drei Himmelsrichtungen eine optimale Neigung von um die 30°
 mit wieder sehr geringer Empfindlichkeit auf Abweichungen davon.\
 Die Verteilung 1 × Ost, 2 × Süd und 1 x West resultiert in einem Nettoertrag
-von 1576 kWh und einem Eigenverbrauch von 831 kWh bei optimalen 30°.\
+von 1576&nbsp;kWh und einem Eigenverbrauch von 831&nbsp;kWh bei optimalen 30°.\
 Hingegen bringt die gemeinsame Ausrichtung der 4 Module nach Süden
-erwartungsgemäß einen deutlich höheren Gesamt-Nettoertrag von 1715 kWh,
-während der Eigenverbrauch von 838 kWh nur noch minimal höher ist,
+erwartungsgemäß einen deutlich höheren Gesamt-Nettoertrag von 1715&nbsp;kWh,
+während der Eigenverbrauch von 838&nbsp;kWh nur noch minimal höher ist,
 und zwar bei optimaler Neigung von 25°.
 Wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr allerdings
-nur eine Grundlast von z.B. 100 W hat, hat die Aufteilung
+nur eine Grundlast von z.B. 100&nbsp;W hat, hat die Aufteilung
 auf drei Himmelsrichtungen beim Eigenverbrauch einen hauchdünnen Vorteil
-von 3 kWh (nämlich 629 kWh gegenüber 626 kWh bei reiner Südausrichtung),
+von 3&nbsp;kWh (nämlich 629&nbsp;kWh gegenüber 626&nbsp;kWh bei reiner Südausrichtung),
 und zwar bei optimaler Neigung von 25 bis 30° der südlichen Module
 und 35 bis 40° der östlichen und westlichen Module.\
 Also lohnt sich auch die weitere Aufteilung auf drei Himmelsrichtungen nicht
@@ -1192,7 +1192,7 @@ Fernseher und Computer müssen normalerweise nicht immer laufen.
 Geräte, die einen hohen Verbrauch im Bereitschaftsmodus haben,
 könnte man bei längerem Nichtgebrauch auch ganz abschalten.
 Man kann beispielsweise in einem 3-Personen-Haushalt
-durchaus auf unter 1500 kWh im Jahr kommen.
+durchaus auf unter 1500&nbsp;kWh im Jahr kommen.
 
 Erst der zweite Schritt zum Einsparen von Stromkosten ist dann eine
 geeignet dimensionierte PV-Anlage.
@@ -1277,7 +1277,7 @@ ein Artikel zur Messung der von einem Balkonkraftwerk gelieferten Strommenge
 mit Fokus auf Messsteckdosen.
 Technisch detaillierter ist [dieser schöner Artikel](
 https://blog.helmutkarger.de/balkonkraftwerk-teil-6-monitoring/)
-mit Schwerpunkt auf einphasigen Shelly-Messgeräten wie dem Plus 1 1PM.
+mit Schwerpunkt auf einphasigen Shelly-Messgeräten wie dem Plus 1PM.
 Diese Geräte ermöglichen die detaillierte automatische Erfassung
 von Spannung, Strom, Wirkleistung etc. in Sekundenauflösung.\
 Zusammen mit einer Messung des nach außen ins Netz eingespeisten
@@ -1288,20 +1288,21 @@ nämlich als Differenz aus erzeugter und eingespeister Energie.
 also besser nur mit einer passenden zusätzlichen Sicherung betreiben,
 weil sie keinen eingebauten Überstromschutz haben. Insbesondere der
 [Shelly 1 Mini Gen3](https://www.shelly.com/de/products/shop/shelly-1-mini-gen3),
-welcher mit nur max. 8 A belastbar ist, könnte bei Überlast
+welcher mit nur max. 8&nbsp;A belastbar ist, könnte bei Überlast
 nicht nur kaputt gehen, sondern auch erst mal [unentdeckt eine unkontrollierte
 Fehlschaltung herbeiführen](https://www.mydealz.de/comments/permalink/46432363).
+
 <!--
 Naja, so einfach ist es nicht, wie die Kollegen hier schreiben.
-- Leitungsschutzschalter 16A ist, wie der Name schon sagt, um die Leitungen in der Wand zu schützen und kein Geräteschutz. Der Shelly ist aber in dem Fall ein Gerät, auch wenn es wiederum andere Geräte schaltet.
+- Leitungsschutzschalter 16&nbsp;A ist, wie der Name schon sagt, um die Leitungen in der Wand zu schützen und kein Geräteschutz. Der Shelly ist aber in dem Fall ein Gerät, auch wenn es wiederum andere Geräte schaltet.
 - Ein Geräteschutz ist eine zugängliche oder auch nicht zugängliche Feinsicherung bemessen am maximal zulässigen Strom des Gerätes (in dem Fall der Shelly mit seiner max. Strombelastung des Relais)
 Keine Ahnung, ob die Shellys eine Feinsicherung eingelötet haben.
-- Wenn der Shelly bei 10-15A bereits abraucht aber der LSS 16A (noch) nicht auslöst, kann auch Schlimmeres passieren, je nach abgerauchtem Schaltzustand der Relaiskontakte und des Shelly selbst. z.B. wenn er hinter der Gardine in der Jalousieschalterdose montiert ist und selbst Funken,Feuer schlägt.
+- Wenn der Shelly bei 10-15A bereits abraucht aber der LSS 16&nbsp;A (noch) nicht auslöst, kann auch Schlimmeres passieren, je nach abgerauchtem Schaltzustand der Relaiskontakte und des Shelly selbst. z.B. wenn er hinter der Gardine in der Jalousieschalterdose montiert ist und selbst Funken,Feuer schlägt.
 - Ich finde es aber weitaus schlimmer, wenn durch wiederkehrende Überlastung die Relaiskontakte irgendwann mal UNBEMERKT kleben bleiben, denn je nach angeschlossenem Gerät (z.B. Heizung) kann das böse ins Auge gehen. Man sieht und riecht es dem Shelly nicht an. Selbst der Schaltzustand in der App würde einem suggerieren, dass das Gerät aus ist, aber die Kontakte kleben und das Gerät weiterhin mit Spannung versorgen.
 Angeschlossene Geräte hoher Leistung sollten zumindest noch einen eigenen Schutz haben, wie z.B. Thermostate etc.
 Bei einem Jalousiemotor, sollte das kein Problem sein, denn die schalten ja selbst ab und man darf sie ja auch mit (gegenseitig verriegelten) Schaltern verwenden.
 
-Zur Sicherheit würde ich überhaupt nie Geräte mit mehr als 8-10A an irgendwelche Wifi-Steckdosen/Dosenaktoren im Miniaturformat betreiben.
+Zur Sicherheit würde ich überhaupt nie Geräte mit mehr als 8-10&nbsp;A an irgendwelche Wifi-Steckdosen/Dosenaktoren im Miniaturformat betreiben.
 Mir ist in letzten Jahren aufgefallen, dass die smarten Steckdosen immer kleiner werden, die Relais dementsprechend auch und viele Hersteller diese immer noch mit 16A bewerben.
 Die alten, von vor 4-6 Jahren, die noch groß und klobig waren, wie eine Zeitschaltuhr, denen habe ich schon mehr Ampere anvertraut.
 Ist aber ein generelles Problem der aktuellen smarten Technik. Alle Hersteller versuchen auf engstem Raum die Wandler von 230V auf 3,3 bzw 5V, die (Funk)-Elektronik und das Relais auf die Größe einer Streichholzschachtel zu minimieren und suggerieren einem, dass man damit locker seinen Ablufttrockner betreiben kann. Eine Zeit lang geht das alles sicher..eine Zeit lang..ja.
@@ -1470,20 +1471,20 @@ so dass keine Einspeisung auf dieser Phase stattfindet, oder während der
 Einspeisung auf dieser Phase auf den anderen Phasen kein Verbrauch stattfindet.
 
 Hier ein einfaches Beispiel:
-Nehmen wir an, während einer Stunde liefert eine Balkonanlage konstant 500 W,
-und gleichzeitig hängt an der selben Phase ein Gerät, das konstant 200 W zieht,
-so dass im Unterverteiler auf dieser Phase 300 W Einspeisung ankommen.
+Nehmen wir an, während einer Stunde liefert eine Balkonanlage konstant 500&nbsp;W,
+und gleichzeitig hängt an der selben Phase ein Gerät, das konstant 200&nbsp;W zieht,
+so dass im Unterverteiler auf dieser Phase 300&nbsp;W Einspeisung ankommen.
 Gleichzeitig hängt an den beiden anderen Phasen in der ersten halben Stunde
-eine Last von konstant je 200 W, in der zweiten halben Stunde konstant je 100 W.
+eine Last von konstant je 200&nbsp;W, in der zweiten halben Stunde konstant je 100&nbsp;W.
 Nachdem der Shelly (Pro) 3EM einzeln über die Phasen summiert/integriert,
-sind es über die Beispiel-Stunde für die erste Phase 0 Wh Bezug und 300 Wh
-Einspeisung, für die beiden anderen jeweils 150 Wh Bezug und 0 Wh Einspeisung.
-Er meldet also für die Stunde insgesamt 300 Wh Bezug und 300 Wh Einspeisung,
-was bei Nettomessung zu einer ausgeglichenen Energiebilanz (0 Wh) führt.
+sind es über die Beispiel-Stunde für die erste Phase 0&nbsp;Wh Bezug und 300&nbsp;Wh
+Einspeisung, für die beiden anderen jeweils 150&nbsp;Wh Bezug und 0&nbsp;Wh Einspeisung.
+Er meldet also für die Stunde insgesamt 300&nbsp;Wh Bezug und 300&nbsp;Wh Einspeisung,
+was bei Nettomessung zu einer ausgeglichenen Energiebilanz (0&nbsp;Wh) führt.
 Ein Zweiwegezähler hingegen saldiert zuerst, und nachdem per Phasensaldo in der
-ersten halben Stunde 100 W aus dem Netz gezogen und in der zweiten halben Stunde
-mit 100 W eingespeist wird, kommt er auf 50 Wh Bezug und 50 Wh Einspeisung für
-diese Stunde. Wegen fehlender Einspeisevergütung wird für 50 Wh abkassiert.
+ersten halben Stunde 100&nbsp;W aus dem Netz gezogen und in der zweiten halben Stunde
+mit 100&nbsp;W eingespeist wird, kommt er auf 50&nbsp;Wh Bezug und 50&nbsp;Wh Einspeisung für
+diese Stunde. Wegen fehlender Einspeisevergütung wird für 50&nbsp;Wh abkassiert.
 
 <!--
 Vermutlich hat ein scheinbarer Profi diesen Unfug aufgebracht, der dann von
@@ -1746,9 +1747,9 @@ https://www.homeandsmart.de/balkonkraftwerk-einspeisung)
 (einmalig Anmeldung und ggf. Zählertausch für etwa 100€;
 jährlich Abrechnung, Steuererklärung, und Messstellengebühr meist 20€)
 und bringt wenig --- die Einspeisevergütung ist staatlich festgelegt,
-<!-- gemäß eEG [bis 2022 auf ca. 6 ct/kWh](
+<!-- gemäß eEG [bis 2022 auf ca. 6&nbsp;ct/kWh](
 https://www.zolar.de/blog/entwicklung-der-eeg-einspeiseverguetung)
-und liegt--> [seit Anfang 2023 beträgt sie 8,2 ct/kWh](
+und liegt--> [seit Anfang 2023 beträgt sie 8,2&nbsp;ct/kWh](
 https://www.aroundhome.de/solaranlage/einspeiseverguetung/),
 --- sehr mager im Vergleich zu den Marktpreisen für den Strombezug.
 
@@ -1766,7 +1767,7 @@ so geregelt, während es in Deutschland im Allgemeinen nicht erlaubt ist.
 
 Anfang 2023 [sprach sich der VDE dafür aus](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv), dass
-bei PV-Anlagen bis 800 W die Zähler künftig „auch rückwärtslaufen dürfen“.
+bei PV-Anlagen bis 800&nbsp;W die Zähler künftig „auch rückwärtslaufen dürfen“.
 Nach den [Solar-Plänen des dt. BMWK vom 10.03.2023](
 https://www.inside-digital.de/news/bundesregierung-plant-beseitigung-buerokratische-huerden-fuer-balkonkraftwerke)
 wollte man allerdings nicht so weit gehen, sondern nur
@@ -1775,7 +1776,7 @@ wurde daraufhin eine Stellungnahme eingereicht mit dem Ziel, das noch zu ändern
 
 > Dass nicht [...] einfach Nettomessung gemacht wird, hemmt doch sehr den Ausbau privater Solaranlagen, weil sich diese daher allein durch den Eigenverbrauch (also vermiedenen Netzbezug) amortisieren müssen, was besonders für den sehr großen Teil der Bevölkerung schwer möglich ist,  der tagsüber daheim wenig Eigenverbrauch hat. Dass überschüssiger PV-Strom an den Verteilnetzbetreiber verschenkt wird, ist ein Ärgernis für die meisten Interessenten und Anlagenbetreiber und verleitet diejenigen, die sich technisch besser auskennen, sich zumindest Gedanken über Stromspeicher mit aufladbaren Batterien zu machen, welche jedenfalls für Steckersolaranlagen  schon regelungstechnisch unverhältnismäßig aufwendig sowie ökonomisch und ökologisch unsinnig bis kontraproduktiv sind.
 
-> Daher zum Ziel der schnelleren und noch wesentlich weiteren Verbreitung kleiner privater PV-Anlagen unser Plädoyer, für Anlagen bis zur Bagatellgrenze von 800 VA die Nettomessung einzuführen.
+> Daher zum Ziel der schnelleren und noch wesentlich weiteren Verbreitung kleiner privater PV-Anlagen unser Plädoyer, für Anlagen bis zur Bagatellgrenze von 800&nbsp;VA die Nettomessung einzuführen.
 
 > Um das umzusetzen müssten auch keine bestehenden Zähler getauscht werden, denn alte (Ferraris-)Zähler können  meist ohnehin rückwärts laufen, und auch bei allen modernen Zweirichtungszählern inklusive Smart-Metering-Geräten kann man zur Abrechnung nach dem Nettomessungs-Prinzip einfach die Differenz aus Netzbezug und Einspeisung bilden.
 
@@ -1843,28 +1844,28 @@ hat sich die Anlage *amortisiert*, also die Investition kaufmännisch gelohnt.
 Die Investition rentiert sich im Verhältnis der Jahres-Ersparnis zu den Kosten.
 
 Wie eingangs geschrieben kann man bei optimaler Platzierung von Solarmodulen
-pro Jahr etwa 1,1 kWh Strommenge pro Wp installierter Solarleistung gewinnen.
+pro Jahr etwa 1,1&nbsp;kWh Strommenge pro Wp installierter Solarleistung gewinnen.
 Rechnen wir beispielsweise mit einer Investition für die PV-Anlage von 1,10€/Wp
 (inklusive anteiliger Kosten für Wechselrichter, Montage, Reparatur, etc.),
-dann ergeben sich einmalige Kosten von 1€ pro kWh Jahresertrag.\
+dann ergeben sich einmalige Kosten von 1€ pro&nbsp;kWh Jahresertrag.\
 Nehmen wir für die folgenden Beispiele zudem an, dass der sog. *Arbeitspreis*,
-also die Kosten für vom Stromanbieter bezogenen Strom, 40 Ct/kWh beträgt.
-Dann spart man 0,40€ für jede kWh Strom, die von der PV-Anlage produziert wird
+also die Kosten für vom Stromanbieter bezogenen Strom, 40&nbsp;ct/kWh beträgt.
+Dann spart man 0,40€ für jede&nbsp;kWh Strom, die von der PV-Anlage produziert wird
 und die man auch selbst verbraucht, statt sie von außen einzukaufen.\
 Anfang 2023 fiel in Deutschland die Mehrwertsteuer für die Komponenten kleiner
 privaten PV-Anlagen weg, aber auch die Strompreise sanken im Frühjahr wieder auf
-etwa 30 Ct/kWh. Außerdem wurden PV-Module durch ein globales Überangebot
-günstiger, so dass man Anlagen mit 800 Wp teils schon für 500€ erhalten kann.
+etwa 30&nbsp;ct/kWh. Außerdem wurden PV-Module durch ein globales Überangebot
+günstiger, so dass man Anlagen mit 800&nbsp;Wp teils schon für 500€ erhalten kann.
 Damit blieb das Kosten-/Nutzen-Verhältnis ungefähr gleich, weil sowohl der
 Kaufpreis als auch der einzusparende Strompreis um ungefähr 25% zurückgingen.
 
-Eine typische Balkonanlage mit 600 Wp Nennleistung erreicht einen
-Jahres-Bruttoertrag von etwa 765 kWh, was bei 86% Gesamtsystem-Wirkungsgrad
-ca. 660 kWh Netto-Ertrag (Einspeisung des Wechselrichters) pro Jahr bedeutet.
+Eine typische Balkonanlage mit 600&nbsp;Wp Nennleistung erreicht einen
+Jahres-Bruttoertrag von etwa 765&nbsp;kWh, was bei 86% Gesamtsystem-Wirkungsgrad
+ca. 660&nbsp;kWh Netto-Ertrag (Einspeisung des Wechselrichters) pro Jahr bedeutet.
 Wenn wir mit Kosten von 1,10€/Wp rechnen, ergibt das für diese Anlage 660€.
 Pro kWh Netto-Jahresertrag betragen die einmaligen Kosten also 1€, und bei
-40 Ct/kWh eingespartem Strompreis liegt das Verhältnis genauso günstig
-wie wenn die Anlage nur 495€ kostet und der Strompreis 30 Ct/kWh beträgt.
+40&nbsp;ct/kWh eingespartem Strompreis liegt das Verhältnis genauso günstig
+wie wenn die Anlage nur 495€ kostet und der Strompreis 30&nbsp;ct/kWh beträgt.
 
    - Falls man den erzeugten PV-Strom komplett selbst verbraucht, was aber
    praktisch kaum der Fall sein wird, ergibt sich eine Einsparung von 0,40€
@@ -1872,10 +1873,10 @@ wie wenn die Anlage nur 495€ kostet und der Strompreis 30 Ct/kWh beträgt.
    Die Rendite würde in diesem Fall satte 40% betragen.
 
   - Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und
-  Jahresverbrauch von 3000 kWh liegt der selbst genutzte Ertrag bei etwa 460 kWh
+  Jahresverbrauch von 3000&nbsp;kWh liegt der selbst genutzte Ertrag bei etwa 460&nbsp;kWh
   pro Jahr. Der Eigenverbrauchsanteil liegt also bei 70% des Nettoertrags
   (und der Eigendeckungsanteil bei 15% des Verbrauchs).\
-  Damit werden bei 40 Ct/kWh Arbeitspreis jährlich 184€ eingespart.
+  Damit werden bei 40&nbsp;ct/kWh Arbeitspreis jährlich 184€ eingespart.
   Für die Investition von 660€ ergibt sich eine Amortisationszeit von 3,6 Jahren
   und eine Rendite von 28%.
 
@@ -1949,8 +1950,8 @@ Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
 
 -->
 
-  - Bei einem relativ hohen Jahresverbrauch von 6000 kWh können durchschnittlich
-  sogar 570 kWh im Jahr (also 87% des Nettoertrags) selbst genutzt werden,
+  - Bei einem relativ hohen Jahresverbrauch von 6000&nbsp;kWh können durchschnittlich
+  sogar 570&nbsp;kWh im Jahr (also 87% des Nettoertrags) selbst genutzt werden,
   was bei den angenommenen Kosten eine Amortisationszeit in 2,9 Jahren ergibt.
 
 [//]: #
@@ -1964,8 +1965,8 @@ PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
 -->
 
-  - Bei nur 1500 kWh Jahresverbrauch können durchschnittlich nur 330 kWh im Jahr
-  (also 50 % des Nettoertrags) selbst genutzt werden,
+  - Bei nur 1500&nbsp;kWh Jahresverbrauch können durchschnittlich nur 330&nbsp;kWh im Jahr
+  (also 50% des Nettoertrags) selbst genutzt werden,
   was eine Amortisation in genau 5 Jahren ergibt.
 
 [//]: #
@@ -1979,12 +1980,12 @@ Eigenverbrauchsanteil       =   50 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   22 % des Verbrauchs (Autarkiegrad)
 -->
 
-  - Wenn bei 3000 kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
-  nur eine Grundlast von 100 W anfällt, liegt der Eigenverbrauch bei 365 kWh
-  im Jahr (also 55 % des Nettoertrags) und die Amortisationszeit bei 4,5 Jahren.
+  - Wenn bei 3000&nbsp;kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
+  nur eine Grundlast von 100&nbsp;W anfällt, liegt der Eigenverbrauch bei 365&nbsp;kWh
+  im Jahr (also 55% des Nettoertrags) und die Amortisationszeit bei 4,5 Jahren.
 
 In den beiden zuletzt genannten Fällen könnte man überlegen,
-weniger PV-Leistung als 600 Wp zu installieren,
+weniger PV-Leistung als 600&nbsp;Wp zu installieren,
 allerdings hätte man dann auch langfristig weniger Nutzen.
 
 [//]: #
@@ -2023,7 +2024,7 @@ https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)“
 für Balkonkraftwerke bzw. dem „[Unabhängigkeitsrechner](
 https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner/)“
 für Hausdach-PV-Anlagen der HTW Berlin berechnen. Hier im Bild die Ausgabe
-bei 3000 kWh Jahres-Stromverbrauch, einem Strompreis von 40 Ct/kWh und für
+bei 3000&nbsp;kWh Jahres-Stromverbrauch, einem Strompreis von 40&nbsp;ct/kWh und für
 PV-Module mit Südausrichtung, 35° Anstellwinkel (Neigung) und ohne Verschattung.
 [![Bild: Stecker-Solar-Simulator](Stecker-Solar-Simulator.png)](
 https://solar.htw-berlin.de/rechner/stecker-solar-simulator/)
@@ -2031,7 +2032,7 @@ Beide Simulationen nutzen intern Daten der Wetterstation Lindenberg bei Berlin
 aus dem Jahr 2017, in dem die Sonneneinstrahlung schwächer als normal war ---
 für Süddeutschland kann man also gut 15% mehr PV-Leistung ansetzen. Als Eingabe
 verwenden sie den >Jahresstromverbrauch (mit einer typischen Lastverteilung) und
-die PV-Nennleistung (mit einem spezifischen PV-Jahresertrag von 1024 kWh/kWp).
+die PV-Nennleistung (mit einem spezifischen PV-Jahresertrag von 1024&nbsp;kWh/kWp).
 Man kann auch eine (nutzbare) Speicherkapazität angeben, wobei ein typischer
 Wirkungsgrad für LiFePO4-Batterien von 95% und typische Wandlungsverluste
 des Ladereglers und des Wechselrichters von jeweils 94% angenommen werden.
@@ -2105,7 +2106,7 @@ https://github.com/nick81nrw/PVTools/issues/37) und
 
 #### brodsoft Stromverlauf {#brodsoft}
 
-[![Bild: Speichersimulation InGe16 1.-6. April, 1000kWh, PV 660 kWh, 2,4 kWh
+[![Bild: Speichersimulation InGe16 1.-6. April, 1000kWh, PV 660&nbsp;kWh, 2,4&nbsp;kWh
 Speicher](Speichersimulation_InGe16_April_1-6.png){:.center}](
 https://brodsoft.de/stromverlauf/profiles/simulation)
 Eine ältere Simulation des Eigenverbrauchs für einen gegebenen PV-Nettoertrag
@@ -2117,9 +2118,9 @@ Man kann sich in der Ausgabe auch für jeden Monat Grafiken ausgeben lassen
 darauf sehr schön den Verlauf der elektrischen Größen ansehen.
 Außerdem gibt es gute Info-Seite mit guten Erklärungen zu Eigenverbrauchsanteil
 und Eigendeckungsanteil zu Strategien zu ihrer Optimierung.
-Diese Simulation berechnet für die o.g. 600 Wp Beispiel-Anlage je nach Auswahl
-des Profils einen Eigenverbrauch von teils 601 kWh (Profil „allgemein 13/14“)
-und mehr, aber typischerweise eher 514 kWh (Profil „InGe 16“) pro Jahr.
+Diese Simulation berechnet für die o.g. 600&nbsp;Wp Beispiel-Anlage je nach Auswahl
+des Profils einen Eigenverbrauch von teils 601&nbsp;kWh (Profil „allgemein 13/14“)
+und mehr, aber typischerweise eher 514&nbsp;kWh (Profil „InGe 16“) pro Jahr.
 
 #### PV Calculator {#PVCalculator}
 
@@ -2130,18 +2131,18 @@ Es gibt auch eine Android-App namens [PV Calculator](
 https://play.google.com/store/apps/details?id=com.pvstrom.pvcalculator)
 mit relativ flexiblen Parametern und sehr schöner Darstellung der Ergebnisse.
 Sie verwendet die Daten von PVGIS und rechnet auf Stundenbasis.
-Für die o.g. Beispiel-Anlage mit 600 Wp kommt sie für die gegebenen
-Wirkungsgrade korrekt auf einen Jahres-Nettoertrag von 664 kWh.
+Für die o.g. Beispiel-Anlage mit 600&nbsp;Wp kommt sie für die gegebenen
+Wirkungsgrade korrekt auf einen Jahres-Nettoertrag von 664&nbsp;kWh.
 Trotzdem sind die Ergebnisse leider zu optimistisch. Das liegt teils an den
 angebotenen Profilen (z.B. VDEW-H0-Werktag), die täglich die gleiche Last
 annehmen, wobei man immerhin selbst welche pro Jahreszeit definieren kann.
 Aber das Hauptproblem ist, dass die Last nur im stundenweisen Durchschnitt
 betrachtet wird, also die typischen Lastspitzen unberücksichtigt bleiben.
-Damit ergibt sich bei 3000 kWh Jahres-Strombedarf für die meisten Profile
+Damit ergibt sich bei 3000&nbsp;kWh Jahres-Strombedarf für die meisten Profile
 unrealistischerweise so gut wie keine Netzeinspeisung und selbst für das
-Profil „Peak Morgen Abends“ eine viel zu niedrige Netzeinspeisung von 52 kWh.
+Profil „Peak Morgen Abends“ eine viel zu niedrige Netzeinspeisung von 52&nbsp;kWh.
 Außerdem wird etwas verwirrend im Gesamtergebnis nicht der resultierende
-Eigenverbrauch (hier 612 kWh) dargestellt, sondern der Nettoertrag und der Netzbezug.
+Eigenverbrauch (hier 612&nbsp;kWh) dargestellt, sondern der Nettoertrag und der Netzbezug.
 
 ### Ökonomisch orientierte PV-Rechner {#PV-Rechner}
 
@@ -2186,11 +2187,11 @@ werden. Besonders die Simulation des Stromspeichers ist stark idealisiert.
 [![Bild: Ertragsrechnung Balkonanlage](
 PV-Rechner_v6+_Balkonanlage_600Wp.png){:.center}](PV-Rechner_v6+.xls)
 
-Bei der o.g. typischen Balkonanlage für 660€ mit 600 Wp und 660 kWh Jahresertrag
-ergibt sich mit dem PV-Rechner für einen Haushalt mit 3000 kWh Jahresverbrauch,
+Bei der o.g. typischen Balkonanlage für 660€ mit 600&nbsp;Wp und 660&nbsp;kWh Jahresertrag
+ergibt sich mit dem PV-Rechner für einen Haushalt mit 3000&nbsp;kWh Jahresverbrauch,
 der zu 28% während der Haupt-Sonnenscheinzeiten erfolgt,
-ein etwas zu optimistischer Solarstrom-Eigenverbrauch von etwa 530 kWh pro Jahr.
-Damit könnte man bei 40 Ct/kWh jährlich ca. 205€ Stromkosten einsparen, was eine
+ein etwas zu optimistischer Solarstrom-Eigenverbrauch von etwa 530&nbsp;kWh pro Jahr.
+Damit könnte man bei 40&nbsp;ct/kWh jährlich ca. 205€ Stromkosten einsparen, was eine
 Amortisationszeit von 3,2 Jahren und eine satte (Anfangs-)Rendite von 26% ergäbe.
 
 Hinweis: Der PV-Rechner stammt von [Falko (bonotos)](https://www.bonotos.com/)
@@ -2211,10 +2212,10 @@ kommt er auf sehr realistische Ergebnisse.
 Aufgrund seiner großen Flexibilität deckt er fast alle üblichen Situationen ab.
 Aus diesen Gründen ist er auch als Referenz für andere Simulationen verwendbar.
 
-Für die [o.g. Beispiel-Anlage](#rentabel) für den Raum München mit 600 Wp
-und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662 kWh
+Für die [o.g. Beispiel-Anlage](#rentabel) für den Raum München mit 600&nbsp;Wp
+und einem  PV-Nettoertrag (nach Wechselrichter-Verlusten) von etwa 662&nbsp;kWh
 ergibt sich mit dieser Simulation unter Verwendung minutengenauer Lastprofile
-ohne Speicher je nach Profil ein Eigenverbrauch von ca. 460 kWh.
+ohne Speicher je nach Profil ein Eigenverbrauch von ca. 460&nbsp;kWh.
 
 Das Ergebnis fällt nicht so günstig wie bei den zuvor genannten Simulationen
 aus, v.A. weil hier die in der Praxis relativ häufigen Lastspitzen immerhin im
@@ -2227,7 +2228,7 @@ als bei einer über Stunden oder gar ganze Monate gemittelten Betrachtung.
 Vergleichsrechnungen auf Grundlage eines Lastprofils mit (annähernd)
 sekündlicher Auflösung haben ergeben, dass die Lastspitzen nur teilweise einen
 spürbaren Einfluss auf die Nutzbarkeit des PV-Ertrags von kleinen Anlagen haben.
-Bei 600 Wp sind die Eigenverbrauchs-Ergebnisse bei Lastdaten auf Stundenbasis
+Bei 600&nbsp;Wp sind die Eigenverbrauchs-Ergebnisse bei Lastdaten auf Stundenbasis
 etwa 3 bis 6% zu optimistisch, auf Minutenbasis nur bis etwa 1%.
 <!-- bei 3000 kWh: 593 562 557  6%   bei 6000 kWh: 630 623 622  1% -->
 
@@ -2235,8 +2236,8 @@ Nutzungsvarianten {#Nutzung}
 ----------------------------
 
 Solarmodule liefern in direkter Abhängigkeit von der Einstrahlungsstärke
-sehr variablen Gleichstrom (je nach Nennleistung maximal z.B. 11 A)
-mit einer Spannung je nach Modultyp von üblicherweise 22 bis 44 V.
+sehr variablen Gleichstrom (je nach Nennleistung maximal z.B. 11&nbsp;A)
+mit einer Spannung je nach Modultyp von üblicherweise 22 bis 44&nbsp;V.
 Dieser „rohe“ Strom ist direkt erst mal kaum verwendbar,
 außer z.B. zum Aufheizen eines Warmwasserspeichers mit einem [PV-Heizstab](
 https://www.net4energy.com/de-de/energie/pv-heizstab) --
@@ -2311,23 +2312,23 @@ Eine weitere Möglichkeit ist, den Wechselrichter direkt fest mit dem Hausnetz
 zu verdrahten, was den Betrieb sogar noch sicherer macht.
 
 Die oft [*Balkonkraftwerk*](https://www.steckdosensolar.de/) genannten Anlagen
-haben meist eine recht geringe PV-Nennleistung von etwa 600 bis 800 Wp.
+haben meist eine recht geringe PV-Nennleistung von etwa 600 bis 800&nbsp;Wp.
 Das hat neben der geringen Größe und sehr überschaubaren Kosten auch damit zu
 tun, dass sie selbst installiert werden dürfen und genehmigungsfrei sind,
-wenn sie [maximal 600 W in die Steckdose einspeisen](
+wenn sie [maximal 600&nbsp;W in die Steckdose einspeisen](
 https://solarblitz.blogspot.com/2019/08/zulassigkeit-von-balkonkraftwerken-plug.html).
 Dies gilt bislang für Deutschland und die Schweiz; in Österreich gilt nach einer
-allgemeineren EU-Regel für die vereinfachte Nutzung eine Obergrenze von 800 W.
+allgemeineren EU-Regel für die vereinfachte Nutzung eine Obergrenze von 800&nbsp;W.
 Seit Anfang 2023 [empfiehlt selbst der VDE](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv),
 sich in Abweichung zur bislang geltenden technischen Norm VDE-AR-N 4105
-künftig auch in Deutschland an der „Bagatellgrenze bis 800 W“ zu orientieren.\
+künftig auch in Deutschland an der „Bagatellgrenze bis 800&nbsp;W“ zu orientieren.\
 Anfang März 2023 startete eine Petition für die
 [schnelle Umsetzung des VDE-Positionspapiers](https://balkon.solar/petition/),
 <!--https://epetitionen.bundestag.de/content/petitionen/_2023/_02/_17/Petition_146290.html-->
 und auch die [PV-Strategie 2023 des dt. BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
-will „die Grenze auf 800 VA Wechselstromleistung zu erhöhen“.\
+will „die Grenze auf 800&nbsp;VA Wechselstromleistung zu erhöhen“.\
 Die Erhöhung der Obergrenze in Deutschland, wobei der [VDE federführend ist](
 https://www.dke.de/de/arbeitsfelder/energy/news/produktnorm-fuer-steckerfertige-pv-anlagen),
 wird [sich noch hinziehen](https://youtu.be/gi36KzH5VhA), nach Informationen
@@ -2351,7 +2352,7 @@ Bei etwa 1/3 der Anlagen befinden sich die PV-Module auf oder an einem Balkon;
 bei etwa der Hälfte werden die Module z.B. auf einem Flachdach oder im Garten
 aufgeständert.
 
-#### Hintergrund der Beschränkung auf 600 bzw. 800 W {#Bagatellgrenze}
+#### Hintergrund der Beschränkung auf 600 bzw. 800&nbsp;W {#Bagatellgrenze}
 
 Die Hauptgründe für die Leistungsbegrenzung bei der Einspeisung von PV-Strom
 sind nicht, wie von vielen angenommen,
@@ -2375,7 +2376,7 @@ und daher teils die Mindest-Durchfahrtshöhe unterschritten werden.
 Wenn jedoch durch sog.
 [*Nulleinspeisung*](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/eigenverbrauch/nulleinspeisung)
 sichergestellt ist, dass kein lokal erzeugter Strom ins externe Netz fließt,
-können Steckdosen-Anlagen [auch z.B. mit 1800 W Leistung](
+können Steckdosen-Anlagen [auch z.B. mit 1800&nbsp;W Leistung](
 https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/)
 normgerecht betrieben werden. Dafür ist inzwischen eine fertige Lösung
 von indielux erhältlich, der [ready2plugin-Stromwächter](
@@ -2384,7 +2385,7 @@ https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/).
 Man kann durchaus annehmen, dass Beschränkungen auch dadurch motiviert sind,
 dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
 
-Die sog. [*Bagatellgrenze* bei 600 bzw. 800 Watt](
+Die sog. [*Bagatellgrenze* bei 600 bzw. 800&nbsp;Watt](
 https://www.computerbild.de/artikel/cb-Tipps-Energie-Balkonkraftwerk-800-Watt-erlaubt-35272303.html)
 dient in erster Linie der erleichterten Anmeldung kleiner Steckersolargeräte.
 Die Beschränkung leistet in gewisser Hinsicht aber auch einen Beitrag zum Schutz
@@ -2401,28 +2402,28 @@ Strom fließt als die Sicherung eigentlich erlauben würde, was dann zu
 einer mehr oder weniger übermäßigen Erwärmung der Leitung führt.\
 Wenn L der momentane Gesamt-Verbrauch auf der Leitung ist und P die momentane
 Erzeugung auf derselben Leitung, kommt bei der Sicherung die Leistung L&nbsp;-&nbsp;P an.
-Wenn die Sicherung auf 16 A ausgelegt ist und die dort ankommende Leistung
-vom Betrag her, also |L&nbsp;-&nbsp;P|, kleiner als 3680 W (= 230 V × 16 A) ist,
-löst die Sicherung nicht aus. Falls dabei L oder P größer als 3680 W ist,
-fließen auf einem Teilabschnitt der Leitung mehr als 16 A Strom.\
-Das kann beispielsweise passieren, wenn gerade die Erzeugung 6 A Strom liefert
-und der Stromverbrauch zwischen 16 A und 22 A liegt.\
+Wenn die Sicherung auf 16&nbsp;A ausgelegt ist und die dort ankommende Leistung
+vom Betrag her, also |L&nbsp;-&nbsp;P|, kleiner als 3680&nbsp;W (= 230&nbsp;V × 16&nbsp;A) ist,
+löst die Sicherung nicht aus. Falls dabei L oder P größer als 3680&nbsp;W ist,
+fließen auf einem Teilabschnitt der Leitung mehr als 16&nbsp;A Strom.\
+Das kann beispielsweise passieren, wenn gerade die Erzeugung 6&nbsp;A Strom liefert
+und der Stromverbrauch zwischen 16&nbsp;A und 22&nbsp;A liegt.\
 Das ist allerdings insgesamt in der Praxis höchst unwahrscheinlich,
 denn fast niemand betreibt an derselben Leitung gleichzeitig Geräte, die in
-Summe einen Verbrauch L von über 3680 W haben, und dass z.B. durch einen
+Summe einen Verbrauch L von über 3680&nbsp;W haben, und dass z.B. durch einen
 Kurzschluss extrem viel Strom fließt, ist möglich, aber kommt selten vor.
 Und selbst wenn das der Fall ist und die Solaranlage in dieser Zeit auch nur
-mal kurz weniger Leistung als L&nbsp;-&nbsp;3680 W liefert,
+mal kurz weniger Leistung als L&nbsp;-&nbsp;3680&nbsp;W liefert,
 löst die Sicherung wie üblich aus und die Überlast ist beendet.
 
 Von der ESTI (Schweiz) wird aus diesem Grund
 die Leitungsüberlastung durch Steckersolargeräte
 [nicht normativ betrachtet](https://www.pvplug.de/positionspapier/).
-In Irland macht man sich da auch keine Sorgen und [erlaubt sogar 6 kW für
-einphasige bzw. 11 kW für dreiphasige Einspeisung](
+In Irland macht man sich da auch keine Sorgen und [erlaubt sogar 6&nbsp;kW für
+einphasige bzw. 11&nbsp;kW für dreiphasige Einspeisung](
 https://www.energiezukunft.eu/erneuerbare-energien/solar/grosszuegige-bagatellgrenze-fuer-pv-anlagen/)
 zu einfachen Anschluss- und Abrechnungsregeln.\
-In Deutschland [schreibt VDE V 0100-551-1 vor](
+In Deutschland [schreibt VDE&nbsp;V 0100-551-1 vor](
 https://myblogexperience.de/balkonkraftwerk-warum-nur-600-watt-teil-2/),
 dass die Strombelastbarkeit des Leiters größer sein muss als der Nennstrom
 der Sicherung und der Ausgangsstrom des Netzwechselrichters zusammen.
@@ -2434,16 +2435,16 @@ machen, damit unter keinen Umständen etwas passieren kann. Dann besteht aber
 die Gefahr, dass das Verhältnis von Aufwand zu Nutzen viel zu ungünstig wird.
 <!-- https://www.mydealz.de/comments/permalink/40887036 -->
 
-#### Kappungsverlust durch Drosselung auf 600 W {#Kappungsverlust}
+#### Kappungsverlust durch Drosselung auf 600&nbsp;W {#Kappungsverlust}
 
 Die Nennleistung der verwendeten Solarmodule kann und sollte in Summe durchaus
 größer sein als die maximale Ausgangsleistung des Wechselrichters &mdash;
-also bei einem 600 W Wechselrichter statt 600 Wp eher 800 bis 1000 Wp.
+also bei einem 600&nbsp;W Wechselrichter statt 600&nbsp;Wp eher 800 bis 1000&nbsp;Wp.
 Denn in der Praxis wird auch mit solchen Modul-Nennleistungen
-eine Wechselrichter-Ausgangsleistung von 600 W ohnehin kaum erreicht,
+eine Wechselrichter-Ausgangsleistung von 600&nbsp;W ohnehin kaum erreicht,
 und wenn, dann auch nicht oft, besonders nicht in sonnenarmen Zeiten.
 **Der Unterschied beim nutzbaren Jahres-Gesamtertrag ohne/mit Drosselung des
-Wechselrichters auf 600 W ist sehr gering: etwa 10 kWh**, also knapp 3€ im Jahr.
+Wechselrichters auf 600&nbsp;W ist sehr gering: etwa 10&nbsp;kWh**, also knapp 3€ im Jahr.
 
 Diese Erkenntnis ist schon recht alt und wurde wohl erst [für größere Anlagen](
 https://www.photovoltaikforum.com/thread/79306-wechselrichter-unterdimensionierung-welche-ertragseinbu%C3%9Fen/)
@@ -2460,44 +2461,44 @@ auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
 (eigentlich sogar überproportional mehr, weil die Anlaufspannung der Regelung
 schneller erreicht wird), allerdings auf eher niedrigem absoluten Niveau.
 
-Die typischerweise auf 600 W gedrosselten Wechselrichter realisieren
+Die typischerweise auf 600&nbsp;W gedrosselten Wechselrichter realisieren
 die Leistungsbegrenzung aus energetischen Gründen schon auf ihrer Eingangsseite.
 Leider verwenden einige Modelle (zumindest die von Deye/Bosswerk/revolt),
 wie man in [Diagrammen](
 https://www.photovoltaikforum.com/thread/180129-deye-sun600-und-sun2000-erfahrungen/)
 sehen kann, dabei direkt den Ziel-Grenzwert, statt zu berücksichtigen,
 dass aufgrund des Wirkungsgrades auf der Ausgangsseite 5-10% weniger ankommen
-&mdash; pro genutztem Eingang sind es z.B. beim Deye Sun 600 maximal etwa 270 W.
+&mdash; pro genutztem Eingang sind es z.B. beim Deye Sun 600 maximal etwa 270&nbsp;W.
 Zudem wird der Grenzwert oft auch noch einfach gleichmäßig auf die Eingänge
-aufgeteilt. So können bei 95% Wirkungsgrad höchstens 570 W geliefert werden.
+aufgeteilt. So können bei 95% Wirkungsgrad höchstens 570&nbsp;W geliefert werden.
 Obwohl der Netto-Ertrag durch diese ungeschickte Form der Abregelung also oft
 sogar unnötig stark verringert wird, ist der Effekt auf den nutzbaren Ertrag
 längst nicht so groß wie man meinen könnte.
 
-Nehmen wir beispielsweise eine PV-Anlage mit 1000 Wp, die je nach Standort
-und Ausrichtung zu einem Ertrag von 1272 kWh brutto pro Jahr führen kann,
+Nehmen wir beispielsweise eine PV-Anlage mit 1000&nbsp;Wp, die je nach Standort
+und Ausrichtung zu einem Ertrag von 1272&nbsp;kWh brutto pro Jahr führen kann,
 also bei einem PV-System-Wirkungsgrad von 92% und einem typischen
-Wechselrichter-Wirkungsgrad von 94% etwa 1100 kWh Netto-Ertrag.
-Bei 3000 kWh Jahresverbrauch mit einem durchschnittlichen Lastprofil
-macht der effektive Verlust durch Drosselung auf 600 W Eingangsleistung
-des Wechselrichters (also 564 W Ausgangsleistung bei den 94% Wirkungsgrad)
-nur ungefähr 10 kWh aus. Dies erklärt sich durch zwei Effekte:
+Wechselrichter-Wirkungsgrad von 94% etwa 1100&nbsp;kWh Netto-Ertrag.
+Bei 3000&nbsp;kWh Jahresverbrauch mit einem durchschnittlichen Lastprofil
+macht der effektive Verlust durch Drosselung auf 600&nbsp;W Eingangsleistung
+des Wechselrichters (also 564&nbsp;W Ausgangsleistung bei den 94% Wirkungsgrad)
+nur ungefähr 10&nbsp;kWh aus. Dies erklärt sich durch zwei Effekte:
 * Die Abregelung findet zwar während etwa 650 Sonnenstunden im Jahr statt, aber
-die Differenz auf den sonst möglichen Netto-Ertrag ist moderat: etwa 80 kWh.
+die Differenz auf den sonst möglichen Netto-Ertrag ist moderat: etwa 80&nbsp;kWh.
 Dieser Verlust ist schon nicht groß, und er wird durch Folgendes nochmal
 deutlich kleiner:
 * Nur während in Summe etwa 90 Stunden wird zeitgleich zu dieser Abregelung
 bei einem durchschnittlichen Lastprofil überhaupt so viel Strom verbraucht,
 dass sich die Drosselung beim Eigenverbrauch bemerkbar macht. Und die Menge
-dieses Verbrauchs, bei dem also mehr als 528 W Leistung beansprucht werden,
-ist ziemlich gering, so dass der Verlust effektiv nur 10 kWh ausmacht.
+dieses Verbrauchs, bei dem also mehr als 528&nbsp;W Leistung beansprucht werden,
+ist ziemlich gering, so dass der Verlust effektiv nur 10&nbsp;kWh ausmacht.
 
 Selbst wenn man es schafft, die Last innerhalb des Tages so zu verschieben,
 dass täglich zwischen 8 und 16 Uhr doppelt so viel verbraucht wird wie normal
 und morgens und abends entsprechend weniger, ist der effektive Kappungsverlust
-im Jahr immer noch nur 20 kWh (während in Summe effektiv 190 Stunden).\
+im Jahr immer noch nur 20&nbsp;kWh (während in Summe effektiv 190 Stunden).\
 Und wenn man täglich zwischen 8 und 16 Uhr keine Lastspitzen hat, die über die
-Kappungsgrenze gehen (sondern z.B. nur eine konstante Grundlast von 100 W),
+Kappungsgrenze gehen (sondern z.B. nur eine konstante Grundlast von 100&nbsp;W),
 dann verschwindet der effektive Kappungsverlust natürlich völlig.
 
 [//]: #
@@ -2628,7 +2629,7 @@ Eigendeckungsanteil         =   28 % des Verbrauchs (Autarkiegrad)
 -->
 
 Auch bei Abweichung von der optimalen Südausrichtung verschwinden die ohnehin
-äußerst geringen Eigenverbrauchs-Einbußen durch Kappung auf 600 W zusehends
+äußerst geringen Eigenverbrauchs-Einbußen durch Kappung auf 600&nbsp;W zusehends
 und sind bei Ost-West-Aufteilung (Azimut +/-90°) gar nicht mehr vorhanden.
 
 <!--
@@ -2692,16 +2693,16 @@ PV-Eigenverbrauchsverlust   =    6 kWh netto während 64 h durch Drosselung auf 
 -->
 
 Aus den genannten Gründen lohnt es sich (jedenfalls bei PV-Nennleistungen
-bis um die 1000 Wp) nicht, statt eines auf 600 W gedrosselten Wechselrichters
-einen teureren mit 800 W Maximalleistung zu nehmen oder darauf zu warten,
+bis um die 1000&nbsp;Wp) nicht, statt eines auf 600&nbsp;W gedrosselten Wechselrichters
+einen teureren mit 800&nbsp;W Maximalleistung zu nehmen oder darauf zu warten,
 bis diese in Deutschland offiziell unter die Bagatellgrenze fallen.
 
-Hingegen **bieten 800 bis 1000 Wp statt 600 Wp PV-Nennleistung bei relativ
+Hingegen **bieten 800 bis 1000&nbsp;Wp statt 600&nbsp;Wp PV-Nennleistung bei relativ
 geringen Zusatzkosten eine sinnvolle Reserve für schwächere Sonnenstunden**,
-wodurch der Netto-Ertrag trotz Kappung etwa 200 bis 350 kWh höher liegt,
-und der Eigenverbrauch immerhin 80 bis 140 kWh höher im Jahr.
+wodurch der Netto-Ertrag trotz Kappung etwa 200 bis 350&nbsp;kWh höher liegt,
+und der Eigenverbrauch immerhin 80 bis 140&nbsp;kWh höher im Jahr.
 Die Amortisationszeit der Gesamt-Anlage bleibt dabei ziemlich gleich, und auf
-lange Sicht ergibt sich eine entsprechend höhere Kostenersparnis als mit 600 Wp.
+lange Sicht ergibt sich eine entsprechend höhere Kostenersparnis als mit 600&nbsp;Wp.
 
 <!--
 Neigungswinkel              =   38°
@@ -2798,7 +2799,7 @@ Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 <!-- https://www.mydealz.de/comments/permalink/46085250 -->
 In diesem Zusammenhang wird von Anbietern und Nutzer oft eine
 naive (Milchmädchen-)Rechnung in folgender Art gemacht:
-> Der Speicher hat eine nutzbare Kapazität von 1,5 kWh und 6000 Ladezyklen. Damit lassen sich also 9000 kWh einsparen, was bei 30 Ct/kWh 2700€ Ertrag bringt.
+> Der Speicher hat eine nutzbare Kapazität von 1,5&nbsp;kWh und 6000 Ladezyklen. Damit lassen sich also 9000&nbsp;kWh einsparen, was bei 30&nbsp;ct/kWh 2700€ Ertrag bringt.
 
 Das berücksichtigt aber keine Verluste und vor allem nicht, wie lange
 es dauern würde, um auf die (angeblich erreichbare) Zyklenzahl zu kommen.
@@ -2814,29 +2815,29 @@ des Preises für so eine Speicheranlage zum Strompreis langfristig entwickelt.
 
 Besser sieht es bei größeren PV-Anlagen aus.
 <!-- https://www.mydealz.de/comments/permalink/44464786 -->
-Hier das Ergebnis von Simulationen für ein Wohnhaus mit angenommenen 5000 kWh
-Jahresverbrauch und 200 W Mindestlast und ansonsten typischem Lastprofil,
-optimal ausgerichteter PV-Anlage in Süddeutschland mit 10 kWp,
-mit einem kleinen Speicher mit effektiv 2 kWh
+Hier das Ergebnis von Simulationen für ein Wohnhaus mit angenommenen 5000&nbsp;kWh
+Jahresverbrauch und 200&nbsp;W Mindestlast und ansonsten typischem Lastprofil,
+optimal ausgerichteter PV-Anlage in Süddeutschland mit 10&nbsp;kWp,
+mit einem kleinen Speicher mit effektiv 2&nbsp;kWh
 und typischen Verlusten/Wirkungsgraden.
-Nehmen wir Einspeisevergütung und 30 - 8 = 22 ct/kWh Strompreisdifferenz​ an.
+Nehmen wir Einspeisevergütung und 30 - 8 = 22&nbsp;ct/kWh Strompreisdifferenz​ an.
 
 * Wenn der Speicher <!--AC-gekoppelt ist und--> optimal lastabhängig geladen und
-entladen wird, dann steigt der PV-Eigenverbrauch von 2020​ auf 2746​ kWh im Jahr,
-was bei den 22 ct/kWh Strompreisdifferenz etwa 160 €/Jahr Einsparung ausmacht.
+entladen wird, dann steigt der PV-Eigenverbrauch von 2020​ auf 2746​&nbsp;kWh im Jahr,
+was bei den 22&nbsp;ct/kWh Strompreisdifferenz etwa 160€/Jahr Einsparung ausmacht.
 Bei einem Eigenbau mit günstigen Komponenten, die insgesamt 1000€ kosten,
 würde sich das nach gut 6 Jahren amortisieren.
-* Bei ansonsten gleichen Daten, aber 4 kWh nutzbarer Speicherkapazität
-steigt der Eigenverbrauch auf 3308 kWh im Jahr, was 283€ Einsparung pro Jahr
+* Bei ansonsten gleichen Daten, aber 4&nbsp;kWh nutzbarer Speicherkapazität
+steigt der Eigenverbrauch auf 3308&nbsp;kWh im Jahr, was 283€ Einsparung pro Jahr
 bringt und bei 1500€ Kosten eine Amortisationszeit von knapp 6 Jahren bringt.
-* Bei 6 kWh Kapazität steigt der Eigenverbrauch noch etwas weiter auf 3734 kWh,
-bei 8 kWh Kapazität auf 3988 kWh, wobei sich Amortisationszeit kaum ändert.
+* Bei 6&nbsp;kWh Kapazität steigt der Eigenverbrauch noch etwas weiter auf 3734&nbsp;kWh,
+bei 8&nbsp;kWh Kapazität auf 3988&nbsp;kWh, wobei sich Amortisationszeit kaum ändert.
 
 <!--
 * Wenn der Speicher AC-gekoppelt ist und optimal (also nur mit PV-Überschuss)
-geladen, aber einfach zwischen 19 und 5 Uhr konstant mit 200 W entladen wird,
+geladen, aber einfach zwischen 19 und 5 Uhr konstant mit 200&nbsp;W entladen wird,
 dann steigt durch die Nachteinspeisung
-der PV-Eigenverbrauch von 2020​ auf immerhin 2650​ kWh im Jahr.
+der PV-Eigenverbrauch von 2020​ auf immerhin 2650​&nbsp;kWh im Jahr.
 -->
 <!--
 ./Solar.pl Lastprofil_17_teils_31.csv 5000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 10000  -peff 92 -tmy -load min 124 7:0..24 -capacity 2000 -max_charge 100 -max_discharge 100 -feed 200 19..5
@@ -2883,9 +2884,9 @@ Eigendeckungsanteil         =   53 % des Verbrauchs (Autarkiegrad)
 * Wenn aber kein lastgeregeltes Überschussladen verwendet wird, sondern der
 Einfachheit halber ein DC-gekoppeltes Ladegerät mit Bypass bei vollem Speicher,
 das der Speicherladung Priorität gibt,
-und Konstanteinspeisung mit 200 W (was hier besser ist als nur Nachteinspeisung),
-dann steigt der Eigenverbrauch von 2020 nur auf 2490 kWh im Jahr,
-was bei 22 ct/kWh Strompreisdifferenz nur etwa 103 €/Jahr Einsparung ausmacht.​
+und Konstanteinspeisung mit 200&nbsp;W (was hier besser ist als nur Nachteinspeisung),
+dann steigt der Eigenverbrauch von 2020 nur auf 2490&nbsp;kWh im Jahr,
+was bei 22 ct/kWh Strompreisdifferenz nur etwa 103€/Jahr Einsparung ausmacht.​
 Ohne lastabhängige Regelung zieht sich also (trotz etwas weniger Kosten für die
 Komponenten) die Amortisation deutlich länger hin.
 -->
@@ -2938,13 +2939,13 @@ der Nacht. Wer die Konstanteinspeisung auf die nächtliche Durchschnittslast
 einstellt, verschenkt über die meiste Zeit, wo periodisch laufende Geräte
 wie Kühlschränke nicht laufen, mehr oder weniger teurer gespeicherten Strom!
 
-Im Folgenden werden konkrete Zahlen gegeben für einen Haushalt mit 3000 kWh
-Jahresverbrauch und einer nächtlicher Durchschnittslast von 190 W
+Im Folgenden werden konkrete Zahlen gegeben für einen Haushalt mit 3000&nbsp;kWh
+Jahresverbrauch und einer nächtlicher Durchschnittslast von 190&nbsp;W
 mit einer typischen Balkonanlage in Süddeutschland mit optimal ausgerichteten
-Modulen mit 850 Wp Nennleistung und typischen Wirkungsgraden, der
-eine Pufferbatterie mit 1 kWh effektiv nutzbarer Kapazität hinzugefügt wurde.
-Dazu passt sehr gut eine 12,8 V 100 Ah LiFePO4-Batterie,
-also mit nominell 1,28 kWh Kapazität, denn davon muss man ohnehin
+Modulen mit 850&nbsp;Wp Nennleistung und typischen Wirkungsgraden, der
+eine Pufferbatterie mit 1&nbsp;kWh effektiv nutzbarer Kapazität hinzugefügt wurde.
+Dazu passt sehr gut eine 12,8&nbsp;V 100&nbsp;Ah LiFePO4-Batterie,
+also mit nominell 1,28&nbsp;kWh Kapazität, denn davon muss man ohnehin
 mindestens 90% für eine gesunde Entladetiefe abziehen, und nochmal
 ungefähr 90% für die durchschnittliche Degradation durch Alterungseffekte. Die
 Eigenverbrauch-Ergebnisse wurden mit dem [o.g. SolBatSim](#SolBatSim) berechnet,
@@ -2956,18 +2957,18 @@ und für die Wechselrichtung (auch bei Entladung aus der Batterie) 94%.
 Bei [optimaler Lade-/Entlageregelung, s.u.](#Regelungsstrategien),
 die leider nur schwer zu realisieren ist,
 gibt es keinen Verlust durch Überlauf des Speichers. Durch die Verwendung
-des Speichers lässt sich der jährliche Eigenverbrauch von 623 auf 835 kWh
+des Speichers lässt sich der jährliche Eigenverbrauch von 623 auf 835&nbsp;kWh
 und der Eigenverbrauchsanteil von 67 auf 84% des Nettoertrags steigern.
 Für die Auslegung des Speichers sehr interessant ist Folgendes:
-Eine Erhöhung der nutzbaren Speicherkapazität auf 2 kWh würde mit 891 kWh
+Eine Erhöhung der nutzbaren Speicherkapazität auf 2&nbsp;kWh würde mit 891&nbsp;kWh
 nur eine relativ geringe weitere Steigerung des Eigenverbrauchs bringen,
-und *schon eine effektive Speicherkapazität auf 0,5 kWh brächte*
-einen Eigenverbrauch von 775 kWh, also *einen Eigenverbrauchsanteil von 78%*.\
-Der PV-Bruttoertrag von 1081 kWh bzw. Nettoertrag 935 kWh wird also gut genutzt,
-bei 1 kWh nutzbarer Kapazität ist die Netzeinspeisung nur noch 75 kWh, der Rest
-sind kleine Verluste des Ladereglers und der Speicherbatterie von 15 + 12 kWh.
-Der 1 kWh Speicher ist mit ca. 237 Vollzyklen pro Jahr nur mäßig belastet.
-Bei 30 Ct/kWh Strompreis ergibt sich durch die Hinzunahme des Speichers
+und *schon eine effektive Speicherkapazität auf 0,5&nbsp;kWh brächte*
+einen Eigenverbrauch von 775&nbsp;kWh, also *einen Eigenverbrauchsanteil von 78%*.\
+Der PV-Bruttoertrag von 1081&nbsp;kWh bzw. Nettoertrag 935&nbsp;kWh wird also gut genutzt,
+bei 1&nbsp;kWh nutzbarer Kapazität ist die Netzeinspeisung nur noch 75&nbsp;kWh, der Rest
+sind kleine Verluste des Ladereglers und der Speicherbatterie von 15 + 12&nbsp;kWh.
+Der 1&nbsp;kWh Speicher ist mit ca. 237 Vollzyklen pro Jahr nur mäßig belastet.
+Bei 30&nbsp;ct/kWh Strompreis ergibt sich durch die Hinzunahme des Speichers
 eine jährliche Stromkosten-Einsparung von ca. 64€.
 
 Selbst wenn die dafür nötigen Geräte günstig für z.B. 640€ erworben werden,
@@ -3209,7 +3210,7 @@ abgegeben, solange die Last geringer als PV-Leistung ist.
 
 Bei AC-Kopplung ist die Maximalleistung einer bedarfsgerechten Ausspeisung aus
 dem Speicher übrigens ziemlich unerheblich. Etwa bei einem Jahresverbrauch von
-3000 kWh zeigen Simulationen, dass selbst wenn sie auf nur 100 W begrenzt wird,
+3000&nbsp;kWh zeigen Simulationen, dass selbst wenn sie auf nur 100&nbsp;W begrenzt wird,
 das für die Speichernutzung und den Eigenverbrauch so gut wie nichts ausmacht.
 Daher genügt für AC-gekoppelte Pufferspeicher ein kleiner Wechselrichter.
 
@@ -3234,7 +3235,7 @@ Statt einer lastabhängigen Regelung ist es besonders für Steckersolargeräte
 viel einfacher, aber leider wenig effizient,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
 so abzustimmen, dass lediglich ein Großteil der Grundlast des Haushalts,
-z.B. 100 W, für eine Dauer von etwa 1-2 Tagen abgedeckt wird.
+z.B. 100&nbsp;W, für eine Dauer von etwa 1-2 Tagen abgedeckt wird.
 Wenn man diese *Konstanteinspeisung* noch mit einer Zeitschaltuhr (oder einem
 Helligkeitssensor) zur Beschränkung zwischen Sonnenunter- und Aufgang
 kombiniert, bekommt man eine *Nachteinspeisung*.\
@@ -3270,7 +3271,7 @@ z.B. der *Entladetiefe* und der *Zyklenanzahl*.
 
 Als Faustformel für die Dimensionierung [empfiehlt die Verbraucherzentrale NRW](
 https://www.verbraucherzentrale.nrw/wissen/energie/lohnen-sich-batteriespeicher-fuer-photovoltaikanlagen-24589)
-etwa 1 kWh pro 1000 kWh Jahresstromverbrauch, also gut 1/3 des Tagesverbrauchs.
+etwa 1&nbsp;kWh pro 1000&nbsp;kWh Jahresstromverbrauch, also gut 1/3 des Tagesverbrauchs.
 Wer mit der Speicherbatterie zusätzlich eine Notstromversorgung über eine
 [Inselanlage](#Inselanlage) realisieren möchte, wird die Kapazität je nach
 Anwendungsszenario eher größer wählen.
@@ -3279,10 +3280,10 @@ Die Forschungsgruppe Solarspeichersysteme der HTW Berlin
 gibt [genauere Empfehlungen und Begründungen](
 https://solar.htw-berlin.de/publikationen/auslegung-von-solarstromspeichern/).
 Kurz zusammengefasst:
-Ein Batteriespeicher ist nur sinnvoll, wenn die PV-Leistung mind. 0,5 kWp
-je 1000 kWh Jahresstromverbrauch beträgt. Als Kapazität empfiehlt sie
-maximal 1,5 kWh je 1000 kWh Jahresverbrauch und
-maximal 1,5 kWh je kWp PV-Nennleistung.
+Ein Batteriespeicher ist nur sinnvoll, wenn die PV-Leistung mind. 0,5&nbsp;kWp
+je 1000&nbsp;kWh Jahresstromverbrauch beträgt. Als Kapazität empfiehlt sie
+maximal 1,5&nbsp;kWh je 1000&nbsp;kWh Jahresverbrauch und
+maximal 1,5&nbsp;kWh je kWp PV-Nennleistung.
 
 Bei der Batterie-Dimensionierung sind noch folgende Punkte zu berücksichtigen:
 * Die Speicherung des Stroms bringt je nach Art der [Batterie](#Speicher)
@@ -3342,11 +3343,11 @@ Zur Bestimmung der Zielleistung gibt es inzwischen im Wesentlichen drei Modi:
 * Im *Terminmodus* kann man abhängig von der Uhrzeit eine feste
 Einspeiseleistung (in gewissen Stufen) einstellen, also im Wesentlichen eine
 Konstanteinspeisung bzw. Nachteinspeisung. Dem einfachen Spezialfall, ständig
-100 W einzuspeisen, hat Zendure den Namen *Batterieprioritätsmodus* gegeben.
+100&nbsp;W einzuspeisen, hat Zendure den Namen *Batterieprioritätsmodus* gegeben.
 * Im sog. *Intelligenten Matching-Modus* wird mindestens so viel eingespeist
 wie nötig, um den Verbrauch aller Geräte abzudecken, die an mit dem SolarFlow
 online gekoppelten *Smart Plugs* (intelligente Steckdosen) hängen &mdash;
-mindestens 100 W und [meist deutlich mehr](
+mindestens 100&nbsp;W und [meist deutlich mehr](
 https://www.hartware.de/2023/08/21/zendure-solarflow-im-test/4/) als nötig.
 * [Seit November 2023](https://www.prnewswire.com/news-releases/zendure-erreicht-bahnbrechende-integration-mit-shelly-pro-3em-shelly-3em-shelly-plus-plug-s-und-shelly-plug-s-und-verbessert-das-intelligente-energiemanagement-301985902.html)
 gibt es den *Smart-CT-Modus*, bei dem die Einspeiseleistung dynamisch an den
@@ -3355,7 +3356,7 @@ Nur diese Option ermöglicht eine effiziente Nutzung des PV-Ertrags.
 Allerdings [zeigten Praxistests](https://youtu.be/YzKCvYB-axw&t=148s), dass die
 Regelung auf Verbrauchs- und Ertrags-Schwankungen träge und ungenau reagiert.
 
-Die größere (1.920 Wh) Batterie hat eine eingebaute Heizung bei Minusgraden.
+Die größere (1.920&nbsp;Wh) Batterie hat eine eingebaute Heizung bei Minusgraden.
 
 Ende Februar 2024 brachte Zendure die AIO 2400 heraus &mdash; [hier](
 https://www.computerbase.de/2024-02/zendure-aio-2400-test-balkonkraftwerk-akku-speicher/)
@@ -3370,8 +3371,8 @@ https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/).
 Es hat nur einen MPPT.
 Der einzige Betriebsart ist Einspeisung mit einer von der Uhrzeit abhängigen
 Zielleistung, welche hier *Familienlastleistungsrate* (FLLR) genannt wird.
-Sie kann 0 W sein (keine Einspeisung)
-und ist ansonsten zwischen 100 und 800 W in Stufen von 10 W wählbar.
+Sie kann 0&nbsp;W sein (keine Einspeisung)
+und ist ansonsten zwischen 100 und 800&nbsp;W in Stufen von 10&nbsp;W wählbar.
 Aufgrund einer Design-Einschränkung kann das Gerät diese Leistung nur entweder
 direkt aus PV-Strom oder aus dem Speicher erbringen, also nicht gleichzeitig
 aus beiden Quellen. Deshalb ist die Regelung etwas eigenartig:
@@ -3380,13 +3381,13 @@ aus beiden Quellen. Deshalb ist die Regelung etwas eigenartig:
 * Wenn die PV-Leistung mindestens so hoch ist wie die FLLR,
   wird mit FLLR eingespeist und der Rest in den Speicher geladen
   (außer wenn er voll ist, dann erfolgt ein Bypass).
-* Wenn die PV-Leistung mindestens 100 W unter der FLLR liegt und höchstens
-  100 W beträgt, wird die FLLR dem Speicher entnommen
+* Wenn die PV-Leistung mindestens 100&nbsp;W unter der FLLR liegt und höchstens
+  100&nbsp;W beträgt, wird die FLLR dem Speicher entnommen
   (solange die Kapazität reicht) und die PV-Leistung geht verloren.\
   Dieser Verlust passiert zum Glück nicht groß, siehe u.g. Simulationsergebnisse.
-* Ansonsten, also wenn die PV-Leistung zwischen 100 W und der FLLR liegt
-  oder weniger als 100 W unter der FLLR
-  (was bei einer FLLR von 200 W aufs Gleiche hinausläuft),
+* Ansonsten, also wenn die PV-Leistung zwischen 100&nbsp;W und der FLLR liegt
+  oder weniger als 100&nbsp;W unter der FLLR
+  (was bei einer FLLR von 200&nbsp;W aufs Gleiche hinausläuft),
   wird dem Speicher nichts entnommen und die verfügbare PV-Leistung eingespeist.
 
 Das Produkt hat offenbar noch diverse Kinderkrankheiten, von denen z.B. [hier](
@@ -3426,12 +3427,12 @@ WLAN, wobei die Reichweite durch eine mitgelieferte Antenne vergrößert wird.
 
 In den Batterien ist eine Heizung eingebaut, die auch an einem Aufstellort
 außerhalb des Hauses eine Ladung bei Minustemperaturen (bis -20°C) ermöglicht.\
-Die größte Variante hat 5 kWh nutzbare Kapazität und unterstützt bis zu 3 kWp
+Die größte Variante hat 5&nbsp;kWh nutzbare Kapazität und unterstützt bis zu 3&nbsp;kWp
 Modulleistung. Es können auch mehrere Speicher zusammengeschaltet werden
-(bis zu 80 kWh). Der Regelungsalgorithmus berücksichtigen auch unterschiedliche
+(bis zu 80&nbsp;kWh). Der Regelungsalgorithmus berücksichtigen auch unterschiedliche
 effektive Kapazitäten und Ladungsstände der [einzelnen Batterie(zell)en](
 https://www.maxxisun.de/post/maxxicharge-batteriespeichersysteme-denken-mit).\
-Nachdem normale SSGs künftig rechtlich auf 2000 Wp Modulleistung beschränkt
+Nachdem normale SSGs künftig rechtlich auf 2000&nbsp;Wp Modulleistung beschränkt
 sollen, wurde Hilfe bei der Anmeldung von Anlagen mit mehr Leistung
 [in Aussicht gestellt](https://www.akkudoktor.net/forum/postid/148774/).
 Am Ende [dieses Artikels](
@@ -3450,9 +3451,9 @@ bzw. baugleich die [Anfuote EMS-Steuerung](https://www.solarpower.anfuote.com/).
 
 Dies ist das offenbar erste käufliche Steuergerät, das nicht nur allen möglichen
 Netzwechselrichtern, sondern auch mit [angeblich so gut wie jeder Art von
-Speicherbatterie mit 48 V Systemspannung)](
+Speicherbatterie mit 48&nbsp;V Systemspannung)](
 https://www.tentekenergy.com/index.php/products/324.html) verwendbar ist.
-Es hat 2 bzw. 4 MPPT zur Anbindung der PV-Module mit je 30 A Ladeleistung
+Es hat 2 bzw. 4 MPPT zur Anbindung der PV-Module mit je 30&nbsp;A Ladeleistung
 für einen DC-gekoppelten Speicher und bietet eine
 [sehr gute lastabhängige Einspeise-Regelung](https://youtu.be/vRo15Xi9tMo),
 wobei zur Messung des Haushalts-Lastsaldos ein mitgelieferter
@@ -3499,30 +3500,30 @@ und können damit unter realistischen Bedingungen rentabel sein.
 
 Hier ein Vergleich des mit den unterschiedlichen Ansätzen erzielbaren
 Jahres-Eigenverbrauchs auf Basis von Simulationen mit dem [SolBatSim](#SolBatSim)
-für einen Haushalt mit 3000 kWh Jahresverbrauch
-und einer nächtlicher Durchschnittslast von 190 W
-mit optimal ausgerichteten 850 Wp Modul-Nennleistung in Süddeutschland
+für einen Haushalt mit 3000&nbsp;kWh Jahresverbrauch
+und einer nächtlicher Durchschnittslast von 190&nbsp;W
+mit optimal ausgerichteten 850&nbsp;Wp Modul-Nennleistung in Süddeutschland
 und typischen Wirkungsgraden.
 Der besseren Vergleichbarkeit halber wurde hier generell eine Speicherkapazität
-von 1600 Wh (mit 90% Entladetiefe) wie beim Anker Solix vorausgesetzt
+von 1600&nbsp;Wh (mit 90% Entladetiefe) wie beim Anker Solix vorausgesetzt
 &mdash; ohnehin fällt sie kaum ins Gewicht.
-* 621 kWh Eigenverbrauch als Vergleichswert nur mit PV ohne Speicher-Nutzung
-* 864 kWh Eigenverbrauch (bei 1000 Wh 822 kWh, bei 2000 Wh 881 kWh)
+* 621&nbsp;kWh Eigenverbrauch als Vergleichswert nur mit PV ohne Speicher-Nutzung
+* 864&nbsp;kWh Eigenverbrauch (bei 1000&nbsp;Wh 822&nbsp;kWh, bei 2000&nbsp;Wh 881&nbsp;kWh)
   bei optimaler lastabhängiger Regelung
-* 730 kWh Eigenverbrauch bei Anker Solix Strategie mit optimaler FLLR, hier 180 W;\
-  mit diesen Parametern werden 14 kWh PV-Nettoleistung verworfen
-* 746 kWh Eigenverbrauch bei Konstanteinspeisung
-  mit für diesen Fall optimaler Zielleistung, hier 200 W
+* 730&nbsp;kWh Eigenverbrauch bei Anker Solix Strategie mit optimaler FLLR, hier 180&nbsp;W;\
+  mit diesen Parametern werden 14&nbsp;kWh PV-Nettoleistung verworfen
+* 746&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung
+  mit für diesen Fall optimaler Zielleistung, hier 200&nbsp;W
 
 Wenn man eine optimale lastabhängige Lade- und Entladestrategie nutzen kann,
-ist das Ergebnis mit Abstand am besten: ein Gewinn von gut 240 kWh im Jahr.\
+ist das Ergebnis mit Abstand am besten: ein Gewinn von gut 240&nbsp;kWh im Jahr.\
 Selbst mit mehreren geschickt eingesetzten Smart Plugs oder einer ausgefeilten
 Uhrzeit-abhängigen Steuerung wird man kaum an diesen Maximalwert herankommen.\
 Ansonsten ist es bei konstanter Zielleistung selbst mit günstigster Wahl dieses
 Parameters und mit Bypass-Funktion ziemlich egal, welche Strategie im Detail
-verfolgt wird &mdash; man erhält nur magere 110 bis 125 kWh Gewinn pro Jahr.
+verfolgt wird &mdash; man erhält nur magere 110 bis 125&nbsp;kWh Gewinn pro Jahr.
 
-Allerdings bringt selbst ein Gewinn von 240 kWh bei 35 Ct/kWh nur 84€ Ersparnis
+Allerdings bringt selbst ein Gewinn von 240&nbsp;kWh bei 35&nbsp;ct/kWh nur 84€ Ersparnis
 pro Jahr. Damit kann sich so ein Gerät, das je nach Speichergröße
 (und Zusatzkosten wie für einen Shelly 3EM) ungefähr 1000€ kostet
 und hoffentlich gut 10 Jahre Lebensdauer hat, kaum amortisieren.\
@@ -3558,19 +3559,19 @@ https://www.mydealz.de/comments/permalink/42351507
 
 Habe jetzt mal meinen SolBatSim aufgebohrt, um auch diese Kompromiss-Strategie simulieren zu können.
 
-Für einen Haushalt mit 3000 kWh Jahresverbrauch und nächtlicher Mindestlast von 200 W
+Für einen Haushalt mit 3000&nbsp;kWh Jahresverbrauch und nächtlicher Mindestlast von 200 W
 mit optimal ausgerichteten 880 Wp Modulen in Süddeutschland ergibt sich folgender Jahres-Eigenverbrauch:
-* 611 kWh ohne Speicher
-* 875 kWh mit 1,6 kWh Speicher, DC-gekoppelt mit 90% Entladetiefe, bei optimaler Strategie
-* 754 kWh mit Speicher mit 140 W (Optimalwert) Bypass und Konstanteinspeisung 90 W (Optimalwert)
-* 772 kWh mit Speicher mit 180 W (Optimalwert) Bypass und Kompensation auf 110 W (Optimalwert), wie ich sie zuerst verstanden habe
-* 760 kWh mit Speicher mit 130 W (Optimalwert) Bypass und Anker Solix Entladestrategie (mit dem festen internen 100 W Grenzwert und 130 W konstanter Entladeleistung) - mit diesen Parametern werden immerhin nur 3,3 kWh PV-Nettoleistung verworfen
+* 611&nbsp;kWh ohne Speicher
+* 875&nbsp;kWh mit 1,6&nbsp;kWh Speicher, DC-gekoppelt mit 90% Entladetiefe, bei optimaler Strategie
+* 754&nbsp;kWh mit Speicher mit 140 W (Optimalwert) Bypass und Konstanteinspeisung 90 W (Optimalwert)
+* 772&nbsp;kWh mit Speicher mit 180 W (Optimalwert) Bypass und Kompensation auf 110 W (Optimalwert), wie ich sie zuerst verstanden habe
+* 760&nbsp;kWh mit Speicher mit 130 W (Optimalwert) Bypass und Anker Solix Entladestrategie (mit dem festen internen 100 W Grenzwert und 130 W konstanter Entladeleistung) - mit diesen Parametern werden immerhin nur 3,3&nbsp;kWh PV-Nettoleistung verworfen
 
 Also, wenn man keine optimale lastabhängige Lade- und Entladestrategie fahren kann,
 ist es bei DC-Kopplung und Ladestrategie mit einstellbarer konstanter Bypass-Leistung und vollem Bypass bei Überlauf der Batterie ziemlich egal,, welche sonstige Entladestrategie man hat/wählt,
 sofern man die jeweils optimalen Parameter (Bypass-/Konstanteinspeisung-/Zielleistung) wählt.
 
-Die Gewinne an Eigenverbrauch sind im Vergleich zur Situation ohne Speicher nicht berauschend: etwa 150 kWh pro Jahr, also bei 35 Ct/kWh um die 50€/Jahr.
+Die Gewinne an Eigenverbrauch sind im Vergleich zur Situation ohne Speicher nicht berauschend: etwa 150&nbsp;kWh pro Jahr, also bei 35 ct/kWh um die 50€/Jahr.
 So ein Gerät zum Preis von ca. 1000€ amortisiert sich daher nie.
 --->
 <!--
@@ -3608,28 +3609,28 @@ wie es gelingen kann und wie es nicht wirklich effizient wird.
 ##### Beispiel für DC-gekoppelten Speicher {#SSG-DC-gekoppelt}
 
 Hier ein Beispiel für eine sehr gelungene effiziente Lösung
-mit DC-gekoppelter Anbindung eines 48 V LiFePO4 Speichers
+mit DC-gekoppelter Anbindung eines 48&nbsp;V LiFePO4 Speichers
 (bestehend aus einer oder zwei Batterien), wozu ein oder zwei Victron
 SmartSolar MPPT 100/20-48V [Solarladeregler](#Laderegler) verwendet werden.
 Sowohl für die sofortige Nutzung des erzeugten PV-Stroms als auch für das
 bedarfsgerechte Laden und Entladen des Speichers kommt ein
-(derzeit auf max. 600 W Leistung gedrosselter) Hoymiles HM-800
+(derzeit auf max. 600&nbsp;W Leistung gedrosselter) Hoymiles HM-800
 [Netzwechselrichter](#Netzwechselrichter) zum Einsatz,
 der per Heimautomatisierung über eine Ahoy-DTU oder OpenDTU geregelt wird.\
-Optional wird hier ein Victron Phoenix 48 V 800 W
+Optional wird hier ein Victron Phoenix 48&nbsp;V 800&nbsp;W
 [Inselwechselrichter](#Inselwechselrichter) verwendet,
 was dann Notstrom-Fähigkeit mit Batterie-gepufferter Sonnenenergie bietet.
 
 ![Bild: SSG-mit-DC-gekoppeltem-Speicher.png](
 SSG-mit-DC-gekoppeltem-Speicher.png){:.right width="798"}
 
-Weil die Batteriespannung recht hoch ist und die Solar-Laderegler bis zu 100 V
+Weil die Batteriespannung recht hoch ist und die Solar-Laderegler bis zu 100&nbsp;V
 Eingangspannung vertragen, können (und müssen) die PV-Module in Reihe
 geschaltet werden, und die Kabelquerschnitte können auch auf DC-Seite
 relativ gering bleiben, ohne dass es zu nennenswerten Leitungsverlusten kommt.\
-Die hier beschriebene Lösung wäre aber auch basierend auf einem 24 V Speicher
+Die hier beschriebene Lösung wäre aber auch basierend auf einem 24&nbsp;V Speicher
 gut möglich, zumal der Eingangspannungs-Bereich des verwendeten Wechselrichters
-auch den Bereich um 24 V umfasst und die Kabel zwischen Laderegler,
+auch den Bereich um 24&nbsp;V umfasst und die Kabel zwischen Laderegler,
 Speicher und Wechselrichter kurz gehalten werden können.
 
 Für eine optimale lastabhängige Regelung müssen die Laderegler nicht von außen
@@ -3679,10 +3680,10 @@ aber besser gleich eine Heizmatte mit Thermostat, die es auch schon
 [für 15€ gibt](https://www.amazon.de/KIPIDA-Reptilienheizmatte-Einstellbar-Reptilienw%C3%A4rmematte-Temperaturregelung/dp/B0CG3FCJ9H).
 Die Heizmatte braucht nur dann aktiv sein, wenn bei unter 0°C die Sonne scheint.
 
-In Minimalausstattung würde die Anlage mit ECO-WORTHY 48 V 2,5 kWh Speicher
-ohne PV-Module unter 1000 € kosten.
+In Minimalausstattung würde die Anlage mit ECO-WORTHY 48&nbsp;V 2,5&nbsp;kWh Speicher
+ohne PV-Module unter 1000€ kosten.
 Mit allen optionalen Komponenten inkl. Inselwechselrichter hat die Anlage
-mit 5 kWh Speicherkapazität ohne PV-Module im Herbst 2023 knapp 2200€ gekostet.\
+mit 5&nbsp;kWh Speicherkapazität ohne PV-Module im Herbst 2023 knapp 2200€ gekostet.\
 Details zu der Anlage können bei
 [Michael Steigemann](mailto:michael.steigemann) von
 [Solar2030.de](https://solar2030.de/) erfragt werden.
@@ -3705,7 +3706,7 @@ dürfen, wobei man da mit einer thermostatgeregelten Heizmatte abhelfen kann.
 
 Bei *AC-Kopplung* hingegen wird der PV-Strom zunächst ins Wechselstromnetz
 eingespeist, so dass die Ladung (an einem beliebigen Ort, meist im Haus)
-mit einem 230 V-Ladegerät geschieht, wobei man zur Entladung einen zweiten
+mit einem 230&nbsp;V-Ladegerät geschieht, wobei man zur Entladung einen zweiten
 (Batterie-)Wechselrichter benötigt.
 Ihr besonderer Vorteil ist eine große Flexibilität bei der Wahl der Komponenten,
 auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten,
@@ -3728,13 +3729,13 @@ lastabhängige Entnahme aus der Batterie.
 Der Abschnitt [Strommessung](#Strommessung) gibt Hinweise,
 wie man die aktuelle Last im Haushalt automatisch messen bzw. auslesen kann.
 
-Wenn die [o.g. Balkonanlage mit 1 kWh Pufferspeicher](#Batteriepuffer) nur eine
-Konstanteinspeisung verwendet (wobei hier eine Entladeleistung von nur 40 W
+Wenn die [o.g. Balkonanlage mit 1&nbsp;kWh Pufferspeicher](#Batteriepuffer) nur eine
+Konstanteinspeisung verwendet (wobei hier eine Entladeleistung von nur 40&nbsp;W
 optimal ist), ergibt sich mit der optimalen Ladestrategie eine Steigerung des
-Jahres-Eigenverbrauchs durch die Speichernutzung um immerhin 115 kWh auf 575 kWh.
-Das sind allerdings 65 kWh weniger als wenn auch die Entladung lastoptimiert
-wäre, weil 66 kWh nicht genutzt und ins externe Netz abgeführt werden.\
-Eine Erhöhung der nutzbaren Speicherkapazität auf 2 kWh brächte nur 10 kWh mehr.
+Jahres-Eigenverbrauchs durch die Speichernutzung um immerhin 115&nbsp;kWh auf 575&nbsp;kWh.
+Das sind allerdings 65&nbsp;kWh weniger als wenn auch die Entladung lastoptimiert
+wäre, weil 66&nbsp;kWh nicht genutzt und ins externe Netz abgeführt werden.\
+Eine Erhöhung der nutzbaren Speicherkapazität auf 2&nbsp;kWh brächte nur 10&nbsp;kWh mehr.
 
 <!--
 TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -feed 45
@@ -3782,14 +3783,14 @@ ist im Vergleich zur Batteriekapazität bzw. dem Verbrauch durch die Grundlast.
 
 Wenn die Anlage eine Konstanteinspeisung hat und den PV-Strom nur auf diese
 Weise nutzt, ergibt sich Folgendes: Selbst bei optimierter Entnahmeleistung
-(in diesem Fall 180 W) bringt die Batteriepufferung fast nichts: der
-Eigenverbrauch steigt durch Speichernutzung gerade mal um 29 kWh auf 489 kWh.
-Das liegt hier vor Allem an einer Netzeinspeisung von 74 kWh
-und am Verlust durch Überlauf von 29 kWh,
-außerdem an Lade- und Speicherverlusten von 38 + 30 kWh bei 631 Vollzyklen.\
-Eine Erhöhung der nutzbaren Kapazität auf 2 kWh
-brächte immerhin einen Eigenverbrauch von 532 kWh
-bei einer dann optimalen Konstanteinspeisung von 125 W.
+(in diesem Fall 180&nbsp;W) bringt die Batteriepufferung fast nichts: der
+Eigenverbrauch steigt durch Speichernutzung gerade mal um 29&nbsp;kWh auf 489&nbsp;kWh.
+Das liegt hier vor Allem an einer Netzeinspeisung von 74&nbsp;kWh
+und am Verlust durch Überlauf von 29&nbsp;kWh,
+außerdem an Lade- und Speicherverlusten von 38 + 30&nbsp;kWh bei 631 Vollzyklen.\
+Eine Erhöhung der nutzbaren Kapazität auf 2&nbsp;kWh
+brächte immerhin einen Eigenverbrauch von 532&nbsp;kWh
+bei einer dann optimalen Konstanteinspeisung von 125&nbsp;W.
 
 <!--
 TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass 0 -feed 180
@@ -3833,12 +3834,12 @@ Man kann bei Konstanteinspeisung mit einer zusätzlichen *Überschussableitung*
 (Bypass) dafür sorgen, dass bei vollem Speicher der Solarstrom an der Batterie
 vorbei geleitet wird (und zwar möglichst in den Netzwechselrichter,
 der auch zur Ausspeisung aus der Batterie verwendet wird).
-In diesem Fall sind für die Konstanteinspeisung etwa 100 W Entnahme optimal,
+In diesem Fall sind für die Konstanteinspeisung etwa 100&nbsp;W Entnahme optimal,
 und der Eigenverbrauch steigt durch die Speichernutzung ein wenig mehr,
-nämlich um 54 kWh auf 514 kWh.\
-Eine Erhöhung der nutzbaren Kapazität auf 2 kWh
-brächte einen Eigenverbrauch von 539 kWh,
-wobei die optimale Leistung der Konstanteinspeisung hier bei 110 W liegt.
+nämlich um 54&nbsp;kWh auf 514&nbsp;kWh.\
+Eine Erhöhung der nutzbaren Kapazität auf 2&nbsp;kWh
+brächte einen Eigenverbrauch von 539&nbsp;kWh,
+wobei die optimale Leistung der Konstanteinspeisung hier bei 110&nbsp;W liegt.
 
 <!--
 TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass spill 0 -feed 100
@@ -3891,7 +3892,7 @@ Sicherung und wenn nötig eine gesonderte automatische Unterspannungsabschaltung
 mit der Batterie zu verbinden und nach Bedarf über einen Schalter zu steuern ---
 allerdings nur, wenn die Batteriespannung gut im Eingangsspannungsbereich des
 Wechselrichters liegt und es passt, ihn mit seiner vollen oder limitierten
-Leistung zu betreiben. Dazu kann man beispielsweise einen auf 300 W begrenzten
+Leistung zu betreiben. Dazu kann man beispielsweise einen auf 300&nbsp;W begrenzten
 PV-Eingang nutzen oder die Drosselung konfigurieren, wie man es z.B. beim Deye
 [selbst machen](https://www.photovoltaikforum.com/thread/191715-deye-sun600-umstellen-auf-800w/?pageNo=9#post3019090)
 oder vom Kundendienst (Mail an service@deye.com.cn) programmieren lassen kann.
@@ -3943,7 +3944,7 @@ engl. _Grid Tie Inverter with Limiter (GTIL)_ wie der [Sun GTIL](
 https://de.aliexpress.com/item/32840070519.html) von Y&H
 oder ein ähnliches Gerät von [Soyosource](
 https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
-<!--, gibt es mit 1000 und 2000 W Leistung -->
+<!--, gibt es mit 1000 und 2000&nbsp;W Leistung -->
 ermöglicht eine einphasige Nulleinspeisung ohne Basteln und Programmieren.
 Man muss nur den Limiter-Sensor im Sicherungskasten an der Phase anbringen,
 über die die Einspeisung laufen soll. Dann lässt sich der Wechselrichter so
@@ -4032,16 +4033,16 @@ sind im Abschnitt [Strommessung](#Strommessung) genannt.
 
 <!-- falsch:
 Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
-Bei einer z.B. auf 600 W begrenzten Einspeisung beträgt für die o.g.
-[Balkonanlage mit 1 kWh Pufferspeicher und Überschussableitung](#Ladung)
-die Steigerung des Eigenverbrauch durch die Speichernutzung 128 kWh auf 588 kWh.
-Hier findet nur noch eine minimale Netzeinspeisung von 3 kWh statt,
+Bei einer z.B. auf 600&nbsp;W begrenzten Einspeisung beträgt für die o.g.
+[Balkonanlage mit 1&nbsp;kWh Pufferspeicher und Überschussableitung](#Ladung)
+die Steigerung des Eigenverbrauch durch die Speichernutzung 128&nbsp;kWh auf 588&nbsp;kWh.
+Hier findet nur noch eine minimale Netzeinspeisung von 3&nbsp;kWh statt,
 welche aus ungenutzter Überschussableitung resultiert.
 Allerdings wird die Batterie im Schnitt pro Tag fast zweimal auf- und entladen
 (655 Vollzyklen im Jahr), was neben größerer Degradation
-zu erheblichen Lade- und Speicherverlusten von 39 + 31 kWh führt.\
+zu erheblichen Lade- und Speicherverlusten von 39 + 31&nbsp;kWh führt.\
 Eine Erhöhung der nutzbaren Speicherkapazität bringt praktisch nichts,
-und eine Verringerung auf 0,5 kWh liefert etwas weniger: 560 kWh.
+und eine Verringerung auf 0,5&nbsp;kWh liefert etwas weniger: 560&nbsp;kWh.
 -->
 <!--
 TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1250 -dc -tmy -pass spill 0 -feed lim 600
@@ -4120,12 +4121,12 @@ Pufferspeicher eine Überschussableitung (Bypass) oder gar eine optimale Ladereg
 * Bei bedarfsgerechter Einspeisung
   aus dem Speicher ohne Überschussableitung bei der Ladung des Speichers
   fällt die Steigerung des Eigenverbrauchs durch die Speichernutzung
-  identisch aus, also wieder 128 kWh auf 588 kWh. Die Zahl der Vollzyklen
+  identisch aus, also wieder 128&nbsp;kWh auf 588&nbsp;kWh. Die Zahl der Vollzyklen
   pro Jahr (658) und die Lade- und Speicherverluste sind fast gleich.
   Darüber hinaus fällt wieder nur ein gleich kleiner Verlust von 3 kWh an, in
   diesem Fall nicht durch Netzeinspeisung, sondern durch Überlauf des Speichers.\
   Auch hier *bringt eine Erhöhung der nutzbaren Speicherkapazität praktisch nichts,
-  und eine Verringerung auf 0,5 kWh liefert aber wesentlich weniger*: 545 kWh.
+  und eine Verringerung auf 0,5&nbsp;kWh liefert aber wesentlich weniger*: 545&nbsp;kWh.
 
 [//]: #
 -->
@@ -4211,10 +4212,10 @@ morgens einzuschränken (also eine Nachteinspeisung) erweist sich aber als
 völlig kontraproduktiv, weil der Speicher dann
 sehr oft und schnell überläuft und damit massiv Energie verschwendet wird.
 Es ergibt sich für die o.g. Anlage selbst bei einer optimierten Entnahmeleistung
-von 80 W dann nur noch ein Eigenverbrauch von 269 kWh, also im Vergleich
-zur Basis-Anlage ohne Speicher eine Verringerung um 190 kWh!\
-Durch Erhöhung der nutzbaren Speicherkapazität auf 2 kWh
-lassen sich zwar immerhin 398 kWh Eigenverbrauch erreichen,
+von 80&nbsp;W dann nur noch ein Eigenverbrauch von 269&nbsp;kWh, also im Vergleich
+zur Basis-Anlage ohne Speicher eine Verringerung um 190&nbsp;kWh!\
+Durch Erhöhung der nutzbaren Speicherkapazität auf 2&nbsp;kWh
+lassen sich zwar immerhin 398&nbsp;kWh Eigenverbrauch erreichen,
 aber auch dann bleibt der Ansatz kontraproduktiv.
 
 <!--
@@ -4255,12 +4256,12 @@ Eigendeckungsanteil         =   13 % des Verbrauchs (Autarkiegrad)
 -->
 
 Eine zusätzliche Überschussableitung bringt das Ergebnis zwar wieder ins
-Positive, so dass sich bei dann optimaler Entnahmeleistung von 75 W ein Gewinn
-an Eigenverbrauch von 33 kWh auf 493 kWh ergibt, aber lohnenswert ist das nicht,
+Positive, so dass sich bei dann optimaler Entnahmeleistung von 75&nbsp;W ein Gewinn
+an Eigenverbrauch von 33&nbsp;kWh auf 493&nbsp;kWh ergibt, aber lohnenswert ist das nicht,
 denn auch dann fällt der Gewinn immer nach geringer aus als ohne Einschränkung
-auf die Nachtstunden (wo der [Gewinn 54 kWh](#Ladung) beträgt).\
-Eine Erhöhung der nutzbaren Kapazität auf 2 kWh
-brächte beim Eigenverbrauch nur 10 kWh mehr.
+auf die Nachtstunden (wo der [Gewinn 54&nbsp;kWh](#Ladung) beträgt).\
+Eine Erhöhung der nutzbaren Kapazität auf 2&nbsp;kWh
+brächte beim Eigenverbrauch nur 10&nbsp;kWh mehr.
 
 <!--
 TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy -capacity 1250 -dc -pass spill 0 -feed 75 18..6
@@ -4339,7 +4340,7 @@ Neben der Speicherbatterie wird hier zumindest ein
 welcher die PV-Module DC-seitig koppelt.
 
 Verbraucher werden am Effizientesten mit dem Gleichstrom der Batterie betrieben.
-Sollte die Batteriespannung (z.B. 12 V oder 24 V) dafür nicht passen,
+Sollte die Batteriespannung (z.B. 12&nbsp;V oder 24&nbsp;V) dafür nicht passen,
 können [Gleichspannungswandler](#Gleichspannungswandler) verwendet werden,
 die natürlich ausreichend dimensioniert und möglichst verlustarm sein sollten.
 Auch Geräte (wie z.B. Laptops und Radios), die ein externes Netzteil haben,
@@ -4347,7 +4348,7 @@ lassen sich relativ leicht direkt mit Gleichstrom versorgen.
 
 Zum Anschluss sonstiger Verbraucher, welche mit dem üblichen „Steckdosenstrom“
 betrieben werden, braucht man einen ausreichend leistungsstarken
-[Inselwechselrichter](#Inselwechselrichter) zur Umwandlung in 230 V Wechselstrom.\
+[Inselwechselrichter](#Inselwechselrichter) zur Umwandlung in 230&nbsp;V Wechselstrom.\
 An diesen Wechselrichter muss man bei Stromausfall alle
 dann zu verwendenden Geräte (meist über eine Mehrfachsteckdose) anschließen.
 Man speist dann also nicht einfach ins stromlose Hausnetz ein,
@@ -4387,7 +4388,7 @@ Kennlinie_Bestrahlungsstaerke_Spannung-Strom.jpg){:.right width="550"}
 Bei den üblichen Silizium-Solarzellen steigt der entnehmbare Strom
 (Kurzschlussstrom) linear mit der Bestrahlungsstärke. Ihre
 Leerlaufspannung hingegen steigt schon bei geringer Helligkeit stark an
-und nähert sich dann nur noch langsam steigend dem Wert 0,63 V.
+und nähert sich dann nur noch langsam steigend dem Wert 0,63&nbsp;V.
 
 Generell sind *monokristalline* Zellen zu bevorzugen, auch wenn sie ein wenig
 teurer sind als *polykristalline* oder *amorphe*, weil sie einen höheren
@@ -4418,8 +4419,8 @@ die Empfindlichkeit auf Teilverschattung.
 ![Bild: Starre Solarpanels](Starre_Solarpanels.png){:width="442"}
 ![Bild: Flexible Solarpanels](Flexible_Solarpanels.png){:.right width="342"}
 [Klassische Solarmodule](https://gruenes.haus/pv-modul-groesse-gewicht/) haben
-einen Aluminiumrahmen und eine Größe von typischerweise ca. 1,7 m × 1 m × 3 cm,
-was eine Nennleistung von etwa 350 Wp ergibt, und eine Masse von ca. 20 kg.\
+einen Aluminiumrahmen und eine Größe von typischerweise ca. 1,7&nbsp;m × 1&nbsp;m × 3&nbsp;cm,
+was eine Nennleistung von etwa 350&nbsp;Wp ergibt, und eine Masse von ca. 20&nbsp;kg.\
 Die günstigeren herkömmlichen Module haben auf der Vorderseite Glasscheibe
 und auf der Rückseite eine Folie und werden daher Glas-Folien-Module genannt.
 Für die Montage auf stabilen Flächen (z.B. Hausdach) gelten sie als ausreichend.
@@ -4443,8 +4444,8 @@ also ein möglichst hohes Reflexions- oder Rückstrahlvermögen der Oberflächen
 
 (Semi-)Flexible Module sind teurer und gelten (bis auf Ausnahmen) als weniger
 langlebig als starre, aber viel leichter und nur wenige Millimeter dick.
-Sie sind meist auch wesentlich kleiner --- üblicherweise 1,2 m × 0,5 m
-bei einer Nennleistung von 100 Wp und einer Masse von 1 bis 2 kg. Vorsicht, bei
+Sie sind meist auch wesentlich kleiner --- üblicherweise 1,2&nbsp;m × 0,5&nbsp;m
+bei einer Nennleistung von 100&nbsp;Wp und einer Masse von 1 bis 2&nbsp;kg. Vorsicht, bei
 flexiblen Modulen übertreiben Händler besonders gern mit den Leistungsdaten.\
 [Hier](https://solar-generatoren.de/die-richtigen-solarmodule-fuers-wohnmobil/)
 ein Vergleich verschiedener Solarmodul-Typen in Hinblick auf die
@@ -4480,8 +4481,8 @@ möglichst kurz sein, weil da relativ hohe Ströme fließen,
 was proportional zur Länge zu spürbaren Verlusten führt.
 Aus dem selben Grund sollte der [Leitungsquerschnitt](
 https://electronicbase.net/de/leitungsquerschnitt-berechnen/)
-nicht zu klein sein --- mindestens 4 mm², bei längeren Kabeln
-und höheren Strömen eher 6 mm² (was allerdings teurer ist).
+nicht zu klein sein --- mindestens 4&nbsp;mm², bei längeren Kabeln
+und höheren Strömen eher 6&nbsp;mm² (was allerdings teurer ist).
 
 Wer keine Außensteckdose hat, kann eine kleine PV-Anlage auf dem Balkon
 oder im Garten auch mit einem Flachbandkabel (z.B. [MC4-Fensterdurchführung](
@@ -4575,7 +4576,7 @@ nur bis zu einem bestimmten Maximalwert aufnimmt. Dies gilt übrigens auch dann,
 wenn statt PV-Modulen eine Batterie als Stromquelle angeschlossen wird.
 Das ist ähnlich wie z.B. bei einem an einer Wohnungssteckdose angeschlossenen
 Elektrogerät, das durch seinen Innenwiderstand seine Stromaufnahme begrenzt,
-obwohl die Steckdose viel mehr (je nach Absicherung z.B. 16 A) liefern könnte.\
+obwohl die Steckdose viel mehr (je nach Absicherung z.B. 16&nbsp;A) liefern könnte.\
 Ein [MPPT-Regler](#MPPT) beginnt mit seiner Optimierung bei der Leerlaufspannung
 der angeschlossenen PV-Module, wobei noch kein Strom fließt, und verringert dann
 seinen Innenwiderstand sukzessive so lange, bis das Maximum an PV-Leistung
@@ -4600,10 +4601,10 @@ für ausreichende Kühlung des Geräts in solchen Situationen zu sorgen.\
 <!-- https://www.mydealz.de/comments/permalink/46587457 -->
 Zum Beispiel schreibt der Hoymiles-Support zum maximalen Eingangsstrom eines
 HM-600:
-> 1. Bedeutet das, dass egal wieviel Strom anliegt nur 11,5 Ampere verarbeitet / abgenommen werden können.
+> 1. Bedeutet das, dass egal wieviel Strom anliegt nur 11,5&nbsp;Ampere verarbeitet / abgenommen werden können.
 > 2. Lassen Sie bitte den Strom nicht über 15A ansteigen, da dies den Wechselrichter beschädigen kann.
 Wer da auf der sicheren Seite sein will,
-kann je Eingang eine 15 A Sicherung dazwischenschalten.
+kann je Eingang eine 15&nbsp;A Sicherung dazwischenschalten.
 
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
 I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
@@ -4613,12 +4614,12 @@ Zu beachten ist noch:
 damit er starten kann, und sollte im [MPPT](#MPPT)-Bereich der Regelung liegen,
 weil sonst Leistung verloren geht.
 * Die Eingangsspannung eines Solar-Ladereglers muss
-je nach Modell bis zu 5 V über der gewünschten Ausgangsspannung (z.B. der
+je nach Modell bis zu 5&nbsp;V über der gewünschten Ausgangsspannung (z.B. der
 Speicherbatterie) liegen, damit der Regler effektiv Strom liefern kann.
-Wenn man z.B. kleine Solarmodule mit 100 Wp und 22,6 V Leerlaufspannung hat,
-wird es ohne Reihenschaltung bei einer Ladeschlussspannung von ca. 14,5 V
+Wenn man z.B. kleine Solarmodule mit 100&nbsp;Wp und 22,6&nbsp;V Leerlaufspannung hat,
+wird es ohne Reihenschaltung bei einer Ladeschlussspannung von ca. 14,5&nbsp;V
 einer LiFePO4-Batterie bei wolkigem Wetter (mit einer Einstrahlung von
-vielleicht nur 100 - 200 W/m²) ziemlich eng.
+vielleicht nur 100 - 200&nbsp;W/m²) ziemlich eng.
 
 #### Anbringung und Rechtliches {#Anbringung}
 
@@ -4780,7 +4781,7 @@ sehr gut.
 #### Wechselrichter {#Wechselrichter}
 
 Für die Umwandlung von Gleichstrom in Wechselstrom (bei uns meist mit
-230 V) benötigt man einen
+230&nbsp;V) benötigt man einen
 [*Wechselrichter*](https://de.wikipedia.org/wiki/Wechselrichter)
 (manchmal auch *Spannungswandler* genannt, engl. _inverter_).
 Eine schöne Übersicht zu den verschiedenen Arten von Wechselrichtern,
@@ -4811,7 +4812,7 @@ Der sog. *Netz- und Anlagenschutz* (*[NA-Schutz](
 https://www.energie-experten.org/erneuerbare-energien/photovoltaik/betrieb/na-schutz)*)
 nach VDE-Anwendungsregel verhindert, dass bei Stromausfall und Reparaturarbeiten
 am Netz unkontrolliert Strom ins Netz fließt. Er verhindert auch, dass man nach
-Ziehen des 230 V Netzsteckers eines Mikrowechselrichters beim Berühren der
+Ziehen des 230&nbsp;V Netzsteckers eines Mikrowechselrichters beim Berühren der
 blanken Kontakte einen Stromschlag bekommen kann.
 
 Bei Steckersolargeräten wird meist ein *Solar-Mikrowechselrichter* verwendet,
@@ -4823,8 +4824,8 @@ z.B. [hier und auf den Folgeseiten](
 https://photovoltaikbuero.de/pv-know-how-blog/ist-bei-der-wechselrichterauslegung-zu-beachten-kriterium-1/)
 ausführliche Hinweise.
 
-Im Gegensatz zu Solarkabeln ([siehe oben](#Anschluss)) können 230 V-Kabel
-zwischen Netzwechselrichter und Steckdose durchaus länger sein (z.B. 5 - 10 m),
+Im Gegensatz zu Solarkabeln ([siehe oben](#Anschluss)) können 230&nbsp;V-Kabel
+zwischen Netzwechselrichter und Steckdose durchaus länger sein (z.B. 5 - 10&nbsp;m),
 ohne dass es größere Leitungsverluste gibt.
 Allerdings kann es dort je nach Kabellänge und -Querschnitt bei größeren Strömen
 zu einem höheren Spannungsabfall kommen, der die Netzkopplung des WR stört.
@@ -4852,7 +4853,7 @@ http://www.off-grid-systems.de/mediafiles/Sonstiges/bedienungsanleitung/Wechselr
 (angegeben in Volt × Ampere = VA, nicht nur [Wirkleistung](
 https://www.energie-experten.org/energie-sparen/strom-sparen/elektrischer-strom/schein-wirk-blindleistung),
 angegeben in Watt) im laufenden Betrieb betragen.
-Da können schon mal 1000 VA zusammenkommen (wenn auch nur für 1-2 Sekunden).
+Da können schon mal 1000&nbsp;VA zusammenkommen (wenn auch nur für 1-2 Sekunden).
 * Sein Leerlauf-/Ruhestromverbrauch (engl. _standby power consumption_)
 sollte gering sein.
 
@@ -4902,7 +4903,7 @@ mit lastabhängiger Strompufferung ermöglichen, etwa den
 https://gbc-solino.cz/headpage-de/hybrid-wechselrichter-de/infini-solar-de/).
 Dieser kostet allerdings (zusammen mit einem für die lastabhängige Steuerung
 nötigen Energiemessgerät) an die 1000€ und funktioniert nur mit PV-Spannungen
-ab 250 V und einer Batteriespannung von 48 V, ist also für Steckersolargeräte
+ab 250&nbsp;V und einer Batteriespannung von 48&nbsp;V, ist also für Steckersolargeräte
 nicht geeignet. Details zu seiner Verwendung sind [hier](
 https://mona-stefan.de/index.php?option=com_content&view=article&id=820)
 schön beschrieben.
@@ -4934,8 +4935,8 @@ des Niveaus von Gleichspannungen. Er sollte möglichst wenig Verluste haben.
 
 Ein [Aufwärtswandler](https://de.wikipedia.org/wiki/Aufw%C3%A4rtswandler)
 (engl. _boost converter_ oder _step-up converter_) kann zum Beispiel dazu verwendet
-werden, die Spannung der Pufferbatterie (z.B. 12 V) auf eine für den Eingang
-des Netzwechselrichters passende Spannung (z.B. mindestens 20 V) zu bringen.
+werden, die Spannung der Pufferbatterie (z.B. 12&nbsp;V) auf eine für den Eingang
+des Netzwechselrichters passende Spannung (z.B. mindestens 20&nbsp;V) zu bringen.
 
 Für die Nutzung zur [regelbaren Konstanteinspeisung](#Batteriepuffer) aus einem
 Strompuffer ins Hausnetz sollte er über eine einstellbare Strombegrenzung
@@ -4978,10 +4979,10 @@ Alle Lithium-basierten Batterien benötigen, anders als Blei-Batterien, für die
 Reihenschaltung der internen Akkuzellen ein sog. *Batteriemanagementsystem*
 (*BMS*), das für eine gleichmäßige Spannungsverteilung der Zellen sorgt.
 
-Eine typische 100 Ah Starterbatterie wiegt etwa 26 kg und kostet nur etwa 100€.
-Aus ihrer Nennkapazität von 12 V × 100 Ah = 1200 Wh sollte man aber höchstens
+Eine typische 100&nbsp;Ah Starterbatterie wiegt etwa 26&nbsp;kg und kostet nur etwa 100€.
+Aus ihrer Nennkapazität von 12&nbsp;V × 100&nbsp;Ah = 1200&nbsp;Wh sollte man aber höchstens
 50% entnehmen, damit die Batterie nicht durch Tiefentladung Schaden nimmt,
-also maximal 600 Wh.
+also maximal 600&nbsp;Wh.
 Selbst dann hält ein Bleiakku nur etwa 500 bis 1000 Lade-/Entladezyklen.
 
 [![Bild: Degradation LiFePO4 in Abhängigkeit von Entladetiefe und Zyklenzahl](
@@ -4994,10 +4995,10 @@ Die Degradation und Lebensdauer
 https://www.sciencedirect.com/science/article/pii/S0306261922004688?via%3Dihub#fig6),
 aber auch von der Höhe der Lade- und Entladeströme.
 
-Eine 12,8 V 100 Ah LiFePO4-Batterie wiegt etwa 11 kg und kann problemlos zu 90%
-entladen werden, so dass sich eine effektive Kapazität von 1150 Wh ergibt.
+Eine 12,8&nbsp;V 100&nbsp;Ah LiFePO4-Batterie wiegt etwa 11&nbsp;kg und kann problemlos zu 90%
+entladen werden, so dass sich eine effektive Kapazität von 1150&nbsp;Wh ergibt.
 Unter Berücksichtigung von Speicherungsverlusten und des Wandlungsverlustes
-eines Wechselrichters lässt sich damit ein Gerät mit 1000 W Leistungsaufnahme
+eines Wechselrichters lässt sich damit ein Gerät mit 1000&nbsp;W Leistungsaufnahme
 (z.B. Staubsauger, Kaffeemaschine oder Fön) etwa eine Stunde lang betreiben.
 
 #### Batterie-Ladezustand {#Ladezustand}
@@ -5041,16 +5042,16 @@ Um den Wandlungsverlust von ca. 10% eines Wechselrichters zu vermeiden,
 sollte man bei einer Inselanlage die Verbraucher möglichst direkt an der
 Batterie anschließen, was z.B. bei LED-Lampen, Radios und
 USB-Ladebuchsen gut machbar ist --- aber auch bei Laptops,
-wenn man für sie ein Netzteil mit 12 V (statt 230 V) Eingang verwendet.
-Bei mittlerer Last von 25 W ergeben sich mit einer voll geladenen 12,8 V 100 Ah
-LiFePO4-Batterie gut 50 Stunden Betriebszeit. Ein durchschnittlicher 3,6 V
-Smartphone-Akku mit 2500 mAh hat 9 Wh Kapazität.
+wenn man für sie ein Netzteil mit 12&nbsp;V (statt 230&nbsp;V) Eingang verwendet.
+Bei mittlerer Last von 25&nbsp;W ergeben sich mit einer voll geladenen 12,8&nbsp;V 100&nbsp;Ah
+LiFePO4-Batterie gut 50 Stunden Betriebszeit. Ein durchschnittlicher 3,6&nbsp;V
+Smartphone-Akku mit 2500&nbsp;mAh hat 9&nbsp;Wh Kapazität.
 Wenn er jeweils zu 80% entladen ist, lässt er sich damit etwa 160 mal aufladen.\
-Zum Vergleich: Eine Powerbank mit nominell 20.000 mAh Kapazität hat
+Zum Vergleich: Eine Powerbank mit nominell 20.000&nbsp;mAh Kapazität hat
 (aufgrund oft stark überzogener Hersteller-Angaben und Verlusten bei der
-Wandlung von 3,6 V auf die 5 V eines USB-Anschlusses) effektiv eher die
+Wandlung von 3,6&nbsp;V auf die 5&nbsp;V eines USB-Anschlusses) effektiv eher die
 Hälfte dieser Kapazität. Ein durchschnittlicher Smartphone-Akku lässt
-sich über die Powerbank in der Praxis nur etwa 10 mal aufladen.
+sich über die Powerbank in der Praxis nur etwa 10&nbsp;mal aufladen.
 
 Der Preis einer Batterie pro kWh sinkt mit steigender Größe/Gesamtkapazität.
 
@@ -5060,7 +5061,7 @@ Der Preis einer Batterie pro kWh sinkt mit steigender Größe/Gesamtkapazität.
 Wenn man die Wahl
 hat zwischen höherer Spannung (d.h. mehr Akkuzellen in Reihe) oder
 größere bzw. mehr Zellen parallel, dann besser die höhere Spannung nehmen.
-Also ist z.B. eine 24 V 100 Ah Batterie einer mit 12 V und 200 Ah vorzuziehen,
+Also ist z.B. eine 24&nbsp;V 100&nbsp;Ah Batterie einer mit 12&nbsp;V und 200&nbsp;Ah vorzuziehen,
 aus folgenden Gründen:
 
 -   Hohe Ströme belasten elektronische Bauteile besonders stark, bringen
@@ -5070,19 +5071,19 @@ aus folgenden Gründen:
 -   Ein Solar-Laderegler ist vor Allem durch seinen Ausgangsstrom
     begrenzt. So verkraftet ein [Victron BlueSolar MPPT
     100/30](Datenblatt_BlueSolar-MPPT-100-30-100-50.pdf) eine
-    PV-Leerspannung von max. 100 V (was die Reihenschaltung von
+    PV-Leerspannung von max. 100&nbsp;V (was die Reihenschaltung von
     mindestens 2 Solarmodulen erlaubt). Er liefert einen max. Ladestrom
-    von 30 A, woraus sich bei Betrieb an einer 12 V Batterie eine
-    maximale Leistung von 360 W ergibt, bzw. unter Berücksichtigung von
+    von 30&nbsp;A, woraus sich bei Betrieb an einer 12&nbsp;V Batterie eine
+    maximale Leistung von 360&nbsp;W ergibt, bzw. unter Berücksichtigung von
     PV-Verlusten eine sinnvolle maximale Leistung der Solarmodule von
-    440 Wp. Bei 24 V Batteriespannung ist hingegen die doppelte Leistung
-    (880 Wp) möglich. Wenn man anders herum für die doppele PV-Leistung
-    bei 12 V Batteriespannung bleiben will bzw. muss, braucht man einen
+    440&nbsp;Wp. Bei 24&nbsp;V Batteriespannung ist hingegen die doppelte Leistung
+    (880&nbsp;Wp) möglich. Wenn man anders herum für die doppele PV-Leistung
+    bei 12&nbsp;V Batteriespannung bleiben will bzw. muss, braucht man einen
     Laderegler mit doppelter Strom-Belastbarkeit, und der kostet ca. 50
     bis 80% mehr.
 
--   Vermutlich können Wechselrichter mit 24 V Eingangsspannung etwas
-    effizienter arbeiten als solche mit 12 V, weil Strom und Spannungsspreizung
+-   Vermutlich können Wechselrichter mit 24&nbsp;V Eingangsspannung etwas
+    effizienter arbeiten als solche mit 12&nbsp;V, weil Strom und Spannungsspreizung
     geringer sind.
 
 Man kann Batterien [parallel oder in Reihe schalten](
@@ -5092,7 +5093,7 @@ während ihre Kapazität unterschiedlich sein darf
 und sich Kapazitäten sowie die Lade- bzw. Entladeströme addieren.
 * Wenn man hingegen Batterien in Reihe (also hintereinander) schaltet,
 müssen die Kapazitäten gleich sein, während die Spannungen unterschiedlich
-sein dürfen und sich addieren. So kommt man z.B. von 2 × 12 V auf 24 V.
+sein dürfen und sich addieren. So kommt man z.B. von 2 × 12&nbsp;V auf 24&nbsp;V.
 Dabei muss für eine dauerhafte *Balancierung* (gleichmäßige Spannungslage)
 der Batterien gesorgt werden, wie es auch das BMS innerhalb einer Batterie
 für die Einzelzellen tut. Dafür gibt es
@@ -5111,7 +5112,7 @@ darüber sehr direkt die nötige Wechselstrom-Sinuskurve synthetisiert wird.
 Daraus ergeben sich einige Vorteile, insbesondere ein Wirkungsgrad von über 99%,
 besonders platzsparende und langlebige Batterien ohne externen Wechselrichter,
 sowie die Nutzbarkeit zur Einspeisung und als Notstromanlage mit USV-Funktion.
-Leider sind die Produkte sehr teuer: 5700€ für eine Anlage mit 5,2 kWh.
+Leider sind die Produkte sehr teuer: 5700€ für eine Anlage mit 5,2&nbsp;kWh.
 
 #### Tiefsetzsteller {#Tiefsetzsteller}
 
@@ -5119,9 +5120,9 @@ Leider sind die Produkte sehr teuer: 5700€ für eine Anlage mit 5,2 kWh.
 style="margin-left: 10px; margin-right: 10px"}
 Ein Problem bei der Verwendung von Gleichstrom ist, dass sehr unterschiedliche
 Spannungen verwendet werden. Niederspannungs-Geräte im Fahrzeugbereich erwarten
-meist 12 V, während im IT-Bereich Spannungen von 5 V und darunter üblich sind.
-Das passt alles nicht zu Batteriespannungen von 24 V oder 48 V.
-Aber es gibt für Geräte mit mäßigem Strombedarf (bis etwa 5 A)
+meist 12&nbsp;V, während im IT-Bereich Spannungen von 5&nbsp;V und darunter üblich sind.
+Das passt alles nicht zu Batteriespannungen von 24&nbsp;V oder&nbsp;48&nbsp;V.
+Aber es gibt für Geräte mit mäßigem Strombedarf (bis etwa 5&nbsp;A)
 eine recht effiziente und kostengünstige Möglichkeit, die Spannung anzupassen,
 nämlich sog. *Tiefsetzsteller* (auch *Abwärtswandler*,
 engl. _DC-DC buck converter oder _step-down converter_).
@@ -5150,17 +5151,17 @@ Flexible_Module_am_Wohnmobildach.jpg){:width="798" .right}
 Für unser Wohnmobil verwende ich seit Sommer 2019 folgende relativ günstige
 Komponenten zu meiner vollen Zufriedenheit:
 
--   2 × 100 Wp flexible Solarpanels [Dokio
+-   2 × 100&nbsp;Wp flexible Solarpanels [Dokio
     DFSP-100M](https://www.amazon.de/DOKIO-Batterie-wasserdicht-Wohnmobil-Oberfl%C3%A4che/dp/B07FYW3C6W),
     ca. 180€\
     Diese habe ich einfach auf das Blechdach unseres Wohnmobils geklebt.
     Etwas lästig war die Kabelführung ins Innere.
 
--   15 A Solar-Laderegler [Victron BlueSolar MPPT
+-   15&nbsp;A Solar-Laderegler [Victron BlueSolar MPPT
     75/15](https://www.ebay.de/itm/142083505206), ca. 90€\
-    Dieser Regler unterstützt Batterien mit 12 oder 24 V und Ladeströme
-    bis 15 A (wobei für die o.g. Solarzellen bei Dachmontage in der
-    Praxis auch 10 A genügt hätten).\
+    Dieser Regler unterstützt Batterien mit 12 oder 24&nbsp;V und Ladeströme
+    bis 15&nbsp;A (wobei für die o.g. Solarzellen bei Dachmontage in der
+    Praxis auch 10&nbsp;A genügt hätten).\
     Sehr praktisch finde ich bei den BlueSolar-Modellen die
     Status-Abfrage auf dem Smartphone.\
     Leider unterbinden die Victron-Regler nicht das Laden bei unter 0°C,
@@ -5170,7 +5171,7 @@ Komponenten zu meiner vollen Zufriedenheit:
     https://www.idealo.de/preisvergleich/OffersOfProduct/201937361_-smart-battery-sense-victron.html),
     das allerdings etwa 40€ extra kostet.
 
--   12,8 V 100 Ah 4S1P LiFePO4-Batterie inkl. 100 A BMS [Delong
+-   12,8&nbsp;V 100&nbsp;Ah 4S1P LiFePO4-Batterie inkl. 100&nbsp;A BMS [Delong
     DL-12100](https://www.alibaba.com/product-detail/Delong-Factory-Rechargeable-12-8V-100Ah_62388029440.html),
     inkl. DDP-Versand direkt aus China ca. 400€\
     In Deutschland werden solche Batterien hingegen für ungefähr 1000€
@@ -5178,7 +5179,7 @@ Komponenten zu meiner vollen Zufriedenheit:
     myDealz-Beitrag](https://www.mydealz.de/deals/12v-100ah-lifepo4-akku-mit-bms-ab-400-zb-fur-solaranlage-oder-wohnmobilbatterie-ersatz-1350559)
     dazu mit interessanter Diskussion.
 
--   [2000 Wp
+-   [2000&nbsp;Wp
     Wechselrichter](https://de.aliexpress.com/wholesale?SearchText=pure+sine+wave+inverter+2000w),
     ebenfalls direkt aus China, ca. 70€
 
@@ -5187,22 +5188,22 @@ Komponenten zu meiner vollen Zufriedenheit:
 Für eine sehr einfache, aber effiziente Anlage zur Netzeinspeisung
 finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
 
--   2 × 400 Wp starre SSP [EcoDelta -
+-   2 × 400&nbsp;Wp starre SSP [EcoDelta -
     ECO-400M-66SA](Datenblatt_ECO-380-400M-66SA.pdf) mit besonders hoher
-    Effizienz: 213 Wp/m², ca. 540€\
-    oder 4 × 150 Wp flexible ETFE SSP Solarmodule [Solarfam
-    SZ-150-36MFE](Solarfam_SSP_SZ-150-36MFE.pdf) mit 188 Wp/m², ca.
+    Effizienz: 213&nbsp;Wp/m², ca. 540€\
+    oder 4 × 150&nbsp;Wp flexible ETFE SSP Solarmodule [Solarfam
+    SZ-150-36MFE](Solarfam_SSP_SZ-150-36MFE.pdf) mit 188&nbsp;Wp/m², ca.
     [664€](https://stromvoll.com/shop/#!/150W-Flexible-Solar-panel-1170-x-680-x-2-mm/p/396304457)\
-    oder 2 × 310 Wp sehr langlebige flexible Solarmodule [Sunman eArc
-    SMF310M-6X10DW](Datenblatt_Sunman_flexible_310W.pdf) mit 187 Wp/m²,
+    oder 2 × 310&nbsp;Wp sehr langlebige flexible Solarmodule [Sunman eArc
+    SMF310M-6X10DW](Datenblatt_Sunman_flexible_310W.pdf) mit 187&nbsp;Wp/m²,
     ca.
     [500€](https://www.idealo.de/preisvergleich/Liste/119495785/sunman-310.html?sortKey=minPrice)
 
--   Mikrowechselrichter mit 2 * 300 W MPPT [Hoymiles
+-   Mikrowechselrichter mit 2 * 300&nbsp;W MPPT [Hoymiles
     HM-600](https://www.hoymiles.com/de/products/microinverter/single-phase/),
     ca. [200€](https://www.idealo.de/preisvergleich/OffersOfProduct/201802725_-hm-600-mikrowechselrichter-hoymiles.html)\
-<!--    oder 1000 W Micro Grid Tie Inverter Inverter SG1000MQ(https://www.ebay.de/itm/124731502486), ca. 200€\-->
-    oder 600 W WR mit 2 × 400 W Eingängen und WLAN [Deye Sun600g3-EU-230](
+<!--    oder 1000&nbsp;W Micro Grid Tie Inverter Inverter SG1000MQ(https://www.ebay.de/itm/124731502486), ca. 200€\-->
+    oder 600&nbsp;W WR mit 2 × 400&nbsp;W Eingängen und WLAN [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/),
     ca. [190€](https://www.idealo.de/preisvergleich/OffersOfProduct/202156668_-sun600g3-eu-230-600w-deye-inverter.html)  <!-- \
     _Achtung_, in älteren Versionen (etwa 1.471, bis ca. Ende 2022) der
@@ -5236,12 +5237,12 @@ Als Steckersolargerät mit wahlweise direkter oder gepufferter Netzeinspeisung,
 aber auch für eine Notstromversorgung daheim und für einen längeren autarken
 Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 
--   4 × [150 Wp flexible ETFE SSP
+-   4 × [150&nbsp;Wp flexible ETFE SSP
     Solarmodule](https://www.solarfam.nl/150w-shingle-etfe-flexible-solar-panel-solarfam.html),
     für 600€\
     _Zuvor hatte ich mir gekauft, aber nicht verwendet, weil mir ihre
     Anbringung an der Balkonbrüstung im 4. Stock zu riskant war:\
-    4 × [120Wp starre Eco-Worthy
+    4 × [120&nbsp;Wp starre Eco-Worthy
     Solarpanel](https://www.manomano.de/p/2x120watt-solarpanel-solarmodul-12v-12volt-monocrystalline-wohnwagen-wohnmobil-48845318),
     für 320€\
     Diese Eco-Worthy Module kann ich empfehlen, wenn man keine größeren
@@ -5249,46 +5250,46 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
     Spitzenleistung, was gerade bei günstigen Modellen nicht
     selbstverständlich ist._
 
--   600 W (2 × 400 W Eingänge) MPPT Mikrowechselrichter [Deye Sun600g3-EU-230](
+-   600&nbsp;W (2 × 400&nbsp;W Eingänge) MPPT Mikrowechselrichter [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/) für ca. 170€\
     und zusätzlich (z.B. für Einspeisung aus meiner Batterie):\
-    700 W Netzwechselrichter mit angeblich 2 × MPPT und WLAN SG-700W bzw.
+    700&nbsp;W Netzwechselrichter mit angeblich 2 × MPPT und WLAN SG-700W bzw.
     [Mars Rock EC700MD](https://de.aliexpress.com/item/1005002469159821.html)
     (oder [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
     inkl. Versand. _Zumindest bei meinem Gerät funktioniert das WLAN nicht,
     das Teil hat real nur einen MPP-Tracker, der auch noch träge ist, und
     der Gesamt-Wirkungsgrad ist bescheiden --- ist also gar nicht zu empfehlen.
     Siehe auch ein [Reparatur-Video](https://youtu.be/i63ibUhQpjw)._
--   24 V Hybridwechselrichter
+-   24&nbsp;V Hybridwechselrichter
     [EASun ISolar SPH-3K](https://de.aliexpress.com/item/1005003665568494.html)
-    mit 3000 VA (6000 VA Spitzenlast) reiner-Sinus-Wechselrichter
+    mit 3000&nbsp;VA (6000&nbsp;VA Spitzenlast) reiner-Sinus-Wechselrichter
     (mit USV-Funktion und angeblich 93% max. Wirkungsgrad),
-    40-50 A PWM Solar-Laderegler und 20-30 A Batterieladegerät über Netzstrom,
+    40-50&nbsp;A PWM Solar-Laderegler und 20-30&nbsp;A Batterieladegerät über Netzstrom,
     für 185€\
     _Leider hatte ich nicht aufpasst, die
     [MPPT-Version](https://de.aliexpress.com/item/1005004488463489.html)
     zu bestellen, deren Solarwandlungs-Effizienz wohl deutlich besser wäre_.
 
--   24 V 100 Ah LiFePO4-Batterie mit 8S1P-Konfiguration inkl. 100 A BMS
+-   24&nbsp;V 100&nbsp;Ah LiFePO4-Batterie mit 8S1P-Konfiguration inkl. 100&nbsp;A BMS
     und Display [CERRNSS LF-24100
     small](https://de.aliexpress.com/item/1005003937833782.html), ca.
     570€\
     _Diese Zellen sind [qualitativ allerdings nicht ganz so
     gut](https://www.youtube.com/watch?v=4OYlp1aMtTU) wie die von
     Delong.\
-    Noch günstiger und sehr hochwertig geht es im [Eigenbau: 12 V 280 Ah
+    Noch günstiger und sehr hochwertig geht es im [Eigenbau: 12&nbsp;V 280&nbsp;Ah
     schon ab 600€](https://www.youtube.com/watch?v=F0Ot7JOR2VM)._
 
--   24 V auf 12 V Tiefsetzsteller 60W [Akozon GYVRM / LY-KREE / Cocar
+-   24&nbsp;V auf 12&nbsp;V Tiefsetzsteller 60&nbsp;W [Akozon GYVRM / LY-KREE / Cocar
     K241205](https://www.amazon.de/Netzteil-Spannungswandler-Transformator-Konverter-Sonnensystem-5A/dp/B01KQWWQUI)
     mit angeblich 96% Wirkungsgrad, ca. 13€
 
 <!--
--   Programmierbarer Batteriespannungswächter [DC 6-40V LED Battery Charger
+-   Programmierbarer Batteriespannungswächter [DC 6-40&nbsp;V LED Battery Charger
     Discharger Board Under Over Voltage Protection Module](
     https://www.ebay.de/itm/313940626703),  ca. 6€
 
--   Gleichspannungswandler mit Strombegrenzung [300W 20A DC DC Wandler
+-   Gleichspannungswandler mit Strombegrenzung [300&nbsp;W 20&nbsp;A DC DC Wandler
     Step Down Wandler Konverter Spannungsregler, einstellbar](
     https://www.ebay.de/itm/385099914040), ca. 12€
 -->
