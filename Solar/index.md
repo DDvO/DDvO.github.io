@@ -210,7 +210,7 @@ Lizenzkürzel:
         - [Hintergrund der Beschränkung auf 600 bzw. 800&nbsp;W](#Bagatellgrenze)
         - [Kappungsverlust durch Drosselung auf 600&nbsp;W](#Kappungsverlust)
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
-        - [Regelungsstrategien für Stromspeicher](#Regelungsstrategien)
+        - [Regelungsstrategien für PV-Speicher](#Regelungsstrategien)
         - [Dimensionierung des Stromspeichers](#Speicherbatterie)
         - [Kommerzielle SSG-Speicherlösungen](#SSG-Speicher)
           - [Zendure SolarFlow und AIO 2400](#SolarFlow)
@@ -220,9 +220,11 @@ Lizenzkürzel:
           - [Weitere Produkte](#SSG-Speicher-sonstige)
           - [Zusammenfassung und Effizienzbetrachtung](#SSG-Speicher-Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](#SSG-Speicher-Eigenbau)
+          - [Implementierung der Speicher-Regelung](#Regelungsimplementierung)
           - [Beispiel für DC-gekoppelten Speicher](#SSG-DC-gekoppelt)
           - [Ladung des Stromspeichers](#Ladung)
-          - [Entladung des Stromspeichers](#Entnahme)
+          - [Konstanteinspeisung](#Konstanteinspeisung)
+          - [Lastgeregelte Einspeisung](#lastgeregelt)
     -   [Inselanlage (mit Batteriespeicherung)](#Inselanlage)
     -   [Kombination aus Hausnetzeinspeisung und
         Inselanlage](#Kombination)
@@ -1323,8 +1325,8 @@ eines Einfamilienhauses bzw. am Unterverteiler/Sicherungkasten einer Wohnung.
 Ein [Stromzähler](#Stromzähler) bestimmt daraus die verbrauchte (und teils auch
 eingespeiste) Energie durch zeitliche Integration des Gesamt-Leistungssaldos.
 
-Besonders im Zusammenhang mit einer Konstanteinspeisung aus
-[Batteriespeichern](#Batteriepuffer) ist die *Minimallast* interessant,
+Besonders im Zusammenhang mit einer [Konstanteinspeisung](#Konstanteinspeisung)
+aus [Batteriespeichern](#Batteriepuffer) ist die *Minimallast* interessant,
 also der im Laufe der Zeit geringste Leistungsbezug (Verbrauch) im Haushalt.
 Dieser Wert wird gern (allerdings nicht ganz richtig)
 als [Grundlast](https://de.wikipedia.org/wiki/Grundlast) bezeichnet.\
@@ -2782,7 +2784,7 @@ Bei typischen Dach-PV-Anlagen mit üblicher Dimensionierung des Speichers liegt
 die Zahl der Jahres-Vollzyklen bei etwa 200.
 Aber je nach Größe der PV-Anlage und des Speichers sowie der zeitlichen
 Verteilung von Ertrag und Verbrauch kann die Zyklenzahl auch
-deutlich höher oder niedriger sein, z.B. 400 oder 100.
+deutlich höher oder niedriger sein, z.B. 300 oder 100.
 Bei einem Wert von 183 wird die verfügbare Speicherkapazität im Jahresschnitt
 alle zwei Tage verwendet --- was aber nicht heißt, dass der Speicher im Schnitt
 jeden zweiten Tag erst mal voll aufgeladen und dann wieder ganz entladen wird.
@@ -2790,7 +2792,7 @@ jeden zweiten Tag erst mal voll aufgeladen und dann wieder ganz entladen wird.
 Die Strompufferung soll den Nutzen der PV-Anlage für den eigenen Stromverbrauch
 erhöhen. Aber **finanziell lohnt sie sich für kleine PV-Anlagen fast nie** ---
 außer wenn sie über eine nahezu optimale (lastgesteuerte)
-Lade- und/oder Entladeregelung verfügt und man den
+[Lade- und Entladeregelung](#Regelungsstrategien) verfügt und man den
 Speicher sehr günstig bekommt oder schon aus anderen Gründen hat, z.B. für
 eine Notstromversorgung (mit Inselwechselrichter) oder als Fahrzeugbatterie.
 Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
@@ -2911,33 +2913,6 @@ Netzeinspeisung             = 8333 kWh
 PV-Eigenverbrauchsanteil    =   21 % des PV-DC-Ertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   50 % des Verbrauchs (Autarkiegrad)
 --->
-
-Die einfachsten Anlagen verwenden eine [*Konstanteinspeisung*](#Entnahme),
-wobei eine zeitgesteuerte Variante *Nachteinspeisung* genannt wird.
-Wie [etwas weiter unten ausgeführt](#Ladung),
-bringen allerdings Anlagen mit Konstanteinspeisung, bei der die PV-Erzeugung
-nur in den Speicher geleitet wird (also ohne Überschussableitung oder
-eine noch deutlich aufwendigere lastabhängige Batterieladung),
-selbst bei optimierter Wahl der Entnahmeleistung sehr wenig,
-weil bei voller Batterie relativ viel überschüssige Energie verloren geht.
-Eine höhere konstante Entnahmeleistung oder eine Überschussableitung verringert
-zwar den Komplettverlust des Überschusses, führt aber dazu, dass mehr Energie
-im Haushalt nicht genutzt und stattdessen ins externe Netz abgegeben wird.
-
-Bei einer Konstanteinspeisung sollte man die Einspeiseleistung so einstellen,
-dass sie sicher unter der Minimallast bleibt und anderseits so hoch ist,
-dass man die gespeicherte Energie auch bis zum nächsten Laden verbraucht.
-Auch sollte man irgendwie dafür sorgen, dass maximal so viel geladen wird,
-wie gerade tatsächlich an PV-Überschuss vorliegt (also die aktuelle Erzeugung
-größer als der Verbrauch ist), aber auch nicht zu wenig geladen wird,
-so dass der Speicher am Ende des Tages möglichst voll ist.
-Je größer die Speicherkapazität im Vergleich zum Verbrauch und zur Erzeugung,
-desto schwieriger ist das ohne lastabhängige Regelung hinzubekommen.\
-Viele scheitern schon an der Bestimmung der [Minimallast](#Strommessung),
-den diese ist geringer als etwa die (leichter bestimmbare) Durchschnittslast in
-der Nacht. Wer die Konstanteinspeisung auf die nächtliche Durchschnittslast
-einstellt, verschenkt über die meiste Zeit, wo periodisch laufende Geräte
-wie Kühlschränke nicht laufen, mehr oder weniger teurer gespeicherten Strom!
 
 Im Folgenden werden konkrete Zahlen gegeben für einen Haushalt mit 3000&nbsp;kWh
 Jahresverbrauch und einer nächtlicher Durchschnittslast von 190&nbsp;W
@@ -3140,10 +3115,6 @@ ist, kann die Ungleichung auch abgekürzt geschrieben werden als
 Gesamt-Leistungssaldo ≥ 0
 </p>
 
-Der Leistungssaldo lässt sich mit digitalen Zugang an einem modernen Stromzähler
-oder mit einem Zusatzgerät im Unterverteiler messen,
-wie im Abschnitt [Gesamt-Strommessung](#Gesamtstrom) beschrieben.
-
 Wenn die Ungleichung erfüllt ist, dann wird trotz PV-Leistung
 überhaupt kein Strom ins Netz eingespeist (sondern höchstens bezogen).
 
@@ -3228,17 +3199,19 @@ Faktoren, etwa Uhrzeit, Sonnenstand, Temperatur, die bisherige Entwicklung
 der PV-Leistung, der Last und des Speicher-Ladezustandes, der in nächster Zeit
 erwartete PV-Ertrag, Verbrauch im Haushalt, Strompreis, usw.
 
-Das alles ist regelungstechnisch ziemlich aufwendig. Es lohnt sich finanziell
-bislang eher für größere PV-Anlagen und für nicht sehr große Speicher.
+Die [Implementierung einer Speicher-Regelung](#Regelungsimplementierung),
+welche [lastbasiert](#lastgeregelt) sein sollte, ist regelungstechnisch
+ziemlich aufwendig. Sie lohnt sich finanziell bislang eher nur für
+größere PV-Anlagen und (wegen der Speichkosten) für nicht sehr große Speicher.
 
 Statt einer lastabhängigen Regelung ist es besonders für Steckersolargeräte
 viel einfacher, aber leider wenig effizient,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
 so abzustimmen, dass lediglich ein Großteil der Grundlast des Haushalts,
 z.B. 100&nbsp;W, für eine Dauer von etwa 1-2 Tagen abgedeckt wird.
-Wenn man diese *Konstanteinspeisung* noch mit einer Zeitschaltuhr (oder einem
-Helligkeitssensor) zur Beschränkung zwischen Sonnenunter- und Aufgang
-kombiniert, bekommt man eine *Nachteinspeisung*.\
+Wenn man diese [*Konstanteinspeisung*](#Konstanteinspeisung) noch mit einer
+Zeitschaltuhr (oder einem Helligkeitssensor) zur Beschränkung zwischen
+Sonnenunter- und Aufgang kombiniert, bekommt man eine *Nachteinspeisung*.\
 Ziel der Konstanteinspeisung ist zwar, die über die sonnenreiche Tageszeit
 gesammelte Solarenergie auch über sonnenarme Zeiten gleichmäßig abzugeben
 (solange die Ladung reicht, zumindest bis zum nächsten Vormittag),
@@ -3342,8 +3315,9 @@ Wenn der Speicher voll ist, wird im Bypass-Modus der gesamte Ertrag eingespeist.
 Zur Bestimmung der Zielleistung gibt es inzwischen im Wesentlichen drei Modi:
 * Im *Terminmodus* kann man abhängig von der Uhrzeit eine feste
 Einspeiseleistung (in gewissen Stufen) einstellen, also im Wesentlichen eine
-Konstanteinspeisung bzw. Nachteinspeisung. Dem einfachen Spezialfall, ständig
-100&nbsp;W einzuspeisen, hat Zendure den Namen *Batterieprioritätsmodus* gegeben.
+[Konstanteinspeisung bzw. Nachteinspeisung](#Konstanteinspeisung).
+Dem einfachen Spezialfall, ständig 100&nbsp;W einzuspeisen,
+hat Zendure den Namen *Batterieprioritätsmodus* gegeben.
 * Im sog. *Intelligenten Matching-Modus* wird mindestens so viel eingespeist
 wie nötig, um den Verbrauch aller Geräte abzudecken, die an mit dem SolarFlow
 online gekoppelten *Smart Plugs* (intelligente Steckdosen) hängen &mdash;
@@ -3606,12 +3580,71 @@ um eine effiziente Regelung hinzubekommen.
 In diesem Abschnitt einige Hinweise und Beispiele,
 wie es gelingen kann und wie es nicht wirklich effizient wird.
 
+##### Implementierung der Speicher-Regelung {#Regelungsimplementierung}
+
+Wie im Abschnitt über [Regelungsstrategien](#Regelungsstrategien) erklärt,
+ist die wesentliche Eingangsgröße der Regelung eines Speichers
+der Gesamt-Leistungssaldo am externen Netzanschluss des Haushalts.
+Er lässt sich mit digitalem Zugang an einem modernen Stromzähler
+oder mit einem Zusatzgerät im Unterverteiler messen,
+wie im Abschnitt [Gesamt-Strommessung](#Gesamtstrom) beschrieben.
+
+Über das Leistungssaldo sollte ein am Speicher angeschlossener dynamisch
+drosselbarer [Netzwechselrichter](#Netzwechselrichter) so geregelt werden,
+dass durch Entladung des Speichers zumindest ein Teil der Haushalts-Last
+kompensiert wird, aber nicht durch zu starke Entladung Energie aus dem Speicher
+ins externe Netz eingespeist und damit verschenkt wird.
+
+Wenn der Wechselrichter, der zur Entladung des Speicherbatterie verwendet wird,
+mehrere Eingänge hat, kann man an die übrigen Eingänge auch noch direkt
+PV-Module anschließen, deren Ertrag dann nicht über die Batterie gepuffert wird.
+
+Für die Ladung des Speichers ist es eine grundsätzliche Entscheidung, ob diese
+DC- oder AC-gekoppelt geschehen soll &mdash; Details dazu im Abschnitt zur
+[Ladung des Stromspeichers](#Ladung).
+
+Bei DC-Kopplung bietet es sich an, einen [Solar-Laderegler](#Laderegler) zu
+verwenden, denn der kümmert sich automatisch um die Regelung der Batterieladung.
+Unabhängig davon, dass ein Wechselrichter angeschlossen und zeitweise mehr oder
+weniger aktiv ist, versucht der Laderegler immer, die Batterie voll zu machen.
+Je nachdem, wie viel Strom der Wechselrichter liefern soll, nimmt er dem Ausgang
+des Ladereglers bzw. der Batterie entsprechend Strom weg, so dass zum Laden der
+Batterie weniger oder gar nichts mehr übrig bleibt. Wenn der Wechselrichter
+sich mehr Strom nimmt als der Laderegler liefert, wird die Batterie entladen.\
+Für eine optimale [lastabhängige Regelung](#lastgeregelt)
+muss also der Laderegler nicht von außen gesteuert werden,
+sondern es genügt, die Ausgangsleistung des Wechselrichters so anzupassen,
+dass der aktuelle Leistungssaldo am Einspeisepunkt der Haushalts
+(der sich aus Haushalts-Last abzüglich PV-Leistung
+und bisheriger Ausgangsleistung des Wechselrichters ergibt)
+möglichst Null ist, jedenfalls nicht negativ.
+Je nachdem, ob dabei die Differenz aus aktueller PV-Leistung und
+Abruf durch den Wechselrichter positiv oder negativ ausfällt,
+wird der Speicher mit dieser Differenz-Leistung geladen oder entladen.
+
+Bei AC-Kopplung muss die Speicher-Ladung unabhängig von der PV-Erzeugung
+erfolgen und erfordert ein steuerbares 230&nbsp;V-Ladegerät mit extra Regelung.
+<!-- TODO Netzladegerät -->
+
+Die (Lade- und) Entladeregelung wird auf irgendeine Weise programmiert und
+muss ständig laufen, z.B. auf einen etwas stärkeren Einplatinen-Computer
+wie Raspberry Pi 4 oder nebenbei auf einem Home-Server. Meist erfolgt
+die Programmierung unter Zuhilfenahme einer Heimautomatisierungs-Software.
+[Home Assistant](https://www.home-assistant.io/) ist da am bekanntesten.
+Das bietet eine recht hübsche und flexible grafische Bedienungs-Oberfläche,
+sowie eine relativ einfache Anbindung von Hardware-Komponenten z.B. von Shelly,
+aber hat eine grauenhafte YAML -und Python-basierte Programmierumgebung mit nur
+teilweise hilfreicher Dokumentation und schlechter Debugging-Unterstützung.
+Wesentlich angenehmer programmierbar ist wohl die Perl-basierte „Freundliche
+Hausautomation und Energie-Messung“ [(FHEM)](https://fhem.de/fhem_DE.html).
+
+
 ##### Beispiel für DC-gekoppelten Speicher {#SSG-DC-gekoppelt}
 
 Hier ein Beispiel für eine sehr gelungene effiziente Lösung
 mit DC-gekoppelter Anbindung eines 48&nbsp;V LiFePO4 Speichers
-(bestehend aus einer oder zwei Batterien), wozu ein oder zwei Victron
-SmartSolar MPPT 100/20-48V [Solarladeregler](#Laderegler) verwendet werden.
+(bestehend aus einer oder zwei Batterien), wozu je ein Victron
+SmartSolar MPPT 100/20-48V [Solar-Laderegler](#Laderegler) verwendet wird.
 Sowohl für die sofortige Nutzung des erzeugten PV-Stroms als auch für das
 bedarfsgerechte Laden und Entladen des Speichers kommt ein
 (derzeit auf max. 600&nbsp;W Leistung gedrosselter) Hoymiles HM-800
@@ -3633,19 +3666,10 @@ gut möglich, zumal der Eingangspannungs-Bereich des verwendeten Wechselrichters
 auch den Bereich um 24&nbsp;V umfasst und die Kabel zwischen Laderegler,
 Speicher und Wechselrichter kurz gehalten werden können.
 
-Für eine optimale lastabhängige Regelung müssen die Laderegler nicht von außen
-gesteuert werden, sondern im Prinzip genügt es, die Ausgangsleistung des
-Wechselrichters sukzessive so anzupassen, dass der aktuelle Leistungssaldo am
-Einspeisepunkt der Haushalts (der sich aus Haushalts-Last abzüglich PV-Leistung
-und bisheriger Ausgangsleistung des Wechselrichters ergibt) möglichst Null ist.
-Je nachdem, ob dabei die Differenz aus aktueller PV-Leistung und
-Abruf durch den Wechselrichter positiv oder negativ ausfällt,
-wird der Speicher mit dieser Differenz-Leistung geladen oder entladen.
-Für Details dazu und Hinweise zu Bypass und Schonung der Batteriezellen siehe
-den [Abschnitt zu Regelungsstrategien für Stromspeicher](#Regelungsstrategien).
-
-Die Messung des Gesamt-Leistungssaldos am Einspeisepunkt des Haushalts,
-also wie viel gerade aus dem externen Netz gezogen oder in dieses eingespeist
+Die Regelung sollte nach den Optimierungs-Prinzipien erfolgen, die im Abschnitt
+zu [Regelungsstrategien für Stromspeicher](#Regelungsstrategien) erklärt sind.
+Die dazu nötige Messung des Gesamt-Leistungssaldos am Einspeisepunkt des Haushalts,
+also wie viel gerade aus dem externen Netz gezogen oder dorthin eingespeist
 wird, erfolgt wie im Abschnitt [Gesamt-Strommessung](#Gesamtstrom) beschrieben.
 Wenn dazu (wie im Bild dargestellt) Tibber Pulse verwendet wird, kann die
 Nutzung des Speichers auch vom aktuellen Strompreis abhängig gemacht werden.
@@ -3656,17 +3680,11 @@ von der [Victron Venus Firmware auf einem Raspberry Pi](
 https://www.victronenergy.com/blog/2017/09/06/raspberry-pi-running-victrons-venus-firmware/)
 (hier genügt 2. oder 3. Generation) abgefragt werden.
 
-Die Regelung kann über eine Heimautomatisierungs-Software erfolgen,
-die z.B. auf einen etwas stärkeren Einplatinen-Computer wie Raspberry Pi 4
-läuft oder nebenbei auf einem Home-Server.
-Es empfiehlt sich dazu die Perl-basierte
-„Freundliche Hausautomation und Energie-Messung“
-[(FHEM)](https://fhem.de/fhem_DE.html).
-Dagegen hat der wesentlich bekanntere
-[Home Assistant](https://www.home-assistant.io/)
-eine grauenhafte YAML -und Python-basierte Programmierumgebung,
-bietet dafür aber eine einfache Anbindung von Hardware-Komponenten
-und eine recht hübsche und flexible grafische Bedienungs-Oberfläche.
+Als Grundlage für die selbst programmierte Regelung wurde hier die Perl-basierte
+[(FHEM)](https://fhem.de/fhem_DE.html) auf einem Raspberry Pi 4 verwendet.
+Alternativen dazu und Details zur DC-Kopplung sind im
+[Abschnitt zur Implementierung der Speicher-Regelung](#Regelungsimplementierung)
+aufgeführt.
 
 In Minimalausstattung würde die Anlage mit ECO-WORTHY 48&nbsp;V 2,5&nbsp;kWh Speicher
 ohne PV-Module unter 1000€ kosten.
@@ -3716,7 +3734,8 @@ weil die Batteriespannung von der Systemspannung der PV-Anlage unabhängig ist.
 Außerdem kann man den Speicher bei Bedarf (z.B. wenn er zu leer geworden ist
 oder zu Testzwecken) auch unabhängig von der PV-Anlage mit Netzstrom laden.
 
-Die Aufladung der Batterie sollte zu jeder Zeit nur in dem Maße erfolgen, wie
+Wie im [Abschnitt über Regelungsstrategien](#Regelungsstrategien) beschrieben,
+sollte die Aufladung der Batterie zu jeder Zeit nur in dem Maße erfolgen, wie
 der PV-Strom gerade nicht anderweitig direkt genutzt werden kann (Lastvorrang).
 Das optimiert die Speichernutzung in mehrfacher Hinsicht:
 * Eine Speicherung ist im Vergleich zur direkten Nutzung
@@ -3727,9 +3746,42 @@ Das optimiert die Speichernutzung in mehrfacher Hinsicht:
   keine zusätzliche Ladung mehr aufnehmen kann und der Überschuss verloren geht.
 
 Der Lastvorrang bringt für die Effizienz fast so viel wie eine optimale
-lastabhängige Entnahme aus der Batterie.
-Der Abschnitt [Strommessung](#Strommessung) gibt Hinweise,
-wie man die aktuelle Last im Haushalt automatisch messen bzw. auslesen kann.
+[lastabhängige Entnahme](#lastgeregelt) aus der Batterie.
+
+##### Konstanteinspeisung {#Konstanteinspeisung}
+
+In diesem und dem [folgenden Abschnitt](#lastgeregelt)
+werden für die Entnahme von Energie aus einem Stromspeicher
+verschiedene Strategien und mögliche Umsetzungen mit einem
+[Netzwechselrichter](#Netzwechselrichter) behandelt.
+
+Die einfachsten Anlagen verwenden eine *Konstanteinspeisung*,
+wobei der Netzwechselrichter immer die gleiche Leistung abgibt.
+Eine zeitgesteuerte Variante wird *Nachteinspeisung* genannt.
+
+Anlagen mit Konstanteinspeisung, bei der die PV-Erzeugung
+nur in den Speicher geleitet wird (also ohne Überschussableitung oder
+eine deutlich aufwendigere lastabhängige Batterie-Regelung),
+bringen selbst bei optimierter Wahl der Entnahmeleistung sehr wenig,
+weil bei voller Batterie relativ viel überschüssige Energie verloren geht.
+Eine höhere konstante Entnahmeleistung oder eine Überschussableitung verringert
+zwar den Komplettverlust des Überschusses, führt aber dazu, dass mehr Energie
+im Haushalt nicht genutzt und stattdessen ins externe Netz abgegeben wird.
+
+Bei einer Konstanteinspeisung sollte man die Einspeiseleistung so einstellen,
+dass sie sicher unter der Minimallast bleibt und anderseits so hoch ist,
+dass man die gespeicherte Energie auch bis zum nächsten Laden verbraucht.
+Auch sollte man irgendwie dafür sorgen, dass maximal so viel geladen wird,
+wie gerade tatsächlich an PV-Überschuss vorliegt (also die aktuelle Erzeugung
+größer als der Verbrauch ist), aber auch nicht zu wenig geladen wird,
+so dass der Speicher am Ende des Tages möglichst voll ist.
+Je größer die Speicherkapazität im Vergleich zum Verbrauch und zur Erzeugung,
+desto schwieriger ist das ohne lastabhängige Regelung hinzubekommen.\
+Viele scheitern schon an der Bestimmung der [Minimallast](#Strommessung),
+den diese ist geringer als etwa die (leichter bestimmbare) Durchschnittslast in
+der Nacht. Wer die Konstanteinspeisung auf die nächtliche Durchschnittslast
+einstellt, verschenkt über die meiste Zeit, wo periodisch laufende Geräte
+wie Kühlschränke nicht laufen, mehr oder weniger teurer gespeicherten Strom.
 
 Wenn die [o.g. Balkonanlage mit 1&nbsp;kWh Pufferspeicher](#Batteriepuffer) nur eine
 Konstanteinspeisung verwendet (wobei hier eine Entladeleistung von nur 40&nbsp;W
@@ -3776,8 +3828,8 @@ PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 
-Die im [folgenden Abschnitt](#Entnahme) aufgeführten Entnahme-Varianten geben
-keinen Lastvorrang, sondern führen den erzeugten Solarstrom nur in die Batterie.
+Die hier aufgeführten Entnahme-Varianten geben keinen Lastvorrang,
+sondern führen den erzeugten Solarstrom vorzugsweise in die Batterie.
 Das ist natürlich am einfachsten, hat aber den großen Nachteil, dass zu den
 Zeiten, wo die Batterie voll ist, **viel PV-Energie verloren geht** ---
 etwa an sonnenreichen Tagen am Nachmittag, wenn die Solarleistung relativ groß
@@ -3882,18 +3934,15 @@ Eigendeckungsanteil         =   18 % des Verbrauchs (Autarkiegrad)
 
 Das Signal für die Überschussableitung wird wohl am besten vom Laderegler
 kommen (z.B. optisch über die Ladekontrollleuchte). Es kann aber auch von der
-Batteriespannung abhängig gemacht werden, wobei es dann auch vorkommen kann,
-dass Laderegler und Wechselrichter gleichzeitig aktiv sind. Ob das eher stört
-oder sogar vorteilhaft wäre, dürfte von den verwendeten Geräten abhängig sein.
-
-##### Entladung des Stromspeichers {#Entnahme}
+Batteriespannung abhängig gemacht werden, wobei dann auch (meist ohne Probleme)
+vorkommen kann, dass Laderegler und Wechselrichter gleichzeitig aktiv sind.
 
 Wenn man schon einen Solar-Wechselrichter hat und diesen für eine ganz einfache
 Netzeinspeisung verwenden möchte, könnte es schon genügen, ihn (über eine
 Sicherung und wenn nötig eine gesonderte automatische Unterspannungsabschaltung)
 mit der Batterie zu verbinden und nach Bedarf über einen Schalter zu steuern ---
-allerdings nur, wenn die Batteriespannung gut im Eingangsspannungsbereich des
-Wechselrichters liegt und es passt, ihn mit seiner vollen oder limitierten
+natürlich nur, wenn die Batteriespannung im Eingangsspannungsbereich des
+Wechselrichters liegt und es passt, ihn mit seiner vollen oder fest limitierten
 Leistung zu betreiben. Dazu kann man beispielsweise einen auf 300&nbsp;W begrenzten
 PV-Eingang nutzen oder die Drosselung konfigurieren, wie man es z.B. beim Deye
 [selbst machen](https://www.photovoltaikforum.com/thread/191715-deye-sun600-umstellen-auf-800w/?pageNo=9#post3019090)
@@ -3901,12 +3950,12 @@ oder vom Kundendienst (Mail an service@deye.com.cn) programmieren lassen kann.
 
 ![Bild: Netzwechselrichter aus Batterie gespeist](
 Netzwechselrichter-aus-Batterie-gespeist.jpg){:width="600" .right}
-Etwas besser ist allerdings, die Einspeisung regelbar zu gestalten.
+Etwas besser ist allerdings, die Einspeisung manuell regelbar zu gestalten.
 Dazu bietet sich ein Netzwechselrichter wie von
 [Soyosource](https://de.aliexpress.com/item/1005001445871590.html) bzw.
 [PMSUN](https://www.amazon.de/PMSUN-netzgekoppelter-Wechselrichter-einstellbare-Batterieentladung/dp/B0B4RZNHF3)
 an, der für die Verwendung an einer Batterie als Quelle ausgelegt ist
-und dessen Ausgangsleistung innerhalb gewisser Grenzen manuell regelbar ist.
+und dessen Ausgangsleistung innerhalb gewisser Grenzen einstellbar ist.
 
 Wer zudem bereits eine Powerstation hat,
 kann zwischen ihren Wechselstrom-Ausgang und den Netzwechselrichter ein
@@ -3927,195 +3976,6 @@ Eingangsspannung zu einem entsprechend hohen Eingangsstrom führt,
 der auch über der Stärke liegen kann, die das Gerät über längere Zeit verträgt.
 Daher und aus Effizienzgründen ist es zu empfehlen, einen Wechselrichter zu
 wählen, der direkt elektronisch regelbar ist, und das lastabhängig zu machen.
-
-Wenn der Wechselrichter mehrere Eingänge hat, kann man an die übrigen Eingänge
-auch noch direkt PV-Module anschließen,
-deren Ertrag dann nicht über die Batterie gepuffert wird.
-
-Deutlich effizienter als die bisher genannten Lösungen ist es,
-das Ausspeisen aus der Batterie ins Wechselstromnetz lastgesteuert zu machen
-und damit eine Nulleinspeisung zu realisieren.
-
-{:style="clear:both"}
-
-[![Bild: Y&H Sun-1000 GTIL Netzwechselrichter mit Limiter.png](
-Sun-1000_GTIL_Wechselrichter_mit_Limiter.png){:.right width="500"}](
-https://www.youtube.com/watch?v=jPgWE-qQ3SE&t=1012s)
-Ein Netzwechselrichter mit lastbasierter Strom-Begrenzungs-Regelung,
-engl. _Grid Tie Inverter with Limiter (GTIL)_ wie der [Sun GTIL](
-https://de.aliexpress.com/item/32840070519.html) von Y&H
-oder ein ähnliches Gerät von [Soyosource](
-https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
-<!--, gibt es mit 1000 und 2000&nbsp;W Leistung -->
-ermöglicht eine einphasige Nulleinspeisung ohne Basteln und Programmieren.
-Man muss nur den Limiter-Sensor im Sicherungskasten an der Phase anbringen,
-über die die Einspeisung laufen soll. Dann lässt sich der Wechselrichter so
-einstellen, dass er maximal so viel einspeist wie zum Ausgleich
-der aktuellen Last auf dieser Phase benötigt wird,
-wie [von Dimitri vorgeführt](https://youtu.be/jPgWE-qQ3SE).
-Für dreiphasige Anwendung ist gedacht, je Phase ein solches Gerät einzusetzen,
-was sich natürlich nur für größere Anlagen lohnt. Man kann sich aber auch
-einen 3-Phasen-Sensor für ein Gerät zusammenstricken, etwa wie [hier](
-https://www.photovoltaikforum.com/thread/193693-sun1000-gti-nulleinspeisung-mit-3-phasen-limiter/?pageNo=1)
-beschrieben.
-
-Am Elegantesten und Flexibelsten, aber **deutlich aufwendiger** ist es,
-einen per Software regelbaren Netzwechselrichter zu verwenden.
-Wenn in die Regelung ein elektronisch auslesbarer (möglichst dreiphasiger)
-Lastsensor eingebunden wird, lässt sich die Einspeisung abhängig vom aktuellen
-Stromverbrauch (mit einer gewissen Verzögerung) etwa über einen entsprechend
-programmierten Raspberry Pi so steuern, dass eine Nulleinspeisung erreicht wird.
-Dazu gibt es eine vielseitige [Software](https://solaranzeige.de/).
-
-[![Bild: Balkonsolar mit Akku - AkkuDoktor](
-Balkonsolar_AkkuDoktor.png){:.center}](
-https://www.youtube.com/watch?v=yOcoux9IbzM)
-Eine Möglichkeit wäre, vor einen Netzwechselrichter einen elektronisch
-regelbaren DC-DC-Wandler zu hängen, z.B. den [Joy-IT DPM8616](
-https://www.idealo.de/preisvergleich/ProductCategory/10314.html?q=DPM8616),
-wobei die Regelung den aktuellen Verbrauch über einen
-[„Volkszähler“](https://www.volkszaehler.org/) mitgeteilt bekommt, wie in einem
-[Video von Andreas Schmitz](https://www.youtube.com/watch?v=yOcoux9IbzM)
-vorgeführt.
-
-{:style="clear:both"}
-
-[![Bild: DTUs im Weckglas](
-DTUs_im_Weckglas.jpg){:.right width="330"}](
-https://blog.helmutkarger.de/balkonkraftwerk-teil-8-opendtu-und-ahoydtu-fuer-hoymiles-wechselrichter/)
-An einem Netzwechselrichter der Hoymiles HM-Serie und für manche TSUN-Geräte
-kann man anstelle einer teuren proprietären Datenübertragungseinheit
-[Hoymiles DTU](https://www.hoymiles.com/de/products/microinverter/dtu/)
-(engl. *data transfer unit* oder allgemein *telemetry gateway*) die offene
-Bastel-Lösung [OpenDTU](https://github.com/roastedelectrons/HoymilesOpenDTU)
-bzw. [AhoyDTU](https://ahoydtu.de/) verwenden. Für beide Varianten gibt es
-schöne Anleitungen wie [diese](
-https://blog.helmutkarger.de/balkonkraftwerk-teil-8-opendtu-und-ahoydtu-fuer-hoymiles-wechselrichter/)
-und hilfreiche Videos auf YouTube wie [dieses](https://youtu.be/YJM913e0tiQ).
-Wer nicht selbst die Elektronik zusammenlöten kann oder will, findet z.B. auf
-[eBay-Kleinanzeigen](https://www.ebay-kleinanzeigen.de/s-hoymiles-dtu-ahoy/k0)
-[![Bild: Hardware für OpenDTU](
-OpenDTU_wiring_ESP32.png){:.left width="230"; margin-right: 20px"}](
-https://github.com/tbnobody/OpenDTU)
-auch betriebsfertige Geräte ab 30€, Bausätze ab 20€. Man kann sie sowohl zum
-[Auslesen](https://www.heise.de/select/ct/2022/24/2224315343257577596)
-der PV-Ertrags- und Geräte- Daten als auch zum [Steuern](
-https://community.symcon.de/t/modul-beta-hoymiles-modulwechselrichter-mit-opendtu/130965)
-des Wechselrichters verwenden.
-
-{:style="clear:both"}
-
-[![Bild: ESP und RS485 für Soyosource](
-ESP8266_Rs485_Modul2.png){:.left width="400"}](
-https://github.com/KlausLi/Esp-Soyosource-Controller)
-Eine
-[etwas einfachere Lösung](https://github.com/KlausLi/Esp-Soyosource-Controller)
-mit dreiphasiger Lastmessung ermöglicht der [Soyosource 1200](
-https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
-in der Variante mit Limiter, wobei der mitgelieferte einphasige Lastsensor hier
-nicht verwendet wird. Stattdessen wird ein ESP8266 Mikrocontroller
-an einem RS485-Adapter zur Steuerung mit einer fertigen Software verwendet,
-wobei er die Lastinformation per WLAN von einem Shelly 3EM erhält.
-
-{:style="clear:both"}
-
-Ohne eigene Programmierung und mit wenig Gebastel kommt man mit dem
-[ready2plugin-Stromwächter](
-https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
-von indielux aus. Der wird auch *Einspeisewächter* genannt, weil er für
-Steckersolargeräte mit oder ohne Speicher eine Nulleinspeisung realisiert.
-Der setzt einen per Modbus RS485 steuerbaren Wechselrichter voraus
-und eine per WLAN angebundene Messung des aktuellen Stromverbrauchs.
-[![Bild: ready2plugin-Stromwächter von indielux](
-ready2plugin-Stromwaechter_indielux.png){:.center}](
-https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
-
-Möglichkeiten für die automatische Auslesung des Haushalts-Stromverbrauchs
-sind im Abschnitt [Strommessung](#Strommessung) genannt.
-
-<!-- falsch:
-Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
-Bei einer z.B. auf 600&nbsp;W begrenzten Einspeisung beträgt für die o.g.
-[Balkonanlage mit 1&nbsp;kWh Pufferspeicher und Überschussableitung](#Ladung)
-die Steigerung des Eigenverbrauch durch die Speichernutzung 128&nbsp;kWh auf 588&nbsp;kWh.
-Hier findet nur noch eine minimale Netzeinspeisung von 3&nbsp;kWh statt,
-welche aus ungenutzter Überschussableitung resultiert.
-Allerdings wird die Batterie im Schnitt pro Tag fast zweimal auf- und entladen
-(655 Vollzyklen im Jahr), was neben größerer Degradation
-zu erheblichen Lade- und Speicherverlusten von 39 + 31&nbsp;kWh führt.\
-Eine Erhöhung der nutzbaren Speicherkapazität bringt praktisch nichts,
-und eine Verringerung auf 0,5&nbsp;kWh liefert etwas weniger: 560&nbsp;kWh.
--->
-<!--
-TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1250 -dc -tmy -pass spill 0 -feed lim 600
-
-Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
-Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
-Maximaleinspeisung          =  600 W, max. Entladerate 1 C
-Verlust durch Überlauf      =    0 kWh
-Ladeverlust                 =   39 kWh durch Lade-Wirkungsgrad 94%
-Speicherverlust             =   31 kWh durch Speicher-Wirkungsgrad 95%
-PV-Nutzung über Speicher    =  585 kWh
-Zwischenspeicherung         =  655 kWh (nach Ladeverlust)
-Vollzyklen pro Jahr         =  655 der effektiven Kapazität
-
-PV-Eigenverbrauch           =  588 kWh
-Netzeinspeisung             =    2 kWh
-PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
--->
-<!--
-TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 2500 -dc -tmy -pass spill 0 -feed lim 600
-Lastprofil-Datei            : Lastprofil_4673_kWh.csv
-Grundlast                   =  184 W
-Maximallast                 =13795 W am 2010-02-26 um 06:55 h
-
-PV-Daten-Datei              : Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv, enthaltene System-Effizienz 100% wurde übersteuert
-Neigungswinkel, Azimut      = 38°, 0°
-Breitengrad, Längengrad     = 48.215, 11.727
-Simuliertes PV-Jahr         = TMY (2008..2020)
-
-PV-Nominalleistung          =  600 Wp
-Max. PV-Bruttoleistung      =  607 W am TMY (2008..2020)-04-15 um 13:00 h
-PV-Bruttoertrag             =  764 kWh, PV-System-Wirkungsgrad 92%
-Max. PV-Nettoleistung       =  525 W am TMY (2008..2020)-04-15 um 13:00 h
-PV-Nettoertrag              =  660 kWh bei Wechselrichter-Wirkungsgrad 94%
-
-Verbrauch durch Haushalt    = 3000 kWh
-
-Speicherkapazität           = 2500 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
-Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
-Maximaleinspeisung          =  600 W, max. Entladerate 1 C
-Verlust durch Überlauf      =    0 kWh
-Ladeverlust                 =   40 kWh durch Lade-Wirkungsgrad 94%
-Speicherverlust             =   31 kWh durch Speicher-Wirkungsgrad 95%
-PV-Nutzung über Speicher    =  590 kWh
-Zwischenspeicherung         =  660 kWh (nach Ladeverlust)
-Vollzyklen pro Jahr         =  330 der effektiven Kapazität
-
-PV-Eigenverbrauch           =  590 kWh
-Netzeinspeisung             =    0 kWh
-PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
--->
-<!--
-TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 625 -dc -tmy -pass spill 0 -feed lim 600
-
-Speicherkapazität           =  625 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
-Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
-Maximaleinspeisung          =  600 W, max. Entladerate 1 C
-Verlust durch Überlauf      =    0 kWh
-Ladeverlust                 =   33 kWh durch Lade-Wirkungsgrad 94%
-Speicherverlust             =   26 kWh durch Speicher-Wirkungsgrad 95%
-PV-Nutzung über Speicher    =  495 kWh
-Zwischenspeicherung         =  554 kWh (nach Ladeverlust)
-Vollzyklen pro Jahr         =  1109 der effektiven Kapazität
-
-PV-Eigenverbrauch           =  560 kWh
-Netzeinspeisung             =   42 kWh
-PV-Eigenverbrauchsanteil    =   85 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
--->
 
 <!--
 Allerdings hat keine der in diesem Abschnitt genannten Anlagen mit
@@ -4320,6 +4180,193 @@ z.B. in der Nähe der Batterie-Entladeschlussspannung diesen wieder ausschaltet.
 Wie [oben ausgeführt](#Ladung) haben allerdings Anlagen mit Konstanteinspeisung
 wie die gerade erwähnten Bastellösungen von Tobias Volk (PV&E) und von
 Dimitri selbst mit zusätzlicher Überschussableitung eine miserable Rentabilität.
+
+
+##### Lastgeregelte Einspeisung {#lastgeregelt}
+
+Deutlich effizienter als eine [Konstanteinspeisung](#Konstanteinspeisung)
+ist es, das Ausspeisen aus einer Speicherbatterie ins Wechselstromnetz
+lastabhängig zu machen und damit eine Nulleinspeisung zu realisieren.
+
+{:style="clear:both"}
+
+[![Bild: Y&H Sun-1000 GTIL Netzwechselrichter mit Limiter.png](
+Sun-1000_GTIL_Wechselrichter_mit_Limiter.png){:.right width="500"}](
+https://www.youtube.com/watch?v=jPgWE-qQ3SE&t=1012s)
+Ein Netzwechselrichter mit lastbasierter Strom-Begrenzungs-Regelung,
+engl. _Grid Tie Inverter with Limiter (GTIL)_ wie der [Sun GTIL](
+https://de.aliexpress.com/item/32840070519.html) von Y&H
+oder ein ähnliches Gerät von [Soyosource](
+https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
+<!--, gibt es mit 1000 und 2000&nbsp;W Leistung -->
+ermöglicht eine einphasige Nulleinspeisung ohne Basteln und Programmieren.
+Man muss nur den Limiter-Sensor im Unterverteiler (Sicherungskasten) an der Phase anbringen,
+über die die Einspeisung laufen soll. Dann lässt sich der Wechselrichter so
+einstellen, dass er maximal so viel einspeist wie zum Ausgleich
+der aktuellen Last auf dieser Phase benötigt wird,
+wie [von Dimitri vorgeführt](https://youtu.be/jPgWE-qQ3SE).
+Für dreiphasige Anwendung ist gedacht, je Phase ein solches Gerät einzusetzen,
+was sich natürlich nur für größere Anlagen lohnt. Man kann sich aber auch
+einen 3-Phasen-Sensor für ein Gerät zusammenstricken, etwa wie [hier](
+https://www.photovoltaikforum.com/thread/193693-sun1000-gti-nulleinspeisung-mit-3-phasen-limiter/?pageNo=1)
+beschrieben.
+
+Am Elegantesten und Flexibelsten, aber **deutlich aufwendiger** ist es,
+einen per Software regelbaren Netzwechselrichter zu verwenden.
+Wenn in die Regelung ein elektronisch auslesbarer möglichst
+[dreiphasiger Lastsensor](#Gesamtstrom) eingebunden wird,
+lässt sich die Einspeisung abhängig vom aktuellen Stromverbrauch
+(mit einer gewissen Verzögerung) etwa über einen mit einer Heimautomatisierung
+entsprechend programmierten Raspberry Pi so steuern,
+dass eine Nulleinspeisung erreicht wird.
+Dazu gibt es eine vielseitige [Software](https://solaranzeige.de/).
+
+[![Bild: Balkonsolar mit Akku - AkkuDoktor](
+Balkonsolar_AkkuDoktor.png){:.center}](
+https://www.youtube.com/watch?v=yOcoux9IbzM)
+Eine Möglichkeit wäre, vor einen Netzwechselrichter einen elektronisch
+regelbaren DC-DC-Wandler zu hängen, z.B. den [Joy-IT DPM8616](
+https://www.idealo.de/preisvergleich/ProductCategory/10314.html?q=DPM8616),
+wobei die Regelung den aktuellen Verbrauch über einen
+[„Volkszähler“](https://www.volkszaehler.org/) mitgeteilt bekommt, wie in einem
+[Video von Andreas Schmitz](https://www.youtube.com/watch?v=yOcoux9IbzM)
+vorgeführt.
+
+{:style="clear:both"}
+
+[![Bild: DTUs im Weckglas](
+DTUs_im_Weckglas.jpg){:.right width="330"}](
+https://blog.helmutkarger.de/balkonkraftwerk-teil-8-opendtu-und-ahoydtu-fuer-hoymiles-wechselrichter/)
+An einem Netzwechselrichter der Hoymiles HM-Serie und für manche TSUN-Geräte
+kann man anstelle einer teuren proprietären Datenübertragungseinheit
+[Hoymiles DTU](https://www.hoymiles.com/de/products/microinverter/dtu/)
+(engl. *data transfer unit* oder allgemein *telemetry gateway*) die offene
+Bastel-Lösung [OpenDTU](https://github.com/roastedelectrons/HoymilesOpenDTU)
+bzw. [AhoyDTU](https://ahoydtu.de/) verwenden. Für beide Varianten gibt es
+schöne Anleitungen wie [diese](
+https://blog.helmutkarger.de/balkonkraftwerk-teil-8-opendtu-und-ahoydtu-fuer-hoymiles-wechselrichter/)
+und hilfreiche Videos auf YouTube wie [dieses](https://youtu.be/YJM913e0tiQ).
+Wer nicht selbst die Elektronik zusammenlöten kann oder will, findet z.B. auf
+[eBay-Kleinanzeigen](https://www.ebay-kleinanzeigen.de/s-hoymiles-dtu-ahoy/k0)
+[![Bild: Hardware für OpenDTU](
+OpenDTU_wiring_ESP32.png){:.left width="230"; margin-right: 20px"}](
+https://github.com/tbnobody/OpenDTU)
+auch betriebsfertige Geräte ab 30€, Bausätze ab 20€. Man kann sie sowohl zum
+[Auslesen](https://www.heise.de/select/ct/2022/24/2224315343257577596)
+der PV-Ertrags- und Geräte- Daten als auch zum [Steuern](
+https://community.symcon.de/t/modul-beta-hoymiles-modulwechselrichter-mit-opendtu/130965)
+des Wechselrichters verwenden.
+
+{:style="clear:both"}
+
+[![Bild: ESP und RS485 für Soyosource](
+ESP8266_Rs485_Modul2.png){:.left width="400"}](
+https://github.com/KlausLi/Esp-Soyosource-Controller)
+Eine
+[etwas einfachere Lösung](https://github.com/KlausLi/Esp-Soyosource-Controller)
+mit dreiphasiger Lastmessung ermöglicht der [Soyosource 1200](
+https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
+in der Variante mit Limiter, wobei der mitgelieferte einphasige Lastsensor hier
+nicht verwendet wird. Stattdessen wird ein ESP8266 Mikrocontroller
+an einem RS485-Adapter zur Steuerung mit einer fertigen Software verwendet,
+wobei er die Lastinformation per WLAN von einem Shelly 3EM erhält.
+
+{:style="clear:both"}
+
+Ohne eigene Programmierung und mit wenig Gebastel kommt man mit dem
+[ready2plugin-Stromwächter](
+https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
+von indielux aus. Der wird auch *Einspeisewächter* genannt, weil er für
+Steckersolargeräte mit oder ohne Speicher eine Nulleinspeisung realisiert.
+Der setzt einen per Modbus RS485 steuerbaren Wechselrichter voraus
+und eine per WLAN angebundene Messung des aktuellen Stromverbrauchs.
+[![Bild: ready2plugin-Stromwächter von indielux](
+ready2plugin-Stromwaechter_indielux.png){:.center}](
+https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
+
+<!-- falsch:
+Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
+Bei einer z.B. auf 600&nbsp;W begrenzten Einspeisung beträgt für die o.g.
+[Balkonanlage mit 1&nbsp;kWh Pufferspeicher und Überschussableitung](#Ladung)
+die Steigerung des Eigenverbrauch durch die Speichernutzung 128&nbsp;kWh auf 588&nbsp;kWh.
+Hier findet nur noch eine minimale Netzeinspeisung von 3&nbsp;kWh statt,
+welche aus ungenutzter Überschussableitung resultiert.
+Allerdings wird die Batterie im Schnitt pro Tag fast zweimal auf- und entladen
+(655 Vollzyklen im Jahr), was neben größerer Degradation
+zu erheblichen Lade- und Speicherverlusten von 39 + 31&nbsp;kWh führt.\
+Eine Erhöhung der nutzbaren Speicherkapazität bringt praktisch nichts,
+und eine Verringerung auf 0,5&nbsp;kWh liefert etwas weniger: 560&nbsp;kWh.
+-->
+<!--
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 1250 -dc -tmy -pass spill 0 -feed lim 600
+
+Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
+Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
+Maximaleinspeisung          =  600 W, max. Entladerate 1 C
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   39 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =   31 kWh durch Speicher-Wirkungsgrad 95%
+PV-Nutzung über Speicher    =  585 kWh
+Zwischenspeicherung         =  655 kWh (nach Ladeverlust)
+Vollzyklen pro Jahr         =  655 der effektiven Kapazität
+
+PV-Eigenverbrauch           =  588 kWh
+Netzeinspeisung             =    2 kWh
+PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
+-->
+<!--
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 2500 -dc -tmy -pass spill 0 -feed lim 600
+Lastprofil-Datei            : Lastprofil_4673_kWh.csv
+Grundlast                   =  184 W
+Maximallast                 =13795 W am 2010-02-26 um 06:55 h
+
+PV-Daten-Datei              : Timeseries_48.215_11.727_SA2_1kWp_crystSi_0_38deg_0deg_2005_2020.csv, enthaltene System-Effizienz 100% wurde übersteuert
+Neigungswinkel, Azimut      = 38°, 0°
+Breitengrad, Längengrad     = 48.215, 11.727
+Simuliertes PV-Jahr         = TMY (2008..2020)
+
+PV-Nominalleistung          =  600 Wp
+Max. PV-Bruttoleistung      =  607 W am TMY (2008..2020)-04-15 um 13:00 h
+PV-Bruttoertrag             =  764 kWh, PV-System-Wirkungsgrad 92%
+Max. PV-Nettoleistung       =  525 W am TMY (2008..2020)-04-15 um 13:00 h
+PV-Nettoertrag              =  660 kWh bei Wechselrichter-Wirkungsgrad 94%
+
+Verbrauch durch Haushalt    = 3000 kWh
+
+Speicherkapazität           = 2500 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
+Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
+Maximaleinspeisung          =  600 W, max. Entladerate 1 C
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   40 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =   31 kWh durch Speicher-Wirkungsgrad 95%
+PV-Nutzung über Speicher    =  590 kWh
+Zwischenspeicherung         =  660 kWh (nach Ladeverlust)
+Vollzyklen pro Jahr         =  330 der effektiven Kapazität
+
+PV-Eigenverbrauch           =  590 kWh
+Netzeinspeisung             =    0 kWh
+PV-Eigenverbrauchsanteil    =   89 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
+-->
+<!--
+TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -capacity 625 -dc -tmy -pass spill 0 -feed lim 600
+
+Speicherkapazität           =  625 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
+Speicher-Umgehung           =    0 W und für Überschuss, max. Laderate 1 C
+Maximaleinspeisung          =  600 W, max. Entladerate 1 C
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   33 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =   26 kWh durch Speicher-Wirkungsgrad 95%
+PV-Nutzung über Speicher    =  495 kWh
+Zwischenspeicherung         =  554 kWh (nach Ladeverlust)
+Vollzyklen pro Jahr         =  1109 der effektiven Kapazität
+
+PV-Eigenverbrauch           =  560 kWh
+Netzeinspeisung             =   42 kWh
+PV-Eigenverbrauchsanteil    =   85 % des Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
+-->
 
 ### Inselanlage (mit Batteriespeicherung) {#Inselanlage}
 
@@ -4900,7 +4947,7 @@ welche über ein Energiemessgerät dem Hybridgerät mitgeteilt wird.
 
 Es gibt sogar Hybridgeräte, die neben der Nutzungsart für eine Inselanlage
 (also die netzunabhängige Stromversorgung) auch den Netzparallelbetrieb
-mit lastabhängiger Strompufferung ermöglichen, etwa den
+mit [lastabhängiger Strompufferung](#Regelungsstrategien) ermöglichen, etwa den
 [SolarPower24 Infinisolar V](
 https://gbc-solino.cz/headpage-de/hybrid-wechselrichter-de/infini-solar-de/).
 Dieser kostet allerdings (zusammen mit einem für die lastabhängige Steuerung
