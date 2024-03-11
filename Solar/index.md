@@ -3657,14 +3657,21 @@ was dann Notstrom-Fähigkeit mit Batterie-gepufferter Sonnenenergie bietet.
 ![Bild: SSG-mit-DC-gekoppeltem-Speicher.png](
 SSG-mit-DC-gekoppeltem-Speicher.png){:.right width="798"}
 
-Weil die Batteriespannung recht hoch ist und die Solar-Laderegler bis zu 100&nbsp;V
-Eingangspannung vertragen, können (und müssen) die PV-Module in Reihe
-geschaltet werden, und die Kabelquerschnitte können auch auf DC-Seite
-relativ gering bleiben, ohne dass es zu nennenswerten Leitungsverlusten kommt.\
+Weil die Batteriespannung für eine Balkonanlage recht hoch ist
+und die Solar-Laderegler bis zu 100&nbsp;V Eingangspannung vertragen,
+können und müssen die PV-Module in Reihe geschaltet werden,
+und die Kabelquerschnitte können auch auf DC-Seite relativ gering bleiben,
+ohne dass es zu nennenswerten Leitungsverlusten kommt.\
 Die hier beschriebene Lösung wäre aber auch basierend auf einem 24&nbsp;V Speicher
 gut möglich, zumal der Eingangspannungs-Bereich des verwendeten Wechselrichters
 auch den Bereich um 24&nbsp;V umfasst und die Kabel zwischen Laderegler,
 Speicher und Wechselrichter kurz gehalten werden können.
+
+Damit die Batterien auch bei Minusgraden geladen werden können,
+kommt hier eine [Pflanzen-Heizmatte wie diese](
+https://www.ebay.de/itm/354441767526?var=623842819621Plfan) zum Einsatz, welche
+man dann allerdings noch temperaturgeregelt mit Strom versorgt werden muss.
+Einfacher wäre, eine Wärmematte mit verbundenem Thermostat zu verwenden.
 
 Die Regelung sollte nach den Optimierungs-Prinzipien erfolgen, die im Abschnitt
 zu [Regelungsstrategien für Stromspeicher](#Regelungsstrategien) erklärt sind.
@@ -3717,10 +3724,7 @@ platzieren. Damit die Anlage dann auch bei Minustemperaturen nutzbar ist, wo
 [Lithium-basierte Batterien nicht geladen werden sollten](
 https://www.ipowerqueen.de/blogs/batteriewissenschaft/warum-ist-der-schutz-vor-niedrigen-temperaturen-fur-lithiumbatterien-wichtig),
 kann man den Speicher mit einer Heizung versehen und gegen Kälte isolieren.
-Dazu könnte man eine Pflanzen-Heizmatte wie
-[diese](https://www.ebay.de/itm/354441767526?var=623842819621Plfan), welche
-man dann allerdings noch temperaturgeregelt mit etwas Strom versorgen muss.
-Daher besser gleich eine Wärmematte mit Thermostat, welche es auch schon
+Dafür bietet sich Wärmematte mit Thermostat an, welche es auch schon
 [für 15€ gibt](https://www.amazon.de/KIPIDA-Reptilienheizmatte-Einstellbar-Reptilienw%C3%A4rmematte-Temperaturregelung/dp/B0CG3FCJ9H).
 Die Heizmatte braucht nur dann aktiv sein, wenn bei unter 0°C die Sonne scheint.
 
