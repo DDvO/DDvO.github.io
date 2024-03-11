@@ -2921,8 +2921,8 @@ Modulen mit 850&nbsp;Wp Nennleistung und typischen Wirkungsgraden, der
 eine Pufferbatterie mit 1&nbsp;kWh effektiv nutzbarer Kapazität hinzugefügt wurde.
 Dazu passt sehr gut eine 12,8&nbsp;V 100&nbsp;Ah LiFePO4-Batterie,
 also mit nominell 1,28&nbsp;kWh Kapazität, denn davon muss man ohnehin
-mindestens 90% für eine gesunde Entladetiefe abziehen, und nochmal
-ungefähr 90% für die durchschnittliche Degradation durch Alterungseffekte. Die
+mindestens 90% für eine gesunde Entladetiefe abziehen, und nochmal ungefähr 90%
+für die durchschnittliche Degradation durch Alterungseffekte etc. Die
 Eigenverbrauch-Ergebnisse wurden mit dem [o.g. SolBatSim](#SolBatSim) berechnet,
 unter Annahme einer (effizienteren) [DC-Kopplung](#Ladung)
 mit Lade-Wirkungsgrad 94% und Speicherungs-Wirkungsgrad 95%.
@@ -2931,9 +2931,9 @@ und für die Wechselrichtung (auch bei Entladung aus der Batterie) 94%.
 
 Bei [optimaler Lade-/Entlageregelung, s.u.](#Regelungsstrategien),
 die leider nur schwer zu realisieren ist,
-gibt es keinen Verlust durch Überlauf des Speichers. Durch die Verwendung
-des Speichers lässt sich der jährliche Eigenverbrauch von 623 auf 835&nbsp;kWh
-und der Eigenverbrauchsanteil von 67 auf 84% des Nettoertrags steigern.
+gibt es keinen Verlust durch Überlauf des Speichers. Durch die Verwendung des
+Speichers lässt sich der jährliche Eigenverbrauch von ca. 610 auf 8100&nbsp;kWh
+und der Eigenverbrauchsanteil von ca. 66 auf 83% des Nettoertrags steigern.
 Für die Auslegung des Speichers sehr interessant ist Folgendes:
 Eine Erhöhung der nutzbaren Speicherkapazität auf 2&nbsp;kWh würde mit 891&nbsp;kWh
 nur eine relativ geringe weitere Steigerung des Eigenverbrauchs bringen,
@@ -2955,42 +2955,42 @@ erhältliche Lösungen ([siehe unten](#SSG-Speicher)) sind bislang zu teuer.
 <!--und auch eine Annäherung daran unverhältnismäßig aufwendig.-->
 
 <!--
-./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92 -tmy -dc -max_charge 100 -max_discharge 100 -capacity 1000
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92 -tmy
+Lastprofil-Datei            : Lastprofil_17_teils_31.csv
 Nächtliche Durchschnittslast=  189 W von 0 bis 6 Uhr
-Minimallast (Grundlast)     =   10 W am *-06-15 um 05:22
-Maximallast                 =11028 W am *-12-03 um 14:44
-
-PV-Daten-Datei              : Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv
-Neigungswinkel, Azimut      = 35°, 0°
-Breitengrad, Längengrad     = 48.215, 11.727
-Simuliertes PV-Jahr         : TMY (2008..2020)
 
 PV-Nennleistung             =  850 Wp
-Max. PV-Bruttoleistung      =  857 W am TMY-04-15 um 13h
-PV-Bruttoertrag             = 1081 kWh
-PV-DC-Ertrag                =  995 kWh, PV-System-Wirkungsgrad 92%
-PV-Nettoertrag              =  935 kWh bei Wechselrichter-Wirkungsgrad 94%
-Max. PV-Nettoleistung       =  742 W am TMY-04-15 um 13h
+Max. PV-Bruttoleistung      =  920 W am TMY-03-23 um 12h
+PV-Bruttoertrag             = 1062 kWh
+PV-DC-Ertrag                =  977 kWh, PV-System-Wirkungsgrad 92%
+PV-Nettoertrag              =  918 kWh bei Wechselrichter-Wirkungsgrad 94%
+Max. PV-Nettoleistung       =  796 W am TMY-03-23 um 12h
 
 Verbrauch                   = 3000 kWh über ein Jahr
+PV-Eigenverbrauch           =  610 kWh
+Netzeinspeisung             =  309 kWh
+PV-Eigenverbrauchsanteil    =   66 % des PV-Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 
-Speicherkapazität           = 1250 Wh mit max. Ladehöhe 90%, max. Entladetiefe 90%, DC-gekoppelt
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92 -tmy -dc -max_charge 100 -max_discharge 100 -capacity 1000
+
+Speicherkapazität           = 1000 Wh mit max. Ladehöhe 100%, max. Entladetiefe 100%, DC-gekoppelt
 Optimale Ladestrategie (nicht gebrauchte Energie), max. Laderate 1 C
 Optimale Entladestrategie (so viel wie gebraucht), max. Entladerate 1 C
 Verlust durch Überlauf      =    0 kWh
-Ladeverlust                 =   15 kWh durch Lade-Wirkungsgrad 94%
-Speicherverlust             =   12 kWh durch Speicher-Wirkungsgrad 95%
-Verlust während Entladung   =   58 kWh durch Entlade-WR-Wirkungsgrad 94%
-PV-Nutzung über Speicher    =  212 kWh
+Ladeverlust                 =   14 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =   11 kWh durch Speicher-Wirkungsgrad 95%
+Verlust während Entladung   =   57 kWh durch Entlade-WR-Wirkungsgrad 94%
+PV-Nutzung über Speicher    =  201 kWh
 Netzeinspeisung via Speicher=    0 kWh
-max. Ladehöhe               = 1125 Wh am TMY-01-12 um 14:14
-Zwischenspeicherung         =  237 kWh nach Ladeverlust
-Vollzyklen                  =  237 (der effektiven Kapazität 1000 Wh)
+max. Ladehöhe               = 1000 Wh am TMY-01-15 um 14:28
+Zwischenspeicherung         =  225 kWh nach Ladeverlust
+Vollzyklen                  =  225 (der effektiven Kapazität 1000 Wh)
 
-PV-Eigenverbrauch           =  835 kWh
-Netzeinspeisung             =   75 kWh
-PV-Eigenverbrauchsanteil    =   84 % des PV-DC-Ertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   28 % des Verbrauchs (Autarkiegrad)
+PV-Eigenverbrauch           =  810 kWh
+Netzeinspeisung             =   84 kWh
+PV-Eigenverbrauchsanteil    =   83 % des PV-DC-Ertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   27 % des Verbrauchs (Autarkiegrad)
 -->
 
 Wenn man dieselben PV-Daten verwendet wie der [Stecker-Solar-Simulator der
@@ -3481,43 +3481,45 @@ und typischen Wirkungsgraden.
 Der besseren Vergleichbarkeit halber wurde hier generell eine Speicherkapazität
 von 1600&nbsp;Wh (mit 90% Entladetiefe) wie beim Anker Solix vorausgesetzt
 &mdash; ohnehin fällt sie kaum ins Gewicht.
-* 621&nbsp;kWh Eigenverbrauch als Vergleichswert nur mit PV ohne Speicher-Nutzung
-* 864&nbsp;kWh Eigenverbrauch (bei 1000&nbsp;Wh 822&nbsp;kWh, bei 2000&nbsp;Wh 881&nbsp;kWh)
+* 610&nbsp;kWh Eigenverbrauch als Vergleichswert nur mit PV ohne Speicher-Nutzung
+* 840&nbsp;kWh Eigenverbrauch (bei 1000&nbsp;Wh 800&nbsp;kWh, bei 2000&nbsp;Wh 860&nbsp;kWh)
   bei optimaler lastabhängiger Regelung
-* 730&nbsp;kWh Eigenverbrauch bei Anker Solix Strategie mit optimaler FLLR, hier 180&nbsp;W;\
-  mit diesen Parametern werden 14&nbsp;kWh PV-Nettoleistung verworfen
-* 746&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung
+* 710&nbsp;kWh Eigenverbrauch bei Anker Solix Strategie mit optimaler FLLR, hier 160&nbsp;W;\
+  mit diesen Parametern werden 10&nbsp;kWh PV-Nettoleistung verworfen
+* 725&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung
   mit für diesen Fall optimaler Zielleistung, hier 200&nbsp;W
 
 Wenn man eine optimale lastabhängige Lade- und Entladestrategie nutzen kann,
-ist das Ergebnis mit Abstand am besten: ein Gewinn von gut 240&nbsp;kWh im Jahr.\
+ist das Ergebnis mit Abstand am besten: ein Gewinn von etwa 230&nbsp;kWh im Jahr.\
 Selbst mit mehreren geschickt eingesetzten Smart Plugs oder einer ausgefeilten
 Uhrzeit-abhängigen Steuerung wird man kaum an diesen Maximalwert herankommen.\
 Ansonsten ist es bei konstanter Zielleistung selbst mit günstigster Wahl dieses
 Parameters und mit Bypass-Funktion ziemlich egal, welche Strategie im Detail
-verfolgt wird &mdash; man erhält nur magere 110 bis 125&nbsp;kWh Gewinn pro Jahr.
+verfolgt wird &mdash; man erhält nur magere 100 bis 125&nbsp;kWh Gewinn pro Jahr.
 
-Allerdings bringt selbst ein Gewinn von 240&nbsp;kWh bei 35&nbsp;ct/kWh nur 84€ Ersparnis
+Allerdings bringt selbst ein Gewinn von 230&nbsp;kWh bei 35&nbsp;ct/kWh nur 80€ Ersparnis
 pro Jahr. Damit kann sich so ein Gerät, das je nach Speichergröße
 (und Zusatzkosten wie für einen Shelly 3EM) ungefähr 1000€ kostet
 und hoffentlich gut 10 Jahre Lebensdauer hat, kaum amortisieren.\
+Noch schlechter sieht es für das Anker Solix aus, denn es ermöglicht mit seiner
+ungünstigen Regelung eine Ersparnis von realistisch nur etwa 35€ pro Jahr.\
 Sprich, alle diese Lösungen sind einfach zu teuer, um wirklich rentabel zu sein.
 
 <!--
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy
 Nächtliche Durchschnittslast=  189 W von 0 bis 6 Uhr
-PV-Eigenverbrauch           =  621 kWh
+PV-Eigenverbrauch           =  608 kWh
 
 https://www.mydealz.de/comments/permalink/42396908
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 # EcoFlow oder Maxxicharge 1600 Wh opt
-PV-Eigenverbrauch           =  864 kWh   (bei 1000 Wh 822 kWh, 2000 Wh 881 kWh)
+PV-Eigenverbrauch           =  843 kWh   (bei 1000 Wh 798 kWh, 2000 Wh 861 kWh)
 
-./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 180 -feed excl 100  # Anker Solix
-Verworfene PV-Leistung      =   14 kWh
-PV-Eigenverbrauch           =  730 kWh   (bei 2000 Wh 788 kWh)
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 160 -feed excl 100  # Anker Solix
+Verworfene PV-Leistung      =   10 kWh
+PV-Eigenverbrauch           =  710 kWh   (bei 2000 Wh 716 kWh)
 
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 200 -feed comp 200   # Konstanteinspeisung
-PV-Eigenverbrauch           =  746 kWh   (bei 2000 Wh 755 kWh)
+PV-Eigenverbrauch           =  726 kWh   (bei 2000 Wh 737 kWh)
 -->
 <!--
 
@@ -3529,7 +3531,7 @@ https://www.energiemagazin.com/zendure-solarflow-balkonkraftwerk-speicher/
 
 Anker Solix
 https://www.mydealz.de/comments/permalink/42351507
-
+https://www.mydealz.de/comments/permalink/46690728
 
 Habe jetzt mal meinen SolBatSim aufgebohrt, um auch diese Kompromiss-Strategie simulieren zu können.
 
