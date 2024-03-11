@@ -3630,13 +3630,18 @@ Die (Lade- und) Entladeregelung wird auf irgendeine Weise programmiert und
 muss ständig laufen, z.B. auf einen etwas stärkeren Einplatinen-Computer
 wie Raspberry Pi 4 oder nebenbei auf einem Home-Server. Meist erfolgt
 die Programmierung unter Zuhilfenahme einer Heimautomatisierungs-Software.
+
 [Home Assistant](https://www.home-assistant.io/) ist da am bekanntesten.
 Das bietet eine recht hübsche und flexible grafische Bedienungs-Oberfläche,
 sowie eine relativ einfache Anbindung von Hardware-Komponenten z.B. von Shelly,
 aber hat eine grauenhafte YAML -und Python-basierte Programmierumgebung mit nur
 teilweise hilfreicher Dokumentation und schlechter Debugging-Unterstützung.
+
 Wesentlich angenehmer programmierbar ist wohl die Perl-basierte „Freundliche
 Hausautomation und Energie-Messung“ [(FHEM)](https://fhem.de/fhem_DE.html).
+
+Weitere Möglichkeiten sind der [iobroker](https://www.iobroker.net/?lang=de#de/)
+und das Projekt [Solaranzeige.de](https://solaranzeige.de/) für Raspberry Pi.
 
 
 ##### Beispiel für DC-gekoppelten Speicher {#SSG-DC-gekoppelt}
@@ -4197,20 +4202,20 @@ lastabhängig zu machen und damit eine Nulleinspeisung zu realisieren.
 [![Bild: Y&H Sun-1000 GTIL Netzwechselrichter mit Limiter.png](
 Sun-1000_GTIL_Wechselrichter_mit_Limiter.png){:.right width="500"}](
 https://www.youtube.com/watch?v=jPgWE-qQ3SE&t=1012s)
-Ein Netzwechselrichter mit lastbasierter Strom-Begrenzungs-Regelung,
+Ein Netzwechselrichter mit eingebauter lastbasierter Strom-Begrenzungs-Regelung,
 engl. _Grid Tie Inverter with Limiter (GTIL)_ wie der [Sun GTIL](
 https://de.aliexpress.com/item/32840070519.html) von Y&H
 oder ein ähnliches Gerät von [Soyosource](
 https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
 <!--, gibt es mit 1000 und 2000&nbsp;W Leistung -->
 ermöglicht eine einphasige Nulleinspeisung ohne Basteln und Programmieren.
-Man muss nur den Limiter-Sensor im Unterverteiler (Sicherungskasten) an der Phase anbringen,
-über die die Einspeisung laufen soll. Dann lässt sich der Wechselrichter so
-einstellen, dass er maximal so viel einspeist wie zum Ausgleich
-der aktuellen Last auf dieser Phase benötigt wird,
+Man muss nur den Limiter-Sensor im Unterverteiler (Sicherungskasten)
+an der Phase anbringen, über die die Einspeisung laufen soll.
+Dann lässt sich der Wechselrichter so einstellen, dass er maximal so viel
+einspeist wie zum Ausgleich der aktuellen Last auf dieser Phase benötigt wird,
 wie [von Dimitri vorgeführt](https://youtu.be/jPgWE-qQ3SE).
 Für dreiphasige Anwendung ist gedacht, je Phase ein solches Gerät einzusetzen,
-was sich natürlich nur für größere Anlagen lohnt. Man kann sich aber auch
+was sich eher nur für größere Anlagen lohnt. Man kann sich aber auch
 einen 3-Phasen-Sensor für ein Gerät zusammenstricken, etwa wie [hier](
 https://www.photovoltaikforum.com/thread/193693-sun1000-gti-nulleinspeisung-mit-3-phasen-limiter/?pageNo=1)
 beschrieben.
@@ -4223,7 +4228,8 @@ lässt sich die Einspeisung abhängig vom aktuellen Stromverbrauch
 (mit einer gewissen Verzögerung) etwa über einen mit einer Heimautomatisierung
 entsprechend programmierten Raspberry Pi so steuern,
 dass eine Nulleinspeisung erreicht wird.
-Dazu gibt es eine vielseitige [Software](https://solaranzeige.de/).
+Mehr zum Thema Automatisierungssoftware im Abschnitt zur
+[Implementierung einer Speicher-Regelung](#Regelungsimplementierung).
 
 [![Bild: Balkonsolar mit Akku - AkkuDoktor](
 Balkonsolar_AkkuDoktor.png){:.center}](
@@ -4234,17 +4240,24 @@ https://www.idealo.de/preisvergleich/ProductCategory/10314.html?q=DPM8616),
 wobei die Regelung den aktuellen Verbrauch über einen
 [„Volkszähler“](https://www.volkszaehler.org/) mitgeteilt bekommt, wie in einem
 [Video von Andreas Schmitz](https://www.youtube.com/watch?v=yOcoux9IbzM)
-vorgeführt.
+vorgeführt, aber das diente eigentlich nur Demonstration der Idee.
 
 {:style="clear:both"}
+
+Inzwischen recht weit verbreitet ist,
+einen Hoymiles Wechselrichter zu verwenden und über sein
+[DTU-Interface](https://www.hoymiles.com/de/products/microinverter/dtu/)
+(*Datenübertragungseinheit*,
+engl. *data transfer unit* oder allgemein *telemetry gateway*)
+die nicht-permanente Limitierung seiner Ausgangsleistung zu regeln.
+Hierbei ist es wichtig, nicht die permanente Limitierung zu verwenden, weil das
+mit der Zeit den dafür intern verwendenten Flash-Speicher schädigen würde.
 
 [![Bild: DTUs im Weckglas](
 DTUs_im_Weckglas.jpg){:.right width="330"}](
 https://blog.helmutkarger.de/balkonkraftwerk-teil-8-opendtu-und-ahoydtu-fuer-hoymiles-wechselrichter/)
 An einem Netzwechselrichter der Hoymiles HM-Serie und für manche TSUN-Geräte
-kann man anstelle einer teuren proprietären Datenübertragungseinheit
-[Hoymiles DTU](https://www.hoymiles.com/de/products/microinverter/dtu/)
-(engl. *data transfer unit* oder allgemein *telemetry gateway*) die offene
+kann man anstelle der teuren proprietären DTU die offene
 Bastel-Lösung [OpenDTU](https://github.com/roastedelectrons/HoymilesOpenDTU)
 bzw. [AhoyDTU](https://ahoydtu.de/) verwenden. Für beide Varianten gibt es
 schöne Anleitungen wie [diese](
@@ -4261,13 +4274,28 @@ der PV-Ertrags- und Geräte- Daten als auch zum [Steuern](
 https://community.symcon.de/t/modul-beta-hoymiles-modulwechselrichter-mit-opendtu/130965)
 des Wechselrichters verwenden.
 
+Leider ist die Reaktionszeit eines Hoymiles-WR auf Änderungen des
+(relativen oder absoluten) Limits recht lang und auch noch sehr ungleichmäßig:
+er braucht bis zu ca. 15 Sekunden,
+um den eingestellten Wert (hoffentlich) zu erreichen.
+Und wenn man zu schnell (z.B. nach 3 Sekunden) wieder neue Limit-Werte setzt,
+verhält er sich teils chaotisch.
+So ist durch seine Trägheit keine flinke und exakte Regelung möglich.\
+Zudem kommt es beim Betrieb an einer 24&nbsp;V Batterie bei höheren Limit-Werten
+(also im oberen Leistungsbereich) teils zu [groben Abweichungen vom Sollwert](
+https://www.photovoltaikforum.com/thread/221194-hm-400-an-batterie-limitierung-%C3%BCber-opendtu-eigenartig/?postID=3660691#post3660691).
+Um Feedback über die tatsächliche aktuelle Ausgangsleistung des Hoymiles zu
+erhalten, sollte man da auch nicht den über die DTU gelieferten Daten trauen,
+weil sie besonders bei höheren Werten stark von der Realität abweichen.
+Stattdessen kann man sehr gut z.B. einen Shelly Plus 1PM verwenden,
+welcher verlässliche Daten im Sekundentakt bietet.
+
 {:style="clear:both"}
 
 [![Bild: ESP und RS485 für Soyosource](
 ESP8266_Rs485_Modul2.png){:.left width="400"}](
 https://github.com/KlausLi/Esp-Soyosource-Controller)
-Eine
-[etwas einfachere Lösung](https://github.com/KlausLi/Esp-Soyosource-Controller)
+Eine [alternative Lösung](https://github.com/KlausLi/Esp-Soyosource-Controller)
 mit dreiphasiger Lastmessung ermöglicht der [Soyosource 1200](
 https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
 in der Variante mit Limiter, wobei der mitgelieferte einphasige Lastsensor hier
@@ -4656,6 +4684,7 @@ Zum Beispiel schreibt der Hoymiles-Support zum maximalen Eingangsstrom eines
 HM-600:
 > 1. Bedeutet das, dass egal wieviel Strom anliegt nur 11,5&nbsp;Ampere verarbeitet / abgenommen werden können.
 > 2. Lassen Sie bitte den Strom nicht über 15A ansteigen, da dies den Wechselrichter beschädigen kann.
+
 Wer da auf der sicheren Seite sein will,
 kann je Eingang eine 15&nbsp;A Sicherung dazwischenschalten.
 
@@ -4876,6 +4905,17 @@ Zur Dimensionierung von Solar-Wechselrichtern gibt es
 z.B. [hier und auf den Folgeseiten](
 https://photovoltaikbuero.de/pv-know-how-blog/ist-bei-der-wechselrichterauslegung-zu-beachten-kriterium-1/)
 ausführliche Hinweise.
+
+Der [Wirkungsgrad eines Wechselrichters](
+https://www.energie-experten.org/erneuerbare-energien/photovoltaik/wechselrichter/wirkungsgrad)
+ist meist deutlich geringer als vom Hersteller angegeben.
+Hoymiles nennt einen nach CEC gewichteten Wert von 96,50%,
+aber der ist nicht nur irreführend, sondern schlicht übertrieben.\
+<!-- https://www.photovoltaikforum.com/thread/182721-wirkungsgrad/ -->
+Mein HM-300 kommt (allerdings nur mit einfachen Geräten nachgemessen)
+​im Durchschnitt der zehn Drosselungsstufen 10, 20, ... 100% auf einen
+realen Wert von 92,9%.  Bei unter 10% der Nennleistung sind es um die 80%.\
+Über die DTU (data transfer unit) bekommt man ziemlich konstant 95,5% geliefert.
 
 Im Gegensatz zu Solarkabeln ([siehe oben](#Anschluss)) können 230&nbsp;V-Kabel
 zwischen Netzwechselrichter und Steckdose durchaus länger sein (z.B. 5 - 10&nbsp;m),
