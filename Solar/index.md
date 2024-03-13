@@ -2380,9 +2380,20 @@ Wenn jedoch durch sog.
 sichergestellt ist, dass kein lokal erzeugter Strom ins externe Netz fließt,
 können Steckdosen-Anlagen [auch z.B. mit 1800&nbsp;W Leistung](
 https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/)
-normgerecht betrieben werden. Dafür ist inzwischen eine fertige Lösung
-von indielux erhältlich, der [ready2plugin-Stromwächter](
-https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/).
+normgerecht betrieben werden.
+
+[![Bild: ready2plugin-Stromwächter von indielux](
+ready2plugin-Stromwaechter_indielux.jpg){:.right}](
+https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
+Für die Nulleinspeisung gibt es inzwischen eine spezielle Lösung zu kaufen,
+nämlich den [indielux ready2plugin Stromwächter](https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/),
+der allerdings etwa 400€ kostet.
+Er wird auch *Einspeisewächter* genannt, weil er für Steckersolargeräte
+<!-- mit oder ohne Speicher --> eine Nulleinspeisung realisiert und damit
+nebenbei dafür sorgt, dass nicht mehr als 600 bzw. 800&nbsp;VA eingespeist werden.
+Der Stromwächter ist inzwischen mit vielen steuerbaren Wechselrichtern
+kompatibel und setzt eine per RS485 mit Modbus oder WLAN angebundene Messung des
+aktuellen Netz-Strombezugs z.B. mit einem Shelly 3EM voraus.
 
 Man kann durchaus annehmen, dass Beschränkungen auch dadurch motiviert sind,
 dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
@@ -3419,7 +3430,7 @@ nicht ortsfeste PV-Anlagen offenbar nicht angemeldet werden müssen.
 ![Bild: Tentek_Tribune_EMS_Controler](
 Tentek_Tribune_EMS_Controler.png){:.right width="300"}
 
-Ebenfalls erst ab März 2024 lieferbar ist der [Tentek Tribune EMS Controller](
+Seit März 2024 lieferbar ist der [Tentek Tribune EMS Controller](
 https://www.notebookcheck.com/Balkonkraftwerke-effizient-nutzen-Neues-Dreiphasen-Energie-Steuersystem-von-Tentek-ist-vielseitig-und-anpassungsfaehig.775205.0.html)
 bzw. baugleich die [Anfuote EMS-Steuerung](https://www.solarpower.anfuote.com/).
 
@@ -4307,16 +4318,8 @@ wobei er die Lastinformation per WLAN von einem Shelly 3EM erhält.
 
 {:style="clear:both"}
 
-Ohne eigene Programmierung und mit wenig Gebastel kommt man mit dem
-[ready2plugin-Stromwächter](
-https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
-von indielux aus. Der wird auch *Einspeisewächter* genannt, weil er für
-Steckersolargeräte mit oder ohne Speicher eine Nulleinspeisung realisiert.
-Der setzt einen per Modbus RS485 steuerbaren Wechselrichter voraus
-und eine per WLAN angebundene Messung des aktuellen Stromverbrauchs.
-[![Bild: ready2plugin-Stromwächter von indielux](
-ready2plugin-Stromwaechter_indielux.png){:.center}](
-https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
+Ohne eigene Programmierung und Gebastel kommt man mit
+dem [Tentek Tribune EMS](#Tentek) aus.
 
 <!-- falsch:
 Die Maximalleistung der bedarfsgerechten Einspeisung sollte möglichst hoch sein.
