@@ -2964,19 +2964,14 @@ die leider nur schwer zu realisieren ist,
 gibt es keinen Verlust durch Überlauf des Speichers. Durch die Verwendung des
 Speichers lässt sich der jährliche Eigenverbrauch von ca. 610 auf 8100&nbsp;kWh
 und der Eigenverbrauchsanteil von ca. 66 auf 83% des Nettoertrags steigern.
-Für die Auslegung des Speichers sehr interessant ist Folgendes:
-Eine Erhöhung der nutzbaren Speicherkapazität auf 2&nbsp;kWh würde mit 891&nbsp;kWh
-nur eine relativ geringe weitere Steigerung des Eigenverbrauchs bringen,
-und *schon eine effektive Speicherkapazität auf 0,5&nbsp;kWh brächte*
-einen Eigenverbrauch von 775&nbsp;kWh, also *einen Eigenverbrauchsanteil von 78%*.\
-Der PV-Bruttoertrag von 1081&nbsp;kWh bzw. Nettoertrag 935&nbsp;kWh wird also gut genutzt,
-bei 1&nbsp;kWh nutzbarer Kapazität ist die Netzeinspeisung nur noch 75&nbsp;kWh, der Rest
-sind kleine Verluste des Ladereglers und der Speicherbatterie von 15 + 12&nbsp;kWh.
-Der 1&nbsp;kWh Speicher ist mit ca. 237 Vollzyklen pro Jahr nur mäßig belastet.
+Der PV-Bruttoertrag von 1062&nbsp;kWh bzw. Nettoertrag 918&nbsp;kWh wird also
+gut genutzt; die Netzeinspeisung beträgt nur noch 75&nbsp;kWh, der Rest sind
+kleine Verluste des Ladereglers und der Speicherbatterie von 14 + 11&nbsp;kWh.
+Der 1&nbsp;kWh Speicher ist mit ca. 225 Vollzyklen pro Jahr nur mäßig belastet.
 Bei 30&nbsp;ct/kWh Strompreis ergibt sich durch die Hinzunahme des Speichers
-eine jährliche Stromkosten-Einsparung von ca. 64€.
+eine jährliche Stromkosten-Einsparung von ca. 60€.
 
-Selbst wenn die dafür nötigen Geräte günstig für z.B. 640€ erworben werden,
+Selbst wenn die dafür nötigen Geräte günstig für z.B. 600€ erworben werden,
 würde die Amortisationszeit für die Aufrüstung mindestens 10 Jahre betragen --
 eher länger. Allerdings kann es sein, dass in dieser Zeitspanne bereits ein
 Teil der nötigen Geräte erneuert werden muss. Vor Allem aber ist für kleine
@@ -2998,6 +2993,8 @@ Max. PV-Nettoleistung       =  796 W am TMY-03-23 um 12h
 
 Verbrauch                   = 3000 kWh über ein Jahr
 PV-Eigenverbrauch           =  610 kWh
+PV-Überschuss               =  309 kWh
+Max. PV-Überschuss          = 4.05 kWh am TMY-03-24
 Netzeinspeisung             =  309 kWh
 PV-Eigenverbrauchsanteil    =   66 % des PV-Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
@@ -3272,30 +3269,104 @@ https://www.wegatech.de/ratgeber/photovoltaik/stromspeicher/speicher-kennzahlen/
 eine gute Erklärung der wichtigsten Begriffe in diesem Zusammenhang,
 z.B. der *Entladetiefe* und der *Zyklenanzahl*.
 
+Die meisten Nutzer legen ihren PV-Speicher zu groß aus,
+was unnötigen Materialaufwand und überzogene Kosten verursacht.
+Die effektiv nutzbare Kapazität des Speichers sollte nur so groß sein, dass
+damit der typische PV-Überschuss eines ertragreichen Sonnentages aufgenommen
+und diese Strommenge bis zum nächsten Morgen sinnvoll genutzt werden kann.
+
+Für das [o.g. Balkonkraftwerk-Beispiel](#Batteriepuffer) beträgt der tägliche
+PV-Überschuss maximal etwa 4&nbsp;kWh und im Jahres-Durchschnitt 0,85&nbsp;kWh.
+An ca. 130 Tagen beträgt er über 1&nbsp;kWh, an nur 50 Tagen über 2&nbsp;kWh,
+und sogar nur an 5 Tagen über 3&nbsp;kWh.
+Erst ab effektiv ca. 4&nbsp;kWh Speicherkapazität gibt es ein paar Tage,
+wo der gespeicherte Strom über Mitternacht reicht.\
+Mit effektiv 1&nbsp;kWh Speicherkapazität liegt bei optimaler Regelung
+die Steigerung des jährlichen Eigenverbrauchs bei 200&nbsp;kWh.
+Eine Erhöhung der nutzbaren Speicherkapazität auf 2&nbsp;kWh bringt nur noch
+etwa 60&nbsp;kWh weitere Steigerung und lohnt damit den Speicher-Aufpreis nicht.
+Hingegen brächte schon eine effektive Speicherkapazität auf 0,5&nbsp;kWh eine
+Steigerung des Eigenverbrauchs von 140&nbsp;kWh.
+
+Deutlich interessanter wäre die Speichernutzung bei Verdoppelung der PV-Leistung
+auf 1700&nbsp;Wp. Dann brächte 1&nbsp;kWh Speicherkapazität bei optimaler
+Regelung eine Steigerung des jährlichen Eigenverbrauchs von 300&nbsp;kWh,
+und bei 2&nbsp;kWh effektiver Kapazität immerhin nochmal 170&nbsp;kWh mehr.
+
+<!--
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1700 -peff 92 -tmy -dc -max_charge 100 -max_discharge 100 -capacity 2000
+Lastprofil-Datei            : Lastprofil_17_teils_31.csv
+Nächtliche Durchschnittslast=  189 W von 0 bis 6 Uhr
+Minimallast (Grundlast)     =   10 W am *-06-15 um 05:22
+Maximallast                 =11028 W am *-12-03 um 14:44
+
+PV-Daten-Datei              : Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv
+Neigungswinkel, Azimut      = 35°, 0°
+Breitengrad, Längengrad     = 48.215, 11.727
+Simuliertes PV-Jahr         : TMY (2008..2020)
+
+PV-Nennleistung             = 1700 Wp
+Max. PV-Bruttoleistung      = 1841 W am TMY-03-23 um 12h
+PV-Bruttoertrag             = 2124 kWh
+PV-DC-Ertrag                = 1954 kWh, PV-System-Wirkungsgrad 92%
+PV-Nettoertrag              = 1837 kWh bei Wechselrichter-Wirkungsgrad 94%
+Max. PV-Nettoleistung       = 1592 W am TMY-03-23 um 12h
+
+Verbrauch                   = 3000 kWh über ein Jahr
+
+Speicherkapazität           = 2000 Wh mit max. Ladehöhe 100%, max. Entladetiefe 100%, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie), max. Laderate 1 C
+Optimale Entladestrategie (so viel wie gebraucht), max. Entladerate 1 C
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   33 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =   26 kWh durch Speicher-Wirkungsgrad 95%
+Verlust während Entladung   =    0 kWh durch Entlade-WR-Wirkungsgrad 94%
+PV-Nutzung über Speicher    =  468 kWh
+Netzeinspeisung via Speicher=    0 kWh
+max. Ladehöhe               = 2000 Wh am TMY-01-10 um 13:53
+Zwischenspeicherung         =  525 kWh nach Ladeverlust
+Vollzyklen                  =  262 (der effektiven Kapazität 2000 Wh)
+
+PV-Eigenverbrauch           = 1310 kWh
+PV-Überschuss               =  995 kWh
+Max. PV-Überschuss          = 9.48 kWh am TMY-03-24
+Netzeinspeisung             =  471 kWh
+PV-Eigenverbrauchsanteil    =   67 % des PV-DC-Ertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   44 % des Verbrauchs (Autarkiegrad)
+--->
+
+Eine Stromspeicherung über mehrere Tage hinweg lohnt sich nicht &mdash; außer
+man will oder muss (etwa bei mobiler Nutzung) längere Zeiten ohne Stromanschluss
+überbrücken. Wer mit seiner Speicherbatterie zusätzlich eine
+(Not-)Stromversorgung über eine [Inselanlage](#Inselanlage) realisieren möchte,
+wird die Kapazität je nach Anwendungsszenario entsprechend größer wählen.
+
 Als Faustformel für die Dimensionierung [empfiehlt die Verbraucherzentrale NRW](
 https://www.verbraucherzentrale.nrw/wissen/energie/lohnen-sich-batteriespeicher-fuer-photovoltaikanlagen-24589)
-etwa 1&nbsp;kWh pro 1000&nbsp;kWh Jahresstromverbrauch, also gut 1/3 des Tagesverbrauchs.
-Wer mit der Speicherbatterie zusätzlich eine Notstromversorgung über eine
-[Inselanlage](#Inselanlage) realisieren möchte, wird die Kapazität je nach
-Anwendungsszenario eher größer wählen.
+etwa 1&nbsp;kWh pro 1000&nbsp;kWh Jahresstromverbrauch
+(also gut 1/3 des Verbrauchs pro 24 Stunden),
+aber nicht mehr als 1&nbsp;kWh pro 1&nbsp;kWp PV-Nennleistung.
+
 
 Die Forschungsgruppe Solarspeichersysteme der HTW Berlin
-gibt [genauere Empfehlungen und Begründungen](
+gibt [etwas genauere Empfehlungen und Begründungen](
 https://solar.htw-berlin.de/publikationen/auslegung-von-solarstromspeichern/).
 Kurz zusammengefasst:
 Ein Batteriespeicher ist nur sinnvoll, wenn die PV-Leistung mind. 0,5&nbsp;kWp
-je 1000&nbsp;kWh Jahresstromverbrauch beträgt. Als Kapazität empfiehlt sie
-maximal 1,5&nbsp;kWh je 1000&nbsp;kWh Jahresverbrauch und
-maximal 1,5&nbsp;kWh je kWp PV-Nennleistung.
+je 1000&nbsp;kWh Jahresstromverbrauch beträgt.
+Als Obergrenzen für die Kapazität empfiehlt sie
+* 1,5&nbsp;kWh je 1000&nbsp;kWh Jahresverbrauch und
+* 1,5&nbsp;kWh je kWp PV-Nennleistung.
 
 Bei der Batterie-Dimensionierung sind noch folgende Punkte zu berücksichtigen:
-* Die Speicherung des Stroms bringt je nach Art der [Batterie](#Speicher)
-Verluste von etwa 5 bis 20% mit sich  -- bei LiFePO4 etwa 5%.
-* Man kann man nicht die volle Nennkapazität entnehmen,
-ohne dass die Akkuzellen stark leiden (d.h. schnell an Kapazität verlieren).
+* Die Speicherung des Stroms bringt je nach Lade- und Entladetechnik und
+Art der [Batterie](#Speicher) Verluste von etwa 10 bis 25% mit sich. Bei
+AC-Kopplung kommt man selbst mit LiFePO4-Batterien kaum über 80% Wirkungsgrad.
+* Man kann nicht die volle Nennkapazität entnehmen,
+ohne dass die Akkuzellen leiden (d.h. schneller an Kapazität verlieren).
 Bei LiFePO4 sind immerhin 90% Entladetiefe problemlos möglich.
-* Im Interesse einer langen Lebensdauer sollte man die Batterie ja nach Typ
-besser nicht ganz voll laden, sondern eher nur zu z.B. 90%.
+* Im Interesse einer langen Lebensdauer sollte man die Batterie je nach Typ
+besser auch nicht ganz voll laden, sondern eher nur zu etwa 90%.
 
 #### Kommerzielle SSG-Speicherlösungen {#SSG-Speicher}
 
