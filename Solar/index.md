@@ -208,7 +208,7 @@ Lizenzkürzel:
 -   [Nutzungsvarianten](#Nutzung)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](#SSG)
         - [Hintergrund der Beschränkung auf 600 bzw. 800&nbsp;W](#Bagatellgrenze)
-        - [Kappungsverlust durch Drosselung auf 600&nbsp;W](#Kappungsverlust)
+        - [Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W](#Kappungsverlust)
     -   [Hausnetzeinspeisung mit Batteriepuffer](#Batteriepuffer)
         - [Regelungsstrategien für PV-Speicher](#Regelungsstrategien)
         - [Dimensionierung des Stromspeichers](#Speicherbatterie)
@@ -2448,7 +2448,7 @@ machen, damit unter keinen Umständen etwas passieren kann. Dann besteht aber
 die Gefahr, dass das Verhältnis von Aufwand zu Nutzen viel zu ungünstig wird.
 <!-- https://www.mydealz.de/comments/permalink/40887036 -->
 
-#### Kappungsverlust durch Drosselung auf 600&nbsp;W {#Kappungsverlust}
+#### Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W {#Kappungsverlust}
 
 Die Nennleistung der verwendeten Solarmodule kann und sollte in Summe durchaus
 größer sein als die maximale Ausgangsleistung des Wechselrichters &mdash;
@@ -2773,6 +2773,25 @@ Netzeinspeisung             =  414 kWh
 PV-Eigenverbrauchsanteil    =   59 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
+
+<!-- https://www.mydealz.de/comments/permalink/46760795 -->
+Bei 4 PV-Modulen mit z.B. je 400&nbsp;Wp ist es nicht sehr sinnvoll, einen
+Wechselrichter mit z.B. 1600&nbsp;W Leistung und 4 MPPT zu verwenden, besonders
+wenn man diesen auf 600 bzw. 800&nbsp;W Ausgangsleistung drosselt. Denn dann
+gibt es erhebliche unnötige Verluste, weil die Drosselung gleichmäßig auf alle
+MPPT-Eingänge wirkt und somit nur 150 bzw. 200&nbsp;W je Eingang möglich sind.\
+Stattdessen kann man einen günstigeren 600 bzw. 800&nbsp;W Wechselrichter nutzen
+und an jedem seiner zwei Eingänge dabei jeweils zwei Module parallel anschließen.
+Dass die Eingänge dabei dann teilweise an die Grenze ihrer Strom-Belastbarkeit
+kommen, ist typischerweise [unproblematisch](#Anschluss). (Wer das trotzdem
+vermeiden will, kann auch z.B. einen HM-1500 verwenden, der nur 2 MPPT hat.)
+Wenn die Module in zwei Ausrichtungen aufgeteilt sind, sollten dabei jeweils
+zwei Module mit unterschiedlicher Ausrichtung (z.B. Südost und Südwest) parallel
+geschaltet werden, weil sich dann sowohl die Last für den Wechselrichter
+als auch der Nutzen für den Haushalt besser über den Tagesverlauf verteilen.
+Zu diesem Punkt [hier](
+https://mikrowechselrichter.eu/blogs/drosselung-leistungsbegrenzung-von-hoymiles-wechselrichtern/warum-sollten-mikrowechselrichter-besser-nicht-gedrosselt-werden)​ ein schöner Artikel.
+
 
 ### Hausnetzeinspeisung mit Pufferung in Batteriespeicher {#Batteriepuffer}
 
