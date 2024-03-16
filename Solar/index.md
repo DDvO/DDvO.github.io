@@ -4570,18 +4570,20 @@ https://electronicbase.net/de/leitungsquerschnitt-berechnen/)
 nicht zu klein sein --- mindestens 4&nbsp;mm², bei längeren Kabeln
 und höheren Strömen eher 6&nbsp;mm² (was allerdings teurer ist).
 
-Wer keine Außensteckdose hat, kann eine kleine PV-Anlage auf dem Balkon
-oder im Garten auch mit einem Flachbandkabel (z.B. [MC4-Fensterdurchführung](
+Wer keine Außensteckdose hat und kein Loch durch die Außenwand bohren will bzw.
+darf, kann eine kleine PV-Anlage auf dem Balkon oder im Garten auch über ein
+Fenster oder eine Tür mit einem Flachbandkabel (z.B. [MC4-Fensterdurchführung](
 https://solarmodule-gladbeck.de/produkt/solar-mc4-fensterdurchfuehrung/?sld=3)
-oder [selbst gebaut](https://www.youtube.com/watch?v=S7qKzvbc_Gg)
-anschließen.
+oder [selbst gebaut](https://www.youtube.com/watch?v=S7qKzvbc_Gg))
+anschließen. Das kann auch dann interessant sein, wenn man einen
+[DC-gekoppelten](#Ladung) Speicher nicht außerhalb der Wohnung platzieren will.
 
 Solarmodule kann man wie Batteriezellen [seriell und/oder parallel](
 https://photovoltaik-guru.de/module/reihenschaltung-und-parallelschaltung-elektronik-kurz-erklaert.html),
 verbinden, um mehr Leistung zu erhalten, ohne für jedes Modul
-einen eigenen [Regler](#MPPT) (bzw. Regler-Eingang) verwenden zu müssen.
-Dabei sollten die Module den gleichen Strom bzw. die gleiche Spannung liefern,
-weil es sonst Verluste gibt.\
+einen eigenen [Regler](#MPPT) bzw. Regler-Eingang verwenden zu müssen.
+Dabei sollten die Module den gleichen Strom bzw. ungefähr die gleiche Spannung
+liefern, weil es sonst Verluste gibt.\
 Wenige große Solarmodule sind technisch und wirtschaftlich typischerweise
 etwas günstiger als entsprechend viele kleine.
 
@@ -4605,7 +4607,7 @@ etwas günstiger als entsprechend viele kleine.
 -   Bei [*Parallelschaltung*](https://de.wikipedia.org/wiki/Parallelschaltung)
     addieren sich die Ströme der einzelnen Module bzw. parallelen Modulstränge.
     Weil dabei der Teil mit der geringsten Spannung alle anderen auf sein Niveau
-    herunterzieht, sollten die zusammenzuschaltenden Spannungen gleich sein.
+    herunterzieht, sollten die zusammenzuschaltenden Spannungen etwa gleich sein.
 
     Der elektrische Verlust ist größer als bei Reihenschaltung, andererseits
     gibt es deutlich weniger Verluste durch Verschattung einzelner Module
@@ -4614,8 +4616,8 @@ etwas günstiger als entsprechend viele kleine.
     parallele Stränge kaum herunterzieht.
 
     Wenn in einem Strang mindestens zwei Module in Reihe geschaltet sind,
-    kommt es bei Kurzschluss eines Moduls (etwa durch einen Defekt, aber sehr
-    unwahrscheinlich) zu einem Rückstrom über andere parallele Stränge.
+    kann es bei Kurzschluss eines Moduls (etwa durch einen Defekt, aber sehr
+    unwahrscheinlich) zu einem Rückstrom über andere parallele Stränge kommen.
     Wenn es mindestens zwei andere Stränge gibt, kann der so groß sein,
     dass die übrigen Module des ersten Strangs überhitzen und zerstört werden.
     Deswegen werden in einem solchen Szenario Sicherungen oder
@@ -4637,36 +4639,36 @@ etwas günstiger als entsprechend viele kleine.
     oder um den Ertrag über den Tag möglichst gleichmäßig zu verteilen,
     ohne dafür unbedingt mehr als einen [MPPT](#MPPT)-Eingang zu benötigen.
 
-Generell muss man unbedingt darauf achten, dass an jedem Eingang eines
-[Ladereglers oder Wechselrichters](#Stromrichter) die PV-Spannung die erlaubte
+Generell **muss man tunlichst darauf achten**, dass an jedem Eingang eines
+[Ladereglers oder Wechselrichters](#Stromrichter) die Spannung die erlaubte
 maximale Eingangsspannung (*V<sub>DC</sub> max*) des Geräts nicht überschreiten
 kann, weil dieses sonst leicht zerstört wird.
-Die Spannung wird durch die im Datenblatt der Module angegebene Maximalspannung
-(*Leerlaufspannung*, engl. *open-circuit voltage, V<sub>OC</sub>*) bestimmt
-muss nicht nur bei [*Normalbedingungen (NOCT)*](
+Die maximale Spannung eines PV-Moduls wird durch die im Datenblatt angegebene
+(*Leerlaufspannung*, engl. *open-circuit voltage, V<sub>OC</sub>*) gegeben.
+Die erlaubte Eingangsspannung muss nicht nur bei [*Normalbedingungen (NOCT)*](
 https://photovoltaiksolarstrom.com/photovoltaiklexikon/noct/)
 mit 45°C Betriebstemperatur bzw. idealisierten Standard-Testbedingungen (STC)
-mit 25°C eingehalten werden, sondern auch bei sehr niedrigen Temperaturen,
-wo die Spannung je nach Temperaturkoeffizient etwa 10 bis 20% höher sein kann.
+mit 25°C eingehalten werden, sondern auch bei sehr niedrigen Temperaturen, wo
+die Modulspannung je nach Temperaturkoeffizient etwa 10 bis 20% höher sein kann.
 Allerdings werden PV-Module gerade im Winter durch den niedrigen Sonnenstand
 eher nicht unter Optimalbedingungen betrieben, so dass die Leerlaufspannungen
-auch da wohl kaum über den für NOCT oder STC angegebenen Wert kommen.
+auch da kaum über den für NOCT oder STC angegebenen Wert kommen.
 
-Im Gegensatz dazu ist der je nach Einstrahlung und Temperatur mögliche Strom,
-der sich aus dem Maximalstrom (*Kurzschlussstrom*, engl. *short-circuit current,
-I<sub>SC</sub>*) der Module ergibt, weniger kritisch.
-Er darf den maximal nutzbaren Strom eines Eingangs (*I<sub>DC</sub> max*)
+Im Gegensatz dazu ist der je nach Einstrahlung und Temperatur maximal gelieferte
+Strom, welcher im Modul-Datenblatt als *Kurzschlussstrom* (engl.
+*short-circuit current, I<sub>SC</sub>*) angegeben wird, weniger kritisch.
+Er darf den maximal nutzbaren Strom eines Regler-Eingangs (*I<sub>DC</sub> max*)
 durchaus überschreiten -- allerdings wird in dem Moment PV-Leistung verschenkt,
 weil der Regler (bzw. Wechselrichter) die Leistung der angeschlossenen Module
-nur bis zu einem bestimmten Maximalwert aufnimmt. Dies gilt übrigens auch dann,
-wenn statt PV-Modulen eine Batterie als Stromquelle angeschlossen wird.
-Das ist ähnlich wie z.B. bei einem an einer Wohnungssteckdose angeschlossenen
-Elektrogerät, das durch seinen Innenwiderstand seine Stromaufnahme begrenzt,
-obwohl die Steckdose viel mehr (je nach Absicherung z.B. 16&nbsp;A) liefern könnte.\
-Ein [MPPT-Regler](#MPPT) beginnt mit seiner Optimierung bei der Leerlaufspannung
-der angeschlossenen PV-Module, wobei noch kein Strom fließt, und verringert dann
-seinen Innenwiderstand sukzessive so lange, bis das Maximum an PV-Leistung
-erreicht wurde oder er an der Grenze seiner Stromaufnahme angekommen ist.
+nur bis zu einem bestimmten Maximalwert aufnimmt.\
+Es ist ähnlich wie z.B. bei einem an einer Wohnungssteckdose angeschlossenen
+Gerät, das durch seinen Innenwiderstand seine Stromaufnahme begrenzt, obwohl
+die Steckdose viel mehr (je nach Absicherung z.B. 16&nbsp;A) liefern könnte.\
+Ein [MPPT-Regler](#MPPT) beginnt mit seiner Optimierung mit der Leerlaufspannung
+der angeschlossenen PV-Module oder sonstigen Stromquelle, wobei anfangs noch
+fast kein Strom fließt, und verringert dann seinen Innenwiderstand sukzessive
+so lange, bis das Maximum an PV-Leistung erreicht wurde
+oder er an der Grenze seiner Fähigkeit zur Stromaufnahme angekommen ist.
 
 <!--https://www.photovoltaikforum.com/thread/135363-envertech-erlaubt-keine-%C3%BCberbelegung-der-neuen-evt-300-und-evt-560/-->
 
@@ -4683,15 +4685,26 @@ den im Datenblatt des Geräts genannten absoluten Maximal-Eingangsstrom,
 welcher auch [*maximaler DC-Kurzschlussstrom* (*I<sub>SC</sub> PV max*)](
 https://www.sma-sunny.com/wechselrichter-hochstrommodule-missverstaendnis-i-dc-max/)
 genannt wird, nicht längerfristig zu überschreiten oder zumindest
-für ausreichende Kühlung des Geräts in solchen Situationen zu sorgen.\
+für ausreichende Kühlung des Geräts in solchen Situationen zu sorgen.
 <!-- https://www.mydealz.de/comments/permalink/46587457 -->
 Zum Beispiel schreibt der Hoymiles-Support zum maximalen Eingangsstrom eines
 HM-600:
 > 1. Bedeutet das, dass egal wieviel Strom anliegt nur 11,5&nbsp;Ampere verarbeitet / abgenommen werden können.
 > 2. Lassen Sie bitte den Strom nicht über 15A ansteigen, da dies den Wechselrichter beschädigen kann.
 
-Wer da auf der sicheren Seite sein will,
-kann je Eingang eine 15&nbsp;A Sicherung dazwischenschalten.
+Dies alles gilt im Prinzip auch dann, wenn ein Solar-Mikrowechselrichter
+statt an PV-Module an eine Batterie als Stromquelle angeschlossen wird,
+welche meist wesentlich mehr Strom (z.B. 100 A) liefern kann.
+Der Einschaltstrom des Geräts hält sich entgegen mancher Befürchtungen
+in Grenzen &mdash; ich konnte je nach Modell max. 1,5&nbsp;A messen.\
+Die üblichen Hoymiles-Geräte, z.B. HM-800, funktionieren an einer Batterie
+erfahrungsgemäß ohne Probleme. Auch ein Deye Sun 600, wobei der nicht selbst
+regelbar ist und dann konstant 270&nbsp;W je Eingang liefert.
+Ein Eingang meines billigen Mars Rock SG-700W hat den Test allerdings nicht
+bestanden und ist nun tot, nachdem sich das Gerät beim Hochfahren des MPPT
+überlastet hat.\
+Wer da auf der sicheren Seite sein will, kann je Eingang eine auf die gegebene
+maximale Belastbarkeit abgestimmte Sicherung (z.B. 15&nbsp;A) dazwischenschalten.
 
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
 I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
@@ -5351,7 +5364,7 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
 -   600&nbsp;W (2 × 400&nbsp;W Eingänge) MPPT Mikrowechselrichter [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/) für ca. 170€\
     und zusätzlich (z.B. für Einspeisung aus meiner Batterie):\
-    700&nbsp;W Netzwechselrichter mit angeblich 2 × MPPT und WLAN SG-700W bzw.
+    700&nbsp;W Netzwechselrichter mit 2 × MPPT (und angeblich WLAN) SG-700W bzw.
     [Mars Rock EC700MD](https://de.aliexpress.com/item/1005002469159821.html)
     (oder [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
     inkl. Versand. _Zumindest bei meinem Gerät funktioniert das WLAN nicht,
