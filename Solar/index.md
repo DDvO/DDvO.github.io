@@ -5440,57 +5440,113 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
 ](Balkonsolaranlage_senkrecht_flexibel.jpg)
 
 Als Steckersolargerät mit wahlweise direkter oder gepufferter Netzeinspeisung,
-aber auch für eine Notstromversorgung daheim und für einen längeren autarken
-Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
+aber auch evtl. für eine Notstromversorgung daheim
+und einen längeren autarken Aufenthalt mit dem Wohnmobil
+habe ich im Sommer 2022 folgende Komponenten gekauft:
 
--   4 × [150&nbsp;Wp flexible ETFE SSP
-    Solarmodule](https://www.solarfam.nl/150w-shingle-etfe-flexible-solar-panel-solarfam.html),
-    für 600€\
-    _Zuvor hatte ich mir gekauft, aber nicht verwendet, weil mir ihre
-    Anbringung an der Balkonbrüstung im 4. Stock zu riskant war:\
+-   4 × [150&nbsp;Wp flexible ETFE SSP Solarmodule](
+    https://www.solarfam.nl/150w-shingle-etfe-flexible-solar-panel-solarfam.html)
+    für 600€, [Stand März 2024 ca. 400€](
+    https://stromvoll.com/shop/#!/150W-Flexible-Solar-panel-1170-x-680-x-2-mm/p/396304457)\
+    _Zuerst hatte ich gekauft, dann aber nicht verwendet,\
+    weil mir ihre Anbringung an der Balkonbrüstung im 4.&nbsp;Stock zu riskant war:\
     4 × [120&nbsp;Wp starre Eco-Worthy
     Solarpanel](https://www.manomano.de/p/2x120watt-solarpanel-solarmodul-12v-12volt-monocrystalline-wohnwagen-wohnmobil-48845318),
-    für 320€\
+    für 320€ (Stand März 2024)\
     Diese Eco-Worthy Module kann ich empfehlen, wenn man keine größeren
-    verwenden kann. Sie bringen jedenfalls die versprochene
-    Spitzenleistung, was gerade bei günstigen Modellen nicht
-    selbstverständlich ist._
+    verwenden kann._
+    <!-- Sie bringen jedenfalls die versprochene  Spitzenleistung,
+    was gerade bei günstigen Modellen nicht selbstverständlich ist.--> 
 
--   600&nbsp;W (2 × 400&nbsp;W Eingänge) MPPT Mikrowechselrichter [Deye Sun600g3-EU-230](
-    https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/) für ca. 170€\
-    und zusätzlich (z.B. für Einspeisung aus meiner Batterie):\
-    700&nbsp;W Netzwechselrichter mit 2 × MPPT (und angeblich WLAN) SG-700W bzw.
+-   [Deye Sun600g3-EU-230](
+    https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/)
+    600&nbsp;W (2 × 400&nbsp;W Eingänge) MPPT Mikrowechselrichter für 170€,
+    [Stand März 2024 ca. 135€](
+    https://www.idealo.de/preisvergleich/OffersOfProduct/202156668_-sun600g3-eu-230-600w-deye-inverter.html)\
+    _Anfangs habe ich einen 700&nbsp;W Netzwechselrichter verwendet
+    mit 2 × MPPT (und angeblich WLAN) SG-700W bzw.
     [Mars Rock EC700MD](https://de.aliexpress.com/item/1005002469159821.html)
-    (oder [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€
-    inkl. Versand. _Zumindest bei meinem Gerät funktioniert das WLAN nicht,
-    das Teil hat real nur einen MPP-Tracker, der auch noch träge ist, und
-    der Gesamt-Wirkungsgrad ist bescheiden --- ist also gar nicht zu empfehlen.
-    Siehe auch ein [Reparatur-Video](https://youtu.be/i63ibUhQpjw)._
--   24&nbsp;V Hybridwechselrichter
-    [EASun ISolar SPH-3K](https://de.aliexpress.com/item/1005003665568494.html)
-    mit 3000&nbsp;VA (6000&nbsp;VA Spitzenlast) reiner-Sinus-Wechselrichter
+    (oder [ähnlich mit LCD](https://www.ebay.de/itm/165694072328)), ca. 135€.\
+    Zumindest bei meinem Gerät ist das WLAN nicht nutzbar.
+    Die MPP-Tracker sind träge und für die Verwendung an einer Batterie
+    [nicht geeignet](https://www.photovoltaikforum.com/thread/206537-hoymiles-hm-350-von-51-2v-akku/?postID=3657033#post3657033).
+    Der Gesamt-Wirkungsgrad ist bescheiden --- ist also gar nicht zu empfehlen.
+    Siehe auch ein [Reparatur-Video](https://youtu.be/i63ibUhQpjw)
+    zu einem ähnlichen Gerät._
+
+-   [EASun ISolar SPH-3K](https://de.aliexpress.com/item/1005003665568494.html)
+    24&nbsp;V Hybridwechselrichter
+    mit 3000&nbsp;VA (6000&nbsp;VA Spitzenlast) Sinus-Wechselrichter
     (mit USV-Funktion und angeblich 93% max. Wirkungsgrad),
     40-50&nbsp;A PWM Solar-Laderegler und 20-30&nbsp;A Batterieladegerät über Netzstrom,
     für 185€\
-    _Leider hatte ich nicht aufpasst, die
-    [MPPT-Version](https://de.aliexpress.com/item/1005004488463489.html)
-    zu bestellen, deren Solarwandlungs-Effizienz wohl deutlich besser wäre_.
+    _Die [MPPT-Version](https://de.aliexpress.com/item/1005004488463489.html)
+    hätte vermutlich eine deutlich bessere Solarwandlungs-Effizienz.
+    Sehr unschön ist, dass es während einer monatelangen Standby-Phase meine
+    u.g. 2,5 kWh LiFePO4-Batterie tiefentladen und damit teilgeschädigt hat.
+    Ich nutze das Gerät nicht mehr, höchstens als Inselwechselrichter._
 
--   24&nbsp;V 100&nbsp;Ah LiFePO4-Batterie mit 8S1P-Konfiguration inkl. 100&nbsp;A BMS
-    und Display [CERRNSS LF-24100
-    small](https://de.aliexpress.com/item/1005003937833782.html), ca.
-    570€\
+-   [CERRNSS LF-24100](https://www.alibaba.com/product-detail/CERRNSS-4000-Deep-Cycles-24V-100Ah_1600380655812.html)
+    24&nbsp;V 100&nbsp;Ah LiFePO4-Batterie mit 8S1P-Konfiguration
+    inkl. 100&nbsp;A BMS und Spannungsanzeige, gekauft für ca. 570€\
     _Diese Zellen sind [qualitativ allerdings nicht ganz so
-    gut](https://www.youtube.com/watch?v=4OYlp1aMtTU) wie die von
-    Delong.\
-    Noch günstiger und sehr hochwertig geht es im [Eigenbau: 12&nbsp;V 280&nbsp;Ah
+    gut](https://www.youtube.com/watch?v=4OYlp1aMtTU) wie die von Delong._\
+    _Stand März 2024 gibt es 2,5&nbsp;kWh LFP-Speicher schon für [ca. 360€](
+    https://www.mydealz.de/deals/eco-worthy-lifepo4-batterie-24v-100-ah-2330374)_
+
+Im Winter 2023/24 kamen folgende Komponenten zur lastgeregelten
+AC-Kopplung des Pufferspeichers hinzu:
+
+-   [Meanwell HLG-600H-36AB](
+    https://www.meanwell.com/Upload/PDF/HLG-600H/HLG-600H-SPEC.PDF)
+    per Software dimmbarer LED-Treiber, hier als Batterie-Ladegerät genutzt,\
+    mit max. 600&nbsp;W Ausgangleistung und bis zu 36 V Ausgangspannung,
+    [ca. 230€](https://www.idealo.de/preisvergleich/ProductCategory/23615.html?q=MeanWell_HLG-600H-36AB)
+
+-   [3,3V PWM zu 0-10V Analogwandler](https://ebay.us/aN5npL), ca. 10€,\
+    [Wemos D1 Mini ESP8266](https://ebay.us/fLji3Y) Mikrocontroller Board mit
+    WLAN, ca. 5€\
+    und Spannungswandler zur Stromversorgung mit
+    [12&nbsp;V, ca. 16€](https://ebay.us/PZJcI5) und
+    [5&nbsp;V, ca. 12€](https://www.ebay.de/itm/174850731478)\
+    <!--  https://www.der-kanal-homepage.de/affiliate-links-ebay -->
+    _Viel einfacher und in Summe günstiger wäre ein [Shelly Plus 0-10V Dimmer](
+    https://www.shelly.com/de/products/shop/shelly-plus-0-10-v-dimmer),
+    [ca. 16€](
+    https://www.idealo.de/preisvergleich/OffersOfProduct/203476653_-plus-0-10v-dimmer-shelly.html), welcher allerdings noch [eine 10&nbsp;V Quelle und einen
+    Vorwiderstand benötigt](
+    https://www.amazon.de/gp/customer-reviews/RH1HUSAUFMBX4/ref=cm_cr_getr_d_rvw_ttl?ie=UTF8&ASIN=B0CM28PJYL)._
+
+-   [Hoymiles HM-300](
+    https://pluginsolar.de/wp-content/uploads/2022/03/HM-300-Technische-Daten.pdf),
+    per Software dynamisch limitierbarer Netzwechselrichter\
+    mit max. 300&nbsp;W Ausgangleistung, [ca. 70€](
+    https://www.idealo.de/preisvergleich/OffersOfProduct/201802732_-hm-300-mikrowechselrichter-hoymiles.html)
+
+-   [ESP32](
+    https://devarounder.de/welches-esp32-board-development-bords-furs-projekt/)
+    mit [OpenDTU](https://github.com/tbnobody/OpenDTU),
+    fertig konfektioniert mit WLAN-Modul und OLED-Display,
+    [ca. 30€](https://www.kleinanzeigen.de/s-opendtu/k0)
+
+-   [Shelly 3EM](https://www.shelly.com/de/products/shop/shelly-3em-1)
+    3-phasiges Leistungs- und Energiemessgerät mit WLAN und Relais, [ca. 75€](
+    https://www.idealo.de/preisvergleich/OffersOfProduct/202769156_-3em-nur-fuer-pv-anlagen-shelly.html)
+
+-   3 ×
+    [Shelly Plus 1PM](https://www.shelly.com/de/products/shop/shelly-plus-1-pm)
+    1-phasiges Leistungs- und Energiemessgerät mit WLAN und Relais, [ca. 17€](
+    https://www.idealo.de/preisvergleich/OffersOfProduct/201650823_-plus-1pm-1-stck-shelly.html),\
+    hier verwendet am Batterie-Ladegerät, -Wechselrichter und PV-Wechselrichter
+
+<!--
+    _Günstiger und sehr hochwertig geht es im [Eigenbau: 12&nbsp;V 280&nbsp;Ah
     schon ab 600€](https://www.youtube.com/watch?v=F0Ot7JOR2VM)._
 
 -   24&nbsp;V auf 12&nbsp;V Tiefsetzsteller 60&nbsp;W [Akozon GYVRM / LY-KREE / Cocar
     K241205](https://www.amazon.de/Netzteil-Spannungswandler-Transformator-Konverter-Sonnensystem-5A/dp/B01KQWWQUI)
     mit angeblich 96% Wirkungsgrad, ca. 13€
 
-<!--
 -   Programmierbarer Batteriespannungswächter [DC 6-40&nbsp;V LED Battery Charger
     Discharger Board Under Over Voltage Protection Module](
     https://www.ebay.de/itm/313940626703),  ca. 6€
@@ -5499,7 +5555,6 @@ Aufenthalt mit dem Wohnmobil habe ich seit Sommer 2022 folgende Komponenten:
     Step Down Wandler Konverter Spannungsregler, einstellbar](
     https://www.ebay.de/itm/385099914040), ca. 12€
 -->
-
 <!--
 Local IspellDict: german8
 LocalWords: title keywords toc start refresh markdown pandoc width style margin
