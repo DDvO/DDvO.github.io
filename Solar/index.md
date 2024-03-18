@@ -249,7 +249,7 @@ Lizenzkürzel:
         - [Spannungswächter](#Spannungswächter)
 -   [Beispiel-Konfigurationen](#Konfigurationen)
     -   [Mobile Inselanlage](#Mobilanlage)
-    -   [Steckersolargerät](#Steckeranlage)
+<!-- -   [Steckersolargerät](#Steckeranlage) -->
     -   [Kombi-Anlage](#Kombianlage)
 
 Photovoltaik und ihr möglicher Ertrag {#Photovoltaik}
@@ -5384,6 +5384,7 @@ Komponenten zu meiner vollen Zufriedenheit:
     Wechselrichter](https://de.aliexpress.com/wholesale?SearchText=pure+sine+wave+inverter+2000w),
     ebenfalls direkt aus China, ca. 70€
 
+<!--
 ### Steckersolargerät {#Steckeranlage}
 
 Für eine sehr einfache, aber effiziente Anlage zur Netzeinspeisung
@@ -5402,11 +5403,15 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
 
 -   Mikrowechselrichter mit 2 * 300&nbsp;W MPPT [Hoymiles
     HM-600](https://www.hoymiles.com/de/products/microinverter/single-phase/),
-    ca. [200€](https://www.idealo.de/preisvergleich/OffersOfProduct/201802725_-hm-600-mikrowechselrichter-hoymiles.html)\
-<!--    oder 1000&nbsp;W Micro Grid Tie Inverter Inverter SG1000MQ(https://www.ebay.de/itm/124731502486), ca. 200€\-->
+    ca. [200€](https://www.idealo.de/preisvergleich/OffersOfProduct/201802725_-hm-600-mikrowechselrichter-hoymiles.html)
+-->
+<!-- \
+    oder 1000&nbsp;W Micro Grid Tie Inverter Inverter SG1000MQ(https://www.ebay.de/itm/124731502486), ca. 200€\
     oder 600&nbsp;W WR mit 2 × 400&nbsp;W Eingängen und WLAN [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/),
-    ca. [190€](https://www.idealo.de/preisvergleich/OffersOfProduct/202156668_-sun600g3-eu-230-600w-deye-inverter.html)  <!-- \
+    ca. [190€](https://www.idealo.de/preisvergleich/OffersOfProduct/202156668_-sun600g3-eu-230-600w-deye-inverter.html)
+-->
+<!-- \
     _Achtung_, in älteren Versionen (etwa 1.471, bis ca. Ende 2022) der
     [Firmware](https://github.com/dasrecht/deye-firmware/tree/main/0_D0002_18)
     reißen die Wechselrichter von Deye, sowie baugleich Bosswerk
@@ -5427,7 +5432,7 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
     ist für dieses weit verbreitete Modell die [Betriebserlaubnis vorläufig erloschen](
     https://www.heise.de/news/Balkonkraftwerke-Fehlendes-Relais-bei-Deye-hat-weitere-Folgen-9218441.html).
     https://www.mydealz.de/comments/permalink/45968453 Relaisbox
-    -->
+-->
 
 ### Kombi-Anlage {#Kombianlage}
 
