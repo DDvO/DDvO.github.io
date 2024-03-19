@@ -5133,15 +5133,22 @@ DC-DC-converter.png){:.right width="400"
 style="margin-left: 40px; margin-right: 40px"}
 Ein *Gleichspannungswandler* (engl. _DC-to-DC-converter_) dient zur Anpassung
 des Niveaus von Gleichspannungen. Er sollte möglichst wenig Verluste haben.
+Typisch sind, je nach Typ und aktueller Auslastung, etwa 5 bis 7%.
 
 Ein [Aufwärtswandler](https://de.wikipedia.org/wiki/Aufw%C3%A4rtswandler)
 (engl. _boost converter_ oder _step-up converter_) kann zum Beispiel dazu verwendet
-werden, die Spannung der Pufferbatterie (z.B. 12&nbsp;V) auf eine für den Eingang
+werden, die Spannung einer 12&nbsp;V Pufferbatterie auf eine für den Eingang
 des Netzwechselrichters passende Spannung (z.B. mindestens 20&nbsp;V) zu bringen.
 
-Für die Nutzung zur [regelbaren Konstanteinspeisung](#Batteriepuffer) aus einem
-Strompuffer ins Hausnetz sollte er über eine einstellbare Strombegrenzung
-verfügen.
+Für die Nutzung zur [regelbaren Konstanteinspeisung](#Konstanteinspeisung)
+aus einem Strompuffer ins Hausnetz sollte der Spannungswandler
+über eine einstellbare Strombegrenzung verfügen.
+
+Die Strombegrenzung durch einen DC-DC-Wandler kann auch dazu verwendet werden,
+beim Anschluss eines Netzwechselrichters an eine Pufferbatterie
+[den Einschaltstrom und MPPT-Anlaufstrom eines empfindlichen Geräts zu begrenzen
+ und für eine Nulleinspeisung die Leistung per PWM zu steuern](
+https://www.photovoltaikforum.com/thread/206537-hoymiles-hm-350-von-51-2v-akku/?postID=3657918#post3657918).
 
 ### Speicherbatterien {#Speicher}
 
@@ -5325,7 +5332,7 @@ meist 12&nbsp;V, während im IT-Bereich Spannungen von 5&nbsp;V und darunter üb
 Das passt alles nicht zu Batteriespannungen von 24&nbsp;V oder&nbsp;48&nbsp;V.
 Aber es gibt für Geräte mit mäßigem Strombedarf (bis etwa 5&nbsp;A)
 eine recht effiziente und kostengünstige Möglichkeit, die Spannung anzupassen,
-nämlich sog. *Tiefsetzsteller* (auch *Abwärtswandler*,
+nämlich sog. *Tiefsetzsteller* (auch *Abwärtswandler* genannt,
 engl. _DC-DC buck converter oder _step-down converter_).
 
 #### Spannungswächter {#Spannungswächter}
