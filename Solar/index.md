@@ -2949,10 +2949,11 @@ Eigendeckungsanteil         =   50 % des Verbrauchs (Autarkiegrad)
 --->
 
 Im Folgenden werden konkrete Zahlen gegeben für einen Haushalt mit 3000&nbsp;kWh
-Jahresverbrauch und einer nächtlicher Durchschnittslast von 190&nbsp;W
+Jahresverbrauch (bei nächtlicher Durchschnittslast von 190&nbsp;W zwischen 0 und
+6&nbsp;Uhr und tagsüber Durchschnittslast von 375&nbsp;W zwischen 8 und 16 Uhr)
 mit einer typischen Balkonanlage in Süddeutschland mit optimal ausgerichteten
-Modulen mit 850&nbsp;Wp Nennleistung und typischen Wirkungsgraden, der
-eine Pufferbatterie mit 1&nbsp;kWh effektiv nutzbarer Kapazität hinzugefügt wurde.
+Modulen mit 850&nbsp;Wp Nennleistung und typischen Wirkungsgraden, der eine
+Pufferbatterie mit 1&nbsp;kWh effektiv nutzbarer Kapazität hinzugefügt wurde.
 Dazu passt sehr gut eine 12,8&nbsp;V 100&nbsp;Ah LiFePO4-Batterie,
 also mit nominell 1,28&nbsp;kWh Kapazität, denn davon muss man ohnehin
 mindestens 90% für eine gesunde Entladetiefe abziehen, und nochmal ungefähr 90%
@@ -2964,19 +2965,21 @@ Wie zuvor sind für den Wirkungsgrad des PV-Systems 92% angenommen
 und für die Wechselrichtung (auch bei Entladung aus der Batterie) 94%.
 
 Bei [optimaler Lade-/Entlageregelung, s.u.](#Regelungsstrategien),
-die leider nur schwer zu realisieren ist,
-gibt es keinen Verlust durch Überlauf des Speichers. Durch die Verwendung des
-Speichers lässt sich der jährliche Eigenverbrauch von ca. 610 auf 8100&nbsp;kWh
-und der Eigenverbrauchsanteil von ca. 66 auf 83% des Nettoertrags steigern.
+die leider nur schwer zu realisieren ist, gibt es keinen Verlust durch Überlauf
+des Speichers, und anstatt dass der PV-Überschuss von ca. 310&nbsp;kWh komplett
+ins Netz eingespeist wird, kommt es nur noch zu 84&nbsp;kWh Netzeinspeisung.
+Hinzu kommen kleine Verluste des Ladereglers und der Speicherbatterie
+von etwa 14 + 11&nbsp;kWh. Durch die Verwendung des Speichers lässt sich somit
+der jährliche Eigenverbrauch von ca. 610 auf etwa 810&nbsp;kWh und
+der Eigenverbrauchsanteil von ca. 66 auf etwa 83% des Nettoertrags steigern.
 Der PV-Bruttoertrag von 1062&nbsp;kWh bzw. Nettoertrag 918&nbsp;kWh wird also
-gut genutzt; die Netzeinspeisung beträgt nur noch 75&nbsp;kWh, der Rest sind
-kleine Verluste des Ladereglers und der Speicherbatterie von 14 + 11&nbsp;kWh.
-Der 1&nbsp;kWh Speicher ist mit ca. 225 Vollzyklen pro Jahr nur mäßig belastet.
+gut genutzt. Der Speicher mit effektiv 1&nbsp;kWh Kapazität
+ist mit ca. 225 Vollzyklen pro Jahr nur mäßig belastet.
 Bei 30&nbsp;ct/kWh Strompreis ergibt sich durch die Hinzunahme des Speichers
 eine jährliche Stromkosten-Einsparung von ca. 60€.
 
-Selbst wenn die dafür nötigen Geräte günstig für z.B. 600€ erworben werden,
-würde die Amortisationszeit für die Aufrüstung mindestens 10 Jahre betragen --
+Selbst wenn die dafür nötigen Komponenten günstig für z.B. 600€ erworben werden,
+würde die Amortisationszeit für die Aufrüstung etwa 10 Jahre betragen --
 eher länger. Allerdings kann es sein, dass in dieser Zeitspanne bereits ein
 Teil der nötigen Geräte erneuert werden muss. Vor Allem aber ist für kleine
 PV-Anlagen eine optimale Regelung im Eigenbau schwer erreichbar, und kommerziell
@@ -2987,6 +2990,7 @@ erhältliche Lösungen ([siehe unten](#SSG-Speicher)) sind bislang zu teuer.
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92 -tmy
 Lastprofil-Datei            : Lastprofil_17_teils_31.csv
 Nächtliche Durchschnittslast=  189 W von 0 bis 6 Uhr
+Tagsüber Durchschnittslast  =  375 W von 8 bis 16 Uhr
 
 PV-Nennleistung             =  850 Wp
 Max. PV-Bruttoleistung      =  920 W am TMY-03-23 um 12h
@@ -3113,6 +3117,66 @@ Stromerzeugung pro Jahr 820 kWh
 Vermiedener Strombezug pro Jahr 685 kWh
 Nutzungsgrad 83 %
 Selbstversorgung 23 %
+-->
+
+Eine wichtige Rolle spielt natürlich die Verteilung des Haushalts-Verbrauchs
+über den Tag. Im o.g. typischen Fall ergab sich bei Durchschnittslast von
+375&nbsp;W zwischen 8 und 16&nbsp;Uhr und Durchschnittslast von 190&nbsp;W
+zwischen 0 und 6&nbsp;Uhr durch den Speicher ein Jahresgewinn von 200&nbsp;kWh.\
+Wenn stattdessen die Durchschnittslast tagsüber nur 100&nbsp;W beträgt und
+nachts 234&nbsp;W, dann steigt der Gewinn durch den Speicher auf 270&nbsp;kWh.\
+Wenn andererseits die Durchschnittslast tagsüber sogar 600&nbsp;W beträgt und
+nachts 124&nbsp;W, dann sinkt der Gewinn durch den Speicher auf 180&nbsp;kWh.
+
+<!--
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92 -tmy -dc -max_charge 100 -max_discharge 100 -capacity 1000 -bend 1,1,1,1,2,2,2,2,.295,.295,.295,.295,.295,.295,.295,.285,2,2,2,2,1,1,1,1
+Nächtliche Durchschnittslast=  234 W von 0 bis 6 Uhr
+Tagsüber Durchschnittslast  =  100 W von 8 bis 16 Uhr
+
+Speicherkapazität           = 1000 Wh mit max. Ladehöhe 100%, max. Entladetiefe 100%, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie), max. Laderate 1 C
+Optimale Entladestrategie (so viel wie gebraucht), max. Entladerate 1 C
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   17 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             =   14 kWh durch Speicher-Wirkungsgrad 95%
+Verlust während Entladung   =    0 kWh durch Entlade-WR-Wirkungsgrad 94%
+PV-Nutzung über Speicher    =  242 kWh
+Netzeinspeisung via Speicher=    0 kWh
+max. Ladehöhe               = 1000 Wh am TMY-01-10 um 12:27
+Zwischenspeicherung         =  271 kWh nach Ladeverlust
+Vollzyklen                  =  271 (der effektiven Kapazität 1000 Wh)
+
+PV-Eigenverbrauch           =  566 kWh
+PV-Überschuss               =  594 kWh
+Max. PV-Überschuss          = 4.81 kWh am TMY-03-24
+Netzeinspeisung             =  323 kWh
+PV-Eigenverbrauchsanteil    =   58 % des PV-DC-Ertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   19 % des Verbrauchs (Autarkiegrad)
+-->
+<!--
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92 -tmy -dc -max_charge 100 -max_discharge 100 -capacity 1000 -bend 1,1,1,1,1,1,1,1,2.45,2.45,2.45,2.45,2.45,2.45,2.44,2.44,1,1,1,1,1,1,1,1
+Nächtliche Durchschnittslast=  124 W von 0 bis 6 Uhr
+Tagsüber Durchschnittslast  =  600 W von 8 bis 16 Uhr
+
+Speicherkapazität           = 1000 Wh mit max. Ladehöhe 100%, max. Entladetiefe 100%, DC-gekoppelt
+Optimale Ladestrategie (nicht gebrauchte Energie), max. Laderate 1 C
+Optimale Entladestrategie (so viel wie gebraucht), max. Entladerate 1 C
+Verlust durch Überlauf      =    0 kWh
+Ladeverlust                 =   11 kWh durch Lade-Wirkungsgrad 94%
+Speicherverlust             = 8.95 kWh durch Speicher-Wirkungsgrad 95%
+Verlust während Entladung   =    0 kWh durch Entlade-WR-Wirkungsgrad 94%
+PV-Nutzung über Speicher    =  160 kWh
+Netzeinspeisung via Speicher=    0 kWh
+max. Ladehöhe               = 1000 Wh am TMY-03-15 um 11:03
+Zwischenspeicherung         =  179 kWh nach Ladeverlust
+Vollzyklen                  =  179 (der effektiven Kapazität 1000 Wh)
+
+PV-Eigenverbrauch           =  877 kWh
+PV-Überschuss               =  201 kWh
+Max. PV-Überschuss          = 3.63 kWh am TMY-03-23
+Netzeinspeisung             =   22 kWh
+PV-Eigenverbrauchsanteil    =   90 % des PV-DC-Ertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   29 % des Verbrauchs (Autarkiegrad)
 -->
 
 #### Regelungsstrategien für PV-Speicher {#Regelungsstrategien}
@@ -3580,7 +3644,8 @@ und können damit unter realistischen Bedingungen rentabel sein.
 Hier ein Vergleich des mit den unterschiedlichen Ansätzen erzielbaren
 Jahres-Eigenverbrauchs auf Basis von Simulationen mit dem [SolBatSim](#SolBatSim)
 für einen Haushalt mit 3000&nbsp;kWh Jahresverbrauch
-und einer nächtlicher Durchschnittslast von 190&nbsp;W
+(nächtliche Durchschnittslast 190&nbsp;W zwischen 0 und 6&nbsp;Uhr,
+tagsüber Durchschnittslast 375&nbsp;W zwischen 8 und 16&nbsp;Uhr)
 mit optimal ausgerichteten 850&nbsp;Wp Modul-Nennleistung in Süddeutschland
 und typischen Wirkungsgraden.
 Der besseren Vergleichbarkeit halber wurde hier generell eine Speicherkapazität
