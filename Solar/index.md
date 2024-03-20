@@ -1841,58 +1841,65 @@ mittags etwas Wolken. Weitere schöne Erklärungen mit Grafiken gibt es
 
 ### Typische Rentabilität kleiner PV-Anlagen {#rentabel}
 
-Wenn die Einsparung an Stromkosten durch eine Anlage ihre Kosten eingeholt hat,
+Wenn die Einsparung an Stromkosten durch eine PV-Anlage die Kosten eingeholt hat,
 hat sich die Anlage *amortisiert*, also die Investition kaufmännisch gelohnt.
 Die Investition rentiert sich im Verhältnis der Jahres-Ersparnis zu den Kosten.
 
 Wie eingangs geschrieben kann man bei optimaler Platzierung von Solarmodulen
 pro Jahr etwa 1,1&nbsp;kWh Strommenge pro Wp installierter Solarleistung gewinnen.
-Rechnen wir beispielsweise mit einer Investition für die PV-Anlage von 1,10€/Wp
+Rechnen wir beispielsweise mit einer Investition für die PV-Anlage von 0,55€/Wp
 (inklusive anteiliger Kosten für Wechselrichter, Montage, Reparatur, etc.),
-dann ergeben sich einmalige Kosten von 1€ pro&nbsp;kWh Jahresertrag.\
+dann ergeben sich einmalige Kosten von 0,5€ pro&nbsp;kWh Jahresertrag.\
 Nehmen wir für die folgenden Beispiele zudem an, dass der sog. *Arbeitspreis*,
-also die Kosten für vom Stromanbieter bezogenen Strom, 40&nbsp;ct/kWh beträgt.
-Dann spart man 0,40€ für jede&nbsp;kWh Strom, die von der PV-Anlage produziert wird
-und die man auch selbst verbraucht, statt sie von außen einzukaufen.\
+also die Kosten für vom Stromanbieter bezogenen Strom, 30&nbsp;ct/kWh beträgt.
+Dann spart man also 0,30€ für jede kWh Strom, die von der PV-Anlage produziert
+wird und die man auch selbst verbraucht, statt sie von außen einzukaufen.\
 Anfang 2023 fiel in Deutschland die Mehrwertsteuer für die Komponenten kleiner
 privaten PV-Anlagen weg, aber auch die Strompreise sanken im Frühjahr wieder auf
-etwa 30&nbsp;ct/kWh. Außerdem wurden PV-Module durch ein globales Überangebot
-günstiger, so dass man Anlagen mit 800&nbsp;Wp teils schon für 500€ erhalten kann.
-Damit blieb das Kosten-/Nutzen-Verhältnis ungefähr gleich, weil sowohl der
-Kaufpreis als auch der einzusparende Strompreis um ungefähr 25% zurückgingen.
+etwa 30&nbsp;ct/kWh. Außerdem wurden PV-Module und Mikrowechselrichter durch ein
+globales Überangebot günstiger, so dass man Steckersolargeräte mit über
+800&nbsp;Wp inzwischen für unter 400€ bekommt.
 
-Eine typische Balkonanlage mit 600&nbsp;Wp Nennleistung erreicht einen
-Jahres-Bruttoertrag von etwa 765&nbsp;kWh, was bei 86% Gesamtsystem-Wirkungsgrad
-ca. 660&nbsp;kWh Netto-Ertrag (Einspeisung des Wechselrichters) pro Jahr bedeutet.
-Wenn wir mit Kosten von 1,10€/Wp rechnen, ergibt das für diese Anlage 660€.
-Pro kWh Netto-Jahresertrag betragen die einmaligen Kosten also 1€, und bei
-40&nbsp;ct/kWh eingespartem Strompreis liegt das Verhältnis genauso günstig
-wie wenn die Anlage nur 495€ kostet und der Strompreis 30&nbsp;ct/kWh beträgt.
+Eine Balkonanlage mit 850&nbsp;Wp Nennleistung kann einen Jahres-Bruttoertrag
+von etwa 1080&nbsp;kWh erreichen, was bei 86% Gesamtsystem-Wirkungsgrad ca.
+935&nbsp;kWh Netto-Ertrag (Einspeisung des Wechselrichters) pro Jahr bedeutet.
+Wenn wir mit Kosten von 0,55€/Wp rechnen, ergibt das für diese Anlage 467,50€.
 
-   - Falls man den erzeugten PV-Strom komplett selbst verbraucht, was aber
-   praktisch kaum der Fall sein wird, ergibt sich eine Einsparung von 0,40€
-   pro kWh Jahresertrag und eine Amortisation der Investition in nur 2,5 Jahren.
-   Die Rendite würde in diesem Fall satte 40% betragen.
+- Falls man den erzeugten PV-Strom komplett selbst verbraucht, was aber
+praktisch kaum der Fall sein wird, ergäbe sich eine Einsparung von 280€
+pro Jahr und somit eine Amortisation der Investition in nur 20 Monaten.
+Die Rendite würde in diesem Fall satte 60% betragen.
 
-  - Bei einem durchschnittlichen Haushalts-Tages-Nutzungsprofil und
-  Jahresverbrauch von 3000&nbsp;kWh liegt der selbst genutzte Ertrag bei etwa 460&nbsp;kWh
-  pro Jahr. Der Eigenverbrauchsanteil liegt also bei 70% des Nettoertrags
-  (und der Eigendeckungsanteil bei 15% des Verbrauchs).\
-  Damit werden bei 40&nbsp;ct/kWh Arbeitspreis jährlich 184€ eingespart.
-  Für die Investition von 660€ ergibt sich eine Amortisationszeit von 3,6 Jahren
-  und eine Rendite von 28%.
+- Bei einem durchschnittlichen Haushalts-Nutzungsprofil und Jahresverbrauch von
+3000&nbsp;kWh liegt der selbst genutzte Ertrag bei etwa 620&nbsp;kWh pro Jahr.
+Der Eigenverbrauchsanteil liegt also bei 67% des Nettoertrags
+(und der Eigendeckungsanteil bei 21% des Verbrauchs).\
+Damit werden bei 30&nbsp;ct/kWh Arbeitspreis jährlich 186€ eingespart.
+Für die Investition von 467,50€ ergibt sich eine Amortisationszeit
+von 2,5 Jahren und eine immer noch ausgezeichnete Rendite von 40%.
 
 [//]: #
 <!--
-TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92
-ergibt 464 kWh, aber noch etwas Lastspitzen-Abzug
-88%: -peff 93.617
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92
+Lastprofil-Datei            : Lastprofil_17_teils_31.csv
+Nächtliche Durchschnittslast=  189 W von 0 bis 6 Uhr
+Minimallast (Grundlast)     =   10 W am *-06-15 um 05:22
+Maximallast                 =11028 W am *-12-03 um 14:44
 
-Verbrauch durch Haushalt    = 3000 kWh
-PV-Eigenverbrauch           =  464 kWh
-Netzeinspeisung             =  196 kWh
-PV-Eigenverbrauchsanteil    =   70 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
+PV-Nennleistung             =  850 Wp
+Max. PV-Bruttoleistung      =  920 W am 2020-03-23 um 12h
+PV-Bruttoertrag             = 1083 kWh
+PV-DC-Ertrag                =  996 kWh, PV-System-Wirkungsgrad 92%
+PV-Nettoertrag              =  936 kWh bei Wechselrichter-Wirkungsgrad 94%
+Max. PV-Nettoleistung       =  796 W am 2020-03-23 um 12h
+
+Verbrauch                   = 3000 kWh über ein Jahr
+PV-Eigenverbrauch           =  623 kWh
+PV-Überschuss               =  313 kWh
+Max. PV-Überschuss          = 4.05 kWh am 2020-03-24
+Netzeinspeisung             =  313 kWh
+PV-Eigenverbrauchsanteil    =   67 % des PV-Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
 
 TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
 -->
@@ -1952,61 +1959,58 @@ Eigendeckungsanteil         =   21 % des Verbrauchs (Autarkiegrad)
 
 -->
 
-  - Bei einem relativ hohen Jahresverbrauch von 6000&nbsp;kWh können durchschnittlich
-  sogar 570&nbsp;kWh im Jahr (also 87% des Nettoertrags) selbst genutzt werden,
-  was bei den angenommenen Kosten eine Amortisationszeit in 2,9 Jahren ergibt.
+- Bei einem hohen Jahresverbrauch von 6000&nbsp;kWh können durchschnittlich
+sogar 800&nbsp;kWh im Jahr (also 86% des Nettoertrags) selbst genutzt werden.
 
 [//]: #
 <!--
-TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
+./Solar.pl Lastprofil_17_teils_31.csv 6000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92 
 
-Verbrauch durch Haushalt    = 6000 kWh
-PV-Eigenverbrauch           =  574 kWh
-Netzeinspeisung             =   86 kWh
-PV-Eigenverbrauchsanteil    =   87 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   10 % des Verbrauchs (Autarkiegrad)
+Verbrauch                   = 6000 kWh über ein Jahr
+PV-Eigenverbrauch           =  801 kWh
+Netzeinspeisung             =  136 kWh
+PV-Eigenverbrauchsanteil    =   86 % des PV-Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   13 % des Verbrauchs (Autarkiegrad)
 -->
 
-  - Bei nur 1500&nbsp;kWh Jahresverbrauch können durchschnittlich nur 330&nbsp;kWh im Jahr
-  (also 50% des Nettoertrags) selbst genutzt werden,
-  was eine Amortisation in genau 5 Jahren ergibt.
+- Bei geringem Jahresverbrauch von 1500&nbsp;kWh können durchschnittlich nur
+430&nbsp;kWh im Jahr (also 46% des Nettoertrags) selbst genutzt werden.
 
 [//]: #
 <!--
-TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -tmy
-
-Last durch Haushalt         = 1500 kWh
-Eigenverbrauch              =  333 kWh
-Netzeinspeisung             =  328 kWh
-Eigenverbrauchsanteil       =   50 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   22 % des Verbrauchs (Autarkiegrad)
+./Solar.pl Lastprofil_17_teils_31.csv 1500 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92
+Verbrauch                   = 1500 kWh über ein Jahr
+PV-Eigenverbrauch           =  428 kWh
+Netzeinspeisung             =  508 kWh
+PV-Eigenverbrauchsanteil    =   46 % des PV-Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   29 % des Verbrauchs (Autarkiegrad)
 -->
 
-  - Wenn bei 3000&nbsp;kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
-  nur eine Grundlast von 100&nbsp;W anfällt, liegt der Eigenverbrauch bei 365&nbsp;kWh
-  im Jahr (also 55% des Nettoertrags) und die Amortisationszeit bei 4,5 Jahren.
+- Wenn bei 3000&nbsp;kWh Jahresverbrauch montags bis freitags von 8 bis 16 Uhr
+nur eine konstante Last von 100&nbsp;W anfällt, liegt der Eigenverbrauch
+entsprechend relativ gering bei 465&nbsp;kWh im Jahr (also 50% des Nettoertrags)
+und die Amortisationszeit für die veranschlagten Kosten bei 3,3 Jahren.
 
-In den beiden zuletzt genannten Fällen könnte man überlegen,
-weniger PV-Leistung als 600&nbsp;Wp zu installieren,
-allerdings hätte man dann auch langfristig weniger Nutzen.
+In den beiden zuletzt genannten Fällen könnte man zwar überlegen, nur 1 PV-Modul
+(statt 2) zu installieren, aber dann hätte man auch langfristig weniger Nutzen,
+so dass das angesichts der geringen Kosten für PV-Module nicht ratsam wäre.
 
 [//]: #
 <!--
-TODO check/update ./Solar.pl Lastprofil_4673_kWh.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 600 -peff 92 -load 130 -tmy
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92 -load 83
 
-Last durch Haushalt         = 3000 kWh
-Konstante Last              =  100 W an den ersten 5 Tagen der Woche von 8 bis 16 Uhr
-Eigenverbrauch              =  366 kWh
-Netzeinspeisung             =  294 kWh
-Eigenverbrauchsanteil       =   55 % des Nettoertrags (Nutzungsgrad)
-Eigendeckungsanteil         =   12 % des Verbrauchs (Autarkiegrad)
-
+Verbrauch                   = 3000 kWh über ein Jahr
+Adaptierte konstante Last   =  100 W an Mo..Fr von 8 bis 16 Uhr
+PV-Eigenverbrauch           =  465 kWh
+Netzeinspeisung             =  472 kWh
+PV-Eigenverbrauchsanteil    =   50 % des PV-Nettoertrags (Nutzungsgrad)
+Eigendeckungsanteil         =   15 % des Verbrauchs (Autarkiegrad)
 -->
 
 Für die Amortisation des energetischen Aufwands
-zur Herstellung einer Mini-PV-Anlage muss man nach [Angaben des DKE](
+zur Herstellung einer Mini-PV-Anlage sollte man nach [Angaben des DKE](
 https://www.dke.de/de/arbeitsfelder/energy/mini-pv-anlage-solar-strom-balkon-nachhaltig-erzeugen)
-allerdings noch 2-3 Jahre länger rechnen.
+allerdings noch 2-3 Jahre zusätzlich rechnen.
 In die Gesamt-Ökobilanz einer PV-Anlage und ihrer Nutzung gehen natürlich
 noch weitere Effekte ein, die sich aber kaum quantifizieren lassen.
 
