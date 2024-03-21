@@ -2478,16 +2478,15 @@ auch zu ungünstigen Tages- und Jahreszeiten entsprechend mehr Ausbeute
 (eigentlich sogar überproportional mehr, weil die Anlaufspannung der Regelung
 schneller erreicht wird), allerdings auf eher niedrigem absoluten Niveau.
 
-Die typischerweise auf 600&nbsp;W gedrosselten Wechselrichter realisieren
-die Leistungsbegrenzung aus energetischen Gründen schon auf ihrer Eingangsseite.
-Leider verwenden einige Modelle (zumindest die von Deye/Bosswerk/revolt),
-wie man in [Diagrammen](
+Die Drosselung der Wechselrichter wird aus energetischen Gründen durch
+eine Leistungsbegrenzung bereits auf Eingangsseite umgesetzt.
+Leider verwenden einige Modelle (zumindest die von Bosswerk/revolt/Deye G2
+und G3, aber nicht die von Hoymiles), wie man in [Diagrammen](
 https://www.photovoltaikforum.com/thread/180129-deye-sun600-und-sun2000-erfahrungen/)
 sehen kann, dabei direkt den Ziel-Grenzwert, statt zu berücksichtigen,
 dass aufgrund des Wirkungsgrades auf der Ausgangsseite 5-10% weniger ankommen
 &mdash; pro genutztem Eingang sind es z.B. beim Deye Sun 600 maximal etwa 270&nbsp;W.
-Zudem wird der Grenzwert oft auch noch einfach gleichmäßig auf die Eingänge
-aufgeteilt. So können bei 95% Wirkungsgrad höchstens 570&nbsp;W geliefert werden.
+So können bei real 90% Wirkungsgrad höchstens 540&nbsp;W geliefert werden.
 Obwohl der Netto-Ertrag durch diese ungeschickte Form der Abregelung also oft
 sogar unnötig stark verringert wird, ist der Effekt auf den nutzbaren Ertrag
 längst nicht so groß wie man meinen könnte.
@@ -2645,8 +2644,11 @@ PV-Eigenverbrauchsanteil    =   71 % des PV-DC-Ertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   28 % des Verbrauchs (Autarkiegrad)
 -->
 
-Auch bei Abweichung von der optimalen Südausrichtung verschwinden die ohnehin
-äußerst geringen Eigenverbrauchs-Einbußen durch Kappung auf 600&nbsp;W zusehends
+Bei Abweichung von der optimalen Südausrichtung verschwinden,
+zumindest wenn Module mit unterschiedlicher Ausrichtung parallel geschaltet
+werden (also für sie nur ein gemeinsamer MPPT-Eingang verwendet wird),
+die ohnehin äußerst geringen Eigenverbrauchs-Einbußen durch Kappung von
+z.B. 1000&nbsp;Wp auf 600&nbsp;W zusehends
 und sind bei Ost-West-Aufteilung (Azimut +/-90°) gar nicht mehr vorhanden.
 
 <!--
@@ -2778,23 +2780,30 @@ PV-Eigenverbrauchsanteil    =   59 % des Nettoertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   20 % des Verbrauchs (Autarkiegrad)
 -->
 
-<!-- https://www.mydealz.de/comments/permalink/46760795 -->
-Bei 4 PV-Modulen mit z.B. je 400&nbsp;Wp ist es nicht sehr sinnvoll, einen
-Wechselrichter mit z.B. 1600&nbsp;W Leistung und 4 MPPT zu verwenden, besonders
-wenn man diesen auf 600 bzw. 800&nbsp;W Ausgangsleistung drosselt. Denn dann
-gibt es erhebliche unnötige Verluste, weil die Drosselung gleichmäßig auf alle
-MPPT-Eingänge wirkt und somit nur 150 bzw. 200&nbsp;W je Eingang möglich sind.\
-Stattdessen kann man einen günstigeren 600 bzw. 800&nbsp;W Wechselrichter nutzen
-und an jedem seiner zwei Eingänge dabei jeweils zwei Module parallel anschließen.
-Dass die Eingänge dabei dann teilweise an die Grenze ihrer Strom-Belastbarkeit
-kommen, ist typischerweise [unproblematisch](#Anschluss). (Wer das trotzdem
-vermeiden will, kann auch z.B. einen HM-1500 verwenden, der nur 2 MPPT hat.)
-Wenn die Module in zwei Ausrichtungen aufgeteilt sind, sollten dabei jeweils
-zwei Module mit unterschiedlicher Ausrichtung (z.B. Südost und Südwest) parallel
+Wenn PV-Module in zwei Ausrichtungen aufgeteilt sind, sollten jeweils
+Module mit unterschiedlicher Ausrichtung (z.B. Südost und Südwest) parallel
 geschaltet werden, weil sich dann sowohl die Last für den Wechselrichter
 als auch der Nutzen für den Haushalt besser über den Tagesverlauf verteilen.
-Zu diesem Punkt [hier](
-https://mikrowechselrichter.eu/blogs/drosselung-leistungsbegrenzung-von-hoymiles-wechselrichtern/warum-sollten-mikrowechselrichter-besser-nicht-gedrosselt-werden)​ ein schöner Artikel.
+Dies ist besonders ratsam, wenn der Wechselrichter stark gedrosselt wird, weil
+der Limit-Wert leider meist [einfach gleichmäßig auf die Eingänge aufgeteilt wird](
+https://mikrowechselrichter.eu/blogs/drosselung-leistungsbegrenzung-von-hoymiles-wechselrichtern/warum-sollten-mikrowechselrichter-besser-nicht-gedrosselt-werden)
+und somit erhebliche unnötige Verluste entstehen können.
+<!-- https://www.mydealz.de/comments/permalink/46760795 -->
+Etwa ist es bei 4 PV-Modulen mit je 400&nbsp;Wp nicht sehr sinnvoll, einen
+Wechselrichter mit z.B. 1600&nbsp;W Leistung und 4 MPPT zu verwenden, besonders
+wenn man diesen auf 600 bzw. 800&nbsp;W Ausgangsleistung drosselt. Denn dann
+sind durch die gleichmäßige Aufteilung der Drosselung auf alle MPPT-Eingänge
+nur noch 150 bzw. 200&nbsp;W je Eingang möglich.\
+Stattdessen kann man auch einen günstigeren 600 bzw. 800&nbsp;W Wechselrichter
+nutzen und an jedem seiner zwei Eingänge dabei jeweils zwei Module parallel anschließen.
+Dass die Eingänge dabei dann teilweise an die Grenze ihres Eingangsstroms
+kommen, ist typischerweise [unproblematisch](#Anschluss). (Wer das trotzdem
+vermeiden will, kann auch z.B. einen HM-1500 verwenden, der nur 2 MPPT hat.)
+
+Anders sieht es bei den seit Frühjahr 2024 verfügbaren Deye G4 Wechselrichtern
+aus, denn bei diesen wird die [Höhe der Limitierung wirklich auf die
+Ausgangsleistung bezogen](https://www.youtube.com/watch?v=9W1WTIYNEyo&t=532s)
+und nicht dumm gleichmäßig auf alle MPPT-Eingänge verteilt.
 
 
 ### Hausnetzeinspeisung mit Pufferung in Batteriespeicher {#Batteriepuffer}
