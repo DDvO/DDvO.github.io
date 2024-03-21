@@ -2360,10 +2360,9 @@ aufgeständert.
 
 #### Hintergrund der Beschränkung auf 600 bzw. 800&nbsp;W {#Bagatellgrenze}
 
-Die Hauptgründe für die Leistungsbegrenzung bei der Einspeisung von PV-Strom
-sind nicht, wie von vielen angenommen,
-Sicherheitsbedenken bzgl. der Stromleitungen im Haushalt.
-Die wesentlichen technischen und wirtschaftlichen Gründe sind vielmehr mögliche
+Gründe für die Leistungsbegrenzung bei der Einspeisung von PV-Strom
+sind nicht nur Sicherheitsbedenken bzgl. der Stromleitungen im Haushalt.
+Weitere technische und wirtschaftliche Gründe sind mögliche und
 nicht immer gut kalkulierbare Rückwirkungen auf das allgemeine Stromnetz.
 * Bei massenhafter Einspeisung von Solarstrom und kräftigem Sonnenschein
 kann der Strom im Verteilnetz z.B. durch ziehende Wolken sehr stark schwanken,
@@ -2373,19 +2372,13 @@ teils besonders teuren Strom nachkaufen muss bzw. für überschüssigen Strom ei
 sehr geringen oder gar negativen Preis bekommt, sprich „Strafe zahlen“ muss.
 * Auch könnten sich Freileitungen, durch die ungewöhnlich viel Strom fließt,
 stärker als üblich ausdehnen und eventuell gefährlich durchhängen.
-<!--
-Auch könnten z.B. Mittelspannungs-Stromleitungen, die schon am Limit sind,
-sich durch ungewöhnlich hohen Stromfluss stärker ausdehnen als normal
-und daher teils die Mindest-Durchfahrtshöhe unterschritten werden.
--->
 
 Wenn jedoch durch sog.
 [*Nulleinspeisung*](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/eigenverbrauch/nulleinspeisung)
 sichergestellt ist, dass kein lokal erzeugter Strom ins externe Netz fließt,
-können Steckdosen-Anlagen [auch z.B. mit 1800&nbsp;W Leistung](
+können PV-Anlagen [auch z.B. mit 1800&nbsp;W Leistung](
 https://www.pv-magazine.de/2022/07/04/indielux-startet-crowdfunding-fuer-serienproduktion-seines-einspeisewaechters-fuer-stecker-solar-geraete/)
-normgerecht betrieben werden.
-
+aus Sicht der Netzbetreiber problemlos und normgerecht betrieben werden.\
 [![Bild: ready2plugin-Stromwächter von indielux](
 ready2plugin-Stromwaechter_indielux.jpg){:.right}](
 https://www.indielux.com/produkt/ready2plugin-einspeisewaechter/)
@@ -2405,23 +2398,27 @@ dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
 Die sog. [*Bagatellgrenze* bei 600 bzw. 800&nbsp;Watt](
 https://www.computerbild.de/artikel/cb-Tipps-Energie-Balkonkraftwerk-800-Watt-erlaubt-35272303.html)
 dient in erster Linie der erleichterten Anmeldung kleiner Steckersolargeräte.
-Die Beschränkung leistet in gewisser Hinsicht aber auch einen Beitrag zum Schutz
-der Stromleitungen im Haus in folgendem sehr selten auftretenden Fall:
-
+Die Beschränkung leistet aber auch einen aus Sicht des VDE wichtigen Beitrag zum
+Schutz der Stromleitungen im Haus in folgendem sehr selten auftretenden Fall:\
 [![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
 Solarstrom-Einspeisung](
 Stromleitung_Ueberlastung_Solareinspeisung.jpg){:.right width="400"}](
 https://www.sonnenenergie.de/index.php?id=30&tx_ttnews%5Btt_news%5D=254)
 Wenn über die Wohnungs-Stromleitung, an der die Einspeisung
-stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es
-unter sehr ungünstigen Umständen passieren, dass auf Teilen der Leitung mehr
-Strom fließt als die Sicherung eigentlich erlauben würde, was dann zu
+stattfindet, gleichzeitig sehr kräftig Strom verbraucht wird, kann es unter
+ungünstigen Umständen passieren, dass über längere Zeit auf Teilen der Leitung
+mehr Strom fließt als die Sicherung eigentlich erlauben würde, was dann zu
 einer mehr oder weniger übermäßigen Erwärmung der Leitung führt.\
 Wenn L der momentane Gesamt-Verbrauch auf der Leitung ist und P die momentane
 Erzeugung auf derselben Leitung, kommt bei der Sicherung die Leistung L&nbsp;-&nbsp;P an.
 Wenn die Sicherung auf 16&nbsp;A ausgelegt ist und die dort ankommende Leistung
 vom Betrag her, also |L&nbsp;-&nbsp;P|, kleiner als 3680&nbsp;W (= 230&nbsp;V × 16&nbsp;A) ist,
-löst die Sicherung nicht aus. Falls dabei L oder P größer als 3680&nbsp;W ist,
+löst die Sicherung nicht aus. (Ein 16&nbsp;A Leitungsschutzschalter wird genau
+genommen sogar erst dann auslösen, wenn über ihn dauerhaft mindestens 18&nbsp;A
+fließen oder länger als eine Stunde mehr als ca. 23&nbsp;A. Daher will der VDE
+Stand März 2024 die [PV-Leistung von SSGs auf 960 Wp beschränken](
+https://www.youtube.com/watch?v=Vrv4s94gejY).)
+Wen L oder P größer als 3680&nbsp;W ist,
 fließen auf einem Teilabschnitt der Leitung mehr als 16&nbsp;A Strom.\
 Das kann beispielsweise passieren, wenn gerade die Erzeugung 6&nbsp;A Strom liefert
 und der Stromverbrauch zwischen 16&nbsp;A und 22&nbsp;A liegt.\
@@ -2429,8 +2426,9 @@ Das ist allerdings insgesamt in der Praxis höchst unwahrscheinlich,
 denn fast niemand betreibt an derselben Leitung gleichzeitig Geräte, die in
 Summe einen Verbrauch L von über 3680&nbsp;W haben, und dass z.B. durch einen
 Kurzschluss extrem viel Strom fließt, ist möglich, aber kommt selten vor.
-Und selbst wenn das der Fall ist und die Solaranlage in dieser Zeit auch nur
-mal kurz weniger Leistung als L&nbsp;-&nbsp;3680&nbsp;W liefert,
+Und selbst wenn das der Fall ist und die Balkonanlage währenddessen für eine
+gewisse Zeit weniger Leistung als L&nbsp;-&nbsp;3680&nbsp;W (bzw. bei einem
+16&nbsp;A Leitungsschutzschalter erhöht um Faktor 1,13 bzw. 1,45) liefert,
 löst die Sicherung wie üblich aus und die Überlast ist beendet.
 
 Von der ESTI (Schweiz) wird aus diesem Grund
@@ -2446,11 +2444,13 @@ dass die Strombelastbarkeit des Leiters größer sein muss als der Nennstrom
 der Sicherung und der Ausgangsstrom des Netzwechselrichters zusammen.
 Dann ist man auf jeden Fall auf der sicheren Seite, aber von dieser Regel hat
 man als Nichtelektriker wenig, weil man die Belastbarkeit der Leitung kaum
-wissen wird und man auch nicht einfach den Sicherungsautomaten wechseln kann.\
+wissen wird und man auch nicht einfach den Sicherungsautomaten wechseln kann.
+<!--
 Besonders in Deutschland herrscht die Neigung, alles möglichst idiotensicher zu
 machen, damit unter keinen Umständen etwas passieren kann. Dann besteht aber
 die Gefahr, dass das Verhältnis von Aufwand zu Nutzen viel zu ungünstig wird.
-<!-- https://www.mydealz.de/comments/permalink/40887036 -->
+https://www.mydealz.de/comments/permalink/40887036
+-->
 
 #### Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W {#Kappungsverlust}
 
