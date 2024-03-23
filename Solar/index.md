@@ -221,7 +221,8 @@ Lizenzkürzel:
           - [Zusammenfassung und Effizienzbetrachtung](#SSG-Speicher-Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](#SSG-Speicher-Eigenbau)
           - [Implementierung der Speicher-Regelung](#Regelungsimplementierung)
-          - [Beispiel für DC-gekoppelten Speicher](#SSG-DC-gekoppelt)
+          - [Einfache und günstige Lösung: OpenDTU-OnBattery](#OpenDTU-OnBattery)
+          - [Weiteres Beispiel für DC-gekoppelten Speicher](#SSG-DC-gekoppelt)
           - [Ladung des Stromspeichers](#Ladung)
           - [Konstanteinspeisung](#Konstanteinspeisung)
           - [Lastgeregelte Einspeisung](#lastgeregelt)
@@ -2391,7 +2392,11 @@ Er wird auch *Einspeisewächter* genannt, weil er für Steckersolargeräte
 nebenbei dafür sorgt, dass nicht mehr als 600 bzw. 800&nbsp;VA eingespeist werden.
 Der Stromwächter ist inzwischen mit vielen steuerbaren Wechselrichtern
 kompatibel und setzt eine per RS485 mit Modbus oder WLAN angebundene Messung des
-aktuellen Netz-Strombezugs z.B. mit einem Shelly 3EM voraus.
+aktuellen Netz-Strombezugs z.B. mit einem Shelly 3EM voraus.\
+Wesentlich günstiger und relativ wenig aufwenig ist
+ein Eigenbau mit [OpenDTU-OnBattery](#OpenDTU-OnBattery),
+das eine Nulleinspeisung auch ohne Batterie realisieren kann.
+
 
 Man kann durchaus annehmen, dass Beschränkungen auch dadurch motiviert sind,
 dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
@@ -2964,7 +2969,7 @@ Jahresverbrauch (bei nächtlicher Durchschnittslast von 190&nbsp;W zwischen 0 un
 mit einer typischen Balkonanlage in Süddeutschland mit optimal ausgerichteten
 Modulen mit 850&nbsp;Wp Nennleistung und typischen Wirkungsgraden, der eine
 Pufferbatterie mit 1&nbsp;kWh effektiv nutzbarer Kapazität hinzugefügt wurde.
-Dazu passt sehr gut eine 12,8&nbsp;V 100&nbsp;Ah LiFePO4-Batterie,
+Dazu passt sehr gut eine 25,6&nbsp;V 50&nbsp;Ah LiFePO4-Batterie,
 also mit nominell 1,28&nbsp;kWh Kapazität, denn davon muss man ohnehin
 mindestens 90% für eine gesunde Entladetiefe abziehen, und nochmal ungefähr 90%
 für die durchschnittliche Degradation durch Alterungseffekte etc. Die
@@ -3826,9 +3831,87 @@ Weitere Möglichkeiten sind der [iobroker](https://www.iobroker.net/?lang=de#de/
 und das Projekt [Solaranzeige.de](https://solaranzeige.de/) für Raspberry Pi.
 
 
-##### Beispiel für DC-gekoppelten Speicher {#SSG-DC-gekoppelt}
+##### Einfache und günstige Lösung: OpenDTU-OnBattery {#OpenDTU-OnBattery}
 
-Hier ein Beispiel für eine sehr gelungene effiziente Lösung
+Inzwischen gibt es eine relativ einfache und kostengünstige Möglichkeit, mit
+wenig Arbeitsaufwand und ohne eigene Programmierung zu einer recht effizienten
+Speicherlösung für ein SSG/Balkonkraftwerk zu kommen, und zwar dank des
+Projekts [OpenDTU-OnBattery](https://github.com/helgeerbe/OpenDTU-OnBattery).
+Dies ist eine Weiterentwicklung der
+[OpenDTU](https://github.com/tbnobody/OpenDTU), welche wie im Abschnitt zur
+[Einspeisung aus einer Batterie](#lastgeregelt) beschrieben einen Mikrocontroller
+zur offenen Kommunikation per WLAN mit einem Hoymiles-Wechselrichter einrichtet.
+
+![Bild: OpenDTU-OnBattery.jpg](OpenDTU-OnBattery.png){:.right width="755"}
+* Der Clou dabei ist, den OpenDTU Mikrocontroller auch gleich zur lastbasierten
+Regelung der Einspeisung des Wechselrichters zu verwenden, statt irgendwo
+anders z.B. Home Assistant oder iobroker laufen lassen zu müssen.
+* Zudem wird natürlich ein dreiphasiges Leistungsmessgerät mit Dateninterface
+([Shelly 3EM](#Shelly3EM), Eastron SDM oder Stromzähler-Lesekopf mit
+[Tasmota](https://www.tasmota.info/)-Software) benötigt, um den aktuellen
+Leistungssaldo des Haushalts in Sekundenauflösung zu erhalten.
+* Die Ladung des Speichers erfolgt effizient mit DC-Kopplung, und zwar über
+einen [Solar-Laderegler](#Laderegler) von Victron, dessen [VE.Direct interface](
+https://www.victronenergy.com/live/vedirect_protocol:faq) zur Regelung benötigt
+wird, weil sich damit die PV-Leistung abfragen lässt.
+Je nach der maximalen Gesamtspannung der hierbei meist in Reihe geschalteten
+PV-Module genügt teils schon ein BlueSolar 75/15 und
+sicherlich ein 100/15 (der 100&nbsp;V Eingangsspannung verträgt).
+Die Batteriespannung muss für den (direkten) Anschluss des Wechselrichters
+mindestens 24&nbsp;V betragen, was von allen Victron-Varianten unterstützt wird.
+Für eine Batteriespannung von 48&nbsp;V eignet sich etwa der 100/20.
+* Die aktuelle Batteriespannung kann über ein BMS-Interface, den Laderegler
+und den Wechselrichter abgefragt werden, benötigt also kein Extra-Gerät.
+* Außerdem werden nur noch ein USB-Anschluss o.ä. zur Stromversorgung sowie ein
+paar Kabel zur Verbindung von Laderegler, Batterie und Wechselrichter gebraucht.
+* Bei Betrieb des Speichers z.B. auf dem Balkon empfiehlt sich eine Heizmatte
+mit Thermostat, um die Batterie auch bei Minustemperaturen laden zu können.
+
+[Hier](https://github.com/helgeerbe/OpenDTU-OnBattery/wiki/Dynamic-Power-Limiter)
+die Übersicht der konfigurierbaren Regelungsparameter.\
+Der Regelungsalgorithmus, welcher in der C++-Quelldatei [PowerLimiter.cpp](
+https://github.com/helgeerbe/OpenDTU-OnBattery/blob/development/src/PowerLimiter.cpp)
+implementiert ist, arbeitet im Wesentlichen wie folgt:\
+Berechne in einer Endlosschleife immer wieder einen neuen Zielwert (Limit)
+für die Wechselrichter-Ausgangsleistung, sende ihn an das Gerät und warte, bis
+positive Rückmeldung erfolgt, was beim Hoymiles meist 5-10&nbsp;Sekunden dauert.
+Für den Zielwert gibt es verschiedene Fälle:
+
+|Batterie-Ladezustand|PV-Leistung| resultierendes Wechselrichter-Limit | Effekt auf die Batterie |
+|:-------------------|:----------|:------------------------------------|:------------------------|
+|gering     |<&nbsp;20&nbsp;W|Wechselrichter aus   |Ladung ggf. mit schwacher PV-Leistung|
+|gering     |≥&nbsp;20&nbsp;W|min(Last,PV−Leistung)|Ladung ggf. mit PV-Überschuss        |
+|ausreichend|                |Last<!--img width=16ex/-->|Entladung&nbsp;falls&nbsp;Last&nbsp;>&nbsp;PV−Leistung,&nbsp;sonst&nbsp;Ladung|
+|ausreichend|                |max(Last,PV−Leistung)|Entladung falls Last > PV−Leistung, keine Ladung falls (Full) Solar-Passthrough aktiviert|
+
+Die Regelung ist so flink wie möglich, aber berücksichtigt nicht die
+<!-- im [Abschnitt zur Einspeisung](lastgeregelt) genannten -->
+bei Betrieb an einer 24&nbsp;V Batterie
+[teils groben Abweichungen eines Hoymiles-Geräts](
+https://www.photovoltaikforum.com/thread/221194-hm-400-an-batterie-limitierung-%C3%BCber-opendtu-eigenartig/?postID=3660691#post3660691)
+von großen Limit-Sollwerten.
+
+Geht man davon aus, dass ein SSG mit Hoymiles-Wechselrichter bereits vorhanden
+ist und angesichts dessen, dass
+für ein SSG eine Nenn-Speicherkapazität von 1,28&nbsp;kWh ausreichend ist,
+ergeben sich (Stand März 2024) bei günstigem Einkauf in etwa folgende Kosten:
+* LiFePO4-Batterie 25,6&nbsp;V 50 Ah mit BMS: 200€
+* Victron MPPT Laderegler: je nach Variante ca. 70€
+* Shelly 3EM: 80€
+* ESP32-Mikrocontroller plus passendes WLAN-Modul, fertig konfektioniert: 30€
+* Heizmatte mit Thermostat: 20€
+* Kleinteile wie Kabel und Stecker: 20€
+
+Das ergibt in Summe 420€.
+Wie [oben](#Batteriepuffer) ausgeführt, lassen für ein Balkonkraftwerk in einem
+Durchschnittshaushalt mit effektiv 1 kWh Speicherkapazität etwa 200&nbsp;kWh
+zusätzlicher Eigenverbrauch pro Jahr erzielen, was ungefähr 60€ entspricht.
+Damit amortisiert sich diese Speicherlösung in etwa 7 Jahren.
+
+
+##### Weiteres Beispiel für DC-gekoppelten Speicher {#SSG-DC-gekoppelt}
+
+Hier ein Beispiel für eine gelungene, aber etwas aufwendigere effiziente Lösung
 mit DC-gekoppelter Anbindung eines 48&nbsp;V LiFePO4 Speichers
 (bestehend aus einer oder zwei Batterien), wozu je ein Victron
 SmartSolar MPPT 100/20-48V [Solar-Laderegler](#Laderegler) verwendet wird.
@@ -3914,6 +3997,11 @@ kann man den Speicher mit einer Heizung versehen und gegen Kälte isolieren.
 Dafür bietet sich Wärmematte mit Thermostat an, welche es auch schon
 [für 15€ gibt](https://www.amazon.de/KIPIDA-Reptilienheizmatte-Einstellbar-Reptilienw%C3%A4rmematte-Temperaturregelung/dp/B0CG3FCJ9H).
 Die Heizmatte braucht nur dann aktiv sein, wenn bei unter 0°C die Sonne scheint.
+
+[Kommerzielle DC-gekoppelte Lösungen](#SSG-Speicher) für kleine PV-Anlagen wie
+Balkonkraftwerke sind leider allesamt nicht rentabel. Mit etwas Eigenarbeit
+lässt sich aber mit Hilfe von [OpenDTU-OnBattery](#OpenDTU-OnBattery) und einem
+Victron-Laderegler eine günstige und effiziente Lösung zusammenbauen.
 
 Bei *AC-Kopplung* hingegen wird der PV-Strom zunächst ins Wechselstromnetz
 eingespeist, so dass die Ladung (an einem beliebigen Ort, meist im Haus)
@@ -4406,10 +4494,10 @@ Am Elegantesten und Flexibelsten, aber **deutlich aufwendiger** ist es,
 einen per Software regelbaren Netzwechselrichter zu verwenden.
 Wenn in die Regelung ein elektronisch auslesbarer möglichst
 [dreiphasiger Lastsensor](#Gesamtstrom) eingebunden wird,
-lässt sich die Einspeisung abhängig vom aktuellen Stromverbrauch
-(mit einer gewissen Verzögerung) etwa über einen mit einer Heimautomatisierung
-entsprechend programmierten Raspberry Pi so steuern,
-dass eine Nulleinspeisung erreicht wird.
+lässt sich die Einspeisung abhängig vom aktuellen Stromverbrauch (mit einer
+gewissen Verzögerung) etwa über [OpenDTU-OnBattery](#OpenDTU-OnBattery)
+<!-- einen mit einer Heimautomatisierung entsprechend programmierten Raspberry Pi-->
+so regeln, dass eine Nulleinspeisung erreicht wird.
 Mehr zum Thema Automatisierungssoftware im Abschnitt zur
 [Implementierung einer Speicher-Regelung](#Regelungsimplementierung).
 
@@ -4458,11 +4546,11 @@ des Wechselrichters verwenden.
 
 Leider ist die Reaktionszeit eines Hoymiles-WR auf Änderungen des
 (relativen oder absoluten) Limits recht lang und auch noch sehr ungleichmäßig:
-er braucht bis zu ca. 15 Sekunden,
+er braucht meist etwa 5 bis 10, teils aber auch über 20 Sekunden,
 um den eingestellten Wert (hoffentlich) zu erreichen.
 Und wenn man zu schnell (z.B. nach 3 Sekunden) wieder neue Limit-Werte setzt,
 verhält er sich teils chaotisch.
-So ist durch seine Trägheit keine flinke und exakte Regelung möglich.\
+So ist durch seine Trägheit keine sehr flinke und exakte Regelung möglich.\
 Zudem kommt es beim Betrieb an einer 24&nbsp;V Batterie bei höheren Limit-Werten
 (also im oberen Leistungsbereich) teils zu [groben Abweichungen vom Sollwert](
 https://www.photovoltaikforum.com/thread/221194-hm-400-an-batterie-limitierung-%C3%BCber-opendtu-eigenartig/?postID=3660691#post3660691).
@@ -5653,10 +5741,10 @@ LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs Controler
 LocalWords: blackout brownout panels busbars shingle panel up number solarbank
 LocalWords: maximum point tracking sine wave efficiency boost true SG Shellys DL
 LocalWords: converter step consumption pdf balancer equalizer mppt em Script
-LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test br ATON
-LocalWords: Charger Discharger Board Under Over Voltage Protection if
-LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW sub
-LocalWords: telemetry gateway distort cell document sections profile
+LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test br ATON Full
+LocalWords: Charger Discharger Board Under Over Voltage Protection sub cpp img
+LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW if PowerLimiter
+LocalWords: telemetry gateway distort cell document sections profile Passthrough
 LocalWords: post text standard conditions Reflexions PVSOL SOL assuming
 LocalWords: operating temperature Timeseries crystSi PVCalculator and
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
