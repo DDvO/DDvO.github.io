@@ -2280,8 +2280,9 @@ Mikrowechselrichter und eine Steckdose einfach mit dem Hausnetz verbunden
 werden, z.B. an einer Außensteckdose auf dem Balkon oder der Terrasse.
 Sie werden auch z.B. *Stecker-PV-Anlage*, *Steckersolaranlage*,
 oder *Balkonkraftwerk* (*BKW*) genannt.
-Im *Erneuerbare-Energien-Gesetz* (*EEG*) werden sie [voraussichtich](
-https://www.bmwk.de/Redaktion/DE/Downloads/Gesetz/20230816-entwurf-eines-gesetzes-zur-aenderung-des-erneuerbare-energien-gesetzes.pdf)
+Im [§ 3 Nr. 43 EEG-E (*Erneuerbare-Energien-Gesetz*)](https://www.haufe.de/recht/deutsches-anwalt-office-premium/balkonkraftwerke-wemog-1-einfuehrung_idesk_PI17574_HI15563245.html) werden sie
+<!--[voraussichtich](
+https://www.bmwk.de/Redaktion/DE/Downloads/Gesetz/20230816-entwurf-eines-gesetzes-zur-aenderung-des-erneuerbare-energien-gesetzes.pdf)-->
 wie folgt definiert:
 > Steckersolargerät ein Gerät, das aus einer Solaranlage oder aus mehreren Solaranlagen, einem Wechselrichter, einer Anschlussleitung und einem Stecker zur Verbindung mit dem Endstromkreis eines Letztverbrauchers besteht.
 
