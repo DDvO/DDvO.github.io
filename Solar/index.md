@@ -1304,7 +1304,7 @@ Keine Ahnung, ob die Shellys eine Feinsicherung eingelötet haben.
 Angeschlossene Geräte hoher Leistung sollten zumindest noch einen eigenen Schutz haben, wie z.B. Thermostate etc.
 Bei einem Jalousiemotor, sollte das kein Problem sein, denn die schalten ja selbst ab und man darf sie ja auch mit (gegenseitig verriegelten) Schaltern verwenden.
 
-Zur Sicherheit würde ich überhaupt nie Geräte mit mehr als 8-10&nbsp;A an irgendwelche Wifi-Steckdosen/Dosenaktoren im Miniaturformat betreiben.
+Zur Sicherheit würde ich überhaupt nie Geräte mit mehr als 8-10&nbsp;A an irgendwelche WiFi-Steckdosen/Dosenaktoren im Miniaturformat betreiben.
 Mir ist in letzten Jahren aufgefallen, dass die smarten Steckdosen immer kleiner werden, die Relais dementsprechend auch und viele Hersteller diese immer noch mit 16A bewerben.
 Die alten, von vor 4-6 Jahren, die noch groß und klobig waren, wie eine Zeitschaltuhr, denen habe ich schon mehr Ampere anvertraut.
 Ist aber ein generelles Problem der aktuellen smarten Technik. Alle Hersteller versuchen auf engstem Raum die Wandler von 230V auf 3,3 bzw 5V, die (Funk)-Elektronik und das Relais auf die Größe einer Streichholzschachtel zu minimieren und suggerieren einem, dass man damit locker seinen Ablufttrockner betreiben kann. Eine Zeit lang geht das alles sicher..eine Zeit lang..ja.
@@ -3306,7 +3306,7 @@ erwartete PV-Ertrag, Verbrauch im Haushalt, Strompreis, usw.
 Die [Implementierung einer Speicher-Regelung](#Regelungsimplementierung),
 welche [lastbasiert](#lastgeregelt) sein sollte, ist regelungstechnisch
 ziemlich aufwendig. Sie lohnt sich finanziell bislang eher nur für
-größere PV-Anlagen und (wegen der Speichkosten) für nicht sehr große Speicher.
+größere PV-Anlagen und (wegen der Speicherkosten) für nicht sehr große Speicher.
 
 Statt einer lastabhängigen Regelung ist es besonders für Steckersolargeräte
 viel einfacher, aber leider wenig effizient,
@@ -5615,7 +5615,7 @@ AC-Kopplung des Pufferspeichers hinzu:
     [ca. 30€](https://www.kleinanzeigen.de/s-opendtu/k0)
 
 -   [Shelly 3EM](https://www.shelly.com/de/products/shop/shelly-3em-1)
-    3-phasiges Leistungs- und Energiemessgerät mit WLAN und Relais, [ca. 75€](
+    dreiphasiges Leistungs- und Energiemessgerät mit WLAN und Relais, [ca. 75€](
     https://www.idealo.de/preisvergleich/OffersOfProduct/202769156_-3em-nur-fuer-pv-anlagen-shelly.html)
 
 -   3 ×
@@ -5646,13 +5646,13 @@ LocalWords: title keywords toc start refresh markdown pandoc width style margin
 LocalWords: zusammenfassung Messgeraet CC BY Std webp Ferrariszaehler IAMKlaus
 LocalWords: Unabhaengigkeitsrechner Stromwaechter Play SDM clams comment fazit
 LocalWords: output calculation power unit rating Europe TSUN InGe DPM anker only
-LocalWords: left right irradiance GHI buehneTop clear both png tgl RS solix
-LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi align
+LocalWords: left right irradiance GHI buehneTop clear both png tgl RS solix eArc
+LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi align Naja
 LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs Controler
-LocalWords: blackout brownout panels busbars shingle panel up number
-LocalWords: maximum point tracking sine wave efficiency boost true SG
-LocalWords: converter step consumption pdf balancer equalizer mppt em
-LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test br
+LocalWords: blackout brownout panels busbars shingle panel up number solarbank
+LocalWords: maximum point tracking sine wave efficiency boost true SG Shellys DL
+LocalWords: converter step consumption pdf balancer equalizer mppt em Script
+LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test br ATON
 LocalWords: Charger Discharger Board Under Over Voltage Protection if
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW sub
 LocalWords: telemetry gateway distort cell document sections profile
@@ -5670,8 +5670,8 @@ LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation state
 LocalWords: Microinverter What are Amps Volts SMF charge discharge Un Ent shunt
 LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
-LocalWords: Delivered Latest Downgraded shelly emeter file status returned
-LocalWords: Zweirichtungszaehler issuecomment collect Notifications height
+LocalWords: Delivered Latest Downgraded shelly emeter file status returned MYPV
+LocalWords: Zweirichtungszaehler issuecomment collect Notifications height ELWA
 LocalWords: Plugs comments January Settings ons configuration states excl comp
 LocalWords: sensor export float uksa tamorix custom firmware en Central zell TR
 LocalWords: 
