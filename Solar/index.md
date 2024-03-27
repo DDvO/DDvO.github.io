@@ -3607,11 +3607,13 @@ Seit März 2024 lieferbar ist der [Tentek Tribune EMS Controller](
 https://www.notebookcheck.com/Balkonkraftwerke-effizient-nutzen-Neues-Dreiphasen-Energie-Steuersystem-von-Tentek-ist-vielseitig-und-anpassungsfaehig.775205.0.html)
 bzw. baugleich die [Anfuote EMS-Steuerung](https://www.solarpower.anfuote.com/).
 
-Dies ist das offenbar erste käufliche Steuergerät, das nicht nur allen möglichen
-Netzwechselrichtern, sondern auch mit [angeblich so gut wie jeder Art von
-Speicherbatterie mit 48&nbsp;V Systemspannung)](
+Dies ist das offenbar erste käufliche Steuergerät, das nicht nur mit allen
+möglichen Netzwechselrichtern, sondern auch mit [angeblich so gut wie jeder Art
+von Speicherbatterie mit 48&nbsp;V Systemspannung)](
 https://www.tentekenergy.com/index.php/products/324.html) verwendbar ist.
-Es hat 2 bzw. 4 MPPT zur Anbindung der PV-Module mit je 30&nbsp;A Ladeleistung
+Es hat [je nach Variante 2 bis 4 MPPT](
+https://www.photovoltaikforum.com/thread/221060-tentek-tribune-ems-anfuote/?postID=3667554#post3667554)
+zur Anbindung der PV-Module mit je 30&nbsp;A Ladeleistung
 für einen DC-gekoppelten Speicher und bietet eine
 [sehr gute lastabhängige Einspeise-Regelung](https://youtu.be/vRo15Xi9tMo),
 wobei zur Messung des Haushalts-Lastsaldos ein mitgelieferter
@@ -3622,10 +3624,20 @@ https://www.mydealz.de/deals/balkonkraftwerkspeicher-plugplay-speicher-balkonkra
 https://www.photovoltaikforum.com/thread/221060-tentek-tribune-ems-anfuote/?pageNo=8
 -->
 
-Das Gerät soll in Deutschland inklusive WiFi-Energiemonitor
-[ab 599€](https://www.youtube.com/watch?v=17W4xpWO9sU&t=2s) kosten,
-so dass man mit einer günstigen Batterie auf etwa 1000€ insgesamt kommen kann.
+Für das Gerät soll man in Deutschland inklusive WiFi-Energiemonitor
+[selbst mit MwSt-Befreiung 599€](https://titansolar.de/products/tentek) zahlen,
+so dass man auch mit einer günstigen max. 2,5 kWh Batterie auf etwa 1000€ kommt.
+Das wäre für ein Balkonkraftwerk ca. 300€ zu teuer,
+denn [wie unten ausgeführt](#SSG-Speicher-Effizienz) kann man damit in einem
+durchschnittlichen Fall nur etwa 70€ pro Jahr sparen, so dass man selbst bei
+700€ Kosten schon eine grenzwertig lange Amortisationszeit von 10 Jahren hat.
+
 Direkt aus China ist das Gerät angeblich für unter 300€ erhältlich.
+Das wäre aufgrund der Ausstattung auch realistischer, denn es leistet nicht
+mehr als eine Eigenbau-Lösung mit [OpenDTU-OnBattery](#OpenDTU-OnBattery) und
+zwei MPPT-Ladereglern, was man mit mäßigem Aufwand selbst mit soliden Victron
+BlueSolar-Geräten für ca. 140€ hinbekommen kann, mit einem MPPT für 100€.
+
 
 ##### Weitere Produkte {#SSG-Speicher-sonstige}
 
@@ -3674,18 +3686,19 @@ von 1600&nbsp;Wh (mit 90% Entladetiefe) wie beim Anker Solix vorausgesetzt
 * 725&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung
   mit für diesen Fall optimaler Zielleistung, hier 200&nbsp;W
 
-Wenn man eine optimale lastabhängige Lade- und Entladestrategie nutzen kann,
-ist das Ergebnis mit Abstand am besten: ein Gewinn von etwa 230&nbsp;kWh im Jahr.\
+Wenn man eine optimale lastabhängige Lade- und Entladestrategie nutzen kann, ist
+das Ergebnis mit Abstand am besten: ein Gewinn von etwa 230&nbsp;kWh im Jahr.\
 Selbst mit mehreren geschickt eingesetzten Smart Plugs oder einer ausgefeilten
 Uhrzeit-abhängigen Steuerung wird man kaum an diesen Maximalwert herankommen.\
 Ansonsten ist es bei konstanter Zielleistung selbst mit günstigster Wahl dieses
 Parameters und mit Bypass-Funktion ziemlich egal, welche Strategie im Detail
 verfolgt wird &mdash; man erhält nur magere 100 bis 125&nbsp;kWh Gewinn pro Jahr.
 
-Allerdings bringt selbst ein Gewinn von 230&nbsp;kWh bei 35&nbsp;ct/kWh nur 80€ Ersparnis
-pro Jahr. Damit kann sich so ein Gerät, das je nach Speichergröße
+Allerdings bringt selbst eine Eigenverbrauchs-Steigerung von 230&nbsp;kWh
+bei 30&nbsp;ct/kWh nur 70€ Ersparnis pro Jahr.
+Damit kann sich so ein Gerät, das je nach Speichergröße
 (und Zusatzkosten wie für einen Shelly 3EM) ungefähr 1000€ kostet
-und hoffentlich gut 10 Jahre Lebensdauer hat, kaum amortisieren.\
+und hoffentlich gut 10 Jahre Lebensdauer hat, meist nicht amortisieren.\
 Noch schlechter sieht es für das Anker Solix aus, denn es ermöglicht mit seiner
 ungünstigen Regelung eine Ersparnis von realistisch nur etwa 35€ pro Jahr.\
 Sprich, alle diese Lösungen sind einfach zu teuer, um wirklich rentabel zu sein.
