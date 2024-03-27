@@ -5537,21 +5537,32 @@ Beispiel-Konfigurationen {#Konfigurationen}
 Flexible_Module_am_Wohnmobildach.jpg){:width="798" .right}
 
 Für unser Wohnmobil verwende ich seit Sommer 2019 folgende relativ günstige
-Komponenten zu meiner vollen Zufriedenheit:
+Komponenten<!-- zu meiner vollen Zufriedenheit-->:
 
 -   2 × 100&nbsp;Wp flexible Solarpanels [Dokio
     DFSP-100M](https://www.amazon.de/DOKIO-Batterie-wasserdicht-Wohnmobil-Oberfl%C3%A4che/dp/B07FYW3C6W),
     ca. 180€\
-    Diese habe ich einfach auf das Blechdach unseres Wohnmobils geklebt.
-    Etwas lästig war die Kabelführung ins Innere.
+    _Diese habe ich einfach mit extrem starken doppelseitigen Klebeband
+    auf das Blechdach unseres Wohnmobils geklebt.
+    Etwas lästig war die Kabelführung ins Innere.\
+    Ich kann solche billigen flexiblen Module nicht empfehlen.
+    Sie brachten selbst unter bester Einstrahlung nie die versprochene Leistung
+    und waren bereits nach 5 Jahren so verschlissen (auch durch Verschmutzung
+    und Reinigungsversuche) inkl. Rissbildung, dass sie kaum noch Ertrag brachten.\
+    Daher wurden sie im Frühjahr 2024 ersetzt durch:_
 
--   15&nbsp;A Solar-Laderegler [Victron BlueSolar MPPT
-    75/15](https://www.ebay.de/itm/142083505206), ca. 90€\
+    2 × [120&nbsp;Wp starre Eco-Worthy Solarpanel](https://www.manomano.de/p/eco-worthy-240-watt-12v-solarmodul-mit-aluminiumrahmen-hocheffizientes-monokristallines-solarpanel-solarenergieeingang-von-12v-fuer-boote-wohnmobile-vans-anhaengerhaushalt-75267927?product_id=128166485),
+    für 100€ (Stand Ende März 2024)
+
+-   15&nbsp;A Solar-Laderegler [Victron SmartSolar MPPT 75/15](
+    https://www.victronenergy.de/solar-charge-controllers/smartsolar-mppt-75-10-75-15-100-15-100-20),
+    [ca. 60€](
+https://www.idealo.de/preisvergleich/OffersOfProduct/6019083_-smartsolar-mppt-75-15-victron.html)\
     Dieser Regler unterstützt Batterien mit 12 oder 24&nbsp;V und Ladeströme
-    bis 15&nbsp;A (wobei für die o.g. Solarzellen bei Dachmontage in der
-    Praxis auch 10&nbsp;A genügt hätten).\
-    Sehr praktisch finde ich bei den BlueSolar-Modellen die
-    Status-Abfrage auf dem Smartphone.\
+    bis 15&nbsp;A (wobei selbst bei einer 12&nbsp;V Batterie für 200 Wp
+    bei waagerechter Dachmontage in der Praxis auch 10&nbsp;A genügt hätten).\
+    Die BlueSolar-Variante wäre günstiger, aber sehr praktisch finde ich bei den
+    SmartSolar-Modellen die Status-Abfrage über Bluetooth mit dem Smartphone.\
     Leider unterbinden die Victron-Regler nicht das Laden bei unter 0°C,
     was bei LiFePO4-Akkus zu Schäden führen kann, wenn man sie im Winter nicht
     abklemmt. Allerdings bietet Victron eine Lösung mit einem Zusatzgerät namens
@@ -5639,11 +5650,11 @@ habe ich im Sommer 2022 folgende Komponenten gekauft:
     weil mir ihre Anbringung an der Balkonbrüstung im 4.&nbsp;Stock zu riskant war:\
     4 × [120&nbsp;Wp starre Eco-Worthy
     Solarpanel](https://www.manomano.de/p/2x120watt-solarpanel-solarmodul-12v-12volt-monocrystalline-wohnwagen-wohnmobil-48845318),
-    für 320€ (Stand März 2024)\
+    für 240€ ohne MwSt (Stand März 2024)\
     Diese Eco-Worthy Module kann ich empfehlen, wenn man keine größeren
-    verwenden kann._
-    <!-- Sie bringen jedenfalls die versprochene  Spitzenleistung,
-    was gerade bei günstigen Modellen nicht selbstverständlich ist.--> 
+    verwenden kann.
+    Sie bringen jedenfalls die versprochene  Spitzenleistung,
+    was gerade bei günstigen Modellen nicht selbstverständlich ist._
 
 -   [Deye Sun600g3-EU-230](
     https://deye.com/de/product/sun600-800-1000g3-eu-230-600-1000w-single-phase-2-mppt-micro-inverter-rapid-shutdown/)
