@@ -4024,7 +4024,35 @@ Ihr besonderer Vorteil ist eine große Flexibilität bei der Wahl der Komponente
 auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten,
 weil die Batteriespannung von der Systemspannung der PV-Anlage unabhängig ist.
 Außerdem kann man den Speicher bei Bedarf (z.B. wenn er zu leer geworden ist
-oder zu Testzwecken) auch unabhängig von der PV-Anlage mit Netzstrom laden.
+oder zu Testzwecken) auch unabhängig von der PV-Anlage mit Netzstrom laden.\
+Eine AC-Kopplung ist im Allgemeinen aber nicht zu empfehlen, weil sie recht
+umständlich ist und einen schlechten Wirkungsgrad hat: etwa 80%.
+
+Für eine kleine Anlage kann man zur AC-Kopplung wie in
+[diesem Video](https://www.youtube.com/watch?v=fcFFUN3Pkbo&t=300s) beschrieben
+ein regelbares Netzteil wie den
+[MeanWell HLG-600H](MeanWell_HLG-600H.pdf)-30AB LED-Treiber verwenden
+und über einen [Shelly Plus 0-10V Dimmer](
+https://www.shelly.com/de/products/shop/shelly-plus-0-10-v-dimmer)) und
+geeignete Software so steuern, dass PV-Überschuss in die Batterie geladen wird.
+
+![Bild: MeanWell_HLG-600H-36AB-im_Schaltkasten.jpg](
+MeanWell_HLG-600H-36AB-im_Schaltkasten.jpg){:.right width="798"}
+Die Steuerung kann auch über einen Mikrocontroller erfolgen, der ein PWM-Signal
+erzeugt, das dann in ein 0-10&nbsp;V Analogsignal gewandelt wird, wie in
+[diesem Vorgänger-Video](https://www.youtube.com/watch?v=WK9PQ1_TpU8) erklärt.
+
+Manche verwenden zu diesem Zweck ein [Meanwell NPB Batterieladegerät](
+https://www.elkoba.com/magazin/produkt/npb-1200-24/),
+welches über sein CAN-Bus-Interface verfügt und über einen
+[*Trucki2MeanWell Gateway (T2MG)*](https://trucki.de/t2mg/) Stick
+gesteuert werden kann.
+Allerdings sind als Ladestrom offenbar nur [50-100% des Nennstroms einstellbar](
+https://www.digikey.de/de/product-highlight/m/mean-well/npb-series).
+Außerdem wird jede Änderung normalerweise ins interne EEPROM gespeichert,
+was bei sehr vielen Schreibzugriffen das Gerät beschädigen würde,
+weshalb man ihre Frequenz z.B. auf 30 Sekunden einschränken sollte &mdash;
+bzw. bei Modellen ab 2024 kann man diese Schreibfunktion wohl abschalten.
 
 Wie im [Abschnitt über Regelungsstrategien](#Regelungsstrategien) beschrieben,
 sollte die Aufladung der Batterie zu jeder Zeit nur in dem Maße erfolgen, wie
@@ -5769,8 +5797,8 @@ LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test br ATON Full
 LocalWords: Charger Discharger Board Under Over Voltage Protection sub cpp img
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW if PowerLimiter
 LocalWords: telemetry gateway distort cell document sections profile Passthrough
-LocalWords: post text standard conditions Reflexions PVSOL SOL assuming
-LocalWords: operating temperature Timeseries crystSi PVCalculator and
+LocalWords: post text standard conditions Reflexions PVSOL SOL assuming MG Stick
+LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
 LocalWords: author today abstract This the ignored extension yaml txt
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
