@@ -447,7 +447,7 @@ Beim PV-Ertrag und entsprechenden Simulationen ist zu beachten, dass dabei
 üblicherweise **der Jahres-Gesamtertrag** betrachtet und optimiert wird.
 Dieser **unterliegt der Annahme, dass man den zur jeweiligen Tageszeit
 (und Jahreszeit) erzeugten Strom auch immer gleichmäßig nutzen kann**,
-sei es durch direkten Eigenverbrauch,
+sei es durch direkten [Eigenverbrauch](#Eigenverbrauch),
 Zwischenspeicherung (was allerdings auch Verluste mit sich bringt)
 oder vergütete Einspeisung (die aber leider selten attraktiv ist).\
 Wenn man --- wie mit den meisten Steckersolargeräten --- den erzeugten Strom
@@ -1284,8 +1284,8 @@ mit Schwerpunkt auf einphasigen Shelly-Messgeräten wie dem Plus 1PM.
 Diese Geräte ermöglichen die detaillierte automatische Erfassung
 von Spannung, Strom, Wirkleistung etc. in Sekundenauflösung.\
 Zusammen mit einer Messung des nach außen ins Netz eingespeisten
-[Gesamt-Strommenge](#Gesamtstrom) lässt sich der PV-Eigenverbrauch bestimmen,
-nämlich als Differenz aus erzeugter und eingespeister Energie.
+[Gesamt-Strommenge](#Gesamtstrom) lässt sich der
+[Eigenverbrauch](#Eigenverbrauch) bestimmen.
 
 Übrigens sollte man einige Shelly Mini-Varianten mit Vorsicht genießen,
 also besser nur mit einer passenden zusätzlichen Sicherung betreiben,
@@ -1624,10 +1624,14 @@ dem bisherigen Netzbezug pro Phase und der bisherigen Einspeisung pro Phase)
 und weiterverarbeiten, etwa mit [diesem Perl-Skript](
 https://github.com/DDvO/SolBatSim/blob/master/3em_data_collect.pl).
 Damit kann man auch parallel die Statusdaten eines Shelly Plus 1PM über den
-HTTP-Endpunkt ``http://lokale-IP-Adresse-des-1EM//rpc/Shelly.GetStatus``)
+HTTP-Endpunkt ``http://lokale-IP-Adresse-des-1PM//rpc/Shelly.GetStatus``)
 auslesen, der am Wechselrichter einer kleinen PV-Anlage (Balkonkraftwerk o.ä.)
 angeschlossen ist, und damit sowohl Verbrauch als auch Erzeugung protokollieren.
-Es ist auch zur Bestimmung der importierten und exportierten Energie (wie mit
+Der Verbrauch wird als Riemann-Summe über die Last berechnet,
+welche sich als Summe aus Gesamt-Leistungssaldo und PV-Leistung ergibt.
+Der [Eigenverbrauch](#Eigenverbrauch) wird als Riemann-Summe über
+das Minimum aus Last und PV-Leistung berechnet. Das Skript
+ist auch zur Bestimmung der importierten und exportierten Energie (wie mit
 einen Zweiwegezähler) und zur Erzeugung von Ertrags- und Lastprofilen geeignet.\
 Allerdings muss das Skript zur Protokollierung ständig laufen (wobei es eine
 gewisse Robustheit gegen zeitweise Hänger und Neustarts hat), und bei den
@@ -1805,15 +1809,51 @@ Eigenverbrauch und seine Berechnung {#Eigenverbrauch}
 
 Wer privat eine PV-Anlage betreibt, möchte möglichst viel von ihrem Ertrag
 auch selbst verbrauchen, und zwar am besten direkt. Überschüssigen Strom in
-einer Batterie für spätere Nutzung zwischenzuspeichern ist aufwendig und teuer.
-Der nicht selbst genutzte Anteil wird meist ins externe Netz eingespeist.
-Bei Steckersolargeräten geschieht dies ohne Vergütung, aber auch wenn man seinen
-Strom als Kleinunternehmer verscherbelt, hat man einige Bürokratie und bekommt
-ziemlich wenig heraus.
+einer Batterie für spätere Nutzung [zwischenzuspeichern](#Batteriepuffer)
+ist technisch aufwendig, teuer und mit zusätzlichen Verlusten behaftet.
 
-Also geht es ökonomisch darum, den Eigenverbrauchsanteil zu maximieren. Der
-*Eigenverbrauchsanteil* (*Nutzungsgrad*) ist der Anteil der Netto-Stromerzeugung,
-der direkt verbraucht (oder ggf. mit Batterie-Ladeverlusten gespeichert wird).
+Der *Eigenverbrauch* über einen gegebenen Zeitraum bestimmt sich
+als Integral (bzw. näherungsweise als Riemann-Summe) über
+
+<p style="text-align: center;">
+min(PV-Leistung(t) + Speicher-Entnahmeleistung(t), Haushaltslast(t))
+</p>
+
+wobei PV-Leistung(t) die im Zeitpunkt t vom Wechselrichter abgegebene Leistung
+ist, Speicher-Entnahmeleistung(t) die einem ggf. vorhandenen Speicher entnommene
+Leistung (gemessen ebenfalls am Ausgang des jeweiligen Wechselrichters) und
+Haushaltslast(t) die im Zeitpunkt t insgesamt vom Haushalt benötigte Leistung.\
+Meist kann man die Haushaltslast nicht direkt messen, weil Wechselrichter
+üblicherweise hinter dem Messpunkt für die [Gesamt-Strommessung](#Gesamtstrom)
+einspeisen. Weil erzeugte oder einem Speicher entnommene Leistung dann
+mit umgekehrten Vorzeichen in den Leistungssaldo am Unterverteiler eingeht,
+errechnet sich die Last
+* ohne Speicher und bei DC-gekoppeltem Speicher
+als Summe aus dem Gesamt-Leistungssaldo am Unterverteiler
+  und der Ausgangsleistung des Wechselrichters, bzw.
+* bei AC-gekoppeltem Speicher
+  als Summe aus Gesamt-Leistungssaldo, Ausgangsleistung des PV-Wechselrichters
+  und Ausgangsleistung des Batterie-Wechselrichters,
+  abzüglich Eingangsleistung des Ladegeräts.
+
+Wenn die Daten eines [Zweirichtungszählers](#Stromzähler) vorliegen, lässt sich
+der Eigenverbrauch einfach durch die Differenz aus PV-Nettoertrag (+ ggf. einem
+Speicher entnommene Energie) und extern eingespeister Energie berechnen.
+
+Der direkte (nicht ggf. über einen Speicher erhöhte) PV-Eigenverbrauch ergibt
+sich, wenn in der Berechnung die Speicher-Entnahme durch 0 ersetzt wird.
+
+Der nicht selbst genutzte Anteil, also die &mdash; stets nicht-negative &mdash;
+Differenz aus PV-Leistung (+ Speicher-Entnahmeleistung) und
+davon selbst verwendeter Leistung, wird meist ins externe Netz eingespeist.
+Bei Steckersolargeräten geschieht dies ohne Vergütung,
+aber auch wenn man selbst erzeugten Strom als Kleinunternehmer verkauft,
+hat man zusätzliche Bürokratie und bekommt ziemlich wenig heraus.
+
+Ökonomisches Ziel ist also, den Eigenverbrauchsanteil zu maximieren.
+Der *Eigenverbrauchsanteil* (*Nutzungsgrad*) ist
+der Anteil der Netto-Stromerzeugung, der direkt verbraucht wird
+(oder ggf. nach gewissen Verlusten über einen Speicher).
 Je höher er ist, desto weniger Energie wird ins externe Stromnetz eingespeist.
 Je kleiner die Anlage ist, umso leichter kann man eine hohe Eigenverbrauchsquote
 erreichen, allerdings dann bei entsprechend kleinerem Stromvolumen.
@@ -5799,8 +5839,8 @@ LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW if PowerLimiter
 LocalWords: telemetry gateway distort cell document sections profile Passthrough
 LocalWords: post text standard conditions Reflexions PVSOL SOL assuming MG Stick
 LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB
-LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date
-LocalWords: author today abstract This the ignored extension yaml txt
+LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date int limits
+LocalWords: author today abstract This the ignored extension yaml txt interface
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
 LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW
