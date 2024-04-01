@@ -2843,8 +2843,8 @@ nur noch 150 bzw. 200&nbsp;W je Eingang möglich.\
 Stattdessen kann man auch einen günstigeren 600 bzw. 800&nbsp;W Wechselrichter
 nutzen und an jedem seiner zwei Eingänge dabei jeweils zwei Module parallel anschließen.
 Dass die Eingänge dabei dann teilweise an die Grenze ihres Eingangsstroms
-kommen, ist typischerweise [unproblematisch](#Anschluss). (Wer das trotzdem
-vermeiden will, kann auch z.B. einen HM-1500 verwenden, der nur 2 MPPT hat.)
+kommen, ist typischerweise [unproblematisch](#Anschluss). Wer das trotzdem
+vermeiden will, kann auch z.B. einen HM-1500 verwenden, der nur 2 MPPT hat.
 
 Anders sieht es bei den seit Frühjahr 2024 verfügbaren Deye G4 Wechselrichtern
 aus, denn bei diesen wird die [Höhe der Limitierung wirklich auf die
@@ -5044,6 +5044,14 @@ bestanden und ist nun tot, nachdem sich das Gerät beim Hochfahren des MPPT
 Wer da auf der sicheren Seite sein will, kann je Eingang eine auf die gegebene
 maximale Belastbarkeit abgestimmte Sicherung (z.B. 15&nbsp;A) dazwischenschalten.
 
+Übrigens ist es bei einem HM-1500 und der Verwendung von drei großen Modulen
+mit gleicher Ausrichtung merkwürdigerweise besonders günstig, das dritte Modul
+über ein Y-Kabel am Minuspol mit beiden MPPT zu verbinden (z.B. an Eingang 2
+und 3), aber seinen Pluspol nur an einem der beiden Eingänge anzuschließen,
+um eine [möglichst gleichmäßige Aufteilung der Eingangsleistung](
+https://github.com/tbnobody/OpenDTU/discussions/1078#discussioncomment-8971629)
+zu erhalten.
+
 ![Bild: Strom-Spannungs-Kennlinien abhängig von der Bestrahlungsstärke](
 I-V-curves-of-the-solar-panel-under-different-irradiation-levels-and-the-Voltage.png){:.right width="530"}
 Zu beachten ist noch:
@@ -5844,10 +5852,10 @@ LocalWords: author today abstract This the ignored extension yaml txt interface
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
 LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW
-LocalWords: Sense is end index output md ref of pv px Eff vs OW Heat
+LocalWords: Sense is end index output md ref of pv px Eff vs discussioncomment
 LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
 LocalWords: data transfer solar cut cells open short circuit voltage lim
-LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords
+LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords OW Heat
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation state
 LocalWords: Microinverter What are Amps Volts SMF charge discharge Un Ent shunt
 LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
