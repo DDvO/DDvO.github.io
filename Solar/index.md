@@ -2171,25 +2171,35 @@ und mehr, aber typischerweise eher 514&nbsp;kWh (Profil „InGe 16“) pro Jahr.
 
 #### PV Calculator {#PVCalculator}
 
-[![Bild: PV Calculator Ergebnis](PV_Calculator.png){:.right width="550"}](
+[![Bild: PV Calculator Ergebnis](PV_Calculator.png){:.right width="400"}](
 https://play.google.com/store/apps/details?id=com.pvstrom.pvcalculator)
 
 Es gibt auch eine Android-App namens [PV Calculator](
 https://play.google.com/store/apps/details?id=com.pvstrom.pvcalculator)
-mit relativ flexiblen Parametern und sehr schöner Darstellung der Ergebnisse.
-Sie verwendet die Daten von PVGIS und rechnet auf Stundenbasis.
-Für die o.g. Beispiel-Anlage mit 600&nbsp;Wp kommt sie für die gegebenen
-Wirkungsgrade korrekt auf einen Jahres-Nettoertrag von 664&nbsp;kWh.
-Trotzdem sind die Ergebnisse leider zu optimistisch. Das liegt teils an den
-angebotenen Profilen (z.B. VDEW-H0-Werktag), die täglich die gleiche Last
-annehmen, wobei man immerhin selbst welche pro Jahreszeit definieren kann.
+von SusEnergy mit sehr schöner Darstellung der Ergebnisse.
+Sie verwendet die Daten von PVGIS und rechnet leider nur auf Stundenbasis.
+
+Für die o.g. Beispiel-Anlage mit 850&nbsp;Wp kommt sie für die gegebenen
+Wirkungsgrade auf einen zu geringen Jahres-Nettoertrag von 764&nbsp;kWh,
+aber auf einen zu hohen Eigenverbrauch von 686&nbsp;kWh. Das liegt teils an den
+angebotenen Profilen (z.B. VDEW-H0-Werktag), die eine sehr geringe zeitliche
+Auflösung haben und täglich die gleiche Last annehmen, wobei man
+in der Premium-Variante immerhin selbst welche pro Jahreszeit definieren kann.
 Aber das Hauptproblem ist, dass die Last nur im stundenweisen Durchschnitt
 betrachtet wird, also die typischen Lastspitzen unberücksichtigt bleiben.
 Damit ergibt sich bei 3000&nbsp;kWh Jahres-Strombedarf für die meisten Profile
-unrealistischerweise so gut wie keine Netzeinspeisung und selbst für das
-Profil „Peak Morgen Abends“ eine viel zu niedrige Netzeinspeisung von 52&nbsp;kWh.
+unrealistischerweise so gut wie keine Netzeinspeisung und selbst für das Profil
+„Peak Morgen Abends“ eine viel zu niedrige Netzeinspeisung von 137&nbsp;kWh.
 Außerdem wird etwas verwirrend im Gesamtergebnis nicht der resultierende
-Eigenverbrauch (hier 612&nbsp;kWh) dargestellt, sondern der Nettoertrag und der Netzbezug.
+Eigenverbrauch (hier 627&nbsp;kWh) dargestellt,
+sondern der Nettoertrag und der Netzbezug.
+
+Man kann auch Speichernutzung mit simulieren lassen, aber die Ergebnisse können
+schon wegen der stundenweisen Berechnung ebenfalls nicht realistisch sein.
+
+Interessante Funktionen wie die Verwendung eigener Lastprofile
+und der Export der Simulationsergebnisse sind inzwischen
+der kostenpflichtigen Premium-Variante vorenthalten.
 
 ### Ökonomisch orientierte PV-Rechner {#PV-Rechner}
 
@@ -5850,8 +5860,8 @@ LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date int limits
 LocalWords: author today abstract This the ignored extension yaml txt interface
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
-LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker
-LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW
+LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker SusEnergy
+LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW Premium
 LocalWords: Sense is end index output md ref of pv px Eff vs discussioncomment
 LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
 LocalWords: data transfer solar cut cells open short circuit voltage lim
