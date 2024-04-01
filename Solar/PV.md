@@ -1,5 +1,5 @@
 ---
-title: "Photovoltaik -<br>Mini-Solaranlagen für daheim und unterwegs"
+title: "Photovoltaik - Mini-Solaranlagen für daheim und unterwegs"
 description: >-
   Online-Artikel von Dr. David von Oheimb
   mit wichtigen Hintergrund-Infos zum Thema Photovoltaik und
@@ -397,7 +397,7 @@ https://www.photovoltaikforum.com/core/attachment/44638-pv-vergleich-s-vs-ow-v2-
 
 Diese Effekte werden selbst dann nicht durch eine geringere Nutzbarkeit tagsüber
 ausgeglichen, wenn der Haushalt an Arbeitstagen von 8 bis 16 Uhr nur eine
-[Minimallast (Grundlast)](index.md#Strommessung) von z.B. 100&nbsp;W hat:
+[Minimallast (Grundlast)](SV.md#Strommessung) von z.B. 100&nbsp;W hat:
 Dann hat die Ost-West-Ausrichtung im Sommer einen leichten Vorteil, aber zu
 allen anderen Jahreszeiten ermöglicht die Südausrichtung mehr Eigenverbrauch.\
 Erst wenn täglich von 8 bis sogar 18 Uhr nur z.B. 50&nbsp;W Grundlast vorliegt,
