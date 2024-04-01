@@ -135,7 +135,7 @@ Diese Geräte ermöglichen die detaillierte automatische Erfassung
 von Spannung, Strom, Wirkleistung etc. in Sekundenauflösung.\
 Zusammen mit einer Messung des nach außen ins Netz eingespeisten
 [Gesamt-Strommenge](#Gesamtstrom) lässt sich der
-[Eigenverbrauch](index.md#Eigenverbrauch) bestimmen.
+[Eigenverbrauch](EV.md#Eigenverbrauch) bestimmen.
 
 Übrigens sollte man einige Shelly Mini-Varianten mit Vorsicht genießen,
 also besser nur mit einer passenden zusätzlichen Sicherung betreiben,
@@ -479,7 +479,7 @@ auslesen, der am Wechselrichter einer kleinen PV-Anlage (Balkonkraftwerk o.ä.)
 angeschlossen ist, und damit sowohl Verbrauch als auch Erzeugung protokollieren.
 Der Verbrauch wird als Riemann-Summe über die Last berechnet,
 welche sich als Summe aus Gesamt-Leistungssaldo und PV-Leistung ergibt.
-Der [Eigenverbrauch](index.md#Eigenverbrauch) wird als Riemann-Summe über
+Der [Eigenverbrauch](EV.md#Eigenverbrauch) wird als Riemann-Summe über
 das Minimum aus Last und PV-Leistung berechnet. Das Skript
 ist auch zur Bestimmung der importierten und exportierten Energie (wie mit
 einen Zweiwegezähler) und zur Erzeugung von Ertrags- und Lastprofilen geeignet.\

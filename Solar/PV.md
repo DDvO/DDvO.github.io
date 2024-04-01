@@ -224,7 +224,7 @@ Beim PV-Ertrag und entsprechenden Simulationen ist zu beachten, dass dabei
 üblicherweise **der Jahres-Gesamtertrag** betrachtet und optimiert wird.
 Dieser **unterliegt der Annahme, dass man den zur jeweiligen Tageszeit
 (und Jahreszeit) erzeugten Strom auch immer gleichmäßig nutzen kann**,
-sei es durch direkten [Eigenverbrauch](index.md#Eigenverbrauch),
+sei es durch direkten [Eigenverbrauch](EV.md#Eigenverbrauch),
 Zwischenspeicherung (was allerdings auch Verluste mit sich bringt)
 oder vergütete Einspeisung (die aber leider selten attraktiv ist).\
 Wenn man --- wie mit den meisten Steckersolargeräten --- den erzeugten Strom
@@ -234,7 +234,7 @@ sollte man das Nutzungsprofil berücksichtigen, welches auch auch
 
 ![Bild: Ertrags-Nutzungsanteil nach Ausrichtung von Solarmodulen](
 Ausrichtung_Eigennutzungsanteil.png){:width="500" .right}
-Durch [genaue Simulation](index.md#SolBatSim) für durchschnittliche
+Durch [genaue Simulation](EV.md#SolBatSim) für durchschnittliche
 Haushalts-Tages-Nutzungsprofile zeigt sich, dass
 **eine Abweichung von der optimalen Ausrichtung
 deutlich weniger Einbußen beim selbst genutzten Jahres-Gesamtertrag bringt**.
@@ -439,7 +439,7 @@ wenn man sie (etwa aus baulichen Gründen) trotzdem wählt, besonders wenn man
 tagsüber im Vergleich zu den Morgen- und Abendstunden eher wenig Verbrauch hat.
 
 Die genannten Auswirkungen auf den Eigenverbrauch sind
-das Ergebnis einer Reihe [genauer Simulationen](index.md#SolBatSim)
+das Ergebnis einer Reihe [genauer Simulationen](EV.md#SolBatSim)
 für einen Haushalt in Süddeutschland mit 3000&nbsp;kWh Jahresverbrauch mit einem
 Steckersolargerät mit 2 × 300&nbsp;Wp PV-Modulen und Gesamtsystem-Wirkungsgrad 86%.\
 Für die Ausrichtungen -/+ 90° (also Ost/West), +/- 60°, +/- 30° und 0° (Süd)
@@ -833,7 +833,7 @@ Wobei eine Winkelabweichung von +/- 10° sehr wenig ausmacht.
 Bei Verwendung von 4 PV-Modulen kann man im Sinne der Eigenverbrauchsoptimierung
 und gleichmäßigeren Ertragsverteilung über den Tagesverlauf in Betracht ziehen,
 eines nach Osten, zwei nach Süden und eines nach Westen auszurichten.
-Bei 400&nbsp;Wp Modulen ergibt die [Eigenverbrauchssimulation](index.md#SolBatSim), wieder
+Bei 400&nbsp;Wp Modulen ergibt die [Eigenverbrauchssimulation](EV.md#SolBatSim), wieder
 für ein typisches Lastprofil und 3000&nbsp;kWh Jahresverbrauch in Süddeutschland,
 für alle drei Himmelsrichtungen eine optimale Neigung von um die 30°
 mit wieder sehr geringer Empfindlichkeit auf Abweichungen davon.\
