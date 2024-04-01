@@ -2124,12 +2124,13 @@ eines Stromspeichers ändern.
 https://pvtools.sektorsonne.de/) <!-- Andreas Schmitz -->
 Inzwischen kann man für die Simulation ein eigenes Lastprofil
 (allerdings nur in Stundenauflösung) hochladen und verwenden lassen.\
-Für Speicher wird stillschweigend vermutlich [AC-Kopplung](#Ladung) angenommen
-sowie eine optimale lastbasierte Lade- und Entladestrategie.\
+Für Speicher wird stillschweigend eine [optimale lastbasierte Lade- und
+Entladestrategie](https://github.com/nick81nrw/PVTools/issues/53) angenommen.
 <!-- Es werden keine Speicherverluste berücksichtigt.-->
 Die Lade- und Entlade-Wirkungsgrade der Speicherbatterie (inkl. Verluste während
-der Speicherzeit) werden standardmäßig unrealistisch hoch angenommenen (99%),
-was man aber in den erweiterten Einstellungen anpassen kann.\
+der Speicherzeit) werden standardmäßig sehr hoch angenommenen: 99%.
+Das mag für [DC-Kopplung](#Ladung) passen, ist aber für AC-Kopplung
+viel zu hoch, wobei man das in den erweiterten Einstellungen anpassen kann.\
 Standardmäßig wird die Lade- und Entladeleistung etwas praxisfern nicht begrenzt,
 was sich aber ebenfalls in den erweiterten Einstellungen korrigieren lässt.
 
@@ -2141,9 +2142,10 @@ von 1996/97 verwendet wurde, und zwar auch nur in Stundenauflösung
 (statt in der verfügbaren 15-minütigen Auflösung).
 Damit konnten keinerlei Lastspitzen berücksichtigt werden,
 wozu mindestens Minutenauflösung (besser: Sekundenauflösung) benötigt wird.\
-Das wurde nun [deutlich verbessert](
+Das wurde [deutlich verbessert](
 https://www.akkudoktor.net/2023/12/11/pv-tool-grosses-update/).
-Stand Anfang 2024 gibt es allerdings noch
+
+Stand April 2024 gibt es allerdings noch
 [Unklarheiten z.B. bei den Wirkungsgraden](
 https://github.com/nick81nrw/PVTools/issues/11#issuecomment-1858879387),
 [Merkwürdigkeiten wie kleine nächtliche PV-Erträge und konstante Netzbezüge](
@@ -3101,13 +3103,13 @@ als auch beim [PVTool](#PVTool) auf
 [nahezu identische Ergebnisse](https://github.com/nick81nrw/PVTools/issues/58).
 
 <!--
-https://www.akkudoktor.net/pvtool-rechner/
-Lindenberg, Ahrensfelde, Barnim, Brandenburg, Deutschland  52.6023748,13.524606
-Lastprofil_300_Haushalt_05-PVTool.csv
+https://www.akkudoktor.net/pvtool-rechner/ Systemverluste PV: 14,5%
+D-16356 Lindenberg, Ahrensfelde, Barnim, Brandenburg 52.6023748,13.524606
+Lastprofil_3000_Haushalt_05-PVTool.csv
 
 |Speicher|SolBatSim| HTW | PVTool |
 |-------:|--------:|----:|-------:|
-|   0 Wh |   480   | 490 | 450 kWh|
+|   0 Wh |   480   | 490 | 437 kWh|
 | 500 Wh |   610   | 613 | 610 kWh|
 |1000 Wh |   680   | 685 | 680 kWh|
 |1500 Wh |   725   | 723 | 724 kWh|
