@@ -816,7 +816,7 @@ Dagegen spricht zusätzlich die Tendenz zu stärkerer Verschattung bei flacherem
 Sonnenstand, etwa durch Gebäude und Bäume in der Umgebung und auch
 durch die PV-Module gegenseitig (*Selbstverschattung*).
 Außerdem ist die geteilte Montage meist aufwendiger, und geteilte
-Ausrichtungen erfordern zur Optimierung eine getrennte [MPPT-Regelung](index.md#MPPT).
+Ausrichtungen erfordern zur Optimierung eine getrennte [MPPT-Regelung](Komp.md#MPPT).
 [![Bild: Selbstverschattung gleichartiger Modulreihen](
 PV_Vergleich_S_vs_OW_add_v1.png)](
 https://www.photovoltaikforum.com/core/attachment/44467-pv-vergleich-s-vs-ow-add-v1-pdf/)
