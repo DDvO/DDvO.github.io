@@ -99,11 +99,14 @@ die Verwendung von Wechselrichtern und Speicherbatterien inklusive Regelung.
 
 # Zusammenfassung {#Zusammenfassung}
 
-Mit einem sog. *Steckersolargerät* kann man sehr einfach und relativ günstig
-Solarstrom gewinnen und über eine Steckdose direkt ins Hausnetz einspeisen.
-Das spart Stromkosten und kann sich je nach verwendeten Komponenten
-und deren Aufstellung schon nach wenigen Jahren Betrieb rechnen ---
-allerdings nur soweit man den Strom auch gleichzeitig selbst verbraucht.
+Mit einem sog. [*Steckersolargerät*](SSG.md#SSG) kann man einfach und günstig
+[Solarstrom](PV.md#Photovoltaik) gewinnen
+und über eine Steckdose direkt ins Hausnetz einspeisen.
+Das spart Stromkosten und rechnet sich je nach verwendeten
+[Komponenten](Komp.md#Komponenten), [Aufstellung](PV.md#Ausrichtung) der Solarmodule
+und [Stromverbrauch](SV.md#Stromverbrauch) schon nach wenigen Jahren Betrieb ---
+allerdings nur soweit man den Strom auch gleichzeitig
+[selbst verbraucht](EV.md#Eigenverbrauch).
 Weil diese Betriebsart den überschüssigen Strom an die Allgemeinheit weitergibt
 und keine Batterie benötigt, ist sie für die ökologische Gesamtbilanz am besten.
 
@@ -111,11 +114,13 @@ Für eine gewisse Unabhängigkeit von der nicht ständig kräftig vorhandenen
 Sonneneinstrahlung und vom allgemeinen Stromnetz
 braucht man eine aufladbare Batterie als Stromspeicher und weitere Geräte,
 was das Ganze deutlich aufwendiger und teurer macht.\
-Durch eine *Strompufferung* mit einer geeigneten vom aktuellen Verbrauch im
-Haushalt abhängigen Regelung lässt sich überschüssige Energie zwischenspeichern
+Mit [*Strompufferung*](Speicher.md#Batteriespeicher)
+und einer geeigneten vom aktuellen Verbrauch im Haushalt abhängigen
+[Regelung](Speicher.md#Regelungsstrategien)
+lässt sich überschüssige Energie zwischenspeichern
 und bei Bedarf wieder abrufen und damit der Eigenverbrauchsanteil erhöhen.\
-Eine sog. *Inselanlage* ist auch während Stromausfällen verwendbar,
-soweit die Speicherkapazität und die Einstrahlung zum Nachladen reichen.
+Eine [*Inselanlage*](Insel.md#Inselanlage) ist ohne Stromanschluss verwendbar,
+soweit die Speicherkapazität und Sonneneinstrahlung zum Nachladen reicht.
 
 ![Bild: Balkonkraftwerk und Dach-PV-Anlage](
 Balkonkraftwerk_und_Dach-PV-Anlage.jpg)
@@ -255,37 +260,8 @@ Lizenzkürzel:
 
 <!--
 Local IspellDict: german8
-LocalWords: title keywords toc start refresh markdown pandoc width style margin
-LocalWords: zusammenfassung Messgeraet CC BY Std webp Ferrariszaehler IAMKlaus
-LocalWords: Unabhaengigkeitsrechner Stromwaechter Play SDM clams comment fazit
-LocalWords: output calculation power unit rating Europe TSUN InGe DPM anker only
-LocalWords: left right irradiance GHI buehneTop clear both png tgl RS solix eArc
-LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi align Naja
-LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs Controler
-LocalWords: blackout brownout panels busbars shingle panel up number solarbank
-LocalWords: maximum point tracking sine wave efficiency boost true SG Shellys DL
-LocalWords: converter step consumption pdf balancer equalizer mppt em Script
-LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test br ATON Full
-LocalWords: Charger Discharger Board Under Over Voltage Protection sub cpp img
-LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW if PowerLimiter
-LocalWords: telemetry gateway distort cell document sections profile Passthrough
-LocalWords: post text standard conditions Reflexions PVSOL SOL assuming MG Stick
-LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB
-LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date int limits
-LocalWords: author today abstract This the ignored extension yaml txt interface
-LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
-LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker SusEnergy
-LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW Premium
-LocalWords: Sense is end index output md ref of pv px Eff vs discussioncomment
-LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
-LocalWords: data transfer solar cut cells open short circuit voltage lim
-LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords OW Heat
-LocalWords: Bestrahlungsstaerke curves under different levels irradiation state
-LocalWords: Microinverter What are Amps Volts SMF charge discharge Un Ent shunt
-LocalWords: protector Micro Eco Worthy ISolar SPH GYVRM Cocar version cron job
-LocalWords: Delivered Latest Downgraded shelly emeter file status returned MYPV
-LocalWords: Zweirichtungszaehler issuecomment collect Notifications height ELWA
-LocalWords: Plugs comments January Settings ons configuration states excl comp
-LocalWords: sensor export float uksa tamorix custom firmware en Central zell TR
-LocalWords: 
+LocalWords: title name description date created changed keywords
+LocalWords: This is the abstract iextension yaml metadata jpg md CC BY toc
+LocalWords: markdown start refresh end pandoc index output nbsp
+LocalWords: PVCalculator Regelungsimplementierung SOL
 -->
