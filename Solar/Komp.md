@@ -541,6 +541,7 @@ auch *selbst geführter Wechselrichter* genannt,
 werden vom Stromnetz unabhängig betrieben. Mit ihnen kann man die üblichen
 Haushaltsgeräte auch im Falle eines Stromausfalls mit einer Batterie versorgen,
 natürlich nur im Rahmen der Belastbarkeit und Kapazität der Batterie.
+Damit ergibt sich eine [Inselanlage](Insel.md#Inselanlage).
 
 Besonders bei dieser Art von Wechselrichter ist darauf zu achten,
 dass er eine reine Sinusspannung liefert und dass sein Wirkungsgrad hoch ist.
@@ -567,6 +568,7 @@ Solar-off-grid-inverter.png){:.right width="450"}](
 https://de.aliexpress.com/item/1005003665568494.html)
 Kombigeräte, die die Funktionen Solar-Laderegler, Batterie-Netzladegerät und
 Wechselrichter in sich vereinen, werden *Hybridwechselrichter* genannt.
+Sie werden meist in [Kombi-Anlagen](Insel.md#Kombination) verwendet.
 
 Solche Geräte sind in ihrer Funktionsweise sehr praktisch, brauchen
 weniger Platz, sind im Einkauf günstiger und zudem einfacher zu installieren
