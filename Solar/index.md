@@ -232,8 +232,7 @@ Lizenzkürzel:
           - [Konstanteinspeisung](Speicher.md#Konstanteinspeisung)<a name="Konstanteinspeisung"></a>
           - [Lastgeregelte Einspeisung](Speicher.md#lastgeregelt)<a name="lastgeregelt"></a>
     -   [Inselanlage (mit Batteriespeicherung)](Insel.md#Inselanlage)<a name="Inselanlage"></a>
-    -   [Kombination aus Hausnetzeinspeisung und
-        Inselanlage](Insel.md#Kombination)<a name="Kombination"></a>
+    -   [Kombination aus Hausnetzeinspeisung und Inselanlage](Insel.md#Kombination)<a name="Kombination"></a>
 -   [Auswahl und Nutzung von Komponenten](Komp.md#Komponenten)<a name="Komponenten"></a>
     -   [PV-Module](Komp.md#PV-Module)<a name="PV-Module"></a>
         - [Elektrischer Anschluss](Komp.md#Anschluss)<a name="Anschluss"></a>

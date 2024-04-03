@@ -74,12 +74,13 @@ die zusätzliche Nutzungsart auch zeitlich alternativ dazu möglich ist.
 
 ### Kombination aus Hausnetzeinspeisung und Inselanlage {#Kombination}
 
-Wenn man Zugang zum Stromnetz hat und die für die betreffenden Varianten nötigen
-Funktionen gleichzeitig installiert sind, kann man zwischen Netz-, Puffer- und
-Inselbetrieb auch bedarfsweise wechseln. Dabei wird der Ausgang
-der Solarmodule zwischen dem netzgekoppelten Wechselrichter und dem
-Solar-Laderegler umgeschaltet (oder ohne Schalter einfach umgestöpselt) bzw.
+Wenn die für die betreffenden Varianten nötigen Funktionen gleichzeitig
+installiert sind, kann man zwischen Netz-, Puffer- und Inselbetrieb
+auch bedarfsweise wechseln. Dabei wird der Ausgang der Solarmodule
+zwischen dem netzgekoppelten Wechselrichter und dem Solar-Laderegler
+umgeschaltet (oder ohne Schalter einfach umgestöpselt) bzw.
 am Ausgang der Batterie zwischen Netz- und Insel-Wechselrichter umgeschaltet.
+
 
 <!--
 Local IspellDict: german8
