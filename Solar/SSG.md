@@ -43,8 +43,8 @@ Normalerweise wird der PV-Strom daher in Wechselstrom umgewandelt und direkt
 ins Hausnetz eingespeist, was das Thema des [folgenden Abschnitts](#SSG) ist.
 
 Man kann gerade nicht benötigten PV-Strom auch in einer Batterie
-zwischenspeichern, was ein Abschnitt [weiter unten](#Batteriepuffer) behandelt,
-der auch erklärt, dass sich das in den seltensten Fällen lohnt.
+zwischenspeichern, was ein [anderer Abschnitt](Speicher.md#Batteriespeicher) behandelt,
+der auch erklärt, dass sich das kaum lohnt.
 
 ### Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“) {#SSG}
 

@@ -63,7 +63,7 @@ Man speist dann also nicht einfach ins stromlose Hausnetz ein,
 weil dazu die von außen kommende Stromleitung umgeschaltet werden und für eine
 geeignete Erdung gesorgt werden müsste, was nur ein Elektriker machen sollte.
 
-Ähnlich wie die o.g. [Batteriepufferung](#Batteriepuffer) ist diese Nutzungsart
+Ähnlich wie die [Batteriepufferung](Speicher.md) ist diese Nutzungsart
 flexibler, aber wegen der nötigen zusätzlichen Komponenten (v.A. der Batterie)
 auch deutlich teurer und auch etwas anfälliger und wartungsintensiver
 als die [direkte Netzeinspeisung](SSG.md#SSG).

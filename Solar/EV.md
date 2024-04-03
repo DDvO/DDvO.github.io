@@ -40,7 +40,7 @@ Eigenverbrauch und seine Berechnung {#Eigenverbrauch}
 
 Wer privat eine PV-Anlage betreibt, möchte möglichst viel von ihrem Ertrag
 auch selbst verbrauchen, und zwar am besten direkt. Überschüssigen Strom in
-einer Batterie für spätere Nutzung [zwischenzuspeichern](index.md#Batteriepuffer)
+einer Batterie für spätere Nutzung [zwischenzuspeichern](Speicher.md)
 ist technisch aufwendig, teuer und mit zusätzlichen Verlusten behaftet.
 
 Der *Eigenverbrauch* über einen gegebenen Zeitraum bestimmt sich
@@ -291,7 +291,7 @@ noch weitere Effekte ein, die sich aber kaum quantifizieren lassen.
 Achtung: Die in diesem Abschnitt genannten Simulatoren
 setzen bei Einsatz eines Pufferspeichers eine ideale Speicherstrategie voraus.
 Ihre Ergebnisse **gelten nicht bei Verwendung einer primitiven Regelung**, wie
-sie für [Steckersolargeräte mit Speicherbatterie](index.md#Batteriepuffer) typisch sind.
+sie für [Steckersolargeräte mit Speicherbatterie](Speicher.md) typisch sind.
 Für diese kann aber der [u.g. 'SolBatSim'](EV.md#SolBatSim) verwendet werden.
 
 #### Stecker-Solar-Simulator und Unabhängigkeitsrechner {#HTW}
@@ -360,7 +360,7 @@ Entladestrategie](https://github.com/nick81nrw/PVTools/issues/53) angenommen.
 <!-- Es werden keine Speicherverluste berücksichtigt.-->
 Die Lade- und Entlade-Wirkungsgrade der Speicherbatterie (inkl. Verluste während
 der Speicherzeit) werden standardmäßig sehr hoch angenommenen: 99%.
-Das mag für [DC-Kopplung](index.md#Ladung) passen, ist aber für AC-Kopplung
+Das mag für [DC-Kopplung](Speicher.md#Ladung) passen, ist aber für AC-Kopplung
 viel zu hoch, wobei man das in den erweiterten Einstellungen anpassen kann.\
 Standardmäßig wird die Lade- und Entladeleistung etwas praxisfern nicht begrenzt,
 was sich aber ebenfalls in den erweiterten Einstellungen korrigieren lässt.

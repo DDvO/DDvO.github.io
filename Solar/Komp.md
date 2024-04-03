@@ -160,7 +160,7 @@ Fenster oder eine Tür mit einem Flachbandkabel (z.B. [MC4-Fensterdurchführung]
 https://solarmodule-gladbeck.de/produkt/solar-mc4-fensterdurchfuehrung/?sld=3)
 oder [selbst gebaut](https://www.youtube.com/watch?v=S7qKzvbc_Gg))
 anschließen. Das kann auch dann interessant sein, wenn man einen
-[DC-gekoppelten](index.md#Ladung) Speicher nicht außerhalb der Wohnung platzieren will.
+[DC-gekoppelten](Speicher.md#Ladung) Speicher nicht außerhalb der Wohnung platzieren will.
 
 Solarmodule kann man wie Batteriezellen [seriell und/oder parallel](
 https://photovoltaik-guru.de/module/reihenschaltung-und-parallelschaltung-elektronik-kurz-erklaert.html),
@@ -603,7 +603,7 @@ welche über ein Energiemessgerät dem Hybridgerät mitgeteilt wird.
 
 Es gibt sogar Hybridgeräte, die neben der Nutzungsart für eine Inselanlage
 (also die netzunabhängige Stromversorgung) auch den Netzparallelbetrieb
-mit [lastabhängiger Strompufferung](index.md#Regelungsstrategien) ermöglichen, etwa den
+mit [lastabhängiger Strompufferung](Speicher.md#Regelungsstrategien) ermöglichen, etwa den
 [SolarPower24 Infinisolar V](
 https://gbc-solino.cz/headpage-de/hybrid-wechselrichter-de/infini-solar-de/).
 Dieser kostet allerdings (zusammen mit einem für die lastabhängige Steuerung
@@ -644,7 +644,7 @@ Ein [Aufwärtswandler](https://de.wikipedia.org/wiki/Aufw%C3%A4rtswandler)
 werden, die Spannung einer 12&nbsp;V Pufferbatterie auf eine für den Eingang
 des Netzwechselrichters passende Spannung (z.B. mindestens 20&nbsp;V) zu bringen.
 
-Für die Nutzung zur [regelbaren Konstanteinspeisung](index.md#Konstanteinspeisung)
+Für die Nutzung zur [regelbaren Konstanteinspeisung](Speicher.md#Konstanteinspeisung)
 aus einem Strompuffer ins Hausnetz sollte der Spannungswandler
 über eine einstellbare Strombegrenzung verfügen.
 
@@ -845,7 +845,7 @@ engl. _DC-DC buck converter oder _step-down converter_).
 ![Bild: Programmierbarer Batteriespannungswächter](
 Battery_voltage_protector.png){:.right width="450"
 style="margin-left: 50px; margin-right: 50px"}
-Für die Nutzung einer Batterie als [Stromspeicher](index.md#Batteriepuffer) zur
+Für die Nutzung einer Batterie als [Stromspeicher](Speicher.md) zur
 zeitversetzten Einspeisung ins Hausnetz braucht man einen *Spannungswächter*,
 der die Einspeisung z.B. bei nahezu voller Batterie einschaltet und jedenfalls
 bei nahezu leerer Batterie ausschaltet. Wenn dieser nicht schon z.B. in einem

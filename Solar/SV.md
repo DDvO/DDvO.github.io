@@ -169,15 +169,15 @@ jährliche Stromabrechnung bzw. bestimmt ihn selbst durch die Differenz der
 Zählerstände im Jahresabstand.
 
 Sowohl als Basis der Energieabrechnung für einen Haushalt als auch für die
-optimale [Regelung](index.md#Regelungsstrategien) eines Stromspeichers ist es nötig,
+optimale [Regelung](Speicher.md#Regelungsstrategien) eines Stromspeichers ist es nötig,
 den *Gesamt-Leistungssaldo* (in Summe über alle drei Phasen) zu bestimmen.
 Diese geschieht am Einspeisepunkt des Haushalts, also am Hauptverteiler
 eines Einfamilienhauses bzw. am Unterverteiler/Sicherungkasten einer Wohnung.
 Ein [Stromzähler](#Stromzähler) bestimmt daraus die verbrauchte (und teils auch
 eingespeiste) Energie durch zeitliche Integration des Gesamt-Leistungssaldos.
 
-Besonders im Zusammenhang mit einer [Konstanteinspeisung](index.md#Konstanteinspeisung)
-aus [Batteriespeichern](index.md#Batteriepuffer) ist die *Minimallast* interessant,
+Besonders im Zusammenhang mit einer [Konstanteinspeisung](Speicher.md#Konstanteinspeisung)
+aus [Batteriespeichern](Speicher.md) ist die *Minimallast* interessant,
 also der im Laufe der Zeit geringste Leistungsbezug (Verbrauch) im Haushalt.
 Dieser Wert wird gern (allerdings nicht ganz richtig)
 als [Grundlast](https://de.wikipedia.org/wiki/Grundlast) bezeichnet.\
@@ -198,7 +198,7 @@ Der jeweils aktuelle Gesamt-Leistungssaldo und der Haushalts-Stromverbrauch
 lässt sich auch kontinuierlich und automatisiert messen und übertragen.
 Das kann für eine Online-Ablesung und genauere Analyse
 des Verbrauchs interessant sein. Besonders wichtig ist es aber für die optimale
-lastabhängige [Regelung](index.md#Regelungsstrategien) der Ladung und/oder Entladung
+lastabhängige [Regelung](Speicher.md#Regelungsstrategien) der Ladung und/oder Entladung
 eines Stromspeichers.
 
 * Man kann sich die Verbrauchsdaten über den
@@ -238,7 +238,7 @@ Die Datenanbindung erfolgt meist über WLAN, wobei das neuere Shelly Pro 3EM auc
 einen Bluetooth- und LAN-Anschluss hat, allerdings nicht mehr ein Relais.\
 <!--https://www.mydealz.de/comments/permalink/44544522-->
 Zum Shelly Pro 3EM
-und seiner Verknüpfung mit dem [Zendure SolarFlow](index.md#SolarFlow) gibt es [hier](
+und seiner Verknüpfung mit dem [Zendure SolarFlow](Speicher.md#SolarFlow) gibt es [hier](
 https://www.tueftler-und-heimwerker.de/shelly-pro-3em-stromverbrauch-ueberwachen-nulleinspeisung-regeln/)
 einen sehr schönen und recht fundierten Artikel,
 allerdings mit kommerzieller Verflechtung.
