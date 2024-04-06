@@ -246,6 +246,15 @@ die Gefahr, dass das Verhältnis von Aufwand zu Nutzen viel zu ungünstig wird.
 https://www.mydealz.de/comments/permalink/40887036
 -->
 
+Was relativ einfach zu machen ist,
+um das das Risiko einer eventuellen Leitungsüberlastung zu verringern,
+ist die Sicherung bzw. den Schutzschalter von 16&nbsp;A auf z.B. 10 oder
+13&nbsp;A zu reduzieren.\
+Eine (allerdings relativ aufwendige) Möglichkeit,
+das potentielle Überlastungsproblem ganz auszuschalten,
+wäre für die kleine PV-Anlage eine Extra-Leitung zum Unterverteiler zu legen,
+auf der sicher keine (starken) Verbraucher angeschlossen werden.
+
 #### Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W {#Kappungsverlust}
 
 Die Nennleistung der verwendeten Solarmodule kann und sollte in Summe durchaus
@@ -617,7 +626,7 @@ LocalWords: Charger Discharger Board Under Over Voltage Protection sub cpp img
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW if PowerLimiter
 LocalWords: telemetry gateway distort cell document sections profile Passthrough
 LocalWords: post text standard conditions Reflexions PVSOL SOL assuming MG Stick
-LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB
+LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB Komp
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date int limits
 LocalWords: author today abstract This the ignored extension yaml txt interface
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
