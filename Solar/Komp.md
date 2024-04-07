@@ -141,9 +141,11 @@ auf Seite der Stromquelle für den Pluspol ein (männlicher) Stecker
 und für den Minuspol eine Buchse (als ein weiblicher Verbinder) verwendet wird.
 Allerdings ist unsinnigerweise auf allen MC4-Steckern ein "+" aufgeprägt
 und auf allen MC4-Buchsen ein "-", was für PV-Module passt, aber
-für den Wechselrichters (also auf Seite des Verbrauchers) genau verkehrt ist.
-![Bild: MC4-Anschluss Wechselrichter](MC4-Anschluss_Wechselrichter.png){:width="720"}
+für den Wechselrichter (also auf Seite des Verbrauchers) genau verkehrt ist.
+![Bild: MC4-Anschluss Wechselrichter](MC4-Anschluss_Wechselrichter.png){:width="798"}
 <!-- https://www.photovoltaikforum.com/thread/159926-hoymiles-300-polarit%C3%A4t-falsch-beschriftet/?postID=3585375#post3585375 -->
+Leider ist z.B. auf Hoymiles-Mikrowechselrichtern kein Hinweis zur richtigen
+Polung angebracht, aber zum Glück geht er nicht kaputt, wenn man ihn verpolt.
 
 Generell sollten die Solarkabel, also die Verbindungen der Module
 (untereinander und zum [Solarregler bzw. Wechselrichter](#Stromrichter)),
@@ -163,7 +165,7 @@ anschließen. Das kann auch dann interessant sein, wenn man einen
 [DC-gekoppelten](Speicher.md#Ladung) Speicher nicht außerhalb der Wohnung platzieren will.
 
 Solarmodule kann man wie Batteriezellen [seriell und/oder parallel](
-https://photovoltaik-guru.de/module/reihenschaltung-und-parallelschaltung-elektronik-kurz-erklaert.html),
+https://photovoltaik-guru.de/module/reihenschaltung-und-parallelschaltung-elektronik-kurz-erklaert.html)
 verbinden, um mehr Leistung zu erhalten, ohne für jedes Modul
 einen eigenen [Regler](#MPPT) bzw. Regler-Eingang verwenden zu müssen.
 Dabei sollten die Module den gleichen Strom bzw. ungefähr die gleiche Spannung
@@ -175,6 +177,7 @@ etwas günstiger als entsprechend viele kleine.
     auch *Serienschaltung* genannt) hängt man die Module einfach hintereinander,
     wobei sich die Spannungen der einzelnen Module addieren
     und der Gesamtstrom sich aus dem Minimum der möglichen Einzelströme ergibt.
+    Das Ergebnis nennt man *Strang* (engl. *string*).
 
     Der wesentliche Vorteil gegenüber der Parallelschaltung ist, dass
     der Strom in den Kabeln und der damit verbundene Verlust nicht steigt.
@@ -199,10 +202,10 @@ etwas günstiger als entsprechend viele kleine.
     und somit ein verschatteter Strang die Spannung anderer unverschatteter
     parallele Stränge kaum herunterzieht.
 
-    Wenn in einem Strang mindestens zwei Module in Reihe geschaltet sind,
-    kann es bei Kurzschluss eines Moduls (etwa durch einen Defekt, aber sehr
+    Durch einen Strang aus mindestens zwei in Reihe geschalteten Modulen
+    kann es bei Kurzschluss eines Moduls (etwa bei einem Defekt, aber sehr
     unwahrscheinlich) zu einem Rückstrom über andere parallele Stränge kommen.
-    Wenn es mindestens zwei andere Stränge gibt, kann der so groß sein,
+    Falls es mindestens zwei andere Stränge gibt, kann der Strom so groß sein,
     dass die übrigen Module des ersten Strangs überhitzen und zerstört werden.
     Deswegen werden in einem solchen Szenario Sicherungen oder
     sog. *Strangdioden* (auch *Stringdioden* oder *Sperrdioden* genannt)
@@ -877,7 +880,7 @@ LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker SusEnergy
 LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW Premium
 LocalWords: Sense is end index output md ref of pv px Eff vs discussioncomment
 LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
-LocalWords: data transfer solar cut cells open short circuit voltage lim
+LocalWords: data transfer solar cut cells open short circuit voltage lim string
 LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords OW Heat
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation state
 LocalWords: Microinverter What are Amps Volts SMF charge discharge Un Ent shunt
