@@ -1798,7 +1798,10 @@ mit der Zeit den dafür intern verwendenten Flash-Speicher schädigen würde.
 DTUs_im_Weckglas.jpg){:.right width="330"}](
 https://blog.helmutkarger.de/balkonkraftwerk-teil-8-opendtu-und-ahoydtu-fuer-hoymiles-wechselrichter/)
 An einem Netzwechselrichter der Hoymiles HM-Serie und für manche TSUN-Geräte
-kann man anstelle der teuren proprietären DTU die offene
+kann man statt der proprietären DTU von Hoymiles, welche relativ teuer ist
+und selbst in der eingeschränkten WLite-Variante [mindestens 35€](
+https://www.idealo.de/preisvergleich/OffersOfProduct/202182400_-gateway-dtu-wlite-hoymiles.html)
+kostet, die offene
 Bastel-Lösung [OpenDTU](https://github.com/roastedelectrons/HoymilesOpenDTU)
 bzw. [AhoyDTU](https://ahoydtu.de/) verwenden. Für beide Varianten gibt es
 schöne Anleitungen wie [diese](
@@ -1958,7 +1961,7 @@ LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker SusEnergy
 LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW Premium
 LocalWords: Sense is end index output md ref of pv px Eff vs discussioncomment
 LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
-LocalWords: data transfer solar cut cells open short circuit voltage lim
+LocalWords: data transfer solar cut cells open short circuit voltage lim WLite
 LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords OW Heat
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation state
 LocalWords: Microinverter What are Amps Volts SMF charge discharge Un Ent shunt
