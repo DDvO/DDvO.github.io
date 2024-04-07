@@ -753,17 +753,17 @@ Sie scheint die selbe Steuerung wie beim SolarFlow zu verwenden.
 
 ##### Anker Solix {#Solix}
 
-Das zweite relativ bekannte Produkt die [Anker Solix Solarbank](
+Das zweite relativ bekannte Produkt ist die [Anker Solix Solarbank](
 https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/).
 <!--https://www.chinahandys.net/anker-solix-solarbank-test/-->
-Es hat nur einen MPPT.
-Der einzige Betriebsart ist Einspeisung mit einer von der Uhrzeit abhängigen
+Das Gerät hat nur einen MPPT und bislang im Wesentlichen eine Betriebsart:
+Einspeisung mit einer von der Uhrzeit abhängigen und ansonsten konstanten
 Zielleistung, welche hier *Familienlastleistungsrate* (FLLR) genannt wird.
-Sie kann 0&nbsp;W sein (keine Einspeisung)
-und ist ansonsten zwischen 100 und 800&nbsp;W in Stufen von 10&nbsp;W wählbar.
+Sie ist zwischen 100 und 800&nbsp;W in Stufen von 10&nbsp;W wählbar,
+kann aber auch 0&nbsp;W sein (keine Einspeisung).
 Aufgrund einer Design-Einschränkung kann das Gerät diese Leistung nur entweder
 direkt aus PV-Strom oder aus dem Speicher erbringen, also nicht gleichzeitig
-aus beiden Quellen. Deshalb ist die Regelung etwas eigenartig:
+aus beiden Quellen. Deshalb sind die Details der Steuerung etwas eigenartig:
 
 ![Bild: Anker Solix Strategie](Anker_Solix_Strategie.png){:.right width="560"}
 * Wenn die PV-Leistung mindestens so hoch ist wie die FLLR,
@@ -771,8 +771,8 @@ aus beiden Quellen. Deshalb ist die Regelung etwas eigenartig:
   (außer wenn er voll ist, dann erfolgt ein Bypass).
 * Wenn die PV-Leistung mindestens 100&nbsp;W unter der FLLR liegt und höchstens
   100&nbsp;W beträgt, wird die FLLR dem Speicher entnommen
-  (solange die Kapazität reicht) und die PV-Leistung geht verloren.\
-  Dieser Verlust passiert zum Glück nicht groß, siehe u.g. Simulationsergebnisse.
+  (solange die Kapazität reicht) und die PV-Leistung geht verloren.
+  Dieser Verlust ist zum Glück nicht groß: typischerweise 10&nbsp;kWh im Jahr.
 * Ansonsten, also wenn die PV-Leistung zwischen 100&nbsp;W und der FLLR liegt
   oder weniger als 100&nbsp;W unter der FLLR
   (was bei einer FLLR von 200&nbsp;W aufs Gleiche hinausläuft),
@@ -1950,7 +1950,7 @@ LocalWords: Charger Discharger Board Under Over Voltage Protection sub cpp img
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW if PowerLimiter
 LocalWords: telemetry gateway distort cell document sections profile Passthrough
 LocalWords: post text standard conditions Reflexions PVSOL SOL assuming MG Stick
-LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB
+LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB Komp
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date int limits
 LocalWords: author today abstract This the ignored extension yaml txt interface
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
