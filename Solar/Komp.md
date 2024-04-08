@@ -67,9 +67,14 @@ Wirkungsgrad haben.
 ![Bild: Bypass-Dioden bei der Arbeit](
 Bypass-Dioden-bei-der-Arbeit.jpg){:.center}
 Leider bricht die Leistung von in Reihe geschalteten Zellen ein, sobald auch
-nur eine davon verschattet wird. Daher werden in den üblichen größeren Modulen
-sog. *Bypass-Dioden* eingesetzt, die bei *Teilverschattung* immerhin einen
-Teil der Leistung fließen lassen.
+nur eine davon verschattet wird. Daher werden in PV-Modulen üblicherweise 1 bis
+3 sog. *Bypass-Dioden* eingesetzt, die bei *Teilverschattung* den betreffenden
+Abschnitt des Moduls elektrisch überbrücken, so dass über sie wenigstens noch
+der Strom der nicht verschatteten Abschnitte des Moduls (und/oder anderer
+in Reihe geschalteter Module) fließen kann.
+Es gibt dafür [spezielle Dioden](SM74611.pdf),
+die einen sehr geringen Spannungsabfall haben,
+wodurch Verluste minimiert werden.
 
 In vielen PV-Modulen werden inzwischen sog.
 [*Halbzellen*](https://gruenes.haus/halbzellenmodule/) (engl. *half cut cells*)
@@ -866,7 +871,7 @@ LocalWords: potential csv grid tie inverter tmy peff ieff curb WiFi align Naja
 LocalWords: standby xls jpg Balkonsolar center limiter off to html Rs Controler
 LocalWords: blackout brownout panels busbars shingle panel up number solarbank
 LocalWords: maximum point tracking sine wave efficiency boost true SG Shellys DL
-LocalWords: converter step consumption pdf balancer equalizer mppt em Script
+LocalWords: converter step consumption pdf balancer equalizer mppt em Script SM
 LocalWords: buck down SA SZ DW MQ EC LF small LY KREE Battery test br ATON Full
 LocalWords: Charger Discharger Board Under Over Voltage Protection sub cpp img
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW if PowerLimiter
