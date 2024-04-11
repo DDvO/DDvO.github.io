@@ -21,7 +21,7 @@ lang: de
     - [Strommessung](#Strommessung)
         - [Einphasige Strommessung](#einphasig)
         - [Gesamt-Strommessung](#Gesamtstrom)
-        - [Details zum Shelly 3EM](#Shelly3EM)
+        - [Details zum Shelly (Pro) 3EM](#Shelly3EM)
     - [Stromzähler und Rücklaufsperre](#Stromzähler)
 -   [Eigenverbrauch und seine Berechnung](EV.md)
 -   [Nutzungsvarianten](SSG.md)
@@ -221,8 +221,8 @@ eine schöne Anleitung.<!--, aber auch für andere
 ![Bild: Shelly Pro 3EM Klappwandler](Shelly-clams.png){:.right width="150"}
 * Alternativ kann man ein 3-Phasen-Energiemessgerät wie das
 [Shelly 3EM](https://www.shelly.com/de/products/shop/shelly-3em-1) verwenden
-oder das etwas teurere, aber wohl genauere
-[Shelly Pro 3EM](https://www.shelly.com/de/products/shop/shelly-pro-3-em-120-a-1)
+(bzw. das etwas teurere, aber wohl genauere
+[Shelly Pro 3EM](https://www.shelly.com/de/products/shop/shelly-pro-3-em-120-a-1))
 oder das [my-PV WiFi Meter](https://www.my-pv.com/de/produkte/my-pv-wifi-meter).
 <!--https://www.mydealz.de/comments/permalink/44178073-->
 So ein Messgerät wird in den Sicherungskasten bzw. Unterverteiler der Wohnung
@@ -453,7 +453,7 @@ In diesem Fall wird ein leerer String produziert, der dann zu einem Fehler führ
 Siehe https://community.home-assistant.io/t/shelly-3em-3-phase-net-metering-templates-for-import-export-and-consumption/390237/54 und die (erst mal eingeklappte) Antwort von 'tamorix'.
 -->
 
-Ein weiteres Problem bei den auf dem Shelly 3EM gespeicherten und über das
+Ein weiteres Problem bei den auf dem Shelly (Pro) 3EM gespeicherten und über das
 einfache Shelly-Browser-Interface exportierbaren Daten ist ihre geringe
 zeitliche Detaillierung:
 Für den aktuellen Tag und den Vortag immerhin in Minutenauflösung,

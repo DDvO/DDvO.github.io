@@ -1092,7 +1092,7 @@ zur offenen Kommunikation per WLAN mit einem Hoymiles-Wechselrichter einrichtet.
 und lastbasierten Regelung der Einspeisung des Wechselrichters zu verwenden,
 statt irgendwo anders z.B. Home Assistant oder iobroker laufen lassen zu müssen.
 * Zudem wird natürlich ein dreiphasiges Leistungsmessgerät mit Dateninterface
-([Shelly 3EM](SV.md#Shelly3EM), Eastron SDM oder Stromzähler-Lesekopf mit
+([Shelly (Pro) 3EM](SV.md#Shelly3EM), Eastron SDM oder Stromzähler-Lesekopf mit
 [Tasmota](https://www.tasmota.info/)-Software) benötigt, um den aktuellen
 Leistungssaldo des Haushalts in Sekundenauflösung zu erhalten.
 * Die Ladung des Speichers erfolgt effizient mit DC-Kopplung,
@@ -1849,7 +1849,7 @@ https://mona-stefan.de/index.php?option=com_content&view=article&id=765)
 in der Variante mit Limiter, wobei der mitgelieferte einphasige Lastsensor hier
 nicht verwendet wird. Stattdessen wird ein ESP8266 Mikrocontroller
 an einem RS485-Adapter zur Steuerung mit einer fertigen Software verwendet,
-wobei er die Lastinformation per WLAN von einem Shelly 3EM erhält.
+wobei er die Lastinformation per WLAN von einem Shelly (Pro) 3EM erhält.
 
 {:style="clear:both"}
 

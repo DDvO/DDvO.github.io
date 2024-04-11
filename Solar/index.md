@@ -198,7 +198,7 @@ Lizenzkürzel:
     - [Strommessung](SV.md#Strommessung)<a name="Strommessung"></a>
         - [Einphasige Strommessung](SV.md#einphasig)<a name="einphasig"></a>
         - [Gesamt-Strommessung](SV.md#Gesamtstrom)<a name="Gesamtstrom"></a>
-        - [Details zum Shelly 3EM](SV.md#Shelly3EM)<a name="Shelly3EM"></a>
+        - [Details zum Shelly (Pro) 3EM](SV.md#Shelly3EM)<a name="Shelly3EM"></a>
     - [Stromzähler und Rücklaufsperre](SV.md#Stromzähler)<a name="Stromzähler"></a>
 -   [Eigenverbrauch und seine Berechnung](EV.md#Eigenverbrauch)<a name="Eigenverbrauch"></a>
     -   [Typische Rentabilität kleiner PV-Anlagen](EV.md#rentabel)<a name="rentabel"></a>
@@ -259,7 +259,7 @@ Lizenzkürzel:
 
 <!--
 Local IspellDict: german8
-LocalWords: title name description date created changed keywords
+LocalWords: title name description date created changed keywords Komp extension
 LocalWords: This is the abstract iextension yaml metadata jpg md CC BY toc
 LocalWords: markdown start refresh end pandoc index output nbsp
 LocalWords: PVCalculator Regelungsimplementierung SOL
