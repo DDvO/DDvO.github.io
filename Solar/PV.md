@@ -813,10 +813,14 @@ Eigenverbrauch  =  181 kWh wenn täglich 8-18 Uhr 50 W Verbrauch
 Abendstunden konzentriert ist, bringt eine Aufteilung der Modul-Ausrichtung
 keinen Vorteil für den Eigenverbrauch.**
 Dagegen spricht zusätzlich die Tendenz zu stärkerer Verschattung bei flacherem
-Sonnenstand, etwa durch Gebäude und Bäume in der Umgebung und auch
-durch die PV-Module gegenseitig (*Selbstverschattung*).
-Außerdem ist die geteilte Montage meist aufwendiger, und geteilte
-Ausrichtungen erfordern zur Optimierung eine getrennte [MPPT-Regelung](Komp.md#MPPT).
+Sonnenstand, etwa durch Gebäude und Bäume in der Umgebung
+und auch durch die PV-Module gegenseitig (*Selbstverschattung*).
+Außerdem ist die geteilte Montage meist aufwendiger.
+Unterschiedliche Ausrichtungen erfordern zur Optimierung nur dann eine getrennte
+[MPPT-Regelung](Komp.md#MPPT), wenn sich bei unterschiedlich starker Bestrahlung
+die Modulspannung verschiebt, bei der die maximale Modulleistung erreicht wird.
+Mehr dazu [hier](Komp.html#Anschluss).
+
 [![Bild: Selbstverschattung gleichartiger Modulreihen](
 PV_Vergleich_S_vs_OW_add_v1.png)](
 https://www.photovoltaikforum.com/core/attachment/44467-pv-vergleich-s-vs-ow-add-v1-pdf/)
@@ -975,7 +979,7 @@ LocalWords: Charger Discharger Board Under Over Voltage Protection sub cpp img
 LocalWords: Speicherungs current  Regelungs Eigenverbrauchsv WSW if PowerLimiter
 LocalWords: telemetry gateway distort cell document sections profile Passthrough
 LocalWords: post text standard conditions Reflexions PVSOL SOL assuming MG Stick
-LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB
+LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB Komp
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date int limits
 LocalWords: author today abstract This the ignored extension yaml txt interface
 LocalWords: metadata add Austria description bagatellgrenze Loadprofiles

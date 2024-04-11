@@ -756,7 +756,8 @@ Sie scheint die selbe Steuerung wie beim SolarFlow zu verwenden.
 Das zweite relativ bekannte Produkt ist die [Anker Solix Solarbank](
 https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/).
 <!--https://www.chinahandys.net/anker-solix-solarbank-test/-->
-Das Gerät hat nur einen MPPT und bislang im Wesentlichen eine Betriebsart:
+Das Gerät hat nur einen MPPT (was aber [meist genügt](Komp.html#Anschluss))
+und bislang im Wesentlichen eine Betriebsart:
 Einspeisung mit einer von der Uhrzeit abhängigen und ansonsten konstanten
 Zielleistung, welche hier *Familienlastleistungsrate* (FLLR) genannt wird.
 Sie ist zwischen 100 und 800&nbsp;W in Stufen von 10&nbsp;W wählbar,
@@ -866,7 +867,8 @@ Direkt aus China ist das Gerät angeblich für unter 300€ erhältlich.
 Das wäre aufgrund der Ausstattung auch realistischer, denn es leistet nicht
 mehr als eine Eigenbau-Lösung mit [OpenDTU-OnBattery](#OpenDTU-OnBattery) und
 zwei MPPT-Ladereglern, was man mit mäßigem Aufwand selbst mit soliden Victron
-BlueSolar-Geräten für ca. 140€ hinbekommen kann, mit einem MPPT für 100€.
+BlueSolar-Geräten für ca. 140€ hinbekommen kann,
+mit einem MPPT (was zumeist ausreicht) für 100€.
 
 
 ##### Weitere Produkte {#sonstige}

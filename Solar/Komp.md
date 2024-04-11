@@ -169,14 +169,31 @@ oder [selbst gebaut](https://www.youtube.com/watch?v=S7qKzvbc_Gg))
 anschließen. Das kann auch dann interessant sein, wenn man einen
 [DC-gekoppelten](Speicher.md#Ladung) Speicher nicht außerhalb der Wohnung platzieren will.
 
+Wenige große Solarmodule sind technisch und wirtschaftlich typischerweise
+günstiger als entsprechend viele kleine. Allerdings sind der Größe praktische
+Grenzen gesetzt, weshalb man für mehr Leistung meist mehrere Module kombiniert.
+
 Solarmodule kann man wie Batteriezellen [seriell und/oder parallel](
 https://photovoltaik-guru.de/module/reihenschaltung-und-parallelschaltung-elektronik-kurz-erklaert.html)
-verbinden, um mehr Leistung zu erhalten, ohne für jedes Modul
-einen eigenen [Regler](#MPPT) bzw. Regler-Eingang verwenden zu müssen.
-Dabei sollten die Module den gleichen Strom bzw. ungefähr die gleiche Spannung
-liefern, weil es sonst Verluste gibt.\
-Wenige große Solarmodule sind technisch und wirtschaftlich typischerweise
-etwas günstiger als entsprechend viele kleine.
+zusammenschalten, um nicht für jedes Modul
+einen eigenen [MPPT-Regler](#MPPT) bzw. Regler-Eingang verwenden zu müssen.
+
+![Bild: PV-Modul Leistungskurvenschar](
+PV-Modul-Leistungskurvenschar.jpg){:.right width="550"}
+Auch bei Parallelschaltung unterschiedlich ausgerichteter oder teils
+unterschiedlich verschatteter Module genügt oft ein gemeinsamer Regler-Eingang,
+wie in [diesem Video](https://www.youtube.com/watch?v=jXDLKjCTW6c)
+schön vorgeführt, nämlich wenn sich (je nach Modultyp) die Spannung für das
+Leistungsmaximum bei unterschiedlicher Bestrahlung nicht oder nur wenig ändert
+und die Kurven in diesem Bereich nicht sehr steil sind.\
+Das lässt sich aus der Leistungskurvenschar der Modulkennlinien ersehen &mdash;
+im abgebildeten Beispiel liegen die Maxima etwa 2&nbsp;V auseinander, und die
+Leistungsabweichungen bei einer mittleren Spannung (z.B. 35&nbsp;V) sind gering.
+
+{:style="clear:both"}
+
+Allerdings sollten die zusammengeschalteten Module den gleichen Strom
+bzw. ungefähr die gleiche Spannung liefern, weil es sonst Verluste gibt.
 
 -   Bei [*Reihenschaltung*](https://de.wikipedia.org/wiki/Reihenschaltung) (oft
     auch *Serienschaltung* genannt) hängt man die Module einfach hintereinander,
@@ -469,8 +486,8 @@ unabhängig davon, ob die Solarzellen damit an ihrem Leistungsoptimum laufen.
 Wenn die Batterie voll wird, also ihre Absorbtionsspannung erreicht,
 findet nur noch eine pulsierte Ladung statt, die Ladungsverluste ausgleicht.
 PWM-Regler arbeiten also nur dann effizient, wenn die optimale PV-Spannung
-gleich der Batterie-Ladespannung ist. Der Unterschied zur MPPT-Regelung wird
-[hier](https://www.amumot.de/solar-laderegler-12v-mppt/) sehr schön erklärt.
+gleich der Batterie-Ladespannung ist. Der Unterschied zur [MPPT](#MPPT)-Regelung
+wird [hier](https://www.amumot.de/solar-laderegler-12v-mppt/) sehr schön erklärt.
 Der durchschnittliche Minderertrag durch PWM-Regelung wird mit 20% angegeben.
 
 Mit billigen chinesischen Ladereglern, die angeblich MPPT machen
