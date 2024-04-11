@@ -63,10 +63,12 @@ Dazu bieten sich insbesondere Spülmaschinen, Waschmaschinen und das Laden von
 Batterien an, wobei die Akkus von E-Bikes oder E-Rollern von der Größenordnung
 und ihrem zeitlichen Nutzungsprofil besonders geeignet sind.
 
-Eine ziemlich clevere Nutzung von überschüssigem Strom ist
-[*Power-to-Heat (P2H)*](https://de.wikipedia.org/wiki/Power-to-Heat),
-also die Verwendung für eine elektrische Heizung, die verstärkte Nutzung
-einer Wärmepumpe (welche den Nutzeffekt sogar vervielfacht) oder
+Überschüssigen Strom kann man über Klimaanlagen, modifizierte Kühlschränke
+<!-- Node Red + Elecpow https://www.mydealz.de/comments/permalink/47109375 -->
+und [*Power-to-Heat (P2H)*](https://de.wikipedia.org/wiki/Power-to-Heat)
+ziemlich clever nutzen.
+Letzteres beinhaltet die Verwendung für eine elektrische Heizung, die verstärkte
+Nutzung einer Wärmepumpe (welche den Nutzeffekt sogar vervielfacht) oder
 das zusätzliche Aufheizen des Warmwasserbehälters einer normalen Heizanlage
 über einen [PV-Heizstab](https://www.net4energy.com/de-de/energie/pv-heizstab)
 oder der Einsatz eines gesonderten PV-Boilers.
@@ -673,12 +675,12 @@ LocalWords: post text standard conditions Reflexions PVSOL SOL assuming MG Stick
 LocalWords: operating temperature Timeseries crystSi PVCalculator and NPB Komp
 LocalWords: with entnahme bend OSO SSW SSO ready anlagen plugin date int limits
 LocalWords: author today abstract This the ignored extension yaml txt interface
-LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
+LocalWords: metadata add Austria description bagatellgrenze Loadprofiles Node
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker SusEnergy
 LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW Premium
 LocalWords: Sense is end index output md ref of pv px Eff vs discussioncomment
 LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
-LocalWords: data transfer solar cut cells open short circuit voltage lim
+LocalWords: data transfer solar cut cells open short circuit voltage lim Elecpow
 LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords OW Heat
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation state
 LocalWords: Microinverter What are Amps Volts SMF charge discharge Un Ent shunt
