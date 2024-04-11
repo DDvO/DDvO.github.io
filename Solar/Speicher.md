@@ -1088,20 +1088,21 @@ Dies ist eine Weiterentwicklung der
 zur offenen Kommunikation per WLAN mit einem Hoymiles-Wechselrichter einrichtet.
 
 ![Bild: OpenDTU-OnBattery.jpg](OpenDTU-OnBattery.png){:.right width="755"}
-* Der Clou dabei ist, den OpenDTU Mikrocontroller auch gleich zur lastbasierten
-Regelung der Einspeisung des Wechselrichters zu verwenden, statt irgendwo
-anders z.B. Home Assistant oder iobroker laufen lassen zu müssen.
+* Der Clou dabei ist, den OpenDTU Mikrocontroller auch gleich zur PV-Leistungs-
+und lastbasierten Regelung der Einspeisung des Wechselrichters zu verwenden,
+statt irgendwo anders z.B. Home Assistant oder iobroker laufen lassen zu müssen.
 * Zudem wird natürlich ein dreiphasiges Leistungsmessgerät mit Dateninterface
 ([Shelly 3EM](SV.md#Shelly3EM), Eastron SDM oder Stromzähler-Lesekopf mit
 [Tasmota](https://www.tasmota.info/)-Software) benötigt, um den aktuellen
 Leistungssaldo des Haushalts in Sekundenauflösung zu erhalten.
-* Die Ladung des Speichers erfolgt effizient mit DC-Kopplung, und zwar über
-einen [Solar-Laderegler](Komp.md#Laderegler) von Victron, dessen [VE.Direct interface](
+* Die Ladung des Speichers erfolgt effizient mit DC-Kopplung,
+und zwar über einen [Solar-Laderegler](Komp.md#Laderegler) von Victron,
+dessen [VE.Direct interface](
 https://www.victronenergy.com/live/vedirect_protocol:faq) zur Regelung benötigt
 wird, weil sich damit die PV-Leistung abfragen lässt.
 Je nach der maximalen Gesamtspannung der hierbei meist in Reihe geschalteten
-PV-Module genügt teils schon ein BlueSolar 75/15 und
-sicherlich ein 100/15 (der 100&nbsp;V Eingangsspannung verträgt).
+PV-Module genügt teils schon ein BlueSolar 75/15 und ansonsten normalerweise
+ein 100/15 (der 100&nbsp;V Eingangsspannung verträgt).
 Die Batteriespannung muss für den (direkten) Anschluss des Wechselrichters
 mindestens 24&nbsp;V betragen, was von allen Victron-Varianten unterstützt wird.
 Für eine Batteriespannung von 48&nbsp;V eignet sich etwa der 100/20.
@@ -1120,14 +1121,15 @@ implementiert ist, arbeitet im Wesentlichen wie folgt:\
 Berechne in einer Endlosschleife immer wieder einen neuen Zielwert (Limit)
 für die Wechselrichter-Ausgangsleistung, sende ihn an das Gerät und warte, bis
 positive Rückmeldung erfolgt, was beim Hoymiles meist 5-10&nbsp;Sekunden dauert.
-Für den Zielwert gibt es verschiedene Fälle:
+Für den Zielwert, der im Wesentlichen aus der aktuellen Last durch den Hauhalt
+und der PV-Leistung bestimmt wird, gibt es verschiedene Fälle:
 
-|Batterie-Ladezustand|PV-Leistung| resultierendes Wechselrichter-Limit | Effekt auf die Batterie |
-|:-------------------|:----------|:------------------------------------|:------------------------|
-|gering     |<&nbsp;20&nbsp;W|Wechselrichter aus   |Ladung ggf. mit schwacher PV-Leistung|
-|gering     |≥&nbsp;20&nbsp;W|min(Last,PV−Leistung)|Ladung ggf. mit PV-Überschuss        |
-|ausreichend|                |Last<!--img width=16ex/-->|Entladung&nbsp;falls&nbsp;Last&nbsp;>&nbsp;PV−Leistung,&nbsp;sonst&nbsp;Ladung|
-|ausreichend|                |max(Last,PV−Leistung)|Entladung falls Last > PV−Leistung, keine Ladung falls (Full) Solar-Passthrough aktiviert|
+|Batterie-Ladezustand|PV-Leistung|verwendeter Zielwert (Wechselrichter-Limit) | Auswirkung auf die Batterie |
+|:-------------------|:----------|:-----------------------------------|:------------------------|
+|gering|<&nbsp;20&nbsp;W|0 (Wechselrichter aus)|ggf. Ladung mit PV-Leistung|
+|gering|≥&nbsp;20&nbsp;W|min(Last,&nbsp;PV−Leistung)|ggf. Ladung mit PV-Überschuss        |
+|nicht&nbsp;gering&nbsp;oder voll&nbsp;und&nbsp;Bypass nicht&nbsp;erlaubt||Last<!--img width=16ex/-->|Entladung&nbsp;wenn&nbsp;Last&nbsp;>&nbsp;PV−Leistung, sonst Ladung mit PV-Überschuss (außer&nbsp;wenn&nbsp;voll)|
+|voll&nbsp;und Bypass&nbsp;erlaubt||max(Last,&nbsp;PV−Leistung)|Entladung wenn Last > PV−Leistung, keine Ladung|
 
 Die Regelung ist so flink wie möglich, aber berücksichtigt nicht die
 <!-- im [Abschnitt zur Einspeisung](lastgeregelt) genannten -->
