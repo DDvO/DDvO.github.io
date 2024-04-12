@@ -704,17 +704,24 @@ so dass sie in weniger als einer Stunde geladen bzw. entladen werden können.
 Außerdem haben sie keinen „Memory-Effekt“
 und haben im Vergleich Bleiakkus eine fast doppelt so hohe
 effektiv nutzbare Kapazität (nämlich etwa 90% der Nennkapazität).
+Damit haben sie insgesamt ein deutlich besseres Preis-/Leistungs-Verhältnis
+als Blei-Batterien.
+
 Im Vergleich zu anderen Lithium-Ionen-Akkutypen inklusive Lithium-Polymer (LiPo),
-welche eine noch höhere Energiedichte haben, sind sie recht robust und
-[weniger gefährlich](https://www.youtube.com/watch?v=aIy6S0TdSSE&t=514s).
+welche eine noch höhere Energiedichte haben, sind LiFePO4-Zellen recht robust
+und [weniger gefährlich](https://www.youtube.com/watch?v=aIy6S0TdSSE&t=514s).
 und vermutlich weniger umweltschädlich, weil sie weniger Lithium enthalten.
 <!--
 Es hat bei einem großen LiFePO4-Speicher aber auch schon eine Explosion gegeben.
 https://www.pv-magazine.de/2023/10/27/ursache-fuer-die-explosion-des-30-kilowattstunden-batteriespeichers-wird-wohl-ungeklaert-bleiben/
 -->
+Ihre Zellspannung von ca. 3,2&nbsp;V passt besser als andere Li-Ion-Typen, um
+Blei-Batterien zu ersetzen, weil 4 Zellen in Reihe nur etwas mehr als 12&nbsp;V
+ergeben.
 Alle Lithium-basierten Batterien benötigen, anders als Blei-Batterien, für die
 Reihenschaltung der internen Akkuzellen ein sog. *Batteriemanagementsystem*
-(*BMS*), das für eine gleichmäßige Spannungsverteilung der Zellen sorgt.
+(*BMS*), das für eine gleichmäßige Spannungsverteilung der Zellen sorgt
+und zu starke Ladung und Entladung unterbindet.
 
 Eine typische 100&nbsp;Ah Starterbatterie wiegt etwa 26&nbsp;kg und kostet nur etwa 100€.
 Aus ihrer Nennkapazität von 12&nbsp;V × 100&nbsp;Ah = 1200&nbsp;Wh sollte man aber höchstens
