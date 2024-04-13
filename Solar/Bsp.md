@@ -27,6 +27,7 @@ lang: de
 -   [Beispiel-Konfigurationen](#Beispiele)
     -   [Mobile Inselanlage](#Mobilanlage)
 <!-- -   [Steckersolargerät](#Steckeranlage) -->
+    -   [SSG mit DC-gekoppeltem Speicher](#SSG-DC-gekoppelt)
     -   [Kombi-Anlage](#Kombianlage)
 
 Beispiel-Konfigurationen {#Beispiele}
@@ -132,6 +133,68 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
     https://www.heise.de/news/Balkonkraftwerke-Fehlendes-Relais-bei-Deye-hat-weitere-Folgen-9218441.html).
     https://www.mydealz.de/comments/permalink/45968453 Relaisbox
 -->
+
+### SSG (Balkonanlage) mit DC-gekoppeltem Speicher] {#SSG-DC-gekoppelt}
+
+Hier ein Beispiel für eine gelungene, aber etwas aufwendige effiziente Lösung
+mit DC-gekoppelter Anbindung eines 48&nbsp;V LiFePO4 Speichers
+(bestehend aus einer oder zwei Batterien), wozu je ein Victron
+SmartSolar MPPT 100/20-48V [Solar-Laderegler](Komp.md#Laderegler) verwendet wird.
+Sowohl für die sofortige Nutzung des erzeugten PV-Stroms als auch für das
+bedarfsgerechte Laden und Entladen des Speichers kommt ein
+(derzeit auf max. 600&nbsp;W Leistung gedrosselter) Hoymiles HM-800
+[Netzwechselrichter](Komp.md#Netzwechselrichter) zum Einsatz,
+der per Heimautomatisierung über eine Ahoy-DTU oder OpenDTU geregelt wird.\
+Optional wird hier ein Victron Phoenix 48&nbsp;V 800&nbsp;W
+[Inselwechselrichter](Komp.md#Inselwechselrichter) verwendet,
+was dann Notstrom-Fähigkeit mit Batterie-gepufferter Sonnenenergie bietet.
+
+![Bild: SSG-mit-DC-gekoppeltem-Speicher.png](
+SSG-mit-DC-gekoppeltem-Speicher.png){:.right width="798"}
+
+Weil die Batteriespannung für eine Balkonanlage recht hoch ist
+und die Solar-Laderegler bis zu 100&nbsp;V Eingangspannung vertragen,
+können und müssen die PV-Module in Reihe geschaltet werden,
+und die Kabelquerschnitte können auch auf DC-Seite relativ gering bleiben,
+ohne dass es zu nennenswerten Leitungsverlusten kommt.\
+Die hier beschriebene Lösung wäre aber auch basierend auf einem 24&nbsp;V Speicher
+gut möglich, zumal der Eingangspannungs-Bereich des verwendeten Wechselrichters
+auch den Bereich um 24&nbsp;V umfasst und die Kabel zwischen Laderegler,
+Speicher und Wechselrichter kurz gehalten werden können.
+
+Damit die Batterien auch bei Minusgraden geladen werden können,
+kommt hier eine [Pflanzen-Heizmatte wie diese](
+https://www.ebay.de/itm/354441767526?var=623842819621Plfan) zum Einsatz, welche
+man dann allerdings noch temperaturgeregelt mit Strom versorgt werden muss.
+Einfacher wäre, eine Wärmematte mit verbundenem Thermostat zu verwenden.
+
+Die Regelung sollte nach den Optimierungs-Prinzipien erfolgen, die im Abschnitt
+zu [Regelungsstrategien für Stromspeicher](Speicher.md#Regelungsstrategien) erklärt sind.
+Die dazu nötige Messung des Gesamt-Leistungssaldos am Einspeisepunkt des Haushalts,
+also wie viel gerade aus dem externen Netz gezogen oder dorthin eingespeist
+wird, erfolgt wie im Abschnitt [Gesamt-Strommessung](SV.md#Gesamtstrom) beschrieben.
+Wenn dazu (wie im Bild dargestellt) Tibber Pulse verwendet wird, kann die
+Nutzung des Speichers auch vom aktuellen Strompreis abhängig gemacht werden.
+
+Die Batteriespannung (damit indirekt der ungefähre [Ladezustand](Komp.md#Ladezustand)
+des Speichers) und die PV-Leistung kann z.B. über ein Victron VE.Direct USB-Kabel
+von der [Victron Venus Firmware auf einem Raspberry Pi](
+https://www.victronenergy.com/blog/2017/09/06/raspberry-pi-running-victrons-venus-firmware/)
+(hier genügt 2. oder 3. Generation) abgefragt werden.
+
+Als Grundlage für die selbst programmierte Regelung wurde hier die Perl-basierte
+[(FHEM)](https://fhem.de/fhem_DE.html) auf einem Raspberry Pi 4 verwendet.
+Alternativen dazu und Details zur DC-Kopplung sind im
+[Abschnitt zur Implementierung der Speicher-Regelung](Speicher.md#Regelungsimplementierung)
+aufgeführt.
+
+In Minimalausstattung würde die Anlage mit ECO-WORTHY 48&nbsp;V 2,5&nbsp;kWh Speicher
+ohne PV-Module unter 1000€ kosten.
+Mit allen optionalen Komponenten inkl. Inselwechselrichter hat die Anlage
+mit 5&nbsp;kWh Speicherkapazität ohne PV-Module im Herbst 2023 knapp 2200€ gekostet.\
+Details zu der Anlage können bei
+[Michael Steigemann](mailto:michael.steigemann) von
+[Solar2030.de](https://solar2030.de/) erfragt werden.
 
 ### Kombi-Anlage {#Kombianlage}
 

@@ -227,7 +227,6 @@ Lizenzkürzel:
         - [SSG-Speicherlösungen im Eigenbau](Speicher.md#Eigenbau)<a name="SSG-Speicher-Eigenbau"></a>
           - [Implementierung der Speicher-Regelung](Speicher.md#Regelungsimplementierung)<a name="Regelungsimplementierung"></a>
           - [Einfache und günstige Lösung: OpenDTU-OnBattery](Speicher.md#OpenDTU-OnBattery)<a name="OpenDTU-OnBattery"></a>
-          - [Weiteres Beispiel für DC-gekoppelten Speicher](Speicher.md#SSG-DC-gekoppelt)<a name="SSG-DC-gekoppelt"></a>
           - [Ladung des Stromspeichers](Speicher.md#Ladung)<a name="Ladung"></a>
           - [Konstanteinspeisung](Speicher.md#Konstanteinspeisung)<a name="Konstanteinspeisung"></a>
           - [Lastgeregelte Einspeisung](Speicher.md#lastgeregelt)<a name="lastgeregelt"></a>
@@ -255,6 +254,7 @@ Lizenzkürzel:
 -   [Beispiel-Konfigurationen](Bsp.md#Beispiele)<a name="Beispiele"></a>
     -   [Mobile Inselanlage](Bsp.md#Mobilanlage)<a name="Mobilanlage"></a>
 <!-- -   [Steckersolargerät](Bsp.md#Steckeranlage)<a name="Steckeranlage"></a> -->
+    -   [SSG (Balkonanlage) mit DC-gekoppeltem Speicher](Bsp.md#SSG-DC-gekoppelt)<a name="SSG-DC-gekoppelt"></a>
     -   [Kombi-Anlage](Bsp.md#Kombianlage)<a name="Kombianlage"></a>
 
 <!--
