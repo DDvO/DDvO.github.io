@@ -42,7 +42,7 @@ lang: de
 -   [Auswahl und Nutzung von Komponenten](Komp.md)
 -   [Beispiel-Konfigurationen](Bsp.md)
 
-### Hausnetzeinspeisung mit Pufferung in Batteriespeicher {#Batteriespeicher}
+## Hausnetzeinspeisung mit Pufferung in Batteriespeicher {#Batteriespeicher}
 
 ![Bild: Balkonkraftwerk mit Pufferbatterie und Inselwechselrichter](
 Pufferbatterie_und_Inselwechselrichter.png){:.right width="400"
@@ -424,7 +424,7 @@ PV-Eigenverbrauchsanteil    =   90 % des PV-DC-Ertrags (Nutzungsgrad)
 Eigendeckungsanteil         =   29 % des Verbrauchs (Autarkiegrad)
 -->
 
-#### Regelungsstrategien für PV-Speicher {#Regelungsstrategien}
+### Regelungsstrategien für PV-Speicher {#Regelungsstrategien}
 
 Weil man für ins externe Netz eingespeisten Strom keine Vergütung bekommt oder
 jedenfalls deutlich weniger erhält als man für vom Netz bezogenen Strom zahlen
@@ -572,7 +572,7 @@ Zusätzlich ist der Speicher am Einlass mit einem Überlaufschutz
 ausgestattet, der die Wasserzufuhr stoppt, wenn der Speicher voll ist
 und das Wasser durch den kleinen Auslass nicht schnell genug abfließt.
 
-#### Dimensionierung des Stromspeichers {#Dimensionierung}
+### Dimensionierung des Stromspeichers {#Dimensionierung}
 
 Zum Thema *Stromspeicher* in verschiedensten Formen
 und Nutzungsmöglichkeiten im Zusammenhang mit Photovoltaik
@@ -681,7 +681,7 @@ Bei LiFePO4 sind immerhin 90% Entladetiefe problemlos möglich.
 * Im Interesse einer langen Lebensdauer sollte man die Batterie je nach Typ
 besser auch nicht ganz voll laden, sondern eher nur zu etwa 90%.
 
-#### Kommerzielle SSG-Speicherlösungen {#kommerziell}
+### Kommerzielle SSG-Speicherlösungen {#kommerziell}
 
 Aufgrund des wachsenden Interesses an Speicherlösungen auch für kleine
 PV-Anlagen gibt es seit 2023 ein paar steckerfertige Lösungen zu kaufen.
@@ -712,7 +712,7 @@ Alle diese Produkte haben u.A. Folgendes gemeinsam.
 
 Hier eine Übersicht zu den jeweils unterstützten Lade- und Entladestrategien.
 
-##### Zendure SolarFlow und AIO 2400 {#SolarFlow}
+#### Zendure SolarFlow und AIO 2400 {#SolarFlow}
 
 ![Bild: Zendure SolarFlow](Zendure_SolarFlow.png){:.right width="400"}
 
@@ -751,7 +751,7 @@ https://www.computerbase.de/2024-02/zendure-aio-2400-test-balkonkraftwerk-akku-s
 eine Rezension dazu.
 Sie scheint die selbe Steuerung wie beim SolarFlow zu verwenden.
 
-##### Anker Solix {#Solix}
+#### Anker Solix {#Solix}
 
 Das zweite relativ bekannte Produkt ist die [Anker Solix Solarbank](
 https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/).
@@ -796,7 +796,7 @@ und v.A. günstiger etwas [eigenes bauen](#Eigenbau).
 (Zusätzlich auch tagsüber in die merkwürdige Solix-Steuerung einzugreifen oder
 sie zu umgehen wäre noch deutlich komplizierter und würde wohl wenig bringen.)
 
-##### Maxxisun Maxxicharge {#Maxxicharge}
+#### Maxxisun Maxxicharge {#Maxxicharge}
 
 Bislang kaum bekannt und erst ab März 2024 allgemein lieferbar ist der
 [Maxxicharge Batteriespeicher](https://www.maxxisun.de/maxxicharge).
@@ -829,7 +829,7 @@ https://energiewende-tipps.de/balkonkraftwerke-mit-nulleinspeisung-durch-maxxich
 nicht ortsfeste PV-Anlagen offenbar nicht angemeldet werden müssen.
 
 
-##### Tentek Tribune bzw. Anfuote EMS {#Tentek}
+#### Tentek Tribune bzw. Anfuote EMS {#Tentek}
 
 ![Bild: Tentek_Tribune_EMS_Controler](
 Tentek_Tribune_EMS_Controler.png){:.right width="300"}
@@ -871,7 +871,7 @@ BlueSolar-Geräten für ca. 140€ hinbekommen kann,
 mit einem MPPT (was zumeist ausreicht) für 100€.
 
 
-##### Weitere Produkte {#sonstige}
+#### Weitere Produkte {#sonstige}
 
 Es gibt weitere ähnliche Lösungen, etwa
 * [EcoFlow PowerStream](
@@ -892,7 +892,7 @@ https://www.infranken.de/ratgeber/wohnen/energiesparen/balkonkraftwerk-speicher-
 -->
 
 
-##### Zusammenfassung und Effizienzbetrachtung {#Effizienz}
+#### Zusammenfassung und Effizienzbetrachtung {#Effizienz}
 
 Viele dieser Produkte haben mehr oder weniger starke Einschränkungen und
 funktionieren in der Praxis nicht so gut und effizient wie vom Marketing behauptet.
@@ -1003,7 +1003,7 @@ so dass es (noch?) nicht so funktioniert wie es soll.
 -->
 
 
-#### SSG-Speicherlösungen im Eigenbau {#Eigenbau}
+### SSG-Speicherlösungen im Eigenbau {#Eigenbau}
 
 Wer für sein Balkonkraftwerk einen rentablen Stromspeicher haben will, kommt
 derzeit um einen Eigenbau nicht herum, allein schon wegen der Batteriepreise.
@@ -1012,7 +1012,7 @@ um eine effiziente Regelung hinzubekommen.
 In diesem Abschnitt einige Hinweise und Beispiele,
 wie es gelingen kann und wie es nicht wirklich effizient wird.
 
-##### Implementierung der Speicher-Regelung {#Regelungsimplementierung}
+#### Implementierung der Speicher-Regelung {#Regelungsimplementierung}
 
 Wie im Abschnitt über [Regelungsstrategien](#Regelungsstrategien) erklärt,
 ist die wesentliche Eingangsgröße der Regelung eines Speichers
@@ -1076,7 +1076,7 @@ Weitere Möglichkeiten sind der [iobroker](https://www.iobroker.net/?lang=de#de/
 und das Projekt [Solaranzeige.de](https://solaranzeige.de/) für Raspberry Pi.
 
 
-##### Einfache und günstige Lösung: OpenDTU-OnBattery {#OpenDTU-OnBattery}
+#### Einfache und günstige Lösung: OpenDTU-OnBattery {#OpenDTU-OnBattery}
 
 Inzwischen gibt es eine relativ einfache und kostengünstige Möglichkeit, mit
 wenig Arbeitsaufwand und ohne eigene Programmierung zu einer recht effizienten
@@ -1156,7 +1156,7 @@ zusätzlicher Eigenverbrauch pro Jahr erzielen, was ungefähr 60€ entspricht.
 Damit amortisiert sich diese Speicherlösung in etwa 7 Jahren.
 
 
-##### Weiteres Beispiel für DC-gekoppelten Speicher {#SSG-DC-gekoppelt}
+#### Weiteres Beispiel für DC-gekoppelten Speicher {#SSG-DC-gekoppelt}
 
 Hier ein Beispiel für eine gelungene, aber etwas aufwendigere effiziente Lösung
 mit DC-gekoppelter Anbindung eines 48&nbsp;V LiFePO4 Speichers
@@ -1218,7 +1218,7 @@ Details zu der Anlage können bei
 [Michael Steigemann](mailto:michael.steigemann) von
 [Solar2030.de](https://solar2030.de/) erfragt werden.
 
-##### Ladung des Stromspeichers {#Ladung}
+#### Ladung des Stromspeichers {#Ladung}
 
 Das Laden der Batterie erfolgt am besten möglichst direkt aus der PV-Anlage
 über einen [Solar-Laderegler](Komp.md#Laderegler). Dies nennt man [*DC-Kopplung*](
@@ -1259,8 +1259,8 @@ auch bzgl. eines späteren Ausbaus und der Betriebsspannung der Komponenten,
 weil die Batteriespannung von der Systemspannung der PV-Anlage unabhängig ist.
 Außerdem kann man den Speicher bei Bedarf (z.B. wenn er zu leer geworden ist
 oder zu Testzwecken) auch unabhängig von der PV-Anlage mit Netzstrom laden.\
-Eine AC-Kopplung ist im Allgemeinen aber nicht zu empfehlen, weil sie recht
-umständlich ist und einen schlechten Wirkungsgrad hat: etwa 80%.
+Eine AC-Kopplung ist im Allgemeinen aber nicht sehr zu empfehlen, weil sie recht
+umständlich ist und einen schlechten Wirkungsgrad hat: etwa 75 bis 80%.
 
 Für eine kleine Anlage kann man zur AC-Kopplung wie in
 [diesem Video](https://www.youtube.com/watch?v=fcFFUN3Pkbo&t=300s) beschrieben
@@ -1302,7 +1302,7 @@ Das optimiert die Speichernutzung in mehrfacher Hinsicht:
 Der Lastvorrang bringt für die Effizienz fast so viel wie eine optimale
 [lastabhängige Entnahme](#lastgeregelt) aus der Batterie.
 
-##### Konstanteinspeisung {#Konstanteinspeisung}
+#### Konstanteinspeisung {#Konstanteinspeisung}
 
 In diesem und dem [folgenden Abschnitt](#lastgeregelt)
 werden für die Entnahme von Energie aus einem Stromspeicher
@@ -1736,7 +1736,7 @@ wie die gerade erwähnten Bastellösungen von Tobias Volk (PV&E) und von
 Dimitri selbst mit zusätzlicher Überschussableitung eine miserable Rentabilität.
 
 
-##### Lastgeregelte Einspeisung {#lastgeregelt}
+#### Lastgeregelte Einspeisung {#lastgeregelt}
 
 Deutlich effizienter als eine [Konstanteinspeisung](#Konstanteinspeisung)
 ist es, das Ausspeisen aus einer Speicherbatterie ins Wechselstromnetz
