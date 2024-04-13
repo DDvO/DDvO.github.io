@@ -136,6 +136,9 @@ finde ich folgende Komponenten besonders interessant bzw. zu empfehlen:
 
 ### SSG (Balkonanlage) mit DC-gekoppeltem Speicher] {#SSG-DC-gekoppelt}
 
+![Bild: SSG DC-gekoppelt Gesamtansicht](SSG-DC-gekoppelt_Gesamtansicht.png){:.left width="386"}
+![Bild: SSG DC-gekoppelt Verkabelung]( SSG-DC-gekoppelt_Verkabelung.png){:.right width="386"}
+
 Hier ein Beispiel für eine gelungene, aber etwas aufwendige effiziente Lösung
 mit DC-gekoppelter Anbindung eines 48&nbsp;V LiFePO4 Speichers
 (bestehend aus einer oder zwei Batterien), wozu je ein Victron
