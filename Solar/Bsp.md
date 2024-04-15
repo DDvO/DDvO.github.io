@@ -35,26 +35,34 @@ Beispiel-Konfigurationen {#Beispiele}
 
 ### Mobile Inselanlage {#Mobilanlage}
 
-![Bild: Flexible Module auf dem Wohnmobildach.jpg](
-Flexible_Module_am_Wohnmobildach.jpg){:width="798" .right}
+Für unser Wohnmobil verwende ich:
+-   seit April 2024:\
+    2 × [120&nbsp;Wp starre Eco-Worthy Solarpanel](
+    https://www.manomano.de/p/eco-worthy-240-watt-12v-solarmodul-mit-aluminiumrahmen-hocheffizientes-monokristallines-solarpanel-solarenergieeingang-von-12v-fuer-boote-wohnmobile-vans-anhaengerhaushalt-75267927?product_id=128166485),
+    für 100€\
+    _Hilfreiche Videos zur Montage aufs Dach:
+    [hier](https://www.youtube.com/watch?v=5OrX56gWZd8) (von Sika)<!--,
+    [hier](https://www.youtube.com/watch?v=-oNCwqhQv1U)--> und z.B.
+    [hier](https://www.youtube.com/watch?v=HAwRP3jstVQ&t=89s)._
+     ![Bild: Starre 2 * 120Wp Eco-Worthy Module auf dem Wohnmobildach](
+     EcoWorthy_2x120Wp_Wohnmobil.jpg){:width="798" .right}
 
-Für unser Wohnmobil verwende ich seit Sommer 2019 folgende relativ günstige
-Komponenten<!-- zu meiner vollen Zufriedenheit-->:
-
--   2 × 100&nbsp;Wp flexible Solarpanels [Dokio
+    Davor hatte ich ab Sommer 2019:\
+    <!-- relativ günstige  zu meiner vollen Zufriedenheit-->
+    2 × 100&nbsp;Wp flexible Solarpanels [Dokio
     DFSP-100M](https://www.amazon.de/DOKIO-Batterie-wasserdicht-Wohnmobil-Oberfl%C3%A4che/dp/B07FYW3C6W),
     ca. 180€\
-    _Diese habe ich einfach mit extrem starken doppelseitigen Klebeband
-    auf das Blechdach unseres Wohnmobils geklebt.
-    Etwas lästig war die Kabelführung ins Innere.\
-    Ich kann solche billigen flexiblen Module nicht empfehlen.
+    _Diese hatte ich einfach mit extrem starken doppelseitigen Klebeband
+    auf das Blechdach unseres Wohnmobils geklebt, was problemlos gehalten hat.
+    Etwas lästig war die Kabelführung ins Innere._\
+    _Ich kann solche billigen flexiblen Module nicht empfehlen.
     Sie brachten selbst unter bester Einstrahlung nie die versprochene Leistung
-    und waren bereits nach 5 Jahren so verschlissen (auch durch Verschmutzung
-    und Reinigungsversuche) inkl. Rissbildung, dass sie kaum noch Ertrag brachten.\
-    Daher wurden sie im Frühjahr 2024 ersetzt durch:_
-
-    2 × [120&nbsp;Wp starre Eco-Worthy Solarpanel](https://www.manomano.de/p/eco-worthy-240-watt-12v-solarmodul-mit-aluminiumrahmen-hocheffizientes-monokristallines-solarpanel-solarenergieeingang-von-12v-fuer-boote-wohnmobile-vans-anhaengerhaushalt-75267927?product_id=128166485),
-    für 100€ (Stand Ende März 2024)
+    und waren bereits nach 5 Jahren so [verschlissen](
+    https://www.mydealz.de/comments/permalink/47075234) (auch durch
+    Verschmutzung und Reinigungsversuche) inkl. Rissbildung,
+    dass sie kaum noch Ertrag brachten._\
+    ![Bild: Flexible 2 * 100 Wp Dokio Module auf dem Wohnmobildach](
+    Flexible_Module_am_Wohnmobildach.jpg){:width="798" .right}
 
 -   15&nbsp;A Solar-Laderegler [Victron SmartSolar MPPT 75/15](
     https://www.victronenergy.de/solar-charge-controllers/smartsolar-mppt-75-10-75-15-100-15-100-20),
@@ -63,8 +71,8 @@ https://www.idealo.de/preisvergleich/OffersOfProduct/6019083_-smartsolar-mppt-75
     Dieser Regler unterstützt Batterien mit 12 oder 24&nbsp;V und Ladeströme
     bis 15&nbsp;A (wobei selbst bei einer 12&nbsp;V Batterie für 200 Wp
     bei waagerechter Dachmontage in der Praxis auch 10&nbsp;A genügt hätten).\
-    Die BlueSolar-Variante wäre günstiger, aber sehr praktisch finde ich bei den
-    SmartSolar-Modellen die Status-Abfrage über Bluetooth mit dem Smartphone.\
+    Die BlueSolar-Variante wäre etwas günstiger, aber sehr praktisch finde ich
+    bei den SmartSolar-Modellen die Abfrage mit dem Smartphone über Bluetooth.\
     Leider unterbinden die Victron-Regler nicht das Laden bei unter 0°C,
     was bei LiFePO4-Akkus zu Schäden führen kann, wenn man sie im Winter nicht
     abklemmt. Allerdings bietet Victron eine Lösung mit einem Zusatzgerät namens
@@ -74,9 +82,9 @@ https://www.idealo.de/preisvergleich/OffersOfProduct/6019083_-smartsolar-mppt-75
 
 -   12,8&nbsp;V 100&nbsp;Ah 4S1P LiFePO4-Batterie inkl. 100&nbsp;A BMS [Delong
     DL-12100](https://www.alibaba.com/product-detail/Delong-Factory-Rechargeable-12-8V-100Ah_62388029440.html),
-    inkl. DDP-Versand direkt aus China ca. 400€\
-    In Deutschland werden solche Batterien hingegen für ungefähr 1000€
-    verkauft. Siehe auch [meinen
+    inkl. DDP-Versand direkt aus China im März 2019 ca. 400€.\
+    In Deutschland wurden zu der Zeit solche Batterien hingegen noch
+    für ungefähr 1000€ verkauft. Siehe auch [meinen
     myDealz-Beitrag](https://www.mydealz.de/deals/12v-100ah-lifepo4-akku-mit-bms-ab-400-zb-fur-solaranlage-oder-wohnmobilbatterie-ersatz-1350559)
     dazu mit interessanter Diskussion.
 
@@ -191,7 +199,7 @@ Alternativen dazu und Details zur DC-Kopplung sind im
 [Abschnitt zur Implementierung der Speicher-Regelung](Speicher.md#Regelungsimplementierung)
 aufgeführt.
 
-In Minimalausstattung würde die Anlage mit ECO-WORTHY 48&nbsp;V 2,5&nbsp;kWh Speicher
+In Minimalausstattung würde die Anlage mit Eco-Worthy 48&nbsp;V 2,5&nbsp;kWh Speicher
 ohne PV-Module unter 1000€ kosten.
 Mit allen optionalen Komponenten inkl. Inselwechselrichter hat die Anlage
 mit 5&nbsp;kWh Speicherkapazität ohne PV-Module im Herbst 2023 knapp 2200€ gekostet.\
@@ -345,7 +353,7 @@ LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker SusEnergy
 LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW Premium
 LocalWords: Sense is end index output md ref of pv px Eff vs discussioncomment
-LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
+LocalWords: my var pl zip load capacity feed spill deg magazine OC SC EcoWorthy
 LocalWords: data transfer solar cut cells open short circuit voltage lim
 LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords OW Heat
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation state
