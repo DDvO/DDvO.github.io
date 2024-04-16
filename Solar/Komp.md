@@ -719,10 +719,11 @@ effektiv nutzbare Kapazität (nämlich etwa 90% der Nennkapazität).
 Damit haben sie insgesamt ein deutlich besseres Preis-/Leistungs-Verhältnis
 als Blei-Batterien.
 
-Im Vergleich zu anderen Lithium-Ionen-Akkutypen inklusive Lithium-Polymer (LiPo),
+Im [Vergleich zu anderen Lithium-Ionen-Akkutypen wie NMC](
+https://senec.com/de/magazin/lfp-vs-nmc) und Lithium-Polymer (LiPo),
 welche eine noch höhere Energiedichte haben, sind LiFePO4-Zellen recht robust
 und [weniger gefährlich](https://www.youtube.com/watch?v=aIy6S0TdSSE&t=514s).
-und vermutlich weniger umweltschädlich, weil sie weniger Lithium enthalten.
+und weniger umweltschädlich, weil sie weniger Schwermetalle enthalten.
 <!--
 Es hat bei einem großen LiFePO4-Speicher aber auch schon eine Explosion gegeben.
 https://www.pv-magazine.de/2023/10/27/ursache-fuer-die-explosion-des-30-kilowattstunden-batteriespeichers-wird-wohl-ungeklaert-bleiben/
