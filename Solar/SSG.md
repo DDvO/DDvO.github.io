@@ -189,9 +189,12 @@ das eine Nulleinspeisung auch ohne Batterie realisieren kann.
 Man kann durchaus annehmen, dass Beschränkungen auch dadurch motiviert sind,
 dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
 
+Eine Rolle spielt jedenfalls auch die Versicherungswirtschaft,
+die sich Schadensfälle so weit irgend möglich vom Hals halten will.
+
 Die sog. [*Bagatellgrenze* bei 600 bzw. 800&nbsp;Watt](
 https://www.computerbild.de/artikel/cb-Tipps-Energie-Balkonkraftwerk-800-Watt-erlaubt-35272303.html)
-dient in erster Linie der erleichterten Anmeldung kleiner Steckersolargeräte.
+dient in erster Linie der erleichterten Anmeldung von Steckersolargeräten.
 Die Beschränkung leistet aber auch einen aus Sicht des VDE wichtigen Beitrag zum
 Schutz der Stromleitungen im Haus in folgendem sehr selten auftretenden Fall:\
 [![Bild: Mögliche Überlastung einer Wohnungs-Stromleitung durch lokale
