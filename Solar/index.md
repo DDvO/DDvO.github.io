@@ -236,8 +236,8 @@ Lizenzkürzel:
     -   [PV-Module](Komp.md#PV-Module)<a name="PV-Module"></a>
         - [Elektrischer Anschluss](Komp.md#Anschluss)<a name="Anschluss"></a>
         - [Anbringung und Rechtliches](Komp.md#Anbringung)<a name="Anbringung"></a>
+    -   [MPPT: kontinuierliche Leistungsmaximierung für PV-Module](Komp.md#MPPT)<a name="MPPT"></a>
     -   [Mikrowechselrichter und andere Stromrichter](Komp.md#Stromrichter)<a name="Stromrichter"></a>
-        - [MPPT-Solarregler](Komp.md#MPPT)<a name="MPPT"></a>
         - [Solar-Laderegler](Komp.md#Laderegler)<a name="Laderegler"></a>
         - [Wechselrichter](Komp.md#Wechselrichter)<a name="Wechselrichter"></a>
         - [Netzwechselrichter](Komp.md#Netzwechselrichter)<a name="Netzwechselrichter"></a>

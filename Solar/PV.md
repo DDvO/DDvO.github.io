@@ -819,7 +819,6 @@ Außerdem ist die geteilte Montage meist aufwendiger.
 Unterschiedliche Ausrichtungen erfordern zur Optimierung nur dann eine getrennte
 [MPPT-Regelung](Komp.md#MPPT), wenn sich bei unterschiedlich starker Bestrahlung
 die Modulspannung verschiebt, bei der die maximale Modulleistung erreicht wird.
-Mehr dazu [hier](Komp.html#Anschluss).
 
 [![Bild: Selbstverschattung gleichartiger Modulreihen](
 PV_Vergleich_S_vs_OW_add_v1.png)](

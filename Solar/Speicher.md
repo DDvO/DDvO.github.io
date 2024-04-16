@@ -695,7 +695,8 @@ Alle diese Produkte haben u.A. Folgendes gemeinsam.
 * Der Speicher ist proprietär &mdash; man muss also die (recht teuren)
   Batterien des jeweiligen Herstellers verwenden.
 * Der Speicher ist [DC-gekoppelt]((#Ladung)).
-  Er wird also zusammen mit der Steuerung, welche eine MPPT-Laderegelung
+  Er wird also zusammen mit der Steuerung, welche eine [MPPT](#MPPT)-Regelung
+  und [Batterie-Laderegelung](#Laderegler)
   beinhaltet und teils direkt mit dem Speicher verbaut ist,
   zwischen PV-Module und Mikrowechselrichter gesteckt.
   Der wichtigste Vorteil davon ist größere Effizienz als mit AC-Kopplung.\
@@ -757,7 +758,7 @@ Sie scheint die selbe Steuerung wie beim SolarFlow zu verwenden.
 Das zweite relativ bekannte Produkt ist die [Anker Solix Solarbank](
 https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/).
 <!--https://www.chinahandys.net/anker-solix-solarbank-test/-->
-Das Gerät hat nur einen MPPT (was aber [meist genügt](Komp.html#Anschluss))
+Das Gerät hat nur einen MPPT (was aber [meist genügt](Komp.html#MPPT))
 und bislang im Wesentlichen eine Betriebsart:
 Einspeisung mit einer von der Uhrzeit abhängigen und ansonsten konstanten
 Zielleistung, welche hier *Familienlastleistungsrate* (FLLR) genannt wird.
@@ -868,8 +869,10 @@ Direkt aus China ist das Gerät angeblich für unter 300€ erhältlich.
 Das wäre aufgrund der Ausstattung auch realistischer, denn es leistet nicht
 mehr als eine Eigenbau-Lösung mit [OpenDTU-OnBattery](#OpenDTU-OnBattery) und
 zwei MPPT-Ladereglern, was man mit mäßigem Aufwand selbst mit soliden Victron
-BlueSolar-Geräten für ca. 140€ hinbekommen kann,
-mit einem MPPT (was zumeist ausreicht) für 100€.
+BlueSolar-Geräten für ca. 140€ hinbekommen kann.
+Allerdings wird die Bedeutung mehrerer MPPT überschätzt &mdash;
+so gut wie immer [genügt 1 MPPT-Laderegler](Komp.md#MPPT),
+so dass die Hardware-Kosten für die Selbstbau-Alternative unter 100€ liegen.
 
 
 #### Weitere Produkte {#sonstige}
@@ -1465,7 +1468,7 @@ einen günstigen [Gleichspannungswandler](Komp.md#Gleichspannungswandler)
 mit regelbarer Strombegrenzung (engl. _limiter_) vorschalten.
 Allerdings passiert es dann leicht, dass sich die Regelungen der beiden Geräte
 ins Gehege kommen. Daher stellt man die Eingangsspannung für den Wechselrichter
-besser etwas unterhalb des [MPPT](Komp.md#MPPT)-Bereichs ein,
+besser etwas unterhalb des [MPPT](Komp.md#MPPT)-Regelungsbereichs ein,
 aber (zumindest anfangs) oberhalb seiner Anlaufspannung.
 Außerdem kann es sein, dass der Wechselrichter versucht,
 stets seine maximale Ausgangsleistung zu liefern, was bei eher geringer

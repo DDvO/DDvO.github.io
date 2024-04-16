@@ -27,8 +27,8 @@ lang: de
     -   [PV-Module](#PV-Module)
         - [Elektrischer Anschluss](#Anschluss)
         - [Anbringung und Rechtliches](#Anbringung)
+    -   [MPPT: kontinuierliche Leistungsmaximierung für PV-Module](#MPPT)
     -   [Mikrowechselrichter und andere Stromrichter](#Stromrichter)
-        - [MPPT-Solarregler](#MPPT)
         - [Solar-Laderegler](#Laderegler)
         - [Wechselrichter](#Wechselrichter)
         - [Netzwechselrichter](#Netzwechselrichter)
@@ -175,22 +175,9 @@ Grenzen gesetzt, weshalb man für mehr Leistung meist mehrere Module kombiniert.
 
 Solarmodule kann man wie Batteriezellen [seriell und/oder parallel](
 https://photovoltaik-guru.de/module/reihenschaltung-und-parallelschaltung-elektronik-kurz-erklaert.html)
-zusammenschalten, um nicht für jedes Modul
-einen eigenen [MPPT-Regler](#MPPT) bzw. Regler-Eingang verwenden zu müssen.
-
-![Bild: PV-Modul Leistungskurvenschar](
-PV-Modul-Leistungskurvenschar.jpg){:.right width="550"}
-Auch bei Parallelschaltung unterschiedlich ausgerichteter oder teils
-unterschiedlich verschatteter Module genügt oft ein gemeinsamer Regler-Eingang,
-wie in [diesem Video](https://www.youtube.com/watch?v=jXDLKjCTW6c)
-schön vorgeführt, nämlich wenn sich (je nach Modultyp) die Spannung für das
-Leistungsmaximum bei unterschiedlicher Bestrahlung nicht oder nur wenig ändert
-und die Kurven in diesem Bereich nicht sehr steil sind.\
-Das lässt sich aus der Leistungskurvenschar der Modulkennlinien ersehen &mdash;
-im abgebildeten Beispiel liegen die Maxima etwa 2&nbsp;V auseinander, und die
-Leistungsabweichungen bei einer mittleren Spannung (z.B. 35&nbsp;V) sind gering.
-
-{:style="clear:both"}
+zusammenschalten, um nicht für jedes Modul einen eigenen [MPPT](#MPPT)-,
+[Wechselrichter](#Wechselrichter)- bzw. [Laderegler](#Laderegler)-Eingang
+verwenden zu müssen.
 
 Allerdings sollten die zusammengeschalteten Module den gleichen Strom
 bzw. ungefähr die gleiche Spannung liefern, weil es sonst Verluste gibt.
@@ -246,7 +233,7 @@ bzw. ungefähr die gleiche Spannung liefern, weil es sonst Verluste gibt.
     ein schöner Artikel für eine klassische Anwendung der Parallelschaltung:
     geteilte Ost-West-Ausrichtung von PV-Modulen auf einem Hausdach
     oder um den Ertrag über den Tag möglichst gleichmäßig zu verteilen,
-    ohne dafür unbedingt mehr als einen [MPPT](#MPPT)-Eingang zu benötigen.
+    meist ohne dafür mehr als einen [MPPT](#MPPT)-Eingang zu benötigen.
 
 Generell **muss man tunlichst darauf achten**, dass an jedem Eingang eines
 [Ladereglers oder Wechselrichters](#Stromrichter) die Spannung die erlaubte
@@ -273,7 +260,7 @@ nur bis zu einem bestimmten Maximalwert aufnimmt.\
 Es ist ähnlich wie z.B. bei einem an einer Wohnungssteckdose angeschlossenen
 Gerät, das durch seinen Innenwiderstand seine Stromaufnahme begrenzt, obwohl
 die Steckdose viel mehr (je nach Absicherung z.B. 16&nbsp;A) liefern könnte.\
-Ein [MPPT-Regler](#MPPT) beginnt mit seiner Optimierung mit der Leerlaufspannung
+Ein [MPPT](#MPPT)-Regler beginnt mit seiner Optimierung mit der Leerlaufspannung
 der angeschlossenen PV-Module oder sonstigen Stromquelle, wobei anfangs noch
 fast kein Strom fließt, und verringert dann seinen Innenwiderstand sukzessive
 so lange, bis das Maximum an PV-Leistung erreicht wurde
@@ -442,25 +429,25 @@ Steckersolargeräte müssen nicht in die Gebäudeversicherung eingeschlossen
 werden, aber der Versicherung muss mitgeteilt werden (durch die Hausverwaltung),
 dass die Installation von Steckersolargeräten geplant ist.
 
-### Mikrowechselrichter und andere Stromrichter {#Stromrichter}
-
-Als [*Stromrichter*](https://www.energie-lexikon.info/stromrichter.html)
-werden allgemein elektronische Geräte bezeichnet,
-mit denen eine Stromart in eine andere umgewandelt werden kann.
-
-#### MPPT-Solarregler {#MPPT}
+### MPPT: kontinuierliche Leistungsmaximierung für PV-Module {#MPPT}
 
 ![Bild: Strom-/Leistungs-Spannungskennlinien einer Solarzelle](
-I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="500"
+I-U-Kennlinie_MPP_Silizium-Solarzelle.png){:.right width="490"
 style="margin-left: 40px}
 Für die Umwandlung des recht volatilen „rohen“ Solarstroms auf die
 gewünschte Zielspannung benötigt man regelnde Gleichspannungswandler, die kurz
-[*Solarregler*](http://solarwelten.de/solaranlagen-und-zubehoer/solarregler/)
-genannt werden. Sie sollten aber nicht nur das Spannungsniveau anpassen.
-Solarzellen sind beim Verhältnis von Spannung und Strom sehr flexibel, wobei
-das Optimum ihrer Leistung, also dem Produkt aus Spannung und Strom, von der
-Einstrahlung abhängt, und die kann sich z.B. durch Wolkenzug schnell ändern.
-Daher sollte eine sich zügig anpassende Leistungsoptimierung stattfinden,
+*Solarregler* <!--http://solarwelten.de/solaranlagen-und-zubehoer/solarregler-->
+genannt werden. Sie sollten aber nicht nur das Spannungsniveau anpassen,
+sondern auch zur Nutzung der optimalen PV-Spannung führen.
+Solarzellen sind beim Verhältnis von Spannung und Strom sehr flexibel,
+wobei ihre Leistung, also das Produkt aus Spannung und Strom, von vielen
+Faktoren abhängt &mdash; neben der Spannung vor Allem von der Einstrahlung.
+Diese ändert sich im Laufe des Tages abhängig vom Sonnenstand und Wetter und
+kann z.B. durch Wolkenzug auch sehr schnell variieren.
+
+Wenn sich mit der Einstrahlung auch die Modul- bzw. String-Spannung ändert,
+bei der die maximale Leistung abgegeben wird, sollte eine sich zügig anpassende
+Leistungsoptimierung stattfinden,
 genannt [*MPPT*](https://de.wikipedia.org/wiki/Maximum_Power_Point_Tracking).
 Das ist die Abkürzung des englischen Begriffs _maximum power point tracking_,
 auf Deutsch *Maximal-Leistungspunkt-Suche*.
@@ -470,13 +457,36 @@ Die komplexe Regelung bringt also auch bei großer Spannungsdifferenz zwischen
 PV-Ausgang und Wechselrichter-Eingang bzw. Batterie-Anschluss und auch
 unter stark schwankenden Bedingungen eine (nahezu) optimale Energieausbeute.
 
+![Bild: PV-Modul Leistungskurvenschar](
+PV-Modul-Leistungskurvenschar.jpg){:.right width="550"}
+Auch bei Parallelschaltung unterschiedlich ausgerichteter oder teils
+unterschiedlich verschatteter gleicher Module genügt oft ein gemeinsamer
+MPPT-Eingang, wie in [diesem Video](https://www.youtube.com/watch?v=jXDLKjCTW6c)
+schön vorgeführt, nämlich wenn sich (je nach Modultyp) die Spannung für das
+Leistungsmaximum bei unterschiedlicher Bestrahlung nicht oder nur wenig ändert
+und die Kurven in diesem Bereich nicht sehr steil sind.\
+Das lässt sich aus der Leistungskurvenschar der Modulkennlinien ersehen &mdash;
+im abgebildeten Beispiel liegen die Maxima etwa 2&nbsp;V auseinander, und die
+Leistungsabweichungen bei einer mittleren Spannung (z.B. 35&nbsp;V) sind gering.
+Das ist bei den meisten Modultypen so,
+wie [diverse Erfahrungen und Messungen](https://github.com/helgeerbe/OpenDTU-OnBattery/wiki/Victron-MPPT-battery-charger#MPPT)
+bestätigen.
+
+### Mikrowechselrichter und andere Stromrichter {#Stromrichter}
+
+Als [*Stromrichter*](https://www.energie-lexikon.info/stromrichter.html)
+werden allgemein elektronische Geräte bezeichnet,
+mit denen eine Stromart in eine andere umgewandelt werden kann.
+
 #### Solar-Laderegler {#Laderegler}
 
 ![Bild: Solar-Laderegler](Solar-Laderegler.png){:.right width="400"
 style="margin-left: 30px; margin-right: 30px"}
 Wenn man über Solarmodule eine Batterie laden möchte, verwendet man einen
 *Solar-Laderegler*, also einen Solarregler mit Batterieladefunktion. Wie
-im Abschnitt zuvor erklärt, sollte er für eine optimale Ausbeute MPPT betreiben.
+[oben](#MPPT) erklärt, sollte er für eine gute Leistungsausbeute MPPT betreiben.
+Außerdem sollte er für eine möglichst schonende Ladung sorgen und verhindern,
+dass die Batterie überladen wird.
 
 Sehr einfache und billige Regler mit Batterieladefunktion
 verwenden stattdessen *Pulsweitenmodulation* (*PWM*).
@@ -487,13 +497,15 @@ Wenn die Batterie voll wird, also ihre Absorbtionsspannung erreicht,
 findet nur noch eine pulsierte Ladung statt, die Ladungsverluste ausgleicht.
 PWM-Regler arbeiten also nur dann effizient, wenn die optimale PV-Spannung
 gleich der Batterie-Ladespannung ist. Der Unterschied zur [MPPT](#MPPT)-Regelung
-wird [hier](https://www.amumot.de/solar-laderegler-12v-mppt/) sehr schön erklärt.
+wird [hier](https://www.amumot.de/solar-laderegler-12v-mppt/) schön erklärt.
 Der durchschnittliche Minderertrag durch PWM-Regelung wird mit 20% angegeben.
+Die Verluste sind umso höher, je weiter die optimale PV-Spannung V<sub>MPP</sub>
+über der Batteriespannung liegt.
 
-Mit billigen chinesischen Ladereglern, die angeblich MPPT machen
-(aber vermutlich eigentlich nur PWM) habe ich keine guten Erfahrungen gemacht.
-Die MPPT-Laderegler der europäischen Marken Victron und Votronic sind dagegen
-sehr gut.
+Mit billigen chinesischen Ladereglern, die angeblich MPPT machen (aber
+vermutlich eigentlich nur PWM), habe ich auch qualitativ keine guten
+Erfahrungen gemacht. Die MPPT-Laderegler der europäischen Marken Votronic
+und ganz besonders Victron sind dagegen empfehlenswert.
 
 #### Wechselrichter {#Wechselrichter}
 
@@ -510,7 +522,7 @@ Wechselstrom liefert (sog. *reine Sinuswelle*, engl. _pure sine wave_)
 und einen hohen
 [Wirkungsgrad](https://www.energie-experten.org/erneuerbare-energien/photovoltaik/wechselrichter/wirkungsgrad)
 (engl. _efficiency_) hat.
-Der kritischste Punkt ist, das seine maximale Eingangsspannung nicht
+Der kritischste Punkt ist, dass seine maximale Eingangsspannung nicht
 überschritten werden darf, weil er sonst zerstört wird.
 
 #### Netzwechselrichter {#Netzwechselrichter}
@@ -533,8 +545,8 @@ Ziehen des 230&nbsp;V Netzsteckers eines Mikrowechselrichters beim Berühren der
 blanken Kontakte einen Stromschlag bekommen kann.
 
 Bei Steckersolargeräten wird meist ein *Solar-Mikrowechselrichter* verwendet,
-welcher einen MPPT-Solarregler in einem Netzwechselrichter integriert.
-Im Zusammenhang von Solaranlagen wird meist vereinfacht nur von einem
+welcher einen oder mehrere [MPPT](#MPPT)-Regler mit einem Netzwechselrichter
+verbindet. Im Zusammenhang von Solaranlagen wird meist vereinfacht nur von einem
 „*Wechselrichter*“ (*WR*) gesprochen.
 Zur Dimensionierung von Solar-Wechselrichtern gibt es
 z.B. [hier und auf den Folgeseiten](
@@ -549,7 +561,7 @@ aber der ist nicht nur irreführend, sondern schlicht übertrieben.\
 <!-- https://www.photovoltaikforum.com/thread/182721-wirkungsgrad/ -->
 Mein HM-300 kommt (allerdings nur mit einfachen Geräten nachgemessen)
 ​im Durchschnitt der zehn Drosselungsstufen 10, 20, ... 100% auf einen
-realen Wert von 92,9%.  Bei unter 10% der Nennleistung sind es um die 80%.\
+realen Wert von 93,5%.  Bei unter 10% der Nennleistung sind es um die 80%.\
 Über die DTU (data transfer unit) bekommt man ziemlich konstant 95,5% geliefert.
 
 Im Gegensatz zu Solarkabeln ([siehe oben](#Anschluss)) können 230&nbsp;V-Kabel
@@ -813,7 +825,7 @@ aus folgenden Gründen:
     unhandlich werden.
 
 -   Ein Solar-Laderegler ist vor Allem durch seinen Ausgangsstrom
-    begrenzt. So verkraftet ein [Victron BlueSolar MPPT
+    begrenzt. So verkraftet z.B. ein [Victron BlueSolar MPPT
     100/30](Datenblatt_BlueSolar-MPPT-100-30-100-50.pdf) eine
     PV-Leerspannung von max. 100&nbsp;V (was die Reihenschaltung von
     mindestens 2 Solarmodulen erlaubt). Er liefert einen max. Ladestrom
