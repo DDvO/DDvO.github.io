@@ -221,7 +221,7 @@ Lizenzkürzel:
           - [Zendure SolarFlow und AIO 2400](Speicher.md#SolarFlow)<a name="SolarFlow"></a>
           - [Anker Solix](Speicher.md#Solix)<a name="Solix"></a>
           - [Maxxisun Maxxicharge](Speicher.md#Maxxicharge)<a name="Maxxicharge"></a>
-          - [Tentek Tribune bzw. Anfuote EMS](Speicher.md#Tentek)<a name="Tentek"></a>
+          - [Tentek Tribune EMS](Speicher.md#Tentek)<a name="Tentek"></a>
           - [Weitere Produkte](Speicher.md#sonstige)<a name="SSG-Speicher-sonstige"></a>
           - [Zusammenfassung und Effizienzbetrachtung](Speicher.md#Effizienz)<a name="SSG-Speicher-Effizienz"></a>
         - [SSG-Speicherlösungen im Eigenbau](Speicher.md#Eigenbau)<a name="SSG-Speicher-Eigenbau"></a>

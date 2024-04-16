@@ -28,7 +28,7 @@ lang: de
           - [Zendure SolarFlow und AIO 2400](#SolarFlow)
           - [Anker Solix](#Solix)
           - [Maxxisun Maxxicharge](#Maxxicharge)
-          - [Tentek Tribune bzw. Anfuote EMS](#Tentek)
+          - [Tentek Tribune EMS](#Tentek)
           - [Weitere Produkte](#sonstige)
           - [Zusammenfassung und Effizienzbetrachtung](#Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](#Eigenbau)
@@ -830,7 +830,7 @@ https://energiewende-tipps.de/balkonkraftwerke-mit-nulleinspeisung-durch-maxxich
 nicht ortsfeste PV-Anlagen offenbar nicht angemeldet werden müssen.
 
 
-#### Tentek Tribune bzw. Anfuote EMS {#Tentek}
+#### Tentek Tribune EMS {#Tentek}
 
 ![Bild: Tentek_Tribune_EMS_Controler](
 Tentek_Tribune_EMS_Controler.png){:.right width="300"}
