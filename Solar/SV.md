@@ -274,11 +274,11 @@ nicht wirklich professionell nennen, sondern etwas chaotisch und unvollständig,
 weil man dort relevante Informationen schwer und teils gar nicht findet,
 und teilweise ist sie einfach irreführend oder zumindest veraltet.\
 So habe ich nur über [einen Forums-Beitrag](
-https://www.shelly-support.eu/forum/thread/16822-3-em-keine-csv-datei-gesamtverbrauch-mehr-zum-download/?postID=174227#post174227)
+https://smarthome-forum.eu/forum/thread/16822-3-em-keine-csv-datei-gesamtverbrauch-mehr-zum-download/?postID=174227#post174227)
 herausgefunden, dass der 3EM seit April 2022 keine über die drei Phasen
 aufsummierten Daten mehr speichert bzw. sie nicht mehr als CSV-Datei ausgibt,
 obwohl das in der &mdash; offenbar veralteten &mdash; [Dokumentation](
-https://www.shelly-support.eu/attachment/5469-shell3em-data-export-pdf/)
+https://smarthome-forum.eu/attachment/5469-shell3em-data-export-pdf/)
 anders behauptet wird. Man kann aber über ein
 Online-Downgrade auf Version 1.11.8
 (dazu einfach in einem Browser
@@ -513,7 +513,7 @@ kann auch die gespeicherte und entladene Energie protokolliert werden
 sowie der Ladezustand jeweils zum Ende der vollen Stunde.
 
 <!--https://www.mydealz.de/comments/permalink/44495110-->
-Es gibt eine web-(REST/MQTT)-API-Dokumentation für den [3EM](
+Es gibt eine web(REST)/MQTT-API-Dokumentation für den [3EM](
 https://shelly-api-docs.shelly.cloud/gen1/#shelly-3em-emeter-index-em_data-csv),
 den [Pro 3EM](
 https://shelly-api-docs.shelly.cloud/gen2/ComponentsAndServices/EMData#csv-file-download)
@@ -524,25 +524,31 @@ zeitlichen Auflösung die z.B. über ``/status`` gelieferten phasenweisen
 Energiedaten ``total`` und ``total_returned`` intern akkumuliert werden, nämlich
 phasenweise getrennt für positive und negative Werte und wohl im Sekundentakt.\
 Eine sehr fundierte Frage zur genauen Bedeutung der gelieferten Werte wurde
-(bezogen auf den Pro 3EM) [im Shelly-Forum gestellt](
-https://www.shelly-support.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/https://www.shelly-support.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/?postID=222899#post222899).
+(bezogen auf den Pro 3EM) [im Shelly-Nutzerforum gestellt](
+https://smarthome-forum.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/https://smarthome-forum.eu/forum/thread/21453-shelly-pro-3em-api-total-act-total-act-ret-combined-instant-phases-power-instead/?postID=222899#post222899).
 verbunden mit dem Wunsch sehr vieler Nutzer, die Aufsummierung wie in einem
 Zweiwegezähler (wie sie in Deutschland und einigen anderen Ländern leider
 statt der Nettomessung üblich ist) zu unterstützen.
 
 Die Shelly-Nutzer werden bzgl. einer zeitlichen Zweiwege-Akkumulation des
 Leistungssaldos [von Allterco Robotics seit Jahren hingehalten](
-https://www.shelly-support.eu/forum/thread/15874-z%C3%A4hlweise-bzw-saldierende-z%C3%A4hlung/),
+https://smarthome-forum.eu/forum/thread/15874-z%C3%A4hlweise-bzw-saldierende-z%C3%A4hlung/),
 so dass man weiterhin auf
 Software-Basteleien angewiesen ist. Dazu gibt es verschiedenste Ansätze.
 * Ein Saldieren und anschließendes zeitliches Akkumulieren der Energiewere
 aus den oben erwähnten direkt exportierten CSV-Dateien liefert bei vorhandener
-Einspeisung selbst dann falsche Resultate, wenn es in Minutenauflösung geschieht.
-* Eine custom firmware für das Gerät oder ein Shelly Script wie [dieses](
-https://www.shelly-support.eu/forum/thread/19204-saldierung-pro-3em-ja-nein-vielleicht/?postID=223945#post223945),
-welches direkt auf dem Gerät z.B. alle 0,5 Sekunden
+Netzeinspeisung selbst dann falsche Resultate,
+wenn es in Minutenauflösung geschieht.
+* Ein Shelly Script wie
+[dieses](https://github.com/sicanins/shelly-pro3EM-energycounter),
+welches auch im [Smarthome-Forum auf Deutsch diskutiert](
+https://smarthome-forum.eu/forum/thread/19204-saldierung-pro-3em-ja-nein-vielleicht/?postID=223945#post223945)
+wurde und direkt auf dem Gerät alle 0,5 Sekunden
 die saldierte Leistung getrennt für Import und Export akkumuliert,
-wäre eine sehr genaue Lösung, ist aber für die wenigsten Nutzer machbar.
+ist bislang die beste und genaueste Lösung.
+Auf dem älteren Shelly 3EM werden solche Skripten aber leider nicht unterstützt,
+so dass man das dort nur mit einer custom firmware realisieren könnte.
+<!-- ist aber für die wenigsten Nutzer machbar. -->
 * Direkte Abfrage des Geräts im Sekundentakt über MQTT oder HTTP und
 Aufbereitung der Leistungs-Daten wie etwa mit dem o.g. [Perl-Skript](
 https://github.com/DDvO/SolBatSim/blob/master/3em_data_collect.pl).
