@@ -149,7 +149,7 @@ und auf allen MC4-Buchsen ein "-", was für PV-Module passt, aber
 für den Wechselrichter (also auf Seite des Verbrauchers) genau verkehrt ist.
 ![Bild: MC4-Anschluss Wechselrichter](MC4-Anschluss_Wechselrichter.png){:width="798"}
 <!-- https://www.photovoltaikforum.com/thread/159926-hoymiles-300-polarit%C3%A4t-falsch-beschriftet/?postID=3585375#post3585375 -->
-Leider ist z.B. auf Hoymiles-Mikrowechselrichtern kein Hinweis zur richtigen
+Leider ist z.B. auf vielen Hoymiles-Wechselrichtern kein Hinweis zur richtigen
 Polung angebracht, aber zum Glück geht er nicht kaputt, wenn man ihn verpolt.
 
 Generell sollten die Solarkabel, also die Verbindungen der Module
@@ -288,19 +288,8 @@ HM-600:
 > 1. Bedeutet das, dass egal wieviel Strom anliegt nur 11,5&nbsp;Ampere verarbeitet / abgenommen werden können.
 > 2. Lassen Sie bitte den Strom nicht über 15A ansteigen, da dies den Wechselrichter beschädigen kann.
 
-Dies alles gilt im Prinzip auch dann, wenn ein Solar-Mikrowechselrichter
-statt an PV-Module an eine Batterie als Stromquelle angeschlossen wird,
-welche meist wesentlich mehr Strom (z.B. 100 A) liefern kann.
-Der Einschaltstrom des Geräts hält sich entgegen mancher Befürchtungen
-in Grenzen &mdash; ich konnte je nach Modell max. 1,5&nbsp;A messen.\
-Die üblichen Hoymiles-Geräte, z.B. HM-800, funktionieren an einer Batterie
-erfahrungsgemäß ohne Probleme. Auch ein Deye Sun 600, wobei der nicht selbst
-regelbar ist und dann konstant 270&nbsp;W je Eingang liefert.
-Ein Eingang meines billigen Mars Rock SG-700W hat den Test allerdings nicht
-bestanden und ist nun tot, nachdem sich das Gerät beim Hochfahren des MPPT
-überlastet hat.\
-Wer da auf der sicheren Seite sein will, kann je Eingang eine auf die gegebene
-maximale Belastbarkeit abgestimmte Sicherung (z.B. 15&nbsp;A) dazwischenschalten.
+Besondere Hinweise zum Betrieb eines Solar-Mikrowechselrichters an einer
+Batterie gibt es in einem [anderen Abschnitt](Speicher.md#Batterie-WR).
 
 Übrigens ist es bei einem HM-1500 und der Verwendung von drei großen Modulen
 mit gleicher Ausrichtung merkwürdigerweise besonders günstig, das dritte Modul

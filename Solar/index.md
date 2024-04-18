@@ -226,6 +226,7 @@ Lizenzkürzel:
           - [Zusammenfassung und Effizienzbetrachtung](Speicher.md#Effizienz)<a name="SSG-Speicher-Effizienz"></a>
         - [SSG-Speicherlösungen im Eigenbau](Speicher.md#Eigenbau)<a name="SSG-Speicher-Eigenbau"></a>
           - [Implementierung der Speicher-Regelung](Speicher.md#Regelungsimplementierung)<a name="Regelungsimplementierung"></a>
+          - [Betrieb eines Mikrowechselrichters an einer Batterie](Speicher.md#Batterie-WR)<a name="Batterie-WR"></a>
           - [Einfache und günstige Lösung: OpenDTU-OnBattery](Speicher.md#OpenDTU-OnBattery)<a name="OpenDTU-OnBattery"></a>
           - [Ladung des Stromspeichers](Speicher.md#Ladung)<a name="Ladung"></a>
           - [Konstanteinspeisung](Speicher.md#Konstanteinspeisung)<a name="Konstanteinspeisung"></a>

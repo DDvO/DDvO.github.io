@@ -33,6 +33,7 @@ lang: de
           - [Zusammenfassung und Effizienzbetrachtung](#Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](#Eigenbau)
           - [Implementierung der Speicher-Regelung](#Regelungsimplementierung)
+          - [Betrieb eines Mikrowechselrichters an einer Batterie](#Batterie-WR)
           - [Einfache und günstige Lösung: OpenDTU-OnBattery](#OpenDTU-OnBattery)
           - [Weiteres Beispiel für DC-gekoppelten Speicher](Bsp.md#SSG-DC-gekoppelt)
 
@@ -1014,7 +1015,7 @@ derzeit um einen Eigenbau nicht herum, allein schon wegen der Batteriepreise.
 Außerdem muss man sich technisch gut auskennen und einige Arbeit investieren,
 um eine effiziente Regelung hinzubekommen.
 In diesem Abschnitt einige Hinweise und Beispiele,
-wie es gelingen kann und wie es nicht wirklich effizient wird.
+wie es gelingen kann und wie es (nicht) wirklich effizient wird.
 
 #### Implementierung der Speicher-Regelung {#Regelungsimplementierung}
 
@@ -1078,6 +1079,37 @@ Hausautomation und Energie-Messung“ [(FHEM)](https://fhem.de/fhem_DE.html).
 
 Weitere Möglichkeiten sind der [iobroker](https://www.iobroker.net/?lang=de#de/)
 und das Projekt [Solaranzeige.de](https://solaranzeige.de/) für Raspberry Pi.
+
+
+#### Betrieb eines Mikrowechselrichters an einer Batterie {#Batterie-WR}
+
+Wie im Abschnitt zum [Anschluss von PV-Modulen](Komp.md#Anschluss) näher
+ausgefährt, muss unbedingt die maximale Wechselrichter-Eingangsspannung
+eingehalten werden, während der erlaubte Eingangsstrom weniger kritisch ist.
+Die Verwendung eines Solar-Mikrowechselrichters zur Ausspeisung der in einer
+Batterie gespeicherten Energie ist bei den meisten Modellen nicht vorgesehen.
+Das kann zu besonderen Effekten führen, nachdem eine Batterie
+deutlich höhere Ströme (meist über 100&nbsp;A) liefern kann als PV-Module.
+
+Der Einschaltstrom des Geräts hält sich entgegen mancher Befürchtungen
+in Grenzen &mdash; ich konnte je nach Modell max. 1,5&nbsp;A messen.\
+Die üblichen Hoymiles-Geräte, z.B. HM-800, funktionieren an einer Batterie
+erfahrungsgemäß ohne Probleme. Auch ein Deye Sun 600, wobei der nicht selbst
+regelbar ist und dann konstant 270&nbsp;W je Eingang liefert.
+Ein Eingang meines billigen Mars Rock SG-700W hat den Test allerdings nicht
+bestanden und ist nun tot, nachdem sich das Gerät beim Hochfahren des MPPT
+überlastet hat.\
+Wer da auf der sicheren Seite sein will, kann je Eingang eine auf die gegebene
+maximale Belastbarkeit abgestimmte Sicherung (z.B. 15&nbsp;A) dazwischenschalten.
+
+Zudem kommt es beim Betrieb an einer 24&nbsp;V Batterie bei höheren Limit-Werten
+(also im oberen Leistungsbereich) teils zu [groben Abweichungen vom Sollwert](
+https://www.photovoltaikforum.com/thread/221194-hm-400-an-batterie-limitierung-%C3%BCber-opendtu-eigenartig/?postID=3660691#post3660691).
+Um Feedback über die tatsächliche aktuelle Ausgangsleistung des Hoymiles zu
+erhalten, sollte man da auch nicht den über die DTU gelieferten Daten trauen,
+weil sie besonders bei höheren Werten stark von der Realität abweichen.
+Stattdessen kann man sehr gut z.B. einen Shelly Plus 1PM verwenden,
+welcher verlässliche Daten im Sekundentakt bietet.
 
 
 #### Einfache und günstige Lösung: OpenDTU-OnBattery {#OpenDTU-OnBattery}
@@ -1768,21 +1800,16 @@ der PV-Ertrags- und Geräte- Daten als auch zum [Steuern](
 https://community.symcon.de/t/modul-beta-hoymiles-modulwechselrichter-mit-opendtu/130965)
 des Wechselrichters verwenden.
 
-Leider ist die Reaktionszeit eines Hoymiles-WR auf Änderungen des
+Leider ist die Reaktionszeit eines Hoymiles-Wechselrichters auf Änderungen des
 (relativen oder absoluten) Limits recht lang und auch noch sehr ungleichmäßig:
 er braucht meist etwa 5 bis 10, teils aber auch über 20 Sekunden,
 um den eingestellten Wert (hoffentlich) zu erreichen.
 Und wenn man zu schnell (z.B. nach 3 Sekunden) wieder neue Limit-Werte setzt,
 verhält er sich teils chaotisch.
 So ist durch seine Trägheit keine sehr flinke und exakte Regelung möglich.\
-Zudem kommt es beim Betrieb an einer 24&nbsp;V Batterie bei höheren Limit-Werten
-(also im oberen Leistungsbereich) teils zu [groben Abweichungen vom Sollwert](
-https://www.photovoltaikforum.com/thread/221194-hm-400-an-batterie-limitierung-%C3%BCber-opendtu-eigenartig/?postID=3660691#post3660691).
-Um Feedback über die tatsächliche aktuelle Ausgangsleistung des Hoymiles zu
-erhalten, sollte man da auch nicht den über die DTU gelieferten Daten trauen,
-weil sie besonders bei höheren Werten stark von der Realität abweichen.
-Stattdessen kann man sehr gut z.B. einen Shelly Plus 1PM verwenden,
-welcher verlässliche Daten im Sekundentakt bietet.
+Zudem kommt es an einer 24&nbsp;V Batterie zu Problemen mit der Limitierung,
+die am Ende des [Abschnitts zum Betrieb an einer Batterie](#Batterie-WR)
+beschrieben sind.
 
 {:style="clear:both"}
 
