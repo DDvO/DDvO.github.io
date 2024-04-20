@@ -182,9 +182,11 @@ nebenbei dafür sorgt, dass nicht mehr als 600 bzw. 800&nbsp;VA eingespeist werd
 Der Stromwächter ist inzwischen mit vielen steuerbaren Wechselrichtern
 kompatibel und setzt eine per RS485 mit Modbus oder WLAN angebundene Messung des
 aktuellen Netz-Strombezugs z.B. mit einem Shelly 3EM voraus.\
-Wesentlich günstiger und relativ wenig aufwenig ist
+Wesentlich günstiger wäre
 ein Eigenbau mit [OpenDTU-OnBattery](Speicher.md#OpenDTU-OnBattery),
-das eine Nulleinspeisung auch ohne Batterie realisieren kann.
+das eine Nulleinspeisung auch ohne Batterie realisieren kann.\
+Allerdings ist eine Nulleinspeisung für reinen PV-Strom (also ohne Batterie)
+[energetisch sehr ungeschickt](https://youtu.be/wxP5uMdtMmk?t=797).
 
 Man kann durchaus annehmen, dass Beschränkungen auch dadurch motiviert sind,
 dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
