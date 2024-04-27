@@ -34,7 +34,7 @@ lang: de
         - [SSG-Speicherlösungen im Eigenbau](#Eigenbau)
           - [Implementierung der Speicher-Regelung](#Regelungsimplementierung)
           - [Betrieb eines Mikrowechselrichters an einer Batterie](#Batterie-WR)
-          - [Einfache und günstige Lösung: OpenDTU-OnBattery](#OpenDTU-OnBattery)
+          - [Relativ einfache und günstige Lösung: OpenDTU-OnBattery](#OpenDTU-OnBattery)
           - [Weiteres Beispiel für DC-gekoppelten Speicher](Bsp.md#SSG-DC-gekoppelt)
 
           - [Ladung des Stromspeichers](#Ladung)
@@ -1112,7 +1112,7 @@ Stattdessen kann man sehr gut z.B. einen Shelly Plus 1PM verwenden,
 welcher verlässliche Daten im Sekundentakt bietet.
 
 
-#### Einfache und günstige Lösung: OpenDTU-OnBattery {#OpenDTU-OnBattery}
+#### Relativ einfache und günstige Lösung: OpenDTU-OnBattery {#OpenDTU-OnBattery}
 
 Inzwischen gibt es eine relativ einfache und kostengünstige Möglichkeit, mit
 wenig Arbeitsaufwand und ohne eigene Programmierung zu einer recht effizienten
@@ -1131,7 +1131,7 @@ statt irgendwo anders z.B. Home Assistant oder iobroker laufen lassen zu müssen
 ([Shelly (Pro) 3EM](SV.md#Shelly3EM), Eastron SDM oder Stromzähler-Lesekopf mit
 [Tasmota](https://www.tasmota.info/)-Software) benötigt, um den aktuellen
 Leistungssaldo des Haushalts in Sekundenauflösung zu erhalten.
-* Die Ladung des Speichers erfolgt effizient mit DC-Kopplung,
+* Die Ladung des Speichers erfolgt (meist) effizient mit DC-Kopplung,
 und zwar über einen [Solar-Laderegler](Komp.md#Laderegler) von Victron,
 dessen [VE.Direct interface](
 https://www.victronenergy.com/live/vedirect_protocol:faq) zur Regelung benötigt
@@ -1139,6 +1139,9 @@ wird, weil sich damit die PV-Leistung abfragen lässt.
 Je nach der maximalen Gesamtspannung der hierbei meist in Reihe geschalteten
 PV-Module genügt teils schon ein BlueSolar 75/15 und ansonsten normalerweise
 ein 100/15 (der 100&nbsp;V Eingangsspannung verträgt).
+* Der auf dem Bild dargestellte [Victron SmartShunt](
+https://www.victronenergy.de/battery-monitors/smart-battery-shunt) dient der
+genauen Messung des Batterie-Ladezustandes usw., ist aber nicht nötigt.
 Die Batteriespannung muss für den (direkten) Anschluss des Wechselrichters
 mindestens 24&nbsp;V betragen, was von allen Victron-Varianten unterstützt wird.
 Für eine Batteriespannung von 48&nbsp;V eignet sich etwa der 100/20.
@@ -1947,5 +1950,5 @@ LocalWords: Delivered Latest Downgraded shelly emeter file status returned MYPV
 LocalWords: Zweirichtungszaehler issuecomment collect Notifications height ELWA
 LocalWords: Plugs comments January Settings ons configuration states excl comp
 LocalWords: sensor export float uksa tamorix custom firmware en Central zell TR
-LocalWords: 
+LocalWords: SmartShunt
 -->
