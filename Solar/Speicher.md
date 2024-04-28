@@ -48,7 +48,7 @@ lang: de
 
 ![Bild: Balkonkraftwerk mit Pufferbatterie und Inselwechselrichter](
 Pufferbatterie_und_Inselwechselrichter.png){:.right width="400"
-style="margin-left: 40px}
+style="margin-left: 40px"}
 Statt den Solarstrom direkt einzuspeisen, kann man ihn auch in einer aufladbaren
 Batterie zwischenspeichern und von dort zeitlich versetzt über einen
 [netzgekoppelten Wechselrichter](Komp.md#Netzwechselrichter) ins Hausnetz einspeisen.
@@ -1091,22 +1091,94 @@ Batterie gespeicherten Energie ist bei den meisten Modellen nicht vorgesehen.
 Das kann zu besonderen Effekten führen, nachdem eine Batterie
 deutlich höhere Ströme (meist über 100&nbsp;A) liefern kann als PV-Module.
 
-Der Einschaltstrom des Geräts hält sich entgegen mancher Befürchtungen
-in Grenzen &mdash; ich konnte je nach Modell max. 1,5&nbsp;A messen.\
-Die üblichen Hoymiles-Geräte, z.B. HM-800, funktionieren an einer Batterie
-erfahrungsgemäß ohne Probleme. Auch ein Deye Sun 600, wobei der nicht selbst
-regelbar ist und dann konstant 270&nbsp;W je Eingang liefert.
+[![Bild:HM-800 Platine](HM-800_innen.jpg){:.right width="798"}](
+https://github.com/helgeerbe/OpenDTU-OnBattery/discussions/528#discussioncomment-9175492)
+Beim Anschließen eines Wechselrichters werden eingangsseitig im Gerät relativ
+große Kondensatoren aufgeladen (bei Hoymiles mit 4 × 2,7&nbsp;mF je Eingang).
+Bei direkter Verbindung an eine Batterie erreicht aufgrund ihres sehr geringen
+Innenwiderstands je nach Batterie, BMS, Verkabelung und Wechselrichter-Modell
+die Spitze des Einschaltstroms (engl. _inrush current_) innerhalb der ersten
+Millisekunde oft [mehr als 250&nbsp;A](https://www.photovoltaikforum.com/thread/206537-hoymiles-hm-350-von-51-2v-akku/?postID=3718575#post3718575)
+&mdash; und zwar auch deutlich über das hinaus, was BMS und ggf. eine
+zusätzliche Sicherung an (Dauerstrom-)Begrenzung geben.
+Das macht sich durch einen Einschaltfunken bemerkbar.
+Viele befürchten zumindest längerfristig ein gewisses Beschädigungsrisiko.
+Um das auszuschließen, kann man beim Anschließen des Wechselrichters den Eingang
+zum [*Sanftanlauf*](https://de.wikipedia.org/wiki/Sanftanlauf#Mit_Widerstand)
+(engl. _soft start_) „vorladen“, wozu es relativ einfache Möglichkeiten gibt:
+[![Bild: Leitungsschutzschalter B 16A mit 2 * 120 Ohm Widerstand parallel](
+LSS_16A_mit_250_Ohm_parallel.jpg){:.right width="370"}](
+https://www.photovoltaikforum.com/thread/206537-hoymiles-hm-350-von-51-2v-akku/?postID=3726044#post3726044)
+* Wenn vorhanden, eine entsprechende Soft-Start-Funktion der Batterie nutzen.
+* Die Verbindung zunächst nur über einen
+[Widerstand mit ca. 500&nbsp;Ohm und 5&nbsp;W Belastbarkeit](
+https://www.photovoltaikforum.com/thread/185071-notwendigkeit-eines-vorschaltwiderstands-pre-charge-resistor/?postID=3718427#post3718427)
+herstellen, der nach ein paar Sekunden ersetzt oder zumindest überbrückt wird.
+* Bei DC-Kopplung den Wechselrichter-Eingang tagsüber erst mal über den
+Solarlader mit den PV-Modulen verbinden und dann erst die Batterie zuschalten.
+
+Allerdings sind für Kondensatoren
+[transiente Ströme &mdash; auch sehr große &mdash; nicht schädlich](
+https://github.com/helgeerbe/OpenDTU-OnBattery/discussions/528#discussioncomment-9191932).
+Die Zuleitungen könnten bei extrem hohen Strömen Schaden nehmen,
+aber die Eingangs-Leiterbahnen von Solarwechselrichtern wie denen von Hoymiles
+[sind sehr massiv](
+https://www.photovoltaikforum.com/thread/185071-notwendigkeit-eines-vorschaltwiderstands-pre-charge-resistor/?postID=3718427#post3726914).
+Am ehesten leiden die Kontakte, die beim Anschließen verbunden werden, aber das
+geschieht auch nicht sehr oft, und sie liegen ja außerhalb des Wechselrichters.
+Also kann man sich bei den üblichen Solarwechselrichtern
+einen Schutz vor hohem Anschluss-/Einschaltstrom einfach sparen.
+
+[![Bild: HM-300 Einschaltstrom an 16 A Leitungsschutzschalter eingeschaltet](
+HM-300_Einschaltstrom_am_LSS.jpg){:.right width="565"}](
+https://www.photovoltaikforum.com/thread/206537-hoymiles-hm-350-von-51-2v-akku/?postID=3727987#post3727987)
+Zu empfehlen ist aber, einen *Leitungsschutzschalter* (*LSS*) zwischen
+Batterie und Wechselrichter einzusetzen. Wie [hier](
+https://www.photovoltaikforum.com/thread/206537-hoymiles-hm-350-von-51-2v-akku/?postID=3727987#post3727987)
+näher ausgeführt, mildert er den Einschaltimpuls etwas ab und erlaubt
+eine bequemere Schaltung als z.B. das Stecken von MC4&minus;Verbindern.
+Sollte er wegen Einschalt-Überstrom auslösen, genügt es meistens,
+ihn gleich nochmals einzuschalten, weil sich die Eingangs-Kondensatoren
+im Wechselrichter zuvor schon größtenteils aufgeladen haben.
+
+Ein anderes Risiko ist, dass die MPPT-Regelung eventuell nicht ausreichend
+bzw. nicht schnell genug auf ein überhöhtes Stromangebot reagiert, womit ihr
+Innenwiderstand zu lange zu niedrig bleibt, was z.B. Leistungstransistoren
+zerstören kann.
+Um das auszuschließen, kann eine generelle Strombegrenzung z.B. durch einen
+DC-DC-Wandler vorgeschaltet werden, was allerdings aufwendig ist
+und zu ständigen Leistungsverlusten führt.
+
+Die üblichen Hoymiles-Geräte, z.B. HM-300, HM-800 und HM-1500,
+funktionieren zumindest an einer 24 V Batterie nach der Erfahrung vieler Nutzer
+auch ohne besondere Maßnahmen <!-- zumindest vorerst scheinbar--> problemlos.
+Auch z.B. ein Deye Sun 600, wobei der nicht dynamisch regebar ist
+und dann konstant etwa 270&nbsp;W je Eingang liefert.
 Ein Eingang meines billigen Mars Rock SG-700W hat den Test allerdings nicht
 bestanden und ist nun tot, nachdem sich das Gerät beim Hochfahren des MPPT
-überlastet hat.\
-Wer da auf der sicheren Seite sein will, kann je Eingang eine auf die gegebene
-maximale Belastbarkeit abgestimmte Sicherung (z.B. 15&nbsp;A) dazwischenschalten.
+nach ein paar Sekunden überlastet hat.
 
-Zudem kommt es beim Betrieb an einer 24&nbsp;V Batterie bei höheren Limit-Werten
-(also im oberen Leistungsbereich) teils zu [groben Abweichungen vom Sollwert](
+Auf jeden Fall ist v.A. zum Brandschutz bei möglichen Kurzschlüssen
+empfehlenswert, möglichst nahe am Ausgang der Batterie eine passend
+dimensionierte Sicherung bzw. Schutzschalter (mit z.B. 63&nbsp;A) einzusetzen.
+
+Bei Hoymiles-Wechselrichtern gibt es an 24&nbsp;V Batterien allerdings ein
+weiteres Problem: Bei höheren Limit-Werten (also im oberen Leistungsbereich)
+kommt es zu [groben Abweichungen vom Sollwert](
 https://www.photovoltaikforum.com/thread/221194-hm-400-an-batterie-limitierung-%C3%BCber-opendtu-eigenartig/?postID=3660691#post3660691).
+Die Erklärung dafür ist, dass sie an jedem Eingang eine interne Strommessung
+haben, bei der ab 10&nbsp;A Eingangsstrom allmählich eine Sättigung eintritt.
+<!-- https://www.photovoltaikforum.com/thread/221194-hm-400-an-batterie-limitierung-%C3%BCber-opendtu-eigenartig/?postID=3696396#post3696396 -->
+Das entspricht (bedingt durch den Wirkungsgrad) bei 25,5&nbsp;V Eingangsspannung
+etwa 240&nbsp;W Ausgangsleistung je Eingang.
+Bei einem HM-300, der nur einen Eingang hat, entspricht das 70% Limitierung.
+Über diesem Wert steigt bis etwa 77% Limitierung die reale Ausgangsleistung
+überproportional an, während die über die DTU (data transfer unit) gemeldete
+Ausgangsleistung langsamer steigt, und zwar auf knapp 240&nbsp;W.
+Jenseits der 77% stagniert die gemeldete Eingangs- und Ausgangsleistung, und
+die tatsächliche Ausgangsleistung verbleibt bei knapp 320 W.\
 Um Feedback über die tatsächliche aktuelle Ausgangsleistung des Hoymiles zu
-erhalten, sollte man da auch nicht den über die DTU gelieferten Daten trauen,
+erhalten, sollte man da also nicht den über die DTU gelieferten Daten trauen,
 weil sie besonders bei höheren Werten stark von der Realität abweichen.
 Stattdessen kann man sehr gut z.B. einen Shelly Plus 1PM verwenden,
 welcher verlässliche Daten im Sekundentakt bietet.
@@ -1591,7 +1663,7 @@ große Verluste, so dass die Steigerung des Eigenverbrauchs sehr gering ausfäll
 
 [![Bild: Balkonkraftwerk mit Speicher - PV&E](
 Balkonkraftwerk_mit_Speicher.png){:.right width="380"
-style="margin-left: 40px}](
+style="margin-left: 40px"}](
 https://www.youtube.com/watch?v=N6NqMXQHP2I)
 Auf jeden Fall muss für die Situation, dass die Batterieladung zur Neige geht
 (bei LiFePO4 spätestens bei 90% Entladung) eine automatische Abschaltung
@@ -1795,7 +1867,7 @@ und hilfreiche Videos auf YouTube wie [dieses](https://youtu.be/YJM913e0tiQ).
 Wer nicht selbst die Elektronik zusammenlöten kann oder will, findet z.B. auf
 [eBay-Kleinanzeigen](https://www.ebay-kleinanzeigen.de/s-hoymiles-dtu-ahoy/k0)
 [![Bild: Hardware für OpenDTU](
-OpenDTU_wiring_ESP32.png){:.left width="230"; margin-right: 20px"}](
+OpenDTU_wiring_ESP32.png){:.left width="230"; style="margin-right: 20px"}](
 https://github.com/tbnobody/OpenDTU)
 auch betriebsfertige Geräte ab 30€, Bausätze ab 20€. Man kann sie sowohl zum
 [Auslesen](https://www.heise.de/select/ct/2022/24/2224315343257577596)
@@ -1940,7 +2012,7 @@ LocalWords: metadata add Austria description bagatellgrenze Loadprofiles
 LocalWords: Yong Hui Green SolarPower backup net metering MPP Tracker SusEnergy
 LocalWords: created changed nbsp pvroi ac dc break even fig SoC DoD MW Premium
 LocalWords: Sense is end index output md ref of pv px Eff vs discussioncomment
-LocalWords: my var pl zip load capacity feed spill deg magazine OC SC
+LocalWords: my var pl zip load capacity feed spill deg magazine OC SC inrush
 LocalWords: data transfer solar cut cells open short circuit voltage lim WLite
 LocalWords: Ruecklaufsperre mdash Ueberlastung overpaneling LocalWords OW Heat
 LocalWords: Bestrahlungsstaerke curves under different levels irradiation state
