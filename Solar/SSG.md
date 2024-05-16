@@ -21,7 +21,7 @@ lang: de
 -   [Eigenverbrauch und seine Berechnung](EV.md)
 -   [Nutzungsvarianten](SSG.md#Nutzung)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](#SSG)
-        - [Hintergrund der Beschränkung auf 600 bzw. 800&nbsp;W](#Bagatellgrenze)
+        - [Hintergrund der Beschränkung auf 800&nbsp;W](#Bagatellgrenze)
         - [Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W](#Kappungsverlust)
     -   [Hausnetzeinspeisung mit Batteriepuffer](Speicher.md)
     -   [Inselanlage (mit Batteriespeicherung) und Kombination](Insel.md)
@@ -109,20 +109,23 @@ Eine weitere Möglichkeit ist, den Wechselrichter direkt fest mit dem Hausnetz
 zu verdrahten, was den Betrieb sogar noch sicherer macht.
 
 Die oft [*Balkonkraftwerk*](https://www.steckdosensolar.de/) genannten Anlagen
-haben meist eine recht geringe PV-Nennleistung von etwa 600 bis 800&nbsp;Wp.
+haben meist eine recht geringe PV-Nennleistung von etwa 800&nbsp;Wp.
 Das hat neben der geringen Größe und sehr überschaubaren Kosten auch damit zu
-tun, dass sie selbst installiert werden dürfen und genehmigungsfrei sind,
-wenn sie [maximal 600&nbsp;W in die Steckdose einspeisen](
-https://solarblitz.blogspot.com/2019/08/zulassigkeit-von-balkonkraftwerken-plug.html).
+tun, dass sie selbst installiert werden dürfen und genehmigungsfrei sind, wenn sie
+maximal 800&nbsp;W in die Steckdose einspeisen, bzw. [in der Schweiz 600&nbsp;W](
+https://technikblog.ch/2024/03/balkonkraftwerk-in-der-schweiz-das-musst-du-wissen/).
+Die 600-W-Grenze hat bis Mitte Mai 2024 auch in Deutschland gegolten.
+
+<!--
 Dies gilt bislang für Deutschland und die Schweiz; in Österreich gilt nach einer
 allgemeineren EU-Regel für die vereinfachte Nutzung eine Obergrenze von 800&nbsp;W.
-Seit Anfang 2023 [empfiehlt selbst der VDE](
+Anfang 2023 [empfahl selbst der VDE](
 https://www.vde.com/de/presse/pressemitteilungen/2023-01-11-mini-pv),
 sich in Abweichung zur bislang geltenden technischen Norm VDE-AR-N 4105
 künftig auch in Deutschland an der „Bagatellgrenze bis 800&nbsp;W“ zu orientieren.\
 Anfang März 2023 startete eine Petition für die
 [schnelle Umsetzung des VDE-Positionspapiers](https://balkon.solar/petition/),
-<!--https://epetitionen.bundestag.de/content/petitionen/_2023/_02/_17/Petition_146290.html-->
+<!- -https://epetitionen.bundestag.de/content/petitionen/_2023/_02/_17/Petition_146290.html- ->
 und auch die [PV-Strategie 2023 des dt. BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
 will „die Grenze auf 800&nbsp;VA Wechselstromleistung zu erhöhen“.\
@@ -130,15 +133,40 @@ Die Erhöhung der Obergrenze in Deutschland, wobei der [VDE federführend ist](
 https://www.dke.de/de/arbeitsfelder/energy/news/produktnorm-fuer-steckerfertige-pv-anlagen),
 wird [sich noch hinziehen](https://youtu.be/gi36KzH5VhA), nach Informationen
 der DGS noch bis mindestens Sommer 2024, wahrscheinlich eher Herbst 2024.
+-->
 
-In Deutschland sind PV-Anlagen anmeldepflichtig, wenn sie ins externe Netz
-einspeisen können.
+[Am 16.05.2024](
+https://www.pv-magazine.de/2024/05/15/im-bundesgesetzblatt-veroeffentlicht-aenderungen-aus-dem-solarpaket-1-treten-in-kraft/)
+traten die Änderungen des „Solarpakets 1“ zum EEG in Kraft. Damit gilt, wie
+[hier offiziell veröffentlicht](https://www.recht.bund.de/bgbl/1/2024/151/VO.html)
+und [hier gut zusammengefasst](
+https://www.heckertsolar.com/solarpaket1-alle-aenderungen-ab-mitte-mai-2024/):
+Für ein oder mehrere Steckersolargeräte
+mit einer installierten PV-Leistung von insgesamt bis zu 2&nbsp;kW
+und einer Wechselrichterleistung von insgesamt bis zu 800&nbsp;W:
+* Nur Meldung im Marktstammdatenregister erforderlich (§ 8 Abs. 5a EEG 2023neu).
+* Keine Zustimmung des Netzbetreibers erforderlich (§ 8 Abs. 5a EEG 2023neu).
+* Besondere technische Vorgaben (Ist-Einspeiseabrufung, Regelbarkeit)
+  müssen nicht eingehalten werden (§ 9 (1) Abs. 1 Satz 1 EEG 2023neu).
+* Im Gebäude keinerlei rechtliche Verklammerung mit anderen Anlagen und SSGs.
+* Eingespeister Solarstrom wird nicht vergütet (unentgeltliche Abnahme).
+* Betrieb mit altem (auch rückwärts drehendem) Zähler ist auch vor dem Einbau eines
+  modernen Zweirichtungszählers bzw. Smart Meters erlaubt (§ 10a EEG 2023neu).
+
+Zusätzlich müssen allerdings der technischen Regelungen für den Netzanschluss
+eingehalten werden. Immerhin hat dazu der [VDE am 16.05.2024 klargestellt](
+https://www.golem.de/news/balkonkraftwerke-vde-erklaert-einspeisung-von-800-watt-fuer-zulaessig-2405-185194.html),
+dass er die 800&nbsp;W bereits als zulässig sieht. Die sicherheitstechnischen
+Bedingungen zur Zulassung von Schukosteckern sind allerdings noch nicht geklärt.
+
+In Deutschland sind alle PV-Anlagen anmeldepflichtig,
+die ins externe Netz einspeisen können.
 Für Steckersolargeräte ist der Aufwand der Online-Registrierung im
 [Marktstammdatenregister (MaStR)](https://www.marktstammdatenregister.de/MaStR)
 der Bundesnetzagentur gering.
-Eigentlich sollte ab Anfang 2024 die ihre zusätzliche Anmeldung beim
+<!-- Eigentlich sollte ab Anfang 2024 die ihre zusätzliche Anmeldung beim
 Netzbetreiber entfallen, aber das hat sich [erst einmal verzögert](
-https://www.giga.de/news/neue-regeln-fuer-2024-balkonkraftwerk-besitzer-muessen-weiter-warten/).
+https://www.giga.de/news/neue-regeln-fuer-2024-balkonkraftwerk-besitzer-muessen-weiter-warten/). -->
 
 Nach einem [Artikel im pv magazine von 2022](
 https://www.pv-magazine.de/2022/02/24/markt-groesser-als-gedacht-rund-190-000-stecker-solar-geraete-bereits-installiert/)

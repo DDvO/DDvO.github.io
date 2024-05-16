@@ -212,7 +212,7 @@ Lizenzkürzel:
     -   [SolBatSim: Hochauflösende flexible Simulation](EV.md#SolBatSim)<a name="SolBatSim"></a>
 -   [Nutzungsvarianten](SSG.md#Nutzung)<a name="Nutzung"></a>
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](SSG.md#SSG)<a name="SSG"></a>
-        - [Hintergrund der Beschränkung auf 600 bzw. 800&nbsp;W](SSG.md#Bagatellgrenze)<a name="Bagatellgrenze"></a>
+        - [Hintergrund der Beschränkung auf 800&nbsp;W](SSG.md#Bagatellgrenze)<a name="Bagatellgrenze"></a>
         - [Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W](SSG.md#Kappungsverlust)<a name="Kappungsverlust"></a>
     -   [Hausnetzeinspeisung mit Batteriepuffer](Speicher.md#Batteriespeicher)<a name="Batteriepuffer"></a>
         - [Regelungsstrategien für PV-Speicher](Speicher.md#Regelungsstrategien)<a name="Regelungsstrategien"></a>
