@@ -155,12 +155,16 @@ Gründe für die Leistungsbegrenzung bei der Einspeisung von PV-Strom
 sind nicht nur Sicherheitsbedenken bzgl. der Stromleitungen im Haushalt.
 Weitere technische und wirtschaftliche Gründe sind mögliche und
 nicht immer gut kalkulierbare Rückwirkungen auf das allgemeine Stromnetz.
+* In Verteilnetzen kann es (wie weiter unten für Leitungen in der Wohnung erklärt)
+passieren, dass bei gleichzeitig hoher PV-Einspeisung und hohem Verbrauch
+auf Abschnitten der Leitungen mehr Strom fließt als wofür sie ausgelegt wurden, und
+meist gibt es zu wenig Strommesspunkte und Sicherungen, die das verhindern könnten.
 * Bei massenhafter Einspeisung von Solarstrom und kräftigem Sonnenschein
 kann der Strom im Verteilnetz z.B. durch ziehende Wolken sehr stark schwanken,
 was seine Stabilität beeinträchtigen könnte.
-* Außerdem kann es passieren, dass der Netzbetreiber bei großen Schwankungen
+<!-- * Außerdem kann es passieren, dass der Netzbetreiber bei großen Schwankungen
 teils besonders teuren Strom nachkaufen muss bzw. für überschüssigen Strom einen
-sehr geringen oder gar negativen Preis bekommt, sprich „Strafe zahlen“ muss.
+sehr geringen oder gar negativen Preis bekommt, sprich „Strafe zahlen“ muss. --->
 * Auch könnten sich Freileitungen, durch die ungewöhnlich viel Strom fließt,
 stärker als üblich ausdehnen und eventuell gefährlich durchhängen.
 
