@@ -847,16 +847,18 @@ von Speicherbatterie mit 48&nbsp;V Systemspannung)](
 https://www.tentekenergy.com/index.php/products/324.html) verwendbar ist.
 Es hat [je nach Variante 2 bis 4 MPPT](
 https://www.photovoltaikforum.com/thread/221060-tentek-tribune-ems-anfuote/?postID=3667554#post3667554)
-zur Anbindung der PV-Module mit je 30&nbsp;A Ladeleistung
+zur Anbindung der PV-Module mit je 30&nbsp;A nomineller Ladeleistung
 für einen DC-gekoppelten Speicher und bietet eine
 [sehr gute lastabhängige Einspeise-Regelung](https://youtu.be/vRo15Xi9tMo),
 wobei zur Messung des Haushalts-Lastsaldos ein mitgelieferter
 WiFi-Energiemonitor [oder wahrscheinlich auch ein Shelly (Pro) 3EM](
-https://www.youtube.com/watch?v=LFtjLljnRvA) verwendet werden kann.
+https://www.youtube.com/watch?v=LFtjLljnRvA) verwendet werden kann.\
 <!--
 https://www.mydealz.de/deals/balkonkraftwerkspeicher-plugplay-speicher-balkonkraftwerk-anfuote-tentek-2310245#comments
 https://www.photovoltaikforum.com/thread/221060-tentek-tribune-ems-anfuote/?pageNo=8
 -->
+Nach MPPT-Überlastungsschäden werden seit April/Mai 2024 die MPPT-Eingänge
+durch ein Software-Update von 30&nbsp;A auf nur noch je 22&nbsp;A abgeregelt.
 
 Für das Gerät soll man in Deutschland inklusive WiFi-Energiemonitor
 [selbst mit MwSt-Befreiung 599€](https://titansolar.de/products/tentek) zahlen,
@@ -866,7 +868,7 @@ denn [wie unten ausgeführt](#Effizienz) kann man damit in einem
 durchschnittlichen Fall nur etwa 70€ pro Jahr sparen, so dass man selbst bei
 700€ Kosten schon eine grenzwertig lange Amortisationszeit von 10 Jahren hat.
 
-Direkt aus China ist das Gerät angeblich für unter 300€ erhältlich.
+Direkt aus China war das Gerät angeblich anfangs für unter 300€ erhältlich.
 Das wäre aufgrund der Ausstattung auch realistischer, denn es leistet nicht
 mehr als eine Eigenbau-Lösung mit [OpenDTU-OnBattery](#OpenDTU-OnBattery) und
 zwei MPPT-Ladereglern, was man mit mäßigem Aufwand selbst mit soliden Victron
