@@ -259,7 +259,7 @@ habe ich im Sommer 2022 folgende Komponenten gekauft:
     u.g. 2,5 kWh LiFePO4-Batterie tiefentladen und damit teilgeschädigt hat.
     Ich nutze das Gerät nicht mehr, höchstens als Inselwechselrichter._
 
--   [CERRNSS LF-24100](https://www.alibaba.com/product-detail/CERRNSS-4000-Deep-Cycles-24V-100Ah_1600380655812.html)
+-   [CERRNSS LF-24100](https://de.aliexpress.com/item/1005004727815962.html)
     24&nbsp;V 100&nbsp;Ah LiFePO4-Batterie mit 8S1P-Konfiguration
     inkl. 100&nbsp;A BMS und Spannungsanzeige, gekauft für ca. 570€\
     _Diese Zellen sind [qualitativ allerdings nicht ganz so
