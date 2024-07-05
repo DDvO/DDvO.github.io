@@ -343,12 +343,12 @@ Erfreulicherweise sieht die [PV-Strategie 2023 des dt. BMWK](
 https://www.bmwk.de/Redaktion/DE/Publikationen/Energie/photovoltaik-stategie-2023.pdf?__blob=publicationFile)
 „einen Anspruch auf Zustimmung für den Betrieb eines Steckersolargerätes“ vor.
 -->
-Voraussichtlich [im zweiten Quartal 2024](
-https://www.computerbild.de/artikel/cb-News-Energie-Bundeskabinett-Balkonkraftwerk-Wohnung-Privileg-36684829.html)
-werden Steckersolargeräte in den [Katalog
-privilegierter Maßnahmen im Wohnungseigentumsgesetz und im BGB aufgenommen](
+[Im Juli 2024](
+https://www.heise.de/news/Wohnrecht-neu-Leichter-zum-Balkonkraftwerk-Eigentuemerversammlung-auch-online-9790469.html)
+wurden Steckersolargeräte in den [Katalog privilegierter  Maßnahmen aufgenommen](
 https://www.bmj.de/SharedDocs/Pressemitteilungen/DE/2023/0913_WEG.html).
-Vermieter und WEGs können dann Balkonkraftwerke u.ä. nicht mehr ablehnen,
+Damit dürften Vermieter und WEGs Balkonkraftwerke u.ä.
+nicht mehr (ohne triftigen Grund) ablehnen,
 haben aber weiterhin ein Mitspracherecht, Rahmenbedingungen dafür festzulegen.
 
 Durch PV-Geräte auf Sondereigentum, z.B. innerhalb eines Balkons bzw. einer
