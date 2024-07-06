@@ -918,29 +918,12 @@ Der besseren Vergleichbarkeit halber wurde hier generell eine Speicherkapazität
 von 1600&nbsp;Wh (mit 90% Entladetiefe) wie beim Anker Solix vorausgesetzt
 &mdash; ohnehin fällt sie kaum ins Gewicht.
 * 610&nbsp;kWh Eigenverbrauch als Vergleichswert nur mit PV ohne Speicher-Nutzung
-* 840&nbsp;kWh Eigenverbrauch (bei 1000&nbsp;Wh 800&nbsp;kWh, bei 2000&nbsp;Wh 860&nbsp;kWh)
+* 860&nbsp;kWh Eigenverbrauch (bei 1000&nbsp;Wh 810&nbsp;kWh, bei 2000&nbsp;Wh 880&nbsp;kWh)
   bei optimaler lastabhängiger Regelung
-* 710&nbsp;kWh Eigenverbrauch bei Anker Solix Strategie mit optimaler FLLR, hier 160&nbsp;W;\
+* 725&nbsp;kWh Eigenverbrauch bei Anker Solix Solarbank 1 Strategie mit optimal gewählter FLLR, hier 180&nbsp;W;\
   mit diesen Parametern werden 10&nbsp;kWh PV-Nettoleistung verworfen
-* 725&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung
-  mit für diesen Fall optimaler Zielleistung, hier 200&nbsp;W
-
-Wenn man eine optimale lastabhängige Lade- und Entladestrategie nutzen kann, ist
-das Ergebnis mit Abstand am besten: ein Gewinn von etwa 230&nbsp;kWh im Jahr.\
-Selbst mit mehreren geschickt eingesetzten Smart Plugs oder einer ausgefeilten
-Uhrzeit-abhängigen Steuerung wird man kaum an diesen Maximalwert herankommen.\
-Ansonsten ist es bei konstanter Zielleistung selbst mit günstigster Wahl dieses
-Parameters und mit Bypass-Funktion ziemlich egal, welche Strategie im Detail
-verfolgt wird &mdash; man erhält nur magere 100 bis 125&nbsp;kWh Gewinn pro Jahr.
-
-Allerdings bringt selbst eine Eigenverbrauchs-Steigerung von 230&nbsp;kWh
-bei 30&nbsp;ct/kWh nur 70€ Ersparnis pro Jahr.
-Damit kann sich so ein Gerät, das je nach Speichergröße
-(und Zusatzkosten wie für einen Shelly 3EM) ungefähr 1000€ kostet
-und hoffentlich gut 10 Jahre Lebensdauer hat, meist nicht amortisieren.\
-Noch schlechter sieht es für das Anker Solix aus, denn es ermöglicht mit seiner
-ungünstigen Regelung eine Ersparnis von realistisch nur etwa 35€ pro Jahr.\
-Sprich, alle diese Lösungen sind einfach zu teuer, um wirklich rentabel zu sein.
+* 735&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung
+  mit für diesen Fall optimaler Zielleistung, hier 260&nbsp;W
 
 <!--
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy
@@ -948,16 +931,57 @@ Nächtliche Durchschnittslast=  189 W von 0 bis 6 Uhr
 PV-Eigenverbrauch           =  608 kWh
 
 https://www.mydealz.de/comments/permalink/42396908
-./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 # EcoFlow oder Maxxicharge 1600 Wh opt
-PV-Eigenverbrauch           =  843 kWh   (bei 1000 Wh 798 kWh, 2000 Wh 861 kWh)
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 # EcoFlow oder Maxxicharge 1600 Wh oder Solarbank 2 opt
+PV-Eigenverbrauch           =  859 kWh   (bei 1000 Wh 810 kWh, 2000 Wh 881 kWh)
 
-./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 160 -feed excl 100  # Anker Solix
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 180 -feed excl 100  # Anker Solix Solarbank 1
 Verworfene PV-Leistung      =   10 kWh
-PV-Eigenverbrauch           =  710 kWh   (bei 2000 Wh 716 kWh)
+PV-Eigenverbrauch           =  725 kWh
 
-./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 200 -feed comp 200   # Konstanteinspeisung
-PV-Eigenverbrauch           =  726 kWh   (bei 2000 Wh 737 kWh)
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 200 -feed comp 200   # Konstanteinspeisung my Bypass
+PV-Eigenverbrauch           =  740 kWh
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 2000 -dc -max_charge 100 -pass 260 -feed comp 260    # Konstanteinspeisung ohne Bypass
+PV-Eigenverbrauch           =  734 kWh
 -->
+
+Wenn man eine optimale lastabhängige Lade- und Entladestrategie nutzen kann, ist
+das Ergebnis mit Abstand am besten: ein Gewinn von etwa 250&nbsp;kWh im Jahr.\
+Selbst mit mehreren geschickt eingesetzten Smart Plugs oder einer ausgefeilten
+Uhrzeit-abhängigen Steuerung wird man kaum an diesen Maximalwert herankommen.\
+Ansonsten ist es bei konstanter Zielleistung selbst mit günstigster Wahl dieses
+Parameters und mit Bypass-Funktion ziemlich egal, welche Strategie im Detail
+verfolgt wird &mdash; man erhält nur magere 135 bis 150&nbsp;kWh Gewinn pro Jahr.
+
+Allerdings bringt selbst eine Eigenverbrauchs-Steigerung von 250&nbsp;kWh
+bei 30&nbsp;ct/kWh nur 75€ Ersparnis pro Jahr.
+Damit kann sich so ein Gerät, das je nach Speichergröße
+(und Zusatzkosten wie für einen Shelly 3EM) ungefähr 1000€ kostet
+und hoffentlich gut 10 Jahre Lebensdauer hat, meist nicht amortisieren.\
+Noch schlechter sieht es für die Anker Solix Solarbank 1 aus, denn sie ermöglicht mit ihrer
+ungünstigen Regelung eine Ersparnis von realistisch nur etwa 40€ pro Jahr.
+
+Alle diese Lösungen sind für typische Balkonanlagen mit 2 Modulen
+also einfach zu teuer, um rentabel zu sein.
+
+<!--
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -bend 2,2,2,2,2,2,2,2,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,2,2,2,2,2,2
+PV-Eigenverbrauch           =  366 kWh
+
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -bend 2,2,2,2,2,2,2,2,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,2,2,2,2,2,2
+PV-Eigenverbrauch           =  687 kWh
+-->
+
+Falls man tagsüber zwischen 8 und 18 Uhr nur halb so viel Verbrauch hatte wie
+normal und in der übrigen Zeit entsprechend mehr (Durchschnittslast 294&nbsp;W
+zwischen 0 und 6&nbsp;Uhr, 146&nbsp;W zwischen 8 und 16&nbsp;Uhr), wäre
+die Stromspeicherung deutlich interessanter, und führt unter sonst gleichen
+Bedingungen zu einer Steigerung des jährlichen Eigenverbrauchs von ungefähr
+365&nbsp;kWh auf 685&nbsp;kWh. Dieses Szenario ist aber untypisch.
+Die Amortisationszeit des Balkonkraftwerks ohne Speicher wäre dabei etwa doppelt
+so lang wie normal, und die Hinzunahme des Speichers kann nur etwas mehr als das
+kompensieren, was man durch die sehr ungünstige Verteilung des Stromverbrauchs
+über die Tageszeiten verliert.
+
 <!--
 
 Zendure SolarFlow
