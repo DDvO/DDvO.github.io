@@ -25,7 +25,7 @@ lang: de
         - [Regelungsstrategien für PV-Speicher](#Regelungsstrategien)
         - [Dimensionierung des Stromspeichers](#Dimensionierung)
         - [Kommerzielle SSG-Speicherlösungen](#kommerziell)
-          - [Zendure SolarFlow und AIO 2400](#SolarFlow)
+          - [Zendure SolarFlow, AIO 2400 und Hub 2000](#SolarFlow)
           - [Anker Solix](#Solix)
           - [Maxxisun Maxxicharge](#Maxxicharge)
           - [Tentek Tribune EMS](#Tentek)
@@ -715,7 +715,7 @@ Alle diese Produkte haben u.A. Folgendes gemeinsam.
 
 Hier eine Übersicht zu den jeweils unterstützten Lade- und Entladestrategien.
 
-#### Zendure SolarFlow und AIO 2400 {#SolarFlow}
+#### Zendure SolarFlow, AIO 2400 und Hub 2000 {#SolarFlow}
 
 ![Bild: Zendure SolarFlow](Zendure_SolarFlow.png){:.right width="400"}
 
@@ -725,8 +725,8 @@ https://www.chinahandys.net/zendure-solarflow-im-test-der-speicher-fuer-das-balk
 https://www.energiemagazin.com/zendure-solarflow-balkonkraftwerk-speicher/
 https://www.allround-pc.com/artikel/2023/test-zendure-solarflow-speicher-fuer-dein-balkonkraftwerk
 -->
-Das Gerät verfügt über zwei PV-Eingänge mit getrennten MPPT.\
-Soweit vorhanden, wird zur Einspeisung PV-Strom verwendet
+Dieses Gerät und seine Nachfolger verfügen über zwei PV-Eingänge mit getrennten
+MPPT. Soweit vorhanden, wird zur Einspeisung PV-Strom verwendet
 und die ggf. zur Zielleistung fehlende Differenz aus dem Speicher entnommen.\
 Wenn der Speicher voll ist, wird im Bypass-Modus der gesamte Ertrag eingespeist.\
 Zur Bestimmung der Zielleistung gibt es inzwischen im Wesentlichen drei Modi:
@@ -746,13 +746,28 @@ gibt es den *Smart-CT-Modus*, bei dem die Einspeiseleistung dynamisch an den
 Nur diese Option ermöglicht eine effiziente Nutzung des PV-Ertrags.
 Allerdings [zeigten Praxistests](https://youtu.be/YzKCvYB-axw&t=148s), dass die
 Regelung auf Verbrauchs- und Ertrags-Schwankungen träge und ungenau reagiert.
+Das liegt teils wohl dran, dass die Kommunikation nicht lokal,
+sondern online [über eine Cloud](https://www.steuerdeinleben.de/zendure2000/)
+abgewickelt wird, und dass Zendure die Geschwindigkeit einer Änderung der
+Einspeiseleistung über den Netzwechselrichter (bislang) künstlich begrenzt.
 
+Leider ermöglicht Zendure nicht, auch Speicher anderer Hersteller zu verwenden.\
 Die größere (1.920&nbsp;Wh) Batterie hat eine eingebaute Heizung bei Minusgraden.
 
-Ende Februar 2024 brachte Zendure die AIO 2400 heraus &mdash; [hier](
+Ende Februar 2024 brachte Zendure zwei neue Varianten heraus:
+
+* AIO 2400 &mdash; dazu [hier](
 https://www.computerbase.de/2024-02/zendure-aio-2400-test-balkonkraftwerk-akku-speicher/)
-eine Rezension dazu.
-Sie scheint die selbe Steuerung wie beim SolarFlow zu verwenden.
+eine Rezension
+* Hub 2000 &mdash; dazu [hier](https://www.youtube.com/watch?v=emPIPINW7jo)
+ein (nicht ganz unabhängiger) Praxistest.\
+Der Hub 2000 bringt den großen Vorteil mit sich, dass er bis zu
+2 * 900&nbsp;W PV-Leistung entgegennimmt; man kann also 4&nbsp;Module anschließen.
+Zwar kann ein Zendure AB 2000 Speicher nur mit max. 1200&nbsp;W geladen werden,
+aber das macht sich für die Rentabilität praktisch nicht bemerkbar.
+
+Beide Produkte scheinen die selbe Steuerung zu verwenden wie beim ersten SolarFlow.
+
 
 #### Anker Solix {#Solix}
 
@@ -978,7 +993,7 @@ Nächtliche Durchschnittslast=  189 W von 0 bis 6 Uhr
 PV-Eigenverbrauch           =  608 kWh
 
 https://www.mydealz.de/comments/permalink/42396908
-./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 # EcoFlow oder Maxxicharge 1600 Wh oder Solarbank 2 opt
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 # Zendure, EcoFlow oder Maxxicharge 1600 Wh oder Solarbank 2 opt
 PV-Eigenverbrauch           =  859 kWh   (bei 1000 Wh 810 kWh, 2000 Wh 881 kWh)
 
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 180 -feed excl 100  # Anker Solix Solarbank 1
@@ -1040,11 +1055,11 @@ PV-Eigenverbrauch           = 1266 kWh
 
 -->
 
-Besser sieht es (wieder zurück bei einem typischen Lastprofil) dann aus,
-wenn man &mdash; etwa bei der Anker Solix Solarbank 2 Pro &mdash; vier Module
-nutzen kann, mit insgesamt z.B. 1800&nbsp;Wp.
-Bei sonst gleichen Randbedingungen steigert der Speicher den Eigenverbrauch
-pro Jahr etwa von 860&nbsp;kWh auf 1260&nbsp;kWh.
+Besser sieht es (wieder zurück bei einem typischen Lastprofil) dann aus, wenn man
+&mdash; etwa bei dem Zendure Hub 2000 oder der Anker Solix Solarbank 2 Pro &mdash;
+vier Module nutzen kann, mit insgesamt z.B. 1800&nbsp;Wp.
+Bei sonst gleichen Randbedingungen steigert ein 1,6&nbsp;kWh Speicher
+den Eigenverbrauch pro Jahr etwa von 860&nbsp;kWh auf 1260&nbsp;kWh.
 Die jährliche Ersparnis durch die Speicherlösung beträgt damit ungefähr 120€.
 Bei einem Kaufpreis von ca. 1200€ amortisiert sich der Speicher also in 10 Jahren.
 
