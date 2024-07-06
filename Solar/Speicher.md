@@ -756,6 +756,8 @@ Sie scheint die selbe Steuerung wie beim SolarFlow zu verwenden.
 
 #### Anker Solix {#Solix}
 
+##### Anker Solix Solarbank Version 1 {#Solix1}
+
 Das zweite relativ bekannte Produkt ist die [Anker Solix Solarbank](
 https://www.energiemagazin.com/anker-solix-solarbank-balkonkraftwerk-speicher/).
 <!--https://www.chinahandys.net/anker-solix-solarbank-test/-->
@@ -798,6 +800,50 @@ effizient, aber wer diesen Aufwand treibt, kann sich eigentlich gleich besser
 und v.A. günstiger etwas [eigenes bauen](#Eigenbau).
 (Zusätzlich auch tagsüber in die merkwürdige Solix-Steuerung einzugreifen oder
 sie zu umgehen wäre noch deutlich komplizierter und würde wohl wenig bringen.)
+
+##### Anker Solix Solarbank 2 {#Solix2}
+
+Im Juni 2024 brachte Anker verbesserte Nachfolgemodelle unter dem Namen
+Solarbank 2 heraus. Die "Pro"-Variante hat 4 unabhängige MPPT-Eingänge
+und einen integrierten 1000&nbsp;W Inselwechselrichter für Notstrom,
+während die "Plus"-Variante 2 MPPT hat, mit je 600&nbsp;W Eingangsleistung.
+
+Beide Varianten haben einen integrierten 800&nbsp;W Netzwechselrichter und
+außerdem eine lastbasierte Lade- und Entladeregelung, die nach Angaben des
+Herstellers sehr flink (innerhalb 3&nbsp;Sekunden) reagiert und damit eine nahezu
+optimale Nulleinspeisung (mit etwa 10&nbsp;W Abweichung) ermöglichen sollte.
+Ein [Test von ComputerBase](
+https://www.computerbase.de/2024-06/anker-solix-solarbank-2-pro-test-akku-balkonkraftwerk/#abschnitt_leistung_mit_smart_meter_an_verbrauch_koppeln)
+bestätigt das. Dies ist deutlich besser als man [im Eigenbau](#Eigenbau)
+selbst mit einer sehr effizienten Regelung mit einem Hoymiles-Netzwechselrichter
+erreichen kann, dessen Reaktionszeit schon ca. 10&nbsp;Sekunden beträgt.
+Allerdings läuft das Ganze nur mit dem mitgelieferten proprietären WLAN-gekoppelten
+3-Phasen-Messgerät, ist also nicht z.B. mit Shelly (Pro) 3EM kompatibel.
+Die Regelung hat auch noch diverse Kinderkrankheiten und Beschränkungen.
+
+Vier unabhängige MPPT wird man [kaum wirklich brauchen](Komp.html#MPPT) &mdash;
+das Interessante daran ist vielmehr, dass sich bei der "Pro"-Variante damit
+die mögliche Eingangsleistung verdoppelt (auf im Prinzip 2400&nbsp;Wp,
+was dann aber nicht mehr als Balkonkraftwerk/SSG gilt), wodurch sich das System
+bei passendem Lastprofil und richtig dimensioniertem Speicher deutlich rentabler
+betreiben lässt als mit nur max. 1200&nbsp;Wp.\
+[Siehe unten](#Effizienz) ein Simulationsergebnis dazu.
+
+Die Behauptungen von Anker, nämlich eine Ersparnis von "bis zu 902€ pro Jahr",
+sind allerdings massiv überzogen. Realistisch ist für einen typischen Haushalt
+und mit 4 * 450&nbsp;Wp PV-Modulen, wobei das Ganze dann etwa 1500€ kostet,
+ungefähr 860&nbsp;kWh Eigenverbrauch pro Jahr, also nur ungefähr 260€.\
+Und wenn man den unlauteren Trick herausrechnet,
+dass nämlich der weitaus größte Teil der tatsächlichen Ersparnis nicht durch das
+Anker Solix, sondern schon durch die (extra zu beziehenden) PV-Module und
+den Netzwechselrichter erreicht wird, sieht es für den Speicher nochmal viel
+schlechter aus: typischerweise 400&nbsp;kWh und damit 120€ Ersparnis pro Jahr.
+
+Die integrierte Kosteneinsprungs-Berechnung ist auch nicht realistisch, weil sie
+einfach auf dem produzierten Strom basiert, statt die diversen auftretenden
+Verluste zu berücksichtigen, und weil sie auch den Teil einrechnet,
+der (zumindest kurzzeitig) ins externe Netz geht.
+
 
 #### Maxxisun Maxxicharge {#Maxxicharge}
 
@@ -906,6 +952,7 @@ funktionieren in der Praxis nicht so gut und effizient wie vom Marketing behaupt
 Stand Anfang 2024 unterstützen nur Zendure SolarFlow und AIO 2400,
 der Maxxisun Maxxicharge das Tentek/Anfuote EMS eine lastabhängige Regelung
 und können damit unter realistischen Bedingungen rentabel sein.
+Im Juni 2024 kam die Anker Solix Solarbank 2 hinzu.
 
 Hier ein Vergleich des mit den unterschiedlichen Ansätzen erzielbaren
 Jahres-Eigenverbrauchs auf Basis von Simulationen mit dem [SolBatSim](EV.md#SolBatSim)
@@ -983,7 +1030,25 @@ kompensieren, was man durch die sehr ungünstige Verteilung des Stromverbrauchs
 über die Tageszeiten verliert.
 
 <!--
+https://www.mydealz.de/deals/balkonkraftwerk-anker-solix-solarbank-2-e1600-pro-integrierter-800w-wechselrichter-4x-ja-solar-bifacial-440w-2385846#reply-48263080
 
+ ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1800 -tmy
+PV-Eigenverbrauch           =  859 kWh
+
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1800 -tmy -capacity 1600 -dc -max_charge 100
+PV-Eigenverbrauch           = 1266 kWh
+
+-->
+
+Besser sieht es (wieder zurück bei einem typischen Lastprofil) dann aus,
+wenn man &mdash; etwa bei der Anker Solix Solarbank 2 Pro &mdash; vier Module
+nutzen kann, mit insgesamt z.B. 1800&nbsp;Wp.
+Bei sonst gleichen Randbedingungen steigert der Speicher den Eigenverbrauch
+pro Jahr etwa von 860&nbsp;kWh auf 1260&nbsp;kWh.
+Die jährliche Ersparnis durch die Speicherlösung beträgt damit ungefähr 120€.
+Bei einem Kaufpreis von ca. 1200€ amortisiert sich der Speicher also in 10 Jahren.
+
+<!--
 Zendure SolarFlow
 https://www.mydealz.de/deals/balkonkraftwerk-750wp-set-mit-1kwh-speicher-wifi-22
 36913
@@ -2048,5 +2113,5 @@ LocalWords: Delivered Latest Downgraded shelly emeter file status returned MYPV
 LocalWords: Zweirichtungszaehler issuecomment collect Notifications height ELWA
 LocalWords: Plugs comments January Settings ons configuration states excl comp
 LocalWords: sensor export float uksa tamorix custom firmware en Central zell TR
-LocalWords: SmartShunt
+LocalWords: SmartShunt ComputerBase leistung meter
 -->
