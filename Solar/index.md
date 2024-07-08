@@ -47,6 +47,7 @@ keywords:
 - PV-Heizstab
 - Speicherung
 - Stromspeicher
+- Speicherbatterie
 - Batteriespeicher
 - Pufferbatterie
 - Spannungsregler
@@ -214,7 +215,7 @@ Lizenzkürzel:
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](SSG.md#SSG)<a name="SSG"></a>
         - [Hintergrund der Beschränkung auf 800&nbsp;W](SSG.md#Bagatellgrenze)<a name="Bagatellgrenze"></a>
         - [Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W](SSG.md#Kappungsverlust)<a name="Kappungsverlust"></a>
-    -   [Hausnetzeinspeisung mit Batteriepuffer](Speicher.md#Batteriespeicher)<a name="Batteriepuffer"></a>
+    -   [Hausnetzeinspeisung mit Speicherbatterie](Speicher.md#Batteriespeicher)<a name="Batteriepuffer"></a>
         - [Regelungsstrategien für PV-Speicher](Speicher.md#Regelungsstrategien)<a name="Regelungsstrategien"></a>
         - [Dimensionierung des Stromspeichers](Speicher.md#Dimensionierung)<a name="Speicherbatterie"></a>
         - [Kommerzielle SSG-Speicherlösungen](Speicher.md#kommerziell)<a name="SSG-Speicher"></a>

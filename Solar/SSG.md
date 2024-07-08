@@ -23,7 +23,7 @@ lang: de
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](#SSG)
         - [Hintergrund der Beschränkung auf 800&nbsp;W](#Bagatellgrenze)
         - [Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W](#Kappungsverlust)
-    -   [Hausnetzeinspeisung mit Batteriepuffer](Speicher.md)
+    -   [Hausnetzeinspeisung mit Speicherbatterie](Speicher.md)
     -   [Inselanlage (mit Batteriespeicherung) und Kombination](Insel.md)
 -   [Auswahl und Nutzung von Komponenten](Komp.md)
 -   [Beispiel-Konfigurationen](Bsp.md)

@@ -21,7 +21,7 @@ lang: de
 -   [Eigenverbrauch und seine Berechnung](EV.md)
 -   [Nutzungsvarianten](SSG.md)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](SSG.md#SSG)
-    -   [Hausnetzeinspeisung mit Batteriepuffer](Speicher.md)
+    -   [Hausnetzeinspeisung mit Speicherbatterie](Speicher.md)
     -   [Inselanlage (mit Batteriespeicherung)](#Inselanlage)
     -   [Kombination aus Hausnetzeinspeisung und Inselanlage](#Kombination)
 -   [Auswahl und Nutzung von Komponenten](Komp.md)
