@@ -586,9 +586,13 @@ z.B. der *Entladetiefe* und der *Zyklenanzahl*.
 
 Die meisten Nutzer legen ihren PV-Speicher zu groß aus,
 was unnötigen Materialaufwand und überzogene Kosten verursacht.
-Die effektiv nutzbare Kapazität des Speichers sollte nur so groß sein, dass
-damit der typische PV-Überschuss eines ertragreichen Sonnentages aufgenommen
-und diese Strommenge bis zum nächsten Morgen sinnvoll genutzt werden kann.
+Die effektiv nutzbare Kapazität des Speichers sollte nur so groß sein, dass damit
+der typische PV-Überschuss eines mäßig ertragreichen Sonnentages aufgenommen
+und diese Strommenge meist bis zum nächsten Morgen sinnvoll genutzt werden kann.
+Es lohnt sich dabei nicht, Tage mit besonders hohem Ertrag oder besonders starkem
+Verbrauch zu berücksichtigen.
+Eine genaue Optimierungs kann durch Simulationen mit verschiedenen Speichergrößen
+unter Berücksichtigung des Haushalts-Lastprofils erfolgen.
 
 Für das [o.g. Balkonkraftwerk-Beispiel](#Batteriespeicher) beträgt der tägliche
 PV-Überschuss maximal etwa 4&nbsp;kWh und im Jahres-Durchschnitt 0,85&nbsp;kWh.
@@ -681,7 +685,7 @@ AC-Kopplung kommt man selbst mit LiFePO4-Batterien kaum über 80% Wirkungsgrad.
 ohne dass die Akkuzellen leiden (d.h. schneller an Kapazität verlieren).
 Bei LiFePO4 sind immerhin 90% Entladetiefe problemlos möglich.
 * Im Interesse einer langen Lebensdauer sollte man die Batterie je nach Typ
-besser auch nicht ganz voll laden, sondern eher nur zu etwa 90%.
+auch höchstens kurzzeitig ganz voll geladen lassen (ansonsten eher zu 80 bis 90%).
 
 ### Kommerzielle SSG-Speicherlösungen {#kommerziell}
 
