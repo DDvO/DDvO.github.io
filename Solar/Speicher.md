@@ -903,11 +903,13 @@ nicht ortsfeste PV-Anlagen offenbar nicht angemeldet werden müssen.
 Tentek_Tribune_EMS_Controler.png){:.right width="300"}
 
 Seit März 2024 lieferbar ist der [Tentek Tribune EMS Controller](
-https://www.notebookcheck.com/Balkonkraftwerke-effizient-nutzen-Neues-Dreiphasen-Energie-Steuersystem-von-Tentek-ist-vielseitig-und-anpassungsfaehig.775205.0.html)
-bzw. baugleich die [Anfuote EMS-Steuerung](https://www.solarpower.anfuote.com/).
+https://www.notebookcheck.com/Balkonkraftwerke-effizient-nutzen-Neues-Dreiphasen-Energie-Steuersystem-von-Tentek-ist-vielseitig-und-anpassungsfaehig.775205.0.html).
+Es gab bzw. gibt auch baugleiche Geräte unter anderen Namen wie
+[Anfuote EMS-Steuerung](https://www.solarpower.anfuote.com/),
+Spaun und easySuntower.
 
 Dies ist das offenbar erste käufliche Steuergerät, das nicht nur mit allen
-möglichen Netzwechselrichtern, sondern auch mit [angeblich so gut wie jeder Art
+möglichen Netzwechselrichtern, sondern auch mit [so gut wie jeder Art
 von Speicherbatterie mit 48&nbsp;V Systemspannung)](
 https://www.tentekenergy.com/index.php/products/324.html) verwendbar ist.
 Es hat [je nach Variante 2 bis 4 MPPT](
@@ -924,23 +926,27 @@ https://www.photovoltaikforum.com/thread/221060-tentek-tribune-ems-anfuote/?page
 -->
 Nach MPPT-Überlastungsschäden werden seit April/Mai 2024 die MPPT-Eingänge
 durch ein Software-Update von 30&nbsp;A auf nur noch je 22&nbsp;A abgeregelt.
+Nach Nutzer-Erfahrungen gibt es aber auch [weitere erhebliche Schwächen
+bei der Qualität des Geräts und bei der Behandlung von Gewährleistungsansprüchen](
+https://www.photovoltaikforum.com/thread/221060-tentek-tribune-ems-anfuote/?postID=3842305#post3842305).
 
 Für das Gerät soll man in Deutschland inklusive WiFi-Energiemonitor
-[selbst mit MwSt-Befreiung 599€](https://titansolar.de/products/tentek) zahlen,
+selbst mit MwSt-Befreiung 599€ oder mehr zahlen,
 so dass man auch mit einer günstigen max. 2,5 kWh Batterie auf etwa 1000€ kommt.
-Das wäre für ein Balkonkraftwerk ca. 300€ zu teuer,
+Das wäre für ein Balkonkraftwerk mit 2 PV-Modulen ca. 300€ zu teuer,
 denn [wie unten ausgeführt](#Effizienz) kann man damit in einem
 durchschnittlichen Fall nur etwa 70€ pro Jahr sparen, so dass man selbst bei
 700€ Kosten schon eine grenzwertig lange Amortisationszeit von 10 Jahren hat.
+Deutlich besser sähe es bei 4 Modulen aus, aber dann gibt es teilweise die
+o.g. Überlastungsprobleme.
 
 Direkt aus China war das Gerät angeblich anfangs für unter 300€ erhältlich.
-Das wäre aufgrund der Ausstattung auch realistischer, denn es leistet nicht
+Das wäre aufgrund der Ausstattung auch realistischer, denn es leistet kaum
 mehr als eine Eigenbau-Lösung mit [OpenDTU-OnBattery](#OpenDTU-OnBattery) und
 zwei MPPT-Ladereglern, was man mit mäßigem Aufwand selbst mit soliden Victron
 BlueSolar-Geräten für ca. 140€ hinbekommen kann.
-Allerdings wird die Bedeutung mehrerer MPPT überschätzt &mdash;
-so gut wie immer [genügt 1 MPPT-Laderegler](Komp.md#MPPT),
-so dass die Hardware-Kosten für die Selbstbau-Alternative unter 100€ liegen.
+Wobei die Bedeutung mehrerer getrennter MPPT überschätzt wird &mdash;
+so gut wie immer [genügt 1 MPPT-Laderegler](Komp.md#MPPT) mit passender Leistung.
 
 
 #### Weitere Produkte {#sonstige}
@@ -2132,5 +2138,5 @@ LocalWords: Delivered Latest Downgraded shelly emeter file status returned MYPV
 LocalWords: Zweirichtungszaehler issuecomment collect Notifications height ELWA
 LocalWords: Plugs comments January Settings ons configuration states excl comp
 LocalWords: sensor export float uksa tamorix custom firmware en Central zell TR
-LocalWords: SmartShunt ComputerBase leistung meter
+LocalWords: SmartShunt ComputerBase leistung meter Spaun easySuntower
 -->
