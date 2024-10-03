@@ -248,7 +248,8 @@ mit 25°C eingehalten werden, sondern auch bei sehr niedrigen Temperaturen, wo
 die Modulspannung je nach Temperaturkoeffizient etwa 10 bis 20% höher sein kann.
 Allerdings werden PV-Module gerade im Winter durch den niedrigen Sonnenstand
 eher nicht unter Optimalbedingungen betrieben, so dass die Leerlaufspannungen
-auch da kaum über den für NOCT oder STC angegebenen Wert kommen.
+auch da wohl kaum über den für NOCT oder STC angegebenen Wert kommen.
+Außerdem geht die Modulspannung unter Belastung der Zellen auch sofort zurück.
 
 Im Gegensatz dazu ist der je nach Einstrahlung und Temperatur maximal gelieferte
 Strom, welcher im Modul-Datenblatt als *Kurzschlussstrom* (engl.
