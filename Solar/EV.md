@@ -30,8 +30,8 @@ lang: de
     -   [SolBatSim: Hochauflösende flexible Simulation](#SolBatSim)
 -   [Nutzungsvarianten](SSG.md)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](SSG.md#SSG)
-    -   [Hausnetzeinspeisung mit Speicherbatterie](Speicher.md)
-    -   [Inselanlage (mit Batteriespeicherung) und Kombination](Insel.md)
+    -   [Hausnetzeinspeisung mit Pufferspeicher](Speicher.md)
+    -   [Inselanlage (mit Speicher) und Kombination](Insel.md)
 -   [Auswahl und Nutzung von Komponenten](Komp.md)
 -   [Beispiel-Konfigurationen](Bsp.md)
 
@@ -360,7 +360,7 @@ Entladestrategie](https://github.com/nick81nrw/PVTools/issues/53) angenommen.
 <!-- Es werden keine Speicherverluste berücksichtigt.-->
 Die Lade- und Entlade-Wirkungsgrade der Speicherbatterie (inkl. Verluste während
 der Speicherzeit) werden standardmäßig sehr hoch angenommenen: 99%.
-Das mag für [DC-Kopplung](Speicher.md#Ladung) passen, ist aber für AC-Kopplung
+Das mag für [DC-Kopplung](Speicher.md#Kopplung) passen, ist aber für AC-Kopplung
 viel zu hoch, wobei man das in den erweiterten Einstellungen anpassen kann.\
 Standardmäßig wird die Lade- und Entladeleistung etwas praxisfern nicht begrenzt,
 was sich aber ebenfalls in den erweiterten Einstellungen korrigieren lässt.

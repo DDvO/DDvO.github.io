@@ -21,8 +21,8 @@ lang: de
 -   [Eigenverbrauch und seine Berechnung](EV.md)
 -   [Nutzungsvarianten](SSG.md)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](SSG.md#SSG)
-    -   [Hausnetzeinspeisung mit Speicherbatterie](Speicher.md)
-    -   [Inselanlage (mit Batteriespeicherung) und Kombination](Insel.md)
+    -   [Hausnetzeinspeisung mit Pufferspeicher](Speicher.md)
+    -   [Inselanlage (mit Speicherung) und Kombination](Insel.md)
 -   [Auswahl und Nutzung von Komponenten](Komp.md)
 -   [Beispiel-Konfigurationen](#Beispiele)
     -   [Mobile Inselanlage](#Mobilanlage)
@@ -194,9 +194,9 @@ https://www.victronenergy.com/blog/2017/09/06/raspberry-pi-running-victrons-venu
 (hier genügt 2. oder 3. Generation) abgefragt werden.
 
 Als Grundlage für die selbst programmierte Regelung wurde hier die Perl-basierte
-[(FHEM)](https://fhem.de/fhem_DE.html) auf einem Raspberry Pi 4 verwendet.
+[FHEM](https://fhem.de/fhem_DE.html) auf einem Raspberry Pi 4 verwendet.
 Alternativen dazu und Details zur DC-Kopplung sind im
-[Abschnitt zur Implementierung der Speicher-Regelung](Speicher.md#Regelungsimplementierung)
+[Abschnitt zur Implementierung der Speicher-Regelung](Speicher-Eigenbau.md#Regelungsimplementierung)
 aufgeführt.
 
 In Minimalausstattung würde die Anlage mit Eco-Worthy 48&nbsp;V 2,5&nbsp;kWh Speicher

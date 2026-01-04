@@ -26,8 +26,8 @@ lang: de
 -   [Eigenverbrauch und seine Berechnung](EV.md)
 -   [Nutzungsvarianten](SSG.md)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](SSG.md#SSG)
-    -   [Hausnetzeinspeisung mit Speicherbatterie](Speicher.md)
-    -   [Inselanlage (mit Batteriespeicherung) und Kombination](Insel.md)
+    -   [Hausnetzeinspeisung mit Pufferspeicher](Speicher.md)
+    -   [Inselanlage (mit Speicherung) und Kombination](Insel.md)
 -   [Auswahl und Nutzung von Komponenten](Komp.md)
 -   [Beispiel-Konfigurationen](Bsp.md)
 
@@ -178,7 +178,7 @@ eines Einfamilienhauses bzw. am Unterverteiler/Sicherungkasten einer Wohnung.
 Ein [Stromzähler](#Stromzähler) bestimmt daraus die verbrauchte (und teils auch
 eingespeiste) Energie durch zeitliche Integration des Gesamt-Leistungssaldos.
 
-Besonders im Zusammenhang mit einer [Konstanteinspeisung](Speicher.md#Konstanteinspeisung)
+Besonders im Zusammenhang mit einer [Konstanteinspeisung](Speicher-Eigenbau.md#Konstanteinspeisung)
 aus [Batteriespeichern](Speicher.md) ist die *Minimallast* interessant,
 also der im Laufe der Zeit geringste Leistungsbezug (Verbrauch) im Haushalt.
 Dieser Wert wird gern (allerdings nicht ganz richtig)
@@ -240,7 +240,7 @@ Die Datenanbindung erfolgt meist über WLAN, wobei das neuere Shelly Pro 3EM auc
 einen Bluetooth- und LAN-Anschluss hat, allerdings nicht mehr ein Relais.\
 <!--https://www.mydealz.de/comments/permalink/44544522-->
 Zum Shelly Pro 3EM
-und seiner Verknüpfung mit dem [Zendure SolarFlow](Speicher.md#SolarFlow) gibt es [hier](
+und seiner Verknüpfung mit dem [Zendure SolarFlow](Speicher-2024.md#SolarFlow) gibt es [hier](
 https://www.tueftler-und-heimwerker.de/shelly-pro-3em-stromverbrauch-ueberwachen-nulleinspeisung-regeln/)
 einen sehr schönen und recht fundierten Artikel,
 allerdings mit kommerzieller Verflechtung.
