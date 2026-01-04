@@ -220,6 +220,19 @@ das eine Nulleinspeisung auch ohne Batterie realisieren kann.\
 Allerdings ist eine Nulleinspeisung für reinen PV-Strom (also ohne Batterie)
 [energetisch sehr ungeschickt](https://youtu.be/wxP5uMdtMmk?t=797).
 
+<!--
+Wattando kündigt an ...
+"... wir wollen die Einspeisebegrenzung von nun 800 Watt für Stecker-Solar-Geräte überwinden und bis zu 70 Kilowatt ... "
+https://www.pv-magazine.de/2024/06/04/wattando-realisiert-246-kilowatt-photovoltaik-anlage-als-stecker-solar-xl/
+
+Offenbar geht es im Wesentlichen darum, für eine größere (Dach-)PV-Anlage keine extra (DC-)Leitungen legen zu müssen,
+sondern die PV-Module über Mikrowechselrichter direkt an eine oder mehrere Steckdosen zu hängen, was dann irgendwie per Software koordiniert wird.
+Dazu muss aber (bei über 800 W Wechselrichter-Ausgangsleistung) ein Elektriker die elektrische Sicherheit der betreffenden Hausleitung(en) abnehmen. Und an so einer Leitung mit z.B. 2,46 kWp PV-Input darf man dann auch keinerlei Verbraucher mehr anschließen - sie muss also als dedizierte PV-Anschlussleitung betrachtet werden.
+
+Wenn man damit auf "bis 70 Kilowatt" kommen will:
+Wer hat denn bitteschön daheim bis 20 Hausleitungen übrig, die für nichts anderes mehr genutzt werden können und alle über WR-Anschluss- und Verlängerungskabel bis aufs Dach reichen sollen?
+-->
+
 Man kann durchaus annehmen, dass Beschränkungen auch dadurch motiviert sind,
 dass die Energieversorgungsunternehmen möglichst wenig Konkurrenz haben wollen.
 
