@@ -188,7 +188,7 @@ Lizenzkürzel:
 
 -   [Zusammenfassung](#Zusammenfassung)
 -   [Zielsetzung und Abgrenzung](#Zielsetzung)
--   [Nutzunglizenz](#Nutzunglizenz)
+-   [Nutzungslizenz](#Nutzungslizenz)
 -   [Inhaltsverzeichnis](#Inhaltsverzeichnis)
 -   [Photovoltaik und ihr möglicher Ertrag](PV.md#Photovoltaik)<a name="Photovoltaik"></a>
     -   [Sonneneinstrahlung](PV.md#Sonneneinstrahlung)<a name="Sonneneinstrahlung"></a>
@@ -215,24 +215,25 @@ Lizenzkürzel:
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](SSG.md#SSG)<a name="SSG"></a>
         - [Hintergrund der Beschränkung auf 800&nbsp;W](SSG.md#Bagatellgrenze)<a name="Bagatellgrenze"></a>
         - [Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W](SSG.md#Kappungsverlust)<a name="Kappungsverlust"></a>
-    -   [Hausnetzeinspeisung mit Speicherbatterie](Speicher.md#Batteriespeicher)<a name="Batteriepuffer"></a>
+    -   [Hausnetzeinspeisung mit Pufferspeicher](Speicher.md#Batteriespeicher)<a name="Batteriepuffer"></a>
+        - [Lade-Kopplung des Speichers](Speicher.md#Kopplung)
         - [Regelungsstrategien für PV-Speicher](Speicher.md#Regelungsstrategien)<a name="Regelungsstrategien"></a>
         - [Dimensionierung des Stromspeichers](Speicher.md#Dimensionierung)<a name="Speicherbatterie"></a>
         - [Kommerzielle SSG-Speicherlösungen](Speicher.md#kommerziell)<a name="SSG-Speicher"></a>
-          - [Zendure SolarFlow, AIO 2400 und Hub 2000](Speicher.md#SolarFlow)<a name="SolarFlow"></a>
-          - [Anker Solix](Speicher.md#Solix)<a name="Solix"></a>
-          - [Maxxisun Maxxicharge](Speicher.md#Maxxicharge)<a name="Maxxicharge"></a>
-          - [Tentek Tribune EMS](Speicher.md#Tentek)<a name="Tentek"></a>
-          - [Weitere Produkte](Speicher.md#sonstige)<a name="SSG-Speicher-sonstige"></a>
-          - [Zusammenfassung und Effizienzbetrachtung](Speicher.md#Effizienz)<a name="SSG-Speicher-Effizienz"></a>
-        - [SSG-Speicherlösungen im Eigenbau](Speicher.md#Eigenbau)<a name="SSG-Speicher-Eigenbau"></a>
-          - [Implementierung der Speicher-Regelung](Speicher.md#Regelungsimplementierung)<a name="Regelungsimplementierung"></a>
-          - [Betrieb eines Mikrowechselrichters an einer Batterie](Speicher.md#Batterie-WR)<a name="Batterie-WR"></a>
-          - [Einfache und günstige Lösung: OpenDTU-OnBattery](Speicher.md#OpenDTU-OnBattery)<a name="OpenDTU-OnBattery"></a>
-          - [Ladung des Stromspeichers](Speicher.md#Ladung)<a name="Ladung"></a>
-          - [Konstanteinspeisung](Speicher.md#Konstanteinspeisung)<a name="Konstanteinspeisung"></a>
-          - [Lastgeregelte Einspeisung](Speicher.md#lastgeregelt)<a name="lastgeregelt"></a>
-    -   [Inselanlage (mit Batteriespeicherung)](Insel.md#Inselanlage)<a name="Inselanlage"></a>
+<!--      - [Zendure SolarFlow, AIO 2400 und Hub 2000](Speicher-2024.md#SolarFlow)<a name="SolarFlow"></a> -->
+<!--      - [Anker Solix](Speicher-2024.md#Solix)<a name="Solix"></a> -->
+<!--      - [Maxxisun Maxxicharge](Speicher-2024.md#Maxxicharge)<a name="Maxxicharge"></a> -->
+<!--      - [Tentek Tribune EMS](Speicher-2024.md#Tentek)<a name="Tentek"></a> -->
+<!--      - [Weitere Produkte](Speicher-2024.md#sonstige)<a name="SSG-Speicher-sonstige"></a> -->
+          - [Effizienzbetrachtung](Speicher.md#Effizienz)<a name="SSG-Speicher-Effizienz"></a>
+        - [SSG-Speicherlösungen im Eigenbau](Speicher-Eigenbau.md#Eigenbau)<a name="SSG-Speicher-Eigenbau"></a>
+          - [Implementierung der Speicher-Regelung](Speicher-Eigenbau.md#Regelungsimplementierung)<a name="Regelungsimplementierung"></a>
+          - [Betrieb eines Mikrowechselrichters an einer Batterie](Speicher-Eigenbau.md#Batterie-WR)<a name="Batterie-WR"></a>
+          - [Relativ einfache und günstige Lösung: OpenDTU-OnBattery](Speicher-Eigenbau.md#OpenDTU-OnBattery)<a name="OpenDTU-OnBattery"></a>
+          - [Ladung des Stromspeichers](Speicher-Eigenbau.md#Ladung)<a name="Ladung"></a>
+          - [Konstanteinspeisung](Speicher-Eigenbau.md#Konstanteinspeisung)<a name="Konstanteinspeisung"></a>
+          - [Lastgeregelte Einspeisung](Speicher-Eigenbau.md#lastgeregelt)<a name="lastgeregelt"></a>
+    -   [Inselanlage (mit Speicherung)](Insel.md#Inselanlage)<a name="Inselanlage"></a>
     -   [Kombination aus Hausnetzeinspeisung und Inselanlage](Insel.md#Kombination)<a name="Kombination"></a>
 -   [Auswahl und Nutzung von Komponenten](Komp.md#Komponenten)<a name="Komponenten"></a>
     -   [PV-Module](Komp.md#PV-Module)<a name="PV-Module"></a>

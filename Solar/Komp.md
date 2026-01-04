@@ -21,8 +21,8 @@ lang: de
 -   [Eigenverbrauch und seine Berechnung](EV.md)
 -   [Nutzungsvarianten](SSG.md)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](SSG.md#SSG)
-    -   [Hausnetzeinspeisung mit Speicherbatterie](Speicher.md)
-    -   [Inselanlage (mit Batteriespeicherung) und Kombination](Insel.md)
+    -   [Hausnetzeinspeisung mit Pufferspeicher](Speicher.md)
+    -   [Inselanlage (mit Speicherung) und Kombination](Insel.md)
 -   [Auswahl und Nutzung von Komponenten](#Komponenten)
     -   [PV-Module](#PV-Module)
         - [Elektrischer Anschluss](#Anschluss)
@@ -35,7 +35,7 @@ lang: de
         - [Inselwechselrichter](#Inselwechselrichter)
         - [Hybridgeräte: Solar-Laderegler mit Wechselrichter](#Hybrid)
         - [Gleichspannungswandler](#Gleichspannungswandler)
-    -   [Speicherbatterien](#Speicherbatterien)
+    -   [Speicherbatterien](#Batterien)
         - [Batterie-Ladezustand](#Ladezustand)
         - [Batterie-Kapazität](#Kapazität)
         - [Batterie-Strukturierung](#Strukturierung)
@@ -167,7 +167,7 @@ Fenster oder eine Tür mit einem Flachbandkabel (z.B. [MC4-Fensterdurchführung]
 https://solarmodule-gladbeck.de/produkt/solar-mc4-fensterdurchfuehrung/?sld=3)
 oder [selbst gebaut](https://www.youtube.com/watch?v=S7qKzvbc_Gg))
 anschließen. Das kann auch dann interessant sein, wenn man einen
-[DC-gekoppelten](Speicher.md#Ladung) Speicher nicht außerhalb der Wohnung platzieren will.
+[DC-gekoppelten](Speicher.md#Kopplung) Speicher nicht außerhalb der Wohnung platzieren will.
 
 Wenige große Solarmodule sind technisch und wirtschaftlich typischerweise
 günstiger als entsprechend viele kleine. Allerdings sind der Größe praktische
@@ -290,7 +290,7 @@ HM-600:
 > 2. Lassen Sie bitte den Strom nicht über 15A ansteigen, da dies den Wechselrichter beschädigen kann.
 
 Besondere Hinweise zum Betrieb eines Solar-Mikrowechselrichters an einer
-Batterie gibt es in einem [anderen Abschnitt](Speicher.md#Batterie-WR).
+Batterie gibt es in einem [anderen Abschnitt](Speicher-Eigenbau.md#Batterie-WR).
 
 Übrigens ist es bei einem HM-1500 und der Verwendung von drei großen Modulen
 mit gleicher Ausrichtung merkwürdigerweise besonders günstig, das dritte Modul
@@ -671,7 +671,7 @@ Ein [Aufwärtswandler](https://de.wikipedia.org/wiki/Aufw%C3%A4rtswandler)
 werden, die Spannung einer 12&nbsp;V Pufferbatterie auf eine für den Eingang
 des Netzwechselrichters passende Spannung (z.B. mindestens 20&nbsp;V) zu bringen.
 
-Für die Nutzung zur [regelbaren Konstanteinspeisung](Speicher.md#Konstanteinspeisung)
+Für die Nutzung zur [regelbaren Konstanteinspeisung](Speicher-Eigenbau.md#Konstanteinspeisung)
 aus einem Strompuffer ins Hausnetz sollte der Spannungswandler
 über eine einstellbare Strombegrenzung verfügen.
 

@@ -17,14 +17,14 @@ lang: de
 
 -   [Hauptseite mit Zusammenfassung etc.](index.md)
 -   [Photovoltaik und ihr möglicher Ertrag](PV.md)
--   [Stromverbrauch und Einspeisung im Haushalt](SV.md#)
+-   [Stromverbrauch und Einspeisung im Haushalt](SV.md)
 -   [Eigenverbrauch und seine Berechnung](EV.md)
 -   [Nutzungsvarianten](SSG.md#Nutzung)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](#SSG)
         - [Hintergrund der Beschränkung auf 800&nbsp;W](#Bagatellgrenze)
         - [Kappungsverlust durch Drosselung auf 600 bzw. 800&nbsp;W](#Kappungsverlust)
-    -   [Hausnetzeinspeisung mit Speicherbatterie](Speicher.md)
-    -   [Inselanlage (mit Batteriespeicherung) und Kombination](Insel.md)
+    -   [Hausnetzeinspeisung mit Pufferspeicher](Speicher.md)
+    -   [Inselanlage (mit Speicherung) und Kombination](Insel.md)
 -   [Auswahl und Nutzung von Komponenten](Komp.md)
 -   [Beispiel-Konfigurationen](Bsp.md)
 
@@ -215,7 +215,7 @@ Der Stromwächter ist inzwischen mit vielen steuerbaren Wechselrichtern
 kompatibel und setzt eine per RS485 mit Modbus oder WLAN angebundene Messung des
 aktuellen Netz-Strombezugs z.B. mit einem Shelly 3EM voraus.\
 Wesentlich günstiger wäre
-ein Eigenbau mit [OpenDTU-OnBattery](Speicher.md#OpenDTU-OnBattery),
+ein Eigenbau mit [OpenDTU-OnBattery](Speicher-Eigenbau.md#OpenDTU-OnBattery),
 das eine Nulleinspeisung auch ohne Batterie realisieren kann.\
 Allerdings ist eine Nulleinspeisung für reinen PV-Strom (also ohne Batterie)
 [energetisch sehr ungeschickt](https://youtu.be/wxP5uMdtMmk?t=797).
