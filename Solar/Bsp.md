@@ -35,7 +35,7 @@ Beispiel-Konfigurationen {#Beispiele}
 
 ### Mobile Inselanlage {#Mobilanlage}
 
-Für unser Wohnmobil verwende ich:
+Für unser [Wohnmobil](https://perlen.DavOh.de/Camper.html) verwende ich:
 -   seit April 2024:\
     2 × [120&nbsp;Wp starre Eco-Worthy Solarpanel](
     https://www.manomano.de/p/eco-worthy-240-watt-12v-solarmodul-mit-aluminiumrahmen-hocheffizientes-monokristallines-solarpanel-solarenergieeingang-von-12v-fuer-boote-wohnmobile-vans-anhaengerhaushalt-75267927?product_id=128166485),
@@ -58,9 +58,9 @@ Für unser Wohnmobil verwende ich:
     _Ich kann solche billigen flexiblen Module nicht empfehlen.
     Sie brachten selbst unter bester Einstrahlung nie die versprochene Leistung
     und waren bereits nach 5 Jahren so [verschlissen](
-    https://www.mydealz.de/comments/permalink/47075234) (auch durch
+    https://www.mydealz.de/deals/2120-watt-starre-solarmodule-monokristallin-eco-worthy-0-mwst-2339382#comment-47075234) (auch durch
     Verschmutzung und Reinigungsversuche) inkl. Rissbildung,
-    dass sie kaum noch Ertrag brachten._\
+    dass sie kaum noch Ertrag brachten: je 10-20 Wp Leistung.\
     ![Bild: Flexible 2 * 100 Wp Dokio Module auf dem Wohnmobildach](
     Flexible_Module_am_Wohnmobildach.jpg){:width="798" .right}
 
@@ -88,7 +88,7 @@ https://www.idealo.de/preisvergleich/OffersOfProduct/6019083_-smartsolar-mppt-75
     myDealz-Beitrag](https://www.mydealz.de/deals/12v-100ah-lifepo4-akku-mit-bms-ab-400-zb-fur-solaranlage-oder-wohnmobilbatterie-ersatz-1350559)
     dazu mit interessanter Diskussion.
 
--   [2000&nbsp;Wp
+-   [2000&nbsp;W
     Wechselrichter](https://de.aliexpress.com/wholesale?SearchText=pure+sine+wave+inverter+2000w),
     ebenfalls direkt aus China, ca. 70€
 
@@ -212,15 +212,19 @@ Details zu der Anlage können bei
 ![Bild: Balkonsolaranlage mit senkrechten flexiblen Modulen
 ](Balkonsolaranlage_senkrecht_flexibel.jpg)
 
-Als Steckersolargerät mit wahlweise direkter oder gepufferter Netzeinspeisung,
-aber auch evtl. für eine Notstromversorgung daheim
-und einen längeren autarken Aufenthalt mit dem Wohnmobil
+Als Steckersolargerät mit wahlweise direkter oder gepufferter Netzeinspeisung
+(aber auch evtl. für eine Notstromversorgung daheim
+und einen längeren autarken Aufenthalt mit dem Wohnmobil)
 habe ich im Sommer 2022 folgende Komponenten gekauft:
 
--   4 × [150&nbsp;Wp flexible ETFE SSP Solarmodule](
-    https://www.solarfam.nl/150w-shingle-etfe-flexible-solar-panel-solarfam.html)
-    für 600€, [Stand März 2024 ca. 400€](
-    https://stromvoll.com/shop/#!/150W-Flexible-Solar-panel-1170-x-680-x-2-mm/p/396304457)\
+-   4 × [150&nbsp;Wp flexible ETFE SSP Solarmodule SZ-150-36MFE](Solarfam_SSP_SZ-150-36MFE.pdf)
+    <!-- https://de.enfsolar.com/pv/panel-datasheet/crystalline/48547 -->
+	<!-- https://www.solarfam.nl/150w-shingle-etfe-flexible-solar-panel-solarfam.html -->
+    für 600€, Stand Januar 2026 ca. 440€.
+	Aber leider kann ich auch diese flexiblen Panels absolut nicht empfehlen,
+	denn schon nach zwei Jahren Einsatz brachten sie nur noch etwa 60%
+	der ursprünglichen Leistung. Ihre Degradation war also völlig inakzeptabel.
+	Der Hersteller verspricht nach 5 Jahren eigentlich noch mind. 80% Leistung.\
     _Zuerst hatte ich gekauft, dann aber nicht verwendet,\
     weil mir ihre Anbringung an der Balkonbrüstung im 4.&nbsp;Stock zu riskant war:\
     4 × [120&nbsp;Wp starre Eco-Worthy
@@ -228,7 +232,7 @@ habe ich im Sommer 2022 folgende Komponenten gekauft:
     für 240€ ohne MwSt (Stand März 2024)\
     Diese Eco-Worthy Module kann ich empfehlen, wenn man keine größeren
     verwenden kann.
-    Sie bringen jedenfalls die versprochene  Spitzenleistung,
+    Sie bringen jedenfalls die versprochene Spitzenleistung,
     was gerade bei günstigen Modellen nicht selbstverständlich ist._
 
 -   [Deye Sun600g3-EU-230](
