@@ -28,7 +28,7 @@ lang: de
             - [Maxxisun Maxxicharge](#Maxxicharge)
             - [Tentek Tribune EMS](#Tentek)
             - [Weitere Produkte](#sonstige)
-          - [Effizienzbetrachtung](Speicher.md#Effizienz)
+          - [Effizienz und Speicher-Amortisation](Speicher.md#Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](Speicher-Eigenbau.md)
     -   [Inselanlage (mit Speicherung) und Kombination](Insel.md)
 -   [Auswahl und Nutzung von Komponenten](Komp.md)
