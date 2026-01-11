@@ -225,7 +225,7 @@ Lizenzkürzel:
 <!--      - [Maxxisun Maxxicharge](Speicher-2024.md#Maxxicharge)<a name="Maxxicharge"></a> -->
 <!--      - [Tentek Tribune EMS](Speicher-2024.md#Tentek)<a name="Tentek"></a> -->
 <!--      - [Weitere Produkte](Speicher-2024.md#sonstige)<a name="SSG-Speicher-sonstige"></a> -->
-          - [Effizienzbetrachtung](Speicher.md#Effizienz)<a name="SSG-Speicher-Effizienz"></a>
+          - [Effizienz und Speicher-Amortisation](Speicher.md#Effizienz)<a name="SSG-Speicher-Effizienz"></a>
         - [SSG-Speicherlösungen im Eigenbau](Speicher-Eigenbau.md#Eigenbau)<a name="SSG-Speicher-Eigenbau"></a>
           - [Implementierung der Speicher-Regelung](Speicher-Eigenbau.md#Regelungsimplementierung)<a name="Regelungsimplementierung"></a>
           - [Betrieb eines Mikrowechselrichters an einer Batterie](Speicher-Eigenbau.md#Batterie-WR)<a name="Batterie-WR"></a>
