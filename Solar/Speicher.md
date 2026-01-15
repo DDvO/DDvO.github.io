@@ -26,7 +26,7 @@ lang: de
         - [Regelungsstrategien für PV-Speicher](#Regelungsstrategien)
         - [Dimensionierung des Stromspeichers](#Dimensionierung)
         - [Kommerzielle SSG-Speicherlösungen](#kommerziell)
-          - [Effizienz und Speicher-Amortisation](#Effizienz)
+        - [Rentabilität von Balkon-Solarspeichern](#Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](Speicher-Eigenbau.md)
     -   [Inselanlage (mit Speicherung) und Kombination](Insel.md)
 -   [Auswahl und Nutzung von Komponenten](Komp.md)
@@ -70,7 +70,7 @@ Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
 <!-- https://www.mydealz.de/comments/permalink/46085250 -->
 In diesem Zusammenhang wird von Anbietern und Nutzer oft eine
 naive (Milchmädchen-)Rechnung in folgender Art gemacht:
-> Der Speicher hat eine nutzbare Kapazität von 1,5&nbsp;kWh und 6000 Ladezyklen. Damit lassen sich also 9000&nbsp;kWh einsparen, was bei 30&nbsp;ct/kWh 2700€ Ertrag bringt.
+> Der Speicher hat eine nutzbare Kapazität von 1,5&nbsp;kWh und 6000 Ladezyklen. Damit lassen sich also 9000&nbsp;kWh einsparen, was bei 0,30&nbsp;€/kWh 2700€ Ertrag bringt.
 
 Das berücksichtigt aber keine Verluste und vor allem nicht, wie lange
 es dauern würde, um auf die (angeblich erreichbare) Zyklenzahl zu kommen.
@@ -210,7 +210,7 @@ der Eigenverbrauchsanteil von ca. 66 auf etwa 83% des Nettoertrags steigern.
 Der PV-Bruttoertrag von 1062&nbsp;kWh bzw. Nettoertrag 918&nbsp;kWh wird also
 gut genutzt. Der Speicher mit effektiv 1&nbsp;kWh Kapazität
 ist mit ca. 225 Vollzyklen pro Jahr nur mäßig belastet.
-Bei 30&nbsp;ct/kWh Strompreis ergibt sich durch die Hinzunahme des Speichers
+Bei 0,30&nbsp;€/kWh Strompreis ergibt sich durch die Hinzunahme des Speichers
 eine jährliche Stromkosten-Einsparung von ca. 60€.
 
 Selbst wenn die dafür nötigen Komponenten günstig für z.B. 600€ erworben werden,
@@ -749,92 +749,105 @@ Der Speicher ist je nach Gerät [AC- und/oder DC-gekoppelt](#Kopplung).
   eine Lithium-basierte Batterie bei Minustemperaturen nicht geladen sollte,
   so dass sie dann nur nutzbar ist, wenn sie auf über 0°C erwärmt wird.
 
-#### Effizienz und Speicher-Amortisation {#Effizienz}
+### Rentabilität von Balkon-Solarspeichern {#Effizienz}
 
-Hier ein Vergleich des mit unterschiedlichen Ansätzen erzielbaren
+Hier folgt ein Vergleich des mit unterschiedlichen Ansätzen erzielbaren
 Jahres-Eigenverbrauchs für einen Haushalt mit 3000&nbsp;kWh Jahresverbrauch
 (nächtliche Durchschnittslast 190&nbsp;W zwischen 0 und 6&nbsp;Uhr,
 tagsüber Durchschnittslast 375&nbsp;W zwischen 8 und 16&nbsp;Uhr)
 mit optimal ausgerichteten 850&nbsp;Wp Modulen in Süddeutschland
 und typischen Wirkungsgraden.
-Der besseren Vergleichbarkeit halber wurde hier generell eine Speicherkapazität
-von 1600&nbsp;Wh (mit 90% Entladetiefe) <!-- wie beim Anker Solix 2 --> vorausgesetzt
-&mdash; ohnehin fällt sie bei einer Balkonanlage kaum ins Gewicht.
+Der Vergleichbarkeit halber wurde hier generell eine Speicherkapazität
+von 2&nbsp;kWh  <!-- 1600 Wh wie beim Anker Solix 2 --> (mit 90% Entladetiefe)
+vorausgesetzt.\
+Bei einer üblichen Balkonanlage (PV-Nennleistung unter 1000&nbsp;Wp)
+fällt eine weitere Erhöhung der Kapazität kaum ins Gewicht,
+weil 2&nbsp;kWh schon nahe an der Sättigung liegt: fast der ganze PV-Überschuss
+kann gespeichert werden &mdash; bei optimaler Regelung
+werden nur noch etwa 25&nbsp;kWh pro Jahr ans externe Netz abgegeben.
 
-* 610&nbsp;kWh Eigenverbrauch als Vergleichswert nur mit PV ohne Speicher-Nutzung
-* 860&nbsp;kWh Eigenverbrauch (bei 1000&nbsp;Wh 810&nbsp;kWh, bei 2000&nbsp;Wh 880&nbsp;kWh)
-  bei optimaler lastabhängiger Regelung
-* 725&nbsp;kWh Eigenverbrauch bei [Anker Solix Solarbank 1](Speicher-2024.md#Solix1) Strategie mit optimal gewählter FLLR, hier 180&nbsp;W;\
+* 610&nbsp;kWh Eigenverbrauch mit PV ohne Speicher-Nutzung, als Vergleichswert
+* 880&nbsp;kWh Eigenverbrauch bei optimaler lastabhängiger Regelung (bei 1000&nbsp;Wh 810&nbsp;kWh, bei 1500&nbsp;Wh 850&nbsp;kWh, bei 2500&nbsp;Wh 897&nbsp;kWh)
+* 735&nbsp;kWh Eigenverbrauch bei [Anker Solix Solarbank 1](Speicher-2024.md#Solix1) Strategie mit optimal gewählter FLLR, hier 190&nbsp;W;\
   mit diesen Parametern werden 10&nbsp;kWh PV-Nettoleistung verworfen
-* 735&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung
+* 734&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung ohne Bypass
   mit für diesen Fall optimaler Zielleistung, hier 260&nbsp;W
+* 754&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung mit Bypass
+  mit für diesen Fall optimaler Zielleistung, hier 220&nbsp;W
 
-Die Ergebnisse wurden mit dem [SolBatSim](EV.md#SolBatSim) berechnet.
+Die genannten Eigenverbrauchs-Zahlen mit Speicher setzen DC-Kopplung voraus.
+Mit AC-Kopplung sieht es wegen der zusätzlichen Umwandlungsverluste
+natürlich etwas schlechter aus: bei optimaler Regelung 852&nbsp;kWh,
+also etwa 30&nbsp;kWh weniger Eigenverbrauch pro Jahr als mit DC-Kopplung.
+
+Die Ergebnisse wurden mit dem [SolBatSim](EV.md#SolBatSim) ermittelt.
 Der [Stecker-Solar-Simulator](EV.md#HTW) der HTW Berlin liefert für
-den Nutzen eines Stromspeichers mit optimaler lastabhängiger Regelung
+den Nutzen eines SSG-Stromspeichers mit optimaler lastabhängiger Regelung
 unter gleichen Voraussetzungen ähnlich ernüchternde Zahlen.
 
 <!--
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy
 Nächtliche Durchschnittslast=  189 W von 0 bis 6 Uhr
 PV-Eigenverbrauch           =  608 kWh
+PV-Überschuss               =  305 kWh
+Netzeinspeisung             =  305 kWh
 
 https://www.mydealz.de/comments/permalink/42396908
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 # Zendure, EcoFlow oder Maxxicharge 1600 Wh oder Solarbank 2 opt
 PV-Eigenverbrauch           =  859 kWh   (bei 1000 Wh 810 kWh, 2000 Wh 881 kWh)
+/Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 2000 -dc -max_charge 100 # opt
+PV-Eigenverbrauch           =  881 kWh
+PV-Überschuss               =  305 kWh
+Netzeinspeisung             =   26 kWh
+
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 2000 -ac -max_charge 100 # opt, AC-gekoppelt
+PV-Eigenverbrauch           =  852 kWh
 
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 180 -feed excl 100  # Anker Solix Solarbank 1
 Verworfene PV-Leistung      =   10 kWh
 PV-Eigenverbrauch           =  725 kWh
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 2000 -dc -max_charge 100 -pass spill 190 -feed excl 100
+Verworfene PV-Leistung      =   14 kWh
+PV-Eigenverbrauch           =  735 kWh
 
-./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 200 -feed comp 200   # Konstanteinspeisung my Bypass
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -pass spill 200 -feed comp 200   # Konstanteinspeisung mit Bypass
 PV-Eigenverbrauch           =  740 kWh
+/Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 2000 -dc -max_charge 100 -pass spill 220 -feed comp 220   # Konstanteinspeisung mit Bypass
+PV-Eigenverbrauch           =  754 kWh
+
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 2000 -dc -max_charge 100 -pass 260 -feed comp 260    # Konstanteinspeisung ohne Bypass
 PV-Eigenverbrauch           =  734 kWh
 -->
 
 Wenn man eine optimale lastabhängige Lade- und Entladestrategie nutzen kann, ist
-das Ergebnis natürlich noch relativ am besten: ein Gewinn von etwa 250&nbsp;kWh im Jahr.\
-Selbst mit mehreren geschickt eingesetzten Smart Plugs oder einer ausgefeilten
-Uhrzeit-abhängigen Steuerung wird man kaum an diesen Maximalwert herankommen.\
-Ansonsten ist es bei konstanter Zielleistung selbst mit günstigster Wahl dieses
-Parameters und mit Bypass-Funktion ziemlich egal, welche Strategie im Detail
-verfolgt wird &mdash; man erhält nur magere 135 bis 150&nbsp;kWh Gewinn pro Jahr.
+das Ergebnis natürlich noch relativ am besten: ein Gewinn von etwa 270&nbsp;kWh im Jahr.
+Allerdings erfordert das eine ständige
+[Messung des Haushalts-Stromsaldos](SV.md#Gesamtstrom),
+wozu ein passendes Messgerät angeschlossen werden muss, was Anschaffungs-
+und teils auch Installationskosten mit sich bringt.\
+Selbst die besten Alternativen liegen deutlich unter diesem Maximalwert,
+seien es mehrere geschickt eingesetzte Smart Plugs,
+eine ausgefeilte Uhrzeit-abhängige Steuerung oder
+eine konstante Zielleistung, auch bei günstigster Wahl dieses
+Parameters und mit Bypass-Funktion. Nach den Simulationsergebnissen ist es
+ziemlich egal, welche Strategie im Detail verfolgt wird &mdash;
+man erhält nur magere 124 bis 144&nbsp;kWh Eigenverbrauchs-Gewinn pro Jahr.
 
-Selbst die durch den Speicher maximal mögliche Eigenverbrauchs-Steigerung
-von 250&nbsp;kWh bringt bei 30&nbsp;ct/kWh nur 75€ Ersparnis pro Jahr.
+Selbst die mit einem 2&nbsp;kWh Speicher maximal mögliche Eigenverbrauchs-Steigerung
+von 270&nbsp;kWh bringt bei 0,30&nbsp;€/kWh nur 80€ Ersparnis pro Jahr.
 Damit kann sich so ein Gerät, das je nach Kapazität
-(und Zusatzkosten wie für ein smartes Haushalts-Strommessgerät)
-Stand Anfang 2026 mindestens etwa 600€ kostet
-und hoffentlich 10 Jahre Lebensdauer hat, kaum amortisieren
-&mdash; selbst im Idealfall dauert das 8 Jahre.\
-Noch schlechter sieht es mit ungünstiger Regelung wie etwa bei der
-[Anker Solix Solarbank 1](Speicher-2024.md#Solix1) aus,
+(und Zusatzkosten wie für ein smartes Haushalts-Strommessgerät, ohne Installationskosten)
+Stand Anfang 2026 mindestens etwa 480€ kostet
+und hoffentlich mindestens 10 Jahre Lebensdauer hat, nicht schnell amortisieren;
+selbst im Idealfall (ohne Installationskosten) dauert dies 6 Jahre.\
+Noch schlechter sieht es mit ungünstiger Regelung aus, wie etwa bei der
+[Anker Solix Solarbank 1](Speicher-2024.md#Solix1),
 wo sich eine Ersparnis von realistisch nur etwa 40€ pro Jahr ergibt.
 
 <!--
 Alle diese Lösungen sind für typische Balkonanlagen mit 2 Modulen
 also einfach zu teuer, um rentabel zu sein.
 -->
-<!--
-./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -bend 2,2,2,2,2,2,2,2,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,2,2,2,2,2,2
-PV-Eigenverbrauch           =  366 kWh
-
-./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -bend 2,2,2,2,2,2,2,2,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,2,2,2,2,2,2
-PV-Eigenverbrauch           =  687 kWh
--->
-
-Falls man tagsüber zwischen 8 und 18 Uhr nur halb so viel Verbrauch hätte wie
-normal und in der übrigen Zeit entsprechend mehr (Durchschnittslast 294&nbsp;W
-zwischen 0 und 6&nbsp;Uhr, 146&nbsp;W zwischen 8 und 16&nbsp;Uhr), wäre
-die Stromspeicherung deutlich interessanter, und führt unter sonst gleichen
-Bedingungen zu einer Steigerung des jährlichen Eigenverbrauchs von ungefähr
-365&nbsp;kWh auf 685&nbsp;kWh. Dieses Szenario ist aber untypisch.
-Die Amortisationszeit des Balkonkraftwerks ohne Speicher wäre dabei etwa doppelt
-so lang wie normal, und die Hinzunahme des Speichers kann immerhin etwas mehr als das
-kompensieren, was man durch die sehr ungünstige Verteilung des Stromverbrauchs
-über die Tageszeiten verliert.
-
 <!--
 https://www.mydealz.de/deals/balkonkraftwerk-anker-solix-solarbank-2-e1600-pro-integrierter-800w-wechselrichter-4x-ja-solar-bifacial-440w-2385846#reply-48263080
 
@@ -843,20 +856,43 @@ PV-Eigenverbrauch           =  859 kWh
 
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1800 -tmy -capacity 1600 -dc -max_charge 100
 PV-Eigenverbrauch           = 1266 kWh
-
+/Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1800 -tmy -capacity 2000 -dc -max_charge 100
+PV-Eigenverbrauch           = 1332 kWh
 -->
 
-Besser sieht es (wieder zurück bei einem typischen Lastprofil) dann aus, wenn man
+Besser sieht es aus, wenn man
 <!--&mdash; etwa bei dem Zendure Hub 2000 oder der Anker Solix Solarbank 2 Pro &mdash; -->
 vier PV-Module nutzen kann, mit insgesamt z.B. 1800&nbsp;Wp.
-Wobei damit allerdings das fragwürdige 960 Wp-Limit der
+Wobei damit allerdings das fragwürdige 960&nbsp;Wp-Limit der
 [VDE-Produktnorm 0126-95:2025-12 für Balkonkraftwerke](https://www.heise.de/news/Schuko-Stecker-offiziell-solartauglich-DIN-fuer-Balkonkraftwerke-ist-fertig-11078720.html)
 überschritten wird, was offiziell eine Installation durch Fachpersonal erfordert.
-Bei sonst gleichen Randbedingungen steigert ein 1,6&nbsp;kWh Speicher mit optimaler Regelung
-den Eigenverbrauch pro Jahr etwa von 860&nbsp;kWh auf 1260&nbsp;kWh.
-Die jährliche Ersparnis durch die Speicherlösung beträgt damit ungefähr 120€.
-Bei einem Kaufpreis von 600€ würde sich der Speicher also in etwa 5 Jahren
-amortisieren &mdash; aber nur wenn man keine Installationskosten einrechnet.
+Bei sonst gleichen Randbedingungen steigert ein 2&nbsp;kWh Speicher mit optimaler Regelung
+den Eigenverbrauch pro Jahr von etwa von 860&nbsp;kWh auf 1330&nbsp;kWh.
+Die jährliche Ersparnis durch die Speicherlösung bei 0,30&nbsp;€/kWh
+beträgt damit ungefähr 140€.
+Bei geringen Kosten von beispielsweise 480€
+kann sich der Speicher also in etwa 3 1/2 Jahren amortisieren.
+
+<!--
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -bend 2,2,2,2,2,2,2,2,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,2,2,2,2,2,2
+PV-Eigenverbrauch           =  366 kWh
+
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 1600 -dc -max_charge 100 -bend 2,2,2,2,2,2,2,2,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,2,2,2,2,2,2
+PV-Eigenverbrauch           =  687 kWh
+./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -tmy -capacity 2000 -dc -max_charge 100 -bend 2,2,2,2,2,2,2,2,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,2,2,2,2,2,2
+PV-Eigenverbrauch           =  736 kWh
+-->
+
+Falls man tagsüber zwischen 8 und 18 Uhr nur halb so viel Verbrauch hätte wie
+normal und in der übrigen Zeit entsprechend mehr (Durchschnittslast 294&nbsp;W
+zwischen 0 und 6&nbsp;Uhr, 146&nbsp;W zwischen 8 und 16&nbsp;Uhr), wäre
+die Stromspeicherung deutlich interessanter und führt unter sonst gleichen
+Bedingungen zu einer Steigerung des jährlichen Eigenverbrauchs von ungefähr
+365&nbsp;kWh auf 736&nbsp;kWh. Dieses Szenario ist aber untypisch.
+Die Amortisationszeit des Balkonkraftwerks ohne Speicher wäre dabei etwa doppelt
+so lang wie normal, und die Hinzunahme des Speichers kann immerhin mehr als das
+kompensieren, was man durch die sehr ungünstige Verteilung des Stromverbrauchs
+über die Tageszeiten verliert: Der Speicher bringt etwa 370&nbsp;kWh Steigerung.
 
 <!--
 Zendure SolarFlow
