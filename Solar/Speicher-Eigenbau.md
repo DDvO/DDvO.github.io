@@ -22,6 +22,7 @@ lang: de
 -   [Nutzungsvarianten](SSG.md)
     -   [Direkte Netzeinspeisung (Steckersolargerät SSG, „Balkonkraftwerk“)](SSG.md#SSG)
     -   [Hausnetzeinspeisung mit Pufferspeicher](Speicher.md)
+        - [Rentabilität von Balkon-Solarspeichern](Speicher.md#Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](#Eigenbau)<a name="SSG-Speicher-Eigenbau"></a>
             - [Implementierung der Speicher-Regelung](#Regelungsimplementierung)
             - [Betrieb eines Mikrowechselrichters an einer Batterie](#Batterie-WR)
