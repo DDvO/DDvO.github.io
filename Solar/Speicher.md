@@ -717,25 +717,38 @@ auch höchstens kurzzeitig ganz voll geladen lassen (ansonsten eher zu 80 bis 90
 Aufgrund des wachsenden Interesses an Speicherlösungen auch für kleine
 PV-Anlagen kamen 2023 die ersten steckerfertigen Lösungen auf den Markt.
 Erst im Jahr 2025 waren die Produkte einigermaßen ausgereift.
-Davor hatten sie teils noch sehr primitive Regelungen oder diverse
+Davor hatten sie teils noch sehr primitive Regelungen oder diverse massive
 Kinderkrankheiten, wie [diese Zusammenstellung](Speicher-2024.md#kommerziell) vom Sommer 2024 zeigt.
 
-Einen gute Übersicht, die zumindest bis November 2025 aktualisiert wurde,
+Einen gute Übersicht, die zumindest bis Februar 2026 aktualisiert wurde,
 findet sich [hier](https://www.energiemagazin.com/balkonkraftwerk/speicher/).
 Die dortigen Aussagen zur Amortisation sind allerdings mit Vorsicht zu genießen,
 u.A. weil sie von einer optimalen Lade- und Entladestrategie ausgehen.
 
 Die kommerziellen Produkte haben Folgendes gemeinsam.
-* Der Speicher ist proprietär &mdash; man muss also die (eher teuren)
-  Batterien des jeweiligen Herstellers verwenden.
-* Zentral für die Regelung der Geräte ist die aktuelle Zielleistung,
-  die über den angeschlossenen Wechselrichter ins Hausnetz gespeist werden soll.
-* Wenn die verfügbare PV-Leistung mindestens so groß wie die Zielleistung ist,
- wird diese Leistung eingespeist und der Rest zum Laden des Speichers verwendet.
-* Wenn die aktuelle PV-Leistung unter der Zielleistung liegt, wird (je nach
-  Gerät) die PV-Leistung eingespeist und/oder Strom aus dem Speicher entnommen.
+* Zentral für eine sinnvolle Regelung der Geräte ist die aktuelle Zielleistung,
+  die über einen Wechselrichter ins Hausnetz gespeist werden soll.<br>
+  Wenn die verfügbare PV-Leistung mindestens so groß wie die Zielleistung ist,
+  wird diese Leistung eingespeist und der Rest zum Laden des Speichers verwendet.<br>
+  Liegt die aktuelle PV-Leistung unter der Zielleistung, wird sie (je nach
+  Gerät) eingespeist und/oder Strom aus dem Speicher entnommen.<br>
+  Die Zielleistung sollte nicht approximiert (also manuell eingestellt oder durch
+  angeblich „smarte“ z.B. zeitabhängige Heuristiken bestimmt werden,
+  sondern möglichst sekundengenau über den [Gesamt-Leistungssaldo](SV.md#Gesamtstrom)
+  am Sicherungskasten des Haushalts gemessen werden.
+  Nur so lässt sich der Speicher [optimal nutzen](#Regelungsstrategien).
 * Die Speicher-Entladung wird durch die (typischerweise einstellbare)
   maximale Entladetiefe begrenzt.
+* Die meisten Produkte erfordern für die Regelung eine Internet-Verbindung
+  zu einem IT-Dienst ihres Herstellers („Cloud-Zwang“).
+  Das verursacht Verzögerungen, so dass die Regelung nicht so präzise
+  und sein kann wie eine lokal auf dem Gerät implementierte.
+  Auch birgt so eine externe Verbindung Datenschutz- und IT-Sicherheitsrisiken.
+  Außerdem funktioniert das Ganze nicht bei Server-, Internet- oder Stromausfall
+* Die Geräte haben einen nicht ganz vernachlässigbaren Eigen-Stromverbrauch
+von typischerweise ca. 20&nbsp;Watt.
+* Der Speicher ist proprietär &mdash; man muss also die (eher teuren)
+  Batterien des jeweiligen Herstellers verwenden.
 
 Der Speicher ist je nach Gerät [AC- und/oder DC-gekoppelt](#Kopplung).
 * AC-gekoppelte Speicher sind in der Verwendung sehr flexibel
@@ -746,7 +759,7 @@ Der Speicher ist je nach Gerät [AC- und/oder DC-gekoppelt](#Kopplung).
   zwischen PV-Module und Mikrowechselrichter gesteckt.
   Der wichtigste Vorteil davon ist größere Effizienz als mit AC-Kopplung.\
   Ein Nachteil ist, dass der Speicher meist außerhalb der Wohnung steht und
-  eine Lithium-basierte Batterie bei Minustemperaturen nicht geladen sollte,
+  eine Lithium-basierte Batterie bei Minustemperaturen nicht geladen werden darf,
   so dass sie dann nur nutzbar ist, wenn sie auf über 0°C erwärmt wird.
 
 ### Rentabilität von Balkon-Solarspeichern {#Effizienz}
@@ -890,8 +903,8 @@ die Stromspeicherung deutlich interessanter und führt unter sonst gleichen
 Bedingungen zu einer Steigerung des jährlichen Eigenverbrauchs von ungefähr
 365&nbsp;kWh auf 736&nbsp;kWh. Dieses Szenario ist aber untypisch.
 Die Amortisationszeit des Balkonkraftwerks ohne Speicher wäre dabei etwa doppelt
-so lang wie normal, und die Hinzunahme des Speichers kann immerhin mehr als das
-kompensieren, was man durch die sehr ungünstige Verteilung des Stromverbrauchs
+so lang wie normal. Der Speicher kann jedoch mehr als das kompensieren,
+was man durch die sehr ungünstige Verteilung des Stromverbrauchs
 über die Tageszeiten verliert: Der Speicher bringt etwa 370&nbsp;kWh Steigerung.
 
 <!--
