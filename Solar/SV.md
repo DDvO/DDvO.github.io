@@ -173,8 +173,8 @@ Zählerstände im Jahresabstand.
 Sowohl als Basis der Energieabrechnung für einen Haushalt als auch für die
 optimale [Regelung](Speicher.md#Regelungsstrategien) eines Stromspeichers ist es nötig,
 den *Gesamt-Leistungssaldo* (in Summe über alle drei Phasen) zu bestimmen.
-Diese geschieht am Einspeisepunkt des Haushalts, also am Hauptverteiler
-eines Einfamilienhauses bzw. am Unterverteiler/Sicherungkasten einer Wohnung.
+Diese geschieht am Einspeisepunkt des Haushalts, also am Hauptrverteiler
+eines Einfamilienhauses bzw. am Unterverteiler („Sicherungskasten“) einer Wohnung.
 Ein [Stromzähler](#Stromzähler) bestimmt daraus die verbrauchte (und teils auch
 eingespeiste) Energie durch zeitliche Integration des Gesamt-Leistungssaldos.
 
