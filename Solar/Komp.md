@@ -775,6 +775,8 @@ ergibt sich aus dem Startzustand und dem Saldo der Strommenge der Ladezustand.
 [Hier](https://github.com/DDvO/SolBatHome/blob/master/packages/battery.yaml)
 eine Konfiguration für den Home Assistant, die den Ladezustand in Ruhe über
 die Spannung und während des (Ent-)Ladens über die Coulomb-Methode bestimmt.
+Diese ist Teil der [SolBatHome](https://github.com/DDvO/SolBatHome)-Software
+zur Überwachung und Regelung einer Balkon-PV-Anlage mit AC-gekoppeltem Speicher.
 
 Zur Messung der relativ hohen Ströme wird meist ein *Nebenwiderstand* verwendet,
 engl. [*shunt*](https://de.wikipedia.org/wiki/Shunt_(Elektrotechnik)).
