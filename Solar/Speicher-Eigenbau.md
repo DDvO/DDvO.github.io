@@ -39,7 +39,7 @@ lang: de
 
 Wer für sein Balkonkraftwerk einen rentablen Stromspeicher haben will, kam bis
 2024 um einen Eigenbau nicht herum, allein schon wegen der Batteriepreise.
-Außerdem muss man sich technisch gut auskennen und einige Arbeit investieren,
+Allerdings muss man sich technisch gut auskennen und einige Arbeit investieren,
 um eine effiziente Regelung hinzubekommen.
 In diesem Abschnitt einige Hinweise und Beispiele,
 wie es gelingen kann und wie es (nicht) wirklich effizient wird.
@@ -76,6 +76,12 @@ Das bietet eine recht hübsche und flexible grafische Bedienungs-Oberfläche,
 sowie eine relativ einfache Anbindung von Hardware-Komponenten z.B. von Shelly,
 aber hat eine grauenhafte YAML -und Python-basierte Programmierumgebung mit nur
 teilweise hilfreicher Dokumentation und schlechter Debugging-Unterstützung.
+
+Die Software [SolBatHome](https://github.com/DDvO/SolBatHome) zur Überwachung
+und Steuerung einer Balkon-PV-Anlage mit AC-gekoppeltem Speicher
+wurde basierend auf Home Assistant entwickelt.
+Sie regelt ein AC-gekoppeltes Ladegerät über ein ESP8266-Modul
+und einen Hoymiles-Wechselrichter zur Entladung über OpenDTU.
 
 Wesentlich angenehmer programmierbar ist wohl die Perl-basierte „Freundliche
 Hausautomation und Energie-Messung“ [(FHEM)](https://fhem.de/fhem_DE.html).
