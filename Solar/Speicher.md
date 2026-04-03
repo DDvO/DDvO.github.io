@@ -570,9 +570,8 @@ erwartete PV-Ertrag, Verbrauch im Haushalt, Strompreis, usw.
 
 Die [Implementierung einer Speicher-Regelung](Speicher-Eigenbau.md#Regelungsimplementierung),
 welche [lastbasiert](Speicher-Eigenbau.md#lastgeregelt) sein sollte, ist regelungstechnisch
-ziemlich aufwendig. Sie lohnt sich finanziell bislang eher nur für
-größere PV-Anlagen und (wegen der Speicherkosten) für nicht sehr große Speicher.
-
+ziemlich aufwendig. <!-- Sie lohnt sich finanziell bislang eher nur für
+größere PV-Anlagen und (wegen der Speicherkosten) für nicht sehr große Speicher. -->
 Statt einer lastabhängigen Regelung ist es besonders für Steckersolargeräte
 viel einfacher, aber leider wenig effizient,
 die (gedrosselte) Ausgangsleistung des Wechselrichters und die Batteriekapazität
@@ -621,23 +620,29 @@ Verbrauch zu berücksichtigen.
 Eine genaue Optimierungs kann durch Simulationen mit verschiedenen Speichergrößen
 unter Berücksichtigung des Haushalts-Lastprofils erfolgen.
 
-Für das [o.g. Balkonkraftwerk-Beispiel](#Batteriespeicher) beträgt der tägliche
+Für das [o.g. Balkonkraftwerk-Beispiel](#Batteriespeicher) optimal genutzten
+850&nbsp;Wp in einem Haushalt mit 3000&nbsp;kWh Jahresverbrauch beträgt der tägliche
 PV-Überschuss maximal etwa 4&nbsp;kWh und im Jahres-Durchschnitt 0,85&nbsp;kWh.
 An ca. 130 Tagen beträgt er über 1&nbsp;kWh, an nur 50 Tagen über 2&nbsp;kWh,
 und sogar nur an 5 Tagen über 3&nbsp;kWh.
 Erst ab effektiv ca. 4&nbsp;kWh Speicherkapazität gibt es ein paar Tage,
 wo der gespeicherte Strom über Mitternacht reicht.\
-Mit effektiv 1&nbsp;kWh Speicherkapazität liegt bei optimaler Regelung
-die Steigerung des jährlichen Eigenverbrauchs bei 200&nbsp;kWh.
-Eine Erhöhung der nutzbaren Speicherkapazität auf 2&nbsp;kWh bringt nur noch
-etwa 60&nbsp;kWh weitere Steigerung und lohnt damit den Speicher-Aufpreis nicht.
-Hingegen brächte schon eine effektive Speicherkapazität auf 0,5&nbsp;kWh eine
-Steigerung des Eigenverbrauchs von 140&nbsp;kWh.
+Doch schon mit effektiv nur 0,5&nbsp;kWh Speicherkapazität liegt bei optimaler Regelung
+die Steigerung des jährlichen Eigenverbrauchs bei 140&nbsp;kWh.
+Eine Erhöhung um 0,5 auf 1&nbsp;kWh steigert den Eigenverbrauchs um 60#6nbsp;kWh auf 200&nbsp;kWh.
+Eine weitere Erhöhung der nutzbaren Speicherkapazität auf 2&nbsp;kWh bringt auch nur noch
+etwa 60&nbsp;kWh weitere Steigerung auf 260&nbsp;kWh, so dass sich die Rentabilität dieser Steigerung
+über einige Jahre hinzieht.
+Allerdings gibt es kaum noch kommerzielle Speicherlösungen mit deutlich weniger als 2&nbsp;kWh.
 
-Deutlich interessanter ist die Speichernutzung bei Verdoppelung der PV-Leistung
-auf 1700&nbsp;Wp. Dann bringt 1&nbsp;kWh Speicherkapazität bei optimaler
-Regelung eine Steigerung des jährlichen Eigenverbrauchs von 300&nbsp;kWh,
-und bei 2&nbsp;kWh effektiver Kapazität immerhin nochmal 170&nbsp;kWh mehr.
+Deutlich interessanter wird die Speichernutzung bei Verdoppelung der PV-Leistung
+auf 1700&nbsp;Wp. Dann bringt 1&nbsp;kWh Speicherkapazität bei optimaler Regelung
+<!-- TODO PV-Nutzung über Speicher    =  313 kWh wegen seff = 99 statt bisher 95 -->
+eine Steigerung des jährlichen Eigenverbrauchs von 300&nbsp;kWh.
+Bei 2&nbsp;kWh effektiver Kapazität sind es immerhin nochmal 175&nbsp;kWh mehr,
+und bei weiterer Verdoppelung auf 4&nbsp;kWh noch 225&nbsp;kWh mehr, also 700&nbsp;kWh.
+Noch mehr Speicherkapazität lohnt sich aber nicht &mdash;
+bei 6&nbsp;kWh würde der Eigenverbrauch nur noch um 95&nbsp;kWh ansteigen.
 
 <!--
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 1700 -peff 92 -tmy -dc -max_charge 100 -max_discharge 100 -capacity 2000
