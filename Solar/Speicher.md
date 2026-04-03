@@ -59,17 +59,16 @@ alle zwei Tage verwendet --- was aber nicht heißt, dass der Speicher im Schnitt
 jeden zweiten Tag erst mal voll aufgeladen und dann wieder ganz entladen wird.
 
 Die Strompufferung soll den Nutzen der PV-Anlage für den eigenen Stromverbrauch
-erhöhen. Aber **finanziell lohnt sie sich für kleine PV-Anlagen fast nie** ---
-außer wenn sie über eine nahezu optimale (lastgesteuerte)
+erhöhen. Sie lohnt sich finanziell nur, wenn sie über eine nahezu optimale (lastgesteuerte)
 [Lade- und Entladeregelung](#Regelungsstrategien) verfügt und man den
-Speicher sehr günstig bekommt oder schon aus anderen Gründen hat, z.B. für
+Speicher günstig bekommt oder schon aus anderen Gründen hat, z.B. für
 eine Notstromversorgung (mit Inselwechselrichter) oder als Fahrzeugbatterie.
-Außerdem ist es für die ökologische Gesamtbilanz eigentlich besser, den
-überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
+Für die ökologische und volkswirtschaftliche Gesamtbilanz wäre es allerdings eigentlich besser,
+den überschüssigen Strom an die Allgemeinheit (auch ohne Vergütung) abzugeben.
 
 <!-- https://www.mydealz.de/comments/permalink/46085250 -->
-In diesem Zusammenhang wird von Anbietern und Nutzer oft eine
-naive (Milchmädchen-)Rechnung in folgender Art gemacht:
+Für die Rentabilität werden von Anbietern und Nutzern gern
+naive (Milchmädchen-)Rechnungen folgender Art gemacht:
 > Der Speicher hat eine nutzbare Kapazität von 1,5&nbsp;kWh und 6000 Ladezyklen. Damit lassen sich also 9000&nbsp;kWh einsparen, was bei 0,30&nbsp;€/kWh 2700€ Ertrag bringt.
 
 Das berücksichtigt aber keine Verluste und vor allem nicht, wie lange
@@ -78,14 +77,16 @@ Pro Jahr hat man nur mäßig viele sonnige Tage, so dass man typischerweise auf
 nur 150 bis 250 Vollzyklen im Jahr kommt, je nach PV-Leistung, Verbrauch und
 Speicher-Dimensionierung. Somit werden 6000 Vollzyklen erst in ungefähr 30
 Jahren erreicht, und so lange wird das Speicher-Equipment bestimmt nicht halten!
+<!--
 Zudem beträgt bei 30 Jahren Laufzeit die Rendite bei einem Einkaufspreis von
 1500€ nur 6%, so dass man sich fragen muss, ob sich so eine Investition mit
 sehr langfristiger Kapitalbindung überhaupt lohnt.
 Wobei auch unklar ist, wie sich das Verhältnis
 des Preises für so eine Speicheranlage zum Strompreis langfristig entwickelt.
+-->
 
+<!--
 Besser sieht es bei größeren PV-Anlagen aus.
-<!-- https://www.mydealz.de/comments/permalink/44464786 -->
 Hier das Ergebnis von Simulationen für ein Wohnhaus mit angenommenen 5000&nbsp;kWh
 Jahresverbrauch und 200&nbsp;W Mindestlast und ansonsten typischem Lastprofil,
 optimal ausgerichteter PV-Anlage in Süddeutschland mit 10&nbsp;kWp,
@@ -93,16 +94,16 @@ mit einem kleinen Speicher mit effektiv 2&nbsp;kWh
 und typischen Verlusten/Wirkungsgraden.
 Nehmen wir Einspeisevergütung und 30 - 8 = 22&nbsp;ct/kWh Strompreisdifferenz​ an.
 
-* Wenn der Speicher <!--AC-gekoppelt ist und--> optimal lastabhängig geladen und
+* Wenn der Speicher AC-gekoppelt ist und optimal lastabhängig geladen und
 entladen wird, dann steigt der PV-Eigenverbrauch von 2020​ auf 2746​&nbsp;kWh im Jahr,
 was bei den 22&nbsp;ct/kWh Strompreisdifferenz etwa 160€/Jahr Einsparung ausmacht.
-<!--Bei einem [Eigenbau](Speicher-Eigenbau.md) mit günstigen Komponenten, die insgesamt 1000€ kosten, -->
 Bei Systemen, die 1000€ kosten, amortisiert sich das nach gut 6 Jahren.
 * Bei ansonsten gleichen Daten, aber 4&nbsp;kWh nutzbarer Speicherkapazität
 steigt der Eigenverbrauch auf 3308&nbsp;kWh im Jahr, was 283€ Einsparung pro Jahr
-bringt und bei 1500€ Kosten eine Amortisationszeit von knapp 6 Jahren bringt.
+und bei 1500€ Kosten eine Amortisationszeit von ebenfalls knapp 6 Jahren bringt.
 * Bei 6&nbsp;kWh Kapazität steigt der Eigenverbrauch noch etwas weiter auf 3734&nbsp;kWh,
 bei 8&nbsp;kWh Kapazität auf 3988&nbsp;kWh, wobei sich Amortisationszeit kaum ändert.
+-->
 
 <!--
 * Wenn der Speicher AC-gekoppelt ist und optimal (also nur mit PV-Überschuss)
@@ -213,13 +214,14 @@ ist mit ca. 225 Vollzyklen pro Jahr nur mäßig belastet.
 Bei 0,30&nbsp;€/kWh Strompreis ergibt sich durch die Hinzunahme des Speichers
 eine jährliche Stromkosten-Einsparung von ca. 60€.
 
-Selbst wenn die dafür nötigen Komponenten günstig für z.B. 600€ erworben werden,
-würde die Amortisationszeit für die Aufrüstung etwa 10 Jahre betragen --
-eher länger. Allerdings kann es sein, dass in dieser Zeitspanne bereits ein
-Teil der nötigen Geräte erneuert werden muss. Vor Allem aber ist für kleine
-PV-Anlagen eine optimale Regelung im [Eigenbau](Speicher-Eigenbau.md) schwer erreichbar,
-<!--und auch eine Annäherung daran unverhältnismäßig aufwendig.-->
-während [kommerzielle Lösungen](#kommerziell)) Stand Anfang 2026 noch zu teuer sind.
+Wenn die dafür nötigen Komponenten für z.B. 600€ erworben werden,
+würde die Amortisationszeit für die Aufrüstung etwa 10 Jahre betragen -- eher länger.
+Allerdings kann es sein, dass in dieser Zeitspanne bereits ein
+Teil der nötigen Geräte erneuert werden muss.
+Eine optimale Regelung ist im [Eigenbau](Speicher-Eigenbau.md) schwer zu erreichen,
+und auch eine Annäherung daran bleibt unverhältnismäßig aufwendig.
+Seit Anfang 2026 gibt es aber [kommerzielle Speicher-Lösungen](#kommerziell))
+mit guter Regelung zu wirklich interessanten Preisen von etwa 400€.
 
 <!--
 ./Solar.pl Lastprofil_17_teils_31.csv 3000 Timeseries_48.215_11.727_SA2_1kWp_crystSi_14_35deg_0deg_2005_2020.csv 850 -peff 92 -tmy
@@ -632,8 +634,8 @@ etwa 60&nbsp;kWh weitere Steigerung und lohnt damit den Speicher-Aufpreis nicht.
 Hingegen brächte schon eine effektive Speicherkapazität auf 0,5&nbsp;kWh eine
 Steigerung des Eigenverbrauchs von 140&nbsp;kWh.
 
-Deutlich interessanter wäre die Speichernutzung bei Verdoppelung der PV-Leistung
-auf 1700&nbsp;Wp. Dann brächte 1&nbsp;kWh Speicherkapazität bei optimaler
+Deutlich interessanter ist die Speichernutzung bei Verdoppelung der PV-Leistung
+auf 1700&nbsp;Wp. Dann bringt 1&nbsp;kWh Speicherkapazität bei optimaler
 Regelung eine Steigerung des jährlichen Eigenverbrauchs von 300&nbsp;kWh,
 und bei 2&nbsp;kWh effektiver Kapazität immerhin nochmal 170&nbsp;kWh mehr.
 
@@ -720,10 +722,13 @@ Erst im Jahr 2025 waren die Produkte einigermaßen ausgereift.
 Davor hatten sie teils noch sehr primitive Regelungen oder diverse massive
 Kinderkrankheiten, wie [diese Zusammenstellung](Speicher-2024.md#kommerziell) vom Sommer 2024 zeigt.
 
-Einen gute Übersicht, die zumindest bis Februar 2026 aktualisiert wurde,
-findet sich [hier](https://www.energiemagazin.com/balkonkraftwerk/speicher/).
-Die dortigen Aussagen zur Amortisation sind allerdings mit Vorsicht zu genießen,
-u.A. weil sie von einer optimalen Lade- und Entladestrategie ausgehen.
+Gute Übersichten, die zumindest bis Februar/März 2026 aktualisiert wurden, finden sich bei [Heise](
+https://www.heise.de/bestenlisten/testsieger/top-10-balkonkraftwerk-mit-speicher-im-test-jetzt-besonders-guenstig/9g7b03h)
+und im [EnergieMagazin](https://www.energiemagazin.com/balkonkraftwerk/speicher/).
+
+Die dortigen Aussagen zur Amortisation sind allerdings mit etwas Vorsicht zu genießen,
+u.A. weil sie von einer optimalen Lade- und Entladestrategie ausgehen,
+die leider nicht immer gegeben ist.
 
 Ein besonders attraktives Produkt finde ich das [Zendure SolarFlow 800 Pro](
 https://www.idealo.de/preisvergleich/OffersOfProduct/206560042_-solarflow-800-pro-1920wh-zendure.html) bzw. Plus,
@@ -753,7 +758,7 @@ Die kommerziellen Produkte haben Folgendes gemeinsam.
   Auch birgt so eine externe Verbindung Datenschutz- und IT-Sicherheitsrisiken.
   Außerdem funktioniert das Ganze nicht bei Server-, Internet- oder Stromausfall
 * Die Geräte haben einen nicht ganz vernachlässigbaren Eigen-Stromverbrauch
-von typischerweise ca. 20&nbsp;Watt.
+von typischerweise 5 bis 20&nbsp;Watt.
 * Der Speicher ist proprietär &mdash; man muss also die (eher teuren)
   Batterien des jeweiligen Herstellers verwenden.
 
@@ -767,7 +772,7 @@ Der Speicher ist je nach Gerät [AC- und/oder DC-gekoppelt](#Kopplung).
   Der wichtigste Vorteil davon ist größere Effizienz als mit AC-Kopplung.\
   Ein Nachteil ist, dass der Speicher meist außerhalb der Wohnung steht und
   eine Lithium-basierte Batterie bei Minustemperaturen nicht geladen werden darf,
-  so dass sie dann nur nutzbar ist, wenn sie auf über 0°C erwärmt wird.
+  so dass sie dann nur verwendbar ist, wenn sie auf über 0°C erwärmt wird.
 
 ### Rentabilität von Balkon-Solarspeichern {#Effizienz}
 
@@ -1000,4 +1005,5 @@ LocalWords: Zweirichtungszaehler issuecomment collect Notifications height ELWA
 LocalWords: Plugs comments January Settings ons configuration states excl comp
 LocalWords: sensor export float uksa tamorix custom firmware en Central zell TR
 LocalWords: SmartShunt ComputerBase leistung meter Spaun easySuntower reply
+LocalWords:  EnergieMagazin id zendure
 -->
