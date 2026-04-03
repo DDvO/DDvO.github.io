@@ -725,6 +725,13 @@ findet sich [hier](https://www.energiemagazin.com/balkonkraftwerk/speicher/).
 Die dortigen Aussagen zur Amortisation sind allerdings mit Vorsicht zu genießen,
 u.A. weil sie von einer optimalen Lade- und Entladestrategie ausgehen.
 
+Ein besonders attraktives Produkt finde ich das [Zendure SolarFlow 800 Pro](
+https://www.idealo.de/preisvergleich/OffersOfProduct/206560042_-solarflow-800-pro-1920wh-zendure.html) bzw. Plus,
+welches mit einem 2 kWh Speicher inzwischen für unter 400€ erhältlich ist
+und für den Preis sehr viel bietet. Es bietet diverse Regelungsmodi, wobei im Zusammenspiel
+mit einem Shelly (Pro) 3EM eine sehr flotte [Reaktionszeit von etwa 3 bis 5 Sekunden](
+https://www.heise.de/bestenlisten/testsieger/top-10-balkonkraftwerk-mit-speicher-im-test-jetzt-besonders-guenstig/9g7b03h#id-1-zendure-solarflow-800-pro) erreicht wird.
+
 Die kommerziellen Produkte haben Folgendes gemeinsam.
 * Zentral für eine sinnvolle Regelung der Geräte ist die aktuelle Zielleistung,
   die über einen Wechselrichter ins Hausnetz gespeist werden soll.<br>
