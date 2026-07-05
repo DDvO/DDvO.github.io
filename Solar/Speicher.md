@@ -26,6 +26,7 @@ lang: de
         - [Regelungsstrategien für PV-Speicher](#Regelungsstrategien)
         - [Dimensionierung des Stromspeichers](#Dimensionierung)
         - [Kommerzielle SSG-Speicherlösungen](#kommerziell)
+          - [Zendure SolarFlow](SolarFlow.md)
         - [Rentabilität von Balkon-Solarspeichern](#Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](Speicher-Eigenbau.md)
     -   [Inselanlage (mit Speicherung) und Kombination](Insel.md)
@@ -745,13 +746,6 @@ Die dortigen Aussagen zur Amortisation sind allerdings mit etwas Vorsicht zu gen
 u.A. weil sie von einer optimalen Lade- und Entladestrategie ausgehen,
 die leider nicht immer gegeben ist.
 
-Ein besonders attraktives Produkt finde ich das [Zendure SolarFlow 800 Pro](
-https://www.idealo.de/preisvergleich/OffersOfProduct/206560042_-solarflow-800-pro-1920wh-zendure.html) bzw. Plus,
-welches mit einem 2 kWh Speicher inzwischen für unter 400€ erhältlich ist
-und für den Preis sehr viel bietet. Es bietet diverse Regelungsmodi, wobei im Zusammenspiel
-mit einem Shelly (Pro) 3EM eine sehr flotte [Reaktionszeit von etwa 3 bis 5 Sekunden](
-https://www.heise.de/bestenlisten/testsieger/top-10-balkonkraftwerk-mit-speicher-im-test-jetzt-besonders-guenstig/9g7b03h#id-1-zendure-solarflow-800-pro) erreicht wird.
-
 Die kommerziellen Produkte haben Folgendes gemeinsam.
 * Zentral für eine sinnvolle Regelung der Geräte ist die aktuelle Zielleistung,
   die über einen Wechselrichter ins Hausnetz gespeist werden soll.<br>
@@ -788,6 +782,17 @@ Der Speicher ist je nach Produkt [AC- und/oder DC-gekoppelt](#Kopplung).
   Ein Nachteil ist, dass der Speicher meist außerhalb der Wohnung steht und
   eine Lithium-basierte Batterie bei Minustemperaturen nicht geladen werden darf,
   so dass sie dann nur verwendbar ist, wenn sie auf über 0°C erwärmt wird.
+
+#### Zendure SolarFlow {#SolarFlow}
+
+[![Bild: Zendure SolarFlow 800 Plus Produktbild](Zendure_SolarFlow_800_Plus.webp){:.right
+width="350" style="margin-left: 10px; margin-right: 10px"}](SolarFlow.html)
+
+Nachdem ich seit Juni 2026 ein Zendure SolarFlow 800 besitze, habe ich
+der SolarFlow-Produktreihe einen [eigenen Abschnitt](SolarFlow.md) gewidmet
+mit besonderem Augenmerk auf Unzulänglichkeiten der Zendure-App
+sowie der Zendure-Regelung (HEMS) und wie man diese umgehen kann,
+außerdem einer genaueren Betrachtung der System-Verluste.
 
 ### Rentabilität von Balkon-Solarspeichern {#Effizienz}
 
@@ -1021,5 +1026,5 @@ LocalWords: Zweirichtungszaehler issuecomment collect Notifications height ELWA
 LocalWords: Plugs comments January Settings ons configuration states excl comp
 LocalWords: sensor export float uksa tamorix custom firmware en Central zell TR
 LocalWords: SmartShunt ComputerBase leistung meter Spaun easySuntower reply
-LocalWords:  EnergieMagazin id zendure
+LocalWords: EnergieMagazin Zendure HEMS
 -->
