@@ -220,6 +220,7 @@ Lizenzkürzel:
         - [Regelungsstrategien für PV-Speicher](Speicher.md#Regelungsstrategien)<a name="Regelungsstrategien"></a>
         - [Dimensionierung des Stromspeichers](Speicher.md#Dimensionierung)<a name="Speicherbatterie"></a>
         - [Kommerzielle SSG-Speicherlösungen](Speicher.md#kommerziell)<a name="SSG-Speicher"></a>
+          - [Zendure SolarFlow 800](Speicher#SolarFlow)<a name="SolarFlow"></a>
 <!--      - [Zendure SolarFlow, AIO 2400 und Hub 2000](Speicher-2024.md#SolarFlow)<a name="SolarFlow"></a> -->
 <!--      - [Anker Solix](Speicher-2024.md#Solix)<a name="Solix"></a> -->
 <!--      - [Maxxisun Maxxicharge](Speicher-2024.md#Maxxicharge)<a name="Maxxicharge"></a> -->

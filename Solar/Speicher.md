@@ -26,6 +26,7 @@ lang: de
         - [Regelungsstrategien für PV-Speicher](#Regelungsstrategien)
         - [Dimensionierung des Stromspeichers](#Dimensionierung)
         - [Kommerzielle SSG-Speicherlösungen](#kommerziell)
+          - [Zendure SolarFlow 800](#SolarFlow)
         - [Rentabilität von Balkon-Solarspeichern](#Effizienz)
         - [SSG-Speicherlösungen im Eigenbau](Speicher-Eigenbau.md)
     -   [Inselanlage (mit Speicherung) und Kombination](Insel.md)
@@ -745,13 +746,6 @@ Die dortigen Aussagen zur Amortisation sind allerdings mit etwas Vorsicht zu gen
 u.A. weil sie von einer optimalen Lade- und Entladestrategie ausgehen,
 die leider nicht immer gegeben ist.
 
-Ein besonders attraktives Produkt finde ich das [Zendure SolarFlow 800 Pro](
-https://www.idealo.de/preisvergleich/OffersOfProduct/206560042_-solarflow-800-pro-1920wh-zendure.html) bzw. Plus,
-welches mit einem 2 kWh Speicher inzwischen für unter 400€ erhältlich ist
-und für den Preis sehr viel bietet. Es bietet diverse Regelungsmodi, wobei im Zusammenspiel
-mit einem Shelly (Pro) 3EM eine sehr flotte [Reaktionszeit von etwa 3 bis 5 Sekunden](
-https://www.heise.de/bestenlisten/testsieger/top-10-balkonkraftwerk-mit-speicher-im-test-jetzt-besonders-guenstig/9g7b03h#id-1-zendure-solarflow-800-pro) erreicht wird.
-
 Die kommerziellen Produkte haben Folgendes gemeinsam.
 * Zentral für eine sinnvolle Regelung der Geräte ist die aktuelle Zielleistung,
   die über einen Wechselrichter ins Hausnetz gespeist werden soll.<br>
@@ -760,9 +754,9 @@ Die kommerziellen Produkte haben Folgendes gemeinsam.
   Liegt die aktuelle PV-Leistung unter der Zielleistung, wird sie (je nach
   Gerät) eingespeist und/oder Strom aus dem Speicher entnommen.<br>
   Die Zielleistung sollte nicht approximiert (also manuell eingestellt oder durch
-  angeblich „smarte“ z.B. zeitabhängige Heuristiken bestimmt werden,
+  angeblich „smarte“ z.B. zeitabhängige Heuristiken bestimmt) werden,
   sondern möglichst sekundengenau über den [Gesamt-Leistungssaldo](SV.md#Gesamtstrom)
-  am Sicherungskasten des Haushalts gemessen werden.
+  am Anschlusspunkt bzw. Sicherungskasten des Haushalts gemessen werden.
   Nur so lässt sich der Speicher [optimal nutzen](#Regelungsstrategien).
 * Die Speicher-Entladung wird durch die (typischerweise einstellbare)
   maximale Entladetiefe begrenzt.
@@ -772,8 +766,9 @@ Die kommerziellen Produkte haben Folgendes gemeinsam.
   und sein kann wie eine lokal auf dem Gerät implementierte.
   Auch birgt so eine externe Verbindung Datenschutz- und IT-Sicherheitsrisiken.
   Außerdem funktioniert das Ganze nicht bei Server-, Internet- oder Stromausfall
-* Die Geräte haben einen nicht ganz vernachlässigbaren Eigen-Stromverbrauch
-von typischerweise 5 bis 20&nbsp;Watt.
+* Die Geräte haben einen nicht vernachlässigbaren Eigen-Stromverbrauch
+  von typischerweise 5 bis 20&nbsp;Watt inklusive Wechselrichter-Verlusten,
+  was allerdings bei Standalone-Netzwechselrichtern auch nicht besser ist.
 * Der Speicher ist proprietär &mdash; man muss also die (eher teuren)
   Batterien des jeweiligen Herstellers verwenden.
 
@@ -788,6 +783,99 @@ Der Speicher ist je nach Gerät [AC- und/oder DC-gekoppelt](#Kopplung).
   Ein Nachteil ist, dass der Speicher meist außerhalb der Wohnung steht und
   eine Lithium-basierte Batterie bei Minustemperaturen nicht geladen werden darf,
   so dass sie dann nur verwendbar ist, wenn sie auf über 0°C erwärmt wird.
+
+#### Zendure SolarFlow 800 {#SolarFlow}
+
+Eine von Preis-/Leistungsverhältnis besonders attraktive Produktreihe
+finde ich Zendure SolarFlow 800
+[Pro](https://www.idealo.de/preisvergleich/OffersOfProduct/206560042_-solarflow-800-pro-1920wh-zendure.html) bzw.
+[Plus](https://www.idealo.de/preisvergleich/OffersOfProduct/209331116_-solarflow-800-plus-zendure.html).
+Die ist mit einem knapp 2 kWh Speicher inzwischen für unter 400€,
+teils sogar unter 300€ erhältlich
+und bietet dafür sehr viel, inklusive bidirektionalem Wechselrichter,
+Batterieheizung bei kalten Temperaturen und diverse Regelungsmodi.
+Im „Smart-CT”-Modus zusammen z.B. mit einem Shelly (Pro) 3EM
+hat die Cloud-basierte Regelung des Herstellers eine brauchbare Reaktionszeit
+von etwa 4 bis 10 Sekunden.
+<!-- etwa 3 bis 5 Sekunden gemäß https://www.heise.de/bestenlisten/testsieger/top-10-balkonkraftwerk-mit-speicher-im-test-jetzt-besonders-guenstig/9g7b03h#id-1-zendure-solarflow-800-pro)-->
+
+Die App hat diverse Macken: Die Einrichtung der Geräte ist hakelig,
+das Speichern von Options-Parametern wie der maximalen Einspeiseleistung
+bringt teils irreführende Fehlermeldungen, und die Änderung des Regelungsmodus
+(„Energieplan”) hat bei meinem Zendure SolarFlow 800 Plus meist keinen Effekt.
+Während des Speicher-Ladens wird nicht die tatsächliche Ladeleistung nach Verlusten angezeigt,
+sondern die Differenz aus PV-Leistung („Solarmodul”) und Leistungsabgabe („Heimnutzung”).
+Immerhin werden PV-Leistung und Leistungsabgabe korrekt gemessen und angezeigt,
+so dass man in den Zeiten, wo der Speicher in Ruhe ist (also weder geladen noch
+entladen wird) auf den realen Verlust durch die Wechselrichtung schließen kann,
+welcher je nach Einspeiseleistung ziemlich mau ist: bei 100&nbsp;W etwa 20%!
+
+<!--
+Zendure SolarFlow 800 Plus
+Standby Bezug aus dem Netz: 0,3 W bzw. 0,85W; lt. Shelly 0,03 A => 7 W
+
+34,3 V
+2,65 A = 90,9 W vs. displayed: 88 W,
+3,09 A = 105  W vs. displayed: 99 W
+
+PV 1  35,4 V * 2,35 A    =  83 W, Anzeige PV  80 W Ausgang 61-62 vs real  61,5 - 77%
+PV 2  34   V * 3,02 A    = 103 W, Anzeige PV  94 W Ausgang    72 vs real  72   - 77%
+PV1+2 34,5 V*(1,93+2,47) = 152 W, Anzeige PV 151 W Ausgang   125 vs real 126   - 83%
+
+Bypass efficiency: 166/193 = 86%, 64 / 86 = 74 %,
+Bypass efficiency: 160 bzw. real 162.5 / 190 = 85 %,
+Vergleich Deye output 166 W
+
+While charging, claims  (Heimnutzung 33 + Akku 93) / Solarmodul 126 = 100 %
+--->
+
+Unverzeihlich finde ich folgenden Bug:
+Obwohl im Eigenverbrauchsmodus mit „Smart-CT”-Regelung ein 3-Phasen-Messgerät
+(bei mir ein Shelly 3EM) verwendet wird und korrekte Daten zum Leistungssaldo liefert,
+zeigt die App bei „Öffentliches Netz” statt Netzbezug oder -einspeisung immer "OW" an!
+Dieses Fehlverhalten ist seit mindestens Sommer 2024 bekannt
+und wurde also über 2 Jahre lang nicht behoben. Vermutlich ist der Grund dafür,
+dass man für die Anwender nicht offensichtlich darstellen will, dass die Regelung
+keine echte Nulleinspeisung bringt.
+
+[Reaktion auf Lastspitze mit verzögerter Entladung](Lastspitzen-Reaktion.png)
+Die „Smart-CT”-Regelung führt trotz des Ziels, den Eigenverbrauch zu maximieren,
+zu einen gewissen unerwünschten Energieexport ins externe Netz. Bei recht statischen
+Verhältnissen sind es meist nur sehr kleine negative Leistungssalden von wenigen Watt
+(bis ca. -20&nbsp;W), allerdings teilweise über Minuten hinweg.
+Dies liegt v.A. an einer gewissen Ungenauigkeit der Regelung.
+Eine einfache Ausweichlösung wäre, den Saldo-Ziel-Wert der Regelung statt auf 0
+auf ca. 20&nbsp;W zu setzen (bzw. am Regelungseingang diesen Wert abzuziehen), so dass
+der Saldo real zwischen ca. 0 und 40&nbsp;W schwanken würde und jedenfalls kaum noch
+negativ würde, aber dafür bietet Zendure keine Option, die man einstellen könnte.
+<br>
+Es gibt aber bedingt durch die Trägheit der Regelung kurzzeitig auch
+recht große negative Ausschläge, etwa jedes Mal wenn ein Kühlschrank-Kompressor beim
+Anlaufen für etwa 2 Sekunden eine induktive Lastspitze von ca. 800&nbsp;W erzeugt.
+Dann versucht die Zendure-Regelung unsinnigerweise, diese auszugleichen,
+indem sie innerhalb von ein paar Sekunden die Einspeisung aus PV und/oder Speicher
+auf über 600&nbsp;W erhöht, während die Lastspitze eigentlich schon wieder vorbei ist,
+und diese dann auch noch über ca. 10&nbsp;Sekunden beibehält,
+bis sie sich darauf eingestellt hat, dass der Kühlschrank für die nächsten Minuten
+eine moderate nahezu konstante Zusatzlast von etwa 50&nbsp;W verursacht.<br>
+Die durch solche Effekte bewirkte ungewollte Netzeinspeisung liegt aber
+jedenfalls in unserem Haushalt in Summe bei nur 35&nbsp;Wh pro Tag,
+was im Jahr je nach Strompreis einen Verlust von etwas unter 4€ ausmacht.
+<br>
+Auch wenn diese Netzeinspeisung verschmerzbar ist, sollte die App sie nicht einfach
+unterschlagen. Auch normalen Netzbezug (wenn PV-Leistung und Batterieladung nicht
+ausreichen, um die aktuelle Last abzudecken) sollte durch die App dargestellt werden.
+Lade- und Entladeverluste werden, wie oben schon erwähnt, ebenfalls nicht angezeigt.
+
+Die eingestellte Entladungsgrenze des Speichers wird von der SolarFlow-Regelung
+einigermaßen eingehalten. Allerdings sinkt die Ladung des Speichers in Ruhe über Nacht
+um etwa 1% ab, was bei bei 12 Stunden und dem AB2000 mit 1.920&nbsp;Wh Kapazität
+eine Verlustleistung bzw. einen internen Verbrauch von 1,5 W ausmacht.<br>
+Während der SolarFlow nichts einspeist oder aus dem Netz entnimmt, kann man an seinem
+Netzstecker außerdem einen ständigen Verbrauch von etwa 7&nbsp;W messen.<br>
+In Summe ergibt sich für den SolarFlow ein Eigenverbrauch von etwa 200&nbsp;Wh,
+was aufs Jahr umgerechnet je nach Strompreis etwa 22€ ausmacht.
+
 
 ### Rentabilität von Balkon-Solarspeichern {#Effizienz}
 
@@ -1021,5 +1109,5 @@ LocalWords: Zweirichtungszaehler issuecomment collect Notifications height ELWA
 LocalWords: Plugs comments January Settings ons configuration states excl comp
 LocalWords: sensor export float uksa tamorix custom firmware en Central zell TR
 LocalWords: SmartShunt ComputerBase leistung meter Spaun easySuntower reply
-LocalWords:  EnergieMagazin id zendure
+LocalWords:  EnergieMagazin id zendure Standalone mau Eigenverbrauchsmodus
 -->
