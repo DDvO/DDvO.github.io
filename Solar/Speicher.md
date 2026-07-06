@@ -791,18 +791,19 @@ Der Speicher ist je nach Gerät [AC- und/oder DC-gekoppelt](#Kopplung).
 
 ### Rentabilität von Balkon-Solarspeichern {#Effizienz}
 
-Hier folgt ein Vergleich des mit unterschiedlichen Ansätzen erzielbaren
+Hier ein Vergleich des mit unterschiedlichen Ansätzen erzielbaren
 Jahres-Eigenverbrauchs für einen Haushalt mit 3000&nbsp;kWh Jahresverbrauch
 (nächtliche Durchschnittslast 190&nbsp;W zwischen 0 und 6&nbsp;Uhr,
 tagsüber Durchschnittslast 375&nbsp;W zwischen 8 und 16&nbsp;Uhr)
 mit optimal ausgerichteten 900&nbsp;Wp Modulen in Süddeutschland
 und typischen Wirkungsgraden.
-Der Vergleichbarkeit halber wurde hier generell eine Speicherkapazität
-von 2&nbsp;kWh  <!-- 1600 Wh wie beim Anker Solix 2 --> (mit 90% Entladetiefe)
+Der Vergleichbarkeit halber wurde hier generell ein DC-gekoppelter Speicher
+mit 2&nbsp;kWh Kapazität <!-- 1600 Wh wie beim Anker Solix 2 --> und 90% Entladetiefe
 vorausgesetzt.
 
 * 627&nbsp;kWh Eigenverbrauch mit PV ohne Speicher-Nutzung, als Vergleichswert
-* 912&nbsp;kWh Eigenverbrauch bei optimaler lastabhängiger Regelung (bei 1000&nbsp;Wh 835&nbsp;kWh, bei 1500&nbsp;Wh 879&nbsp;kWh, bei 2500&nbsp;Wh 931&nbsp;kWh, bei 3000&nbsp;Wh 938&nbsp;Wh, bei 4000&nbsp;Wh 942&nbsp;Wh)
+* 912&nbsp;kWh Eigenverbrauch bei optimaler lastabhängiger Regelung
+* 892&nbsp;kWh Eigenverbrauch bei optimaler Regelung, aber AC-gekoppeltem Speicher
 * 759&nbsp;kWh Eigenverbrauch bei [Anker Solix Solarbank 1](Speicher-2024.md#Solix1) Strategie mit optimal gewählter FLLR, hier 240&nbsp;W;\
   mit diesen Parametern werden 10&nbsp;kWh PV-Nettoleistung verworfen
 * 753&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung ohne Bypass
@@ -810,10 +811,12 @@ vorausgesetzt.
 * 775&nbsp;kWh Eigenverbrauch bei Konstanteinspeisung mit Bypass
   mit für diesen Fall optimaler Zielleistung, hier 220&nbsp;W
 
-Die genannten Eigenverbrauchs-Zahlen mit Speicher setzen DC-Kopplung voraus.
-Mit AC-Kopplung sieht es wegen der zusätzlichen Umwandlungsverluste
-natürlich etwas schlechter aus: bei optimaler Regelung 900&nbsp;kWh,
-also etwa 20&nbsp;kWh weniger Eigenverbrauch pro Jahr als mit DC-Kopplung.
+Bei einer üblichen Balkonanlage (wie hier mit PV-Nennleistung unter 1000&nbsp;Wp)
+fällt eine Erhöhung der Kapazität jenseits 2&nbsp;kWh kaum ins Gewicht,
+weil 2&nbsp;kWh schon nahe an der Sättigung liegt: fast der ganze PV-Überschuss
+kann gespeichert werden &mdash; bei optimaler Regelung
+werden nur noch etwa 34&nbsp;kWh pro Jahr ans externe Netz abgegeben.\
+Zum Vergleich: Bei 1000&nbsp;Wh ist der Eigenverbrauch 835&nbsp;kWh, bei 1500&nbsp;Wh 879&nbsp;kWh, bei 2500&nbsp;Wh 931&nbsp;kWh, bei 3000&nbsp;Wh 938&nbsp;Wh, bei 4000&nbsp;Wh 942&nbsp;Wh &mdash; dann nur noch 2&nbsp;kWh Netzeinspeisung wegen vollem Speicher.
 
 Die Ergebnisse wurden mit dem [SolBatSim](EV.md#SolBatSim) ermittelt.
 Der [Stecker-Solar-Simulator](EV.md#HTW) der HTW Berlin liefert für
