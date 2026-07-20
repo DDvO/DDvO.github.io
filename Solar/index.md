@@ -221,6 +221,10 @@ Lizenzkürzel:
         - [Dimensionierung des Stromspeichers](Speicher.md#Dimensionierung)<a name="Speicherbatterie"></a>
         - [Kommerzielle SSG-Speicherlösungen](Speicher.md#kommerziell)<a name="SSG-Speicher"></a>
           - [Zendure SolarFlow](SolarFlow.md)<a name="SolarFlow"></a>
+            - [Zendure SolarFlow allgemein](SolarFlow.md#allgemein)
+            - [Zendure-App und Alternativen zur Darstellung der SolarFlow-Daten](SolarFlow.md#Daten)
+            - [Zendure „Smart-CT”-Regelung und Alternativen](SolarFlow.md#Regelung)
+            - [Interne Verluste des SolarFlow](SolarFlow.md#Verluste)
 <!--      - [Zendure SolarFlow, AIO 2400 und Hub 2000](Speicher-2024.md#SolarFlow)<a name="SolarFlow"></a> -->
 <!--      - [Anker Solix](Speicher-2024.md#Solix)<a name="Solix"></a> -->
 <!--      - [Maxxisun Maxxicharge](Speicher-2024.md#Maxxicharge)<a name="Maxxicharge"></a> -->
