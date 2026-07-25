@@ -760,24 +760,24 @@ Die kommerziellen Produkte haben Folgendes gemeinsam.
   Liegt die aktuelle PV-Leistung unter der Zielleistung, wird sie (je nach
   Gerät) eingespeist und/oder Strom aus dem Speicher entnommen.<br>
   Die Zielleistung sollte nicht approximiert (also manuell eingestellt oder durch
-  angeblich „smarte“ z.B. zeitabhängige Heuristiken bestimmt werden,
+  angeblich „smarte“ z.B. zeitabhängige Heuristiken bestimmt) werden,
   sondern möglichst sekundengenau über den [Gesamt-Leistungssaldo](SV.md#Gesamtstrom)
-  am Sicherungskasten des Haushalts gemessen werden.
+  am Anschlusspunkt bzw. Sicherungskasten des Haushalts gemessen werden.
   Nur so lässt sich der Speicher [optimal nutzen](#Regelungsstrategien).
 * Die Speicher-Entladung wird durch die (typischerweise einstellbare)
   maximale Entladetiefe begrenzt.
-* Die meisten Produkte erfordern für die Regelung eine Internet-Verbindung
+* Viele Produkte erfordern für die Regelung eine Internet-Verbindung
   zu einem IT-Dienst ihres Herstellers („Cloud-Zwang“).
   Das verursacht Verzögerungen, so dass die Regelung nicht so präzise
   und sein kann wie eine lokal auf dem Gerät implementierte.
-  Auch birgt so eine externe Verbindung Datenschutz- und IT-Sicherheitsrisiken.
-  Außerdem funktioniert das Ganze nicht bei Server-, Internet- oder Stromausfall
-* Die Geräte haben einen nicht ganz vernachlässigbaren Eigen-Stromverbrauch
-von typischerweise 5 bis 20&nbsp;Watt.
+  Auch birgt so eine externe Verbindung Datenschutz- und IT-Sicherheitsrisiken,
+  und das Ganze funktioniert nicht bei Server-, Internet- oder Stromausfall.
+* Die Geräte haben neben den üblichen Wechselrichter-Verlusten einen nicht ganz
+  vernachlässigbaren Eigen-Stromverbrauch von typischerweise 5 bis 20&nbsp;Watt.
 * Der Speicher ist proprietär &mdash; man muss also die (eher teuren)
   Batterien des jeweiligen Herstellers verwenden.
 
-Der Speicher ist je nach Gerät [AC- und/oder DC-gekoppelt](#Kopplung).
+Der Speicher ist je nach Produkt [AC- und/oder DC-gekoppelt](#Kopplung).
 * AC-gekoppelte Speicher sind in der Verwendung sehr flexibel
   und können sogar ohne PV-Module betrieben werden.
 * Bei DC-Kopplung wird der Speicher zusammen mit der Steuerung,
